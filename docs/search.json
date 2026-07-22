@@ -4,6 +4,6 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "AUG 10 Intro to AI: models, tokens, harnesses, system prompts, tools, memory, reasoning, prompting\nAUG 11 All about Claude: Chat, Cowork, Code, Claude plugin for Excel, Code CLI, VS Code extension\nAUG 12 Research and Teaching Setup: Stata, Python, R, LaTeX, Quarto, Git, GitHub, Academic Studio\nAUG 13 Beyond Chatting: Code execution, command line, web search and fetch, computer-use and browser tools\nAUG 14 Skills, Connectors, and Plugins: Customizing Claude and adding capabilities\nAUG 17 Creating Instructional Materials: AI tutors, voice-overs, cases, slide decks\nAUG 18 Student Projects: Artifacts, apps, agents\nAUG 19 Research Skills: Awesome AI for Economists, my lit search and knowledge database, build your own"
+    "text": "AUG 10 Intro to AI: models, tokens, harnesses, system prompts, tools, memory, reasoning, prompting\nAUG 11 All about Claude: Chat, Cowork, Code, Claude plugin for Excel, Code CLI, VS Code extension\nAUG 12 Research and Teaching Setup: Stata, Python, R, LaTeX, Quarto, Git, GitHub, Academic Studio\nAUG 13 Beyond Chatting: Code execution, command line, web search and fetch, computer-use and browser tools\nAUG 14 Skills, Connectors, and Plugins: Customizing Claude and adding capabilities, few-shot prompting\nAUG 17 Creating Instructional Materials: AI tutors, voice-overs, cases, slide decks\nAUG 18 Student Projects: Artifacts, apps, agents\nAUG 19 Research Skills: Awesome AI for Economists, my lit search and knowledge database, build your own"
   }
 ]

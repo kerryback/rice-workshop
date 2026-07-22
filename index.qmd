@@ -8,7 +8,7 @@
 
 **AUG 13** *Beyond Chatting:* Code execution, command line, web search and fetch, computer-use and browser tools
 
-**AUG 14** *Skills, Connectors, and Plugins:* Customizing Claude and adding capabilities
+**AUG 14** *Skills, Connectors, and Plugins:* Customizing Claude and adding capabilities, few-shot prompting
 
 **AUG 17** *Creating Instructional Materials:* AI tutors, voice-overs, cases, slide decks
 
