@@ -1,26 +1,4 @@
-## Generative AI for Research and Teaching<br>Summer 2026<br><br>![](RiceBusiness-transparent-logo-sm.png){width=40%}
 
-
-### Instructor
-
-[Kerry Back](https://kerryback.com)<br> (<a href="mailto:kerryback@gmail.com">kerryback@gmail.com)</a><br>
-J. Howard Creekmore Professor of Finance and Professor of Economics
-
-
-### Meeting Schedule
-
-Eight one-hour sessions via Zoom.
-
-**AUG 10** &nbsp;&nbsp; **AUG 11** &nbsp;&nbsp; **AUG 12** &nbsp;&nbsp; **AUG 13** &nbsp;&nbsp; **AUG 14**<br>
-**AUG 17** &nbsp;&nbsp; **AUG 18** &nbsp;&nbsp; **AUG 19**
-
-
-### Course Description
-
-A hands-on introduction for Rice Business faculty to using Claude in research and teaching. We will cover what modern AI models are and how to work with them, the range of Claude tools (Chat, Cowork, Code, and the Excel plug-in), setting up a research and teaching environment, and going beyond chatting with code execution, web tools, skills, and connectors. We will also build instructional materials, student project ideas, and research workflows.
-
-
-### Course Plan
 
 **AUG 10:** **Intro to AI.** models, tokens, harnesses, system prompts, tools, memory, reasoning, prompting
 

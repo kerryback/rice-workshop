@@ -10,12 +10,6 @@ project:
 website:
   title: ""
   search: false
-  navbar:
-    search: false
-    title: "Generative AI for Research and Teaching"
-    left:
-      - href: index.qmd
-        text: Home
 
 format:
   html:
