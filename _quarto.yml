@@ -5,6 +5,7 @@ project:
     - index.qmd
   resources:
     - .nojekyll
+    - CNAME
 
 website:
   title: ""
