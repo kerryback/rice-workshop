@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+  resources:
+    - .nojekyll
+
+website:
+  title: ""
+  search: false
+  navbar:
+    search: false
+    title: "Generative AI for Research and Teaching"
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: superhero
+    link-external-newwindow: true

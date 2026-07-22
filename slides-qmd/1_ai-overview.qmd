@@ -1,0 +1,231 @@
+---
+title: "1. AI Overview"
+subtitle: "Rice Business 2026"
+author: "Kerry Back<br>Rice Business"
+---
+
+## What This Course Is
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Eight hands-on hours]{.card-title}
+
+- What these tools are, and how they actually work
+- Then: using them for your research and your teaching
+- Anthropic's [Claude]{.accent} throughout, with a look at the others
+:::
+::: {.card .card-amber}
+[Why start with the machinery]{.card-title}
+
+- You will use these tools better if you know what is under the hood
+- Today: the anatomy of a single AI interaction
+- Six pieces: [tokens, parameters, system prompts, tools, memory, reasoning]{.accent}
+:::
+:::
+
+::: {.explainer}
+This first session is the one time we look inside the box. Everything after it is application.
+:::
+
+## What Happens When You Chat {.section-divider}
+
+## It Predicts the Next Word
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The whole trick]{.card-title}
+
+- A large language model takes text and produces a [probability distribution]{.accent} over what comes next
+- It samples one token, appends it, and repeats
+- That is all it does --- one token at a time
+:::
+::: {.card .card-amber}
+[Why that becomes intelligence]{.card-title}
+
+- Trained on trillions of words
+- To predict the next word in a financial analysis, it has to *learn finance*
+- Competence is a side effect of getting very good at prediction
+:::
+:::
+
+::: {.explainer}
+When Claude writes a paragraph, at every step it is asking: "given everything so far, what should come next?"
+:::
+
+## Tokens
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Not words --- pieces of words]{.card-title}
+
+- The model reads and writes in [tokens]{.accent}: sub-word chunks, ~100,000 of them
+- `"chatbot"` → `["chat", "bot"]`
+- `"unhelpful"` → `["un", "help", "ful"]`
+:::
+::: {.card .card-amber}
+[Why you should care]{.card-title}
+
+- Everything is metered in tokens --- what you pay, and what fits
+- The [context window]{.accent} is a token budget: Claude's is ~200,000 tokens, roughly 500 pages
+- Fill it up and the earliest text falls out of view
+:::
+:::
+
+::: {.explainer}
+"Context window" and "how much can it remember in one conversation" are the same question --- measured in tokens.
+:::
+
+## Parameters
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The knobs learned in training]{.card-title}
+
+- A model's [parameters]{.accent} are the billions of numbers adjusted during training
+- Training = show it text, have it predict the next token, nudge the numbers when it is wrong, repeat trillions of times
+- The finished parameters *are* the model
+:::
+::: {.card .card-amber}
+[Knowledge, then values]{.card-title}
+
+- Pre-training gives the model its [knowledge]{.accent}
+- A second stage --- fine-tuning and human feedback (RLHF) --- gives it its [behavior]{.accent}: helpful, honest, safe
+- Anthropic calls its approach Constitutional AI
+:::
+:::
+
+::: {.explainer}
+More parameters and more training data have meant more capability --- GPT-2 had 1.5 billion parameters; today's frontier models are a thousand times larger.
+:::
+
+## Why the Same Prompt Gives Different Answers
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Sampling]{.card-title}
+
+- The model gives a *distribution*; it then samples from it
+- [Temperature]{.accent} controls the gamble: near 0 it always takes the likeliest token; higher, it takes chances
+- Low temperature → predictable and safe; high → varied and creative
+:::
+::: {.card .card-amber}
+[Why hallucinations happen]{.card-title}
+
+- The model is trained to produce [plausible]{.accent} next tokens, not [true]{.accent} ones
+- Fluency is not truth --- a confident, well-formed answer can be wrong
+- This is why we verify, and why later sessions are full of checking
+:::
+:::
+
+::: {.explainer}
+Same reason a vague prompt gives a vague answer: you leave the distribution wide. A specific prompt collapses it to a narrow, useful range.
+:::
+
+## The Layers You Control {.section-divider}
+
+## System Prompts
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The standing instructions]{.card-title}
+
+- Before your message, the model gets a [system prompt]{.accent}: who it is, how to behave, what it may and may not do
+- You never see it in a chatbot --- the app writes it
+- When you build your own tools, *you* write it
+:::
+::: {.card .card-amber}
+[Why it is powerful]{.card-title}
+
+- "You are a patient tutor; give hints, never the final answer"
+- "You are a vendor rep with a hidden price floor; stay in character"
+- The same model becomes a tutor, a negotiation partner, or a data analyst --- by its system prompt alone
+:::
+:::
+
+::: {.explainer}
+Much of what we build later in the course is really just a carefully written system prompt wrapped around the same Claude.
+:::
+
+## Tools
+
+::: {.two-cards}
+::: {.card .card-blue}
+[A model that can act]{.card-title}
+
+- On its own, a model only produces text
+- Give it [tools]{.accent} --- run code, search the web, query a database, read a file --- and it can *do* things
+- The model decides when to reach for a tool and reads back the result
+:::
+::: {.card .card-amber}
+[This is the leap]{.card-title}
+
+- Text-only: it can tell you how to compute the answer
+- With a code tool: it computes the answer and shows you the chart
+- Tomorrow's session is entirely about what tools unlock
+:::
+:::
+
+::: {.explainer}
+A chatbot with tools is the difference between advice and work. Most of this course lives on the tool side.
+:::
+
+## Memory
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The model has none of its own]{.card-title}
+
+- Each request is fresh; the model remembers nothing between them
+- A conversation "remembers" only because the app resends the whole history each turn
+- Run out of context window and the early turns drop away
+:::
+::: {.card .card-amber}
+[Giving it real memory]{.card-title}
+
+- A memory file the model reads at the start and updates as it goes
+- A database it can search --- notes, past chats, your documents
+- We will build both; "memory" is just information you arrange to hand back
+:::
+:::
+
+::: {.explainer}
+This matters for privacy too: what the model "knows" about you is whatever you or the app chooses to resend --- nothing more.
+:::
+
+## Reasoning
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Thinking before answering]{.card-title}
+
+- Newer models can produce a private chain of [reasoning]{.accent} before the final reply
+- More tokens spent thinking → better answers on hard, multi-step problems
+- You can often turn "extended thinking" up or down
+:::
+::: {.card .card-amber}
+[When it is worth it]{.card-title}
+
+- Worth it: proofs, multi-step analysis, tricky code, careful critique
+- Overkill: "reformat this table" or "summarize this paragraph"
+- More reasoning costs more tokens and time --- match it to the stakes
+:::
+:::
+
+::: {.explainer}
+This is why a model can seem to "show its work" now. The scratchpad is real --- it just usually stays hidden.
+:::
+
+## The Anatomy, In One Slide {.centered-statement}
+
+::: {.card .card-dark}
+A model predicts the next [token]{.accent} using its trained [parameters]{.accent}. Around it you place a [system prompt]{.accent} that sets its role, [tools]{.accent} that let it act, [memory]{.accent} that lets it carry context, and [reasoning]{.accent} that lets it think first. Everything we build this course is some arrangement of those six pieces.
+:::
+
+## Breakout {.section-divider}
+
+## Questions to Discuss
+
+- Where have you already seen a confident AI answer that turned out to be wrong? What tipped you off?
+- For your field, when would "more reasoning, slower" be worth it --- and when is it wasted?
+- If you could write the system prompt for a tool your students use, what would you tell it to do --- and refuse to do?
+- What would you want an AI to *remember* about your work between sessions?

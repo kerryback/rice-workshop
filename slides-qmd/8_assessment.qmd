@@ -1,0 +1,287 @@
+---
+title: "8. Assessment"
+subtitle: "Rice Business 2026"
+author: "Kerry Back<br>Rice Business"
+---
+
+## {.quote-slide .no-title}
+
+::: {.quote-text}
+"The take-home essay was already a weak signal. Now it is a test of whose AI wrote the better answer. The question is not how to stop students using AI --- it is [what we should be measuring instead.]{.amber}"
+:::
+
+::: {.quote-source}
+The problem every assessment in your course now faces
+:::
+
+## The Problem, Stated Plainly
+
+::: {.two-cards}
+::: {.card .card-red}
+[What broke]{.card-title}
+
+- AI drafts the essay, the memo, the code, the problem set
+- Take-home work no longer tells you what the student can do
+- Detection is unreliable --- and biased against non-native writers
+:::
+::: {.card .card-teal}
+[The move]{.card-title}
+
+- Stop trying to keep AI out of everything
+- Decide, per assessment, where AI belongs and where it cannot reach
+- Measure [judgment]{.accent} --- the thing AI does not supply
+:::
+:::
+
+::: {.explainer}
+Four responses this session: flip the classroom, assign software that has to run, make students check AI, and hold secure exams that AI cannot fake.
+:::
+
+## Two Lanes {.section-divider}
+
+## Put Security Where It Can Be Enforced
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Secure lane]{.card-title}
+
+- Supervised, in-person --- exams, orals, in-class work
+- No devices, or locked-down ones
+- Assessment *of* learning: this is where the grade's integrity lives
+:::
+::: {.card .card-amber}
+[Open lane]{.card-title}
+
+- Take-home, AI-allowed and scaffolded
+- Students use every tool they will use at work
+- Assessment *for* learning: practice, feedback, building
+:::
+:::
+
+::: {.explainer}
+The mistake is pretending the open lane can be secured. Let it be AI-rich; concentrate integrity in the lane you can actually control.
+:::
+
+## Flipped Classroom {.section-divider}
+
+## Move Content Out, Judgment In
+
+::: {.step-flow}
+::: {.step-card}
+::: {.step-icon}
+🎧
+:::
+::: {.step-title}
+Tutorbot
+:::
+::: {.step-desc}
+Student absorbs the concept before class, asking questions as they go
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+📋
+:::
+::: {.step-title}
+Case
+:::
+::: {.step-desc}
+A case built on that concept; student prepares a recommendation
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+🎙️
+:::
+::: {.step-title}
+Cold call
+:::
+::: {.step-desc}
+Class time tests understanding through discussion
+:::
+:::
+:::
+
+::: {.explainer}
+The flipped classroom is an assessment strategy: the graded moment moves into the room, where it is supervised, and rides on discussion rather than a document a bot could have written.
+:::
+
+## What the Logs Tell You
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Before class]{.card-title}
+
+- The tutorbot's question log shows what confused people, at 9 p.m., before class
+- Pre-case writeups surface who caught the hook
+- You walk in knowing where to aim
+:::
+::: {.card .card-amber}
+[In class]{.card-title}
+
+- A cold-call bank keyed to case details, grouped by concept
+- Each question notes the answer to listen for
+- Starred questions separate who understood from who skimmed
+:::
+:::
+
+::: {.explainer}
+Formative signal you never had before --- and it is generated alongside the case, not hand-built.
+:::
+
+## Software Deliverables {.section-divider}
+
+## Assign Things That Have to Run
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Why it resists faking]{.card-title}
+
+- A model, an app, or an agent either works or it doesn't
+- The grade is on a deliverable you can *execute*, not prose you have to trust
+- Using AI to build it is the point, not the cheat
+:::
+::: {.card .card-amber}
+[What you can see]{.card-title}
+
+- The commit history: who built what, when, in what order
+- Whether it runs on inputs the student never saw
+- Whether they can explain and modify it live
+:::
+:::
+
+::: {.explainer}
+"Build a tool that schedules the rigs" cannot be answered by a paragraph. The student has to make something real --- and defend it.
+:::
+
+## Grade the Process, Not Just the Artifact
+
+::: {.three-cards}
+::: {.card .card-blue}
+[Runs on held-out data]{.card-title}
+
+Test the deliverable on inputs the student never saw --- a fresh dataset, a new edge case
+:::
+::: {.card .card-amber}
+[Live modification]{.card-title}
+
+"Add this feature now." Whoever built it can; whoever pasted it cannot
+:::
+::: {.card .card-teal}
+[Version history]{.card-title}
+
+Git shows the build as a sequence of decisions, not a single drop
+:::
+:::
+
+::: {.explainer}
+The finance course this material grew from grades six group software deliverables plus peer assessment --- each one runs, and each one is defended.
+:::
+
+## Checking AI {.section-divider}
+
+## Write vs. Critique
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Write the recommendation]{.card-title}
+
+- Student makes the call --- finds the risks, proposes a fix, defends the tradeoffs
+- The classic writeup
+- In the open lane, AI helped draft it
+:::
+::: {.card .card-amber}
+[Critique the AI's recommendation]{.card-title}
+
+- Student is handed a fluent, confident, subtly wrong AI memo
+- Their job is to evaluate it, not write their own
+- Tests whether they can judge AI output --- [the real skill now]{.accent}
+:::
+:::
+
+::: {.explainer}
+Critique turns the course's own lesson on the student: they spend the term learning to distrust a confident AI, then are handed one to catch or approve.
+:::
+
+## Case Exams with AI, In the Room
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The format]{.card-title}
+
+- In class, no devices --- a genuine secure assessment
+- Students are given an AI-generated solution to a problem
+- They critique it: what is right, what is wrong, what is missing
+:::
+::: {.card .card-amber}
+[Why it holds up]{.card-title}
+
+- You cannot outsource the judgment to the tool you are judging
+- Tests the skill that matters when AI drafts everything first
+- Open, AI-rich work outside; secure evaluation inside
+:::
+:::
+
+::: {.explainer}
+The exam and the tutorbot are the same philosophy from opposite ends: let AI carry the content, and put the human's judgment at the center of what we assess.
+:::
+
+## Not Detection {.section-divider}
+
+## Why Detectors Are the Wrong Tool
+
+::: {.two-cards}
+::: {.card .card-red}
+[What fails]{.card-title}
+
+- AI detectors are unreliable and produce false positives
+- They are biased against non-native English writers
+- Vanderbilt and others turned them off
+:::
+::: {.card .card-teal}
+[What works instead]{.card-title}
+
+- State per assignment what AI use is allowed --- and why
+- Design assignments AI cannot simply do, like critiquing an AI's answer
+- Move the graded moment into the secure lane
+:::
+:::
+
+::: {.explainer}
+You will not win by policing the open lane. You win by designing assessments whose answer is judgment, and holding the high-stakes ones where you can see the student think.
+:::
+
+## Redesign, Don't Bolt On
+
+::: {.three-cards}
+::: {.card .card-blue}
+[Weave it through]{.card-title}
+
+IESE wove AI across 18 first-year courses --- not bolted onto a couple of electives
+:::
+::: {.card .card-amber}
+[Rethink the core]{.card-title}
+
+If AI does the analysis, what should the analytics course now assess? The applied skill, not the mechanics
+:::
+::: {.card .card-teal}
+[Move up the ladder]{.card-title}
+
+Free graded time from content and mechanics for framing, judgment, and defense
+:::
+:::
+
+## The Through-Line {.centered-statement}
+
+::: {.card .card-dark}
+AI now does the middle --- the drafting, the coding, the analysis. So assessment moves to the ends: [deciding what should be done]{.accent} and [judging whether it was done well.]{.accent} Flip the room, assign things that run, and make students check the AI. That is what we are here to measure.
+:::
+
+## Breakout {.section-divider}
+
+## Questions to Discuss
+
+- Which of your current assessments is a take-home that AI can now do end to end?
+- Where is your secure lane --- and is the high-stakes grade actually held there?
+- What would a "build something that runs" deliverable look like in your course?
+- Would you rather have students write the recommendation or critique an AI's? Why?

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tutorbot — AI Security</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  body { display: flex; background: #14161a; color: #e8e8e8; }
+
+  #deck-pane { flex: 3; min-width: 0; display: flex; flex-direction: column; }
+  #deck-frame { flex: 1; width: 100%; border: 0; background: #000; }
+
+  #controls { display: flex; align-items: center; gap: 8px; padding: 8px 12px;
+              background: #1e2127; border-top: 1px solid #333; flex-wrap: wrap; }
+  #controls button { background: #3a4150; color: #e8e8e8; border: 0; border-radius: 6px;
+                     padding: 7px 14px; font-size: 14px; cursor: pointer; }
+  #controls button:hover { background: #4a5264; }
+  #controls button.primary { background: #2563eb; }
+  #controls button.primary:hover { background: #3b76f0; }
+  #controls button:disabled { opacity: .4; cursor: default; }
+  #slide-counter { margin-left: auto; font-variant-numeric: tabular-nums; color: #9aa3b2; font-size: 14px; }
+  #controls label { font-size: 13px; color: #9aa3b2; display: flex; align-items: center; gap: 4px; cursor: pointer; }
+
+  #chat-pane { flex: 1; min-width: 300px; max-width: 480px; display: flex; flex-direction: column;
+               background: #1a1d22; border-left: 1px solid #333; }
+  #chat-header { padding: 12px 14px; border-bottom: 1px solid #333; font-weight: 600; font-size: 15px; }
+  #chat-header small { display: block; font-weight: 400; color: #9aa3b2; margin-top: 2px; }
+  #messages { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .msg { border-radius: 10px; padding: 9px 12px; font-size: 14px; line-height: 1.45;
+         white-space: pre-wrap; max-width: 92%; }
+  .msg.user { background: #2563eb; align-self: flex-end; }
+  .msg.assistant { background: #2a2f38; align-self: flex-start; }
+  .msg.system { background: transparent; color: #8a93a3; font-size: 12.5px; align-self: center; text-align: center; }
+
+  #chat-input-row { display: flex; gap: 8px; padding: 10px; border-top: 1px solid #333; }
+  #chat-input { flex: 1; background: #23272f; color: #e8e8e8; border: 1px solid #3a4150;
+                border-radius: 8px; padding: 9px 11px; font-size: 14px; resize: none; height: 42px; }
+  #chat-input:focus { outline: none; border-color: #2563eb; }
+  #send-btn { background: #2563eb; border: 0; border-radius: 8px; color: #fff;
+              padding: 0 16px; font-size: 14px; cursor: pointer; }
+  #send-btn:disabled { opacity: .4; cursor: default; }
+  #chat-options { padding: 0 12px 10px; }
+</style>
+</head>
+<body>
+
+<div id="deck-pane">
+  <iframe id="deck-frame" src="deck/5_security.html?postMessageEvents=true"
+          allow="autoplay"></iframe>
+  <div id="controls">
+    <button id="play-btn" class="primary">Play</button>
+    <button id="ask-btn">Ask a question</button>
+    <button id="resume-btn" disabled>Resume</button>
+    <label><input type="checkbox" id="autoplay-chk" checked> Autoplay</label>
+    <span id="slide-counter">slide –</span>
+  </div>
+</div>
+
+<div id="chat-pane">
+  <div id="chat-header">Course tutor
+    <small>Pause anytime and ask about what you're seeing.</small>
+  </div>
+  <div id="messages">
+    <div class="msg system">Press Play to start the narrated presentation.
+      Asking a question pauses the audio.</div>
+  </div>
+  <div id="chat-input-row">
+    <textarea id="chat-input" placeholder="Ask about this slide..." rows="1"></textarea>
+    <button id="send-btn">Send</button>
+  </div>
+  <div id="chat-options">
+    <label style="font-size:13px;color:#9aa3b2;">
+      <input type="checkbox" id="tts-chk"> Read answers aloud
+    </label>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+// ------------------------------------------------------------------ config
+var NO_AUDIO_DWELL_MS = 4000;   // dwell on silent slides before auto-advancing
+
+// ------------------------------------------------------------------ state
+var frame = document.getElementById("deck-frame");
+var audio = new Audio();
+var manifest = {};              // slide index -> filename (or null)
+var currentSlide = 0;
+var totalSlides = null;
+var playing = false;            // user pressed Play and hasn't paused
+var pausedForQuestion = false;
+var dwellTimer = null;
+var chatHistory = [];           // chat history [{role, content}]
+
+var playBtn = document.getElementById("play-btn");
+var askBtn = document.getElementById("ask-btn");
+var resumeBtn = document.getElementById("resume-btn");
+var autoplayChk = document.getElementById("autoplay-chk");
+var counter = document.getElementById("slide-counter");
+var messagesDiv = document.getElementById("messages");
+var input = document.getElementById("chat-input");
+var sendBtn = document.getElementById("send-btn");
+var ttsChk = document.getElementById("tts-chk");
+
+// ------------------------------------------------------------- manifest
+// NOTE: relative path — the app may be deployed behind an nginx sub-path.
+fetch("audio/manifest.json")
+  .then(function (r) { return r.ok ? r.json() : []; })
+  .then(function (list) {
+    list.forEach(function (e) { manifest[e.index] = e.file; });
+    totalSlides = list.length || null;
+    updateCounter();
+  })
+  .catch(function () { addSystemMsg("No audio manifest found — narration disabled."); });
+
+// ------------------------------------------------------- reveal messaging
+function sendToReveal(method, args) {
+  frame.contentWindow.postMessage(JSON.stringify({ method: method, args: args || [] }), "*");
+}
+
+window.addEventListener("message", function (event) {
+  var data;
+  try { data = JSON.parse(event.data); } catch (e) { return; }
+  if (!data || data.namespace !== "reveal") return;
+
+  if (data.eventName === "ready" || data.eventName === "slidechanged") {
+    var state = data.state || {};
+    var idx = typeof state.indexh === "number" ? state.indexh : 0;
+    onSlideChanged(idx);
+  } else if (data.eventName === "callback" && data.method === "getState") {
+    // Response to our getState call (in case the 'ready' event was missed).
+    var st = data.result || {};
+    if (typeof st.indexh === "number") {
+      currentSlide = st.indexh;
+      updateCounter();
+    }
+  }
+});
+
+// ------------------------------------------------------------- playback
+function onSlideChanged(idx) {
+  currentSlide = idx;
+  updateCounter();
+  clearDwell();
+  audio.pause();
+  if (playing) startSlideAudio();
+}
+
+function startSlideAudio() {
+  clearDwell();
+  var file = manifest[currentSlide];
+  if (file) {
+    audio.src = "audio/" + file;   // relative path (sub-path safe)
+    audio.play().catch(function () {
+      addSystemMsg("Audio blocked by the browser — click Play again.");
+      setPlaying(false);
+    });
+  } else {
+    // No narration: dwell, then advance if autoplay is on.
+    if (autoplayChk.checked) {
+      dwellTimer = setTimeout(advance, NO_AUDIO_DWELL_MS);
+    }
+  }
+}
+
+audio.addEventListener("ended", function () {
+  if (playing && autoplayChk.checked) advance();
+});
+
+function advance() {
+  clearDwell();
+  sendToReveal("next");
+}
+
+function clearDwell() {
+  if (dwellTimer) { clearTimeout(dwellTimer); dwellTimer = null; }
+}
+
+function setPlaying(on) {
+  playing = on;
+  playBtn.textContent = on ? "Pause" : "Play";
+  playBtn.classList.toggle("primary", !on);
+  if (on) {
+    pausedForQuestion = false;
+    resumeBtn.disabled = true;
+    if (audio.src && audio.paused && manifest[currentSlide]) {
+      audio.play().catch(function () {});
+      // If nothing loaded for this slide yet, start fresh.
+      if (audio.ended || !audio.currentTime) startSlideAudio();
+    } else {
+      startSlideAudio();
+    }
+  } else {
+    audio.pause();
+    clearDwell();
+  }
+}
+
+playBtn.addEventListener("click", function () { setPlaying(!playing); });
+
+document.addEventListener("keydown", function (e) {
+  if (e.code === "Space" && document.activeElement !== input) {
+    e.preventDefault();
+    setPlaying(!playing);
+  }
+});
+
+function updateCounter() {
+  counter.textContent = "slide " + (currentSlide + 1) + (totalSlides ? " / " + totalSlides : "");
+}
+
+// ---------------------------------------------------------------- chat
+function pauseForQuestion() {
+  if (playing) setPlaying(false);
+  pausedForQuestion = true;
+  resumeBtn.disabled = false;
+  input.focus();
+}
+
+askBtn.addEventListener("click", pauseForQuestion);
+resumeBtn.addEventListener("click", function () { setPlaying(true); });
+
+function addMsg(role, text) {
+  var div = document.createElement("div");
+  div.className = "msg " + role;
+  div.textContent = text;
+  messagesDiv.appendChild(div);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  return div;
+}
+
+function addSystemMsg(text) { return addMsg("system", text); }
+
+function sendQuestion() {
+  var question = input.value.trim();
+  if (!question) return;
+  pauseForQuestion();
+  input.value = "";
+  sendBtn.disabled = true;
+
+  addMsg("user", question);
+  var answerDiv = addMsg("assistant", "…");
+
+  // Relative path on purpose — works behind an nginx sub-path.
+  fetch("api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      slide_index: currentSlide,
+      question: question,
+      history: chatHistory
+    })
+  }).then(function (resp) {
+    if (!resp.ok) throw new Error("HTTP " + resp.status);
+    var reader = resp.body.getReader();
+    var decoder = new TextDecoder();
+    var answer = "";
+    function pump() {
+      return reader.read().then(function (result) {
+        if (result.done) return answer;
+        answer += decoder.decode(result.value, { stream: true });
+        answerDiv.textContent = answer;
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        return pump();
+      });
+    }
+    return pump();
+  }).then(function (answer) {
+    chatHistory.push({ role: "user", content: question });
+    chatHistory.push({ role: "assistant", content: answer });
+    if (ttsChk.checked && window.speechSynthesis) {
+      speechSynthesis.cancel();
+      speechSynthesis.speak(new SpeechSynthesisUtterance(answer));
+    }
+  }).catch(function (err) {
+    answerDiv.textContent = "Sorry, something went wrong (" + err.message + "). Is the server running?";
+  }).finally(function () {
+    sendBtn.disabled = false;
+    resumeBtn.disabled = false;
+  });
+}
+
+sendBtn.addEventListener("click", sendQuestion);
+input.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    sendQuestion();
+  }
+});
+
+// Ask reveal for its state once the iframe loads (covers a missed 'ready').
+frame.addEventListener("load", function () {
+  setTimeout(function () { sendToReveal("getState"); }, 500);
+});
+</script>
+</body>
+</html>

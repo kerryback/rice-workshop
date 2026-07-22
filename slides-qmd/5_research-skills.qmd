@@ -1,0 +1,212 @@
+---
+title: "5. Research Skills"
+subtitle: "Rice Business 2026"
+author: "Kerry Back<br>Rice Business"
+---
+
+## Codified Expertise, Not a Smarter Model
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The problem with chatting]{.card-title}
+
+- A great prompt works once, then scrolls out of your history
+- The next person --- or the next you --- starts over
+- Quality depends on remembering how you did it last time
+:::
+::: {.card .card-amber}
+[What a skill fixes]{.card-title}
+
+- Write down "how a good referee report is structured," once
+- Every future run follows it --- same standard, no reminding
+- A [one-time workflow]{.accent} becomes a [reusable asset]{.accent}
+:::
+:::
+
+::: {.explainer}
+A skill is not a model upgrade. It is your procedure, written down where Claude will follow it every time --- across Claude.ai, Claude Code, and the add-ins.
+:::
+
+## What a Skill Actually Is
+
+::: {.two-cards}
+::: {.card .card-blue}
+[A folder and a file]{.card-title}
+
+- A `SKILL.md` file: a name, a description, and instructions in plain English
+- Optional scripts and reference documents alongside
+- That is the whole thing --- readable, editable, versionable
+:::
+::: {.card .card-amber}
+[How Claude uses it]{.card-title}
+
+- At startup it reads only each skill's name and description
+- When a task looks relevant, it pulls in the full instructions
+- Scripts run only when needed --- so your context stays lean
+:::
+:::
+
+::: {.explainer}
+This "progressive disclosure" is why you can have dozens of skills installed and pay attention-cost only for the one in use.
+:::
+
+## Public Repos {.section-divider}
+
+## Researchers Have Already Built These
+
+::: {.three-cards}
+::: {.card .card-blue}
+[Pedro Sant'Anna]{.card-title}
+
+- Runs his whole paper lifecycle through Claude Code
+- `/lit-review`, `/review-paper` (mimics AER/QJE/JPE standards), referee responses
+- ~18 specialized agents in an adversarial critic-fixer loop; blocks anything scoring below 80
+:::
+::: {.card .card-amber}
+[Lee Crawfurd]{.card-title}
+
+- Five tightly-scoped skills for development economists
+- Paper Review, Code Review (Stata/R/Python replication audit)
+- "Referee 2" runs parallel reproducibility checks
+:::
+::: {.card .card-teal}
+[Academic-research suite]{.card-title}
+
+- Deep Research with PRISMA systematic-review mode
+- Drafting with citation-format conversion (APA/Chicago/MLA)
+- A mock editor + reviewer + devil's-advocate panel
+:::
+:::
+
+::: {.explainer}
+These are real, published, installable suites --- economists mostly. The shared theme: Claude is [copilot, not pilot]{.accent}. You own the question and the identification strategy; the skill handles the grunt work and enforces quality gates.
+:::
+
+## The Feature That Matters Most for Us
+
+::: {.card .card-blue}
+The biggest academic risk with AI is [fabricated references]{.accent} and claims a cited source does not actually support. The better skills attack this head-on.
+:::
+
+::: {.three-cards}
+::: {.card .card-dark}
+[Verify every citation]{.card-title}
+
+Checked against Semantic Scholar, OpenAlex, Crossref, and arXiv --- bogus DOIs caught before export
+:::
+::: {.card .card-light}
+[Audit every claim]{.card-title}
+
+Does the cited source actually support the sentence? High-severity violations block the output
+:::
+::: {.card .card-dark}
+[Flag contamination]{.card-title}
+
+Detects citations that may themselves be AI-invented
+:::
+:::
+
+::: {.explainer}
+For empirical or b-school research, this is the line between a demo and something you can responsibly use.
+:::
+
+## Does It Actually Work?
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The benchmark]{.card-title}
+
+- 54 social-science papers, tested for whether a coding agent could reproduce the published findings from the paper alone
+- Claude Code: [~93%]{.accent} accuracy at the individual-step level
+- But only [~78%]{.accent} at the whole-paper level
+:::
+::: {.card .card-amber}
+[What the gap teaches]{.card-title}
+
+- It nails each analysis step
+- One broken step anywhere still fails the full reproduction
+- A ready-made lesson on exactly where human oversight stays essential
+:::
+:::
+
+::: {.explainer}
+The 93/78 split is the honest picture: extraordinary at the parts, not yet trustworthy end-to-end without a human checking the chain.
+:::
+
+## Build Your Own {.section-divider}
+
+## From Workflow to Skill
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The easy path]{.card-title}
+
+- Type [/skill-creator]{.shell-cmd} and describe your workflow
+- It writes the `SKILL.md` and saves it where Claude will find it
+- Invoke it by name from then on
+:::
+::: {.card .card-amber}
+[Bake in the checks]{.card-title}
+
+- Put your verification steps *inside* the skill
+- "After computing, show the row count and the min and max"
+- The skill enforces your hygiene, every run --- not just when you remember
+:::
+:::
+
+::: {.explainer}
+The most valuable skills for research encode not just what to do, but how to *check* it --- the referee's discipline, made automatic.
+:::
+
+## A Skill You Might Write
+
+::: {.code-box}
+::: {.box-title}
+SKILL.md --- replication-audit
+:::
+When given a replication package: 1) inventory every script and data file; 2) run the code end to end in a clean environment and record what breaks; 3) check each table and figure in the paper against what the code produces; 4) flag any result that cannot be reproduced from the provided files; 5) write a short report with a per-result reproduced / not-reproduced status.
+:::
+
+::: {.explainer}
+A hand-written skill like this --- yours, transparent, under your control --- is safer and more teachable than installing a multi-skill black box.
+:::
+
+## Vetting {.section-divider}
+
+## Installing Someone Else's Skill Runs Their Code
+
+::: {.two-cards}
+::: {.card .card-red}
+[The supply-chain risk]{.card-title}
+
+- The academic suites are independent repos, outside Anthropic's screened directory
+- Installing one runs someone else's instructions and scripts on your machine
+- There is active security research on malicious third-party skills
+:::
+::: {.card .card-teal}
+[Due diligence]{.card-title}
+
+- [claude plugin validate]{.shell-cmd} checks *structure*, not safety
+- Read the `SKILL.md` and any scripts yourself
+- Fine for a class demo; think twice before pointing it at real data
+:::
+:::
+
+::: {.explainer}
+"Validate" confirms a plugin is well-formed, not that it is trustworthy. The safest research skill is often the small one you wrote and can read in full.
+:::
+
+## The Payoff {.centered-statement}
+
+::: {.card .card-dark}
+A skill turns your best research practice --- how you referee, how you audit a replication, how you check a citation --- into something [Claude does the same way every time.]{.accent} You still own the question and the judgment. The skill owns the discipline.
+:::
+
+## Breakout {.section-divider}
+
+## Questions to Discuss
+
+- What is one research task you do the same careful way each time --- a good candidate for a skill?
+- Where has a fabricated or mis-supported citation nearly slipped past you? Would a claim-audit have caught it?
+- Given the 93/78 result, which parts of your empirical work would you let AI run --- and which would you always check yourself?
+- Would you install a colleague's research skill? What would you read before trusting it with your data?
