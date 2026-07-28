@@ -16,6 +16,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: "https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1"
+        text: Zoom
 
 format:
   html:
