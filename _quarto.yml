@@ -10,6 +10,12 @@ project:
 website:
   title: ""
   search: false
+  navbar:
+    search: false
+    title: "Claude for Teaching & Research"
+    left:
+      - href: index.qmd
+        text: Home
 
 format:
   html:

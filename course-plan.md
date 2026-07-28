@@ -1,15 +1,20 @@
-**AUG 10:** **Intro to AI.** models, tokens, harnesses, system prompts, tools, memory, reasoning, prompting
+Faculty Workshop: Claude for Teaching and Research
+3:00 - 4:00 PM
+https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1
 
-**AUG 11:** **All about Claude.** Chat, Cowork, Code, Claude plugin for Excel, Code CLI, VS Code extension
 
-**AUG 12:** **Research and Teaching Setup.** Stata, Python, R, LaTeX, Quarto, Git, GitHub, Academic Studio
+**AUG 11:** **Intro to Claude.** Claude Desktop (Chat, Cowork, Code), Claude plugin for Excel
 
-**AUG 13:** **Beyond Chatting.** Code execution, command line, web search and fetch, computer-use and browser tools
+**AUG 12:** **Claude Tools.** Code execution, command line, web search and fetch, and browser use
 
-**AUG 14:** **Skills, Connectors, and Plugins.** Customizing Claude and adding capabilities
+**AUG 13:** **Skills, Connectors, and Plugins.** Customizing Claude and adding capabilities
 
-**AUG 17:** **Creating Instructional Materials.** AI tutors, voice-overs, cases, slide decks
+**AUG 14:** **AI for Teaching.** NotebookLM, RAG chatbots, slide voice-overs
 
-**AUG 18:** **Student Projects.** Artifacts, apps, agents
+**AUG 15:** **Student Projects.** Artifacts, apps, agents
 
-**AUG 19:** **Research Skills.** Awesome AI for Economists, my lit search and knowledge database, build your own
+**AUG 17:** **Research Setup.** Academic Studio, Python, R, LaTeX, Quarto, Git, GitHub
+
+**AUG 18:** **AI for Research** Literature search, knowledge databases, writing, and reviews
+
+**AUG 19** **Agent Assistants** Research team, personal assistants
