@@ -13,9 +13,7 @@ website:
   navbar:
     search: false
     title: "Claude for Teaching & Research"
-    left:
-      - href: index.qmd
-        text: Home
+    right:
       - href: "https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1"
         text: Zoom
 
