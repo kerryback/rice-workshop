@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --navy:#00205B; --gold:#b8912f; --ink:#1a1a1a; --gray:#444; --mut:#6b6b6b; --line:#e4e4e4; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: var(--ink); }
+  a { color: inherit; text-decoration: none; }
+
+  @page { size: 8.5in 11in; margin: 0; }
+  .page {
+    position: relative;
+    width: 8.5in; height: 11in;
+    padding: 0.95in 0.9in 0.85in;
+    page-break-after: always;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* running footer (same on every content page) */
+  .foot {
+    position: absolute; left: 0.9in; right: 0.9in; bottom: 0.6in;
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 12px; border-top: 1px solid var(--line);
+    font-size: 11px; color: var(--mut); letter-spacing: .3px;
+  }
+  .foot .pg { font-weight: 700; color: var(--navy); }
+
+  .eyebrow { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--navy); font-weight: 700; }
+  h1 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); font-weight: 700; }
+  .rule { height: 3px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--navy) 0 62%, var(--gold) 62% 100%); }
+
+  /* ---------- cover ---------- */
+  .cover { display: flex; flex-direction: column; }
+  .cover .top { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .cover .eyebrow { text-align: center; margin-bottom: 16px; }
+  .cover h1 { text-align: center; font-size: 52px; line-height: 1.1; }
+  .cover .rule { width: 210px; margin: 26px auto 30px; }
+  .cover .lead { text-align: center; font-size: 18px; line-height: 1.55; color: var(--gray);
+    max-width: 5.6in; margin: 0 auto; }
+  .cover .meta { margin: 46px auto 0; display: grid; grid-template-columns: auto auto; gap: 12px 26px; }
+  .cover .meta .k { display: inline-block; width: 78px; font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  .cover .meta .v { font-size: 17px; color: var(--ink); }
+  .cover .brand { text-align: center; font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--mut); }
+  .cover .cta { text-align: center; margin-top: 8px; font-size: 17px; font-weight: 700; color: var(--navy); }
+
+  /* ---------- content pages ---------- */
+  .phead { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+  .phead .wk { font-size: 22px; font-weight: 800; color: var(--navy); }
+  .phead .dates { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  .phead + .rule { width: 100%; margin-bottom: 26px; }
+
+  .card { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .card:last-of-type { border-bottom: none; }
+  .chip { flex: 0 0 92px; align-self: flex-start; background: var(--navy); color: #fff;
+    font-size: 13px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 8px 0; border-radius: 6px; }
+  .card .t { font-size: 20px; font-weight: 700; color: var(--navy); }
+  .card .d { font-size: 15px; line-height: 1.5; color: var(--gray); margin-top: 3px; }
+
+  .join { margin-top: 30px; padding: 22px 24px; background: #f6f7f9; border: 1px solid var(--line); border-radius: 10px; }
+  .join h2 { font-family: Georgia, serif; font-size: 19px; color: var(--navy); margin-bottom: 12px; }
+  .join .row { display: flex; gap: 14px; padding: 6px 0; font-size: 15px; color: var(--ink); }
+  .join .row .k { flex: 0 0 74px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); font-weight: 700; padding-top: 2px; }
+  .join a { color: var(--navy); font-weight: 700; }
+</style>
+</head>
+<body>
+
+  <!-- Page 1 — cover -->
+  <section class="page cover">
+    <div class="top">
+      <div class="eyebrow">Faculty Workshop &nbsp;&middot;&nbsp; August 2026</div>
+      <h1>Claude for Teaching<br>&amp; Research</h1>
+      <div class="rule"></div>
+      <p class="lead">A hands-on workshop for Rice Business faculty &mdash; eight one-hour sessions on putting Claude to work across teaching and research.</p>
+      <div class="meta">
+        <div><span class="k">When</span></div><div class="v">Aug 10&ndash;14 &amp; 17&ndash;19, 2026</div>
+        <div><span class="k">Time</span></div><div class="v">3:00 &ndash; 4:00 PM</div>
+        <div><span class="k">Where</span></div><div class="v">Zoom</div>
+        <div><span class="k">Led by</span></div><div class="v">Kerry Back</div>
+      </div>
+    </div>
+    <div>
+      <div class="brand">Rice Business &middot; Jones Graduate School of Business</div>
+      <div class="cta"><a href="https://rice-workshop.kerryback.com">rice-workshop.kerryback.com</a></div>
+    </div>
+  </section>
+
+  <!-- Page 2 — Week 1 -->
+  <section class="page">
+    <div class="phead"><span class="wk">Week 1</span><span class="dates">August 10&ndash;14</span></div>
+    <div class="rule"></div>
+
+    <div class="card"><div class="chip">AUG 10</div><div><div class="t">Intro to Claude</div><div class="d">Claude Desktop (Chat, Cowork, Code) and the Claude plugin for Excel &mdash; the everyday surfaces you will use throughout the workshop.</div></div></div>
+    <div class="card"><div class="chip">AUG 11</div><div><div class="t">Claude Tools</div><div class="d">Code execution, the command line, web search and fetch, and browser use &mdash; letting Claude act, not just answer.</div></div></div>
+    <div class="card"><div class="chip">AUG 12</div><div><div class="t">Skills, Connectors, and Plugins</div><div class="d">Customizing Claude and adding capabilities for your own teaching and research workflows.</div></div></div>
+    <div class="card"><div class="chip">AUG 13</div><div><div class="t">AI for Teaching</div><div class="d">NotebookLM, retrieval-augmented chatbots, and slide voice-overs for course materials.</div></div></div>
+    <div class="card"><div class="chip">AUG 14</div><div><div class="t">Student Projects</div><div class="d">Artifacts, apps, and agents &mdash; what students can build, and how to assign it.</div></div></div>
+
+    <div class="foot"><span>Claude for Teaching &amp; Research &middot; Faculty Workshop</span><span class="pg">2</span></div>
+  </section>
+
+  <!-- Page 3 — Week 2 + joining -->
+  <section class="page">
+    <div class="phead"><span class="wk">Week 2</span><span class="dates">August 17&ndash;19</span></div>
+    <div class="rule"></div>
+
+    <div class="card"><div class="chip">AUG 17</div><div><div class="t">Research Setup</div><div class="d">Academic Studio, Python, R, LaTeX, Quarto, Git, and GitHub &mdash; a reproducible environment for AI-assisted research.</div></div></div>
+    <div class="card"><div class="chip">AUG 18</div><div><div class="t">AI for Research</div><div class="d">Literature search, knowledge databases, writing, and reviews.</div></div></div>
+    <div class="card"><div class="chip">AUG 19</div><div><div class="t">Agent Assistants</div><div class="d">Building a research team of agents and personal assistants that carry work across sessions.</div></div></div>
+
+    <div class="join">
+      <h2>Joining the sessions</h2>
+      <div class="row"><span class="k">Time</span><span>3:00 &ndash; 4:00 PM, each session day</span></div>
+      <div class="row"><span class="k">Zoom</span><a href="https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1">Join the workshop room &rarr;</a></div>
+      <div class="row"><span class="k">Online</span><a href="https://rice-workshop.kerryback.com">rice-workshop.kerryback.com</a></div>
+    </div>
+
+    <div class="foot"><span>Claude for Teaching &amp; Research &middot; Faculty Workshop</span><span class="pg">3</span></div>
+  </section>
+
+</body>
+</html>

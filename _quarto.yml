@@ -6,6 +6,7 @@ project:
   resources:
     - .nojekyll
     - CNAME
+    - announcement.pdf
 
 website:
   title: ""

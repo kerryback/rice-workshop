@@ -62,7 +62,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -253,18 +253,78 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 
-<p><img src="announcement.jpeg" class="img-fluid"></p>
+<style>
+/* Scoped under .flyer so it can't disturb the Quarto theme/navbar. */
+.flyer, .flyer * { box-sizing: border-box; margin: 0; padding: 0; }
+.flyer {
+  --navy:#00205B; --gold:#b8912f; --ink:#1a1a1a; --gray:#444; --mut:#6b6b6b; --line:#e4e4e4;
+  font-family: "Helvetica Neue", Arial, sans-serif; color: var(--ink);
+  margin: 8px 0 24px;
+}
+.flyer .sheet { width: 100%; max-width: 900px; margin: 0 auto; padding: 24px 8px 8px; background: transparent; }
+.flyer .eyebrow { text-align: center; font-size: 17px; letter-spacing: 4px; text-transform: uppercase; color: var(--navy); font-weight: 700; margin-bottom: 12px; }
+.flyer .display { text-align: center; font-family: Georgia, "Times New Roman", serif; font-size: 48px; line-height: 1.1; color: var(--navy); font-weight: 700; margin-bottom: 22px; }
+.flyer .meta-inline { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 18px; }
+.flyer .meta-inline span { font-size: 18px; color: #333; }
+.flyer .meta-inline .dot { color: var(--gold); font-weight: 700; }
+.flyer .subline { text-align: center; font-size: 18px; color: #555; margin-top: 6px; }
+.flyer .subline b { color: var(--ink); }
+.flyer .rule { height: 3px; border-radius: 2px; margin: 26px 0 22px;
+  background: linear-gradient(90deg, var(--navy) 0 62%, var(--gold) 62% 100%); }
+.flyer .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 20px 0 10px; }
+.flyer .section-head .label, .flyer .section-head .dates { font-size: 14px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.flyer .item { display: flex; gap: 16px; align-items: flex-start; padding: 8px 0; }
+.flyer .chip { flex: 0 0 100px; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 7px 0; border-radius: 6px; }
+.flyer .item-title { font-size: 19px; font-weight: 700; color: var(--navy); }
+.flyer .item-desc { font-size: 15.5px; color: var(--gray); line-height: 1.4; margin-top: 2px; }
+.flyer .sheet-foot { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.flyer .sheet-foot a { text-decoration: none; color: var(--navy); font-weight: 700; }
+.flyer .sheet-foot .url { font-size: 20px; }
+.flyer .sheet-foot .zoom { font-size: 17px; }
+@media (max-width: 600px) {
+  .flyer .display { font-size: 33px; }
+  .flyer .chip { flex-basis: 76px; font-size: 12px; }
+  .flyer .item-title { font-size: 17px; }
+}
+</style>
+<div class="flyer">
+  <div class="sheet">
+    <div class="eyebrow">Faculty Workshop &nbsp;·&nbsp; August 2026</div>
+    <h1 class="display">Claude for Teaching &amp; Research</h1>
+    <div class="meta-inline">
+      <span>Eight 1-hour sessions</span><span class="dot">•</span>
+      <span>Zoom</span><span class="dot">•</span>
+      <span>3:00 – 4:00 PM</span>
+    </div>
+    <div class="subline">led by <b>Kerry Back</b></div>
+    <div class="rule"></div>
+    <div class="section-head"><span class="label">Week 1</span><span class="dates">August 10–14</span></div>
+    <div class="item"><div class="chip">AUG 10</div><div><div class="item-title">Intro to Claude</div><div class="item-desc">Claude Desktop (Chat, Cowork, Code), Claude plugin for Excel</div></div></div>
+    <div class="item"><div class="chip">AUG 11</div><div><div class="item-title">Claude Tools</div><div class="item-desc">code execution, command line, web search and fetch, and browser use</div></div></div>
+    <div class="item"><div class="chip">AUG 12</div><div><div class="item-title">Skills, Connectors, and Plugins</div><div class="item-desc">customizing Claude and adding capabilities</div></div></div>
+    <div class="item"><div class="chip">AUG 13</div><div><div class="item-title">Research and Teaching Setup</div><div class="item-desc">Academic Studio, Python, R, LaTeX, Quarto, Git, GitHub</div></div></div>
+    <div class="item"><div class="chip">AUG 14</div><div><div class="item-title">AI for Teaching</div><div class="item-desc">NotebookLM, RAG chatbots, slide voice-overs</div></div></div>
+    <div class="section-head"><span class="label">Week 2</span><span class="dates">August 17–19</span></div>
+    <div class="item"><div class="chip">AUG 17</div><div><div class="item-title">Student Projects</div><div class="item-desc">artifacts, apps, agents</div></div></div>
+    <div class="item"><div class="chip">AUG 18</div><div><div class="item-title">AI for Research</div><div class="item-desc">literature search, knowledge databases, writing, and reviews</div></div></div>
+    <div class="item"><div class="chip">AUG 19</div><div><div class="item-title">Agent Assistants</div><div class="item-desc">research team, personal assistants</div></div></div>
+    <div class="sheet-foot">
+      <a class="url" href="https://rice-workshop.kerryback.com">rice-workshop.kerryback.com</a>
+      <a class="zoom" href="https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1">Join on Zoom →</a>
+    </div>
+  </div>
+</div>
 
 
 
