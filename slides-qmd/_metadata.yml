@@ -1,0 +1,14 @@
+# Applies to every deck in slides-qmd/ so they render as reveal.js as part of
+# the website build (root _quarto.yml renders slides-qmd/*.qmd into docs/).
+format:
+  revealjs:
+    theme: [default, revealjs-style.scss]
+    highlight-style: monokai
+    slide-number: 'c/t'
+    transition: fade
+    navigation-mode: linear
+    width: 1920
+    height: 1080
+    margin: 0.05
+    center: true
+    auto-stretch: false

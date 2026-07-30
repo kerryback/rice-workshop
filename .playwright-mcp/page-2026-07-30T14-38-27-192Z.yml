@@ -1,0 +1,31 @@
+- generic [active] [ref=f2e1]:
+  - application [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - heading "7. AI for Research" [level=1] [ref=f2e4]
+      - paragraph [ref=f2e5]: Rice Business 2026
+      - generic [ref=f2e6]: Kerry BackRice Business
+    - link [ref=f2e10] [cursor=pointer]:
+      - /url: "#"
+    - link "1 / 13" [ref=f2e16] [cursor=pointer]:
+      - /url: "#/title-slide"
+    - text: Speaker notes
+    - generic [ref=f2e18]: 7. AI for Research Rice Business 2026 Kerry Back Rice Business
+  - navigation [ref=f2e19]:
+    - list [ref=f2e20]:
+      - listitem [ref=f2e21] [cursor=pointer]: Slides
+      - listitem [ref=f2e23] [cursor=pointer]: Tools
+      - listitem [ref=f2e25] [cursor=pointer]: Close
+    - list [ref=f2e28]:
+      - listitem [ref=f2e29] [cursor=pointer]: 7. AI for Research
+      - listitem [ref=f2e30] [cursor=pointer]: The Research Loop, Assisted
+      - listitem [ref=f2e31] [cursor=pointer]: Literature Search
+      - listitem [ref=f2e32] [cursor=pointer]: Finding and Tracking Work
+      - listitem [ref=f2e33] [cursor=pointer]: Knowledge Databases
+      - listitem [ref=f2e34] [cursor=pointer]: Your Own Library, Searchable
+      - listitem [ref=f2e35] [cursor=pointer]: Writing
+      - listitem [ref=f2e36] [cursor=pointer]: Drafting and Editing
+      - listitem [ref=f2e37] [cursor=pointer]: Reviews
+      - listitem [ref=f2e38] [cursor=pointer]: Referee Before the Referee
+      - listitem [ref=f2e39] [cursor=pointer]: Why This Belongs in Your Workflow
+      - listitem [ref=f2e40] [cursor=pointer]: Breakout
+      - listitem [ref=f2e41] [cursor=pointer]: Questions to Discuss

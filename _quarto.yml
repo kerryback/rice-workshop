@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - slides-qmd/*.qmd
   resources:
     - .nojekyll
     - CNAME

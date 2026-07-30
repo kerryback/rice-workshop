@@ -1,0 +1,99 @@
+---
+title: "7. AI for Research"
+subtitle: "Rice Business 2026"
+author: "Kerry Back<br>Rice Business"
+---
+
+## The Research Loop, Assisted
+
+::: {.three-cards}
+::: {.card .card-blue}
+[Find]{.card-title}
+
+- Discover and track the literature
+- Follow citations forward and back
+:::
+::: {.card .card-amber}
+[Organize]{.card-title}
+
+- A private, searchable library of what you have read
+- Search by keyword *and* by meaning
+:::
+::: {.card .card-teal}
+[Write & review]{.card-title}
+
+- Draft and edit with field-aware guidance
+- Referee your own work before a journal does
+:::
+:::
+
+::: {.explainer}
+Draft outline --- the four moves below are the arc of the session. Each maps to a tool you can install and use the same day.
+:::
+
+## Literature Search {.section-divider}
+
+## Finding and Tracking Work
+
+- Ask in plain language; get papers, not just links
+- Discovery across OpenAlex and Semantic Scholar
+- Track who cites a result, and what it cites
+- *[Placeholder: add a live example query]{.accent}*
+
+## Knowledge Databases {.section-divider}
+
+## Your Own Library, Searchable
+
+::: {.two-cards}
+::: {.card .card-blue}
+[What it is]{.card-title}
+
+- A local, private store of your PDFs and notes
+- Full-text plus semantic (meaning) search
+- Import a Zotero library or a folder of PDFs
+:::
+::: {.card .card-amber}
+[Why it helps]{.card-title}
+
+- "What do I have on X?" answered in seconds
+- Notes tied to the papers that prompted them
+- Export BibTeX straight into a paper
+:::
+:::
+
+::: {.explainer}
+The `litdb` skill backs this. *[Placeholder: demo adding a folder and running a hybrid search.]{.accent}*
+:::
+
+## Writing {.section-divider}
+
+## Drafting and Editing
+
+- Field-aware help for economics papers: structure, argument, clarity
+- Rewrite passages to read as human, not machine-generated
+- Keep the argument driving the structure, not a template
+- *[Placeholder: before/after on a real paragraph]{.accent}*
+
+## Reviews {.section-divider}
+
+## Referee Before the Referee
+
+- A rigorous, source-grounded referee report on a draft
+- Separate editing notes and a prioritized revision plan
+- Catch the objections a real reviewer will raise --- first
+- *[Placeholder: run a review on a working paper]{.accent}*
+
+## Why This Belongs in Your Workflow {.centered-statement}
+
+::: {.card .card-dark}
+The judgment stays yours. AI handles the [search, the recall, and the first pass]{.accent} --- you decide [what matters and whether it is right.]{.accent}
+:::
+
+## Breakout {.section-divider}
+
+## Questions to Discuss
+
+- Where in your own research does recall of the literature slow you down most?
+- What would you keep in a private knowledge base that you would never put in a public tool?
+- Which is riskier to hand to AI --- the drafting, or the reviewing? Why?
+- What would you need to see before you trusted an AI referee report?

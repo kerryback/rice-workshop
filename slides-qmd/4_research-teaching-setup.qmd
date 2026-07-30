@@ -1,5 +1,5 @@
 ---
-title: "4. Research & Teaching Setup"
+title: "4. Research and Teaching Setup"
 subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---

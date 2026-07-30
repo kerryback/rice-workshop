@@ -1,0 +1,96 @@
+---
+title: "8. Agent Assistants"
+subtitle: "Rice Business 2026"
+author: "Kerry Back<br>Rice Business"
+---
+
+## From a Tool to a Teammate
+
+::: {.two-cards}
+::: {.card .card-blue}
+[A research team]{.card-title}
+
+- Many agents, different roles, working together
+- They propose, attack, verify, and re-check each other
+:::
+::: {.card .card-amber}
+[A personal assistant]{.card-title}
+
+- One agent that carries work across sessions
+- Remembers context, uses your tools, acts on your behalf
+:::
+:::
+
+::: {.explainer}
+Draft outline --- the two shapes below are where agents pay off: a *panel* that pressure-tests ideas, and an *assistant* that just gets things done.
+:::
+
+## A Research Team {.section-divider}
+
+## Many Roles, One Question
+
+::: {.three-cards}
+::: {.card .card-blue}
+[Debate]{.card-title}
+
+- A proposer generates ideas; an adversary attacks them
+- Disagreement surfaces the weak points early
+:::
+::: {.card .card-amber}
+[Ground it]{.card-title}
+
+- A verifier checks claims against your own library
+- An analyst builds the data and runs the empirics
+:::
+::: {.card .card-teal}
+[Check it]{.card-title}
+
+- A replicator re-derives the result independently
+- Two paths to the same number, or a red flag
+:::
+:::
+
+::: {.explainer}
+The `coauthor` skill orchestrates this. *[Placeholder: walk one round of propose --- attack --- verify.]{.accent}*
+:::
+
+## Personal Assistants {.section-divider}
+
+## An Agent That Carries the Work
+
+- Give it a goal, not a script; it plans the steps
+- It uses tools --- files, code, the web --- to act
+- State persists, so today's work builds on yesterday's
+- *[Placeholder: a standing assistant for a recurring task]{.accent}*
+
+## What Makes It an Agent
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Not just answering]{.card-title}
+
+- It decides *what to do next*, then does it
+- It checks its own output and retries
+:::
+::: {.card .card-amber}
+[Kept in bounds]{.card-title}
+
+- You choose which tools it may use
+- You review before anything irreversible
+:::
+:::
+
+## Why This Belongs at the End {.centered-statement}
+
+::: {.card .card-dark}
+Everything so far was you [directing a tool.]{.accent} An agent is you [delegating a task]{.accent} --- which means the new skills are describing the goal well and judging the result.
+:::
+
+## Breakout {.section-divider}
+
+## Questions to Discuss
+
+- What recurring task would you hand to a standing assistant first?
+- For a research question in your field, what roles would your ideal agent team have?
+- What tools would you *withhold* from an agent working on real data?
+- Where is the line between useful delegation and losing track of what was done?
