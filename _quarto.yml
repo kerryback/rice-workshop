@@ -8,6 +8,7 @@ project:
     - .nojekyll
     - CNAME
     - announcement.pdf
+    - slides-pdf/*.pdf
 
 website:
   title: ""
@@ -16,7 +17,7 @@ website:
     search: false
     title: "Claude for Teaching & Research"
     left:
-      - text: Slides
+      - text: HTML Slides
         menu:
           - href: slides-qmd/1_intro-to-claude.qmd
             text: "1. Intro to Claude"
@@ -33,6 +34,24 @@ website:
           - href: slides-qmd/7_ai-for-research.qmd
             text: "7. AI for Research"
           - href: slides-qmd/8_agent-assistants.qmd
+            text: "8. Agent Assistants"
+      - text: PDF Slides
+        menu:
+          - href: slides-pdf/1_intro-to-claude.pdf
+            text: "1. Intro to Claude"
+          - href: slides-pdf/2_claude-tools.pdf
+            text: "2. Claude Tools"
+          - href: slides-pdf/3_skills-connectors-plugins.pdf
+            text: "3. Skills, Connectors, and Plugins"
+          - href: slides-pdf/4_research-teaching-setup.pdf
+            text: "4. Research and Teaching Setup"
+          - href: slides-pdf/5_ai-for-teaching.pdf
+            text: "5. AI for Teaching"
+          - href: slides-pdf/6_student-projects.pdf
+            text: "6. Student Projects"
+          - href: slides-pdf/7_ai-for-research.pdf
+            text: "7. AI for Research"
+          - href: slides-pdf/8_agent-assistants.pdf
             text: "8. Agent Assistants"
     right:
       - href: "https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1"
