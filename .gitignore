@@ -188,3 +188,4 @@ docs/.claude/
 ~$*.pptx
 
 **/*.quarto_ipynb
+.playwright-mcp/
