@@ -15,6 +15,25 @@ website:
   navbar:
     search: false
     title: "Claude for Teaching & Research"
+    left:
+      - text: Slides
+        menu:
+          - href: slides-qmd/1_intro-to-claude.qmd
+            text: "1. Intro to Claude"
+          - href: slides-qmd/2_claude-tools.qmd
+            text: "2. Claude Tools"
+          - href: slides-qmd/3_skills-connectors-plugins.qmd
+            text: "3. Skills, Connectors, and Plugins"
+          - href: slides-qmd/4_research-teaching-setup.qmd
+            text: "4. Research and Teaching Setup"
+          - href: slides-qmd/5_ai-for-teaching.qmd
+            text: "5. AI for Teaching"
+          - href: slides-qmd/6_student-projects.qmd
+            text: "6. Student Projects"
+          - href: slides-qmd/7_ai-for-research.qmd
+            text: "7. AI for Research"
+          - href: slides-qmd/8_agent-assistants.qmd
+            text: "8. Agent Assistants"
     right:
       - href: "https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1"
         text: Zoom
