@@ -4,6 +4,35 @@ subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---
 
+## Three Ways to Extend Claude
+
+::: {.three-cards}
+::: {.card .card-blue}
+[Skills]{.card-title}
+
+- Teach Claude *your procedure* for a task
+- It follows the same steps every time
+:::
+::: {.card .card-amber}
+[Connectors]{.card-title}
+
+- Give Claude *your data and systems*
+- Ask a database, your calendar, your files
+:::
+::: {.card .card-teal}
+[Plugins]{.card-title}
+
+- *Bundle* skills and connectors into one package
+- Install once; share a whole setup with a team
+:::
+:::
+
+::: {.explainer}
+The model is fixed. What you change is what it *knows how to do* (skills), what it *can reach* (connectors), and how you *package and share* both (plugins).
+:::
+
+## Skills {.section-divider}
+
 ## Codified Expertise, Not a Smarter Model
 
 ::: {.two-cards}
@@ -17,7 +46,7 @@ author: "Kerry Back<br>Rice Business"
 ::: {.card .card-amber}
 [What a skill fixes]{.card-title}
 
-- Write down "how a good referee report is structured," once
+- Write down "how to do this well," once
 - Every future run follows it --- same standard, no reminding
 - A [one-time workflow]{.accent} becomes a [reusable asset]{.accent}
 :::
@@ -50,87 +79,28 @@ A skill is not a model upgrade. It is your procedure, written down where Claude 
 This "progressive disclosure" is why you can have dozens of skills installed and pay attention-cost only for the one in use.
 :::
 
-## Public Repos {.section-divider}
-
-## Researchers Have Already Built These
-
-::: {.three-cards}
-::: {.card .card-blue}
-[Pedro Sant'Anna]{.card-title}
-
-- Runs his whole paper lifecycle through Claude Code
-- `/lit-review`, `/review-paper` (mimics AER/QJE/JPE standards), referee responses
-- ~18 specialized agents in an adversarial critic-fixer loop; blocks anything scoring below 80
-:::
-::: {.card .card-amber}
-[Lee Crawfurd]{.card-title}
-
-- Five tightly-scoped skills for development economists
-- Paper Review, Code Review (Stata/R/Python replication audit)
-- "Referee 2" runs parallel reproducibility checks
-:::
-::: {.card .card-teal}
-[Academic-research suite]{.card-title}
-
-- Deep Research with PRISMA systematic-review mode
-- Drafting with citation-format conversion (APA/Chicago/MLA)
-- A mock editor + reviewer + devil's-advocate panel
-:::
-:::
-
-::: {.explainer}
-These are real, published, installable suites --- economists mostly. The shared theme: Claude is [copilot, not pilot]{.accent}. You own the question and the identification strategy; the skill handles the grunt work and enforces quality gates.
-:::
-
-## The Feature That Matters Most for Us
-
-::: {.card .card-blue}
-The biggest academic risk with AI is [fabricated references]{.accent} and claims a cited source does not actually support. The better skills attack this head-on.
-:::
+## Three Ways a Skill Fires
 
 ::: {.three-cards}
 ::: {.card .card-dark}
-[Verify every citation]{.card-title}
+[Slash command]{.card-title}
 
-Checked against Semantic Scholar, OpenAlex, Crossref, and arXiv --- bogus DOIs caught before export
+You type [/critique]{.shell-cmd} or [/pptx]{.shell-cmd} to invoke it directly
 :::
 ::: {.card .card-light}
-[Audit every claim]{.card-title}
+[Natural language]{.card-title}
 
-Does the cited source actually support the sentence? High-severity violations block the output
+You ask in plain English and Claude runs the matching skill
 :::
 ::: {.card .card-dark}
-[Flag contamination]{.card-title}
+[Automatic]{.card-title}
 
-Detects citations that may themselves be AI-invented
+"Create an Excel file" triggers the Excel skill on its own --- Claude reads each skill's description and picks
 :::
 :::
 
 ::: {.explainer}
-For empirical or b-school research, this is the line between a demo and something you can responsibly use.
-:::
-
-## Does It Actually Work?
-
-::: {.two-cards}
-::: {.card .card-blue}
-[The benchmark]{.card-title}
-
-- 54 social-science papers, tested for whether a coding agent could reproduce the published findings from the paper alone
-- Claude Code: [~93%]{.accent} accuracy at the individual-step level
-- But only [~78%]{.accent} at the whole-paper level
-:::
-::: {.card .card-amber}
-[What the gap teaches]{.card-title}
-
-- It nails each analysis step
-- One broken step anywhere still fails the full reproduction
-- A ready-made lesson on exactly where human oversight stays essential
-:::
-:::
-
-::: {.explainer}
-The 93/78 split is the honest picture: extraordinary at the parts, not yet trustworthy end-to-end without a human checking the chain.
+Because each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them --- without you naming them.
 :::
 
 ## Build Your Own {.section-divider}
@@ -150,37 +120,101 @@ The 93/78 split is the honest picture: extraordinary at the parts, not yet trust
 
 - Put your verification steps *inside* the skill
 - "After computing, show the row count and the min and max"
-- The skill enforces your hygiene, every run --- not just when you remember
+- The skill enforces your standard, every run --- not just when you remember
 :::
 :::
 
 ::: {.explainer}
-The most valuable skills for research encode not just what to do, but how to *check* it --- the referee's discipline, made automatic.
+The best skills encode not just what to do, but how to *check* it --- your discipline, made automatic.
 :::
 
-## A Skill You Might Write
+## Two Skills You Might Write
 
-::: {.code-box}
-::: {.box-title}
-SKILL.md --- replication-audit
+::: {.two-cards}
+::: {.card .card-blue}
+[Teaching]{.card-title}
+
+Turn a problem set into a solution key, a grading rubric, and three fresh variants --- formatted your way, every time
 :::
-When given a replication package: 1) inventory every script and data file; 2) run the code end to end in a clean environment and record what breaks; 3) check each table and figure in the paper against what the code produces; 4) flag any result that cannot be reproduced from the provided files; 5) write a short report with a per-result reproduced / not-reproduced status.
+::: {.card .card-amber}
+[Research]{.card-title}
+
+Audit a replication package: run the code, check each table against the paper, report what does not reproduce
+:::
 :::
 
 ::: {.explainer}
-A hand-written skill like this --- yours, transparent, under your control --- is safer and more teachable than installing a multi-skill black box.
+A hand-written skill --- yours, transparent, under your control --- is safer and more teachable than a multi-skill black box you did not read.
+:::
+
+## Connectors {.section-divider}
+
+## Plugging Claude Into Your Systems
+
+::: {.two-cards}
+::: {.card .card-blue}
+[MCP: the universal plug]{.card-title}
+
+- A [connector]{.accent} links Claude to an outside service --- a database, your email, a document store
+- The standard is MCP, the Model Context Protocol
+- MCP is to AI what USB is to devices: one way to plug anything in
+:::
+::: {.card .card-amber}
+[What it enables]{.card-title}
+
+- "Ask our enrollment database in plain English"
+- "Check my calendar and draft the replies"
+- Add from a directory of ready-made connectors, or point it at your own
+:::
+:::
+
+::: {.explainer}
+Connectors are how Claude stops being a general assistant and starts knowing *your* data --- safely and centrally, rather than through copy-paste.
+:::
+
+## Adding a Connector
+
+![](images/connectors-add-custom.png){width=70% fig-align="center"}
+
+::: {.explainer}
+A connector needs a name and an address; sensitive ones authenticate the way any app does --- an API key, or a corporate single sign-on. Once added, its tools are available in every chat.
+:::
+
+## Plugins {.section-divider}
+
+## Bundling It All to Share
+
+::: {.two-cards}
+::: {.card .card-blue}
+[What a plugin is]{.card-title}
+
+- A single installable package that can bundle several pieces at once
+- The way a team distributes a shared setup --- everyone installs one thing
+- [/plugin install]{.shell-cmd} and you have the whole kit
+:::
+::: {.card .card-amber}
+[What it can contain]{.card-title}
+
+- Skills, custom agents, connectors (MCP servers)
+- Hooks and output styles that shape behavior
+- Skills are for *you*; plugins are for a *team*
+:::
+:::
+
+::: {.explainer}
+For your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command.
 :::
 
 ## Vetting {.section-divider}
 
-## Installing Someone Else's Skill Runs Their Code
+## Installing Someone Else's Runs Their Code
 
 ::: {.two-cards}
 ::: {.card .card-red}
 [The supply-chain risk]{.card-title}
 
-- The academic suites are independent repos, outside Anthropic's screened directory
-- Installing one runs someone else's instructions and scripts on your machine
+- A shared skill, connector, or plugin runs someone else's instructions and scripts on your machine
+- Many live in independent repos, outside Anthropic's screened directory
 - There is active security research on malicious third-party skills
 :::
 ::: {.card .card-teal}
@@ -193,20 +227,20 @@ A hand-written skill like this --- yours, transparent, under your control --- is
 :::
 
 ::: {.explainer}
-"Validate" confirms a plugin is well-formed, not that it is trustworthy. The safest research skill is often the small one you wrote and can read in full.
+"Validate" confirms a package is well-formed, not that it is trustworthy. The safest skill is often the small one you wrote and can read in full.
 :::
 
 ## The Payoff {.centered-statement}
 
 ::: {.card .card-dark}
-A skill turns your best research practice --- how you referee, how you audit a replication, how you check a citation --- into something [Claude does the same way every time.]{.accent} You still own the question and the judgment. The skill owns the discipline.
+[Skills]{.accent} turn your best practice into something Claude does the same way every time. [Connectors]{.accent} give it your data instead of a copy-paste. [Plugins]{.accent} hand a colleague the whole setup in one command. You keep the judgment; they carry the discipline.
 :::
 
 ## Breakout {.section-divider}
 
 ## Questions to Discuss
 
-- What is one research task you do the same careful way each time --- a good candidate for a skill?
-- Where has a fabricated or mis-supported citation nearly slipped past you? Would a claim-audit have caught it?
-- Given the 93/78 result, which parts of your empirical work would you let AI run --- and which would you always check yourself?
-- Would you install a colleague's research skill? What would you read before trusting it with your data?
+- What is one task --- teaching or research --- you do the same careful way each time, a good candidate for a skill?
+- What system or dataset would you most want to *ask* in plain English --- a good connector to build?
+- Would you install a colleague's skill or plugin? What would you read before trusting it with your data?
+- If your department adopted one shared plugin, what should be in it?

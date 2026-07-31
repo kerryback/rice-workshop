@@ -28,17 +28,33 @@ author: "Kerry Back<br>Rice Business"
 :::
 
 ::: {.explainer}
-Draft outline --- the four moves below are the arc of the session. Each maps to a tool you can install and use the same day.
+Four moves, each with a tool you can install and use today. AI does the search, the recall, and the first pass; the judgment stays yours.
 :::
 
 ## Literature Search {.section-divider}
 
 ## Finding and Tracking Work
 
-- Ask in plain language; get papers, not just links
-- Discovery across OpenAlex and Semantic Scholar
-- Track who cites a result, and what it cites
-- *[Placeholder: add a live example query]{.accent}*
+::: {.two-cards}
+::: {.card .card-blue}
+[Ask, don't keyword]{.card-title}
+
+- Describe what you want in plain language
+- Discovery across [OpenAlex]{.accent} and [Semantic Scholar]{.accent} --- millions of papers, open metadata
+- Get papers and abstracts, not just a list of links
+:::
+::: {.card .card-amber}
+[Follow the citations]{.card-title}
+
+- What does this paper cite? Who cites it?
+- Trace a result forward to its critics and back to its roots
+- Surface the branch of the literature you were missing
+:::
+:::
+
+::: {.explainer}
+The web search from Day 2, pointed at the scholarly record. It finds candidates; you still decide what is relevant.
+:::
 
 ## Knowledge Databases {.section-divider}
 
@@ -49,44 +65,127 @@ Draft outline --- the four moves below are the arc of the session. Each maps to 
 [What it is]{.card-title}
 
 - A local, private store of your PDFs and notes
-- Full-text plus semantic (meaning) search
-- Import a Zotero library or a folder of PDFs
+- Full-text keyword *and* semantic (meaning) search
+- Import a whole Zotero library, or a folder of PDFs
 :::
 ::: {.card .card-amber}
 [Why it helps]{.card-title}
 
-- "What do I have on X?" answered in seconds
+- "What do I have on X?" --- answered in seconds
 - Notes tied to the papers that prompted them
-- Export BibTeX straight into a paper
+- Export BibTeX straight into your paper
 :::
 :::
 
 ::: {.explainer}
-The `litdb` skill backs this. *[Placeholder: demo adding a folder and running a hybrid search.]{.accent}*
+The `litdb` skill backs this --- your corpus first, external sources second. It runs locally, so your library and notes never leave your machine.
 :::
 
 ## Writing {.section-divider}
 
 ## Drafting and Editing
 
-- Field-aware help for economics papers: structure, argument, clarity
-- Rewrite passages to read as human, not machine-generated
-- Keep the argument driving the structure, not a template
-- *[Placeholder: before/after on a real paragraph]{.accent}*
+::: {.two-cards}
+::: {.card .card-blue}
+[Field-aware help]{.card-title}
+
+- Structure, argument, and clarity for an economics paper
+- Synthesized from 50+ guides by working economists
+- Section by section: intro, results, response to referees
+:::
+::: {.card .card-amber}
+[Sound human, not machine]{.card-title}
+
+- Vary the rhythm; drop the AI tells
+- Let the argument drive the structure, not a template
+- Edit an existing draft, or draft from your notes
+:::
+:::
+
+::: {.explainer}
+The `econ-write` and `human-write` skills. They do not invent your findings --- they help you say what you found, well.
+:::
 
 ## Reviews {.section-divider}
 
 ## Referee Before the Referee
 
+::: {.two-cards}
+::: {.card .card-blue}
+[What it produces]{.card-title}
+
 - A rigorous, source-grounded referee report on a draft
 - Separate editing notes and a prioritized revision plan
-- Catch the objections a real reviewer will raise --- first
-- *[Placeholder: run a review on a working paper]{.accent}*
+- The objections a real reviewer will raise --- first
+:::
+::: {.card .card-amber}
+[Others have built these too]{.card-title}
 
-## Why This Belongs in Your Workflow {.centered-statement}
+- Pedro Sant'Anna: a full paper-lifecycle suite, adversarial critic-fixer loop
+- Lee Crawfurd: tightly-scoped review + replication-audit skills
+- Installable, mostly economists --- Claude as [copilot, not pilot]{.accent}
+:::
+:::
+
+::: {.explainer}
+The `econ-review` skill does this for your own drafts. You own the question and the identification; the skill enforces the discipline.
+:::
+
+## The Risk That Matters Most
+
+::: {.card .card-blue}
+The biggest academic danger with AI is [fabricated references]{.accent} and claims a cited source does not actually support. The better research skills attack this head-on.
+:::
+
+::: {.three-cards}
+::: {.card .card-dark}
+[Verify every citation]{.card-title}
+
+Checked against Semantic Scholar, OpenAlex, Crossref, arXiv --- bogus DOIs caught before export
+:::
+::: {.card .card-light}
+[Audit every claim]{.card-title}
+
+Does the source actually support the sentence? High-severity violations block the output
+:::
+::: {.card .card-dark}
+[Flag contamination]{.card-title}
+
+Detect citations that may themselves be AI-invented
+:::
+:::
+
+::: {.explainer}
+For empirical or b-school research, this is the line between a demo and something you can responsibly put your name on.
+:::
+
+## Does It Actually Work?
+
+::: {.two-cards}
+::: {.card .card-blue}
+[The benchmark]{.card-title}
+
+- 54 social-science papers, tested for whether a coding agent could reproduce the published findings from the paper alone
+- Claude Code: [~93%]{.accent} at the individual-step level
+- But only [~78%]{.accent} at the whole-paper level
+:::
+::: {.card .card-amber}
+[What the gap teaches]{.card-title}
+
+- It nails each analysis step
+- One broken step anywhere still fails the full reproduction
+- Exactly where human oversight stays essential
+:::
+:::
+
+::: {.explainer}
+The 93/78 split is the honest picture: extraordinary at the parts, not yet trustworthy end to end without a human checking the chain.
+:::
+
+## The Payoff {.centered-statement}
 
 ::: {.card .card-dark}
-The judgment stays yours. AI handles the [search, the recall, and the first pass]{.accent} --- you decide [what matters and whether it is right.]{.accent}
+AI handles the [search, the recall, and the first pass]{.accent} --- finding the literature, remembering what you read, drafting the prose, refereeing the draft. You decide [what matters and whether it is right.]{.accent}
 :::
 
 ## Breakout {.section-divider}
@@ -96,4 +195,4 @@ The judgment stays yours. AI handles the [search, the recall, and the first pass
 - Where in your own research does recall of the literature slow you down most?
 - What would you keep in a private knowledge base that you would never put in a public tool?
 - Which is riskier to hand to AI --- the drafting, or the reviewing? Why?
-- What would you need to see before you trusted an AI referee report?
+- Given the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?

@@ -142,6 +142,38 @@ Kerry Back<br>Rice Business
 </div>
 
 </section>
+<section id="three-ways-to-extend-claude" class="slide level2 center">
+<h2>Three Ways to Extend Claude</h2>
+<div class="three-cards">
+<div class="card card-blue">
+<p><span class="card-title">Skills</span></p>
+<ul>
+<li>Teach Claude <em>your procedure</em> for a task</li>
+<li>It follows the same steps every time</li>
+</ul>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">Connectors</span></p>
+<ul>
+<li>Give Claude <em>your data and systems</em></li>
+<li>Ask a database, your calendar, your files</li>
+</ul>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">Plugins</span></p>
+<ul>
+<li><em>Bundle</em> skills and connectors into one package</li>
+<li>Install once; share a whole setup with a team</li>
+</ul>
+</div>
+</div>
+<div class="explainer">
+<p>The model is fixed. What you change is what it <em>knows how to do</em> (skills), what it <em>can reach</em> (connectors), and how you <em>package and share</em> both (plugins).</p>
+</div>
+</section>
+<section id="skills" class="slide level2 section-divider center">
+<h2>Skills</h2>
+</section>
 <section id="codified-expertise-not-a-smarter-model" class="slide level2 center">
 <h2>Codified Expertise, Not a Smarter Model</h2>
 <div class="two-cards">
@@ -156,7 +188,7 @@ Kerry Back<br>Rice Business
 <div class="card card-amber">
 <p><span class="card-title">What a skill fixes</span></p>
 <ul>
-<li>Write down “how a good referee report is structured,” once</li>
+<li>Write down “how to do this well,” once</li>
 <li>Every future run follows it — same standard, no reminding</li>
 <li>A <span class="accent">one-time workflow</span> becomes a <span class="accent">reusable asset</span></li>
 </ul>
@@ -190,86 +222,24 @@ Kerry Back<br>Rice Business
 <p>This “progressive disclosure” is why you can have dozens of skills installed and pay attention-cost only for the one in use.</p>
 </div>
 </section>
-<section id="public-repos" class="slide level2 section-divider center">
-<h2>Public Repos</h2>
-</section>
-<section id="researchers-have-already-built-these" class="slide level2 center">
-<h2>Researchers Have Already Built These</h2>
-<div class="three-cards">
-<div class="card card-blue">
-<p><span class="card-title">Pedro Sant’Anna</span></p>
-<ul>
-<li>Runs his whole paper lifecycle through Claude Code</li>
-<li><code>/lit-review</code>, <code>/review-paper</code> (mimics AER/QJE/JPE standards), referee responses</li>
-<li>~18 specialized agents in an adversarial critic-fixer loop; blocks anything scoring below 80</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">Lee Crawfurd</span></p>
-<ul>
-<li>Five tightly-scoped skills for development economists</li>
-<li>Paper Review, Code Review (Stata/R/Python replication audit)</li>
-<li>“Referee 2” runs parallel reproducibility checks</li>
-</ul>
-</div>
-<div class="card card-teal">
-<p><span class="card-title">Academic-research suite</span></p>
-<ul>
-<li>Deep Research with PRISMA systematic-review mode</li>
-<li>Drafting with citation-format conversion (APA/Chicago/MLA)</li>
-<li>A mock editor + reviewer + devil’s-advocate panel</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>These are real, published, installable suites — economists mostly. The shared theme: Claude is <span class="accent">copilot, not pilot</span>. You own the question and the identification strategy; the skill handles the grunt work and enforces quality gates.</p>
-</div>
-</section>
-<section id="the-feature-that-matters-most-for-us" class="slide level2 center">
-<h2>The Feature That Matters Most for Us</h2>
-<div class="card card-blue">
-<p>The biggest academic risk with AI is <span class="accent">fabricated references</span> and claims a cited source does not actually support. The better skills attack this head-on.</p>
-</div>
+<section id="three-ways-a-skill-fires" class="slide level2 center">
+<h2>Three Ways a Skill Fires</h2>
 <div class="three-cards">
 <div class="card card-dark">
-<p><span class="card-title">Verify every citation</span></p>
-<p>Checked against Semantic Scholar, OpenAlex, Crossref, and arXiv — bogus DOIs caught before export</p>
+<p><span class="card-title">Slash command</span></p>
+<p>You type <span class="shell-cmd">/critique</span> or <span class="shell-cmd">/pptx</span> to invoke it directly</p>
 </div>
 <div class="card card-light">
-<p><span class="card-title">Audit every claim</span></p>
-<p>Does the cited source actually support the sentence? High-severity violations block the output</p>
+<p><span class="card-title">Natural language</span></p>
+<p>You ask in plain English and Claude runs the matching skill</p>
 </div>
 <div class="card card-dark">
-<p><span class="card-title">Flag contamination</span></p>
-<p>Detects citations that may themselves be AI-invented</p>
+<p><span class="card-title">Automatic</span></p>
+<p>“Create an Excel file” triggers the Excel skill on its own — Claude reads each skill’s description and picks</p>
 </div>
 </div>
 <div class="explainer">
-<p>For empirical or b-school research, this is the line between a demo and something you can responsibly use.</p>
-</div>
-</section>
-<section id="does-it-actually-work" class="slide level2 center">
-<h2>Does It Actually Work?</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">The benchmark</span></p>
-<ul>
-<li>54 social-science papers, tested for whether a coding agent could reproduce the published findings from the paper alone</li>
-<li>Claude Code: <span class="accent">~93%</span> accuracy at the individual-step level</li>
-<li>But only <span class="accent">~78%</span> at the whole-paper level</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">What the gap teaches</span></p>
-<ul>
-<li>It nails each analysis step</li>
-<li>One broken step anywhere still fails the full reproduction</li>
-<li>A ready-made lesson on exactly where human oversight stays essential</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>The 93/78 split is the honest picture: extraordinary at the parts, not yet trustworthy end-to-end without a human checking the chain.</p>
+<p>Because each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them — without you naming them.</p>
 </div>
 </section>
 <section id="build-your-own" class="slide level2 section-divider center">
@@ -291,37 +261,106 @@ Kerry Back<br>Rice Business
 <ul>
 <li>Put your verification steps <em>inside</em> the skill</li>
 <li>“After computing, show the row count and the min and max”</li>
-<li>The skill enforces your hygiene, every run — not just when you remember</li>
+<li>The skill enforces your standard, every run — not just when you remember</li>
 </ul>
 </div>
 </div>
 <div class="explainer">
-<p>The most valuable skills for research encode not just what to do, but how to <em>check</em> it — the referee’s discipline, made automatic.</p>
+<p>The best skills encode not just what to do, but how to <em>check</em> it — your discipline, made automatic.</p>
 </div>
 </section>
-<section id="a-skill-you-might-write" class="slide level2 center">
-<h2>A Skill You Might Write</h2>
-<div class="code-box">
-<div class="box-title">
-<p>SKILL.md — replication-audit</p>
+<section id="two-skills-you-might-write" class="slide level2 center">
+<h2>Two Skills You Might Write</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">Teaching</span></p>
+<p>Turn a problem set into a solution key, a grading rubric, and three fresh variants — formatted your way, every time</p>
 </div>
-<p>When given a replication package: 1) inventory every script and data file; 2) run the code end to end in a clean environment and record what breaks; 3) check each table and figure in the paper against what the code produces; 4) flag any result that cannot be reproduced from the provided files; 5) write a short report with a per-result reproduced / not-reproduced status.</p>
+<div class="card card-amber">
+<p><span class="card-title">Research</span></p>
+<p>Audit a replication package: run the code, check each table against the paper, report what does not reproduce</p>
+</div>
 </div>
 <div class="explainer">
-<p>A hand-written skill like this — yours, transparent, under your control — is safer and more teachable than installing a multi-skill black box.</p>
+<p>A hand-written skill — yours, transparent, under your control — is safer and more teachable than a multi-skill black box you did not read.</p>
+</div>
+</section>
+<section id="connectors" class="slide level2 section-divider center">
+<h2>Connectors</h2>
+</section>
+<section id="plugging-claude-into-your-systems" class="slide level2 center">
+<h2>Plugging Claude Into Your Systems</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">MCP: the universal plug</span></p>
+<ul>
+<li>A <span class="accent">connector</span> links Claude to an outside service — a database, your email, a document store</li>
+<li>The standard is MCP, the Model Context Protocol</li>
+<li>MCP is to AI what USB is to devices: one way to plug anything in</li>
+</ul>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">What it enables</span></p>
+<ul>
+<li>“Ask our enrollment database in plain English”</li>
+<li>“Check my calendar and draft the replies”</li>
+<li>Add from a directory of ready-made connectors, or point it at your own</li>
+</ul>
+</div>
+</div>
+<div class="explainer">
+<p>Connectors are how Claude stops being a general assistant and starts knowing <em>your</em> data — safely and centrally, rather than through copy-paste.</p>
+</div>
+</section>
+<section id="adding-a-connector" class="slide level2 center">
+<h2>Adding a Connector</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/connectors-add-custom.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<div class="explainer">
+<p>A connector needs a name and an address; sensitive ones authenticate the way any app does — an API key, or a corporate single sign-on. Once added, its tools are available in every chat.</p>
+</div>
+</section>
+<section id="plugins" class="slide level2 section-divider center">
+<h2>Plugins</h2>
+</section>
+<section id="bundling-it-all-to-share" class="slide level2 center">
+<h2>Bundling It All to Share</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">What a plugin is</span></p>
+<ul>
+<li>A single installable package that can bundle several pieces at once</li>
+<li>The way a team distributes a shared setup — everyone installs one thing</li>
+<li><span class="shell-cmd">/plugin install</span> and you have the whole kit</li>
+</ul>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">What it can contain</span></p>
+<ul>
+<li>Skills, custom agents, connectors (MCP servers)</li>
+<li>Hooks and output styles that shape behavior</li>
+<li>Skills are for <em>you</em>; plugins are for a <em>team</em></li>
+</ul>
+</div>
+</div>
+<div class="explainer">
+<p>For your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command.</p>
 </div>
 </section>
 <section id="vetting" class="slide level2 section-divider center">
 <h2>Vetting</h2>
 </section>
-<section id="installing-someone-elses-skill-runs-their-code" class="slide level2 center">
-<h2>Installing Someone Else’s Skill Runs Their Code</h2>
+<section id="installing-someone-elses-runs-their-code" class="slide level2 center">
+<h2>Installing Someone Else’s Runs Their Code</h2>
 <div class="two-cards">
 <div class="card card-red">
 <p><span class="card-title">The supply-chain risk</span></p>
 <ul>
-<li>The academic suites are independent repos, outside Anthropic’s screened directory</li>
-<li>Installing one runs someone else’s instructions and scripts on your machine</li>
+<li>A shared skill, connector, or plugin runs someone else’s instructions and scripts on your machine</li>
+<li>Many live in independent repos, outside Anthropic’s screened directory</li>
 <li>There is active security research on malicious third-party skills</li>
 </ul>
 </div>
@@ -335,13 +374,13 @@ Kerry Back<br>Rice Business
 </div>
 </div>
 <div class="explainer">
-<p>“Validate” confirms a plugin is well-formed, not that it is trustworthy. The safest research skill is often the small one you wrote and can read in full.</p>
+<p>“Validate” confirms a package is well-formed, not that it is trustworthy. The safest skill is often the small one you wrote and can read in full.</p>
 </div>
 </section>
 <section id="the-payoff" class="slide level2 centered-statement center">
 <h2>The Payoff</h2>
 <div class="card card-dark">
-<p>A skill turns your best research practice — how you referee, how you audit a replication, how you check a citation — into something <span class="accent">Claude does the same way every time.</span> You still own the question and the judgment. The skill owns the discipline.</p>
+<p><span class="accent">Skills</span> turn your best practice into something Claude does the same way every time. <span class="accent">Connectors</span> give it your data instead of a copy-paste. <span class="accent">Plugins</span> hand a colleague the whole setup in one command. You keep the judgment; they carry the discipline.</p>
 </div>
 </section>
 <section id="breakout" class="slide level2 section-divider center">
@@ -350,10 +389,10 @@ Kerry Back<br>Rice Business
 <section id="questions-to-discuss" class="slide level2 center">
 <h2>Questions to Discuss</h2>
 <ul>
-<li>What is one research task you do the same careful way each time — a good candidate for a skill?</li>
-<li>Where has a fabricated or mis-supported citation nearly slipped past you? Would a claim-audit have caught it?</li>
-<li>Given the 93/78 result, which parts of your empirical work would you let AI run — and which would you always check yourself?</li>
-<li>Would you install a colleague’s research skill? What would you read before trusting it with your data?</li>
+<li>What is one task — teaching or research — you do the same careful way each time, a good candidate for a skill?</li>
+<li>What system or dataset would you most want to <em>ask</em> in plain English — a good connector to build?</li>
+<li>Would you install a colleague’s skill or plugin? What would you read before trusting it with your data?</li>
+<li>If your department adopted one shared plugin, what should be in it?</li>
 </ul>
 
 

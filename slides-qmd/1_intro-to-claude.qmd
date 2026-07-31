@@ -19,7 +19,7 @@ author: "Kerry Back<br>Rice Business"
 
 - The three modes: [Chat, Cowork, Code]{.accent}
 - Claude Code in the terminal and in VS Code
-- Claude for Excel, skills, connectors, and plugins
+- Claude for Excel, and choosing a model
 :::
 :::
 
@@ -142,111 +142,28 @@ Claude proposes a change; you see exactly what it added and removed, in green an
 The Claude add-in puts a chat panel directly inside Excel. You describe what you want --- formulas, tables, charts, an amortization schedule --- and Claude builds it in the active sheet. No Python, no terminal. Install it from the Microsoft Office Add-ins store.
 :::
 
-## Skills {.section-divider}
-
-## Reusable, One-Command Workflows
-
-::: {.two-cards}
-::: {.card .card-blue}
-[What a skill is]{.card-title}
-
-- A saved procedure Claude follows for a specific kind of task
-- A folder with a `SKILL.md` file --- plain instructions, optional scripts
-- Write "how to do X well" once; every future run follows it
-:::
-::: {.card .card-amber}
-[Built in and shareable]{.card-title}
-
-- Anthropic ships skills for Excel, Word, PowerPoint, and PDF
-- You can add your own or install others'
-- Same skill works in Claude.ai, Claude Code, and the add-ins
-:::
-:::
-
-::: {.explainer}
-A skill is codified expertise, not a smarter model --- the subject of a whole session later. Here, just know the three ways they fire.
-:::
-
-## Three Ways a Skill Fires
+## Coming Day 3: Make It Yours
 
 ::: {.three-cards}
-::: {.card .card-dark}
-[Slash command]{.card-title}
-
-You type [/critique]{.shell-cmd} or [/pptx]{.shell-cmd} to invoke it directly
-:::
-::: {.card .card-light}
-[Natural language]{.card-title}
-
-You ask in plain English and Claude runs the matching skill
-:::
-::: {.card .card-dark}
-[Automatic]{.card-title}
-
-"Create an Excel file" triggers the Excel skill on its own --- Claude reads each skill's description and picks
-:::
-:::
-
-::: {.explainer}
-Because each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them --- without you naming them.
-:::
-
-## Connectors {.section-divider}
-
-## Plugging Claude Into Your Systems
-
-::: {.two-cards}
 ::: {.card .card-blue}
-[MCP: the universal plug]{.card-title}
+[Skills]{.card-title}
 
-- A [connector]{.accent} links Claude to an outside service --- a database, your email, a document store
-- The standard is MCP, the Model Context Protocol
-- MCP is to AI what USB is to devices: one way to plug anything in
+Teach Claude your procedures once --- it follows them the same way every time
 :::
 ::: {.card .card-amber}
-[What it enables]{.card-title}
+[Connectors]{.card-title}
 
-- "Ask our sales database in plain English"
-- "Check my calendar and draft the replies"
-- Add from a directory of ready-made connectors, or point it at your own
+Plug Claude into your data and systems, safely --- the MCP standard
+:::
+::: {.card .card-teal}
+[Plugins]{.card-title}
+
+Bundle skills and connectors into one package to share with a team
 :::
 :::
 
 ::: {.explainer}
-Connectors are how AI stops being a general assistant and starts knowing *your* data --- safely and centrally, rather than through copy-paste.
-:::
-
-## Adding a Connector
-
-![](images/connectors-add-custom.png){width=70% fig-align="center"}
-
-::: {.explainer}
-A connector needs a name and an address; sensitive ones authenticate the way any app does --- an API key, or a corporate single sign-on. Once added, its tools are available in every chat.
-:::
-
-## Plugins {.section-divider}
-
-## Bundling It All to Share
-
-::: {.two-cards}
-::: {.card .card-blue}
-[What a plugin is]{.card-title}
-
-- A single installable package that can bundle several pieces at once
-- The way a team distributes a shared setup --- everyone installs one thing
-- [/plugin install]{.shell-cmd} and you have the whole kit
-:::
-::: {.card .card-amber}
-[What it can contain]{.card-title}
-
-- Skills, custom agents, connectors (MCP servers)
-- Hooks and output styles that shape behavior
-- Skills are for *you*; plugins are for a *team*
-:::
-:::
-
-::: {.explainer}
-For your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command.
+You have seen *where* Claude runs and *how* to reach it. Skills, connectors, and plugins are how you customize it to your work --- they get their own session on Day 3.
 :::
 
 ## Choosing a Model
@@ -268,7 +185,7 @@ A dropdown below the prompt lets you pick. Use Sonnet to conserve your quota; re
 ## The Map {.centered-statement}
 
 ::: {.card .card-dark}
-One Claude, reached through many doors: [Chat, Cowork, Code]{.accent} for how much of your machine it touches; the terminal and [VS Code]{.accent} for real work; [Excel]{.accent} for spreadsheets; and [skills, connectors, and plugins]{.accent} to give it your procedures and your data.
+One Claude, reached through many doors: [Chat, Cowork, Code]{.accent} for how much of your machine it touches; the terminal and [VS Code]{.accent} for real work; and [Excel]{.accent} for spreadsheets. Day 3 adds [skills, connectors, and plugins]{.accent} --- your procedures and your data.
 :::
 
 ## Breakout {.section-divider}
@@ -276,6 +193,6 @@ One Claude, reached through many doors: [Chat, Cowork, Code]{.accent} for how mu
 ## Questions to Discuss
 
 - For your own work, which mode fits best --- the sandboxed Chat, the folder-bounded Cowork, or the full-access Code?
-- What system at Rice would you most want a connector to --- so you could just *ask* it questions?
-- What is a repeatable task in your work that would make a good first skill?
 - Where does the extra reach of Code mode make you cautious --- and what would make you comfortable?
+- What is the first thing you would ask the Claude panel inside Excel to build?
+- When would you switch from Sonnet to Opus --- and how would you know it was worth the quota?

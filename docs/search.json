@@ -4,7 +4,14 @@
     "href": "slides-qmd/8_agent-assistants.html#from-a-tool-to-a-teammate",
     "title": "8. Agent Assistants",
     "section": "From a Tool to a Teammate",
-    "text": "From a Tool to a Teammate\n\n\nA research team\n\nMany agents, different roles, working together\nThey propose, attack, verify, and re-check each other\n\n\n\nA personal assistant\n\nOne agent that carries work across sessions\nRemembers context, uses your tools, acts on your behalf\n\n\n\n\nDraft outline — the two shapes below are where agents pay off: a panel that pressure-tests ideas, and an assistant that just gets things done."
+    "text": "From a Tool to a Teammate\n\n\nA research team\n\nMany agents, different roles, working together\nThey propose, attack, verify, and re-check each other\n\n\n\nA personal assistant\n\nOne agent that carries work across sessions\nRemembers context, uses your tools, acts on your behalf\n\n\n\n\nTwo shapes where agents pay off: a panel that pressure-tests ideas and data, and an assistant that just gets recurring things done."
+  },
+  {
+    "objectID": "slides-qmd/8_agent-assistants.html#not-the-same-as-day-6",
+    "href": "slides-qmd/8_agent-assistants.html#not-the-same-as-day-6",
+    "title": "8. Agent Assistants",
+    "section": "Not the Same as Day 6",
+    "text": "Not the Same as Day 6\n\n\nDay 6 — Student Projects\n\nAgents students build as the deliverable\nThe product is the point; the learning is the design and the verification\n\n\n\nToday — Your Assistants\n\nAgents that work for you, on your research and your tasks\nThe product is your output; the agent is the labor\n\n\n\n\nSame underlying idea — an agent that decides and acts — pointed two ways: something students make, versus something that makes your week lighter."
   },
   {
     "objectID": "slides-qmd/8_agent-assistants.html#a-research-team",
@@ -18,7 +25,14 @@
     "href": "slides-qmd/8_agent-assistants.html#many-roles-one-question",
     "title": "8. Agent Assistants",
     "section": "Many Roles, One Question",
-    "text": "Many Roles, One Question\n\n\nDebate\n\nA proposer generates ideas; an adversary attacks them\nDisagreement surfaces the weak points early\n\n\n\nGround it\n\nA verifier checks claims against your own library\nAn analyst builds the data and runs the empirics\n\n\n\nCheck it\n\nA replicator re-derives the result independently\nTwo paths to the same number, or a red flag\n\n\n\n\nThe coauthor skill orchestrates this. Placeholder: walk one round of propose — attack — verify."
+    "text": "Many Roles, One Question\n\n\nDebate\n\nA proposer generates ideas; an adversary attacks them\nDisagreement surfaces the weak points early\n\n\n\nGround it\n\nA verifier checks claims against your own library\nAn analyst builds the data and runs the empirics\n\n\n\nCheck it\n\nA replicator re-derives the data build and the result, independently\nTwo paths to the same number, or a red flag\n\n\n\n\nThe coauthor skill orchestrates this: you are the coordinator; a debate panel and tool-using subagents do the work in a local folder — no repo, nothing published without you."
+  },
+  {
+    "objectID": "slides-qmd/8_agent-assistants.html#why-a-team-beats-one-agent",
+    "href": "slides-qmd/8_agent-assistants.html#why-a-team-beats-one-agent",
+    "title": "8. Agent Assistants",
+    "section": "Why a Team Beats One Agent",
+    "text": "Why a Team Beats One Agent\n\nA single agent that both proposes and checks its own work grades its own homework. Splitting the roles — propose, attack, verify, replicate — is how you catch the beautiful-but-wrong result before it reaches a referee."
   },
   {
     "objectID": "slides-qmd/8_agent-assistants.html#personal-assistants",
@@ -32,21 +46,21 @@
     "href": "slides-qmd/8_agent-assistants.html#an-agent-that-carries-the-work",
     "title": "8. Agent Assistants",
     "section": "An Agent That Carries the Work",
-    "text": "An Agent That Carries the Work\n\nGive it a goal, not a script; it plans the steps\nIt uses tools — files, code, the web — to act\nState persists, so today’s work builds on yesterday’s\nPlaceholder: a standing assistant for a recurring task"
+    "text": "An Agent That Carries the Work\n\n\nGive it a goal, not a script\n\nYou describe the outcome; it plans the steps\nIt uses tools — files, code, the web — to act\nState persists, so today builds on yesterday\n\n\n\nGood first jobs\n\nA weekly digest of new papers in your area\nReformat and check a dataset on arrival\nTurn meeting notes into tracked action items\n\n\n\n\nThe recurring, rule-ish tasks that eat an hour a week are the sweet spot — worth automating, low cost if a run is imperfect."
   },
   {
     "objectID": "slides-qmd/8_agent-assistants.html#what-makes-it-an-agent",
     "href": "slides-qmd/8_agent-assistants.html#what-makes-it-an-agent",
     "title": "8. Agent Assistants",
     "section": "What Makes It an Agent",
-    "text": "What Makes It an Agent\n\n\nNot just answering\n\nIt decides what to do next, then does it\nIt checks its own output and retries\n\n\n\nKept in bounds\n\nYou choose which tools it may use\nYou review before anything irreversible"
+    "text": "What Makes It an Agent\n\n\nNot just answering\n\nIt decides what to do next, then does it\nIt checks its own output and retries\nIt stops and asks when it is stuck\n\n\n\nKept in bounds\n\nYou choose which tools it may use\nYou review before anything irreversible\nGive it the reach the task needs — and no more\n\n\n\n\nThe skill you are building is not prompting — it is describing the goal well and judging the result. Delegation, not dictation."
   },
   {
     "objectID": "slides-qmd/8_agent-assistants.html#why-this-belongs-at-the-end",
     "href": "slides-qmd/8_agent-assistants.html#why-this-belongs-at-the-end",
     "title": "8. Agent Assistants",
     "section": "Why This Belongs at the End",
-    "text": "Why This Belongs at the End\n\nEverything so far was you directing a tool. An agent is you delegating a task — which means the new skills are describing the goal well and judging the result."
+    "text": "Why This Belongs at the End\n\nEverything until now was you directing a tool. An agent is you delegating a task — a research team that pressure-tests your work, or an assistant that clears the recurring load. The new skill is knowing what to hand off, and how to check what comes back."
   },
   {
     "objectID": "slides-qmd/8_agent-assistants.html#breakout",
@@ -60,7 +74,7 @@
     "href": "slides-qmd/8_agent-assistants.html#questions-to-discuss",
     "title": "8. Agent Assistants",
     "section": "Questions to Discuss",
-    "text": "Questions to Discuss\n\nWhat recurring task would you hand to a standing assistant first?\nFor a research question in your field, what roles would your ideal agent team have?\nWhat tools would you withhold from an agent working on real data?\nWhere is the line between useful delegation and losing track of what was done?"
+    "text": "Questions to Discuss\n\nWhat recurring task would you hand to a standing assistant first?\nFor a question in your field, what roles would your ideal agent team have?\nWhat tools would you withhold from an agent working on real data?\nWhere is the line between useful delegation and losing track of what was done?"
   },
   {
     "objectID": "slides-qmd/6_student-projects.html#from-a-prompt-to-a-product",
@@ -200,28 +214,42 @@
     "href": "slides-qmd/4_research-teaching-setup.html#the-setup-tax",
     "title": "4. Research and Teaching Setup",
     "section": "The Setup Tax",
-    "text": "The Setup Tax\n\n\nThe old way\n\nInstall the language, then the packages, then the editor\nFight PATH variables, versions, and dependency errors\nHours lost before a single line of research gets done\n\n\n\nThe new way\n\nOpen Claude Code and say what you want to work in\nIt installs the software, wires it up, and fixes what breaks\nYou describe the environment; it builds it\n\n\n\n\nThis session is the research and teaching stack — Python, R, Stata, LaTeX, Quarto, Git, GitHub — and the single idea that Claude Code can stand all of it up for you."
+    "text": "The Setup Tax\n\n\nThe old way\n\nInstall the language, then the packages, then the editor\nFight PATH variables, versions, and dependency errors\nHours lost before a single line of research gets done\n\n\n\nThe new way\n\nOpen Claude Code and say what you want to work in\nIt installs the software, wires it up, and fixes what breaks\nYou describe the environment; it builds it\n\n\n\n\nThis session is the research and teaching stack — Python, R, Stata, LaTeX, Quarto, Git, GitHub — and the single idea that one download can stand all of it up for you."
   },
   {
-    "objectID": "slides-qmd/4_research-teaching-setup.html#vs-code-the-hub",
-    "href": "slides-qmd/4_research-teaching-setup.html#vs-code-the-hub",
+    "objectID": "slides-qmd/4_research-teaching-setup.html#academic-studio",
+    "href": "slides-qmd/4_research-teaching-setup.html#academic-studio",
     "title": "4. Research and Teaching Setup",
-    "section": "VS Code: The Hub",
-    "text": "VS Code: The Hub"
+    "section": "Academic Studio",
+    "text": "Academic Studio"
+  },
+  {
+    "objectID": "slides-qmd/4_research-teaching-setup.html#one-download-set-up-for-you",
+    "href": "slides-qmd/4_research-teaching-setup.html#one-download-set-up-for-you",
+    "title": "4. Research and Teaching Setup",
+    "section": "One Download, Set Up for You",
+    "text": "One Download, Set Up for You\n\n\nWhat it is\n\nA free, open-source desktop editor built for academics\nA customized build of VS Codium — the open-source core of VS Code, preconfigured\nSame editor, extensions, and workflow — with the academic toolchain already assembled\nOne download from academic-studio.com, for macOS and Windows\n\n\n\nWhat comes bundled\n\nClaude Code in a side panel, Quarto, Jupyter notebooks\nPython and R support, LaTeX (LaTeX Workshop), an Office/PDF viewer, spell-check\nA Run Setup wizard installs the supporting programs — Python, Node.js, Quarto, R, TinyTeX, Git, GitHub CLI\nA catalog of Recommended Plugins (Claude skills) to add\n\n\n\n\nThis is the fix for the setup tax. Instead of a checklist of installs — editor, extensions, languages, LaTeX, Git — you download one program and let its Run Setup wizard put the rest in place."
+  },
+  {
+    "objectID": "slides-qmd/4_research-teaching-setup.html#academic-studio-is-vs-code-preconfigured",
+    "href": "slides-qmd/4_research-teaching-setup.html#academic-studio-is-vs-code-preconfigured",
+    "title": "4. Research and Teaching Setup",
+    "section": "Academic Studio Is VS Code, Preconfigured",
+    "text": "Academic Studio Is VS Code, Preconfigured"
   },
   {
     "objectID": "slides-qmd/4_research-teaching-setup.html#one-editor-for-everything",
     "href": "slides-qmd/4_research-teaching-setup.html#one-editor-for-everything",
     "title": "4. Research and Teaching Setup",
     "section": "One Editor for Everything",
-    "text": "One Editor for Everything\n\n\nWhat it is\n\nA free editor that handles every language you use\nPython, R, Stata, LaTeX, Markdown, Quarto — all in one window\nExtensions add support for each; Claude installs the ones you need\n\n\n\nWhy it is the hub\n\nClaude lives in a side panel, aware of your open files\nRun code, edit papers, preview slides, commit to Git — without leaving\nProposed edits appear as a diff you approve\n\n\n\n\nPick one home for your work. VS Code plus Claude is that home — everything below plugs into it."
+    "text": "One Editor for Everything\n\n\nWhat it is\n\nVS Code under the hood — one editor for every language you use\nPython, R, Stata, LaTeX, Markdown, Quarto — all in one window\nThe extensions for each come preinstalled; Claude adds any others you need\n\n\n\nWhy it is the hub\n\nClaude lives in a side panel, aware of your open files\nRun code, edit papers, preview slides, commit to Git — without leaving\nProposed edits appear as a diff you approve\n\n\n\n\nPick one home for your work. Academic Studio is that home — everything below happens inside it."
   },
   {
     "objectID": "slides-qmd/4_research-teaching-setup.html#notebooks-right-in-the-editor",
     "href": "slides-qmd/4_research-teaching-setup.html#notebooks-right-in-the-editor",
     "title": "4. Research and Teaching Setup",
     "section": "Notebooks, Right in the Editor",
-    "text": "Notebooks, Right in the Editor\n\n\n\n\n\n\nA Jupyter notebook interleaves code, output, and prose — ideal for analysis you want to narrate. VS Code runs them natively, and Claude can build, run, and explain each cell."
+    "text": "Notebooks, Right in the Editor\n\n\n\n\n\n\nA Jupyter notebook interleaves code, output, and prose — ideal for analysis you want to narrate. Academic Studio runs them natively, and Claude can build, run, and explain each cell."
   },
   {
     "objectID": "slides-qmd/4_research-teaching-setup.html#languages",
@@ -287,11 +315,11 @@
     "text": "GitHub: Backup, Sharing, Publishing\n\n\nYour code in the cloud\n\nGitHub hosts your Git projects — backed up and shareable\n“Push this project to a new GitHub repo” — Claude sets up the CLI and does it\nCo-authors clone it; you track issues and versions together\n\n\n\nGitHub Pages: free hosting\n\nName a page index.html, push, flip on Pages\nLive at a github.io address — no server, no cost\nPerfect for a course site, a paper’s companion page, or a small app\n\n\n\n\nFor solo research, GitHub is mainly backup plus a launch pad. For teaching, it is free hosting for anything you want students to reach."
   },
   {
-    "objectID": "slides-qmd/4_research-teaching-setup.html#the-one-line-setup",
-    "href": "slides-qmd/4_research-teaching-setup.html#the-one-line-setup",
+    "objectID": "slides-qmd/4_research-teaching-setup.html#the-one-download-setup",
+    "href": "slides-qmd/4_research-teaching-setup.html#the-one-download-setup",
     "title": "4. Research and Teaching Setup",
-    "section": "The One-Line Setup",
-    "text": "The One-Line Setup\n\n\nWhat you tell Claude Code\n\nSet up a research project in this folder. Install Python with pandas, numpy, statsmodels, and matplotlib; set up R; install Quarto and LaTeX. Create a project structure with folders for data, code, and output. Initialize Git and push it to a new private GitHub repo.\n\n\nOne paragraph. Claude installs each piece, verifies it, creates the structure, and hands you a working, version-controlled project — the setup tax, paid once, by the machine."
+    "section": "The One-Download Setup",
+    "text": "The One-Download Setup\n\n\nThe easy path\n\nDownload Academic Studio and open it once\nClick Run Setup — it installs Python, Node, Quarto, R, TinyTeX, Git, and the GitHub CLI\nAdd Recommended Plugins from the catalog, and you are ready to work\n\n\n\nOr just ask Claude\n\nAlready inside, Claude Code can stand up a project from one paragraph:\n“Set up a research project here: Python with pandas, numpy, statsmodels, matplotlib; R; Quarto and LaTeX. Make folders for data, code, and output. Initialize Git and push to a new private GitHub repo.”\nIt installs each piece, verifies it, and hands back a working, version-controlled project\n\n\n\n\nOne download, or one paragraph. Either way the setup tax is paid once, by the machine — not by you, by hand."
   },
   {
     "objectID": "slides-qmd/4_research-teaching-setup.html#the-point",
@@ -445,7 +473,7 @@
     "href": "slides-qmd/1_intro-to-claude.html#same-claude-many-doors",
     "title": "1. Intro to Claude",
     "section": "Same Claude, Many Doors",
-    "text": "Same Claude, Many Doors\n\n\nOne model, many surfaces\n\nThe same Claude runs behind a chat window, inside Excel, and in your terminal\nWhat changes is where it runs and what it can touch\nA Pro account ($20/month) opens all of it\n\n\n\nToday’s map\n\nThe three modes: Chat, Cowork, Code\nClaude Code in the terminal and in VS Code\nClaude for Excel, skills, connectors, and plugins\n\n\n\n\nThe goal is to know which door to walk through for a given job — and what each one lets Claude do on your behalf."
+    "text": "Same Claude, Many Doors\n\n\nOne model, many surfaces\n\nThe same Claude runs behind a chat window, inside Excel, and in your terminal\nWhat changes is where it runs and what it can touch\nA Pro account ($20/month) opens all of it\n\n\n\nToday’s map\n\nThe three modes: Chat, Cowork, Code\nClaude Code in the terminal and in VS Code\nClaude for Excel, and choosing a model\n\n\n\n\nThe goal is to know which door to walk through for a given job — and what each one lets Claude do on your behalf."
   },
   {
     "objectID": "slides-qmd/1_intro-to-claude.html#the-three-modes",
@@ -511,60 +539,11 @@
     "text": "A Chat Panel Inside Excel\n\n\n\n\n\n\nThe Claude add-in puts a chat panel directly inside Excel. You describe what you want — formulas, tables, charts, an amortization schedule — and Claude builds it in the active sheet. No Python, no terminal. Install it from the Microsoft Office Add-ins store."
   },
   {
-    "objectID": "slides-qmd/1_intro-to-claude.html#skills",
-    "href": "slides-qmd/1_intro-to-claude.html#skills",
+    "objectID": "slides-qmd/1_intro-to-claude.html#coming-day-3-make-it-yours",
+    "href": "slides-qmd/1_intro-to-claude.html#coming-day-3-make-it-yours",
     "title": "1. Intro to Claude",
-    "section": "Skills",
-    "text": "Skills"
-  },
-  {
-    "objectID": "slides-qmd/1_intro-to-claude.html#reusable-one-command-workflows",
-    "href": "slides-qmd/1_intro-to-claude.html#reusable-one-command-workflows",
-    "title": "1. Intro to Claude",
-    "section": "Reusable, One-Command Workflows",
-    "text": "Reusable, One-Command Workflows\n\n\nWhat a skill is\n\nA saved procedure Claude follows for a specific kind of task\nA folder with a SKILL.md file — plain instructions, optional scripts\nWrite “how to do X well” once; every future run follows it\n\n\n\nBuilt in and shareable\n\nAnthropic ships skills for Excel, Word, PowerPoint, and PDF\nYou can add your own or install others’\nSame skill works in Claude.ai, Claude Code, and the add-ins\n\n\n\n\nA skill is codified expertise, not a smarter model — the subject of a whole session later. Here, just know the three ways they fire."
-  },
-  {
-    "objectID": "slides-qmd/1_intro-to-claude.html#three-ways-a-skill-fires",
-    "href": "slides-qmd/1_intro-to-claude.html#three-ways-a-skill-fires",
-    "title": "1. Intro to Claude",
-    "section": "Three Ways a Skill Fires",
-    "text": "Three Ways a Skill Fires\n\n\nSlash command\nYou type /critique or /pptx to invoke it directly\n\n\nNatural language\nYou ask in plain English and Claude runs the matching skill\n\n\nAutomatic\n“Create an Excel file” triggers the Excel skill on its own — Claude reads each skill’s description and picks\n\n\n\nBecause each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them — without you naming them."
-  },
-  {
-    "objectID": "slides-qmd/1_intro-to-claude.html#connectors",
-    "href": "slides-qmd/1_intro-to-claude.html#connectors",
-    "title": "1. Intro to Claude",
-    "section": "Connectors",
-    "text": "Connectors"
-  },
-  {
-    "objectID": "slides-qmd/1_intro-to-claude.html#plugging-claude-into-your-systems",
-    "href": "slides-qmd/1_intro-to-claude.html#plugging-claude-into-your-systems",
-    "title": "1. Intro to Claude",
-    "section": "Plugging Claude Into Your Systems",
-    "text": "Plugging Claude Into Your Systems\n\n\nMCP: the universal plug\n\nA connector links Claude to an outside service — a database, your email, a document store\nThe standard is MCP, the Model Context Protocol\nMCP is to AI what USB is to devices: one way to plug anything in\n\n\n\nWhat it enables\n\n“Ask our sales database in plain English”\n“Check my calendar and draft the replies”\nAdd from a directory of ready-made connectors, or point it at your own\n\n\n\n\nConnectors are how AI stops being a general assistant and starts knowing your data — safely and centrally, rather than through copy-paste."
-  },
-  {
-    "objectID": "slides-qmd/1_intro-to-claude.html#adding-a-connector",
-    "href": "slides-qmd/1_intro-to-claude.html#adding-a-connector",
-    "title": "1. Intro to Claude",
-    "section": "Adding a Connector",
-    "text": "Adding a Connector\n\n\n\n\n\n\nA connector needs a name and an address; sensitive ones authenticate the way any app does — an API key, or a corporate single sign-on. Once added, its tools are available in every chat."
-  },
-  {
-    "objectID": "slides-qmd/1_intro-to-claude.html#plugins",
-    "href": "slides-qmd/1_intro-to-claude.html#plugins",
-    "title": "1. Intro to Claude",
-    "section": "Plugins",
-    "text": "Plugins"
-  },
-  {
-    "objectID": "slides-qmd/1_intro-to-claude.html#bundling-it-all-to-share",
-    "href": "slides-qmd/1_intro-to-claude.html#bundling-it-all-to-share",
-    "title": "1. Intro to Claude",
-    "section": "Bundling It All to Share",
-    "text": "Bundling It All to Share\n\n\nWhat a plugin is\n\nA single installable package that can bundle several pieces at once\nThe way a team distributes a shared setup — everyone installs one thing\n/plugin install and you have the whole kit\n\n\n\nWhat it can contain\n\nSkills, custom agents, connectors (MCP servers)\nHooks and output styles that shape behavior\nSkills are for you; plugins are for a team\n\n\n\n\nFor your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command."
+    "section": "Coming Day 3: Make It Yours",
+    "text": "Coming Day 3: Make It Yours\n\n\nSkills\nTeach Claude your procedures once — it follows them the same way every time\n\n\nConnectors\nPlug Claude into your data and systems, safely — the MCP standard\n\n\nPlugins\nBundle skills and connectors into one package to share with a team\n\n\n\nYou have seen where Claude runs and how to reach it. Skills, connectors, and plugins are how you customize it to your work — they get their own session on Day 3."
   },
   {
     "objectID": "slides-qmd/1_intro-to-claude.html#choosing-a-model",
@@ -578,7 +557,7 @@
     "href": "slides-qmd/1_intro-to-claude.html#the-map",
     "title": "1. Intro to Claude",
     "section": "The Map",
-    "text": "The Map\n\nOne Claude, reached through many doors: Chat, Cowork, Code for how much of your machine it touches; the terminal and VS Code for real work; Excel for spreadsheets; and skills, connectors, and plugins to give it your procedures and your data."
+    "text": "The Map\n\nOne Claude, reached through many doors: Chat, Cowork, Code for how much of your machine it touches; the terminal and VS Code for real work; and Excel for spreadsheets. Day 3 adds skills, connectors, and plugins — your procedures and your data."
   },
   {
     "objectID": "slides-qmd/1_intro-to-claude.html#breakout",
@@ -592,14 +571,28 @@
     "href": "slides-qmd/1_intro-to-claude.html#questions-to-discuss",
     "title": "1. Intro to Claude",
     "section": "Questions to Discuss",
-    "text": "Questions to Discuss\n\nFor your own work, which mode fits best — the sandboxed Chat, the folder-bounded Cowork, or the full-access Code?\nWhat system at Rice would you most want a connector to — so you could just ask it questions?\nWhat is a repeatable task in your work that would make a good first skill?\nWhere does the extra reach of Code mode make you cautious — and what would make you comfortable?"
+    "text": "Questions to Discuss\n\nFor your own work, which mode fits best — the sandboxed Chat, the folder-bounded Cowork, or the full-access Code?\nWhere does the extra reach of Code mode make you cautious — and what would make you comfortable?\nWhat is the first thing you would ask the Claude panel inside Excel to build?\nWhen would you switch from Sonnet to Opus — and how would you know it was worth the quota?"
+  },
+  {
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#three-ways-to-extend-claude",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#three-ways-to-extend-claude",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Three Ways to Extend Claude",
+    "text": "Three Ways to Extend Claude\n\n\nSkills\n\nTeach Claude your procedure for a task\nIt follows the same steps every time\n\n\n\nConnectors\n\nGive Claude your data and systems\nAsk a database, your calendar, your files\n\n\n\nPlugins\n\nBundle skills and connectors into one package\nInstall once; share a whole setup with a team\n\n\n\n\nThe model is fixed. What you change is what it knows how to do (skills), what it can reach (connectors), and how you package and share both (plugins)."
+  },
+  {
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#skills",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#skills",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Skills",
+    "text": "Skills"
   },
   {
     "objectID": "slides-qmd/3_skills-connectors-plugins.html#codified-expertise-not-a-smarter-model",
     "href": "slides-qmd/3_skills-connectors-plugins.html#codified-expertise-not-a-smarter-model",
     "title": "3. Skills, Connectors, and Plugins",
     "section": "Codified Expertise, Not a Smarter Model",
-    "text": "Codified Expertise, Not a Smarter Model\n\n\nThe problem with chatting\n\nA great prompt works once, then scrolls out of your history\nThe next person — or the next you — starts over\nQuality depends on remembering how you did it last time\n\n\n\nWhat a skill fixes\n\nWrite down “how a good referee report is structured,” once\nEvery future run follows it — same standard, no reminding\nA one-time workflow becomes a reusable asset\n\n\n\n\nA skill is not a model upgrade. It is your procedure, written down where Claude will follow it every time — across Claude.ai, Claude Code, and the add-ins."
+    "text": "Codified Expertise, Not a Smarter Model\n\n\nThe problem with chatting\n\nA great prompt works once, then scrolls out of your history\nThe next person — or the next you — starts over\nQuality depends on remembering how you did it last time\n\n\n\nWhat a skill fixes\n\nWrite down “how to do this well,” once\nEvery future run follows it — same standard, no reminding\nA one-time workflow becomes a reusable asset\n\n\n\n\nA skill is not a model upgrade. It is your procedure, written down where Claude will follow it every time — across Claude.ai, Claude Code, and the add-ins."
   },
   {
     "objectID": "slides-qmd/3_skills-connectors-plugins.html#what-a-skill-actually-is",
@@ -609,32 +602,11 @@
     "text": "What a Skill Actually Is\n\n\nA folder and a file\n\nA SKILL.md file: a name, a description, and instructions in plain English\nOptional scripts and reference documents alongside\nThat is the whole thing — readable, editable, versionable\n\n\n\nHow Claude uses it\n\nAt startup it reads only each skill’s name and description\nWhen a task looks relevant, it pulls in the full instructions\nScripts run only when needed — so your context stays lean\n\n\n\n\nThis “progressive disclosure” is why you can have dozens of skills installed and pay attention-cost only for the one in use."
   },
   {
-    "objectID": "slides-qmd/3_skills-connectors-plugins.html#public-repos",
-    "href": "slides-qmd/3_skills-connectors-plugins.html#public-repos",
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#three-ways-a-skill-fires",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#three-ways-a-skill-fires",
     "title": "3. Skills, Connectors, and Plugins",
-    "section": "Public Repos",
-    "text": "Public Repos"
-  },
-  {
-    "objectID": "slides-qmd/3_skills-connectors-plugins.html#researchers-have-already-built-these",
-    "href": "slides-qmd/3_skills-connectors-plugins.html#researchers-have-already-built-these",
-    "title": "3. Skills, Connectors, and Plugins",
-    "section": "Researchers Have Already Built These",
-    "text": "Researchers Have Already Built These\n\n\nPedro Sant’Anna\n\nRuns his whole paper lifecycle through Claude Code\n/lit-review, /review-paper (mimics AER/QJE/JPE standards), referee responses\n~18 specialized agents in an adversarial critic-fixer loop; blocks anything scoring below 80\n\n\n\nLee Crawfurd\n\nFive tightly-scoped skills for development economists\nPaper Review, Code Review (Stata/R/Python replication audit)\n“Referee 2” runs parallel reproducibility checks\n\n\n\nAcademic-research suite\n\nDeep Research with PRISMA systematic-review mode\nDrafting with citation-format conversion (APA/Chicago/MLA)\nA mock editor + reviewer + devil’s-advocate panel\n\n\n\n\nThese are real, published, installable suites — economists mostly. The shared theme: Claude is copilot, not pilot. You own the question and the identification strategy; the skill handles the grunt work and enforces quality gates."
-  },
-  {
-    "objectID": "slides-qmd/3_skills-connectors-plugins.html#the-feature-that-matters-most-for-us",
-    "href": "slides-qmd/3_skills-connectors-plugins.html#the-feature-that-matters-most-for-us",
-    "title": "3. Skills, Connectors, and Plugins",
-    "section": "The Feature That Matters Most for Us",
-    "text": "The Feature That Matters Most for Us\n\nThe biggest academic risk with AI is fabricated references and claims a cited source does not actually support. The better skills attack this head-on.\n\n\n\nVerify every citation\nChecked against Semantic Scholar, OpenAlex, Crossref, and arXiv — bogus DOIs caught before export\n\n\nAudit every claim\nDoes the cited source actually support the sentence? High-severity violations block the output\n\n\nFlag contamination\nDetects citations that may themselves be AI-invented\n\n\n\nFor empirical or b-school research, this is the line between a demo and something you can responsibly use."
-  },
-  {
-    "objectID": "slides-qmd/3_skills-connectors-plugins.html#does-it-actually-work",
-    "href": "slides-qmd/3_skills-connectors-plugins.html#does-it-actually-work",
-    "title": "3. Skills, Connectors, and Plugins",
-    "section": "Does It Actually Work?",
-    "text": "Does It Actually Work?\n\n\nThe benchmark\n\n54 social-science papers, tested for whether a coding agent could reproduce the published findings from the paper alone\nClaude Code: ~93% accuracy at the individual-step level\nBut only ~78% at the whole-paper level\n\n\n\nWhat the gap teaches\n\nIt nails each analysis step\nOne broken step anywhere still fails the full reproduction\nA ready-made lesson on exactly where human oversight stays essential\n\n\n\n\nThe 93/78 split is the honest picture: extraordinary at the parts, not yet trustworthy end-to-end without a human checking the chain."
+    "section": "Three Ways a Skill Fires",
+    "text": "Three Ways a Skill Fires\n\n\nSlash command\nYou type /critique or /pptx to invoke it directly\n\n\nNatural language\nYou ask in plain English and Claude runs the matching skill\n\n\nAutomatic\n“Create an Excel file” triggers the Excel skill on its own — Claude reads each skill’s description and picks\n\n\n\nBecause each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them — without you naming them."
   },
   {
     "objectID": "slides-qmd/3_skills-connectors-plugins.html#build-your-own",
@@ -648,14 +620,49 @@
     "href": "slides-qmd/3_skills-connectors-plugins.html#from-workflow-to-skill",
     "title": "3. Skills, Connectors, and Plugins",
     "section": "From Workflow to Skill",
-    "text": "From Workflow to Skill\n\n\nThe easy path\n\nType /skill-creator and describe your workflow\nIt writes the SKILL.md and saves it where Claude will find it\nInvoke it by name from then on\n\n\n\nBake in the checks\n\nPut your verification steps inside the skill\n“After computing, show the row count and the min and max”\nThe skill enforces your hygiene, every run — not just when you remember\n\n\n\n\nThe most valuable skills for research encode not just what to do, but how to check it — the referee’s discipline, made automatic."
+    "text": "From Workflow to Skill\n\n\nThe easy path\n\nType /skill-creator and describe your workflow\nIt writes the SKILL.md and saves it where Claude will find it\nInvoke it by name from then on\n\n\n\nBake in the checks\n\nPut your verification steps inside the skill\n“After computing, show the row count and the min and max”\nThe skill enforces your standard, every run — not just when you remember\n\n\n\n\nThe best skills encode not just what to do, but how to check it — your discipline, made automatic."
   },
   {
-    "objectID": "slides-qmd/3_skills-connectors-plugins.html#a-skill-you-might-write",
-    "href": "slides-qmd/3_skills-connectors-plugins.html#a-skill-you-might-write",
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#two-skills-you-might-write",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#two-skills-you-might-write",
     "title": "3. Skills, Connectors, and Plugins",
-    "section": "A Skill You Might Write",
-    "text": "A Skill You Might Write\n\n\nSKILL.md — replication-audit\n\nWhen given a replication package: 1) inventory every script and data file; 2) run the code end to end in a clean environment and record what breaks; 3) check each table and figure in the paper against what the code produces; 4) flag any result that cannot be reproduced from the provided files; 5) write a short report with a per-result reproduced / not-reproduced status.\n\n\nA hand-written skill like this — yours, transparent, under your control — is safer and more teachable than installing a multi-skill black box."
+    "section": "Two Skills You Might Write",
+    "text": "Two Skills You Might Write\n\n\nTeaching\nTurn a problem set into a solution key, a grading rubric, and three fresh variants — formatted your way, every time\n\n\nResearch\nAudit a replication package: run the code, check each table against the paper, report what does not reproduce\n\n\n\nA hand-written skill — yours, transparent, under your control — is safer and more teachable than a multi-skill black box you did not read."
+  },
+  {
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#connectors",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#connectors",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Connectors",
+    "text": "Connectors"
+  },
+  {
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#plugging-claude-into-your-systems",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#plugging-claude-into-your-systems",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Plugging Claude Into Your Systems",
+    "text": "Plugging Claude Into Your Systems\n\n\nMCP: the universal plug\n\nA connector links Claude to an outside service — a database, your email, a document store\nThe standard is MCP, the Model Context Protocol\nMCP is to AI what USB is to devices: one way to plug anything in\n\n\n\nWhat it enables\n\n“Ask our enrollment database in plain English”\n“Check my calendar and draft the replies”\nAdd from a directory of ready-made connectors, or point it at your own\n\n\n\n\nConnectors are how Claude stops being a general assistant and starts knowing your data — safely and centrally, rather than through copy-paste."
+  },
+  {
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#adding-a-connector",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#adding-a-connector",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Adding a Connector",
+    "text": "Adding a Connector\n\n\n\n\n\n\nA connector needs a name and an address; sensitive ones authenticate the way any app does — an API key, or a corporate single sign-on. Once added, its tools are available in every chat."
+  },
+  {
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#plugins",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#plugins",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Plugins",
+    "text": "Plugins"
+  },
+  {
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#bundling-it-all-to-share",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#bundling-it-all-to-share",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Bundling It All to Share",
+    "text": "Bundling It All to Share\n\n\nWhat a plugin is\n\nA single installable package that can bundle several pieces at once\nThe way a team distributes a shared setup — everyone installs one thing\n/plugin install and you have the whole kit\n\n\n\nWhat it can contain\n\nSkills, custom agents, connectors (MCP servers)\nHooks and output styles that shape behavior\nSkills are for you; plugins are for a team\n\n\n\n\nFor your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command."
   },
   {
     "objectID": "slides-qmd/3_skills-connectors-plugins.html#vetting",
@@ -665,18 +672,18 @@
     "text": "Vetting"
   },
   {
-    "objectID": "slides-qmd/3_skills-connectors-plugins.html#installing-someone-elses-skill-runs-their-code",
-    "href": "slides-qmd/3_skills-connectors-plugins.html#installing-someone-elses-skill-runs-their-code",
+    "objectID": "slides-qmd/3_skills-connectors-plugins.html#installing-someone-elses-runs-their-code",
+    "href": "slides-qmd/3_skills-connectors-plugins.html#installing-someone-elses-runs-their-code",
     "title": "3. Skills, Connectors, and Plugins",
-    "section": "Installing Someone Else’s Skill Runs Their Code",
-    "text": "Installing Someone Else’s Skill Runs Their Code\n\n\nThe supply-chain risk\n\nThe academic suites are independent repos, outside Anthropic’s screened directory\nInstalling one runs someone else’s instructions and scripts on your machine\nThere is active security research on malicious third-party skills\n\n\n\nDue diligence\n\nclaude plugin validate checks structure, not safety\nRead the SKILL.md and any scripts yourself\nFine for a class demo; think twice before pointing it at real data\n\n\n\n\n“Validate” confirms a plugin is well-formed, not that it is trustworthy. The safest research skill is often the small one you wrote and can read in full."
+    "section": "Installing Someone Else’s Runs Their Code",
+    "text": "Installing Someone Else’s Runs Their Code\n\n\nThe supply-chain risk\n\nA shared skill, connector, or plugin runs someone else’s instructions and scripts on your machine\nMany live in independent repos, outside Anthropic’s screened directory\nThere is active security research on malicious third-party skills\n\n\n\nDue diligence\n\nclaude plugin validate checks structure, not safety\nRead the SKILL.md and any scripts yourself\nFine for a class demo; think twice before pointing it at real data\n\n\n\n\n“Validate” confirms a package is well-formed, not that it is trustworthy. The safest skill is often the small one you wrote and can read in full."
   },
   {
     "objectID": "slides-qmd/3_skills-connectors-plugins.html#the-payoff",
     "href": "slides-qmd/3_skills-connectors-plugins.html#the-payoff",
     "title": "3. Skills, Connectors, and Plugins",
     "section": "The Payoff",
-    "text": "The Payoff\n\nA skill turns your best research practice — how you referee, how you audit a replication, how you check a citation — into something Claude does the same way every time. You still own the question and the judgment. The skill owns the discipline."
+    "text": "The Payoff\n\nSkills turn your best practice into something Claude does the same way every time. Connectors give it your data instead of a copy-paste. Plugins hand a colleague the whole setup in one command. You keep the judgment; they carry the discipline."
   },
   {
     "objectID": "slides-qmd/3_skills-connectors-plugins.html#breakout",
@@ -690,14 +697,14 @@
     "href": "slides-qmd/3_skills-connectors-plugins.html#questions-to-discuss",
     "title": "3. Skills, Connectors, and Plugins",
     "section": "Questions to Discuss",
-    "text": "Questions to Discuss\n\nWhat is one research task you do the same careful way each time — a good candidate for a skill?\nWhere has a fabricated or mis-supported citation nearly slipped past you? Would a claim-audit have caught it?\nGiven the 93/78 result, which parts of your empirical work would you let AI run — and which would you always check yourself?\nWould you install a colleague’s research skill? What would you read before trusting it with your data?"
+    "text": "Questions to Discuss\n\nWhat is one task — teaching or research — you do the same careful way each time, a good candidate for a skill?\nWhat system or dataset would you most want to ask in plain English — a good connector to build?\nWould you install a colleague’s skill or plugin? What would you read before trusting it with your data?\nIf your department adopted one shared plugin, what should be in it?"
   },
   {
     "objectID": "slides-qmd/5_ai-for-teaching.html#four-things-you-can-now-make",
     "href": "slides-qmd/5_ai-for-teaching.html#four-things-you-can-now-make",
     "title": "5. AI for Teaching",
     "section": "Four Things You Can Now Make",
-    "text": "Four Things You Can Now Make\n\n\nSlides\nDecks built from an outline, a paper, or a set of notes — and restyled in one pass\n\n\nCases\nA fictional company, the numbers, the exhibits, and the teaching note — generated together\n\n\nRAG chatbots\nA tutor grounded in your own course materials, answering with citations\n\n\nVoiceovers\nA narrated video or a self-paced tutorbot made from a deck you already have\n\n\n\nEach of these used to be days of work. Each is now a conversation. This session is a tour of how — and every deck in this course was built the way we are about to describe."
+    "text": "Four Things You Can Now Make\n\n\nSlides\nDecks built from an outline, a paper, or a set of notes — and restyled in one pass\n\n\nCases\nA fictional company, the numbers, the exhibits, and the teaching note — generated together\n\n\nGrounded chatbots\nA tutor grounded in your own materials — from a no-build NotebookLM to a custom RAG bot, answering with citations\n\n\nVoiceovers\nA narrated video or a self-paced tutorbot made from a deck you already have\n\n\n\nEach of these used to be days of work. Each is now a conversation. This session is a tour of how — and every deck in this course was built the way we are about to describe."
   },
   {
     "objectID": "slides-qmd/5_ai-for-teaching.html#slides",
@@ -777,6 +784,27 @@
     "text": "The No-Build Path\n\n\nGoogle NotebookLM\n\nUpload up to 50 sources — PDFs, Google Docs, web links, YouTube\nAnswers grounded in your sources, with citations\nGenerates study guides and audio overviews — a narrated summary\nFree with a Google account\n\n\n\nClaude & ChatGPT Projects\n\nUpload documents to a Project; the assistant searches them across every chat\nRAG without writing any code\nRequires a subscription\n\n\n\n\nFor a manageable pile of documents, these are an instant grounded tutor. Build your own only when you need to search thousands of documents, embed it in an app, or control the pipeline."
   },
   {
+    "objectID": "slides-qmd/5_ai-for-teaching.html#notebooklm",
+    "href": "slides-qmd/5_ai-for-teaching.html#notebooklm",
+    "title": "5. AI for Teaching",
+    "section": "NotebookLM",
+    "text": "NotebookLM"
+  },
+  {
+    "objectID": "slides-qmd/5_ai-for-teaching.html#upload-your-sources-get-an-assistant",
+    "href": "slides-qmd/5_ai-for-teaching.html#upload-your-sources-get-an-assistant",
+    "title": "5. AI for Teaching",
+    "section": "Upload Your Sources, Get an Assistant",
+    "text": "Upload Your Sources, Get an Assistant\n\n\nGrounded in what you upload\n\nDrop in your own sources — PDFs, slides, Google Docs, web links, even YouTube videos\nThe assistant answers from those sources and cites them\nStays on your content instead of the open web — far less prone to making things up\n\n\n\nStudy aids on demand\n\nAuto-generates a study guide, an FAQ, a briefing doc, a timeline\nAll drawn from the material you gave it\nFree, with a Google account — no code, no setup\n\n\n\n\nGoogle’s NotebookLM is the no-build way to hand students a course-grounded assistant: upload the readings and share. No pipeline to build, nothing to embed."
+  },
+  {
+    "objectID": "slides-qmd/5_ai-for-teaching.html#the-audio-overview",
+    "href": "slides-qmd/5_ai-for-teaching.html#the-audio-overview",
+    "title": "5. AI for Teaching",
+    "section": "The Audio Overview",
+    "text": "The Audio Overview\n\n\nA podcast of your material\n\nIts signature feature: a two-host Audio Overview\nTwo AI voices discuss your sources in a surprisingly natural conversation\nStudents can listen to a lecture’s readings as a discussion\n\n\n\nThe no-build teaching assistant\n\nUpload and share — no engineering, no setup\nThe zero-code option; a built RAG bot is the customizable one\nGreat when you want course-grounded chat and audio, fast\n\n\n\n\nWhere a RAG bot you build gives you control of the pipeline, NotebookLM gives you a grounded tutor and a listenable audio overview in minutes — two ends of the same idea."
+  },
+  {
     "objectID": "slides-qmd/5_ai-for-teaching.html#voiceovers-tutorbots",
     "href": "slides-qmd/5_ai-for-teaching.html#voiceovers-tutorbots",
     "title": "5. AI for Teaching",
@@ -837,7 +865,7 @@
     "href": "slides-qmd/7_ai-for-research.html#the-research-loop-assisted",
     "title": "7. AI for Research",
     "section": "The Research Loop, Assisted",
-    "text": "The Research Loop, Assisted\n\n\nFind\n\nDiscover and track the literature\nFollow citations forward and back\n\n\n\nOrganize\n\nA private, searchable library of what you have read\nSearch by keyword and by meaning\n\n\n\nWrite & review\n\nDraft and edit with field-aware guidance\nReferee your own work before a journal does\n\n\n\n\nDraft outline — the four moves below are the arc of the session. Each maps to a tool you can install and use the same day."
+    "text": "The Research Loop, Assisted\n\n\nFind\n\nDiscover and track the literature\nFollow citations forward and back\n\n\n\nOrganize\n\nA private, searchable library of what you have read\nSearch by keyword and by meaning\n\n\n\nWrite & review\n\nDraft and edit with field-aware guidance\nReferee your own work before a journal does\n\n\n\n\nFour moves, each with a tool you can install and use today. AI does the search, the recall, and the first pass; the judgment stays yours."
   },
   {
     "objectID": "slides-qmd/7_ai-for-research.html#literature-search",
@@ -851,7 +879,7 @@
     "href": "slides-qmd/7_ai-for-research.html#finding-and-tracking-work",
     "title": "7. AI for Research",
     "section": "Finding and Tracking Work",
-    "text": "Finding and Tracking Work\n\nAsk in plain language; get papers, not just links\nDiscovery across OpenAlex and Semantic Scholar\nTrack who cites a result, and what it cites\nPlaceholder: add a live example query"
+    "text": "Finding and Tracking Work\n\n\nAsk, don’t keyword\n\nDescribe what you want in plain language\nDiscovery across OpenAlex and Semantic Scholar — millions of papers, open metadata\nGet papers and abstracts, not just a list of links\n\n\n\nFollow the citations\n\nWhat does this paper cite? Who cites it?\nTrace a result forward to its critics and back to its roots\nSurface the branch of the literature you were missing\n\n\n\n\nThe web search from Day 2, pointed at the scholarly record. It finds candidates; you still decide what is relevant."
   },
   {
     "objectID": "slides-qmd/7_ai-for-research.html#knowledge-databases",
@@ -865,7 +893,7 @@
     "href": "slides-qmd/7_ai-for-research.html#your-own-library-searchable",
     "title": "7. AI for Research",
     "section": "Your Own Library, Searchable",
-    "text": "Your Own Library, Searchable\n\n\nWhat it is\n\nA local, private store of your PDFs and notes\nFull-text plus semantic (meaning) search\nImport a Zotero library or a folder of PDFs\n\n\n\nWhy it helps\n\n“What do I have on X?” answered in seconds\nNotes tied to the papers that prompted them\nExport BibTeX straight into a paper\n\n\n\n\nThe litdb skill backs this. Placeholder: demo adding a folder and running a hybrid search."
+    "text": "Your Own Library, Searchable\n\n\nWhat it is\n\nA local, private store of your PDFs and notes\nFull-text keyword and semantic (meaning) search\nImport a whole Zotero library, or a folder of PDFs\n\n\n\nWhy it helps\n\n“What do I have on X?” — answered in seconds\nNotes tied to the papers that prompted them\nExport BibTeX straight into your paper\n\n\n\n\nThe litdb skill backs this — your corpus first, external sources second. It runs locally, so your library and notes never leave your machine."
   },
   {
     "objectID": "slides-qmd/7_ai-for-research.html#writing",
@@ -879,7 +907,7 @@
     "href": "slides-qmd/7_ai-for-research.html#drafting-and-editing",
     "title": "7. AI for Research",
     "section": "Drafting and Editing",
-    "text": "Drafting and Editing\n\nField-aware help for economics papers: structure, argument, clarity\nRewrite passages to read as human, not machine-generated\nKeep the argument driving the structure, not a template\nPlaceholder: before/after on a real paragraph"
+    "text": "Drafting and Editing\n\n\nField-aware help\n\nStructure, argument, and clarity for an economics paper\nSynthesized from 50+ guides by working economists\nSection by section: intro, results, response to referees\n\n\n\nSound human, not machine\n\nVary the rhythm; drop the AI tells\nLet the argument drive the structure, not a template\nEdit an existing draft, or draft from your notes\n\n\n\n\nThe econ-write and human-write skills. They do not invent your findings — they help you say what you found, well."
   },
   {
     "objectID": "slides-qmd/7_ai-for-research.html#reviews",
@@ -893,14 +921,28 @@
     "href": "slides-qmd/7_ai-for-research.html#referee-before-the-referee",
     "title": "7. AI for Research",
     "section": "Referee Before the Referee",
-    "text": "Referee Before the Referee\n\nA rigorous, source-grounded referee report on a draft\nSeparate editing notes and a prioritized revision plan\nCatch the objections a real reviewer will raise — first\nPlaceholder: run a review on a working paper"
+    "text": "Referee Before the Referee\n\n\nWhat it produces\n\nA rigorous, source-grounded referee report on a draft\nSeparate editing notes and a prioritized revision plan\nThe objections a real reviewer will raise — first\n\n\n\nOthers have built these too\n\nPedro Sant’Anna: a full paper-lifecycle suite, adversarial critic-fixer loop\nLee Crawfurd: tightly-scoped review + replication-audit skills\nInstallable, mostly economists — Claude as copilot, not pilot\n\n\n\n\nThe econ-review skill does this for your own drafts. You own the question and the identification; the skill enforces the discipline."
   },
   {
-    "objectID": "slides-qmd/7_ai-for-research.html#why-this-belongs-in-your-workflow",
-    "href": "slides-qmd/7_ai-for-research.html#why-this-belongs-in-your-workflow",
+    "objectID": "slides-qmd/7_ai-for-research.html#the-risk-that-matters-most",
+    "href": "slides-qmd/7_ai-for-research.html#the-risk-that-matters-most",
     "title": "7. AI for Research",
-    "section": "Why This Belongs in Your Workflow",
-    "text": "Why This Belongs in Your Workflow\n\nThe judgment stays yours. AI handles the search, the recall, and the first pass — you decide what matters and whether it is right."
+    "section": "The Risk That Matters Most",
+    "text": "The Risk That Matters Most\n\nThe biggest academic danger with AI is fabricated references and claims a cited source does not actually support. The better research skills attack this head-on.\n\n\n\nVerify every citation\nChecked against Semantic Scholar, OpenAlex, Crossref, arXiv — bogus DOIs caught before export\n\n\nAudit every claim\nDoes the source actually support the sentence? High-severity violations block the output\n\n\nFlag contamination\nDetect citations that may themselves be AI-invented\n\n\n\nFor empirical or b-school research, this is the line between a demo and something you can responsibly put your name on."
+  },
+  {
+    "objectID": "slides-qmd/7_ai-for-research.html#does-it-actually-work",
+    "href": "slides-qmd/7_ai-for-research.html#does-it-actually-work",
+    "title": "7. AI for Research",
+    "section": "Does It Actually Work?",
+    "text": "Does It Actually Work?\n\n\nThe benchmark\n\n54 social-science papers, tested for whether a coding agent could reproduce the published findings from the paper alone\nClaude Code: ~93% at the individual-step level\nBut only ~78% at the whole-paper level\n\n\n\nWhat the gap teaches\n\nIt nails each analysis step\nOne broken step anywhere still fails the full reproduction\nExactly where human oversight stays essential\n\n\n\n\nThe 93/78 split is the honest picture: extraordinary at the parts, not yet trustworthy end to end without a human checking the chain."
+  },
+  {
+    "objectID": "slides-qmd/7_ai-for-research.html#the-payoff",
+    "href": "slides-qmd/7_ai-for-research.html#the-payoff",
+    "title": "7. AI for Research",
+    "section": "The Payoff",
+    "text": "The Payoff\n\nAI handles the search, the recall, and the first pass — finding the literature, remembering what you read, drafting the prose, refereeing the draft. You decide what matters and whether it is right."
   },
   {
     "objectID": "slides-qmd/7_ai-for-research.html#breakout",
@@ -914,6 +956,6 @@
     "href": "slides-qmd/7_ai-for-research.html#questions-to-discuss",
     "title": "7. AI for Research",
     "section": "Questions to Discuss",
-    "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nWhat would you need to see before you trusted an AI referee report?"
+    "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
   }
 ]

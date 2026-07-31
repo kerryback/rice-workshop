@@ -22,7 +22,28 @@ author: "Kerry Back<br>Rice Business"
 :::
 
 ::: {.explainer}
-Draft outline --- the two shapes below are where agents pay off: a *panel* that pressure-tests ideas, and an *assistant* that just gets things done.
+Two shapes where agents pay off: a *panel* that pressure-tests ideas and data, and an *assistant* that just gets recurring things done.
+:::
+
+## Not the Same as Day 6
+
+::: {.two-cards}
+::: {.card .card-light}
+[Day 6 --- Student Projects]{.card-title}
+
+- Agents students [build]{.accent} as the deliverable
+- The product is the point; the learning is the design and the verification
+:::
+::: {.card .card-dark}
+[Today --- Your Assistants]{.card-title}
+
+- Agents that [work for you]{.accent}, on your research and your tasks
+- The product is *your* output; the agent is the labor
+:::
+:::
+
+::: {.explainer}
+Same underlying idea --- an agent that decides and acts --- pointed two ways: something students make, versus something that makes your week lighter.
 :::
 
 ## A Research Team {.section-divider}
@@ -45,23 +66,45 @@ Draft outline --- the two shapes below are where agents pay off: a *panel* that 
 ::: {.card .card-teal}
 [Check it]{.card-title}
 
-- A replicator re-derives the result independently
+- A replicator re-derives the data build *and* the result, independently
 - Two paths to the same number, or a red flag
 :::
 :::
 
 ::: {.explainer}
-The `coauthor` skill orchestrates this. *[Placeholder: walk one round of propose --- attack --- verify.]{.accent}*
+The `coauthor` skill orchestrates this: you are the coordinator; a debate panel and tool-using subagents do the work in a local folder --- no repo, nothing published without you.
+:::
+
+## Why a Team Beats One Agent
+
+::: {.card .card-dark}
+A single agent that both proposes *and* checks its own work grades its own homework. Splitting the roles --- [propose, attack, verify, replicate]{.accent} --- is how you catch the beautiful-but-wrong result before it reaches a referee.
 :::
 
 ## Personal Assistants {.section-divider}
 
 ## An Agent That Carries the Work
 
-- Give it a goal, not a script; it plans the steps
+::: {.two-cards}
+::: {.card .card-blue}
+[Give it a goal, not a script]{.card-title}
+
+- You describe the outcome; it plans the steps
 - It uses tools --- files, code, the web --- to act
-- State persists, so today's work builds on yesterday's
-- *[Placeholder: a standing assistant for a recurring task]{.accent}*
+- State persists, so today builds on yesterday
+:::
+::: {.card .card-amber}
+[Good first jobs]{.card-title}
+
+- A weekly digest of new papers in your area
+- Reformat and check a dataset on arrival
+- Turn meeting notes into tracked action items
+:::
+:::
+
+::: {.explainer}
+The recurring, rule-ish tasks that eat an hour a week are the sweet spot --- worth automating, low cost if a run is imperfect.
+:::
 
 ## What Makes It an Agent
 
@@ -71,19 +114,25 @@ The `coauthor` skill orchestrates this. *[Placeholder: walk one round of propose
 
 - It decides *what to do next*, then does it
 - It checks its own output and retries
+- It stops and asks when it is stuck
 :::
 ::: {.card .card-amber}
 [Kept in bounds]{.card-title}
 
 - You choose which tools it may use
 - You review before anything irreversible
+- Give it the reach the task needs --- and no more
 :::
+:::
+
+::: {.explainer}
+The skill you are building is not prompting --- it is describing the goal well and judging the result. Delegation, not dictation.
 :::
 
 ## Why This Belongs at the End {.centered-statement}
 
 ::: {.card .card-dark}
-Everything so far was you [directing a tool.]{.accent} An agent is you [delegating a task]{.accent} --- which means the new skills are describing the goal well and judging the result.
+Everything until now was you [directing a tool.]{.accent} An agent is you [delegating a task]{.accent} --- a research team that pressure-tests your work, or an assistant that clears the recurring load. The new skill is knowing what to hand off, and how to check what comes back.
 :::
 
 ## Breakout {.section-divider}
@@ -91,6 +140,6 @@ Everything so far was you [directing a tool.]{.accent} An agent is you [delegati
 ## Questions to Discuss
 
 - What recurring task would you hand to a standing assistant first?
-- For a research question in your field, what roles would your ideal agent team have?
+- For a question in your field, what roles would your ideal agent team have?
 - What tools would you *withhold* from an agent working on real data?
 - Where is the line between useful delegation and losing track of what was done?

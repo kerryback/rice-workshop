@@ -24,10 +24,37 @@ author: "Kerry Back<br>Rice Business"
 :::
 
 ::: {.explainer}
-This session is the research and teaching stack --- Python, R, Stata, LaTeX, Quarto, Git, GitHub --- and the single idea that Claude Code can stand all of it up for you.
+This session is the research and teaching stack --- Python, R, Stata, LaTeX, Quarto, Git, GitHub --- and the single idea that one download can stand all of it up for you.
 :::
 
-## VS Code: The Hub {.section-divider}
+## Academic Studio {.section-divider}
+
+## One Download, Set Up for You
+
+::: {.two-cards}
+::: {.card .card-teal}
+[What it is]{.card-title}
+
+- A free, open-source desktop editor built for academics
+- A customized build of [VS Codium]{.accent} --- the open-source core of VS Code, preconfigured
+- Same editor, extensions, and workflow --- with the academic toolchain already assembled
+- One download from [academic-studio.com]{.shell-cmd}, for macOS and Windows
+:::
+::: {.card .card-blue}
+[What comes bundled]{.card-title}
+
+- [Claude Code]{.accent} in a side panel, Quarto, Jupyter notebooks
+- Python and R support, LaTeX (LaTeX Workshop), an Office/PDF viewer, spell-check
+- A [Run Setup]{.accent} wizard installs the supporting programs --- Python, Node.js, Quarto, R, TinyTeX, Git, GitHub CLI
+- A catalog of Recommended Plugins (Claude skills) to add
+:::
+:::
+
+::: {.explainer}
+This is the fix for the setup tax. Instead of a checklist of installs --- editor, extensions, languages, LaTeX, Git --- you download one program and let its Run Setup wizard put the rest in place.
+:::
+
+## Academic Studio Is VS Code, Preconfigured {.section-divider}
 
 ## One Editor for Everything
 
@@ -35,9 +62,9 @@ This session is the research and teaching stack --- Python, R, Stata, LaTeX, Qua
 ::: {.card .card-blue}
 [What it is]{.card-title}
 
-- A free editor that handles every language you use
+- VS Code under the hood --- one editor for every language you use
 - Python, R, Stata, LaTeX, Markdown, Quarto --- all in one window
-- Extensions add support for each; Claude installs the ones you need
+- The extensions for each come preinstalled; Claude adds any others you need
 :::
 ::: {.card .card-amber}
 [Why it is the hub]{.card-title}
@@ -49,7 +76,7 @@ This session is the research and teaching stack --- Python, R, Stata, LaTeX, Qua
 :::
 
 ::: {.explainer}
-Pick one home for your work. VS Code plus Claude is that home --- everything below plugs into it.
+Pick one home for your work. Academic Studio is that home --- everything below happens inside it.
 :::
 
 ## Notebooks, Right in the Editor
@@ -57,7 +84,7 @@ Pick one home for your work. VS Code plus Claude is that home --- everything bel
 ![](images/jupyter-notebook.png){width=80% fig-align="center"}
 
 ::: {.explainer}
-A Jupyter notebook interleaves code, output, and prose --- ideal for analysis you want to narrate. VS Code runs them natively, and Claude can build, run, and explain each cell.
+A Jupyter notebook interleaves code, output, and prose --- ideal for analysis you want to narrate. Academic Studio runs them natively, and Claude can build, run, and explain each cell.
 :::
 
 ## Languages {.section-divider}
@@ -205,17 +232,27 @@ The reason you can let AI edit your project freely is that Git remembers every s
 For solo research, GitHub is mainly backup plus a launch pad. For teaching, it is free hosting for anything you want students to reach.
 :::
 
-## The One-Line Setup
+## The One-Download Setup
 
-::: {.code-box}
-::: {.box-title}
-What you tell Claude Code
+::: {.two-cards}
+::: {.card .card-teal}
+[The easy path]{.card-title}
+
+- Download Academic Studio and open it once
+- Click [Run Setup]{.accent} --- it installs Python, Node, Quarto, R, TinyTeX, Git, and the GitHub CLI
+- Add Recommended Plugins from the catalog, and you are ready to work
 :::
-Set up a research project in this folder. Install Python with pandas, numpy, statsmodels, and matplotlib; set up R; install Quarto and LaTeX. Create a project structure with folders for data, code, and output. Initialize Git and push it to a new private GitHub repo.
+::: {.card .card-blue}
+[Or just ask Claude]{.card-title}
+
+- Already inside, Claude Code can stand up a project from one paragraph:
+- "Set up a research project here: Python with pandas, numpy, statsmodels, matplotlib; R; Quarto and LaTeX. Make folders for data, code, and output. Initialize Git and push to a new private GitHub repo."
+- It installs each piece, verifies it, and hands back a working, version-controlled project
+:::
 :::
 
 ::: {.explainer}
-One paragraph. Claude installs each piece, verifies it, creates the structure, and hands you a working, version-controlled project --- the setup tax, paid once, by the machine.
+One download, or one paragraph. Either way the setup tax is paid once, by the machine --- not by you, by hand.
 :::
 
 ## The Point {.centered-statement}

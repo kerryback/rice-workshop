@@ -158,7 +158,7 @@ Kerry Back<br>Rice Business
 <ul>
 <li>The three modes: <span class="accent">Chat, Cowork, Code</span></li>
 <li>Claude Code in the terminal and in VS Code</li>
-<li>Claude for Excel, skills, connectors, and plugins</li>
+<li>Claude for Excel, and choosing a model</li>
 </ul>
 </div>
 </div>
@@ -325,116 +325,24 @@ Kerry Back<br>Rice Business
 <p>The Claude add-in puts a chat panel directly inside Excel. You describe what you want — formulas, tables, charts, an amortization schedule — and Claude builds it in the active sheet. No Python, no terminal. Install it from the Microsoft Office Add-ins store.</p>
 </div>
 </section>
-<section id="skills" class="slide level2 section-divider center">
-<h2>Skills</h2>
-</section>
-<section id="reusable-one-command-workflows" class="slide level2 center">
-<h2>Reusable, One-Command Workflows</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">What a skill is</span></p>
-<ul>
-<li>A saved procedure Claude follows for a specific kind of task</li>
-<li>A folder with a <code>SKILL.md</code> file — plain instructions, optional scripts</li>
-<li>Write “how to do X well” once; every future run follows it</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">Built in and shareable</span></p>
-<ul>
-<li>Anthropic ships skills for Excel, Word, PowerPoint, and PDF</li>
-<li>You can add your own or install others’</li>
-<li>Same skill works in Claude.ai, Claude Code, and the add-ins</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>A skill is codified expertise, not a smarter model — the subject of a whole session later. Here, just know the three ways they fire.</p>
-</div>
-</section>
-<section id="three-ways-a-skill-fires" class="slide level2 center">
-<h2>Three Ways a Skill Fires</h2>
+<section id="coming-day-3-make-it-yours" class="slide level2 center">
+<h2>Coming Day 3: Make It Yours</h2>
 <div class="three-cards">
-<div class="card card-dark">
-<p><span class="card-title">Slash command</span></p>
-<p>You type <span class="shell-cmd">/critique</span> or <span class="shell-cmd">/pptx</span> to invoke it directly</p>
-</div>
-<div class="card card-light">
-<p><span class="card-title">Natural language</span></p>
-<p>You ask in plain English and Claude runs the matching skill</p>
-</div>
-<div class="card card-dark">
-<p><span class="card-title">Automatic</span></p>
-<p>“Create an Excel file” triggers the Excel skill on its own — Claude reads each skill’s description and picks</p>
-</div>
-</div>
-<div class="explainer">
-<p>Because each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them — without you naming them.</p>
-</div>
-</section>
-<section id="connectors" class="slide level2 section-divider center">
-<h2>Connectors</h2>
-</section>
-<section id="plugging-claude-into-your-systems" class="slide level2 center">
-<h2>Plugging Claude Into Your Systems</h2>
-<div class="two-cards">
 <div class="card card-blue">
-<p><span class="card-title">MCP: the universal plug</span></p>
-<ul>
-<li>A <span class="accent">connector</span> links Claude to an outside service — a database, your email, a document store</li>
-<li>The standard is MCP, the Model Context Protocol</li>
-<li>MCP is to AI what USB is to devices: one way to plug anything in</li>
-</ul>
+<p><span class="card-title">Skills</span></p>
+<p>Teach Claude your procedures once — it follows them the same way every time</p>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">What it enables</span></p>
-<ul>
-<li>“Ask our sales database in plain English”</li>
-<li>“Check my calendar and draft the replies”</li>
-<li>Add from a directory of ready-made connectors, or point it at your own</li>
-</ul>
+<p><span class="card-title">Connectors</span></p>
+<p>Plug Claude into your data and systems, safely — the MCP standard</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">Plugins</span></p>
+<p>Bundle skills and connectors into one package to share with a team</p>
 </div>
 </div>
 <div class="explainer">
-<p>Connectors are how AI stops being a general assistant and starts knowing <em>your</em> data — safely and centrally, rather than through copy-paste.</p>
-</div>
-</section>
-<section id="adding-a-connector" class="slide level2 center">
-<h2>Adding a Connector</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/connectors-add-custom.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-<div class="explainer">
-<p>A connector needs a name and an address; sensitive ones authenticate the way any app does — an API key, or a corporate single sign-on. Once added, its tools are available in every chat.</p>
-</div>
-</section>
-<section id="plugins" class="slide level2 section-divider center">
-<h2>Plugins</h2>
-</section>
-<section id="bundling-it-all-to-share" class="slide level2 center">
-<h2>Bundling It All to Share</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">What a plugin is</span></p>
-<ul>
-<li>A single installable package that can bundle several pieces at once</li>
-<li>The way a team distributes a shared setup — everyone installs one thing</li>
-<li><span class="shell-cmd">/plugin install</span> and you have the whole kit</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">What it can contain</span></p>
-<ul>
-<li>Skills, custom agents, connectors (MCP servers)</li>
-<li>Hooks and output styles that shape behavior</li>
-<li>Skills are for <em>you</em>; plugins are for a <em>team</em></li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>For your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command.</p>
+<p>You have seen <em>where</em> Claude runs and <em>how</em> to reach it. Skills, connectors, and plugins are how you customize it to your work — they get their own session on Day 3.</p>
 </div>
 </section>
 <section id="choosing-a-model" class="slide level2 center">
@@ -479,7 +387,7 @@ Kerry Back<br>Rice Business
 <section id="the-map" class="slide level2 centered-statement center">
 <h2>The Map</h2>
 <div class="card card-dark">
-<p>One Claude, reached through many doors: <span class="accent">Chat, Cowork, Code</span> for how much of your machine it touches; the terminal and <span class="accent">VS Code</span> for real work; <span class="accent">Excel</span> for spreadsheets; and <span class="accent">skills, connectors, and plugins</span> to give it your procedures and your data.</p>
+<p>One Claude, reached through many doors: <span class="accent">Chat, Cowork, Code</span> for how much of your machine it touches; the terminal and <span class="accent">VS Code</span> for real work; and <span class="accent">Excel</span> for spreadsheets. Day 3 adds <span class="accent">skills, connectors, and plugins</span> — your procedures and your data.</p>
 </div>
 </section>
 <section id="breakout" class="slide level2 section-divider center">
@@ -489,9 +397,9 @@ Kerry Back<br>Rice Business
 <h2>Questions to Discuss</h2>
 <ul>
 <li>For your own work, which mode fits best — the sandboxed Chat, the folder-bounded Cowork, or the full-access Code?</li>
-<li>What system at Rice would you most want a connector to — so you could just <em>ask</em> it questions?</li>
-<li>What is a repeatable task in your work that would make a good first skill?</li>
 <li>Where does the extra reach of Code mode make you cautious — and what would make you comfortable?</li>
+<li>What is the first thing you would ask the Claude panel inside Excel to build?</li>
+<li>When would you switch from Sonnet to Opus — and how would you know it was worth the quota?</li>
 </ul>
 
 

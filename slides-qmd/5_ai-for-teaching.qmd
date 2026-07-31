@@ -18,9 +18,9 @@ Decks built from an outline, a paper, or a set of notes --- and restyled in one 
 A fictional company, the numbers, the exhibits, and the teaching note --- generated together
 :::
 ::: {.card .card-teal}
-[RAG chatbots]{.card-title}
+[Grounded chatbots]{.card-title}
 
-A tutor grounded in your own course materials, answering with citations
+A tutor grounded in your own materials --- from a no-build NotebookLM to a custom RAG bot, answering with citations
 :::
 ::: {.card .card-purple}
 [Voiceovers]{.card-title}
@@ -258,6 +258,54 @@ The Harvard course bots --- ChatLTV on 200 documents, an accounting tutor on a w
 
 ::: {.explainer}
 For a manageable pile of documents, these are an instant grounded tutor. Build your own only when you need to search thousands of documents, embed it in an app, or control the pipeline.
+:::
+
+## NotebookLM {.section-divider}
+
+## Upload Your Sources, Get an Assistant
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Grounded in what you upload]{.card-title}
+
+- Drop in your own sources --- PDFs, slides, Google Docs, web links, even YouTube videos
+- The assistant answers from *those* sources and [cites]{.accent} them
+- Stays on your content instead of the open web --- far less prone to making things up
+:::
+::: {.card .card-amber}
+[Study aids on demand]{.card-title}
+
+- Auto-generates a study guide, an FAQ, a briefing doc, a timeline
+- All drawn from the material you gave it
+- Free, with a Google account --- no code, no setup
+:::
+:::
+
+::: {.explainer}
+Google's NotebookLM is the no-build way to hand students a course-grounded assistant: upload the readings and share. No pipeline to build, nothing to embed.
+:::
+
+## The Audio Overview
+
+::: {.two-cards}
+::: {.card .card-blue}
+[A podcast of your material]{.card-title}
+
+- Its signature feature: a two-host [Audio Overview]{.accent}
+- Two AI voices discuss your sources in a surprisingly natural conversation
+- Students can listen to a lecture's readings as a discussion
+:::
+::: {.card .card-amber}
+[The no-build teaching assistant]{.card-title}
+
+- Upload and share --- no engineering, no setup
+- The zero-code option; a built RAG bot is the customizable one
+- Great when you want course-grounded chat and audio, fast
+:::
+:::
+
+::: {.explainer}
+Where a RAG bot you build gives you control of the pipeline, NotebookLM gives you a grounded tutor and a listenable audio overview in minutes --- two ends of the same idea.
 :::
 
 ## Voiceovers & Tutorbots {.section-divider}
