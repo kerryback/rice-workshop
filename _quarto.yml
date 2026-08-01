@@ -9,6 +9,7 @@ project:
     - CNAME
     - announcement.pdf
     - pdf/*.pdf
+    - under-construction.html
 
 website:
   title: ""
