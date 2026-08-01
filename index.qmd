@@ -24,7 +24,10 @@ page-layout: full
 .flyer .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 20px 0 10px; }
 .flyer .section-head .label, .flyer .section-head .dates { font-size: 14px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
 .flyer .item { display: flex; gap: 16px; align-items: flex-start; padding: 8px 0; }
-.flyer .chip { flex: 0 0 140px; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 7px 0; border-radius: 6px; }
+/* Each chip links to that session's PDF deck. */
+.flyer .chip { flex: 0 0 140px; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 7px 0; border-radius: 6px; text-decoration: none; display: block; transition: background 0.15s; }
+.flyer a.chip:hover, .flyer a.chip:focus { background: #003087; color: #fff; text-decoration: none; }
+.flyer a.chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .flyer .chip .chip-time { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: 0.5px; opacity: 0.85; margin-top: 2px; }
 .flyer .item-title { font-size: 19px; font-weight: 700; color: var(--navy); }
 .flyer .item-desc { font-size: 15.5px; color: var(--gray); line-height: 1.4; margin-top: 2px; }
@@ -50,15 +53,15 @@ page-layout: full
     <div class="subline">led by <b>Kerry Back</b></div>
     <div class="rule"></div>
     <div class="section-head"><span class="label">Week 1</span><span class="dates">August 10&ndash;14</span></div>
-    <div class="item"><div class="chip">AUG 10<span class="chip-time">3:00&ndash;4:00 PM</span></div><div><div class="item-title">Intro to Claude</div><div class="item-desc">Claude Desktop (Chat, Cowork, Code), Claude plugin for Excel</div></div></div>
-    <div class="item"><div class="chip">AUG 11<span class="chip-time">3:00&ndash;4:00 PM</span></div><div><div class="item-title">Claude Tools</div><div class="item-desc">code execution, command line, web search and fetch, and browser use</div></div></div>
-    <div class="item"><div class="chip">AUG 12<span class="chip-time">3:00&ndash;4:00 PM</span></div><div><div class="item-title">Skills, Connectors, and Plugins</div><div class="item-desc">customizing Claude and adding capabilities</div></div></div>
-    <div class="item"><div class="chip">AUG 13<span class="chip-time">3:00&ndash;4:00 PM</span></div><div><div class="item-title">Research and Teaching Setup</div><div class="item-desc">Academic Studio, Python, R, LaTeX, Quarto, Git, GitHub</div></div></div>
-    <div class="item"><div class="chip">AUG 14<span class="chip-time">3:00&ndash;4:00 PM</span></div><div><div class="item-title">AI for Teaching</div><div class="item-desc">NotebookLM, RAG chatbots, slide voice-overs</div></div></div>
+    <div class="item"><a class="chip" href="pdf/1_intro-to-claude.pdf" title="PDF slides">AUG 10<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Intro to Claude</div><div class="item-desc">Claude Desktop (Chat, Cowork, Code), Claude plugin for Excel</div></div></div>
+    <div class="item"><a class="chip" href="pdf/2_claude-tools.pdf" title="PDF slides">AUG 11<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Claude Tools</div><div class="item-desc">code execution, command line, web search and fetch, and browser use</div></div></div>
+    <div class="item"><a class="chip" href="pdf/3_skills-connectors-plugins.pdf" title="PDF slides">AUG 12<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Skills, Connectors, and Plugins</div><div class="item-desc">customizing Claude and adding capabilities</div></div></div>
+    <div class="item"><a class="chip" href="pdf/4_research-teaching-setup.pdf" title="PDF slides">AUG 13<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Research and Teaching Setup</div><div class="item-desc">Academic Studio, Python, R, LaTeX, Quarto, Git, GitHub</div></div></div>
+    <div class="item"><a class="chip" href="pdf/5_ai-for-teaching.pdf" title="PDF slides">AUG 14<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">AI for Teaching</div><div class="item-desc">NotebookLM, RAG chatbots, slide voice-overs</div></div></div>
     <div class="section-head"><span class="label">Week 2</span><span class="dates">August 17&ndash;19</span></div>
-    <div class="item"><div class="chip">AUG 17<span class="chip-time">3:00&ndash;4:00 PM</span></div><div><div class="item-title">Student Projects</div><div class="item-desc">artifacts, apps, agents</div></div></div>
-    <div class="item"><div class="chip">AUG 19<span class="chip-time">3:00&ndash;4:00 PM</span></div><div><div class="item-title">AI for Research</div><div class="item-desc">literature search, knowledge databases, writing, and reviews</div></div></div>
-    <div class="item"><div class="chip">AUG 19<span class="chip-time">4:00&ndash;5:00 PM</span></div><div><div class="item-title">Agent Assistants</div><div class="item-desc">research team, personal assistants</div></div></div>
+    <div class="item"><a class="chip" href="pdf/6_student-projects.pdf" title="PDF slides">AUG 17<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Student Projects</div><div class="item-desc">artifacts, apps, agents</div></div></div>
+    <div class="item"><a class="chip" href="pdf/7_ai-for-research.pdf" title="PDF slides">AUG 19<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">AI for Research</div><div class="item-desc">literature search, knowledge databases, writing, and reviews</div></div></div>
+    <div class="item"><a class="chip" href="pdf/8_agent-assistants.pdf" title="PDF slides">AUG 19<span class="chip-time">4:00&ndash;5:00 PM</span></a><div><div class="item-title">Agent Assistants</div><div class="item-desc">research team, personal assistants</div></div></div>
     <div class="sheet-foot">
       <a class="url" href="https://rice-workshop.kerryback.com">rice-workshop.kerryback.com</a>
       <a class="zoom" href="https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1">Join on Zoom &rarr;</a>
