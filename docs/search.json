@@ -700,11 +700,11 @@
     "text": "Re-Use Tested Code\nOnce code runs correctly, save it. Re-use it rather than rewrite it.\n\n\nThe Problem with Rewriting\n\n\nDifferent choices each time\nScripts that should agree may not\nOld bugs reappear"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#practice",
-    "href": "slides/1_intro-to-claude.html#practice",
+    "objectID": "slides/1_intro-to-claude.html#example-data-wrangling-charts-documents",
+    "href": "slides/1_intro-to-claude.html#example-data-wrangling-charts-documents",
     "title": "1. Intro to Claude",
-    "section": "Practice",
-    "text": "Practice"
+    "section": "Example: Data Wrangling, Charts, Documents",
+    "text": "Example: Data Wrangling, Charts, Documents"
   },
   {
     "objectID": "slides/1_intro-to-claude.html#some-local-data",
@@ -714,25 +714,32 @@
     "text": "Some Local Data\nExtract the following from session1.zip into your project folder or just put session1.zip there and tell Claude to extract.\n\n\n\n\nFile\nRows\nKey Columns\n\n\n\n\nnorthwind_customers.xlsx\n93\nCustomerID, CompanyName, Country\n\n\nnorthwind_orders.xlsx\n500\nOrderID, CustomerID, OrderDate\n\n\nnorthwind_orderdetails.xlsx\n18,976\nOrderID, ProductID, UnitPrice, Quantity\n\n\nnorthwind_products.xlsx\n77\nProductID, ProductName, CategoryID\n\n\nnorthwind_categories.xlsx\n8\nCategoryID, CategoryName"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#example-merge-filter-aggregate-chart-analyze-save",
-    "href": "slides/1_intro-to-claude.html#example-merge-filter-aggregate-chart-analyze-save",
+    "objectID": "slides/1_intro-to-claude.html#merge-filter-aggregate-chart-analyze-create",
+    "href": "slides/1_intro-to-claude.html#merge-filter-aggregate-chart-analyze-create",
     "title": "1. Intro to Claude",
-    "section": "Example: Merge, Filter, Aggregate, Chart, Analyze, Save",
-    "text": "Example: Merge, Filter, Aggregate, Chart, Analyze, Save\n\n\nCopy this prompt into Claude:\n\nI have five Northwind files in my project folder: customers, orders, order details, products, and categories. Which product categories generated the most revenue from customers in Germany and France? Show only categories above $10,000, sort highest to lowest, create a bar chart, and put it in a PowerPoint deck. Add some discussion.\n\n\nHere we put a lot into one prompt. More commonly, we would ask it to take first steps, then do something else, then do something else, … Either works fine."
+    "section": "Merge, Filter, Aggregate, Chart, Analyze, Create",
+    "text": "Merge, Filter, Aggregate, Chart, Analyze, Create\n\n\nCopy this prompt into Claude:\n\nI have five Northwind files in my project folder: customers, orders, order details, products, and categories. Which product categories generated the most revenue from customers in Germany and France? Show only categories above $10,000, sort highest to lowest, create a bar chart, and put it in a PowerPoint deck. Add some discussion."
+  },
+  {
+    "objectID": "slides/1_intro-to-claude.html#takeaway",
+    "href": "slides/1_intro-to-claude.html#takeaway",
+    "title": "1. Intro to Claude",
+    "section": "Takeaway",
+    "text": "Takeaway\n\nThere is no secret to prompting. Just chat (a lot). Treat AI as an infinitely patient colleague with a poor memory. Code execution gives AI enormous power."
   },
   {
     "objectID": "slides/1_intro-to-claude.html#homework",
     "href": "slides/1_intro-to-claude.html#homework",
     "title": "1. Intro to Claude",
     "section": "Homework",
-    "text": "Homework\n\nWatch the three-minute video academic_studio.mp4"
+    "text": "Homework\n\nWatch the three-minute video academic_studio.mp4\n\n\nWatch the three-minute video academic_studio.mp4"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Claude for Teaching & Research",
     "section": "",
-    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        Intro to Claude\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, artifacts, skills as tutors \n      \n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Student Projects\n        Artifacts, apps, agents\n      \n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
+    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        Intro to Claude\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, artifacts, skills as tutors \n      \n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Student Projects\n        Artifacts, apps, agents\n      \n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
   },
   {
     "objectID": "slides/2_working.html#todays-session",
@@ -753,35 +760,35 @@
     "href": "slides/2_working.html#where-academic-studio-fits",
     "title": "2. Working with Claude",
     "section": "Where Academic Studio Fits",
-    "text": "Where Academic Studio Fits\n\n\n\nOriginal Claude Code was CLI (command line interface)\nMillions of developers use Claude Code extension for VS Code\nVS Code = integrated development environment (IDE) from Microsoft\n\n\n\nAcademic Studio = VS Copde, except\n\nRemoved menus and toolbar items aimed at developers\nClaude Code opens on startup\nOther extensions pre-installed\nNew Claude menu and revised Help menu"
+    "text": "Where Academic Studio Fits\n\n\n\nOriginal Claude Code was CLI (command line interface)\nMillions of developers use Claude Code extension for VS Code\nVS Code = integrated development environment (IDE) from Microsoft\n\n\n\nAcademic Studio = VS Code, except\n\nRemoved menus and toolbar items aimed at developers\nClaude Code opens on startup\nOther extensions pre-installed\nNew Claude menu and revised Help menu"
   },
   {
     "objectID": "slides/2_working.html#file-explorer-and-search",
     "href": "slides/2_working.html#file-explorer-and-search",
     "title": "2. Working with Claude",
     "section": "File Explorer and Search",
-    "text": "File Explorer and Search\nReach the File Explorer tool from the left toolbar.\n\n\nFiles\n\nRight-click to rename, copy, …\nDouble-click to open in Academic Studio viewer\nViewer provides different options for different file types (cannot edit Office docs)\n\n\n\nSearch\n\nThe magnifying glass searches inside every file in the folder at once\nOptions for case, whole word, and regular expressions\nReplace across all files from the same pane"
+    "text": "File Explorer and Search\nReach the File Explorer tool from the left toolbar.\n\n\nFiles\n\nRight-click to rename, copy, …\nDouble-click to open in Academic Studio viewer\nViewer provides different options for different file types (cannot edit Office docs)\n\n\n\n\n\n\n\n\nSearch\n\nThe magnifying glass searches inside every file in the folder at once\nOptions for case, whole word, and regular expressions\nReplace across all files from the same pane"
   },
   {
     "objectID": "slides/2_working.html#getting-around",
     "href": "slides/2_working.html#getting-around",
     "title": "2. Working with Claude",
     "section": "Getting Around",
-    "text": "Getting Around\n\n\nConversations\n\nOpen a second Claude conversation for a separate task\nEach keeps its own context; they do not see each other\n\n\n\nTerminal\n\nOpen from the Terminal menu, X to close\nClaude uses it too — you will see commands run as it works\n\n\n\nRemote SSH\n\nConnect to jgsrc1 or a different remote server\nFiles and code execution on remote server. Academic Studio runs on your computer.\n\n\n\n\nExtensions\nVS Codium marketplace (all are free)"
+    "text": "Getting Around\n\n\nConversations\n\nOpen a second Claude conversation for a separate task\nEach keeps its own context; they do not see each other\n\n\n\nTerminal\n\nOpen from the Terminal menu, X to close\nClaude uses it too — you will see commands run as it works\n\n\n\n\n\n\n\n\nRemote SSH\n\nConnect to jgsrc1 or a different remote server\nFiles and code execution on remote server. Academic Studio runs on your computer.\n\n\n\n\nExtensions\nVS Codium marketplace (all are free)"
   },
   {
-    "objectID": "slides/2_working.html#menus",
-    "href": "slides/2_working.html#menus",
+    "objectID": "slides/2_working.html#permissions",
+    "href": "slides/2_working.html#permissions",
     "title": "2. Working with Claude",
-    "section": "Menus",
-    "text": "Menus\n\nFile/New Window opens a new Academic Studio session. Work on multiple projects at once.\nClaude/Permissions\nClaude/Conversations\nHelp/Run Setup"
+    "section": "Permissions",
+    "text": "Permissions"
   },
   {
     "objectID": "slides/2_working.html#some-claude-commands",
     "href": "slides/2_working.html#some-claude-commands",
     "title": "2. Working with Claude",
     "section": "Some Claude Commands",
-    "text": "Some Claude Commands\n\n/resume - a version of Claude/Conversations\n/model - select from Fable, Opus (default), Sonnet, and Haiku\n/clear - clear the context window (= new conversation)\n/compact - summarize the conversation in a text file, launch a new conversation that reads the text file\nEsc - escape key interrupts Claude, which then waits for new instructions"
+    "text": "Some Claude Commands\n\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\n/resume\na version of Claude/Conversations\n\n\n/model\nselect from Fable, Opus (default), Sonnet, and Haiku\n\n\n/clear\nclear the context window (= new conversation)\n\n\n/compact\nsummarize the conversation in a text file, launch a new conversation that reads the text file\n\n\nEsc\nescape key interrupts Claude, which then waits for new instructions"
   },
   {
     "objectID": "slides/2_working.html#fit-with-vs-code",
@@ -844,21 +851,21 @@
     "href": "slides/2_working.html#claude.md",
     "title": "2. Working with Claude",
     "section": "CLAUDE.md",
-    "text": "CLAUDE.md\n\n\n\nAt the start of each conversation, Claude looks in specific places for CLAUDE.md files\nIt looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder\n\n\n\n\nA CLAUDE.md is a text file that contains instructions for Claude\nClaude reads the entire file, so use it sparingly\n\n\n\n\nYou could get the same behavior by pasting the instructions in the prompt window"
+    "text": "CLAUDE.md\n\n\nWhere Claude Looks\n\nAt the start of each conversation, Claude looks in specific places for CLAUDE.md files\nIt looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder\n\n\n\nWhat It Is\n\nA CLAUDE.md is a text file that contains instructions for Claude\nClaude reads the entire file, so use it sparingly\n\n\n\n\nYou could get the same behavior by pasting the instructions in the prompt window"
   },
   {
     "objectID": "slides/2_working.html#skills",
     "href": "slides/2_working.html#skills",
     "title": "2. Working with Claude",
     "section": "Skills",
-    "text": "Skills\n\n\nAt the start of each conversation, Claude also looks in specific places for SKILL.md files\n\n\nIt looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder\n\n\nSkills are text files saved on your hard drive. Claude reads the top of each SKILL.md file (the skill description) on startup, and it reads the bulk of the file only when needed"
+    "text": "Skills\n\n\nAt Startup\nAt the start of each conversation, Claude also looks in specific places for SKILL.md files\n\n\nTwo Locations\nIt looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder\n\n\nLoaded on Demand\nSkills are text files saved on your hard drive. Claude reads the top of each SKILL.md file (the skill description) on startup, and it reads the bulk of the file only when needed"
   },
   {
     "objectID": "slides/2_working.html#installing-skills",
     "href": "slides/2_working.html#installing-skills",
     "title": "2. Working with Claude",
     "section": "Installing Skills",
-    "text": "Installing Skills\n\n\n\nThere are thousands of skills published on the internet.\n\nAnthropic publishes skills (xlsx, etc.) at https://github.com/anthropics/skills/\n\n\n\n\nTo search for skills, ask Claude. To install a skill you want, ask Claude.\nOther than a few of Anthropic’s skills, the most useful skills are generally those you create, because they are customized to your work."
+    "text": "Installing Skills\n\n\nWhere to Find Them\n\nThere are thousands of skills published on the internet.\nAnthropic publishes skills (xlsx, etc.) at https://github.com/anthropics/skills/\n\n\n\nAsk Claude\n\nTo search for skills, ask Claude. To install a skill you want, ask Claude.\nOther than a few of Anthropic’s skills, the most useful skills are generally those you create, because they are customized to your work."
   },
   {
     "objectID": "slides/2_working.html#some-examples",
@@ -872,7 +879,7 @@
     "href": "slides/2_working.html#creating-skills",
     "title": "2. Working with Claude",
     "section": "Creating Skills",
-    "text": "Creating Skills\n\n\nUsual process is you work on something, iterating until you get what you want.\n\n\nYou realize you may want the same thing again, and you don’t want to go through the iteration again.\n\n\nSolution: tell Claude to save the satisfactory method (recipe) as a skill. Can save your result along with the skill as an example to follow if useful."
+    "text": "Creating Skills\n\n\n\n1\n\n\nIterate\n\n\nUsual process is you work on something, iterating until you get what you want.\n\n\n\n\n2\n\n\nRecognize\n\n\nYou realize you may want the same thing again, and you don’t want to go through the iteration again.\n\n\n\n\n3\n\n\nSave the Recipe\n\n\nSolution: tell Claude to save the satisfactory method (recipe) as a skill. Can save your result along with the skill as an example to follow if useful."
   },
   {
     "objectID": "slides/2_working.html#invoking-skills",
@@ -886,7 +893,7 @@
     "href": "slides/2_working.html#example-create-and-invoke",
     "title": "2. Working with Claude",
     "section": "Example: Create and Invoke",
-    "text": "Example: Create and Invoke\n\n\nTell Claude to create a skill for your folder named “pirate” with this content: “Always answer like a pirate”\n\n\nStart a new conversation. Enter /pirate What is the meaning of life?\n\n\nAsk Claude to show you the pirate SKILL.md"
+    "text": "Example: Create and Invoke\n\n\n\n1\n\n\nCreate\n\n\nTell Claude to create a skill for your folder named “pirate” with this content: “Always answer like a pirate”\n\n\n\n\n2\n\n\nInvoke\n\n\nStart a new conversation. Enter /pirate What is the meaning of life?\n\n\n\n\n3\n\n\nInspect\n\n\nAsk Claude to show you the pirate SKILL.md"
   },
   {
     "objectID": "slides/2_working.html#claude-as-a-teaching-assistant",
@@ -910,32 +917,32 @@
     "text": "Drafting and Editing Slides\nClaude is generally able to create slide decks using whatever style you like. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft template\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx\n\n\nOnce it is successful, you can ask Claude to save the recipe as a skill to use thereafter.\n\nWhen editing an existing deck, you will want Claude to automatically save changes and close an open deck before editing. Then reopen for you to see (and edit) again."
   },
   {
-    "objectID": "slides/2_working.html#one-skill-to-rule-them-all",
-    "href": "slides/2_working.html#one-skill-to-rule-them-all",
+    "objectID": "slides/2_working.html#a-skill-to-create-deck-styles",
+    "href": "slides/2_working.html#a-skill-to-create-deck-styles",
     "title": "2. Working with Claude",
-    "section": "One Skill to Rule Them All",
-    "text": "One Skill to Rule Them All\nA designed .pptx is already a style kit. Its layouts carry the scenery, its theme carries the fonts and colors. So the faithful way to build a deck “in that style” is to instantiate the template’s own layouts and fill the placeholders — never to draw a shape or name a color.\n\n\nOne engine\nThe code that fills placeholders is generic. Nothing in it knows about any particular template.\n\n\nTemplates are data\nEach style is just a folder: the .pptx, plus written notes on what each of its layouts is for.\n\n\nSo it scales\nA new style is a registration, not a new skill. My house-decks skill holds all of them.\n\n\n\nWhat comes out is an ordinary .pptx — opens in PowerPoint, fully editable, fonts intact"
-  },
-  {
-    "objectID": "slides/2_working.html#what-you-say-to-it",
-    "href": "slides/2_working.html#what-you-say-to-it",
-    "title": "2. Working with Claude",
-    "section": "What You Say to It",
-    "text": "What You Say to It\n\n\nBuild a deck\nMake a deck on capital structure for Tuesday’s class.\nUses my default style and says which one it used, so a wrong guess is cheap to correct.\n\n\nRegister a style\nMake a house deck style from this deck and call it Jones.\nCopies the .pptx in and measures every placeholder — how much text each well actually holds.\n\n\nHand it to a colleague\nExport the Jones template as a skill.\nA self-contained folder they drop into their own skills directory. Nothing to install.\n\n\n\nYour own words become aliases — “my usual style”, “the course template” — so you never have to remember a registry name"
-  },
-  {
-    "objectID": "slides/2_working.html#what-it-does-without-being-asked",
-    "href": "slides/2_working.html#what-it-does-without-being-asked",
-    "title": "2. Working with Claude",
-    "section": "What It Does Without Being Asked",
-    "text": "What It Does Without Being Asked\nThe value of a skill is mostly the mistakes it has already made. Each of these cost a wasted afternoon once:\n\n\nCloses the deck in PowerPoint first — otherwise PowerPoint overwrites the new version from memory on its next save\nRefuses to write at all while the file is open, as a backstop\nDeletes placeholders you did not fill — an empty picture well renders as a grey box\nRestyles tables, because templates rarely define a table style and PowerPoint’s default blue banding shows through\nRenders the finished deck and looks at it before reporting success\n\n\n\nThis is what “save the recipe as a skill” is really for — not the recipe, the scar tissue"
+    "section": "A Skill to Create Deck Styles",
+    "text": "A Skill to Create Deck Styles\n\n\n\n1\n\n\nInstall\n\n\nAsk Claude to install the House Decks plugin from github.com/kerryback/skills\n\n\n\n\n2\n\n\nRegister a Style\n\n\nStart a new conversation. Ask Claude to apply it to a PowerPoint deck written in your preferred style. Give the style a name.\n\n\n\n\n3\n\n\nCreate a Deck\n\n\nAsk Claude to create a new deck in that style.\n\n\n\n\nThe PowerPoint deck contains elements that Claude will save and deploy again and fonts that it will try to match. So, “create a deck in this style” is something Claude should be able to do, using the python-pptx Python library."
   },
   {
     "objectID": "slides/2_working.html#a-good-use-of-claude.md-routing",
     "href": "slides/2_working.html#a-good-use-of-claude.md-routing",
     "title": "2. Working with Claude",
     "section": "A Good Use of CLAUDE.md: Routing",
-    "text": "A Good Use of CLAUDE.md: Routing\nSkills announce when they apply, and sometimes two of them claim the same job. Anthropic’s pptx skill triggers on any PowerPoint file, so a skill of your own for your house style will collide with it. A few lines in CLAUDE.md settle the precedence:\n\n## PowerPoint\n\n- A deck in our house style, or no style named: use &lt;house-style skill&gt;\n- \"In the style of this deck\" (some other file): use &lt;template-matching skill&gt;\n- Anything else involving .pptx (reading a deck, pulling text out of one,\n  designing one from scratch): use the pptx skill\n\n\nCLAUDE.md is the right home for this because it is yours. A bundled skill gets replaced when it is updated, so instructions written into one quietly disappear."
+    "text": "A Good Use of CLAUDE.md: Routing\n\nSkills announce when they apply, and sometimes two of them claim the same job. Anthropic’s pptx skill triggers on any PowerPoint file, so a skill of your own for your house style will collide with it.\n\n\nAsk Claude to assist in editing CLAUDE.md globally or in a project folder to settle the precedence."
+  },
+  {
+    "objectID": "slides/2_working.html#exercises",
+    "href": "slides/2_working.html#exercises",
+    "title": "2. Working with Claude",
+    "section": "Exercises",
+    "text": "Exercises\n\nTell Claude to install Git and to initialize your project folder as a Git repo and to commit. Make some changes, commit again, and ask about restoring the prior version.\nPick a deck you want to refresh. Ask Claude to read it and offer suggestions on content, organization, and style. Ask Claude to edit some slides and to draft some slides, saving changes in a new name."
+  },
+  {
+    "objectID": "slides/2_working.html#takeaway",
+    "href": "slides/2_working.html#takeaway",
+    "title": "2. Working with Claude",
+    "section": "Takeaway",
+    "text": "Takeaway\n\nClaude can work alongside you on whatever you’re working on. Get advice and suggestions. Hand over the tedious part of the work. Save good workflows as skills so they can be easily repeated."
   },
   {
     "objectID": "slides/4_research-teaching-setup.html#the-setup-tax",

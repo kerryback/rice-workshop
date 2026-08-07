@@ -484,7 +484,7 @@ The Problem with Rewriting
 - Old bugs reappear
 :::
 
-## Practice {.section-divider}
+## Example: Data Wrangling, Charts, Documents {.section-divider}
 
 ## Some Local Data
 
@@ -502,7 +502,7 @@ Extract the following from session1.zip into your project folder or just put ses
 
 :::
 
-## Example: Merge, Filter, Aggregate, Chart, Analyze, Save
+## Merge, Filter, Aggregate, Chart, Analyze, Create
 
 ::: {.code-box}
 ::: {.box-title}
@@ -511,11 +511,18 @@ Copy this prompt into Claude:
 I have five Northwind files in my project folder: customers, orders, order details, products, and categories. Which product categories generated the most revenue from customers in Germany and France? Show only categories above $10,000, sort highest to lowest, create a bar chart, and put it in a PowerPoint deck.  Add some discussion.
 :::
 
-::: {.explainer}
-Here we put a lot into one prompt.  More commonly, we would ask it to take first steps, then do something else, then do something else, ...  Either works fine.
+## Takeaway {.centered-statement}
+
+::: {.card .card-dark}
+There is no secret to prompting.  Just chat (a lot).  Treat AI as an infinitely patient colleague with a poor memory.  Code execution gives AI enormous power.  
 :::
 
+
 ## Homework {.centered-statement}
+
+::: {.card .card-dark}
+Watch the three-minute video [academic_studio.mp4](../files/session1/academic_studio.mp4)
+:::
 
 ::: {.card .card-dark}
 Watch the three-minute video [academic_studio.mp4](../files/session1/academic_studio.mp4)

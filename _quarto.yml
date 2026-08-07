@@ -17,6 +17,7 @@ project:
     - files/session1/*
     - files/session1.zip
     - files/session2/SamplePresentation.pptx
+    - files/session2.zip
     - under-construction.html
 
 website:

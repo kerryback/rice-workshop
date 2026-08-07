@@ -192,7 +192,7 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 </ul>
 </div>
 <div class="card-amber">
-<p>Academic Studio = VS Copde, except</p>
+<p>Academic Studio = VS Code, except</p>
 <ul>
 <li>Removed menus and toolbar items aimed at developers</li>
 <li>Claude Code opens on startup</li>
@@ -213,6 +213,11 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <li>Double-click to open in Academic Studio viewer</li>
 <li>Viewer provides different options for different file types (cannot edit Office docs)</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/as-explorer.png" class="quarto-figure quarto-figure-center" style="width:62.0%"></p>
+</figure>
+</div>
 </div>
 <div class="card-amber">
 <p><span class="card-title">Search</span></p>
@@ -221,6 +226,11 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <li>Options for case, whole word, and regular expressions</li>
 <li>Replace across all files from the same pane</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/as-search.png" class="quarto-figure quarto-figure-center" style="width:92.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -240,6 +250,11 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <li>Open from the Terminal menu, X to close</li>
 <li>Claude uses it too — you will see commands run as it works</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/as-terminal-menu.png" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+</figure>
+</div>
 </div>
 <div class="card-purple">
 <p><span class="card-title">Remote SSH</span></p>
@@ -254,24 +269,52 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <p>VS Codium marketplace (all are free)</p>
 </div>
 </section>
-<section id="menus" class="slide level2 center">
-<h2>Menus</h2>
-<ul>
-<li>File/New Window opens a new Academic Studio session. Work on multiple projects at once.</li>
-<li>Claude/Permissions</li>
-<li>Claude/Conversations</li>
-<li>Help/Run Setup</li>
-</ul>
+<section id="permissions" class="slide level2 center">
+<h2>Permissions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/as-permissions.png" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
+</figure>
+</div>
 </section>
 <section id="some-claude-commands" class="slide level2 center">
 <h2>Some Claude Commands</h2>
-<ul>
-<li><span class="accent">/resume</span> - a version of Claude/Conversations</li>
-<li><span class="accent">/model</span> - select from Fable, Opus (default), Sonnet, and Haiku</li>
-<li><span class="accent">/clear</span> - clear the context window (= new conversation)</li>
-<li><span class="accent">/compact</span> - summarize the conversation in a text file, launch a new conversation that reads the text file</li>
-<li><span class="accent">Esc</span> - escape key interrupts Claude, which then waits for new instructions</li>
-</ul>
+<div class="comparison-table">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="accent">/resume</span></td>
+<td>a version of Claude/Conversations</td>
+</tr>
+<tr class="even">
+<td><span class="accent">/model</span></td>
+<td>select from Fable, Opus (default), Sonnet, and Haiku</td>
+</tr>
+<tr class="odd">
+<td><span class="accent">/clear</span></td>
+<td>clear the context window (= new conversation)</td>
+</tr>
+<tr class="even">
+<td><span class="accent">/compact</span></td>
+<td>summarize the conversation in a text file, launch a new conversation that reads the text file</td>
+</tr>
+<tr class="odd">
+<td><span class="accent">Esc</span></td>
+<td>escape key interrupts Claude, which then waits for new instructions</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="fit-with-vs-code" class="slide level2 center">
 <h2>Fit with VS Code</h2>
@@ -295,16 +338,16 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <section id="what-claude-can-do-at-the-command-line" class="slide level2 center">
 <h2>What Claude Can Do at the Command Line</h2>
 <div class="three-cards">
-<div class="card-blue">
+<div class="card card-blue fragment">
 <p><span class="card-title">File operations</span></p>
 <p>Move, copy, rename, delete, search within.</p>
 <p><em>Find all files in my Documents folder that discuss … and move them to …</em></p>
 </div>
-<div class="card-amber">
+<div class="card card-amber fragment">
 <p><span class="card-title">Install and run software</span></p>
 <p><em>Run a python script, build a LaTeX doc, …</em></p>
 </div>
-<div class="card-teal">
+<div class="card card-teal fragment">
 <p><span class="card-title">Interact with external services</span></p>
 <p>Command Line Interfaces (CLIs): <code>gh</code> for GitHub, <code>aws</code> for Amazon Web Services, … Also, use APIs.</p>
 </div>
@@ -349,13 +392,15 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <section id="claude.md" class="slide level2 center">
 <h2>CLAUDE.md</h2>
 <div class="two-cards">
-<div class="card-blue">
+<div class="card card-teal">
+<p><span class="card-title">Where Claude Looks</span></p>
 <ul>
 <li>At the start of each conversation, Claude looks in specific places for CLAUDE.md files</li>
 <li>It looks in your home directory (C:\users\yourname on Windows) and it looks in the project folder</li>
 </ul>
 </div>
-<div class="card-amber">
+<div class="card card-purple">
+<p><span class="card-title">What It Is</span></p>
 <ul>
 <li>A CLAUDE.md is a text file that contains instructions for Claude</li>
 <li>Claude reads the entire file, so use it sparingly</li>
@@ -369,13 +414,16 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <section id="skills" class="slide level2 center">
 <h2>Skills</h2>
 <div class="three-cards">
-<div class="card-blue">
+<div class="card card-teal">
+<p><span class="card-title">At Startup</span></p>
 <p>At the start of each conversation, Claude also looks in specific places for SKILL.md files</p>
 </div>
-<div class="card-amber">
+<div class="card card-purple">
+<p><span class="card-title">Two Locations</span></p>
 <p>It looks in your home directory (C:\users\yourname on Windows) and it looks in the project folder</p>
 </div>
-<div class="card-teal">
+<div class="card card-dark">
+<p><span class="card-title">Loaded on Demand</span></p>
 <p>Skills are text files saved on your hard drive. Claude reads the top of each SKILL.md file (the skill description) on startup, and it reads the bulk of the file <span class="accent">only when needed</span></p>
 </div>
 </div>
@@ -383,14 +431,15 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <section id="installing-skills" class="slide level2 center">
 <h2>Installing Skills</h2>
 <div class="two-cards">
-<div class="card-blue">
+<div class="card card-teal">
+<p><span class="card-title">Where to Find Them</span></p>
 <ul>
-<li>There are thousands of skills published on the internet.<br>
-</li>
+<li>There are thousands of skills published on the internet.</li>
 <li>Anthropic publishes skills (xlsx, etc.) at <a href="https://github.com/anthropics/skills/">https://github.com/anthropics/skills/</a></li>
 </ul>
 </div>
-<div class="card-amber">
+<div class="card card-purple">
+<p><span class="card-title">Ask Claude</span></p>
 <ul>
 <li>To search for skills, ask Claude. To install a skill you want, ask Claude.</li>
 <li>Other than a few of Anthropic’s skills, the most useful skills are generally those you create, because they are customized to your work.</li>
@@ -411,22 +460,46 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 </section>
 <section id="creating-skills" class="slide level2 center">
 <h2>Creating Skills</h2>
-<div class="three-cards">
-<div class="card-blue">
+<div class="step-flow-3">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Iterate</p>
+</div>
+<div class="step-desc">
 <p>Usual process is you work on something, iterating until you get what you want.</p>
 </div>
-<div class="card-amber">
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Recognize</p>
+</div>
+<div class="step-desc">
 <p>You realize you may want the same thing again, and you don’t want to go through the iteration again.</p>
 </div>
-<div class="card-teal">
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Save the Recipe</p>
+</div>
+<div class="step-desc">
 <p>Solution: tell Claude to save the satisfactory method (recipe) as a skill. Can save your result along with the skill as an example to follow if useful.</p>
+</div>
 </div>
 </div>
 </section>
 <section id="invoking-skills" class="slide level2 center">
 <h2>Invoking Skills</h2>
 <div class="three-cards">
-<div class="card-blue">
+<div class="card card-blue fragment">
 <p><span class="card-title">Slash Command</span></p>
 <ul>
 <li>Type <code>/skillname</code> at the prompt</li>
@@ -434,14 +507,14 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <li>Invokes the skill directly</li>
 </ul>
 </div>
-<div class="card-amber">
+<div class="card card-amber fragment">
 <p><span class="card-title">Natural Language</span></p>
 <ul>
 <li>Describe what you need in plain English</li>
 <li>Example: “Use your planning mode and evaluate …”</li>
 </ul>
 </div>
-<div class="card-teal">
+<div class="card card-teal fragment">
 <p><span class="card-title">Automatic</span></p>
 <ul>
 <li>Claude may invoke a skill on its own</li>
@@ -453,15 +526,39 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 </section>
 <section id="example-create-and-invoke" class="slide level2 center">
 <h2>Example: Create and Invoke</h2>
-<div class="three-cards">
-<div class="card-blue">
+<div class="step-flow-3">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Create</p>
+</div>
+<div class="step-desc">
 <p>Tell Claude to create a skill for your folder named “pirate” with this content: “Always answer like a pirate”</p>
 </div>
-<div class="card-amber">
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Invoke</p>
+</div>
+<div class="step-desc">
 <p>Start a new conversation. Enter <span class="accent">/pirate What is the meaning of life?</span></p>
 </div>
-<div class="card-teal">
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Inspect</p>
+</div>
+<div class="step-desc">
 <p>Ask Claude to show you the pirate SKILL.md</p>
+</div>
 </div>
 </div>
 </section>
@@ -471,7 +568,7 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <section id="what-can-claude-do" class="slide level2 center">
 <h2>What can Claude Do?</h2>
 <div class="two-cards">
-<div class="highlight-box">
+<div class="card card-blue fragment">
 <ul>
 <li>Draft slides</li>
 <li>Assist with editing slides</li>
@@ -480,7 +577,7 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <li>Assist with grading</li>
 </ul>
 </div>
-<div class="highlight-box">
+<div class="card card-amber fragment">
 <ul>
 <li>Draft emails to students</li>
 <li>Help create async materials</li>
@@ -507,79 +604,67 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <p>When editing an existing deck, you will want Claude to automatically save changes and close an open deck before editing. Then reopen for you to see (and edit) again.</p>
 </div>
 </section>
-<section id="one-skill-to-rule-them-all" class="slide level2 shrink center">
-<h2>One Skill to Rule Them All</h2>
-<p>A designed .pptx is <span class="accent">already a style kit</span>. Its layouts carry the scenery, its theme carries the fonts and colors. So the faithful way to build a deck “in that style” is to instantiate the template’s own layouts and fill the placeholders — never to draw a shape or name a color.</p>
-<div class="three-cards">
-<div class="card-blue">
-<p><span class="card-title">One engine</span></p>
-<p>The code that fills placeholders is generic. Nothing in it knows about any particular template.</p>
+<section id="a-skill-to-create-deck-styles" class="slide level2 center">
+<h2>A Skill to Create Deck Styles</h2>
+<div class="step-flow-3">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
 </div>
-<div class="card-amber">
-<p><span class="card-title">Templates are data</span></p>
-<p>Each style is just a folder: the .pptx, plus written notes on what each of its layouts is for.</p>
+<div class="step-title">
+<p>Install</p>
 </div>
-<div class="card-teal">
-<p><span class="card-title">So it scales</span></p>
-<p>A new style is a <span class="accent">registration</span>, not a new skill. My <code>house-decks</code> skill holds all of them.</p>
+<div class="step-desc">
+<p>Ask Claude to install the House Decks plugin from <a href="https://github.com/kerryback/skills">github.com/kerryback/skills</a></p>
 </div>
 </div>
-<div class="explainer">
-<p>What comes out is an ordinary .pptx — opens in PowerPoint, fully editable, fonts intact</p>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
 </div>
-</section>
-<section id="what-you-say-to-it" class="slide level2 shrink center">
-<h2>What You Say to It</h2>
-<div class="three-cards">
-<div class="card-blue">
-<p><span class="card-title">Build a deck</span></p>
-<p><em>Make a deck on capital structure for Tuesday’s class.</em></p>
-<p>Uses my default style and says which one it used, so a wrong guess is cheap to correct.</p>
+<div class="step-title">
+<p>Register a Style</p>
 </div>
-<div class="card-amber">
-<p><span class="card-title">Register a style</span></p>
-<p><em>Make a house deck style from this deck and call it Jones.</em></p>
-<p>Copies the .pptx in and measures every placeholder — how much text each well actually holds.</p>
+<div class="step-desc">
+<p>Start a new conversation. Ask Claude to apply it to a PowerPoint deck written in your preferred style. Give the style a name.</p>
 </div>
-<div class="card-teal">
-<p><span class="card-title">Hand it to a colleague</span></p>
-<p><em>Export the Jones template as a skill.</em></p>
-<p>A self-contained folder they drop into their own skills directory. Nothing to install.</p>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Create a Deck</p>
+</div>
+<div class="step-desc">
+<p>Ask Claude to create a new deck in that style.</p>
+</div>
 </div>
 </div>
 <div class="explainer">
-<p>Your own words become aliases — “my usual style”, “the course template” — so you never have to remember a registry name</p>
-</div>
-</section>
-<section id="what-it-does-without-being-asked" class="slide level2 shrink center">
-<h2>What It Does Without Being Asked</h2>
-<p>The value of a skill is mostly the mistakes it has already made. Each of these cost a wasted afternoon once:</p>
-<div class="highlight-box">
-<ul>
-<li>Closes the deck in PowerPoint first — otherwise PowerPoint overwrites the new version from memory on its next save</li>
-<li>Refuses to write at all while the file is open, as a backstop</li>
-<li>Deletes placeholders you did not fill — an empty picture well renders as a <span class="accent">grey box</span></li>
-<li>Restyles tables, because templates rarely define a table style and PowerPoint’s default blue banding shows through</li>
-<li>Renders the finished deck and looks at it before reporting success</li>
-</ul>
-</div>
-<div class="explainer">
-<p>This is what “save the recipe as a skill” is really for — not the recipe, the scar tissue</p>
+<p>The PowerPoint deck contains elements that Claude will save and deploy again and fonts that it will try to match. So, “create a deck in this style” is something Claude should be able to do, using the python-pptx Python library.</p>
 </div>
 </section>
 <section id="a-good-use-of-claude.md-routing" class="slide level2 center">
 <h2>A Good Use of CLAUDE.md: Routing</h2>
-<p>Skills announce when they apply, and sometimes two of them claim the same job. Anthropic’s <code>pptx</code> skill triggers on <span class="accent">any</span> PowerPoint file, so a skill of your own for your house style will collide with it. A few lines in CLAUDE.md settle the precedence:</p>
-<div class="code-box">
-<pre><code>## PowerPoint
-
-- A deck in our house style, or no style named: use &lt;house-style skill&gt;
-- "In the style of this deck" (some other file): use &lt;template-matching skill&gt;
-- Anything else involving .pptx (reading a deck, pulling text out of one,
-  designing one from scratch): use the pptx skill</code></pre>
+<div class="highlight-box">
+<p>Skills announce when they apply, and sometimes two of them claim the same job. Anthropic’s <code>pptx</code> skill triggers on <span class="accent">any</span> PowerPoint file, so a skill of your own for your house style will collide with it.</p>
 </div>
-<div class="explainer">
-<p>CLAUDE.md is the right home for this because it is yours. A bundled skill gets replaced when it is updated, so instructions written into one quietly disappear.</p>
+<div class="card-dark">
+<p>Ask Claude to assist in editing CLAUDE.md globally or in a project folder to settle the precedence.</p>
+</div>
+</section>
+<section id="exercises" class="slide level2 section-divider center">
+<h2>Exercises</h2>
+<ol type="1">
+<li><p>Tell Claude to install Git and to initialize your project folder as a Git repo and to commit. Make some changes, commit again, and ask about restoring the prior version.</p></li>
+<li><p>Pick a deck you want to refresh. Ask Claude to read it and offer suggestions on content, organization, and style. Ask Claude to edit some slides and to draft some slides, saving changes in a new name.</p></li>
+</ol>
+</section>
+<section id="takeaway" class="slide level2 centered-statement center">
+<h2>Takeaway</h2>
+<div class="card card-dark">
+<p>Claude can work alongside you on whatever you’re working on. Get advice and suggestions. Hand over the tedious part of the work. Save good workflows as skills so they can be easily repeated.</p>
 </div>
 
 

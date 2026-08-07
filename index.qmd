@@ -324,6 +324,7 @@ page-layout: full
         <div class="item-title">Working with Claude</div>
         <div class="item-desc">Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant</div>
       </div>
+      <div class="item-links"><span class="has-menu"><a href="slides/2_working.html" target="_blank" rel="noopener">Slides</a><span class="submenu"><a href="slides/2_working.html" target="_blank" rel="noopener">HTML</a><a href="pdf/2_working.pdf" target="_blank" rel="noopener">PDF</a></span></span><span class="sep">&middot;</span><a href="files/session2.zip" target="_blank" rel="noopener">Files</a></div>
     </div>
 
     <div class="item">
