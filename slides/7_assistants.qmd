@@ -1,5 +1,5 @@
 ---
-title: "8. Agent Assistants"
+title: "7. Personal Assistants"
 subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---

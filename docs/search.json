@@ -2,378 +2,378 @@
   {
     "objectID": "slides/7_assistants.html#from-a-tool-to-a-teammate",
     "href": "slides/7_assistants.html#from-a-tool-to-a-teammate",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "From a Tool to a Teammate",
     "text": "From a Tool to a Teammate\n\n\nA research team\n\nMany agents, different roles, working together\nThey propose, attack, verify, and re-check each other\n\n\n\nA personal assistant\n\nOne agent that carries work across sessions\nRemembers context, uses your tools, acts on your behalf\n\n\n\n\nTwo shapes where agents pay off: a panel that pressure-tests ideas and data, and an assistant that just gets recurring things done."
   },
   {
     "objectID": "slides/7_assistants.html#not-the-same-as-day-6",
     "href": "slides/7_assistants.html#not-the-same-as-day-6",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "Not the Same as Day 6",
     "text": "Not the Same as Day 6\n\n\nDay 6 — Student Projects\n\nAgents students build as the deliverable\nThe product is the point; the learning is the design and the verification\n\n\n\nToday — Your Assistants\n\nAgents that work for you, on your research and your tasks\nThe product is your output; the agent is the labor\n\n\n\n\nSame underlying idea — an agent that decides and acts — pointed two ways: something students make, versus something that makes your week lighter."
   },
   {
     "objectID": "slides/7_assistants.html#a-research-team",
     "href": "slides/7_assistants.html#a-research-team",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "A Research Team",
     "text": "A Research Team"
   },
   {
     "objectID": "slides/7_assistants.html#many-roles-one-question",
     "href": "slides/7_assistants.html#many-roles-one-question",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "Many Roles, One Question",
     "text": "Many Roles, One Question\n\n\nDebate\n\nA proposer generates ideas; an adversary attacks them\nDisagreement surfaces the weak points early\n\n\n\nGround it\n\nA verifier checks claims against your own library\nAn analyst builds the data and runs the empirics\n\n\n\nCheck it\n\nA replicator re-derives the data build and the result, independently\nTwo paths to the same number, or a red flag\n\n\n\n\nThe coauthor skill orchestrates this: you are the coordinator; a debate panel and tool-using subagents do the work in a local folder — no repo, nothing published without you."
   },
   {
     "objectID": "slides/7_assistants.html#why-a-team-beats-one-agent",
     "href": "slides/7_assistants.html#why-a-team-beats-one-agent",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "Why a Team Beats One Agent",
     "text": "Why a Team Beats One Agent\n\nA single agent that both proposes and checks its own work grades its own homework. Splitting the roles — propose, attack, verify, replicate — is how you catch the beautiful-but-wrong result before it reaches a referee."
   },
   {
     "objectID": "slides/7_assistants.html#personal-assistants",
     "href": "slides/7_assistants.html#personal-assistants",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "Personal Assistants",
     "text": "Personal Assistants"
   },
   {
     "objectID": "slides/7_assistants.html#an-agent-that-carries-the-work",
     "href": "slides/7_assistants.html#an-agent-that-carries-the-work",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "An Agent That Carries the Work",
     "text": "An Agent That Carries the Work\n\n\nGive it a goal, not a script\n\nYou describe the outcome; it plans the steps\nIt uses tools — files, code, the web — to act\nState persists, so today builds on yesterday\n\n\n\nGood first jobs\n\nA weekly digest of new papers in your area\nReformat and check a dataset on arrival\nTurn meeting notes into tracked action items\n\n\n\n\nThe recurring, rule-ish tasks that eat an hour a week are the sweet spot — worth automating, low cost if a run is imperfect."
   },
   {
     "objectID": "slides/7_assistants.html#what-makes-it-an-agent",
     "href": "slides/7_assistants.html#what-makes-it-an-agent",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "What Makes It an Agent",
     "text": "What Makes It an Agent\n\n\nNot just answering\n\nIt decides what to do next, then does it\nIt checks its own output and retries\nIt stops and asks when it is stuck\n\n\n\nKept in bounds\n\nYou choose which tools it may use\nYou review before anything irreversible\nGive it the reach the task needs — and no more\n\n\n\n\nThe skill you are building is not prompting — it is describing the goal well and judging the result. Delegation, not dictation."
   },
   {
     "objectID": "slides/7_assistants.html#why-this-belongs-at-the-end",
     "href": "slides/7_assistants.html#why-this-belongs-at-the-end",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "Why This Belongs at the End",
     "text": "Why This Belongs at the End\n\nEverything until now was you directing a tool. An agent is you delegating a task — a research team that pressure-tests your work, or an assistant that clears the recurring load. The new skill is knowing what to hand off, and how to check what comes back."
   },
   {
     "objectID": "slides/7_assistants.html#breakout",
     "href": "slides/7_assistants.html#breakout",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "Breakout",
     "text": "Breakout"
   },
   {
     "objectID": "slides/7_assistants.html#questions-to-discuss",
     "href": "slides/7_assistants.html#questions-to-discuss",
-    "title": "8. Agent Assistants",
+    "title": "7. Personal Assistants",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhat recurring task would you hand to a standing assistant first?\nFor a question in your field, what roles would your ideal agent team have?\nWhat tools would you withhold from an agent working on real data?\nWhere is the line between useful delegation and losing track of what was done?"
   },
   {
     "objectID": "slides/6_research-ver2.html#the-research-loop-assisted",
     "href": "slides/6_research-ver2.html#the-research-loop-assisted",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "The Research Loop, Assisted",
     "text": "The Research Loop, Assisted\n\n\nFind\n\nDiscover and track the literature\nFollow citations forward and back\n\n\n\nOrganize\n\nA private, searchable library of what you have read\nSearch by keyword and by meaning\n\n\n\nWrite & review\n\nDraft and edit with field-aware guidance\nReferee your own work before a journal does\n\n\n\n\nEach move has a tool you can install today. AI does the search, the recall, and the first pass; the judgment stays yours."
   },
   {
     "objectID": "slides/6_research-ver2.html#literature-search",
     "href": "slides/6_research-ver2.html#literature-search",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Literature Search",
     "text": "Literature Search"
   },
   {
     "objectID": "slides/6_research-ver2.html#finding-and-tracking-work",
     "href": "slides/6_research-ver2.html#finding-and-tracking-work",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Finding and Tracking Work",
     "text": "Finding and Tracking Work\n\n\nAsk, don’t keyword\n\nDescribe what you want in plain language\nDiscovery across OpenAlex and Semantic Scholar\nPapers and abstracts, not a list of links\n\n\n\nFollow the citations\n\nWhat does this paper cite? Who cites it?\nTrace a result forward to its critics and back to its roots\nSurface the branch you were missing"
   },
   {
     "objectID": "slides/6_research-ver2.html#corpus-first-then-the-world",
     "href": "slides/6_research-ver2.html#corpus-first-then-the-world",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Corpus First, Then the World",
     "text": "Corpus First, Then the World\n\n\nIt marks what I already hold before proposing anything new — and most of what it proposes, I skip."
   },
   {
     "objectID": "slides/6_research-ver2.html#knowledge-databases",
     "href": "slides/6_research-ver2.html#knowledge-databases",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Knowledge Databases",
     "text": "Knowledge Databases"
   },
   {
     "objectID": "slides/6_research-ver2.html#your-own-library-searchable",
     "href": "slides/6_research-ver2.html#your-own-library-searchable",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Your Own Library, Searchable",
     "text": "Your Own Library, Searchable\n\n\n79 Papers, 66 with full text\n\n\n6,026 Indexed passages\n\n\n3,812 Citation links\n\n\n\n\nWhat it is\n\nLocal, private store of your PDFs and notes\nImport a Zotero library or a folder of PDFs\n\n\n\nWhy it helps\n\n“What do I have on X?” — answered in seconds\nNotes tied to the papers that prompted them\n\n\n\n\nMy actual numbers, from the litdb skill — plus 64 notes linked to the papers that prompted them. It runs locally; the library never leaves the machine."
   },
   {
     "objectID": "slides/6_research-ver2.html#search-by-meaning-not-by-keyword",
     "href": "slides/6_research-ver2.html#search-by-meaning-not-by-keyword",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Search by Meaning, Not by Keyword",
     "text": "Search by Meaning, Not by Keyword\n\n\nNo title contains a word from the query. Hybrid search matches the idea, and returns the page it came from."
   },
   {
     "objectID": "slides/6_research-ver2.html#writing",
     "href": "slides/6_research-ver2.html#writing",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Writing",
     "text": "Writing"
   },
   {
     "objectID": "slides/6_research-ver2.html#drafting-and-editing",
     "href": "slides/6_research-ver2.html#drafting-and-editing",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Drafting and Editing",
     "text": "Drafting and Editing\n\n\nField-aware help\n\nStructure, argument, and clarity for an economics paper\nSynthesized from 50+ guides by working economists\nSection by section: intro, results, response to referees\n\n\n\nSound human, not machine\n\nVary the rhythm; drop the AI tells\nLet the argument drive the structure, not a template\nEdit an existing draft, or draft from your notes\n\n\n\n\nThe econ-write and human-write skills. They do not invent your findings — they help you say what you found, well."
   },
   {
     "objectID": "slides/6_research-ver2.html#reviews",
     "href": "slides/6_research-ver2.html#reviews",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Reviews",
     "text": "Reviews"
   },
   {
     "objectID": "slides/6_research-ver2.html#referee-before-the-referee",
     "href": "slides/6_research-ver2.html#referee-before-the-referee",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Referee Before the Referee",
     "text": "Referee Before the Referee\n\n\n\nYou decide each comment\nAccept, reject, or defer — the report proposes, you dispose\n\n\nThe loop closes\nThe next review round rechecks every decision you made"
   },
   {
     "objectID": "slides/6_research-ver2.html#what-it-actually-produces",
     "href": "slides/6_research-ver2.html#what-it-actually-produces",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "What It Actually Produces",
     "text": "What It Actually Produces\n\n\nA real report on a real paper — a recommendation, and the grounds for it."
   },
   {
     "objectID": "slides/6_research-ver2.html#every-comment-anatomized",
     "href": "slides/6_research-ver2.html#every-comment-anatomized",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Every Comment, Anatomized",
     "text": "Every Comment, Anatomized\n\n\nIssue\nWhat is wrong, in one sentence\n\n\nRelevant text\nThe passage in your draft it comes from\n\n\nConcern\nWhy it threatens the paper’s claim\n\n\nSuggestions\nWhat would fix it, concretely\n\n\n\nTwenty comments in this structure, each traceable back to a line in the draft — so you can argue with any one of them."
   },
   {
     "objectID": "slides/6_research-ver2.html#others-have-built-these-too",
     "href": "slides/6_research-ver2.html#others-have-built-these-too",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Others Have Built These Too",
     "text": "Others Have Built These Too\n\n\nPedro Sant’Anna\n\nA full paper-lifecycle suite\nAdversarial critic-fixer loop\n\n\n\nLee Crawfurd\n\nTightly-scoped review skills\nReplication-audit tooling\n\n\n\n\nInstallable, mostly built by economists — Claude as copilot, not pilot."
   },
   {
     "objectID": "slides/6_research-ver2.html#the-risk-that-matters-most",
     "href": "slides/6_research-ver2.html#the-risk-that-matters-most",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "The Risk That Matters Most",
     "text": "The Risk That Matters Most\n\nThe biggest academic danger with AI is fabricated references and claims a cited source does not actually support. The better research skills attack this head-on.\n\n\n\nVerify every citation\nChecked against Semantic Scholar, OpenAlex, Crossref, arXiv — bogus DOIs caught before export\n\n\nAudit every claim\nDoes the source actually support the sentence? High-severity violations block the output\n\n\nFlag contamination\nDetect citations that may themselves be AI-invented"
   },
   {
     "objectID": "slides/6_research-ver2.html#does-it-actually-work",
     "href": "slides/6_research-ver2.html#does-it-actually-work",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Does It Actually Work?",
     "text": "Does It Actually Work?"
   },
   {
     "objectID": "slides/6_research-ver2.html#what-the-gap-teaches",
     "href": "slides/6_research-ver2.html#what-the-gap-teaches",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "What the Gap Teaches",
     "text": "What the Gap Teaches\n\n\nExtraordinary at the parts\n\nIt nails each individual analysis step\nLoad the data, run the spec, build the table\n\n\n\nNot yet trusted end to end\n\nOne broken step anywhere fails the whole reproduction\nExactly where human oversight stays essential\n\n\n\n\nThe 93/78 split is the honest picture — and the reason you check the chain, not just the links."
   },
   {
     "objectID": "slides/6_research-ver2.html#the-payoff",
     "href": "slides/6_research-ver2.html#the-payoff",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "The Payoff",
     "text": "The Payoff\n\nAI handles the search, the recall, and the first pass — finding the literature, remembering what you read, drafting the prose, refereeing the draft. You decide what matters and whether it is right."
   },
   {
     "objectID": "slides/6_research-ver2.html#breakout",
     "href": "slides/6_research-ver2.html#breakout",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Breakout",
     "text": "Breakout"
   },
   {
     "objectID": "slides/6_research-ver2.html#questions-to-discuss",
     "href": "slides/6_research-ver2.html#questions-to-discuss",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
   },
   {
     "objectID": "slides/4_tutors.html#four-things-you-can-now-make",
     "href": "slides/4_tutors.html#four-things-you-can-now-make",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Four Things You Can Now Make",
     "text": "Four Things You Can Now Make\n\n\nSlides\nDecks built from an outline, a paper, or a set of notes — and restyled in one pass\n\n\nCases\nA fictional company, the numbers, the exhibits, and the teaching note — generated together\n\n\nGrounded chatbots\nA tutor grounded in your own materials — from a no-build NotebookLM to a custom RAG bot, answering with citations\n\n\nVoiceovers\nA narrated video or a self-paced tutorbot made from a deck you already have\n\n\n\nEach of these used to be days of work. Each is now a conversation. This session is a tour of how — and every deck in this course was built the way we are about to describe."
   },
   {
     "objectID": "slides/4_tutors.html#slides",
     "href": "slides/4_tutors.html#slides",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Slides",
     "text": "Slides"
   },
   {
     "objectID": "slides/4_tutors.html#these-slides-are-the-example",
     "href": "slides/4_tutors.html#these-slides-are-the-example",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "These Slides Are the Example",
     "text": "These Slides Are the Example\n\n\nWhat they are\n\nPlain-text Quarto files rendered to reveal.js — HTML slides that run in a browser\nOne stylesheet controls every deck’s look\nExport to PDF or PowerPoint when you need to hand them out\n\n\n\nWhy text, not PowerPoint\n\nClaude writes and edits text natively — so it can draft, restyle, and reorganize whole decks\nChange the stylesheet once; all eight decks update\nVersion-controlled: every change is tracked and reversible\n\n\n\n\nThe slides skill packages this: point Claude at notes, a paper, or an outline and it produces a styled deck with cards, callouts, and section dividers — the components you have been looking at all session."
   },
   {
     "objectID": "slides/4_tutors.html#from-source-to-deck",
     "href": "slides/4_tutors.html#from-source-to-deck",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "From Source to Deck",
     "text": "From Source to Deck\n\n\n\n📄\n\n\nGive it source\n\n\nAn outline, a paper, lecture notes, a transcript\n\n\n\n\n✍️\n\n\nDraft\n\n\nClaude proposes a slide-by-slide structure\n\n\n\n\n🎨\n\n\nStyle\n\n\nCards, dividers, diagrams applied from the theme\n\n\n\n\n📤\n\n\nExport\n\n\nPresent in browser; hand out as PDF or PPTX\n\n\n\n\nYou stay in the loop at each step — approving the structure before the polish, and the polish before the export."
   },
   {
     "objectID": "slides/4_tutors.html#cases",
     "href": "slides/4_tutors.html#cases",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Cases",
     "text": "Cases"
   },
   {
     "objectID": "slides/4_tutors.html#generating-a-case",
     "href": "slides/4_tutors.html#generating-a-case",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Generating a Case",
     "text": "Generating a Case\n\n\nFrom concept to case\n\nStart with the concept a session teaches\nBuild a fictional company and a decision that turns on that concept\nPlant one hook for every idea, so a student who understood the material can find them all\n\n\n\nWhat AI drafts\n\nThe company, the numbers, the exhibits, the competing memos\nRealistic artifacts — contracts, data tables, email threads\nThe teaching note, cold-call bank, and rubric alongside the case\n\n\n\n\nYour job shifts from writing prose to designing the decision — and checking that every concept has exactly one landmine."
   },
   {
     "objectID": "slides/4_tutors.html#example-trinity-freight",
     "href": "slides/4_tutors.html#example-trinity-freight",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Example: Trinity Freight",
     "text": "Example: Trinity Freight\n\nBuilt to test an AI-security session. A freight brokerage’s CFO must approve, reject, or redesign an AI quoting agent. Every security concept has one hook in the case.\n\n\n\nThe decision\nApprove a $5M-opportunity AI agent — or catch why the design is dangerous\n\n\nThe exhibits\nArchitecture, data inventory, the vendor’s security overview, the economics\n\n\nThe hook\nOne exhibit is an ordinary-looking RFQ email with a prompt injection buried in it\n\n\n\nA student who absorbed the session sees the trap in the email. A polished memo that recommends approval and never mentions it has, in effect, approved the breach."
   },
   {
     "objectID": "slides/4_tutors.html#two-versions-generated-together",
     "href": "slides/4_tutors.html#two-versions-generated-together",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Two Versions, Generated Together",
     "text": "Two Versions, Generated Together\n\n\nVersion A — write the recommendation\n\nStudent plays the CFO and makes the call\nFinds the risks, proposes a redesign, defends the tradeoffs\nShips with: assignment questions, cold-call bank, grading rubric\n\n\n\nVersion B — critique the AI’s memo\n\nStudent is handed a fluent, confident, subtly wrong AI memo\nEvaluates it rather than writing their own\nShips with: the AI recommendation, the answer key, the questions\n\n\n\n\nBoth versions — the case, the exhibits, the teaching materials, the answer key — came out of the same generation pass. We keep them under version control and edit the parts the model got not-quite-right."
   },
   {
     "objectID": "slides/4_tutors.html#rag-chatbots",
     "href": "slides/4_tutors.html#rag-chatbots",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "RAG Chatbots",
     "text": "RAG Chatbots"
   },
   {
     "objectID": "slides/4_tutors.html#grounding-a-bot-in-your-material",
     "href": "slides/4_tutors.html#grounding-a-bot-in-your-material",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Grounding a Bot in Your Material",
     "text": "Grounding a Bot in Your Material\n\n\nOne deck: just show it\n\nA single session’s script is small enough to hand the model in full, every time\nNo search, no database — the material is simply there\nThis is how the tutorbot we will see works\n\n\n\nA whole course: too big\n\nEvery deck, reading, and case won’t fit in one prompt\nThe bot must fetch only the relevant piece for each question\nThis is what RAG does\n\n\n\n\nRetrieval-Augmented Generation: the model answers from your sources instead of its memory — so it stays current with your material and every answer can be checked."
   },
   {
     "objectID": "slides/4_tutors.html#rag-in-one-picture",
     "href": "slides/4_tutors.html#rag-in-one-picture",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "RAG in One Picture",
     "text": "RAG in One Picture\n\n\nPrepare\nSplit your documents into chunks, turn each into a numeric “embedding,” and store them in a database\n\n\nRetrieve\nFor a question, find the chunks most similar to it and hand them to the model\n\n\nAnswer\nThe model responds grounded in those chunks — and can cite which document each came from\n\n\n\nThe Harvard course bots — ChatLTV on 200 documents, an accounting tutor on a whole course — are RAG bots for exactly this reason."
   },
   {
     "objectID": "slides/4_tutors.html#the-no-build-path",
     "href": "slides/4_tutors.html#the-no-build-path",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "The No-Build Path",
     "text": "The No-Build Path\n\n\nGoogle NotebookLM\n\nUpload up to 50 sources — PDFs, Google Docs, web links, YouTube\nAnswers grounded in your sources, with citations\nGenerates study guides and audio overviews — a narrated summary\nFree with a Google account\n\n\n\nClaude & ChatGPT Projects\n\nUpload documents to a Project; the assistant searches them across every chat\nRAG without writing any code\nRequires a subscription\n\n\n\n\nFor a manageable pile of documents, these are an instant grounded tutor. Build your own only when you need to search thousands of documents, embed it in an app, or control the pipeline."
   },
   {
     "objectID": "slides/4_tutors.html#notebooklm",
     "href": "slides/4_tutors.html#notebooklm",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "NotebookLM",
     "text": "NotebookLM"
   },
   {
     "objectID": "slides/4_tutors.html#upload-your-sources-get-an-assistant",
     "href": "slides/4_tutors.html#upload-your-sources-get-an-assistant",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Upload Your Sources, Get an Assistant",
     "text": "Upload Your Sources, Get an Assistant\n\n\nGrounded in what you upload\n\nDrop in your own sources — PDFs, slides, Google Docs, web links, even YouTube videos\nThe assistant answers from those sources and cites them\nStays on your content instead of the open web — far less prone to making things up\n\n\n\nStudy aids on demand\n\nAuto-generates a study guide, an FAQ, a briefing doc, a timeline\nAll drawn from the material you gave it\nFree, with a Google account — no code, no setup\n\n\n\n\nGoogle’s NotebookLM is the no-build way to hand students a course-grounded assistant: upload the readings and share. No pipeline to build, nothing to embed."
   },
   {
     "objectID": "slides/4_tutors.html#the-audio-overview",
     "href": "slides/4_tutors.html#the-audio-overview",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "The Audio Overview",
     "text": "The Audio Overview\n\n\nA podcast of your material\n\nIts signature feature: a two-host Audio Overview\nTwo AI voices discuss your sources in a surprisingly natural conversation\nStudents can listen to a lecture’s readings as a discussion\n\n\n\nThe no-build teaching assistant\n\nUpload and share — no engineering, no setup\nThe zero-code option; a built RAG bot is the customizable one\nGreat when you want course-grounded chat and audio, fast\n\n\n\n\nWhere a RAG bot you build gives you control of the pipeline, NotebookLM gives you a grounded tutor and a listenable audio overview in minutes — two ends of the same idea."
   },
   {
     "objectID": "slides/4_tutors.html#voiceovers-tutorbots",
     "href": "slides/4_tutors.html#voiceovers-tutorbots",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Voiceovers & Tutorbots",
     "text": "Voiceovers & Tutorbots"
   },
   {
     "objectID": "slides/4_tutors.html#from-deck-to-narrated-video",
     "href": "slides/4_tutors.html#from-deck-to-narrated-video",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "From Deck to Narrated Video",
     "text": "From Deck to Narrated Video\n\n\nThe idea\n\nClaude drafts a spoken narration script for each slide\nA text-to-speech voice reads it; the audio is synced to the slides\nOut comes an MP4 — a narrated video — plus the transcript\n\n\n\nWhy bother\n\nStudents who missed class, or want a second pass, get the lecture on demand\nThe transcript is searchable and accessible\nYou record nothing — and re-generate in minutes when the slide changes\n\n\n\n\nThe voiceover skill does exactly this: give it a PDF deck, pick a voice, and it returns the video and transcript."
   },
   {
     "objectID": "slides/4_tutors.html#the-tutorbot-a-video-that-answers-back",
     "href": "slides/4_tutors.html#the-tutorbot-a-video-that-answers-back",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "The Tutorbot: A Video That Answers Back",
     "text": "The Tutorbot: A Video That Answers Back\n\n\n\n\n\n\nThe slides play with AI voiceover and advance on their own. The student can pause at any moment and ask a question — here, “if the agent only has read-only access, how can an injection steal our data?” — and the tutor answers in context, then class resumes."
   },
   {
     "objectID": "slides/4_tutors.html#how-the-tutorbot-is-built",
     "href": "slides/4_tutors.html#how-the-tutorbot-is-built",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "How the Tutorbot Is Built",
     "text": "How the Tutorbot Is Built\n\n\nNarrated deck\nEach slide carries a spoken script, pre-generated to one audio clip per slide\n\n\nPlayer\nSlides plus synced audio; pause, ask, resume; auto-advances when a clip ends\n\n\nTutor\nClaude answers with the full narration as context, and knows which slide you are on\n\n\nQuestion log\nEvery question saved with its slide number — next class’s cold-call material\n\n\n\nAnchored, not caged: the tutor is grounded in the deck’s script but free to draw on general knowledge — and it signposts when it goes beyond the session."
   },
   {
     "objectID": "slides/4_tutors.html#made-repeatable-a-skill",
     "href": "slides/4_tutors.html#made-repeatable-a-skill",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Made Repeatable: a Skill",
     "text": "Made Repeatable: a Skill\n\nThe whole process is packaged as a Claude skill, tutorbot-builder. Point it at a deck and it produces the narrated tutorbot — deck, narration, audio, player, and tutor backend — no code required.\n\n\n\nAny deck in\nPowerPoint, PDF, or reveal.js / Quarto\n\n\nConvert if needed\nPowerPoint and PDF are turned into slides first; Claude reads each to draft narration\n\n\nTutorbot out\nNarrated, interruptible, self-paced — ready to assign before class\n\n\n\nA skill is codified expertise you write once and reuse — the subject of our next-to-last session. It is shareable: any instructor can install it and convert their own decks."
   },
   {
     "objectID": "slides/4_tutors.html#the-payoff",
     "href": "slides/4_tutors.html#the-payoff",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "The Payoff",
     "text": "The Payoff\n\nSlides, cases, a grounded tutor, a narrated lecture — each was once days of work and is now a conversation. The scarce thing is no longer making the content. It is deciding what to make and judging whether it is good."
   },
   {
     "objectID": "slides/4_tutors.html#breakout",
     "href": "slides/4_tutors.html#breakout",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Breakout",
     "text": "Breakout"
   },
   {
     "objectID": "slides/4_tutors.html#questions-to-discuss",
     "href": "slides/4_tutors.html#questions-to-discuss",
-    "title": "5. AI for Teaching",
+    "title": "4. AI Tutors",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhich of your existing decks would you turn into a narrated tutorbot first?\nWhat concept in your course would make the best case — and what artifact would carry its central hook?\nDo you have a document pile (readings, notes, past exams) that a grounded chatbot could answer from?\nWhere would AI-drafted content still need your hand before it reached students?"
   },
@@ -737,203 +737,203 @@
   {
     "objectID": "slides/2_working.html#todays-session",
     "href": "slides/2_working.html#todays-session",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Today’s Session",
     "text": "Today’s Session\n\n\n\n1\n\n\nAcademic Studio\n\n\n\n\n2\n\n\nThe Command Line\n\n\n\n\n3\n\n\nCLAUDE.md and Skills\n\n\n\n\n4\n\n\nClaude as a Teaching Assistant"
   },
   {
     "objectID": "slides/2_working.html#academic-studio",
     "href": "slides/2_working.html#academic-studio",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Academic Studio",
     "text": "Academic Studio"
   },
   {
     "objectID": "slides/2_working.html#where-academic-studio-fits",
     "href": "slides/2_working.html#where-academic-studio-fits",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Where Academic Studio Fits",
     "text": "Where Academic Studio Fits\n\n\n\nOriginal Claude Code was CLI (command line interface)\nMillions of developers use Claude Code extension for VS Code\nVS Code = integrated development environment (IDE) from Microsoft\n\n\n\nAcademic Studio = VS Copde, except\n\nRemoved menus and toolbar items aimed at developers\nClaude Code opens on startup\nOther extensions pre-installed\nNew Claude menu and revised Help menu"
   },
   {
     "objectID": "slides/2_working.html#file-explorer-and-search",
     "href": "slides/2_working.html#file-explorer-and-search",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "File Explorer and Search",
     "text": "File Explorer and Search\nReach the File Explorer tool from the left toolbar.\n\n\nFiles\n\nRight-click to rename, copy, …\nDouble-click to open in Academic Studio viewer\nViewer provides different options for different file types (cannot edit Office docs)\n\n\n\nSearch\n\nThe magnifying glass searches inside every file in the folder at once\nOptions for case, whole word, and regular expressions\nReplace across all files from the same pane"
   },
   {
     "objectID": "slides/2_working.html#getting-around",
     "href": "slides/2_working.html#getting-around",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Getting Around",
     "text": "Getting Around\n\n\nConversations\n\nOpen a second Claude conversation for a separate task\nEach keeps its own context; they do not see each other\n\n\n\nTerminal\n\nOpen from the Terminal menu, X to close\nClaude uses it too — you will see commands run as it works\n\n\n\nRemote SSH\n\nConnect to jgsrc1 or a different remote server\nFiles and code execution on remote server. Academic Studio runs on your computer.\n\n\n\n\nExtensions\nVS Codium marketplace (all are free)"
   },
   {
     "objectID": "slides/2_working.html#menus",
     "href": "slides/2_working.html#menus",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Menus",
     "text": "Menus\n\nFile/New Window opens a new Academic Studio session. Work on multiple projects at once.\nClaude/Permissions\nClaude/Conversations\nHelp/Run Setup"
   },
   {
     "objectID": "slides/2_working.html#some-claude-commands",
     "href": "slides/2_working.html#some-claude-commands",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Some Claude Commands",
     "text": "Some Claude Commands\n\n/resume - a version of Claude/Conversations\n/model - select from Fable, Opus (default), Sonnet, and Haiku\n/clear - clear the context window (= new conversation)\n/compact - summarize the conversation in a text file, launch a new conversation that reads the text file\nEsc - escape key interrupts Claude, which then waits for new instructions"
   },
   {
     "objectID": "slides/2_working.html#fit-with-vs-code",
     "href": "slides/2_working.html#fit-with-vs-code",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Fit with VS Code",
     "text": "Fit with VS Code\n\nIndependent apps, individual extensions and settings\nThey share Claude — same CLAUDE.md, same skills, same conversation history\nExample: Work on project in Academic Studio. Then open in VS Code. /resume brings up conversation history from Academic Studio."
   },
   {
     "objectID": "slides/2_working.html#the-command-line",
     "href": "slides/2_working.html#the-command-line",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "The Command Line",
     "text": "The Command Line"
   },
   {
     "objectID": "slides/2_working.html#using-a-terminal-command-line",
     "href": "slides/2_working.html#using-a-terminal-command-line",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Using a Terminal (Command Line)",
     "text": "Using a Terminal (Command Line)\n\nWindows: Command Prompt, Windows PowerShell, Windows Terminal\nMac Terminal\nOpen. Then type commands. Syntax must be right (not intelligent)"
   },
   {
     "objectID": "slides/2_working.html#what-claude-can-do-at-the-command-line",
     "href": "slides/2_working.html#what-claude-can-do-at-the-command-line",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "What Claude Can Do at the Command Line",
     "text": "What Claude Can Do at the Command Line\n\n\nFile operations\nMove, copy, rename, delete, search within.\nFind all files in my Documents folder that discuss … and move them to …\n\n\nInstall and run software\nRun a python script, build a LaTeX doc, …\n\n\nInteract with external services\nCommand Line Interfaces (CLIs): gh for GitHub, aws for Amazon Web Services, … Also, use APIs."
   },
   {
     "objectID": "slides/2_working.html#more-things-claude-can-do-at-the-command-line",
     "href": "slides/2_working.html#more-things-claude-can-do-at-the-command-line",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "More Things Claude Can Do at the Command Line",
     "text": "More Things Claude Can Do at the Command Line\n\n\npandoc — convert between Word, Markdown, HTML, PDF\nImageMagick — resize, crop, convert images in bulk\nffmpeg — trim video, transcode, pull the audio out\nripgrep — search thousands of files in seconds\ncron — run a command on a schedule"
   },
   {
     "objectID": "slides/2_working.html#example-git-search-the-past",
     "href": "slides/2_working.html#example-git-search-the-past",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Example: Git (Search the Past)",
     "text": "Example: Git (Search the Past)\nGit is a version control system. A commit records the current state of a folder (repository=repo). Git is not AI. Git existed long before AI. But AI knows Git.\n\n\nTell Claude\n\nInstall Git. Commit this folder to Git.\n\nFrequently, thereafter, tell Claude to commit changes."
   },
   {
     "objectID": "slides/2_working.html#section",
     "href": "slides/2_working.html#section",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "",
     "text": "At some point, you realize that you want to recover something from a version that was overwritten sometime in the past:\n\n\nTell Claude\n\nFind a prior version of … that said … Add that to the current version."
   },
   {
     "objectID": "slides/2_working.html#claude.md-and-skills",
     "href": "slides/2_working.html#claude.md-and-skills",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "CLAUDE.md and Skills",
     "text": "CLAUDE.md and Skills"
   },
   {
     "objectID": "slides/2_working.html#claude.md",
     "href": "slides/2_working.html#claude.md",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "CLAUDE.md",
     "text": "CLAUDE.md\n\n\n\nAt the start of each conversation, Claude looks in specific places for CLAUDE.md files\nIt looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder\n\n\n\n\nA CLAUDE.md is a text file that contains instructions for Claude\nClaude reads the entire file, so use it sparingly\n\n\n\n\nYou could get the same behavior by pasting the instructions in the prompt window"
   },
   {
     "objectID": "slides/2_working.html#skills",
     "href": "slides/2_working.html#skills",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Skills",
     "text": "Skills\n\n\nAt the start of each conversation, Claude also looks in specific places for SKILL.md files\n\n\nIt looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder\n\n\nSkills are text files saved on your hard drive. Claude reads the top of each SKILL.md file (the skill description) on startup, and it reads the bulk of the file only when needed"
   },
   {
     "objectID": "slides/2_working.html#installing-skills",
     "href": "slides/2_working.html#installing-skills",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Installing Skills",
     "text": "Installing Skills\n\n\n\nThere are thousands of skills published on the internet.\n\nAnthropic publishes skills (xlsx, etc.) at https://github.com/anthropics/skills/\n\n\n\n\nTo search for skills, ask Claude. To install a skill you want, ask Claude.\nOther than a few of Anthropic’s skills, the most useful skills are generally those you create, because they are customized to your work."
   },
   {
     "objectID": "slides/2_working.html#some-examples",
     "href": "slides/2_working.html#some-examples",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Some Examples",
     "text": "Some Examples\nI’ve looked at several skill repos for business/economics research. Most are not useful. Here are a couple I’ve adopted — by Lu Han, Bank of Canada.\n\n\nEcon Writing: tells Claude to follow Cochrane’s Writing Tips for PhD Students and some other style guides\nEcon Paper Review: writes a referee report on your paper\n\n\nGive Claude the links and ask Claude to install them if you want to try them out."
   },
   {
     "objectID": "slides/2_working.html#creating-skills",
     "href": "slides/2_working.html#creating-skills",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Creating Skills",
     "text": "Creating Skills\n\n\nUsual process is you work on something, iterating until you get what you want.\n\n\nYou realize you may want the same thing again, and you don’t want to go through the iteration again.\n\n\nSolution: tell Claude to save the satisfactory method (recipe) as a skill. Can save your result along with the skill as an example to follow if useful."
   },
   {
     "objectID": "slides/2_working.html#invoking-skills",
     "href": "slides/2_working.html#invoking-skills",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Invoking Skills",
     "text": "Invoking Skills\n\n\nSlash Command\n\nType /skillname at the prompt\nExample: /plan\nInvokes the skill directly\n\n\n\nNatural Language\n\nDescribe what you need in plain English\nExample: “Use your planning mode and evaluate …”\n\n\n\nAutomatic\n\nClaude may invoke a skill on its own\nExample: “Create an Excel file” triggers the xlsx skill automatically\nDriven by the skill’s description"
   },
   {
     "objectID": "slides/2_working.html#example-create-and-invoke",
     "href": "slides/2_working.html#example-create-and-invoke",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Example: Create and Invoke",
     "text": "Example: Create and Invoke\n\n\nTell Claude to create a skill for your folder named “pirate” with this content: “Always answer like a pirate”\n\n\nStart a new conversation. Enter /pirate What is the meaning of life?\n\n\nAsk Claude to show you the pirate SKILL.md"
   },
   {
     "objectID": "slides/2_working.html#claude-as-a-teaching-assistant",
     "href": "slides/2_working.html#claude-as-a-teaching-assistant",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Claude as a Teaching Assistant",
     "text": "Claude as a Teaching Assistant"
   },
   {
     "objectID": "slides/2_working.html#what-can-claude-do",
     "href": "slides/2_working.html#what-can-claude-do",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "What can Claude Do?",
     "text": "What can Claude Do?\n\n\n\nDraft slides\nAssist with editing slides\nGenerate images for slides\nDraft quizzes and assignments\nAssist with grading\n\n\n\n\nDraft emails to students\nHelp create async materials\nBuild tutors\nBuild Excel workbooks\nWrite cases"
   },
   {
     "objectID": "slides/2_working.html#drafting-and-editing-slides",
     "href": "slides/2_working.html#drafting-and-editing-slides",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "Drafting and Editing Slides",
     "text": "Drafting and Editing Slides\nClaude is generally able to create slide decks using whatever style you like. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft template\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx\n\n\nOnce it is successful, you can ask Claude to save the recipe as a skill to use thereafter.\n\nWhen editing an existing deck, you will want Claude to automatically save changes and close an open deck before editing. Then reopen for you to see (and edit) again."
   },
   {
     "objectID": "slides/2_working.html#one-skill-to-rule-them-all",
     "href": "slides/2_working.html#one-skill-to-rule-them-all",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "One Skill to Rule Them All",
     "text": "One Skill to Rule Them All\nA designed .pptx is already a style kit. Its layouts carry the scenery, its theme carries the fonts and colors. So the faithful way to build a deck “in that style” is to instantiate the template’s own layouts and fill the placeholders — never to draw a shape or name a color.\n\n\nOne engine\nThe code that fills placeholders is generic. Nothing in it knows about any particular template.\n\n\nTemplates are data\nEach style is just a folder: the .pptx, plus written notes on what each of its layouts is for.\n\n\nSo it scales\nA new style is a registration, not a new skill. My house-decks skill holds all of them.\n\n\n\nWhat comes out is an ordinary .pptx — opens in PowerPoint, fully editable, fonts intact"
   },
   {
     "objectID": "slides/2_working.html#what-you-say-to-it",
     "href": "slides/2_working.html#what-you-say-to-it",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "What You Say to It",
     "text": "What You Say to It\n\n\nBuild a deck\nMake a deck on capital structure for Tuesday’s class.\nUses my default style and says which one it used, so a wrong guess is cheap to correct.\n\n\nRegister a style\nMake a house deck style from this deck and call it Jones.\nCopies the .pptx in and measures every placeholder — how much text each well actually holds.\n\n\nHand it to a colleague\nExport the Jones template as a skill.\nA self-contained folder they drop into their own skills directory. Nothing to install.\n\n\n\nYour own words become aliases — “my usual style”, “the course template” — so you never have to remember a registry name"
   },
   {
     "objectID": "slides/2_working.html#what-it-does-without-being-asked",
     "href": "slides/2_working.html#what-it-does-without-being-asked",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "What It Does Without Being Asked",
     "text": "What It Does Without Being Asked\nThe value of a skill is mostly the mistakes it has already made. Each of these cost a wasted afternoon once:\n\n\nCloses the deck in PowerPoint first — otherwise PowerPoint overwrites the new version from memory on its next save\nRefuses to write at all while the file is open, as a backstop\nDeletes placeholders you did not fill — an empty picture well renders as a grey box\nRestyles tables, because templates rarely define a table style and PowerPoint’s default blue banding shows through\nRenders the finished deck and looks at it before reporting success\n\n\n\nThis is what “save the recipe as a skill” is really for — not the recipe, the scar tissue"
   },
   {
     "objectID": "slides/2_working.html#a-good-use-of-claude.md-routing",
     "href": "slides/2_working.html#a-good-use-of-claude.md-routing",
-    "title": "2. AI for Personal Productivity",
+    "title": "2. Working with Claude",
     "section": "A Good Use of CLAUDE.md: Routing",
     "text": "A Good Use of CLAUDE.md: Routing\nSkills announce when they apply, and sometimes two of them claim the same job. Anthropic’s pptx skill triggers on any PowerPoint file, so a skill of your own for your house style will collide with it. A few lines in CLAUDE.md settle the precedence:\n\n## PowerPoint\n\n- A deck in our house style, or no style named: use &lt;house-style skill&gt;\n- \"In the style of this deck\" (some other file): use &lt;template-matching skill&gt;\n- Anything else involving .pptx (reading a deck, pulling text out of one,\n  designing one from scratch): use the pptx skill\n\n\nCLAUDE.md is the right home for this because it is yours. A bundled skill gets replaced when it is updated, so instructions written into one quietly disappear."
   },
@@ -1073,231 +1073,231 @@
   {
     "objectID": "slides/5_projects.html#from-a-prompt-to-a-product",
     "href": "slides/5_projects.html#from-a-prompt-to-a-product",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "From a Prompt to a Product",
     "text": "From a Prompt to a Product\n\n\nAn artifact\nA self-contained interactive page Claude builds inside the conversation — a dashboard or calculator you use immediately\n\n\nAn app\nA web page with a form and a backend that does real work — upload data, get a schedule, a chart, a report\n\n\nAn agent\nAn app whose menus are replaced by plain language and a model that decides which tools to use\n\n\n\nStudents describe what they want; Claude writes the code, runs it, and can put it online. To assign or grade any of this, it helps to know what a piece of software actually is."
   },
   {
     "objectID": "slides/5_projects.html#how-software-works",
     "href": "slides/5_projects.html#how-software-works",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "How Software Works",
     "text": "How Software Works"
   },
   {
     "objectID": "slides/5_projects.html#frontends-and-backends",
     "href": "slides/5_projects.html#frontends-and-backends",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Frontends and Backends",
     "text": "Frontends and Backends\n\n\nRuns in a browser\n\nYou open a URL\nThe browser runs the frontend — HTML, CSS, JavaScript\nClicks send a request to the backend, which does the work and replies\n\n\n\nLooks native, but isn’t\n\nSlack, Spotify, Discord\nEach ships a stripped-down browser inside the app\nSame frontend/backend split underneath\n\n\n\nSee it yourself\n\nRight-click any page → “View Page Source”\nThat HTML, CSS, and JavaScript is the frontend\nServed by the backend the browser connected to"
   },
   {
     "objectID": "slides/5_projects.html#running-it-locally",
     "href": "slides/5_projects.html#running-it-locally",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Running It Locally",
     "text": "Running It Locally\n\n\n127.0.0.1 — “localhost”\n\nThe loopback address: traffic never leaves your machine\nBrowser and server both on your own computer\nWhere every app starts life before it goes online\n\n\n\nPorts\n\nA number saying which program should receive a request\nA local server often listens on 8000 → visit 127.0.0.1:8000\nSeveral servers can run at once, each on its own port\n\n\n\n\nWhen you deploy to the cloud, 127.0.0.1 becomes a real domain name — the app code stays the same."
   },
   {
     "objectID": "slides/5_projects.html#a-very-small-app",
     "href": "slides/5_projects.html#a-very-small-app",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "A Very Small App",
     "text": "A Very Small App\nfrom fastapi import FastAPI\nfrom fastapi.responses import HTMLResponse\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef home():\n    return HTMLResponse(\"&lt;h1&gt;Hello, world!&lt;/h1&gt;\")\n\nServe it (Claude can do this for you), open 127.0.0.1:8000, and the browser sends “GET /”, the server returns the HTML, and you see “Hello, world!” That is the whole shape of a web app — everything else is more of the same."
   },
   {
     "objectID": "slides/5_projects.html#artifacts",
     "href": "slides/5_projects.html#artifacts",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Artifacts",
     "text": "Artifacts"
   },
   {
     "objectID": "slides/5_projects.html#the-fastest-path-to-a-working-thing",
     "href": "slides/5_projects.html#the-fastest-path-to-a-working-thing",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "The Fastest Path to a Working Thing",
     "text": "The Fastest Path to a Working Thing\n\n\nWhat you get\n\nAn interactive page — dashboard, calculator, visualization — built right in the chat\nUse it instantly; ask for changes in the same conversation\nPublish a link, or download it as a single HTML file\n\n\n\nWhen to use it\n\nThe shortest distance from idea to a shareable tool\nNo terminal, no server to run\nGreat for a one-off tool, a demo, or a student’s first build\n\n\n\n\nNo backend, no deployment — everything runs in the browser. Perfect for a self-contained computation that doesn’t need a database."
   },
   {
     "objectID": "slides/5_projects.html#standalone-apps-in-the-browser",
     "href": "slides/5_projects.html#standalone-apps-in-the-browser",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Standalone Apps in the Browser",
     "text": "Standalone Apps in the Browser\n\n\n\n\n\n\nPython runs inside the browser through WebAssembly (Pyodide). The entire app — form, logic, and charts — lives in one HTML file. No server, no install, nothing for the user to set up."
   },
   {
     "objectID": "slides/5_projects.html#a-real-one-students-build",
     "href": "slides/5_projects.html#a-real-one-students-build",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "A Real One Students Build",
     "text": "A Real One Students Build\n\n\n\n\n\n\nUpload data, click a button, get back a schedule, a route map, and a chart. The backend runs verified Python; the frontend is a simple upload form and a results page. This is a graded deliverable that either works or it doesn’t."
   },
   {
     "objectID": "slides/5_projects.html#agents",
     "href": "slides/5_projects.html#agents",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Agents",
     "text": "Agents"
   },
   {
     "objectID": "slides/5_projects.html#a-chatbot-that-can-act",
     "href": "slides/5_projects.html#a-chatbot-that-can-act",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "A Chatbot That Can Act",
     "text": "A Chatbot That Can Act\n\n\nChatbot\n\nUser ↔︎ chatbot ↔︎ model\nEach turn sends the user’s prompt, a system prompt, and the history\nIt produces text — nothing more\n\n\n\nAgent\n\nThe same loop, plus tools\nThe model can run code, query a database, call an API\nIt decides which tool to use, reads the result, and continues"
   },
   {
     "objectID": "slides/5_projects.html#what-makes-it-an-agent",
     "href": "slides/5_projects.html#what-makes-it-an-agent",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "What Makes It an Agent",
     "text": "What Makes It an Agent\n\n\nThe designer holds every dial\n\n\nThe system prompt — the agent’s role, rules, and refusals\nThe tools it is given — and, just as important, the ones it is not\nThe permission mode — what it may do without asking\nLimits — how many steps, which actions need a human’s yes\n\n\n\nAn agent is not a different technology. It is a model, a system prompt, and a carefully chosen set of tools — the anatomy from session one, assembled into something that works on its own."
   },
   {
     "objectID": "slides/5_projects.html#example-a-database-agent",
     "href": "slides/5_projects.html#example-a-database-agent",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Example: A Database Agent",
     "text": "Example: A Database Agent\n\n\n\n\n\n\nAsk a business question in plain English; the agent writes SQL, runs it against the database, and answers. The guardrail is built in — it is allowed to read the database but never to change it. Students build this against real data."
   },
   {
     "objectID": "slides/5_projects.html#building-it-the-agent-sdk",
     "href": "slides/5_projects.html#building-it-the-agent-sdk",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Building It: The Agent SDK",
     "text": "Building It: The Agent SDK\n\n\nThe pieces\n\nAn API key from the Anthropic console, kept in a .env file\nThe Agent SDK: a few lines to give the model tools and run the loop\nYour tools are just Python functions the model may call\n\n\n\nThe safety dials\n\nAllowed tools and disallowed tools — an explicit list\nPermission modes — from “ask me every time” to “run freely”\nStart restrictive; loosen only what you trust\n\n\n\n\nThe first and best guardrail is a tool the agent simply does not have. If it cannot send email or delete files, no clever prompt can make it."
   },
   {
     "objectID": "slides/5_projects.html#going-live",
     "href": "slides/5_projects.html#going-live",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Going Live",
     "text": "Going Live"
   },
   {
     "objectID": "slides/5_projects.html#two-paths-to-a-public-url",
     "href": "slides/5_projects.html#two-paths-to-a-public-url",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Two Paths to a Public URL",
     "text": "Two Paths to a Public URL\n\n\nGitHub Pages — static & Pyodide\n\nName the page index.html, push, turn on Pages\nLive at a github.io address, free, no server\nGood for artifacts and browser-only apps\n\n\n\nA PaaS — apps & agents\n\nKoyeb, Railway, Render go from a GitHub repo to a running service\nThey handle the packaging; you skip the server plumbing\nThe path for anything with a backend\n\n\n\n\nAfter you create the account, Claude Code can do the rest — build, configure, and deploy. From a laptop to a public link is a short trip."
   },
   {
     "objectID": "slides/5_projects.html#why-this-belongs-in-your-course",
     "href": "slides/5_projects.html#why-this-belongs-in-your-course",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Why This Belongs in Your Course",
     "text": "Why This Belongs in Your Course\n\nA student who builds an artifact, an app, or an agent has to decide what it should do and judge whether it works. The building is now easy; the design and the verification are the learning — and the deliverable either runs or it doesn’t."
   },
   {
     "objectID": "slides/5_projects.html#breakout",
     "href": "slides/5_projects.html#breakout",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Breakout",
     "text": "Breakout"
   },
   {
     "objectID": "slides/5_projects.html#questions-to-discuss",
     "href": "slides/5_projects.html#questions-to-discuss",
-    "title": "6. Student Projects",
+    "title": "5. Student Projects",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhat tool do you wish existed for your field that a student could build in a week?\nWould it be an artifact, an app, or an agent — and why?\nIf students built an agent on real data, what tools would you withhold from it?\nWhat would you look at to grade it — the finished tool, the code, or how they defend its design?"
   },
   {
     "objectID": "slides/6_research.html#the-research-loop-assisted",
     "href": "slides/6_research.html#the-research-loop-assisted",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "The Research Loop, Assisted",
     "text": "The Research Loop, Assisted\n\n\nFind\n\nDiscover and track the literature\nFollow citations forward and back\n\n\n\nOrganize\n\nA private, searchable library of what you have read\nSearch by keyword and by meaning\n\n\n\nWrite & review\n\nDraft and edit with field-aware guidance\nReferee your own work before a journal does\n\n\n\n\nFour moves, each with a tool you can install and use today. AI does the search, the recall, and the first pass; the judgment stays yours."
   },
   {
     "objectID": "slides/6_research.html#literature-search",
     "href": "slides/6_research.html#literature-search",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Literature Search",
     "text": "Literature Search"
   },
   {
     "objectID": "slides/6_research.html#finding-and-tracking-work",
     "href": "slides/6_research.html#finding-and-tracking-work",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Finding and Tracking Work",
     "text": "Finding and Tracking Work\n\n\nAsk, don’t keyword\n\nDescribe what you want in plain language\nDiscovery across OpenAlex and Semantic Scholar — millions of papers, open metadata\nGet papers and abstracts, not just a list of links\n\n\n\nFollow the citations\n\nWhat does this paper cite? Who cites it?\nTrace a result forward to its critics and back to its roots\nSurface the branch of the literature you were missing\n\n\n\n\nThe web search from Day 2, pointed at the scholarly record. It finds candidates; you still decide what is relevant."
   },
   {
     "objectID": "slides/6_research.html#knowledge-databases",
     "href": "slides/6_research.html#knowledge-databases",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Knowledge Databases",
     "text": "Knowledge Databases"
   },
   {
     "objectID": "slides/6_research.html#your-own-library-searchable",
     "href": "slides/6_research.html#your-own-library-searchable",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Your Own Library, Searchable",
     "text": "Your Own Library, Searchable\n\n\nWhat it is\n\nA local, private store of your PDFs and notes\nFull-text keyword and semantic (meaning) search\nImport a whole Zotero library, or a folder of PDFs\n\n\n\nWhy it helps\n\n“What do I have on X?” — answered in seconds\nNotes tied to the papers that prompted them\nExport BibTeX straight into your paper\n\n\n\n\nThe litdb skill backs this — your corpus first, external sources second. It runs locally, so your library and notes never leave your machine."
   },
   {
     "objectID": "slides/6_research.html#writing",
     "href": "slides/6_research.html#writing",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Writing",
     "text": "Writing"
   },
   {
     "objectID": "slides/6_research.html#drafting-and-editing",
     "href": "slides/6_research.html#drafting-and-editing",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Drafting and Editing",
     "text": "Drafting and Editing\n\n\nField-aware help\n\nStructure, argument, and clarity for an economics paper\nSynthesized from 50+ guides by working economists\nSection by section: intro, results, response to referees\n\n\n\nSound human, not machine\n\nVary the rhythm; drop the AI tells\nLet the argument drive the structure, not a template\nEdit an existing draft, or draft from your notes\n\n\n\n\nThe econ-write and human-write skills. They do not invent your findings — they help you say what you found, well."
   },
   {
     "objectID": "slides/6_research.html#reviews",
     "href": "slides/6_research.html#reviews",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Reviews",
     "text": "Reviews"
   },
   {
     "objectID": "slides/6_research.html#referee-before-the-referee",
     "href": "slides/6_research.html#referee-before-the-referee",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Referee Before the Referee",
     "text": "Referee Before the Referee\n\n\nWhat it produces\n\nA rigorous, source-grounded referee report on a draft\nSeparate editing notes and a prioritized revision plan\nThe objections a real reviewer will raise — first\n\n\n\nOthers have built these too\n\nPedro Sant’Anna: a full paper-lifecycle suite, adversarial critic-fixer loop\nLee Crawfurd: tightly-scoped review + replication-audit skills\nInstallable, mostly economists — Claude as copilot, not pilot\n\n\n\n\nThe econ-review skill does this for your own drafts. You own the question and the identification; the skill enforces the discipline."
   },
   {
     "objectID": "slides/6_research.html#the-risk-that-matters-most",
     "href": "slides/6_research.html#the-risk-that-matters-most",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "The Risk That Matters Most",
     "text": "The Risk That Matters Most\n\nThe biggest academic danger with AI is fabricated references and claims a cited source does not actually support. The better research skills attack this head-on.\n\n\n\nVerify every citation\nChecked against Semantic Scholar, OpenAlex, Crossref, arXiv — bogus DOIs caught before export\n\n\nAudit every claim\nDoes the source actually support the sentence? High-severity violations block the output\n\n\nFlag contamination\nDetect citations that may themselves be AI-invented\n\n\n\nFor empirical or b-school research, this is the line between a demo and something you can responsibly put your name on."
   },
   {
     "objectID": "slides/6_research.html#does-it-actually-work",
     "href": "slides/6_research.html#does-it-actually-work",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Does It Actually Work?",
     "text": "Does It Actually Work?\n\n\nThe benchmark\n\n54 social-science papers, tested for whether a coding agent could reproduce the published findings from the paper alone\nClaude Code: ~93% at the individual-step level\nBut only ~78% at the whole-paper level\n\n\n\nWhat the gap teaches\n\nIt nails each analysis step\nOne broken step anywhere still fails the full reproduction\nExactly where human oversight stays essential\n\n\n\n\nThe 93/78 split is the honest picture: extraordinary at the parts, not yet trustworthy end to end without a human checking the chain."
   },
   {
     "objectID": "slides/6_research.html#the-payoff",
     "href": "slides/6_research.html#the-payoff",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "The Payoff",
     "text": "The Payoff\n\nAI handles the search, the recall, and the first pass — finding the literature, remembering what you read, drafting the prose, refereeing the draft. You decide what matters and whether it is right."
   },
   {
     "objectID": "slides/6_research.html#breakout",
     "href": "slides/6_research.html#breakout",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Breakout",
     "text": "Breakout"
   },
   {
     "objectID": "slides/6_research.html#questions-to-discuss",
     "href": "slides/6_research.html#questions-to-discuss",
-    "title": "7. AI for Research",
+    "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
   }

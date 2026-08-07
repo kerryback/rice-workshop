@@ -1,5 +1,5 @@
 ---
-title: "6. Student Projects"
+title: "5. Student Projects"
 subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---

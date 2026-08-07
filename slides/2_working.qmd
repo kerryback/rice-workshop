@@ -1,5 +1,5 @@
 ---
-title: "2. AI for Personal Productivity"
+title: "2. Working with Claude"
 author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 ---
 

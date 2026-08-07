@@ -1,5 +1,5 @@
 ---
-title: "5. AI for Teaching"
+title: "4. AI Tutors"
 subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---
