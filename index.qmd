@@ -24,11 +24,16 @@ page-layout: full
 .flyer .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 20px 0 10px; }
 .flyer .section-head .label, .flyer .section-head .dates { font-size: 14px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
 .flyer .item { display: flex; gap: 16px; align-items: flex-start; padding: 8px 0; }
-/* Each chip links to that session's PDF deck. */
-.flyer .chip { flex: 0 0 140px; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 7px 0; border-radius: 6px; text-decoration: none; display: block; transition: background 0.15s; }
-.flyer a.chip:hover, .flyer a.chip:focus { background: #003087; color: #fff; text-decoration: none; }
-.flyer a.chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+/* The chip is a plain label. Each session's downloads are named links at the
+   right of the row, so they are visible without hovering and work on touch. */
+.flyer .chip { flex: 0 0 140px; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 7px 0; border-radius: 6px; display: block; }
 .flyer .chip .chip-time { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: 0.5px; opacity: 0.85; margin-top: 2px; }
+.flyer .item-body { flex: 1 1 0; min-width: 0; }
+.flyer .item-links { flex: 0 0 auto; margin-left: auto; white-space: nowrap; padding-top: 3px; }
+.flyer .item-links a { font-size: 15px; font-weight: 700; color: var(--navy); text-decoration: none; }
+.flyer .item-links a:hover, .flyer .item-links a:focus { text-decoration: underline; }
+.flyer .item-links a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 3px; }
+.flyer .item-links .sep { color: var(--gold); font-weight: 700; margin: 0 7px; }
 .flyer .item-title { font-size: 19px; font-weight: 700; color: var(--navy); }
 .flyer .item-desc { font-size: 15.5px; color: var(--gray); line-height: 1.4; margin-top: 2px; }
 .flyer .sheet-foot { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
@@ -38,6 +43,11 @@ page-layout: full
 @media (max-width: 600px) {
   .flyer .display { font-size: 33px; }
   .flyer .chip { flex-basis: 108px; font-size: 12px; }
+  /* Too narrow for a third column, so the links wrap onto their own line,
+     indented to line up with the session title above them. */
+  .flyer .item { flex-wrap: wrap; }
+  .flyer .item-links { flex: 1 0 100%; margin-left: 0; padding-left: 124px; padding-top: 5px; }
+  .flyer .item-links a { font-size: 14px; }
   .flyer .chip .chip-time { font-size: 10.5px; letter-spacing: 0; }
   .flyer .item-title { font-size: 17px; }
 }
@@ -53,15 +63,15 @@ page-layout: full
     <div class="subline">led by <b>Kerry Back</b></div>
     <div class="rule"></div>
     <div class="section-head"><span class="label">Week 1</span><span class="dates">August 10&ndash;14</span></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 10<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Intro to Claude</div><div class="item-desc">Claude Desktop (Chat, Cowork, Code &mdash; Local and Cloud), Claude plugin for Excel</div></div></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 11<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Claude Tools</div><div class="item-desc">code execution, command line, web search and fetch, and browser use</div></div></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 12<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Skills, Connectors, and Plugins</div><div class="item-desc">customizing Claude and adding capabilities</div></div></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 13<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Research and Teaching Setup</div><div class="item-desc">Academic Studio, Python, R, LaTeX, Quarto, Git, GitHub</div></div></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 14<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">AI for Teaching</div><div class="item-desc">NotebookLM, RAG chatbots, slide voice-overs</div></div></div>
+    <div class="item"><div class="chip">AUG 10<span class="chip-time">3:00&ndash;4:00 PM</span></div><div class="item-body"><div class="item-title">Intro to Claude</div><div class="item-desc">Claude Desktop (Chat, Cowork, Code &mdash; Local and Cloud), Claude plugin for Excel</div></div><div class="item-links"><a href="slides/1_intro-to-claude.html">Slides</a><span class="sep">&middot;</span><a href="files/session1.zip">Files</a></div></div>
+    <div class="item"><div class="chip">AUG 11<span class="chip-time">3:00&ndash;4:00 PM</span></div><div class="item-body"><div class="item-title">Claude Tools</div><div class="item-desc">code execution, command line, web search and fetch, and browser use</div></div></div>
+    <div class="item"><div class="chip">AUG 12<span class="chip-time">3:00&ndash;4:00 PM</span></div><div class="item-body"><div class="item-title">Skills, Connectors, and Plugins</div><div class="item-desc">customizing Claude and adding capabilities</div></div></div>
+    <div class="item"><div class="chip">AUG 13<span class="chip-time">3:00&ndash;4:00 PM</span></div><div class="item-body"><div class="item-title">Research and Teaching Setup</div><div class="item-desc">Academic Studio, Python, R, LaTeX, Quarto, Git, GitHub</div></div></div>
+    <div class="item"><div class="chip">AUG 14<span class="chip-time">3:00&ndash;4:00 PM</span></div><div class="item-body"><div class="item-title">AI for Teaching</div><div class="item-desc">NotebookLM, RAG chatbots, slide voice-overs</div></div></div>
     <div class="section-head"><span class="label">Week 2</span><span class="dates">August 17&ndash;19</span></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 17<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">Student Projects</div><div class="item-desc">artifacts, apps, agents</div></div></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 19<span class="chip-time">3:00&ndash;4:00 PM</span></a><div><div class="item-title">AI for Research</div><div class="item-desc">literature search, knowledge databases, writing, and reviews</div></div></div>
-    <div class="item"><a class="chip" href="under-construction.html" title="Slides not posted yet">AUG 19<span class="chip-time">4:00&ndash;5:00 PM</span></a><div><div class="item-title">Agent Assistants</div><div class="item-desc">research team, personal assistants</div></div></div>
+    <div class="item"><div class="chip">AUG 17<span class="chip-time">3:00&ndash;4:00 PM</span></div><div class="item-body"><div class="item-title">Student Projects</div><div class="item-desc">artifacts, apps, agents</div></div></div>
+    <div class="item"><div class="chip">AUG 19<span class="chip-time">3:00&ndash;4:00 PM</span></div><div class="item-body"><div class="item-title">AI for Research</div><div class="item-desc">literature search, knowledge databases, writing, and reviews</div></div></div>
+    <div class="item"><div class="chip">AUG 19<span class="chip-time">4:00&ndash;5:00 PM</span></div><div class="item-body"><div class="item-title">Agent Assistants</div><div class="item-desc">research team, personal assistants</div></div></div>
     <div class="sheet-foot">
       <a class="url" href="https://rice-workshop.kerryback.com">rice-workshop.kerryback.com</a>
       <a class="zoom" href="https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1">Join on Zoom &rarr;</a>

@@ -9,6 +9,7 @@ project:
     - CNAME
     - announcement.pdf
     - slides/pdf/*.pdf
+    - pdf/*.pdf
     - slides/*.html
     - housing_affordability.pptx
     - tesla1.pptx
@@ -22,12 +23,6 @@ project:
 website:
   title: ""
   search: false
-  navbar:
-    search: false
-    title: "Claude for Teaching & Research"
-    right:
-      - href: "https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1"
-        text: Zoom
 
 format:
   html:
