@@ -380,11 +380,13 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 2px;
 }
 
+/* padding-top drops the links level with the chip's second line (the time)
+   rather than its first, so they sit lower than the session title. */
 .flyer .item-links {
   flex: 0 0 auto;
   margin-left: auto;
   white-space: nowrap;
-  padding-top: 3px;
+  padding-top: 25px;
 }
 .flyer .item-links a {
   font-size: 15px;
@@ -452,7 +454,7 @@ ul.task-list li input[type="checkbox"] {
 
      Keep that div's contents on one line: the links are inline, so a line
      break between them would show up as an extra space around the dot.
-     Paths are relative to docs/, e.g. slides/2_productivity.html. Anything
+     Paths are relative to docs/, e.g. slides/2_working.html. Anything
      linked must also be listed under resources: in _quarto.yml.           -->
 
 <div class="flyer">
