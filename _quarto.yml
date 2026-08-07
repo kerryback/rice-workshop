@@ -8,7 +8,6 @@ project:
     - .nojekyll
     - CNAME
     - announcement.pdf
-    - slides/pdf/*.pdf
     - pdf/*.pdf
     - slides/*.html
     - housing_affordability.pptx
