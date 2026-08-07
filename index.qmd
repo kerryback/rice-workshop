@@ -127,6 +127,13 @@ page-layout: full
   margin-top: 2px;
 }
 
+/* A day with no session: muted. Its chip carries an empty chip-time so it
+   matches the height of the real chips without hardcoding a number. */
+.flyer .chip-off {
+  background: #e7e9ee;
+  color: var(--mut);
+}
+
 /* flex-basis 0 so the text shrinks to share the row rather than wrapping
    below the chip once .item is allowed to wrap on narrow screens. */
 .flyer .item-body {
@@ -138,6 +145,8 @@ page-layout: full
   font-weight: 700;
   color: var(--navy);
 }
+/* Must follow .item-title: same specificity, so source order decides. */
+.flyer .item-title-off { color: var(--mut); }
 .flyer .item-desc {
   font-size: 15.5px;
   color: var(--gray);
@@ -321,7 +330,7 @@ page-layout: full
       <div class="chip">AUG 12<span class="chip-time">3:00&ndash;4:00 PM</span></div>
       <div class="item-body">
         <div class="item-title">Teaching Tools</div>
-        <div class="item-desc">Grading assistant team, slide deck voiceovers</div>
+        <div class="item-desc">Create whatever you want: graders, voiceovers, participation notes, polls</div>
       </div>
     </div>
 
@@ -329,14 +338,14 @@ page-layout: full
       <div class="chip">AUG 13<span class="chip-time">3:00&ndash;4:00 PM</span></div>
       <div class="item-body">
         <div class="item-title">AI Tutors</div>
-        <div class="item-desc">NotebookLM, RAG, skills as tutors</div>
+        <div class="item-desc">NotebookLM, RAG, artifacts, skills as tutors </div>
       </div>
     </div>
 
     <div class="item">
       <div class="chip">AUG 14<span class="chip-time">3:00&ndash;4:00 PM</span></div>
       <div class="item-body">
-        <div class="item-title">Student projects</div>
+        <div class="item-title">Student Projects</div>
         <div class="item-desc">Artifacts, apps, agents</div>
       </div>
     </div>
@@ -351,6 +360,13 @@ page-layout: full
       <div class="item-body">
         <div class="item-title">AI for Research</div>
         <div class="item-desc">Knowledge database, analyst/replicator, generator/critic</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="chip chip-off">AUG 18<span class="chip-time">&nbsp;</span></div>
+      <div class="item-body">
+        <div class="item-title item-title-off">No Session</div>
       </div>
     </div>
 
