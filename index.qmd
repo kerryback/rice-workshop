@@ -172,6 +172,55 @@ page-layout: full
   margin: 0 7px;
 }
 
+/* "Slides" links straight to the HTML deck, and hovering it offers the choice
+   of HTML or PDF. Touch devices have no hover, so a tap just follows the link
+   to the HTML deck, which is the sensible default. */
+.flyer .has-menu {
+  position: relative;
+  display: inline-block;
+}
+.flyer .has-menu .submenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s;
+}
+/* Bridges the 6px gap so the pointer can travel link -> menu without closing. */
+.flyer .has-menu .submenu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}
+.flyer .has-menu:hover .submenu,
+.flyer .has-menu:focus-within .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+.flyer .has-menu .submenu a {
+  display: block;
+  padding: 6px 16px;
+  font-size: 14px;
+  text-align: center;
+}
+.flyer .has-menu .submenu a + a { border-top: 1px solid var(--line); }
+.flyer .has-menu .submenu a:hover,
+.flyer .has-menu .submenu a:focus {
+  background: #eef1f6;
+  text-decoration: none;
+}
+
 /* ---- Footer ------------------------------------------------------------ */
 
 .flyer .sheet-foot {
@@ -213,14 +262,17 @@ page-layout: full
 }
 </style>
 
-<!-- To post a session's material, add an item-links div to that row:
-
-       <div class="item-links"><a href="PATH">Slides</a><span class="sep">&middot;</span><a href="PATH">Files</a></div>
+<!-- To post a session's material, add an item-links div to that row. Copy the
+     Aug 10 row below and swap the three paths: the deck's .html twice (the
+     Slides link itself and the HTML entry), its .pdf, and the session zip.
 
      Keep that div's contents on one line: the links are inline, so a line
      break between them would show up as an extra space around the dot.
      Paths are relative to docs/, e.g. slides/2_working.html. Anything
-     linked must also be listed under resources: in _quarto.yml.           -->
+     linked must also be listed under resources: in _quarto.yml.
+
+     If a session has no PDF, drop the has-menu and submenu spans and leave
+     a plain <a href="PATH">Slides</a>.                                    -->
 
 <div class="flyer">
   <div class="sheet">
@@ -245,7 +297,7 @@ page-layout: full
         <div class="item-title">Intro to Claude</div>
         <div class="item-desc">Claude Desktop, Claude plugin for Excel, prompting, code execution and documents</div>
       </div>
-      <div class="item-links"><a href="slides/1_intro-to-claude.html">Slides</a><span class="sep">&middot;</span><a href="files/session1.zip">Files</a></div>
+      <div class="item-links"><span class="has-menu"><a href="slides/1_intro-to-claude.html">Slides</a><span class="submenu"><a href="slides/1_intro-to-claude.html">HTML</a><a href="pdf/1_intro-to-claude.pdf">PDF</a></span></span><span class="sep">&middot;</span><a href="files/session1.zip">Files</a></div>
     </div>
 
     <div class="item">
