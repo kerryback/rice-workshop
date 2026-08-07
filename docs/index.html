@@ -414,6 +414,10 @@ ul.task-list li input[type="checkbox"] {
   position: relative;
   display: inline-block;
 }
+/* No overflow:hidden here -- it would clip the ::before bridge below, which is
+   what lets the pointer cross the gap. The corners are rounded on the child
+   links instead. Hiding is delayed so a brief slip off the menu does not
+   close it before it can be clicked; showing stays instant. */
 .flyer .has-menu .submenu {
   position: absolute;
   top: calc(100% + 6px);
@@ -423,25 +427,25 @@ ul.task-list li input[type="checkbox"] {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 6px;
-  overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.12s;
+  transition: opacity 0.12s 0.4s, visibility 0s 0.52s;
 }
-/* Bridges the 6px gap so the pointer can travel link -> menu without closing. */
+/* Spans the gap, with slack either side for an imprecise pointer. */
 .flyer .has-menu .submenu::before {
   content: "";
   position: absolute;
-  top: -6px;
-  left: 0;
-  width: 100%;
-  height: 6px;
+  top: -10px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: 10px;
 }
 .flyer .has-menu:hover .submenu,
 .flyer .has-menu:focus-within .submenu {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.12s 0s, visibility 0s 0s;
 }
 .flyer .has-menu .submenu a {
   display: block;
@@ -449,6 +453,8 @@ ul.task-list li input[type="checkbox"] {
   font-size: 14px;
   text-align: center;
 }
+.flyer .has-menu .submenu a:first-child { border-radius: 5px 5px 0 0; }
+.flyer .has-menu .submenu a:last-child  { border-radius: 0 0 5px 5px; }
 .flyer .has-menu .submenu a + a { border-top: 1px solid var(--line); }
 .flyer .has-menu .submenu a:hover,
 .flyer .has-menu .submenu a:focus {
@@ -507,7 +513,10 @@ ul.task-list li input[type="checkbox"] {
      linked must also be listed under resources: in _quarto.yml.
 
      If a session has no PDF, drop the has-menu and submenu spans and leave
-     a plain <a href="PATH">Slides</a>.                                    -->
+     a plain <a href="PATH" target="_blank" rel="noopener">Slides</a>.
+
+     Every link here opens in a new tab, so keep the target and rel on any
+     you add.                                                              -->
 
 <div class="flyer">
   <div class="sheet">
@@ -532,7 +541,7 @@ ul.task-list li input[type="checkbox"] {
         <div class="item-title">Intro to Claude</div>
         <div class="item-desc">Claude Desktop, Claude plugin for Excel, prompting, code execution and documents</div>
       </div>
-      <div class="item-links"><span class="has-menu"><a href="slides/1_intro-to-claude.html">Slides</a><span class="submenu"><a href="slides/1_intro-to-claude.html">HTML</a><a href="pdf/1_intro-to-claude.pdf">PDF</a></span></span><span class="sep">·</span><a href="files/session1.zip">Files</a></div>
+      <div class="item-links"><span class="has-menu"><a href="slides/1_intro-to-claude.html" target="_blank" rel="noopener">Slides</a><span class="submenu"><a href="slides/1_intro-to-claude.html" target="_blank" rel="noopener">HTML</a><a href="pdf/1_intro-to-claude.pdf" target="_blank" rel="noopener">PDF</a></span></span><span class="sep">·</span><a href="files/session1.zip" target="_blank" rel="noopener">Files</a></div>
     </div>
 
     <div class="item">
@@ -597,8 +606,8 @@ ul.task-list li input[type="checkbox"] {
     </div>
 
     <div class="sheet-foot">
-      <a class="url" href="https://rice-workshop.kerryback.com">rice-workshop.kerryback.com</a>
-      <a class="zoom" href="https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1">Join on Zoom →</a>
+      <a class="url" href="https://rice-workshop.kerryback.com" target="_blank" rel="noopener">rice-workshop.kerryback.com</a>
+      <a class="zoom" href="https://jgsb.zoom.us/j/95657980099?pwd=Ve5TMEaaBRQnhWnhnpaJFDHevFIbRU.1" target="_blank" rel="noopener">Join on Zoom →</a>
     </div>
 
   </div>
