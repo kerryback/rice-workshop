@@ -1,0 +1,87 @@
+---
+title: "Academic Studio"
+author: "<span style='color:#3b82f6'>From BI to AI:<br>Making Data-Driven Decisions with Agentic AI</span><br><br>Kerry Back<br>Rice Business Executive Education"
+format: revealjs
+---
+
+## Implementations of Claude Code
+
+The same Claude Code underneath. Only the window around it differs.
+
+::: {.two-cards}
+::: {.card-blue}
+[CLI]{.card-title}
+
+The original. Type `claude` in a terminal. Everything else here is this same program.
+:::
+::: {.card-amber}
+[Claude Desktop]{.card-title}
+
+Anthropic's own app, with four versions of Claude. Claude Code Local is the version that matches.
+:::
+:::
+
+::: {.two-cards}
+::: {.card-teal}
+[IDE extension]{.card-title}
+
+An embedding of Claude Code in a software development tool, for example VS Code or JetBrains.
+:::
+::: {.card-purple}
+[Academic Studio]{.card-title}
+
+A specialized build of VS Code, that strips out tools we don't need for using Claude and adds a Claude menu and pre-installed extensions.
+:::
+:::
+
+## Install
+
+Download for your machine at [academic-studio.com](https://academic-studio.com) and run it --- on Windows an installer, on a Mac a disk image you drag into Applications. Accept the license agreement and all the defaults.
+
+::: {.two-cards}
+::: {.card-blue}
+[If Windows objects]{.card-title}
+
+SmartScreen may say it protected your PC. Choose [More Info]{.accent}, then [Run Anyway]{.accent} --- you may have to expand the More Info box before the button appears.
+:::
+::: {.card-amber}
+[On a Mac]{.card-title}
+
+A warning here too, but a milder one. Because the build is signed and notarized, macOS [asks rather than blocks]{.accent} --- are you sure you want to open an app downloaded from the internet? Choose Open.
+:::
+:::
+
+## Run Setup
+
+On first launch, [Run Setup]{.accent} --- from the Welcome tab, or `Help → Run Setup`. 
+
+Choose the Student/Professional profile and press Apply for the extensions, then Install Selected Programs for the supporting software.
+
+## Open a Folder
+
+Like Claude Desktop, Academic Studio uses Claude inside a folder.
+
+Open the folder you want to work in from the Welcome tab 
+ or `File → Open Folder`. Claude Code opens automatically beside it.
+
+## Log In
+
+On first use, you need to connect to your Anthropic account.
+
+Enter `/login` at the prompt window and follow the instructions.  Your $20 Pro account will work fine (same as Claude Desktop).
+
+## Take the Tour
+
+From the Welcome tab or `Help → Tour of Academic Studio`, take the tour --- a short slide deck explaining how to work in Academic Studio
+
+## Ask Claude for Help
+
+Tell Claude you are working in Academic Studio and give Claude the link [academic-studio.com](https://academic-studio.com). Then ask Claude for help on anything about working in Academic Studio.
+
+## Use Claude
+
+- You can do everything we have done in class by prompting Claude in Academic Studio.
+
+- Start by asking Claude to connect to the https://lab-aug.rice-business.org/eia/mcp server.
+
+- Notice the Claude menu.  Try setting permissions, installing skills, ...

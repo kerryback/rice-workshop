@@ -1,0 +1,18 @@
+# Quarterly Results, 2024-2025
+
+Revenue grew from $4.12M in 2024 Q1 to $5.88M in 2025 Q4, an increase of 43% over eight quarters.
+
+Margin has been steady between 28% and 37%. The fourth quarter is the strongest in both years, which is worth keeping in mind when comparing any single quarter against the one before it.
+
+The figures here are invented for teaching purposes.
+
+| Quarter | Revenue | Cost | Margin |
+|---|---|---|---|
+| 2024 Q1 | 4.12 | 2.80 | 32.0% |
+| 2024 Q2 | 4.38 | 2.95 | 32.6% |
+| 2024 Q3 | 4.05 | 2.88 | 28.9% |
+| 2024 Q4 | 5.21 | 3.40 | 34.7% |
+| 2025 Q1 | 4.66 | 3.11 | 33.3% |
+| 2025 Q2 | 4.91 | 3.24 | 34.0% |
+| 2025 Q3 | 4.74 | 3.19 | 32.7% |
+| 2025 Q4 | 5.88 | 3.72 | 36.7% |

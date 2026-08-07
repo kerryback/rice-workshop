@@ -1,0 +1,473 @@
+---
+title: "2. AI for Personal Productivity"
+author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
+---
+
+
+## Today's Session
+
+::: {.step-flow}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Academic Studio
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+The Command Line
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+CLAUDE.md and Skills
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+4
+:::
+::: {.step-title}
+Claude as a Teaching Assistant
+:::
+:::
+:::
+
+## Academic Studio {.section-divider}
+
+## Where Academic Studio Fits {.shrink}
+
+::: {.two-cards}
+::: {.card-blue}
+
+- Original Claude Code was CLI (command line interface)
+- Millions of developers use Claude Code extension for VS Code
+- VS Code = integrated development environment (IDE) from Microsoft
+:::
+::: {.card-amber}
+
+Academic Studio = VS Copde, except
+
+- Removed menus and toolbar items aimed at developers
+- Claude Code opens on startup
+- Other extensions pre-installed
+- New Claude menu and revised Help menu
+:::
+:::
+
+
+## File Explorer and Search {.shrink}
+
+Reach the File Explorer tool from the left toolbar.
+
+::: {.two-cards}
+::: {.card-blue}
+[Files]{.card-title}
+
+- Right-click to rename, copy, ...
+- Double-click to open in Academic Studio viewer
+- Viewer provides different options for different file types (cannot edit Office docs)
+:::
+::: {.card-amber}
+[Search]{.card-title}
+
+- The magnifying glass searches [inside every file]{.accent} in the folder at once
+- Options for case, whole word, and regular expressions
+- Replace across all files from the same pane
+:::
+
+:::
+
+
+
+## Getting Around{.shrink}
+
+::: {.three-cards}
+::: {.card-blue}
+[Conversations]{.card-title}
+
+- Open a second Claude conversation for a separate task
+- Each keeps its own context; they do not see each other
+:::
+::: {.card-amber}
+[Terminal]{.card-title}
+
+- Open from the Terminal menu, X to close
+- Claude uses it too --- you will see commands run as it works
+:::
+
+
+::: {.card-purple}
+[Remote SSH]{.card-title}
+
+- Connect to jgsrc1 or a different remote server
+- Files and code execution on remote server.  Academic Studio runs on your computer.
+:::
+:::
+
+::: {.card-dark}
+[Extensions]{.card-title}
+
+VS Codium marketplace (all are free)
+:::
+
+## Menus
+
+- File/New Window opens a new Academic Studio session.  Work on multiple projects at once.
+- Claude/Permissions
+- Claude/Conversations
+- Help/Run Setup
+
+## Some Claude Commands
+
+- [/resume]{.accent} - a version of Claude/Conversations
+- [/model]{.accent} - select from Fable, Opus (default), Sonnet, and Haiku
+- [/clear]{.accent} - clear the context window (= new conversation)
+- [/compact]{.accent} - summarize the conversation in a text file, launch a new conversation that reads the text file
+- [Esc]{.accent} - escape key interrupts Claude, which then waits for new instructions
+
+## Fit with VS Code 
+
+- Independent apps, individual extensions and settings 
+- They share Claude --- same CLAUDE.md, same skills, same conversation history 
+- Example: Work on project in Academic Studio.  Then open in VS Code. [/resume]{.accent} brings up conversation history from Academic Studio.  
+
+## The Command Line {.section-divider}
+
+## Using a Terminal (Command Line)
+
+- Windows: Command Prompt, Windows PowerShell, Windows Terminal
+- Mac Terminal
+- Open.  Then type commands.  Syntax must be right (not intelligent)
+
+## What Claude Can Do at the Command Line
+
+::: {.three-cards}
+::: {.card-blue}
+[File operations]{.card-title}
+
+Move, copy, rename, delete, search within.
+
+*Find all files in my Documents folder that discuss ... and move them to ...*
+:::
+::: {.card-amber}
+[Install and run software]{.card-title}
+
+*Run a python script, build a LaTeX doc, ...*
+:::
+::: {.card-teal}
+[Interact with external services]{.card-title}
+
+Command Line Interfaces (CLIs): `gh` for GitHub,  `aws` for Amazon Web Services, ...  Also, use APIs.
+:::
+:::
+
+## More Things Claude Can Do at the Command Line
+
+::: {.highlight-box}
+
+
+- `pandoc` --- convert between Word, Markdown, HTML, PDF
+- `ImageMagick` --- resize, crop, convert images in bulk
+- `ffmpeg` --- trim video, transcode, pull the audio out
+- `ripgrep` --- search thousands of files in seconds
+- `cron` --- run a command on a schedule
+:::
+
+
+## Example: Git (Search the Past)
+
+Git is a version control system.  A **commit** records the current state of a folder (repository=repo).  Git **is not** AI.  Git existed long before AI.  But AI knows Git.
+
+
+::: {.code-box}
+::: {.box-title}
+Tell Claude
+:::
+Install Git.  Commit this folder to Git.
+:::
+
+Frequently, thereafter, tell Claude to commit changes.
+
+
+##
+
+At some point, you realize that you want to recover something from a version that was overwritten sometime in the past:
+
+::: {.code-box}
+::: {.box-title}
+Tell Claude
+:::
+Find a prior version of ... that said ... Add that to the current version.
+:::
+
+
+
+## CLAUDE.md and Skills {.section-divider}
+
+
+## CLAUDE.md
+
+::: {.two-cards}
+::: {.card-blue}
+
+- At the start of each conversation, Claude looks in specific places for CLAUDE.md files
+- It looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder
+:::
+::: {.card-amber}
+
+- A CLAUDE.md is a text file that contains instructions for Claude
+- Claude reads the entire file, so use it sparingly
+:::
+:::
+
+::: {.explainer}
+You could get the same behavior by pasting the instructions in the prompt window
+:::
+
+
+
+## Skills
+
+::: {.three-cards}
+::: {.card-blue}
+
+At the start of each conversation, Claude also looks in specific places for SKILL.md files
+:::
+::: {.card-amber}
+
+It looks in your home directory (C:\\users\\yourname on Windows) and it looks in the project folder
+:::
+::: {.card-teal}
+
+Skills are text files saved on your hard drive.  Claude reads the top of each SKILL.md file (the skill description) on startup, and it reads the bulk of the file [only when needed]{.accent}
+:::
+:::
+
+
+## Installing Skills
+
+::: {.two-cards}
+::: {.card-blue}
+
+- There are thousands of skills published on the internet.  
+- Anthropic publishes skills (xlsx, etc.) at [https://github.com/anthropics/skills/](https://github.com/anthropics/skills/)
+:::
+::: {.card-amber}
+
+- To search for skills, ask Claude.  To install a skill you want, ask Claude.
+- Other than a few of Anthropic's skills, the most useful skills are generally those you create, because they are customized to your work.
+:::
+:::
+
+## Some Examples
+
+I've looked at several skill repos for business/economics research.  Most are not useful.  Here are a couple I've adopted --- by Lu Han, Bank of Canada.
+
+::: {.highlight-box}
+- [Econ Writing](https://github.com/hanlulong/econ-writing-skill/tree/main/.claude/skills/econ-write): tells Claude to follow Cochrane's Writing Tips for PhD Students and some other style guides
+
+- [Econ Paper Review](https://github.com/hanlulong/econ-paper-review-skill/tree/main/econ-review): writes a referee report on your paper
+:::
+
+Give Claude the links and ask Claude to install them if you want to try them out.
+
+
+## Creating Skills
+
+::: {.three-cards}
+::: {.card-blue}
+
+Usual process is you work on something, iterating until you get what you want.
+:::
+::: {.card-amber}
+
+You realize you may want the same thing again, and you don't want to go through the iteration again.
+:::
+::: {.card-teal}
+
+Solution: tell Claude to save the satisfactory method (recipe) as a skill.  Can save your result along with the skill as an example to follow if useful.
+:::
+:::
+
+
+## Invoking Skills
+
+::: {.three-cards}
+::: {.card-blue}
+[Slash Command]{.card-title}
+
+- Type `/skillname` at the prompt
+- Example: `/plan`
+- Invokes the skill directly
+:::
+::: {.card-amber}
+[Natural Language]{.card-title}
+
+- Describe what you need in plain English
+- Example: "Use your planning mode and evaluate ..."
+:::
+::: {.card-teal}
+[Automatic]{.card-title}
+
+- Claude may invoke a skill on its own
+- Example: "Create an Excel file" triggers the xlsx skill automatically
+- Driven by the skill's description
+:::
+:::
+
+## Example: Create and Invoke
+
+::: {.three-cards}
+::: {.card-blue}
+
+Tell Claude to create a skill for your folder named "pirate" with this content: "Always answer like a pirate"
+:::
+::: {.card-amber}
+
+Start a new conversation.  Enter [/pirate What is the meaning of life?]{.accent}
+:::
+::: {.card-teal}
+
+Ask Claude to show you the pirate SKILL.md
+:::
+:::
+
+## Claude as a Teaching Assistant {.section-divider}
+
+## What can Claude Do?
+
+::: {.two-cards}
+::: {.highlight-box}
+- Draft slides
+- Assist with editing slides
+- Generate images for slides
+- Draft quizzes and assignments
+- Assist with grading
+:::
+::: {.highlight-box}
+- Draft emails to students 
+- Help create async materials 
+- Build tutors
+- Build Excel workbooks
+- Write cases
+:::
+:::
+
+## Drafting and Editing Slides
+
+Claude is generally able to create slide decks using whatever style you like.  Here is an example.
+
+::: {.highlight-box}
+- [SamplePresentation.pptx](../files/session2/SamplePresentation.pptx) is a Microsoft template
+- I asked Claude to remake tesla.pptx in that style
+- The first draft: [tesla1.pptx](../tesla1.pptx)
+- The second draft: [tesla2.pptx](../tesla2.pptx)
+:::
+
+Once it is successful, you can ask Claude to save the recipe as a skill to use thereafter.
+
+::: {.explainer} 
+When editing an existing deck, you will want Claude to automatically save changes and close an open deck before editing.  Then reopen for you to see (and edit) again.
+:::
+
+## One Skill to Rule Them All {.shrink}
+
+A designed .pptx is [already a style kit]{.accent}.  Its layouts carry the scenery, its theme carries the fonts and colors.  So the faithful way to build a deck "in that style" is to instantiate the template's own layouts and fill the placeholders --- never to draw a shape or name a color.
+
+::: {.three-cards}
+::: {.card-blue}
+[One engine]{.card-title}
+
+The code that fills placeholders is generic.  Nothing in it knows about any particular template.
+:::
+::: {.card-amber}
+[Templates are data]{.card-title}
+
+Each style is just a folder: the .pptx, plus written notes on what each of its layouts is for.
+:::
+::: {.card-teal}
+[So it scales]{.card-title}
+
+A new style is a [registration]{.accent}, not a new skill.  My `house-decks` skill holds all of them.
+:::
+:::
+
+::: {.explainer}
+What comes out is an ordinary .pptx --- opens in PowerPoint, fully editable, fonts intact
+:::
+
+
+## What You Say to It {.shrink}
+
+::: {.three-cards}
+::: {.card-blue}
+[Build a deck]{.card-title}
+
+*Make a deck on capital structure for Tuesday's class.*
+
+Uses my default style and says which one it used, so a wrong guess is cheap to correct.
+:::
+::: {.card-amber}
+[Register a style]{.card-title}
+
+*Make a house deck style from this deck and call it Jones.*
+
+Copies the .pptx in and measures every placeholder --- how much text each well actually holds.
+:::
+::: {.card-teal}
+[Hand it to a colleague]{.card-title}
+
+*Export the Jones template as a skill.*
+
+A self-contained folder they drop into their own skills directory.  Nothing to install.
+:::
+:::
+
+::: {.explainer}
+Your own words become aliases --- "my usual style", "the course template" --- so you never have to remember a registry name
+:::
+
+
+## What It Does Without Being Asked {.shrink}
+
+The value of a skill is mostly the mistakes it has already made.  Each of these cost a wasted afternoon once:
+
+::: {.highlight-box}
+- Closes the deck in PowerPoint first --- otherwise PowerPoint overwrites the new version from memory on its next save
+- Refuses to write at all while the file is open, as a backstop
+- Deletes placeholders you did not fill --- an empty picture well renders as a [grey box]{.accent}
+- Restyles tables, because templates rarely define a table style and PowerPoint's default blue banding shows through
+- Renders the finished deck and looks at it before reporting success
+:::
+
+::: {.explainer}
+This is what "save the recipe as a skill" is really for --- not the recipe, the scar tissue
+:::
+
+## A Good Use of CLAUDE.md: Routing
+
+Skills announce when they apply, and sometimes two of them claim the same job. Anthropic's `pptx` skill triggers on [any]{.accent} PowerPoint file, so a skill of your own for your house style will collide with it. A few lines in CLAUDE.md settle the precedence:
+
+::: {.code-box}
+```
+## PowerPoint
+
+- A deck in our house style, or no style named: use <house-style skill>
+- "In the style of this deck" (some other file): use <template-matching skill>
+- Anything else involving .pptx (reading a deck, pulling text out of one,
+  designing one from scratch): use the pptx skill
+```
+:::
+
+::: {.explainer}
+CLAUDE.md is the right home for this because it is yours. A bundled skill gets replaced when it is updated, so instructions written into one quietly disappear.
+:::

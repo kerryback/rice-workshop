@@ -3,12 +3,20 @@ project:
   output-dir: docs
   render:
     - index.qmd
-    - html/*.qmd
+    - slides/*.qmd
   resources:
     - .nojekyll
     - CNAME
     - announcement.pdf
-    - pdf/*.pdf
+    - slides/pdf/*.pdf
+    - slides/*.html
+    - housing_affordability.pptx
+    - tesla1.pptx
+    - tesla2.pptx
+    - amortization.xlsx
+    - files/session1/*
+    - files/session1.zip
+    - files/session2/SamplePresentation.pptx
     - under-construction.html
 
 website:

@@ -190,3 +190,15 @@ docs/.claude/
 **/*.quarto_ipynb
 .playwright-mcp/
 
+# Node dependencies (pptxgenjs deck builders)
+node_modules/
+
+# macOS
+.DS_Store
+
+# Local working material, not part of the published site
+demos/
+tesla-eps/
+t2-slide2.png
+tier2-s2.png
+
