@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-64ddf9ef13999a6fac4d7c2921cf35bc.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1f64d293b7630d1a022f93c5c9723d35.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -600,23 +600,19 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <li>The second draft: <a href="../files/session2/tesla2.pptx" target="_blank">tesla2.pptx</a></li>
 </ul>
 </div>
-<p>Once it is successful, you can ask Claude to save the recipe as a skill to use thereafter.</p>
-<div class="explainer">
-<p>When editing an existing deck, you will want Claude to automatically save changes and close an open deck before editing. Then reopen for you to see (and edit) again.</p>
-</div>
 </section>
-<section id="a-skill-to-create-deck-styles" class="slide level2 center">
-<h2>A Skill to Create Deck Styles</h2>
-<div class="step-flow-3">
+<section id="creating-a-skill" class="slide level2 center">
+<h2>Creating a Skill</h2>
+<div class="step-flow-2">
 <div class="step-card">
 <div class="step-icon">
 <p>1</p>
 </div>
 <div class="step-title">
-<p>Install</p>
+<p>Save the Recipe</p>
 </div>
 <div class="step-desc">
-<p>Ask Claude to install the House Decks plugin from <a href="https://github.com/kerryback/skills" target="_blank">github.com/kerryback/skills</a></p>
+<p>Once Claude has been successful at creating decks in your preferred style, ask Claude to save the recipe as a skill.</p>
 </div>
 </div>
 <div class="step-card">
@@ -624,32 +620,48 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <p>2</p>
 </div>
 <div class="step-title">
-<p>Register a Style</p>
+<p>What Gets Saved</p>
 </div>
 <div class="step-desc">
-<p>Start a new conversation. Ask Claude to apply it to a PowerPoint deck written in your preferred style. Give the style a name.</p>
-</div>
-</div>
-<div class="step-card">
-<div class="step-icon">
-<p>3</p>
-</div>
-<div class="step-title">
-<p>Create a Deck</p>
-</div>
-<div class="step-desc">
-<p>Ask Claude to create a new deck in that style.</p>
+<p>Claude will save images, layout guides, etc. from the doc you gave it along with the fonts that best match the doc (maybe not exact match) for reuse.</p>
 </div>
 </div>
 </div>
-<div class="explainer">
-<p>The PowerPoint deck contains elements that Claude will save and deploy again and fonts that it will try to match. So, “create a deck in this style” is something Claude should be able to do, using the python-pptx Python library.</p>
+<div class="card-dark">
+<p>Include instructions in the skill for Claude to automatically save changes and close before editing and then reopen.</p>
 </div>
+</section>
+<section id="isnt-this-just-a-powerpoint-template" class="slide level2 shrink center">
+<h2>Isn’t This Just a PowerPoint Template?</h2>
+<p>Partly, yes — and a good skill does not replace the template.</p>
+<div class="two-cards">
+<div class="card-blue">
+<p><span class="card-title">What the Template Already Does</span></p>
+<p>Fonts, colors, layouts, placeholder positions, the scenery. A designed .pptx is already a style kit.</p>
+<p>A good skill <span class="accent">uses</span> it — filling that template’s own layouts instead of drawing shapes.</p>
+</div>
+<div class="card-amber">
+<p><span class="card-title">What the Skill Adds</span></p>
+<ul>
+<li>Which layout for which kind of content</li>
+<li>How much text fits in each placeholder</li>
+<li>What to do when nothing fits — a wide chart, a long table</li>
+</ul>
+</div>
+</div>
+<div class="card-dark">
+<p>A template guides <span class="accent">a person</span>, who sees the result and adjusts. A skill guides <span class="accent">Claude</span>, which cannot.</p>
+</div>
+</section>
+<section id="claude-in-powerpoint" class="slide level2 center">
+<h2>Claude in PowerPoint</h2>
+<p>In May, 2026, the Claude add-in for PowerPoint became generally available (for paid accounts). But I don’t think Rice has authorized it for our Microsoft 365 accounts.</p>
+<p>The advantages would be (1) just one window open, (2) no save/close/reopen.</p>
 </section>
 <section id="a-good-use-of-claude.md-routing" class="slide level2 center">
 <h2>A Good Use of CLAUDE.md: Routing</h2>
 <div class="highlight-box">
-<p>Skills announce when they apply, and sometimes two of them claim the same job. Anthropic’s <code>pptx</code> skill triggers on <span class="accent">any</span> PowerPoint file, so a skill of your own for your house style will collide with it.</p>
+<p>Skills announce when they apply, and sometimes two of them claim the same job. Anthropic’s <code>pptx</code> skill triggers on <span class="accent">any</span> PowerPoint file, so a skill of your own for your desired style will collide with it.</p>
 </div>
 <div class="card-dark">
 <p>Ask Claude to assist in editing CLAUDE.md globally or in a project folder to settle the precedence.</p>
@@ -660,10 +672,11 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <ol type="1">
 <li><p>Tell Claude to install Git and to initialize your project folder as a Git repo and to commit. Make some changes, commit again, and ask about restoring the prior version.</p></li>
 <li><p>Pick a deck you want to refresh. Ask Claude to read it and offer suggestions on content, organization, and style. Ask Claude to edit some slides and to draft some slides, saving changes in a new name.</p></li>
+<li><p>Create a skill for Claude to write slides in your desired style. Inspect the skill (if global, it is in $HOME/.claude/skills; if local, it is in your project folder .claude/skills)</p></li>
 </ol>
 </section>
-<section id="takeaway" class="slide level2 centered-statement center">
-<h2>Takeaway</h2>
+<section id="takeaways" class="slide level2 centered-statement center">
+<h2>Takeaways</h2>
 <div class="card card-dark">
 <p>Claude can work alongside you on whatever you’re working on. Get advice and suggestions. Hand over the tedious part of the work. Save good workflows as skills so they can be easily repeated.</p>
 </div>

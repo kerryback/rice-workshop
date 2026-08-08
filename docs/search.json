@@ -928,7 +928,7 @@
     "href": "slides/2_working.html#drafting-and-editing-slides",
     "title": "2. Working with Claude",
     "section": "Drafting and Editing Slides",
-    "text": "Drafting and Editing Slides\nClaude is generally able to create slide decks using whatever style you like. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft template\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx\n\n\nOnce it is successful, you can ask Claude to save the recipe as a skill to use thereafter.\n\nWhen editing an existing deck, you will want Claude to automatically save changes and close an open deck before editing. Then reopen for you to see (and edit) again."
+    "text": "Drafting and Editing Slides\nClaude is generally able to create slide decks using whatever style you like. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft template\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx"
   },
   {
     "objectID": "slides/2_working.html#a-skill-to-create-deck-styles",
@@ -942,14 +942,14 @@
     "href": "slides/2_working.html#a-good-use-of-claude.md-routing",
     "title": "2. Working with Claude",
     "section": "A Good Use of CLAUDE.md: Routing",
-    "text": "A Good Use of CLAUDE.md: Routing\n\nSkills announce when they apply, and sometimes two of them claim the same job. Anthropic’s pptx skill triggers on any PowerPoint file, so a skill of your own for your house style will collide with it.\n\n\nAsk Claude to assist in editing CLAUDE.md globally or in a project folder to settle the precedence."
+    "text": "A Good Use of CLAUDE.md: Routing\n\nSkills announce when they apply, and sometimes two of them claim the same job. Anthropic’s pptx skill triggers on any PowerPoint file, so a skill of your own for your desired style will collide with it.\n\n\nAsk Claude to assist in editing CLAUDE.md globally or in a project folder to settle the precedence."
   },
   {
     "objectID": "slides/2_working.html#exercises",
     "href": "slides/2_working.html#exercises",
     "title": "2. Working with Claude",
     "section": "Exercises",
-    "text": "Exercises\n\nTell Claude to install Git and to initialize your project folder as a Git repo and to commit. Make some changes, commit again, and ask about restoring the prior version.\nPick a deck you want to refresh. Ask Claude to read it and offer suggestions on content, organization, and style. Ask Claude to edit some slides and to draft some slides, saving changes in a new name."
+    "text": "Exercises\n\nTell Claude to install Git and to initialize your project folder as a Git repo and to commit. Make some changes, commit again, and ask about restoring the prior version.\nPick a deck you want to refresh. Ask Claude to read it and offer suggestions on content, organization, and style. Ask Claude to edit some slides and to draft some slides, saving changes in a new name.\nCreate a skill for Claude to write slides in your desired style. Inspect the skill (if global, it is in $HOME/.claude/skills; if local, it is in your project folder .claude/skills)"
   },
   {
     "objectID": "slides/2_working.html#takeaway",
@@ -1321,5 +1321,208 @@
     "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
+  },
+  {
+    "objectID": "slides/3_teaching.html#todays-session",
+    "href": "slides/3_teaching.html#todays-session",
+    "title": "3. Teaching Tools",
+    "section": "Today’s Session",
+    "text": "Today’s Session\n\nPlugins\nFlipping the classroom\nBuilding teaching assistants\n\nSlide narration\nGrading assistants\nOther tools"
+  },
+  {
+    "objectID": "slides/3_teaching.html#plugins",
+    "href": "slides/3_teaching.html#plugins",
+    "title": "3. Teaching Tools",
+    "section": "Plugins",
+    "text": "Plugins\nA shipping protocol for skills plus scripts, MCP connectors, and other files\n\nVisit the Anthropic plugin directory: Enter /plugin as a Claude prompt or visit https://github.com/anthropics/claude-plugins-official\n\n\n\nThousands of people (including me) have created their own plugin marketplaces. Everything is free.\n\n\nThe most useful things will be the ones you create (with Claude’s assistance) — for example, a code script that you know works and a SKILL.md that tells Claude when to use it"
+  },
+  {
+    "objectID": "slides/3_teaching.html#flipping-the-classroom",
+    "href": "slides/3_teaching.html#flipping-the-classroom",
+    "title": "3. Teaching Tools",
+    "section": "Flipping the Classroom",
+    "text": "Flipping the Classroom"
+  },
+  {
+    "objectID": "slides/3_teaching.html#building-assistants",
+    "href": "slides/3_teaching.html#building-assistants",
+    "title": "3. Teaching Tools",
+    "section": "Building Assistants",
+    "text": "Building Assistants"
+  },
+  {
+    "objectID": "slides/3_teaching.html#section",
+    "href": "slides/3_teaching.html#section",
+    "title": "3. Teaching Tools",
+    "section": "",
+    "text": "Give a person a fish, and they eat for a day. Teach a person to fish, and they end up in the water with an alligator — but the fish is theirs."
+  },
+  {
+    "objectID": "slides/3_teaching.html#todays-real-subject",
+    "href": "slides/3_teaching.html#todays-real-subject",
+    "title": "3. Teaching Tools",
+    "section": "Today’s Real Subject",
+    "text": "Today’s Real Subject\n\nI will show you some things I built. The things are not the point — you will want different ones. The point is how they got built: you want something, you ask Claude how, you get a rough version, and you keep going until it works."
+  },
+  {
+    "objectID": "slides/3_teaching.html#three-ways-to-extend-claude",
+    "href": "slides/3_teaching.html#three-ways-to-extend-claude",
+    "title": "3. Teaching Tools",
+    "section": "Three Ways to Extend Claude",
+    "text": "Three Ways to Extend Claude\n\n\nSkills\n\nTeach Claude your procedure for a task\nIt follows the same steps every time\n\n\n\nConnectors\n\nGive Claude your data and systems\nAsk a database, your calendar, your files\n\n\n\nPlugins\n\nBundle skills and connectors into one package\nInstall once; share a whole setup with a team\n\n\n\n\nThe model is fixed. What you change is what it knows how to do (skills), what it can reach (connectors), and how you package and share both (plugins)."
+  },
+  {
+    "objectID": "slides/3_teaching.html#skills",
+    "href": "slides/3_teaching.html#skills",
+    "title": "3. Teaching Tools",
+    "section": "Skills",
+    "text": "Skills"
+  },
+  {
+    "objectID": "slides/3_teaching.html#codified-expertise-not-a-smarter-model",
+    "href": "slides/3_teaching.html#codified-expertise-not-a-smarter-model",
+    "title": "3. Teaching Tools",
+    "section": "Codified Expertise, Not a Smarter Model",
+    "text": "Codified Expertise, Not a Smarter Model\n\n\nThe problem with chatting\n\nA great prompt works once, then scrolls out of your history\nThe next person — or the next you — starts over\nQuality depends on remembering how you did it last time\n\n\n\nWhat a skill fixes\n\nWrite down “how to do this well,” once\nEvery future run follows it — same standard, no reminding\nA one-time workflow becomes a reusable asset\n\n\n\n\nA skill is not a model upgrade. It is your procedure, written down where Claude will follow it every time — across Claude.ai, Claude Code, and the add-ins."
+  },
+  {
+    "objectID": "slides/3_teaching.html#what-a-skill-actually-is",
+    "href": "slides/3_teaching.html#what-a-skill-actually-is",
+    "title": "3. Teaching Tools",
+    "section": "What a Skill Actually Is",
+    "text": "What a Skill Actually Is\n\n\nA folder and a file\n\nA SKILL.md file: a name, a description, and instructions in plain English\nOptional scripts and reference documents alongside\nThat is the whole thing — readable, editable, versionable\n\n\n\nHow Claude uses it\n\nAt startup it reads only each skill’s name and description\nWhen a task looks relevant, it pulls in the full instructions\nScripts run only when needed — so your context stays lean\n\n\n\n\nThis “progressive disclosure” is why you can have dozens of skills installed and pay attention-cost only for the one in use."
+  },
+  {
+    "objectID": "slides/3_teaching.html#three-ways-a-skill-fires",
+    "href": "slides/3_teaching.html#three-ways-a-skill-fires",
+    "title": "3. Teaching Tools",
+    "section": "Three Ways a Skill Fires",
+    "text": "Three Ways a Skill Fires\n\n\nSlash command\nYou type /critique or /pptx to invoke it directly\n\n\nNatural language\nYou ask in plain English and Claude runs the matching skill\n\n\nAutomatic\n“Create an Excel file” triggers the Excel skill on its own — Claude reads each skill’s description and picks\n\n\n\nBecause each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them — without you naming them."
+  },
+  {
+    "objectID": "slides/3_teaching.html#build-your-own",
+    "href": "slides/3_teaching.html#build-your-own",
+    "title": "3. Teaching Tools",
+    "section": "Build Your Own",
+    "text": "Build Your Own"
+  },
+  {
+    "objectID": "slides/3_teaching.html#from-workflow-to-skill",
+    "href": "slides/3_teaching.html#from-workflow-to-skill",
+    "title": "3. Teaching Tools",
+    "section": "From Workflow to Skill",
+    "text": "From Workflow to Skill\n\n\nThe easy path\n\nType /skill-creator and describe your workflow\nIt writes the SKILL.md and saves it where Claude will find it\nInvoke it by name from then on\n\n\n\nBake in the checks\n\nPut your verification steps inside the skill\n“After computing, show the row count and the min and max”\nThe skill enforces your standard, every run — not just when you remember\n\n\n\n\nThe best skills encode not just what to do, but how to check it — your discipline, made automatic."
+  },
+  {
+    "objectID": "slides/3_teaching.html#two-skills-you-might-write",
+    "href": "slides/3_teaching.html#two-skills-you-might-write",
+    "title": "3. Teaching Tools",
+    "section": "Two Skills You Might Write",
+    "text": "Two Skills You Might Write\n\n\nTeaching\nTurn a problem set into a solution key, a grading rubric, and three fresh variants — formatted your way, every time\n\n\nResearch\nAudit a replication package: run the code, check each table against the paper, report what does not reproduce\n\n\n\nA hand-written skill — yours, transparent, under your control — is safer and more teachable than a multi-skill black box you did not read."
+  },
+  {
+    "objectID": "slides/3_teaching.html#connectors",
+    "href": "slides/3_teaching.html#connectors",
+    "title": "3. Teaching Tools",
+    "section": "Connectors",
+    "text": "Connectors"
+  },
+  {
+    "objectID": "slides/3_teaching.html#plugging-claude-into-your-systems",
+    "href": "slides/3_teaching.html#plugging-claude-into-your-systems",
+    "title": "3. Teaching Tools",
+    "section": "Plugging Claude Into Your Systems",
+    "text": "Plugging Claude Into Your Systems\n\n\nMCP: the universal plug\n\nA connector links Claude to an outside service — a database, your email, a document store\nThe standard is MCP, the Model Context Protocol\nMCP is to AI what USB is to devices: one way to plug anything in\n\n\n\nWhat it enables\n\n“Ask our enrollment database in plain English”\n“Check my calendar and draft the replies”\nAdd from a directory of ready-made connectors, or point it at your own\n\n\n\n\nConnectors are how Claude stops being a general assistant and starts knowing your data — safely and centrally, rather than through copy-paste."
+  },
+  {
+    "objectID": "slides/3_teaching.html#adding-a-connector",
+    "href": "slides/3_teaching.html#adding-a-connector",
+    "title": "3. Teaching Tools",
+    "section": "Adding a Connector",
+    "text": "Adding a Connector\n\n\n\n\n\n\nA connector needs a name and an address; sensitive ones authenticate the way any app does — an API key, or a corporate single sign-on. Once added, its tools are available in every chat."
+  },
+  {
+    "objectID": "slides/3_teaching.html#plugins-1",
+    "href": "slides/3_teaching.html#plugins-1",
+    "title": "3. Teaching Tools",
+    "section": "Plugins",
+    "text": "Plugins"
+  },
+  {
+    "objectID": "slides/3_teaching.html#bundling-it-all-to-share",
+    "href": "slides/3_teaching.html#bundling-it-all-to-share",
+    "title": "3. Teaching Tools",
+    "section": "Bundling It All to Share",
+    "text": "Bundling It All to Share\n\n\nWhat a plugin is\n\nA single installable package that can bundle several pieces at once\nThe way a team distributes a shared setup — everyone installs one thing\n/plugin install and you have the whole kit\n\n\n\nWhat it can contain\n\nSkills, custom agents, connectors (MCP servers)\nHooks and output styles that shape behavior\nSkills are for you; plugins are for a team\n\n\n\n\nFor your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command."
+  },
+  {
+    "objectID": "slides/3_teaching.html#vetting",
+    "href": "slides/3_teaching.html#vetting",
+    "title": "3. Teaching Tools",
+    "section": "Vetting",
+    "text": "Vetting"
+  },
+  {
+    "objectID": "slides/3_teaching.html#installing-someone-elses-runs-their-code",
+    "href": "slides/3_teaching.html#installing-someone-elses-runs-their-code",
+    "title": "3. Teaching Tools",
+    "section": "Installing Someone Else’s Runs Their Code",
+    "text": "Installing Someone Else’s Runs Their Code\n\n\nThe supply-chain risk\n\nA shared skill, connector, or plugin runs someone else’s instructions and scripts on your machine\nMany live in independent repos, outside Anthropic’s screened directory\nThere is active security research on malicious third-party skills\n\n\n\nDue diligence\n\nclaude plugin validate checks structure, not safety\nRead the SKILL.md and any scripts yourself\nFine for a class demo; think twice before pointing it at real data\n\n\n\n\n“Validate” confirms a package is well-formed, not that it is trustworthy. The safest skill is often the small one you wrote and can read in full."
+  },
+  {
+    "objectID": "slides/3_teaching.html#the-payoff",
+    "href": "slides/3_teaching.html#the-payoff",
+    "title": "3. Teaching Tools",
+    "section": "The Payoff",
+    "text": "The Payoff\n\nSkills turn your best practice into something Claude does the same way every time. Connectors give it your data instead of a copy-paste. Plugins hand a colleague the whole setup in one command. You keep the judgment; they carry the discipline."
+  },
+  {
+    "objectID": "slides/3_teaching.html#breakout",
+    "href": "slides/3_teaching.html#breakout",
+    "title": "3. Teaching Tools",
+    "section": "Breakout",
+    "text": "Breakout"
+  },
+  {
+    "objectID": "slides/3_teaching.html#questions-to-discuss",
+    "href": "slides/3_teaching.html#questions-to-discuss",
+    "title": "3. Teaching Tools",
+    "section": "Questions to Discuss",
+    "text": "Questions to Discuss\n\nWhat is one task — teaching or research — you do the same careful way each time, a good candidate for a skill?\nWhat system or dataset would you most want to ask in plain English — a good connector to build?\nWould you install a colleague’s skill or plugin? What would you read before trusting it with your data?\nIf your department adopted one shared plugin, what should be in it?"
+  },
+  {
+    "objectID": "slides/1_intro-to-claude.html#do-not-train",
+    "href": "slides/1_intro-to-claude.html#do-not-train",
+    "title": "1. Intro to Claude",
+    "section": "Do Not Train",
+    "text": "Do Not Train\n\n\nConsumer plans — Free, Pro, Max (what we are on)\n\nSettings &gt; Privacy &gt; Privacy Settings, then turn off Help improve Claude\nDirect link: claude.ai/settings/data-privacy-controls\nThe default on a personal account is on\nOff keeps your data 30 days; on keeps it five years\n\n\n\nCommercial plans — Claude for Work, Education, API\n\nYour data is never used for training, and there is no setting to find\nIncludes the API, and the API through Amazon Bedrock and Google Vertex\nIf Rice moves us onto one of these, the setting disappears from your account — nothing to do\n\n\n\n\nIt is one account setting, not an app setting: it covers Chat, Cowork, the command line, and the Academic Studio extension at once. And it is not in the Anthropic developer console — that is a separate product for API keys."
+  },
+  {
+    "objectID": "slides/2_working.html#creating-a-skill",
+    "href": "slides/2_working.html#creating-a-skill",
+    "title": "2. Working with Claude",
+    "section": "Creating a Skill",
+    "text": "Creating a Skill\n\n\n\n1\n\n\nSave the Recipe\n\n\nOnce Claude has been successful at creating decks in your preferred style, ask Claude to save the recipe as a skill.\n\n\n\n\n2\n\n\nWhat Gets Saved\n\n\nClaude will save images, layout guides, etc. from the doc you gave it along with the fonts that best match the doc (maybe not exact match) for reuse.\n\n\n\n\nInclude instructions in the skill for Claude to automatically save changes and close before editing and then reopen."
+  },
+  {
+    "objectID": "slides/2_working.html#claude-in-powerpoint",
+    "href": "slides/2_working.html#claude-in-powerpoint",
+    "title": "2. Working with Claude",
+    "section": "Claude in PowerPoint",
+    "text": "Claude in PowerPoint\nIn May, 2026, the Claude add-in for PowerPoint became generally available (for paid accounts). But I don’t think Rice has authorized it for our Microsoft 365 accounts.\nThe advantages would be (1) just one window open, (2) no save/close/reopen."
+  },
+  {
+    "objectID": "slides/2_working.html#isnt-this-just-a-powerpoint-template",
+    "href": "slides/2_working.html#isnt-this-just-a-powerpoint-template",
+    "title": "2. Working with Claude",
+    "section": "Isn’t This Just a PowerPoint Template?",
+    "text": "Isn’t This Just a PowerPoint Template?\nPartly, yes — and a good skill does not replace the template.\n\n\nWhat the Template Already Does\nFonts, colors, layouts, placeholder positions, the scenery. A designed .pptx is already a style kit.\nA good skill uses it — filling that template’s own layouts instead of drawing shapes.\n\n\nWhat the Skill Adds\n\nWhich layout for which kind of content\nHow much text fits in each placeholder\nWhat to do when nothing fits — a wide chart, a long table\n\n\n\n\nA template guides a person, who sees the result and adjusts. A skill guides Claude, which cannot."
+  },
+  {
+    "objectID": "slides/2_working.html#takeaways",
+    "href": "slides/2_working.html#takeaways",
+    "title": "2. Working with Claude",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nClaude can work alongside you on whatever you’re working on. Get advice and suggestions. Hand over the tedious part of the work. Save good workflows as skills so they can be easily repeated."
   }
 ]

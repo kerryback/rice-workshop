@@ -432,24 +432,18 @@ Claude is generally able to create slide decks using whatever style you like.  H
 - The second draft: [tesla2.pptx](../files/session2/tesla2.pptx){target="_blank"}
 :::
 
-Once it is successful, you can ask Claude to save the recipe as a skill to use thereafter.
+## Creating a Skill
 
-::: {.explainer} 
-When editing an existing deck, you will want Claude to automatically save changes and close an open deck before editing.  Then reopen for you to see (and edit) again.
-:::
-
-## A Skill to Create Deck Styles
-
-::: {.step-flow-3}
+::: {.step-flow-2}
 ::: {.step-card}
 ::: {.step-icon}
 1
 :::
 ::: {.step-title}
-Install
+Save the Recipe
 :::
 ::: {.step-desc}
-Ask Claude to install the House Decks plugin from [github.com/kerryback/skills](https://github.com/kerryback/skills){target="_blank"}
+Once Claude has been successful at creating decks in your preferred style, ask Claude to save the recipe as a skill.
 :::
 :::
 ::: {.step-card}
@@ -457,35 +451,55 @@ Ask Claude to install the House Decks plugin from [github.com/kerryback/skills](
 2
 :::
 ::: {.step-title}
-Register a Style
+What Gets Saved
 :::
 ::: {.step-desc}
-Start a new conversation.  Ask Claude to apply it to a PowerPoint deck written in your preferred style.  Give the style a name.
-:::
-:::
-::: {.step-card}
-::: {.step-icon}
-3
-:::
-::: {.step-title}
-Create a Deck
-:::
-::: {.step-desc}
-Ask Claude to create a new deck in that style.
+Claude will save images, layout guides, etc. from the doc you gave it along with the fonts that best match the doc (maybe not exact match) for reuse.
 :::
 :::
 :::
 
-::: {.explainer}
-The PowerPoint deck contains elements that Claude will save and deploy again and fonts that it will try to match.  So, "create a deck in this style" is something Claude should be able to do, using the python-pptx Python library.
+::: {.card-dark}
+Include instructions in the skill for Claude to automatically save changes and close before editing and then reopen.
 :::
+
+## Isn't This Just a PowerPoint Template? {.shrink}
+
+Partly, yes --- and a good skill does not replace the template.
+
+::: {.two-cards}
+::: {.card-blue}
+[What the Template Already Does]{.card-title}
+
+Fonts, colors, layouts, placeholder positions, the scenery.  A designed .pptx is already a style kit.
+
+A good skill [uses]{.accent} it --- filling that template's own layouts instead of drawing shapes.
+:::
+::: {.card-amber}
+[What the Skill Adds]{.card-title}
+
+- Which layout for which kind of content
+- How much text fits in each placeholder
+- What to do when nothing fits --- a wide chart, a long table
+:::
+:::
+
+::: {.card-dark}
+A template guides [a person]{.accent}, who sees the result and adjusts.  A skill guides [Claude]{.accent}, which cannot.
+:::
+
+## Claude in PowerPoint
+
+In May, 2026, the Claude add-in for PowerPoint became generally available (for paid accounts).  But I don't think Rice has authorized it for our Microsoft 365 accounts.
+
+The advantages would be (1) just one window open, (2) no save/close/reopen.
 
 
 
 ## A Good Use of CLAUDE.md: Routing
 
 ::: {.highlight-box}
-Skills announce when they apply, and sometimes two of them claim the same job. Anthropic's `pptx` skill triggers on [any]{.accent} PowerPoint file, so a skill of your own for your house style will collide with it. 
+Skills announce when they apply, and sometimes two of them claim the same job. Anthropic's `pptx` skill triggers on [any]{.accent} PowerPoint file, so a skill of your own for your desired style will collide with it. 
 :::
 
 ::: {.card-dark}
@@ -498,7 +512,9 @@ Ask Claude to assist in editing CLAUDE.md globally or in a project folder to set
 
 2.  Pick a deck you want to refresh.  Ask Claude to read it and offer suggestions on content, organization, and style.  Ask Claude to edit some slides and to draft some slides, saving changes in a new name.
 
-## Takeaway {.centered-statement}
+3. Create a skill for Claude to write slides in your desired style.  Inspect the skill (if global, it is in $HOME/.claude/skills; if local, it is in your project folder .claude/skills)
+
+## Takeaways {.centered-statement}
 
 ::: {.card .card-dark}
 Claude can work alongside you on whatever you're working on.  Get advice and suggestions.  Hand over the tedious part of the work.  Save good workflows as skills so they can be easily repeated.

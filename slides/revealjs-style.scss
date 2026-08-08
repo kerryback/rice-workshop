@@ -1130,6 +1130,19 @@ $card-purple-title: #7c3aed;
   }
 }
 
+.step-flow-2 {
+  @extend .step-flow;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4em;
+
+  .step-card {
+    padding: 1.4em 1.4em;
+
+    .step-title { font-size: 1em; margin-bottom: 0.45em; }
+    .step-desc { font-size: 0.82em; line-height: 1.5; }
+  }
+}
+
 // ── Mode cards (Claude Desktop mode slides) ──
 .mode-cards {
   .card-blue, .card-amber, .card-teal { padding: 0.8em 1.4em 1em; }
