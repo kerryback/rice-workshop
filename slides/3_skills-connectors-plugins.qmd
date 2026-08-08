@@ -4,6 +4,20 @@ subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---
 
+## {.image-slide}
+
+![](images/fishing.png){width=72% fig-align="center"}
+
+::: {.explainer}
+Give a person a fish, and they eat for a day. Teach a person to fish, and they end up in the water with an alligator --- but the fish is theirs.
+:::
+
+## Today's Real Subject {.centered-statement}
+
+::: {.card .card-dark}
+I will show you some things I built. The [things]{.accent} are not the point --- you will want different ones. The point is [how they got built]{.accent}: you want something, you ask Claude how, you get a rough version, and you keep going until it works.
+:::
+
 ## Three Ways to Extend Claude
 
 ::: {.three-cards}

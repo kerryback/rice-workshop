@@ -732,7 +732,7 @@
     "href": "slides/1_intro-to-claude.html#homework",
     "title": "1. Intro to Claude",
     "section": "Homework",
-    "text": "Homework\n\nWatch the three-minute video academic_studio.mp4\n\n\nWatch the three-minute video academic_studio.mp4"
+    "text": "Homework\n\nWatch the three-minute video academic_studio.mp4"
   },
   {
     "objectID": "index.html",
@@ -1307,5 +1307,19 @@
     "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
+  },
+  {
+    "objectID": "slides/3_skills-connectors-plugins.html#section",
+    "href": "slides/3_skills-connectors-plugins.html#section",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "",
+    "text": "Give a person a fish, and they eat for a day. Teach a person to fish, and they end up in the water with an alligator — but the fish is theirs."
+  },
+  {
+    "objectID": "slides/3_skills-connectors-plugins.html#todays-real-subject",
+    "href": "slides/3_skills-connectors-plugins.html#todays-real-subject",
+    "title": "3. Skills, Connectors, and Plugins",
+    "section": "Today’s Real Subject",
+    "text": "Today’s Real Subject\n\nI will show you some things I built. The things are not the point — you will want different ones. The point is how they got built: you want something, you ask Claude how, you get a rough version, and you keep going until it works."
   }
 ]
