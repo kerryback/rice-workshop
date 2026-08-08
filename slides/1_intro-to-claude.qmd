@@ -348,7 +348,7 @@ Get Tesla's EPS from SEC EDGAR by quarter for the past 5 years.  Plot.  Create a
 The result
 :::
 
-[tesla.pptx](../files/session1/tesla.pptx)
+[tesla.pptx](../files/session1/tesla.pptx){target="_blank"}
 :::
 
 ## Creating Excel Workbooks
@@ -366,7 +366,7 @@ Build an Excel workbook containing a mortgage amortization table. Include a char
 ::: {.box-title}
 Result
 :::
-[amortization.xlsx](../amortization.xlsx)
+[amortization.xlsx](../files/session1/amortization.xlsx){target="_blank"}
 :::
 
 
@@ -494,11 +494,11 @@ Extract the following from session1.zip into your project folder or just put ses
 
 | File | Rows | Key Columns |
 |---|---|---|
-| [northwind_customers.xlsx](../files/session1/northwind_customers.xlsx) | 93 | CustomerID, CompanyName, Country |
-| [northwind_orders.xlsx](../files/session1/northwind_orders.xlsx) | 500 | OrderID, CustomerID, OrderDate |
-| [northwind_orderdetails.xlsx](../files/session1/northwind_orderdetails.xlsx) | 18,976 | OrderID, ProductID, UnitPrice, Quantity |
-| [northwind_products.xlsx](../files/session1/northwind_products.xlsx) | 77 | ProductID, ProductName, CategoryID |
-| [northwind_categories.xlsx](../files/session1/northwind_categories.xlsx) | 8 | CategoryID, CategoryName |
+| [northwind_customers.xlsx](../files/session1/northwind_customers.xlsx){target="_blank"} | 93 | CustomerID, CompanyName, Country |
+| [northwind_orders.xlsx](../files/session1/northwind_orders.xlsx){target="_blank"} | 500 | OrderID, CustomerID, OrderDate |
+| [northwind_orderdetails.xlsx](../files/session1/northwind_orderdetails.xlsx){target="_blank"} | 18,976 | OrderID, ProductID, UnitPrice, Quantity |
+| [northwind_products.xlsx](../files/session1/northwind_products.xlsx){target="_blank"} | 77 | ProductID, ProductName, CategoryID |
+| [northwind_categories.xlsx](../files/session1/northwind_categories.xlsx){target="_blank"} | 8 | CategoryID, CategoryName |
 
 :::
 
@@ -521,7 +521,7 @@ There is no secret to prompting.  Just chat (a lot).  Treat AI as an infinitely 
 ## Homework {.centered-statement}
 
 ::: {.card .card-dark}
-Watch the three-minute video [academic_studio.mp4](../files/session1/academic_studio.mp4)
+Watch the three-minute video [academic_studio.mp4](../files/session1/academic_studio.mp4){target="_blank"}
 :::
 
 

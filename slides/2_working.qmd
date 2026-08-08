@@ -275,7 +275,7 @@ Skills are text files saved on your hard drive.  Claude reads the top of each SK
 [Where to Find Them]{.card-title}
 
 - There are thousands of skills published on the internet.
-- Anthropic publishes skills (xlsx, etc.) at [https://github.com/anthropics/skills/](https://github.com/anthropics/skills/)
+- Anthropic publishes skills (xlsx, etc.) at [https://github.com/anthropics/skills/](https://github.com/anthropics/skills/){target="_blank"}
 :::
 ::: {.card .card-purple}
 [Ask Claude]{.card-title}
@@ -290,9 +290,9 @@ Skills are text files saved on your hard drive.  Claude reads the top of each SK
 I've looked at several skill repos for business/economics research.  Most are not useful.  Here are a couple I've adopted --- by Lu Han, Bank of Canada.
 
 ::: {.highlight-box}
-- [Econ Writing](https://github.com/hanlulong/econ-writing-skill/tree/main/.claude/skills/econ-write): tells Claude to follow Cochrane's Writing Tips for PhD Students and some other style guides
+- [Econ Writing](https://github.com/hanlulong/econ-writing-skill/tree/main/.claude/skills/econ-write){target="_blank"}: tells Claude to follow Cochrane's Writing Tips for PhD Students and some other style guides
 
-- [Econ Paper Review](https://github.com/hanlulong/econ-paper-review-skill/tree/main/econ-review): writes a referee report on your paper
+- [Econ Paper Review](https://github.com/hanlulong/econ-paper-review-skill/tree/main/econ-review){target="_blank"}: writes a referee report on your paper
 :::
 
 Give Claude the links and ask Claude to install them if you want to try them out.
@@ -426,10 +426,10 @@ Ask Claude to show you the pirate SKILL.md
 Claude is generally able to create slide decks using whatever style you like.  Here is an example.
 
 ::: {.highlight-box}
-- [SamplePresentation.pptx](../files/session2/SamplePresentation.pptx) is a Microsoft template
+- [SamplePresentation.pptx](../files/session2/SamplePresentation.pptx){target="_blank"} is a Microsoft template
 - I asked Claude to remake tesla.pptx in that style
-- The first draft: [tesla1.pptx](../tesla1.pptx)
-- The second draft: [tesla2.pptx](../tesla2.pptx)
+- The first draft: [tesla1.pptx](../files/session2/tesla1.pptx){target="_blank"}
+- The second draft: [tesla2.pptx](../files/session2/tesla2.pptx){target="_blank"}
 :::
 
 Once it is successful, you can ask Claude to save the recipe as a skill to use thereafter.
@@ -449,7 +449,7 @@ When editing an existing deck, you will want Claude to automatically save change
 Install
 :::
 ::: {.step-desc}
-Ask Claude to install the House Decks plugin from [github.com/kerryback/skills](https://github.com/kerryback/skills)
+Ask Claude to install the House Decks plugin from [github.com/kerryback/skills](https://github.com/kerryback/skills){target="_blank"}
 :::
 :::
 ::: {.step-card}

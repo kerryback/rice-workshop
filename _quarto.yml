@@ -11,12 +11,11 @@ project:
     - pdf/*.pdf
     - slides/*.html
     - housing_affordability.pptx
-    - tesla1.pptx
-    - tesla2.pptx
-    - amortization.xlsx
     - files/session1/*
     - files/session1.zip
     - files/session2/SamplePresentation.pptx
+    - files/session2/tesla1.pptx
+    - files/session2/tesla2.pptx
     - files/session2.zip
     - under-construction.html
 
