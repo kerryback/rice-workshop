@@ -1524,5 +1524,19 @@
     "title": "2. Working with Claude",
     "section": "Takeaways",
     "text": "Takeaways\n\nClaude can work alongside you on whatever you’re working on. Get advice and suggestions. Hand over the tedious part of the work. Save good workflows as skills so they can be easily repeated."
+  },
+  {
+    "objectID": "slides/1_intro-to-claude.html#anthropics-system-prompt",
+    "href": "slides/1_intro-to-claude.html#anthropics-system-prompt",
+    "title": "1. Intro to Claude",
+    "section": "Anthropic’s System Prompt",
+    "text": "Anthropic’s System Prompt\nLink to Opus 4.8 system prompt"
+  },
+  {
+    "objectID": "slides/2_working.html#example-xlsx-skill",
+    "href": "slides/2_working.html#example-xlsx-skill",
+    "title": "2. Working with Claude",
+    "section": "Example: xlsx Skill",
+    "text": "Example: xlsx Skill\nThe xlsx, docx, and pptx skills are created by Anthropic and come pre-installed with Claude Desktop"
   }
 ]

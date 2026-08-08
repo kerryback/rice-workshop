@@ -538,6 +538,70 @@ $card-purple-title: #7c3aed;
   overflow: visible;
 }
 
+// ── Visible scrollbars ──
+// macOS hides overlay scrollbars until something scrolls, so a long block looks
+// like it simply ends where it is clipped, with no handle to grab in class.
+// These stay on screen. min-height on the thumb matters more than it looks: the
+// system-prompt block is ~150 screens tall, so a proportional thumb would come
+// out about four pixels.
+@mixin visible-scrollbar {
+  &::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #0f172a;
+    border-radius: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 7px;
+    min-height: 48px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+  }
+}
+
+.reveal pre {
+  @include visible-scrollbar;
+}
+
+// ── Long prompt/skill listings (.prompt-scroll) ──
+// The wrapper div is the scroller: fixed height, overflow-y:auto, set inline on
+// the element. Without this the theme's `.reveal pre` rules cap the pre inside
+// it at 600px and give it its own scrollbar, so the bar ends up floating inside
+// the panel instead of on its edge, with a dead strip below it. Let the pre run
+// to full height and the wrapper does the scrolling. Font size is deliberately
+// left alone so the text stays the size it has been presented at.
+.prompt-scroll {
+  @include visible-scrollbar;
+
+  pre {
+    max-height: none;
+    overflow: visible;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+// Firefox only. It ignores ::-webkit-scrollbar, but setting scrollbar-color
+// unscoped would make Chromium switch to standard overlay scrollbars and drop
+// every rule above, which is how this went wrong the first time.
+@supports (-moz-appearance: none) {
+  .reveal pre,
+  .prompt-scroll {
+    scrollbar-width: auto;
+    scrollbar-color: #94a3b8 #0f172a;
+  }
+}
+
 // ── Explainer text ──
 .explainer {
   font-size: 0.82em;

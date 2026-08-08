@@ -28,7 +28,7 @@ Thousands of people (including me) have created their own plugin marketplaces. E
 :::
 ::: {.card-teal}
 
-The most useful things will be the ones you create (with Claude's assistance) --- for example, a code script that you know works and a SKILL.md that tells Claude when to use it
+The most useful ones will be the ones you create (with Claude's assistance) --- for example, a code script that you know works and a SKILL.md that tells Claude when to use it
 :::
 :::
 
@@ -49,27 +49,49 @@ The most useful things will be the ones you create (with Claude's assistance) --
 - HBS's policy is "do not upload cases to chatbots," so don't do it live in class 
 - AI is good at writing cases.  It knows the HBS style: "Grace was in her office on a Friday afternoon gazing at the autumn leaves ..."
 
+## Grading {.section-divider}
+
 ## Grading Team
 
 - Involve multiple AI graders for diversity of opinions
 - Maybe a second round --- share opinions from the first round
 - In Claude, main agent (one you talk to) is orchestrator, other graders are subagents
-- Can easily involve other providers for more diversity - ChatGPT and Gemini, for example.  Can still use Claude Code as the orchestrator
+- Obviously, you are responsible for grades.  What the AI provides is advice.
 
 ## FERPA
 
 - With an enterprise agreement, "do not train" is contractual and satisfies FERPA.  It is OK to upload student assisgnments with names attached.
 - Without an enterprise agreement, student assignments must be de-identified before uploading.
+- If you de-identify, then you can bring in other models (ChatGPT, Gemini) for greater diversity of opinion (more later).
 
 ::: {info-box}
 ::: {.box-title}
-Rice 
+Rice Policy ([tss.rice.edu/ai-usage-guidelines](https://tss.rice.edu/ai-usage-guidelines))
 :::
 Information considered sensitive or confidential by University Policy 808 (https://policy.rice.edu/808), including private information about individuals and protected research data, should not be used with consumer-focused or publicly available AI services.
 :::
+
+
+## Create a Skill
+
+- Create a recipe for how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades and provide info about the grounds for grades, etc., and save it as a skill.
+- When you invoke it, you will provide the grading rubric (maybe a filename) and the name of the folder containing assignments.
+
+## Slide Voiceovers {.section-divider}
+
+## Do We Need Voiceovers?
+
+- Narrated slide decks are needed to flip the classroom
+- You can record yourself, or you can write narration text (with Claude's assistance) and use AI text-to-speech
+- Opinions?
+
+## A Pipeline for Voiceovers
+
+- Use PowerPoint speaker notes for narration text.  Claude drafts.  You edit.
+- Use OpenAI TTS or ElevenLabs for audio generation 
 ## AI Teaching Assistants {.section-divider}
 
-## Grading
+
 
 
 ## {.image-slide}
