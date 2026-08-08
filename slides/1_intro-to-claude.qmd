@@ -524,9 +524,5 @@ There is no secret to prompting.  Just chat (a lot).  Treat AI as an infinitely 
 Watch the three-minute video [academic_studio.mp4](../files/session1/academic_studio.mp4)
 :::
 
-::: {.card .card-dark}
-Watch the three-minute video [academic_studio.mp4](../files/session1/academic_studio.mp4)
-:::
-
 
 
