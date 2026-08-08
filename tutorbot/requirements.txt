@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-anthropic
-openai
-beautifulsoup4
-python-dotenv

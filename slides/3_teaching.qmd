@@ -1,8 +1,76 @@
 ---
-title: "3. Skills, Connectors, and Plugins"
-subtitle: "Rice Business 2026"
-author: "Kerry Back<br>Rice Business"
+title: "3. Teaching Tools"
+author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 ---
+
+## Today's Session
+
+- Plugins
+- Thoughts on teaching
+- Building teaching assistants
+  - Slide narration
+  - Grading assistants
+  - Other tools
+
+## Plugins
+
+A shipping protocol for skills plus scripts, MCP connectors, and other files
+
+::: {.card-blue}
+
+Visit the Anthropic plugin directory: Enter [/plugin]{.accent} as a Claude prompt or visit [https://github.com/anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official){target="_blank"}
+:::
+
+::: {.two-cards}
+::: {.card-amber}
+
+Thousands of people (including me) have created their own plugin marketplaces. Everything is free.
+:::
+::: {.card-teal}
+
+The most useful things will be the ones you create (with Claude's assistance) --- for example, a code script that you know works and a SKILL.md that tells Claude when to use it
+:::
+:::
+
+
+## Flipping the Classroom 
+
+- Do we have a choice?
+- We can no longer grade out-of-class assignments
+- If we want to do more assessment in class, then we need to do more teaching out of class
+- In-class assessments: participation, presentations, quizzes, "solutions" to problems that they can evaluate with basic calculators or paper and pencil
+
+
+## Teaching Cases
+
+- I don't think that case teaching changes much
+  - We should have higher standards for student preparedness
+  - Serious calculations can be done on-the-spot in class without pre-made templates.  I've asked a student to come to the front and lead a case discussion while I do nothing but type prompts they give me.  
+- HBS's policy is "do not upload cases to chatbots," so don't do it live in class 
+- AI is good at writing cases.  It knows the HBS style: "Grace was in her office on a Friday afternoon gazing at the autumn leaves ..."
+
+## Grading Team
+
+- Involve multiple AI graders for diversity of opinions
+- Maybe a second round --- share opinions from the first round
+- In Claude, main agent (one you talk to) is orchestrator, other graders are subagents
+- Can easily involve other providers for more diversity - ChatGPT and Gemini, for example.  Can still use Claude Code as the orchestrator
+
+## FERPA
+
+- With an enterprise agreement, "do not train" is contractual and satisfies FERPA.  It is OK to upload student assisgnments with names attached.
+- Without an enterprise agreement, student assignments must be de-identified before uploading.
+
+::: {info-box}
+::: {.box-title}
+Rice 
+:::
+Information considered sensitive or confidential by University Policy 808 (https://policy.rice.edu/808), including private information about individuals and protected research data, should not be used with consumer-focused or publicly available AI services.
+:::
+## AI Teaching Assistants {.section-divider}
+
+## Grading
+
 
 ## {.image-slide}
 

@@ -211,6 +211,31 @@ Code Cloud is GitHub integration, probably overkill
 ![](images/cowork-configuration.png){width=90% fig-align="center"}
 
 
+## Do Not Train {.shrink}
+
+::: {.two-cards}
+::: {.card-blue}
+[Consumer plans --- Free, Pro, Max (what we are on)]{.card-title}
+
+- [Settings > Privacy > Privacy Settings]{.accent}, then turn off [Help improve Claude]{.accent}
+- Direct link: [claude.ai/settings/data-privacy-controls](https://claude.ai/settings/data-privacy-controls){target="_blank"}
+- The default on a personal account is on
+- Off keeps your data 30 days; on keeps it five years
+:::
+::: {.card-amber}
+[Commercial plans --- Claude for Work, Education, API]{.card-title}
+
+- Your data is never used for training, and there is no setting to find
+- Includes the API, and the API through Amazon Bedrock and Google Vertex
+- If Rice moves us onto one of these, the setting disappears from your account --- nothing to do
+:::
+:::
+
+::: {.explainer}
+It is one [account]{.accent} setting, not an app setting: it covers Chat, Cowork, the command line, and the Academic Studio extension at once. And it is not in the Anthropic developer console --- that is a separate product for API keys.
+:::
+
+
 ## Effective Prompting {.section-divider}
 
 ## Plan Mode
