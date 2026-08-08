@@ -7,6 +7,9 @@ project:
   resources:
     - .nojekyll
     - CNAME
+    # At the site root, so the browser's implicit /favicon.ico request is
+    # satisfied for the decks under /slides/ as well as for index.
+    - favicon.ico
     - announcement.pdf
     - pdf/*.pdf
     - slides/*.html
@@ -22,6 +25,7 @@ project:
 website:
   title: ""
   search: false
+  favicon: favicon.ico
 
 format:
   html:
