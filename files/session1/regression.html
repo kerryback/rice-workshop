@@ -1,0 +1,1015 @@
+<title>Regress Y on X</title>
+<style>
+/* -- Tokens -------------------------------------------------------------
+   Palette is the validated data-viz reference instance: categorical slots
+   1 (blue) and 2 (orange) for the marks, its warm-neutral chrome for
+   everything else, so the chart and the interface agree. Light values
+   first; dark redefines only the tokens, once per scope. */
+:root {
+  color-scheme: light;
+  --plane:        #f9f9f7;
+  --surface:      #fcfcfb;
+  --surface-sunk: #f2f2ee;
+  --ink:          #0b0b0b;
+  --ink-2:        #52514e;
+  --ink-muted:    #898781;
+  --grid:         #e1e0d9;
+  --axis:         #c3c2b7;
+  --hairline:     rgba(11, 11, 11, 0.10);
+  --obs:          #2a78d6;
+  --fit:          #eb6834;
+  --accent:       #2a78d6;
+  --accent-ink:   #ffffff;
+  --critical:     #d03b3b;
+  --good:         #006300;
+
+  --step--1: 0.8125rem;
+  --step-0:  0.9375rem;
+  --step-1:  1.125rem;
+  --step-2:  1.5rem;
+  --step-3:  2.125rem;
+
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --plane:        #0d0d0d;
+    --surface:      #1a1a19;
+    --surface-sunk: #232322;
+    --ink:          #ffffff;
+    --ink-2:        #c3c2b7;
+    --ink-muted:    #898781;
+    --grid:         #2c2c2a;
+    --axis:         #383835;
+    --hairline:     rgba(255, 255, 255, 0.10);
+    --obs:          #3987e5;
+    --fit:          #d95926;
+    --accent:       #3987e5;
+    --accent-ink:   #0d0d0d;
+    --critical:     #d03b3b;
+    --good:         #0ca30c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --plane:        #0d0d0d;
+  --surface:      #1a1a19;
+  --surface-sunk: #232322;
+  --ink:          #ffffff;
+  --ink-2:        #c3c2b7;
+  --ink-muted:    #898781;
+  --grid:         #2c2c2a;
+  --axis:         #383835;
+  --hairline:     rgba(255, 255, 255, 0.10);
+  --obs:          #3987e5;
+  --fit:          #d95926;
+  --accent:       #3987e5;
+  --accent-ink:   #0d0d0d;
+  --critical:     #d03b3b;
+  --good:         #0ca30c;
+}
+
+/* -- Page --------------------------------------------------------------- */
+body {
+  margin: 0;
+  background: var(--plane);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3.25rem) clamp(1rem, 3vw, 2rem) 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.eyebrow {
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+h1 {
+  font-size: var(--step-3);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0.3rem 0 0;
+  text-wrap: balance;
+}
+.lede { margin: 0.5rem 0 0; max-width: 60ch; color: var(--ink-2); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+}
+.card > h2 { font-size: var(--step-1); letter-spacing: -0.01em; margin: 0 0 0.15rem; }
+.card > .sub { margin: 0 0 1.1rem; color: var(--ink-2); font-size: var(--step--1); }
+
+/* -- Engine status ------------------------------------------------------ */
+.engine {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: var(--step--1);
+  color: var(--ink-2);
+  margin: 0 0 1rem;
+  font-family: var(--mono);
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-muted); flex: none; }
+.dot.busy { background: var(--fit); animation: pulse 1.1s ease-in-out infinite; }
+.dot.ready { background: var(--good); }
+.dot.down { background: var(--critical); }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* -- Drop zone ---------------------------------------------------------- */
+.drop {
+  border: 1.5px dashed var(--axis);
+  border-radius: 10px;
+  background: var(--surface-sunk);
+  padding: clamp(1.5rem, 5vw, 2.75rem) 1.25rem;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+.drop.over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface-sunk)); }
+.drop p { margin: 0 0 1rem; color: var(--ink-2); }
+.drop .filename { font-family: var(--mono); font-size: var(--step--1); color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+
+button, .filebtn {
+  font: inherit;
+  font-weight: 600;
+  border-radius: 7px;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0.5rem 0.95rem;
+  cursor: pointer;
+}
+button:hover, .filebtn:hover { border-color: var(--axis); }
+.filebtn.primary, button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.filebtn { display: inline-block; }
+:is(button, .filebtn, select, summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+
+/* -- Controls: one row above everything it scopes ----------------------- */
+.controls { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: flex-end; }
+.field { display: flex; flex-direction: column; gap: 0.3rem; }
+.field label {
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+select {
+  font: inherit; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--axis); border-radius: 7px;
+  padding: 0.45rem 0.6rem; min-width: 11rem;
+}
+
+/* -- Summary ------------------------------------------------------------ */
+.equation {
+  font-family: var(--mono);
+  font-size: clamp(1rem, 2.6vw, var(--step-2));
+  letter-spacing: -0.01em;
+  margin: 0;
+  overflow-x: auto;
+  padding-bottom: 0.2rem;
+  white-space: nowrap;
+}
+.equation .co { color: var(--fit); font-weight: 600; }
+.stats {
+  list-style: none; margin: 1.25rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 1px; background: var(--hairline);
+  border: 1px solid var(--hairline); border-radius: 8px; overflow: hidden;
+}
+.stats li { background: var(--surface); padding: 0.7rem 0.9rem; }
+.stats dt { font-size: var(--step--1); color: var(--ink-muted); letter-spacing: 0.04em; }
+.stats dd { margin: 0.1rem 0 0; font-size: var(--step-1); font-family: var(--mono); font-weight: 600; }
+
+/* -- Chart -------------------------------------------------------------- */
+.legend { display: flex; gap: 1.25rem; flex-wrap: wrap; margin: 0 0 0.4rem; padding: 0; list-style: none; }
+.legend li { display: flex; align-items: center; gap: 0.45rem; font-size: var(--step--1); color: var(--ink-2); }
+.swatch-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--obs); flex: none; }
+.swatch-line { width: 18px; height: 2px; background: var(--fit); flex: none; }
+.plotwrap { position: relative; }
+svg.plot { display: block; width: 100%; height: auto; overflow: visible; }
+.tip {
+  position: absolute; transform: translate(-50%, -100%); margin-top: -10px;
+  background: var(--surface); border: 1px solid var(--axis); border-radius: 7px;
+  padding: 0.4rem 0.6rem; font-family: var(--mono); font-size: var(--step--1);
+  line-height: 1.45; white-space: nowrap; pointer-events: none;
+  opacity: 0; transition: opacity 0.1s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.13); z-index: 3;
+}
+.tip.on { opacity: 1; }
+.tip b { font-weight: 600; }
+
+/* -- Tables ------------------------------------------------------------- */
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+caption { text-align: left; color: var(--ink-2); font-size: var(--step--1); padding-bottom: 0.5rem; }
+th, td { text-align: right; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+thead th {
+  font-size: var(--step--1); letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--ink-muted); border-bottom: 1px solid var(--axis);
+}
+th:first-child, td:first-child { text-align: left; }
+tbody td { font-family: var(--mono); }
+tbody th { font-weight: 600; font-family: var(--sans); }
+tbody tr:last-child :is(th, td) { border-bottom: none; }
+.stars { color: var(--ink-muted); }
+.note { font-size: var(--step--1); color: var(--ink-muted); margin: 0.7rem 0 0; }
+
+details { border-top: 1px solid var(--hairline); padding-top: 1rem; margin-top: 1.25rem; }
+summary { cursor: pointer; font-weight: 600; font-size: var(--step--1); }
+details[open] summary { margin-bottom: 0.9rem; }
+pre.summary {
+  font-family: var(--mono); font-size: var(--step--1); line-height: 1.5;
+  background: var(--surface-sunk); border: 1px solid var(--hairline);
+  border-radius: 8px; padding: 1rem; overflow-x: auto; margin: 0;
+}
+
+.msg {
+  border-left: 3px solid var(--critical);
+  background: color-mix(in srgb, var(--critical) 7%, var(--surface));
+  padding: 0.75rem 1rem; border-radius: 0 7px 7px 0; font-size: var(--step--1);
+}
+.msg.warn { border-left-color: var(--fit); background: color-mix(in srgb, var(--fit) 8%, var(--surface)); }
+.msg strong { display: block; }
+.foot { color: var(--ink-muted); font-size: var(--step--1); margin: 0; }
+.hide { display: none; }
+@media (prefers-reduced-motion: reduce) { *, .dot.busy { animation: none !important; transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Ordinary least squares</div>
+    <h1>Regress Y on X from a spreadsheet</h1>
+    <p class="lede">
+      Drop in an Excel workbook with an X column and a Y column. The file is read here in the page;
+      the regression is fitted by <span style="font-family:var(--mono)">statsmodels</span>, running in
+      your browser. You get the fitted line, the scatter, R&#178;, and a coefficient table with standard
+      errors, t-statistics, and p-values.
+    </p>
+  </header>
+
+  <div class="card">
+    <p class="engine"><span class="dot busy" id="engdot" aria-hidden="true"></span><span id="engtext">Starting Python&hellip;</span></p>
+    <div id="drop" class="drop">
+      <p id="dropmsg">Drag a workbook here, or choose a file. Also reads .csv.</p>
+      <div class="actions">
+        <label class="filebtn primary" for="file">Choose file</label>
+        <input id="file" type="file" accept=".xlsx,.xlsm,.csv,text/csv" />
+        <button type="button" id="sample">Try sample data</button>
+      </div>
+    </div>
+    <div id="err" class="msg hide" role="alert"></div>
+  </div>
+
+  <div id="results" class="hide" style="display:flex; flex-direction:column; gap:1.75rem;">
+    <div class="card">
+      <div class="controls">
+        <div class="field" id="sheetfield">
+          <label for="sheet">Sheet</label>
+          <select id="sheet"></select>
+        </div>
+        <div class="field">
+          <label for="xcol">X &middot; explanatory</label>
+          <select id="xcol"></select>
+        </div>
+        <div class="field">
+          <label for="ycol">Y &middot; dependent</label>
+          <select id="ycol"></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Fitted model</h2>
+      <p class="sub" id="fitsub"></p>
+      <p class="equation" id="eq"></p>
+      <ul class="stats" id="statlist"></ul>
+    </div>
+
+    <div class="card">
+      <h2 id="charttitle"></h2>
+      <p class="sub">Each dot is one row. The line is the least-squares fit.</p>
+      <ul class="legend">
+        <li><span class="swatch-dot" aria-hidden="true"></span>Observations</li>
+        <li><span class="swatch-line" aria-hidden="true"></span>Fitted line</li>
+      </ul>
+      <div class="plotwrap" id="plotwrap">
+        <svg class="plot" id="plot" viewBox="0 0 900 540" role="img" aria-labelledby="plotdesc"></svg>
+        <desc id="plotdesc"></desc>
+        <div class="tip" id="tip"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Coefficients</h2>
+      <p class="sub" id="coefsub"></p>
+      <div class="tablewrap"><table id="coeftable"></table></div>
+      <p class="note" id="starnote"></p>
+
+      <details>
+        <summary>Show the statsmodels summary</summary>
+        <pre class="summary" id="smsummary"></pre>
+      </details>
+
+      <details>
+        <summary>Show the data, fitted values, and residuals</summary>
+        <div class="tablewrap"><table id="datatable"></table></div>
+      </details>
+    </div>
+  </div>
+
+  <p class="foot" id="footnote">Your file is read in this page and never uploaded. Python itself is fetched once from the jsDelivr CDN.</p>
+</div>
+
+<script>
+"use strict";
+
+/* == Python engine =======================================================
+   Pyodide is pinned to the same version the course's other browser-Python
+   demo uses. The regression is statsmodels' own OLS, so no estimator or
+   distribution function is reimplemented here \u2014 the JS below only reads
+   the workbook and draws. */
+
+const PYODIDE_URL = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js";
+
+const engdot = document.getElementById("engdot");
+const engtext = document.getElementById("engtext");
+function engine(state, text) {
+  engdot.className = "dot " + state;
+  engtext.textContent = text;
+}
+
+let pyReady = null;      // promise, resolves to the pyodide instance
+let pyBroken = null;     // error message if Python could not start
+let smVersion = "";
+
+function loadScript(src) {
+  return new Promise((ok, no) => {
+    const s = document.createElement("script");
+    s.src = src;
+    s.onload = ok;
+    s.onerror = () => no(new Error("Could not fetch Pyodide from the CDN."));
+    document.head.appendChild(s);
+  });
+}
+
+function startPython() {
+  if (pyReady) return pyReady;
+  pyReady = (async () => {
+    engine("busy", "Fetching Python\u2026");
+    await loadScript(PYODIDE_URL);
+    engine("busy", "Starting Python\u2026");
+    const py = await loadPyodide();
+    engine("busy", "Loading numpy, pandas, statsmodels\u2026");
+    await py.loadPackage(["statsmodels"]);          // pulls numpy, scipy, pandas, patsy
+    smVersion = (await py.runPythonAsync("import statsmodels; statsmodels.__version__")).toString();
+    await py.runPythonAsync(`
+import json
+import numpy as np
+import statsmodels.api as sm
+
+def fit_ols(payload):
+    d = json.loads(payload)
+    x = np.asarray(d["x"], dtype=float)
+    y = np.asarray(d["y"], dtype=float)
+    X = sm.add_constant(x)
+    res = sm.OLS(y, X).fit()
+    b = res.params; se = res.bse; t = res.tvalues; p = res.pvalues
+    out = {
+        "b0": float(b[0]), "b1": float(b[1]),
+        "se0": float(se[0]), "se1": float(se[1]),
+        "t0": float(t[0]), "t1": float(t[1]),
+        "p0": float(p[0]), "p1": float(p[1]),
+        "r2": float(res.rsquared),
+        "adjr2": float(res.rsquared_adj),
+        "n": int(res.nobs),
+        "df": int(res.df_resid),
+        "s": float(np.sqrt(res.mse_resid)),
+        "F": float(res.fvalue),
+        "Fp": float(res.f_pvalue),
+        "fitted": [float(v) for v in res.fittedvalues],
+        "resid": [float(v) for v in res.resid],
+        "summary": res.summary(yname=d["yname"], xname=["const", d["xname"]]).as_text(),
+    }
+    return json.dumps(out)
+`);
+    engine("ready", "statsmodels " + smVersion + " ready");
+    return py;
+  })().catch((e) => {
+    pyBroken = e && e.message ? e.message : "Python could not be started.";
+    engine("down", "Python unavailable \u2014 using the built-in fallback");
+    throw e;
+  });
+  return pyReady;
+}
+
+/* == Fallback statistics =================================================
+   Used only when Pyodide cannot be reached (offline, blocked CDN). Exact
+   two-sided p from the regularized incomplete beta, not a normal
+   approximation. When this path runs, the page says so. */
+
+function lgamma(x) {
+  const g = [676.5203681218851, -1259.1392167224028, 771.32342877765313,
+             -176.61502916214059, 12.507343278686905, -0.13857109526572012,
+             9.9843695780195716e-6, 1.5056327351493116e-7];
+  if (x < 0.5) return Math.log(Math.PI / Math.sin(Math.PI * x)) - lgamma(1 - x);
+  x -= 1;
+  let a = 0.99999999999980993;
+  const t = x + 7.5;
+  for (let i = 0; i < 8; i++) a += g[i] / (x + i + 1);
+  return 0.5 * Math.log(2 * Math.PI) + (x + 0.5) * Math.log(t) - t + Math.log(a);
+}
+function betacf(a, b, x) {
+  const MAXIT = 300, EPS = 3e-15, FPMIN = 1e-300;
+  const qab = a + b, qap = a + 1, qam = a - 1;
+  let c = 1, d = 1 - qab * x / qap;
+  if (Math.abs(d) < FPMIN) d = FPMIN;
+  d = 1 / d;
+  let h = d;
+  for (let m = 1; m <= MAXIT; m++) {
+    const m2 = 2 * m;
+    let aa = m * (b - m) * x / ((qam + m2) * (a + m2));
+    d = 1 + aa * d; if (Math.abs(d) < FPMIN) d = FPMIN;
+    c = 1 + aa / c;  if (Math.abs(c) < FPMIN) c = FPMIN;
+    d = 1 / d; h *= d * c;
+    aa = -(a + m) * (qab + m) * x / ((a + m2) * (qap + m2));
+    d = 1 + aa * d; if (Math.abs(d) < FPMIN) d = FPMIN;
+    c = 1 + aa / c;  if (Math.abs(c) < FPMIN) c = FPMIN;
+    d = 1 / d;
+    const del = d * c;
+    h *= del;
+    if (Math.abs(del - 1) < EPS) break;
+  }
+  return h;
+}
+function betainc(a, b, x) {
+  if (!(x > 0)) return 0;
+  if (x >= 1) return 1;
+  const bt = Math.exp(lgamma(a + b) - lgamma(a) - lgamma(b) + a * Math.log(x) + b * Math.log(1 - x));
+  return x < (a + 1) / (a + b + 2) ? bt * betacf(a, b, x) / a : 1 - bt * betacf(b, a, 1 - x) / b;
+}
+function tTwoSided(t, df) {
+  if (!isFinite(t) || !(df > 0)) return NaN;
+  return betainc(df / 2, 0.5, df / (df + t * t));
+}
+function olsFallback(xs, ys) {
+  const n = xs.length;
+  let sx = 0, sy = 0;
+  for (let i = 0; i < n; i++) { sx += xs[i]; sy += ys[i]; }
+  const mx = sx / n, my = sy / n;
+  let sxx = 0, sxy = 0, syy = 0;
+  for (let i = 0; i < n; i++) {
+    const dx = xs[i] - mx, dy = ys[i] - my;
+    sxx += dx * dx; sxy += dx * dy; syy += dy * dy;
+  }
+  if (!(sxx > 0)) throw new Error("Every X value is the same, so a slope cannot be estimated. Pick a different X column.");
+  const df = n - 2;
+  const b1 = sxy / sxx, b0 = my - b1 * mx;
+  const ssr = Math.max(syy - b1 * sxy, 0);
+  const r2 = syy > 0 ? 1 - ssr / syy : NaN;
+  const s = Math.sqrt(ssr / df);
+  const se1 = s / Math.sqrt(sxx);
+  const se0 = s * Math.sqrt(1 / n + mx * mx / sxx);
+  const t1 = b1 / se1, t0 = b0 / se0;
+  return {
+    b0, b1, se0, se1, t0, t1,
+    p0: tTwoSided(t0, df), p1: tTwoSided(t1, df),
+    r2, adjr2: syy > 0 ? 1 - (1 - r2) * (n - 1) / df : NaN,
+    n, df, s, F: t1 * t1, Fp: tTwoSided(t1, df),
+    fitted: xs.map((v) => b0 + b1 * v),
+    resid: xs.map((v, i) => ys[i] - (b0 + b1 * v)),
+    summary: null
+  };
+}
+
+async function fit(xs, ys, xname, yname) {
+  if (!pyBroken) {
+    try {
+      const py = await startPython();
+      const res = py.globals.get("fit_ols")(JSON.stringify({ x: xs, y: ys, xname, yname }));
+      const out = JSON.parse(res.toString());
+      out.engine = "statsmodels " + smVersion;
+      return out;
+    } catch (e) {
+      if (!pyBroken) pyBroken = e && e.message ? e.message : String(e);
+    }
+  }
+  const out = olsFallback(xs, ys);
+  out.engine = "fallback";
+  return out;
+}
+
+/* == Number formatting =================================================== */
+
+function sig(v, digits) {
+  if (v === null || v === undefined || Number.isNaN(v)) return "\u2014";
+  if (!isFinite(v)) return v > 0 ? "\u221e" : "-\u221e";
+  if (v === 0) return "0";
+  const mag = Math.abs(v);
+  if (mag >= 1e6 || mag < 1e-4) return v.toExponential(Math.max(1, (digits || 4) - 1));
+  const dec = Math.max(0, (digits || 4) - 1 - Math.floor(Math.log10(mag)));
+  return v.toFixed(Math.min(dec, 10));
+}
+function fmtP(p) {
+  if (p === null || p === undefined || Number.isNaN(p)) return "\u2014";
+  return p < 1e-4 ? "< 0.0001" : p.toFixed(4);
+}
+function stars(p) {
+  if (p === null || p === undefined || Number.isNaN(p)) return "";
+  if (p < 0.001) return "***";
+  if (p < 0.01) return "**";
+  if (p < 0.05) return "*";
+  if (p < 0.1) return "\u00b7";
+  return "";
+}
+
+/* == Reading the workbook ================================================
+   .xlsx is a zip of XML. The central directory is walked by hand and
+   entries inflated with the browser's own DecompressionStream \u2014 so no
+   openpyxl, and no second trip to PyPI at runtime. */
+
+function findEOCD(dv, len) {
+  const from = Math.max(0, len - 66000);
+  for (let i = len - 22; i >= from; i--) if (dv.getUint32(i, true) === 0x06054b50) return i;
+  return -1;
+}
+function openZip(buf) {
+  const u8 = new Uint8Array(buf), dv = new DataView(buf);
+  const eocd = findEOCD(dv, u8.length);
+  if (eocd < 0) throw new Error("That file is not an .xlsx workbook. Excel's older .xls format cannot be read here \u2014 open it in Excel and save as .xlsx, or export a .csv.");
+  const count = dv.getUint16(eocd + 10, true);
+  let off = dv.getUint32(eocd + 16, true);
+  const entries = new Map();
+  for (let i = 0; i < count; i++) {
+    if (dv.getUint32(off, true) !== 0x02014b50) break;
+    const method = dv.getUint16(off + 10, true);
+    const csize = dv.getUint32(off + 20, true);
+    const nameLen = dv.getUint16(off + 28, true);
+    const extraLen = dv.getUint16(off + 30, true);
+    const cmtLen = dv.getUint16(off + 32, true);
+    const lho = dv.getUint32(off + 42, true);
+    const name = new TextDecoder().decode(u8.subarray(off + 46, off + 46 + nameLen));
+    entries.set(name, { method, csize, lho });
+    off += 46 + nameLen + extraLen + cmtLen;
+  }
+  return { u8, dv, entries };
+}
+async function readText(zip, name) {
+  const e = zip.entries.get(name);
+  if (!e) return null;
+  const { u8, dv } = zip;
+  if (dv.getUint32(e.lho, true) !== 0x04034b50) throw new Error("This workbook's internal structure looks damaged. Try re-saving it from Excel.");
+  const nameLen = dv.getUint16(e.lho + 26, true);
+  const extraLen = dv.getUint16(e.lho + 28, true);
+  const start = e.lho + 30 + nameLen + extraLen;
+  const data = u8.subarray(start, start + e.csize);
+  if (e.method === 0) return new TextDecoder().decode(data);
+  if (e.method !== 8) throw new Error("This workbook uses a compression method this page cannot read. Re-save it from Excel as .xlsx.");
+  if (typeof DecompressionStream === "undefined") throw new Error("This browser cannot decompress .xlsx files. Use a current Chrome, Edge, Safari, or Firefox \u2014 or export your data as .csv.");
+  const stream = new Blob([data]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
+  return await new Response(stream).text();
+}
+
+const xml = (s) => new DOMParser().parseFromString(s, "application/xml");
+function tagText(node, tag) {
+  const list = node.getElementsByTagName(tag);
+  let out = "";
+  for (let i = 0; i < list.length; i++) out += list[i].textContent;
+  return out;
+}
+function colOf(ref) {
+  let n = 0;
+  for (let i = 0; i < ref.length; i++) {
+    const c = ref.charCodeAt(i);
+    if (c < 65) break;
+    n = n * 26 + (c - 64);
+  }
+  return n - 1;
+}
+
+async function parseXlsx(buf) {
+  const zip = openZip(buf);
+  const wbXml = await readText(zip, "xl/workbook.xml");
+  if (!wbXml) throw new Error("That .xlsx file has no workbook inside it. Try re-saving it from Excel.");
+
+  const relsXml = await readText(zip, "xl/_rels/workbook.xml.rels");
+  const relMap = new Map();
+  if (relsXml) {
+    const rels = xml(relsXml).getElementsByTagName("Relationship");
+    for (let i = 0; i < rels.length; i++) {
+      let t = rels[i].getAttribute("Target") || "";
+      t = t.replace(/^\/?xl\//, "").replace(/^\//, "");
+      relMap.set(rels[i].getAttribute("Id"), "xl/" + t);
+    }
+  }
+
+  const shared = [];
+  const ssXml = await readText(zip, "xl/sharedStrings.xml");
+  if (ssXml) {
+    const sis = xml(ssXml).getElementsByTagName("si");
+    for (let i = 0; i < sis.length; i++) shared.push(tagText(sis[i], "t"));
+  }
+
+  const NSREL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
+  const sheets = [];
+  const sheetNodes = xml(wbXml).getElementsByTagName("sheet");
+  for (let i = 0; i < sheetNodes.length; i++) {
+    const s = sheetNodes[i];
+    const rid = s.getAttribute("r:id") || s.getAttributeNS(NSREL, "id");
+    let path = relMap.get(rid);
+    if (!path || !zip.entries.has(path)) path = "xl/worksheets/sheet" + (i + 1) + ".xml";
+    if (zip.entries.has(path)) sheets.push({ name: s.getAttribute("name") || "Sheet " + (i + 1), path });
+  }
+  if (!sheets.length) throw new Error("No worksheets found in that workbook.");
+
+  for (const sh of sheets) {
+    const doc = xml(await readText(zip, sh.path));
+    const rows = [];
+    const rowNodes = doc.getElementsByTagName("row");
+    for (let i = 0; i < rowNodes.length; i++) {
+      const rn = rowNodes[i];
+      const idx = parseInt(rn.getAttribute("r") || String(rows.length + 1), 10) - 1;
+      const cells = [];
+      const cs = rn.getElementsByTagName("c");
+      for (let j = 0; j < cs.length; j++) {
+        const c = cs[j];
+        const ref = c.getAttribute("r");
+        const col = ref ? colOf(ref) : j;
+        const t = c.getAttribute("t");
+        let val = "";
+        if (t === "s") {
+          const v = c.getElementsByTagName("v")[0];
+          val = v ? (shared[parseInt(v.textContent, 10)] ?? "") : "";
+        } else if (t === "inlineStr") {
+          val = tagText(c, "t");
+        } else {
+          const v = c.getElementsByTagName("v")[0];
+          val = v ? v.textContent : "";
+        }
+        cells[col] = val;
+      }
+      rows[idx] = cells;
+    }
+    sh.rows = rows;
+  }
+  return sheets;
+}
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [], cell = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (q) {
+      if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+      else cell += ch;
+    } else if (ch === '"') q = true;
+    else if (ch === ",") { row.push(cell); cell = ""; }
+    else if (ch === "\n") { row.push(cell); rows.push(row); row = []; cell = ""; }
+    else if (ch !== "\r") cell += ch;
+  }
+  if (cell.length || row.length) { row.push(cell); rows.push(row); }
+  return [{ name: "CSV", rows }];
+}
+
+/* == Shaping the grid ==================================================== */
+
+function letters(i) { let s = ""; i++; while (i > 0) { const m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = (i - m - 1) / 26; } return s; }
+function num(v) {
+  if (v === null || v === undefined) return NaN;
+  const s = String(v).trim().replace(/,/g, "");
+  return s ? Number(s) : NaN;
+}
+function shape(rows) {
+  const clean = (rows || []).filter((r) => r && r.some((c) => String(c ?? "").trim() !== ""));
+  if (clean.length < 2) return { error: "That sheet needs a header row and at least two rows of numbers." };
+  const width = clean.reduce((m, r) => Math.max(m, r.length), 0);
+  const head = clean[0], body = clean.slice(1);
+  const cols = [];
+  for (let c = 0; c < width; c++) {
+    const label = String(head[c] ?? "").trim() || "Column " + letters(c);
+    let ok = 0, tot = 0;
+    for (const r of body) {
+      const raw = String(r[c] ?? "").trim();
+      if (!raw) continue;
+      tot++;
+      if (isFinite(num(raw))) ok++;
+    }
+    cols.push({ index: c, label, numeric: tot > 0 && ok / tot >= 0.6, filled: tot });
+  }
+  return { cols, body };
+}
+function pick(cols) {
+  const named = (re) => cols.find((c) => re.test(c.label) && c.numeric);
+  const numeric = cols.filter((c) => c.numeric);
+  const x = named(/^\s*x\s*$/i) || numeric[0];
+  const y = named(/^\s*y\s*$/i) || numeric.find((c) => c !== x);
+  return x && y ? { x: x.index, y: y.index } : null;
+}
+
+/* == Chart =============================================================== */
+
+const SVGNS = "http://www.w3.org/2000/svg";
+const el = (n, attrs) => { const e = document.createElementNS(SVGNS, n); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+
+/* Ticks land on 1/2/5 x 10^k, and every label on an axis is formatted to the
+   same number of decimals -- the one implied by the step -- so a column of
+   ticks reads as "0, 10, 20" rather than "0, 10.00, 20.00". */
+function axisTicks(min, max, target) {
+  const span = (max - min) || Math.abs(max) || 1;
+  const raw = span / (target || 6);
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const nrm = raw / mag;
+  const step = (nrm < 1.5 ? 1 : nrm < 3 ? 2 : nrm < 7 ? 5 : 10) * mag;
+  const vals = [];
+  for (let v = Math.ceil(min / step) * step; v <= max + step * 1e-9; v += step) {
+    vals.push(Math.abs(v) < step * 1e-9 ? 0 : v);
+  }
+  const dec = Math.max(0, Math.min(8, -Math.floor(Math.log10(step) + 1e-9)));
+  const big = vals.reduce((m, v) => Math.max(m, Math.abs(v)), 0);
+  const fmt = (big >= 1e6 || (big > 0 && big < 1e-3))
+    ? (v) => v.toExponential(2)
+    : (v) => v.toFixed(dec);
+  return { vals, fmt };
+}
+
+function drawPlot(pts, fitline, xLabel, yLabel) {
+  const svg = document.getElementById("plot");
+  const tip = document.getElementById("tip");
+  svg.textContent = "";
+  const W = 900, H = 540, M = { t: 14, r: 20, b: 58, l: 78 };
+  const pw = W - M.l - M.r, ph = H - M.t - M.b;
+
+  let xmin = Infinity, xmax = -Infinity, ymin = Infinity, ymax = -Infinity;
+  for (const p of pts) {
+    if (p.x < xmin) xmin = p.x;
+    if (p.x > xmax) xmax = p.x;
+    if (p.y < ymin) ymin = p.y;
+    if (p.y > ymax) ymax = p.y;
+  }
+  const padX = (xmax - xmin) * 0.06 || Math.abs(xmax) * 0.1 || 1;
+  const padY = (ymax - ymin) * 0.08 || Math.abs(ymax) * 0.1 || 1;
+  const x0 = xmin - padX, x1 = xmax + padX, y0 = ymin - padY, y1 = ymax + padY;
+  const sx = (v) => M.l + (v - x0) / (x1 - x0) * pw;
+  const sy = (v) => M.t + ph - (v - y0) / (y1 - y0) * ph;
+
+  const g = el("g", {});
+  svg.appendChild(g);
+
+  const ya_t = axisTicks(y0, y1, 6);
+  for (const v of ya_t.vals) {
+    const y = sy(v);
+    g.appendChild(el("line", { x1: M.l, y1: y, x2: M.l + pw, y2: y, stroke: "var(--grid)", "stroke-width": 1 }));
+    const t = el("text", { x: M.l - 12, y: y + 4, "text-anchor": "end", fill: "var(--ink-muted)", "font-size": 13, "font-family": "var(--mono)" });
+    t.textContent = ya_t.fmt(v);
+    g.appendChild(t);
+  }
+  const xa_t = axisTicks(x0, x1, 7);
+  for (const v of xa_t.vals) {
+    const x = sx(v);
+    g.appendChild(el("line", { x1: x, y1: M.t, x2: x, y2: M.t + ph, stroke: "var(--grid)", "stroke-width": 1 }));
+    const t = el("text", { x: x, y: M.t + ph + 22, "text-anchor": "middle", fill: "var(--ink-muted)", "font-size": 13, "font-family": "var(--mono)" });
+    t.textContent = xa_t.fmt(v);
+    g.appendChild(t);
+  }
+  g.appendChild(el("line", { x1: M.l, y1: M.t + ph, x2: M.l + pw, y2: M.t + ph, stroke: "var(--axis)", "stroke-width": 1 }));
+  g.appendChild(el("line", { x1: M.l, y1: M.t, x2: M.l, y2: M.t + ph, stroke: "var(--axis)", "stroke-width": 1 }));
+
+  const xa = el("text", { x: M.l + pw / 2, y: H - 12, "text-anchor": "middle", fill: "var(--ink-2)", "font-size": 14, "font-weight": 600 });
+  xa.textContent = xLabel;
+  g.appendChild(xa);
+  const ya = el("text", { "text-anchor": "middle", fill: "var(--ink-2)", "font-size": 14, "font-weight": 600, transform: "translate(20," + (M.t + ph / 2) + ") rotate(-90)" });
+  ya.textContent = yLabel;
+  g.appendChild(ya);
+
+  if (fitline && isFinite(fitline.b1)) {
+    const ends = [];
+    for (const xv of [x0, x1]) {
+      const yv = fitline.b0 + fitline.b1 * xv;
+      if (yv >= y0 && yv <= y1) ends.push([xv, yv]);
+    }
+    if (fitline.b1 !== 0) {
+      for (const yv of [y0, y1]) {
+        const xv = (yv - fitline.b0) / fitline.b1;
+        if (xv >= x0 && xv <= x1) ends.push([xv, yv]);
+      }
+    }
+    if (ends.length >= 2) {
+      ends.sort((a, b) => a[0] - b[0]);
+      const a = ends[0], b = ends[ends.length - 1];
+      g.appendChild(el("line", { x1: sx(a[0]), y1: sy(a[1]), x2: sx(b[0]), y2: sy(b[1]), stroke: "var(--fit)", "stroke-width": 2, "stroke-linecap": "round" }));
+    }
+  }
+
+  for (const p of pts) {
+    g.appendChild(el("circle", { cx: sx(p.x), cy: sy(p.y), r: 4, fill: "var(--obs)", stroke: "var(--surface)", "stroke-width": 2 }));
+  }
+
+  const hits = el("g", {});
+  svg.appendChild(hits);
+  for (const p of pts) {
+    const cx = sx(p.x), cy = sy(p.y);
+    const h = el("circle", { cx: cx, cy: cy, r: 12, fill: "transparent" });
+    h.addEventListener("pointerenter", () => {
+      tip.innerHTML = "<b>row " + p.i + "</b><br>" + xLabel + " " + sig(p.x, 5) + "<br>" + yLabel + " " + sig(p.y, 5);
+      tip.style.left = (cx / W * 100) + "%";
+      tip.style.top = (cy / H * 100) + "%";
+      tip.classList.add("on");
+    });
+    h.addEventListener("pointerleave", () => tip.classList.remove("on"));
+    hits.appendChild(h);
+  }
+
+  document.getElementById("plotdesc").textContent =
+    "Scatter plot of " + yLabel + " against " + xLabel + " for " + pts.length +
+    " observations, with the least-squares fitted line. Every value is listed in the data table below.";
+}
+
+/* == Report ============================================================== */
+
+let sheets = [];
+
+function renderTables(r, pts, xLabel, yLabel) {
+  const rows = [
+    ["Intercept", r.b0, r.se0, r.t0, r.p0],
+    ["Slope on " + xLabel, r.b1, r.se1, r.t1, r.p1]
+  ];
+  let html = "<caption>Estimates for " + yLabel + " = &beta;&#8320; + &beta;&#8321; \u00d7 " + xLabel + " + &epsilon;</caption>" +
+    "<thead><tr><th scope=\"col\">Term</th><th scope=\"col\">Coefficient</th><th scope=\"col\">Std. error</th>" +
+    "<th scope=\"col\">t</th><th scope=\"col\">p-value</th></tr></thead><tbody>";
+  for (const [name, b, se, t, p] of rows) {
+    html += "<tr><th scope=\"row\">" + name + "</th><td>" + sig(b, 6) + "</td><td>" + sig(se, 5) +
+      "</td><td>" + sig(t, 4) + "</td><td>" + fmtP(p) + " <span class=\"stars\">" + stars(p) + "</span></td></tr>";
+  }
+  document.getElementById("coeftable").innerHTML = html + "</tbody>";
+
+  document.getElementById("coefsub").textContent =
+    "Two-sided tests against a null of zero, on " + r.df + " degrees of freedom. Fitted by " +
+    (r.engine === "fallback" ? "the page's built-in least squares." : r.engine + " in your browser.");
+  document.getElementById("starnote").innerHTML =
+    "Significance: *** p &lt; 0.001 &nbsp; ** p &lt; 0.01 &nbsp; * p &lt; 0.05 &nbsp; &middot; p &lt; 0.1";
+
+  const smBox = document.getElementById("smsummary");
+  smBox.textContent = r.summary || "The statsmodels summary is only available when Python is running. This fit used the page's built-in least squares.";
+
+  let d = "<thead><tr><th scope=\"col\">Row</th><th scope=\"col\">" + xLabel + "</th><th scope=\"col\">" + yLabel +
+    "</th><th scope=\"col\">Fitted</th><th scope=\"col\">Residual</th></tr></thead><tbody>";
+  pts.forEach((p, k) => {
+    d += "<tr><th scope=\"row\">" + p.i + "</th><td>" + sig(p.x, 6) + "</td><td>" + sig(p.y, 6) +
+      "</td><td>" + sig(r.fitted[k], 6) + "</td><td>" + sig(r.resid[k], 6) + "</td></tr>";
+  });
+  document.getElementById("datatable").innerHTML = d + "</tbody>";
+}
+
+async function run() {
+  const sh = sheets[+document.getElementById("sheet").value] || sheets[0];
+  const shaped = shape(sh.rows);
+  if (shaped.error) return fail(shaped.error);
+
+  const xi = +document.getElementById("xcol").value;
+  const yi = +document.getElementById("ycol").value;
+  const xLabel = shaped.cols[xi] ? shaped.cols[xi].label : "X";
+  const yLabel = shaped.cols[yi] ? shaped.cols[yi].label : "Y";
+  if (xi === yi) return fail("X and Y are set to the same column. Choose two different columns.");
+
+  const pts = [];
+  let skipped = 0, xnum = 0, ynum = 0;
+  shaped.body.forEach((row, k) => {
+    const x = num(row[xi]), y = num(row[yi]);
+    if (isFinite(x)) xnum++;
+    if (isFinite(y)) ynum++;
+    if (isFinite(x) && isFinite(y)) pts.push({ x, y, i: k + 2 });
+    else skipped++;
+  });
+  const dead = [!xnum ? "\u201c" + xLabel + "\u201d" : null, !ynum ? "\u201c" + yLabel + "\u201d" : null].filter(Boolean);
+  if (dead.length) return fail(dead.join(" and ") + (dead.length > 1 ? " hold" : " holds") +
+    " no numbers, so there is nothing to regress. Pick a column of numbers.");
+  if (pts.length < 3) return fail("Only " + pts.length + " row" + (pts.length === 1 ? "" : "s") +
+    " had a number in both columns. Regression needs at least three.");
+
+  let r;
+  try {
+    r = await fit(pts.map((p) => p.x), pts.map((p) => p.y), xLabel, yLabel);
+  } catch (e) {
+    return fail(e && e.message ? e.message : "The regression could not be computed.");
+  }
+
+  clearError();
+  if (r.engine === "fallback") {
+    const box = document.getElementById("err");
+    box.className = "msg warn";
+    box.innerHTML = "<strong>Computed without Python</strong>Pyodide could not be reached, so the page fitted the regression with its own least squares. The estimates are the same; the statsmodels summary is unavailable." +
+      (pyBroken ? " (" + pyBroken + ")" : "");
+  }
+
+  document.getElementById("results").classList.remove("hide");
+
+  const sign = r.b1 < 0 ? " \u2212 " : " + ";
+  document.getElementById("eq").innerHTML =
+    yLabel + " = <span class=\"co\">" + sig(r.b0, 5) + "</span>" + sign +
+    "<span class=\"co\">" + sig(Math.abs(r.b1), 5) + "</span> \u00d7 " + xLabel;
+  document.getElementById("fitsub").textContent =
+    "Least squares on " + r.n + " observation" + (r.n === 1 ? "" : "s") +
+    (skipped ? ", after skipping " + skipped + " row" + (skipped === 1 ? "" : "s") + " with a missing or non-numeric value." : ".");
+
+  document.getElementById("statlist").innerHTML = [
+    ["R\u00b2", (r.r2 * 100).toFixed(2) + "%"],
+    ["Adjusted R\u00b2", (r.adjr2 * 100).toFixed(2) + "%"],
+    ["Observations", String(r.n)],
+    ["Residual std. error", sig(r.s, 4)],
+    ["F(1, " + r.df + ")", sig(r.F, 4)]
+  ].map(([k, v]) => "<li><dt>" + k + "</dt><dd>" + v + "</dd></li>").join("");
+
+  document.getElementById("charttitle").textContent = yLabel + " against " + xLabel;
+  drawPlot(pts, r, xLabel, yLabel);
+  renderTables(r, pts, xLabel, yLabel);
+}
+
+function fillColumnPickers() {
+  const sh = sheets[+document.getElementById("sheet").value] || sheets[0];
+  const shaped = shape(sh.rows);
+  if (shaped.error) return fail(shaped.error);
+  const xsel = document.getElementById("xcol"), ysel = document.getElementById("ycol");
+  const opts = shaped.cols.filter((c) => c.filled > 0)
+    .map((c) => "<option value=\"" + c.index + "\">" + c.label + (c.numeric ? "" : " (not numeric)") + "</option>").join("");
+  xsel.innerHTML = opts;
+  ysel.innerHTML = opts;
+  const guess = pick(shaped.cols);
+  if (!guess) return fail("No numeric columns found on this sheet. The app needs at least two columns of numbers under a header row.");
+  xsel.value = guess.x;
+  ysel.value = guess.y;
+  run();
+}
+
+function fail(msg) {
+  const box = document.getElementById("err");
+  box.className = "msg";
+  box.textContent = msg;
+}
+function clearError() { document.getElementById("err").className = "msg hide"; }
+
+function load(sheetList, label) {
+  sheets = sheetList;
+  const sel = document.getElementById("sheet");
+  sel.innerHTML = sheets.map((s, i) => "<option value=\"" + i + "\">" + s.name + "</option>").join("");
+  document.getElementById("sheetfield").style.display = sheets.length > 1 ? "" : "none";
+  if (label) document.getElementById("dropmsg").innerHTML =
+    "Loaded <span class=\"filename\">" + label + "</span>. Drop another file to replace it.";
+  fillColumnPickers();
+}
+
+async function handleFile(file) {
+  clearError();
+  try {
+    if (/\.csv$/i.test(file.name) || file.type === "text/csv") load(parseCsv(await file.text()), file.name);
+    else if (/\.xlsx$|\.xlsm$/i.test(file.name)) load(await parseXlsx(await file.arrayBuffer()), file.name);
+    else fail("\u201c" + file.name + "\u201d is not a format this page reads. Use .xlsx, .xlsm, or .csv.");
+  } catch (e) {
+    fail(e && e.message ? e.message : "That file could not be read.");
+  }
+}
+
+/* Sample: advertising spend against unit sales \u2014 the shape of a textbook
+   simple-regression example, with real scatter around the line. */
+const SAMPLE = [["Ad spend ($000)", "Units sold"],
+  [1.2, 42], [2.5, 61], [3.1, 58], [4.0, 79], [4.6, 88], [5.2, 84], [6.1, 103],
+  [6.8, 99], [7.4, 118], [8.0, 126], [8.9, 121], [9.5, 141], [10.2, 152],
+  [11.0, 148], [11.6, 167], [12.3, 173], [13.1, 169], [14.0, 190], [14.8, 198],
+  [15.5, 205], [16.2, 199], [17.0, 221], [18.1, 228], [19.0, 234]];
+
+document.getElementById("file").addEventListener("change", (e) => {
+  if (e.target.files && e.target.files[0]) handleFile(e.target.files[0]);
+});
+document.getElementById("sample").addEventListener("click", () => {
+  load([{ name: "Sample", rows: SAMPLE.map((r) => r.map(String)) }], "sample data");
+});
+document.getElementById("sheet").addEventListener("change", fillColumnPickers);
+document.getElementById("xcol").addEventListener("change", run);
+document.getElementById("ycol").addEventListener("change", run);
+
+const drop = document.getElementById("drop");
+["dragenter", "dragover"].forEach((n) => drop.addEventListener(n, (e) => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach((n) => drop.addEventListener(n, (e) => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", (e) => {
+  const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+  if (f) handleFile(f);
+});
+
+// Warm Python up immediately, so it is ready before a file is chosen.
+startPython().catch(() => {});
+</script>

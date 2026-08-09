@@ -1,10 +1,63 @@
 ---
-title: "1. Intro to Claude"
+title: "AI/Claude Intro"
 author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 ---
 
+## Workshop Overview
 
-## Today's Session
+```{=html}
+<style>
+/* Session schedule, styled from the course page's own .chip and .item-title:
+   Rice navy block, 6px corner, letter-spaced date over a lighter time line,
+   title in navy. Every rule is scoped to .session-grid rather than to the
+   slide's id, so renaming the heading cannot detach the styling. */
+.session-grid {
+  display: grid;
+  /* Columns hug their content and sit centred. Equal 1fr columns would leave a
+     dead gulf between the left-hand title and the right-hand chip. */
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 4.5em;
+  margin-top: 0.7em;
+}
+.session-grid .sg-col { display: flex; flex-direction: column; gap: 0.75em; }
+.session-grid .sg-row { display: flex; align-items: center; gap: 1.1em; }
+.session-grid .sg-when {
+  flex: 0 0 7.6em;
+  background: #00205B;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.5em 0;
+  line-height: 1.1;
+}
+.session-grid .sg-day {
+  display: block; color: #fff;
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.07em;
+}
+.session-grid .sg-time {
+  display: block; color: #fff; opacity: 0.85;
+  font-size: 0.51em; font-weight: 600; letter-spacing: 0.035em; margin-top: 0.12em;
+}
+.session-grid .sg-title { font-size: 0.8em; font-weight: 700; color: #00205B; }
+</style>
+
+<div class="session-grid">
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 10</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Intro to Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 11</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Working with Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 12</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Teaching Tools</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 13</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI Tutors</span></div>
+  </div>
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 14</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Student Projects</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 17</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI for Research</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Personal Assistants</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">4:00&ndash;5:00</span></span><span class="sg-title">Overflow/Extra</span></div>
+  </div>
+</div>
+```
+
+## Today's Overview
 
 ::: {.step-flow-5}
 ::: {.step-card}
@@ -12,7 +65,7 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 1
 :::
 ::: {.step-title}
-Overview
+Claude
 :::
 :::
 ::: {.step-card}
@@ -44,12 +97,12 @@ Verifying Things
 5
 :::
 ::: {.step-title}
-Practice
+Example Uses
 :::
 :::
 :::
 
-## Overview {.section-divider}
+## Claude {.section-divider}
 
 ## A Brief History
 
@@ -144,7 +197,7 @@ Other Tools
 ```
 
 
-## Four Modes of Claude Desktop {.mode-cards}
+## Two Halves of Claude Desktop {.mode-cards}
 
 ::: {.card .card-blue}
 ::: {.mode-split}
@@ -539,7 +592,7 @@ The Problem with Rewriting
 - Old bugs reappear
 :::
 
-## Example: Data Wrangling, Charts, Documents {.section-divider}
+## Examples of Claude Use {.section-divider}
 
 ## Some Local Data
 
@@ -565,6 +618,40 @@ Copy this prompt into Claude:
 :::
 I have five Northwind files in my project folder: customers, orders, order details, products, and categories. Which product categories generated the most revenue from customers in Germany and France? Show only categories above $10,000, sort highest to lowest, create a bar chart, and put it in a PowerPoint deck.  Add some discussion.
 :::
+
+## Role of Excel   
+
+The first spreadsheet program, VisiCalc, was created by a Harvard MBA alum who was inspiried by watching his prof do pro-formas, valuation, and sensitivity analysis on a blackboard with chalk and eraser
+
+::: {.two-cards}
+::: {.card-blue .fragment}
+Spreadsheets later became the go-to in business for most things numeric 
+::: 
+::: {.card-amber .fragment}
+Spreadsheets remain valuable for tabular add-subtract models
+:::
+:::
+
+<br>
+
+::: {.card-dark .fragment}
+[Everything else should be done by code written by AI]{.accent}
+:::
+
+## Example 
+
+- Extract regression.html from session1.zip and double-click
+- It will open in your browser.  Upload regression-example.xlsx into the browser.
+
+::: {.info-box}
+[Lessons]{.box-title}
+
+- This was built by Claude from simple prompts.
+- It is even easier to just run one regression analysis.  
+- Students learn as much about regression from prompting Claude as from running it in Excel.  
+- Apps like this can be student assignments (more later).
+:::
+
 
 ## Takeaways {.centered-statement}
 

@@ -43,27 +43,6 @@ Claude as a Teaching Assistant
 
 ## Academic Studio {.section-divider}
 
-## Where Academic Studio Fits {.shrink}
-
-::: {.two-cards}
-::: {.card-blue}
-
-- Original Claude Code was CLI (command line interface)
-- Millions of developers use Claude Code extension for VS Code
-- VS Code = integrated development environment (IDE) from Microsoft
-:::
-::: {.card-amber}
-
-Academic Studio = VS Code, except
-
-- Removed menus and toolbar items aimed at developers
-- Claude Code opens on startup
-- Other extensions pre-installed
-- New Claude menu and revised Help menu
-:::
-:::
-
-
 ## File Explorer and Search {.shrink}
 
 Reach the File Explorer tool from the left toolbar.

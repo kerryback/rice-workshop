@@ -217,62 +217,6 @@
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
   },
   {
-    "objectID": "slides/4_tutors.html#four-things-you-can-now-make",
-    "href": "slides/4_tutors.html#four-things-you-can-now-make",
-    "title": "4. AI Tutors",
-    "section": "Four Things You Can Now Make",
-    "text": "Four Things You Can Now Make\n\n\nSlides\nDecks built from an outline, a paper, or a set of notes — and restyled in one pass\n\n\nCases\nA fictional company, the numbers, the exhibits, and the teaching note — generated together\n\n\nGrounded chatbots\nA tutor grounded in your own materials — from a no-build NotebookLM to a custom RAG bot, answering with citations\n\n\nVoiceovers\nA narrated video or a self-paced tutorbot made from a deck you already have\n\n\n\nEach of these used to be days of work. Each is now a conversation. This session is a tour of how — and every deck in this course was built the way we are about to describe."
-  },
-  {
-    "objectID": "slides/4_tutors.html#slides",
-    "href": "slides/4_tutors.html#slides",
-    "title": "4. AI Tutors",
-    "section": "Slides",
-    "text": "Slides"
-  },
-  {
-    "objectID": "slides/4_tutors.html#these-slides-are-the-example",
-    "href": "slides/4_tutors.html#these-slides-are-the-example",
-    "title": "4. AI Tutors",
-    "section": "These Slides Are the Example",
-    "text": "These Slides Are the Example\n\n\nWhat they are\n\nPlain-text Quarto files rendered to reveal.js — HTML slides that run in a browser\nOne stylesheet controls every deck’s look\nExport to PDF or PowerPoint when you need to hand them out\n\n\n\nWhy text, not PowerPoint\n\nClaude writes and edits text natively — so it can draft, restyle, and reorganize whole decks\nChange the stylesheet once; all eight decks update\nVersion-controlled: every change is tracked and reversible\n\n\n\n\nThe slides skill packages this: point Claude at notes, a paper, or an outline and it produces a styled deck with cards, callouts, and section dividers — the components you have been looking at all session."
-  },
-  {
-    "objectID": "slides/4_tutors.html#from-source-to-deck",
-    "href": "slides/4_tutors.html#from-source-to-deck",
-    "title": "4. AI Tutors",
-    "section": "From Source to Deck",
-    "text": "From Source to Deck\n\n\n\n📄\n\n\nGive it source\n\n\nAn outline, a paper, lecture notes, a transcript\n\n\n\n\n✍️\n\n\nDraft\n\n\nClaude proposes a slide-by-slide structure\n\n\n\n\n🎨\n\n\nStyle\n\n\nCards, dividers, diagrams applied from the theme\n\n\n\n\n📤\n\n\nExport\n\n\nPresent in browser; hand out as PDF or PPTX\n\n\n\n\nYou stay in the loop at each step — approving the structure before the polish, and the polish before the export."
-  },
-  {
-    "objectID": "slides/4_tutors.html#cases",
-    "href": "slides/4_tutors.html#cases",
-    "title": "4. AI Tutors",
-    "section": "Cases",
-    "text": "Cases"
-  },
-  {
-    "objectID": "slides/4_tutors.html#generating-a-case",
-    "href": "slides/4_tutors.html#generating-a-case",
-    "title": "4. AI Tutors",
-    "section": "Generating a Case",
-    "text": "Generating a Case\n\n\nFrom concept to case\n\nStart with the concept a session teaches\nBuild a fictional company and a decision that turns on that concept\nPlant one hook for every idea, so a student who understood the material can find them all\n\n\n\nWhat AI drafts\n\nThe company, the numbers, the exhibits, the competing memos\nRealistic artifacts — contracts, data tables, email threads\nThe teaching note, cold-call bank, and rubric alongside the case\n\n\n\n\nYour job shifts from writing prose to designing the decision — and checking that every concept has exactly one landmine."
-  },
-  {
-    "objectID": "slides/4_tutors.html#example-trinity-freight",
-    "href": "slides/4_tutors.html#example-trinity-freight",
-    "title": "4. AI Tutors",
-    "section": "Example: Trinity Freight",
-    "text": "Example: Trinity Freight\n\nBuilt to test an AI-security session. A freight brokerage’s CFO must approve, reject, or redesign an AI quoting agent. Every security concept has one hook in the case.\n\n\n\nThe decision\nApprove a $5M-opportunity AI agent — or catch why the design is dangerous\n\n\nThe exhibits\nArchitecture, data inventory, the vendor’s security overview, the economics\n\n\nThe hook\nOne exhibit is an ordinary-looking RFQ email with a prompt injection buried in it\n\n\n\nA student who absorbed the session sees the trap in the email. A polished memo that recommends approval and never mentions it has, in effect, approved the breach."
-  },
-  {
-    "objectID": "slides/4_tutors.html#two-versions-generated-together",
-    "href": "slides/4_tutors.html#two-versions-generated-together",
-    "title": "4. AI Tutors",
-    "section": "Two Versions, Generated Together",
-    "text": "Two Versions, Generated Together\n\n\nVersion A — write the recommendation\n\nStudent plays the CFO and makes the call\nFinds the risks, proposes a redesign, defends the tradeoffs\nShips with: assignment questions, cold-call bank, grading rubric\n\n\n\nVersion B — critique the AI’s memo\n\nStudent is handed a fluent, confident, subtly wrong AI memo\nEvaluates it rather than writing their own\nShips with: the AI recommendation, the answer key, the questions\n\n\n\n\nBoth versions — the case, the exhibits, the teaching materials, the answer key — came out of the same generation pass. We keep them under version control and edit the parts the model got not-quite-right."
-  },
-  {
     "objectID": "slides/4_tutors.html#rag-chatbots",
     "href": "slides/4_tutors.html#rag-chatbots",
     "title": "4. AI Tutors",
@@ -392,13 +336,6 @@
     "text": "Academic Studio"
   },
   {
-    "objectID": "slides/2_working.html#where-academic-studio-fits",
-    "href": "slides/2_working.html#where-academic-studio-fits",
-    "title": "2. Working with Claude",
-    "section": "Where Academic Studio Fits",
-    "text": "Where Academic Studio Fits\n\n\n\nOriginal Claude Code was CLI (command line interface)\nMillions of developers use Claude Code extension for VS Code\nVS Code = integrated development environment (IDE) from Microsoft\n\n\n\nAcademic Studio = VS Code, except\n\nRemoved menus and toolbar items aimed at developers\nClaude Code opens on startup\nOther extensions pre-installed\nNew Claude menu and revised Help menu"
-  },
-  {
     "objectID": "slides/2_working.html#file-explorer-and-search",
     "href": "slides/2_working.html#file-explorer-and-search",
     "title": "2. Working with Claude",
@@ -406,11 +343,11 @@
     "text": "File Explorer and Search\nReach the File Explorer tool from the left toolbar.\n\n\nFiles\n\nRight-click to rename, copy, …\nDouble-click to open in Academic Studio viewer\nViewer provides different options for different file types (cannot edit Office docs)\n\n\n\n\n\n\n\n\nSearch\n\nThe magnifying glass searches inside every file in the folder at once\nOptions for case, whole word, and regular expressions\nReplace across all files from the same pane"
   },
   {
-    "objectID": "slides/2_working.html#getting-around",
-    "href": "slides/2_working.html#getting-around",
+    "objectID": "slides/2_working.html#useful-features",
+    "href": "slides/2_working.html#useful-features",
     "title": "2. Working with Claude",
-    "section": "Getting Around",
-    "text": "Getting Around\n\n\nConversations\n\nOpen a second Claude conversation for a separate task\nEach keeps its own context; they do not see each other\n\n\n\nTerminal\n\nOpen from the Terminal menu, X to close\nClaude uses it too — you will see commands run as it works\n\n\n\n\n\n\n\n\nRemote SSH\n\nConnect to jgsrc1 or a different remote server\nFiles and code execution on remote server. Academic Studio runs on your computer.\n\n\n\n\nExtensions\nVS Codium marketplace (all are free)"
+    "section": "Useful Features",
+    "text": "Useful Features\n\n\nClaude icon on top right\n\nOpen a new conversation\nCan run multiple conversations simultaneously\n\n\n\nExtensions in left toolbar\n\nMany VS Codium extensions to choose from\nSome are pre-installed\n\n\n\nRemote SSH in left toolbar\n\nConnect to jgsrc1 or a different remote server\nFiles and code execution on remote server. Academic Studio runs on your computer."
   },
   {
     "objectID": "slides/2_working.html#permissions",
@@ -613,257 +550,278 @@
     "href": "index.html",
     "title": "Claude for Teaching & Research",
     "section": "",
-    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        Intro to Claude\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, artifacts, skills as tutors \n      \n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Student Projects\n        Artifacts, apps, agents\n      \n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
+    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        AI/Claude Intro\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, artifacts, skills as tutors \n      \n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Student Projects\n        Artifacts, apps, agents\n      \n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#todays-session",
-    "href": "slides/1_intro-to-claude.html#todays-session",
-    "title": "1. Intro to Claude",
-    "section": "Today’s Session",
-    "text": "Today’s Session\n\n\n\n1\n\n\nOverview\n\n\n\n\n2\n\n\nEffective Prompting\n\n\n\n\n3\n\n\nCode and Documents\n\n\n\n\n4\n\n\nVerifying Things\n\n\n\n\n5\n\n\nPractice"
+    "objectID": "slides/1_intro.html#workshop-overview",
+    "href": "slides/1_intro.html#workshop-overview",
+    "title": "AI/Claude Intro",
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#overview",
-    "href": "slides/1_intro-to-claude.html#overview",
-    "title": "1. Intro to Claude",
-    "section": "Overview",
-    "text": "Overview"
+    "objectID": "slides/1_intro.html#todays-overview",
+    "href": "slides/1_intro.html#todays-overview",
+    "title": "AI/Claude Intro",
+    "section": "Today’s Overview",
+    "text": "Today’s Overview\n\n\n\n1\n\n\nClaude\n\n\n\n\n2\n\n\nEffective Prompting\n\n\n\n\n3\n\n\nCode and Documents\n\n\n\n\n4\n\n\nVerifying Things\n\n\n\n\n5\n\n\nExample Uses"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#a-brief-history",
-    "href": "slides/1_intro-to-claude.html#a-brief-history",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#claude",
+    "href": "slides/1_intro.html#claude",
+    "title": "AI/Claude Intro",
+    "section": "Claude",
+    "text": "Claude"
+  },
+  {
+    "objectID": "slides/1_intro.html#a-brief-history",
+    "href": "slides/1_intro.html#a-brief-history",
+    "title": "AI/Claude Intro",
     "section": "A Brief History",
     "text": "A Brief History\n\n\n\n  \n    \n    2022–2023\n    Online chatbots\n  \n  \n    \n    2023–2024\n    Code and web tools\n  \n  \n    \n    2025\n    CLI tools\n  \n  \n    \n    2025–2026\n    CLI in an app\n  \n  \n    \n    2026\n    Cowork-type agents"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#an-agent-is-a-chatbot-with-tools",
-    "href": "slides/1_intro-to-claude.html#an-agent-is-a-chatbot-with-tools",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#an-agent-is-a-chatbot-with-tools",
+    "href": "slides/1_intro.html#an-agent-is-a-chatbot-with-tools",
+    "title": "AI/Claude Intro",
     "section": "An Agent is a Chatbot with Tools",
     "text": "An Agent is a Chatbot with Tools\n\n\nCode Execution\n\n\n↕\n\n\nUser\n\n\n↔︎\n\n\nAgent\n\n\n↔︎\n\n\nLLM\n\n\n↕\n\n\nOther Tools"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#agent-in-more-detail",
-    "href": "slides/1_intro-to-claude.html#agent-in-more-detail",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#agent-in-more-detail",
+    "href": "slides/1_intro.html#agent-in-more-detail",
+    "title": "AI/Claude Intro",
     "section": "Agent in More Detail",
     "text": "Agent in More Detail"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#anthropics-system-prompt",
-    "href": "slides/1_intro-to-claude.html#anthropics-system-prompt",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#anthropics-system-prompt",
+    "href": "slides/1_intro.html#anthropics-system-prompt",
+    "title": "AI/Claude Intro",
     "section": "Anthropic’s System Prompt",
     "text": "Anthropic’s System Prompt\nLink to Opus 4.8 system prompt"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#four-modes-of-claude-desktop",
-    "href": "slides/1_intro-to-claude.html#four-modes-of-claude-desktop",
-    "title": "1. Intro to Claude",
-    "section": "Four Modes of Claude Desktop",
-    "text": "Four Modes of Claude Desktop\n\n\n\nHome or Code?\nThe two halves of the app, chosen at the top of the left sidebar (the square icon toggles the sidebar)"
+    "objectID": "slides/1_intro.html#two-halves-of-claude-desktop",
+    "href": "slides/1_intro.html#two-halves-of-claude-desktop",
+    "title": "AI/Claude Intro",
+    "section": "Two Halves of Claude Desktop",
+    "text": "Two Halves of Claude Desktop\n\n\n\nHome or Code?\nThe two halves of the app, chosen at the top of the left sidebar (the square icon toggles the sidebar)"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#four-modes-of-claude-desktop-1",
-    "href": "slides/1_intro-to-claude.html#four-modes-of-claude-desktop-1",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#four-modes-of-claude-desktop",
+    "href": "slides/1_intro.html#four-modes-of-claude-desktop",
+    "title": "AI/Claude Intro",
     "section": "Four Modes of Claude Desktop",
     "text": "Four Modes of Claude Desktop\n\n\n\n\nWithin Home, Chat or Cowork?\nToggle in the prompt box\n\n\n\n\n\n\n\n\n\n\n\n\n\nWithin Code, Local or Cloud?\nSelector at the bottom of the window"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#what-to-use",
-    "href": "slides/1_intro-to-claude.html#what-to-use",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#what-to-use",
+    "href": "slides/1_intro.html#what-to-use",
+    "title": "AI/Claude Intro",
     "section": "What to Use?",
     "text": "What to Use?\n\n\n\nYou can chat in any mode\nYou can execute code in any mode\n\n\n\nCowork &gt; Chat on many dimensions. Requires paid account.\n\n\nCode Local is best for most people, but Claude Desktop is not the best venue\n\n\nUse Cowork for now\n(more later)\n\n\n\nCode Cloud is GitHub integration, probably overkill"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#configuration",
-    "href": "slides/1_intro-to-claude.html#configuration",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#configuration",
+    "href": "slides/1_intro.html#configuration",
+    "title": "AI/Claude Intro",
     "section": "Configuration",
     "text": "Configuration\n\nCreate New Project + Use a Folder Give Claude access to your local files. Store project-specific instructions.\nAuto Automatically approve. Misleading name. Claude decides: safe -&gt; don’t ask permission, possibly risky -&gt; ask permission\nModel I recommend Sonnet 5. Capable for anything you probably want to do. Faster and cheaper (easier on token quota)."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#do-not-train",
-    "href": "slides/1_intro-to-claude.html#do-not-train",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#do-not-train",
+    "href": "slides/1_intro.html#do-not-train",
+    "title": "AI/Claude Intro",
     "section": "Do Not Train",
     "text": "Do Not Train\n\n\nConsumer plans — Free, Pro, Max (what we are on)\n\nSettings &gt; Privacy &gt; Privacy Settings, then turn off Help improve Claude\nDirect link: claude.ai/settings/data-privacy-controls\nThe default on a personal account is on\nOff keeps your data 30 days; on keeps it five years\n\n\n\nCommercial plans — Claude for Work, Education, API\n\nYour data is never used for training, and there is no setting to find\nIncludes the API, and the API through Amazon Bedrock and Google Vertex\nIf Rice moves us onto one of these, the setting disappears from your account — nothing to do\n\n\n\n\nIt is one account setting, not an app setting: it covers Chat, Cowork, the command line, and the Academic Studio extension at once. And it is not in the Anthropic developer console — that is a separate product for API keys."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#effective-prompting",
-    "href": "slides/1_intro-to-claude.html#effective-prompting",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#effective-prompting",
+    "href": "slides/1_intro.html#effective-prompting",
+    "title": "AI/Claude Intro",
     "section": "Effective Prompting",
     "text": "Effective Prompting"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#plan-mode",
-    "href": "slides/1_intro-to-claude.html#plan-mode",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#plan-mode",
+    "href": "slides/1_intro.html#plan-mode",
+    "title": "AI/Claude Intro",
     "section": "Plan Mode",
     "text": "Plan Mode\nClaude Desktop has an explicit Plan mode. Or add “plan how to do this before you start.”\n\n\nWhy It Works: Knowledge\n\nPlanning pulls relevant knowledge into the context window\nThe model answers in light of what it just retrieved, not base rates\n\n\n\nWhy It Works: Scale\n\nDecompose the work into subtasks\nVerify each one before the next\nFailures stay small and local"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#ai-is-a-prediction-machine-not-a-rational-person",
-    "href": "slides/1_intro-to-claude.html#ai-is-a-prediction-machine-not-a-rational-person",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#ai-is-a-prediction-machine-not-a-rational-person",
+    "href": "slides/1_intro.html#ai-is-a-prediction-machine-not-a-rational-person",
+    "title": "AI/Claude Intro",
     "section": "AI is a Prediction Machine, not a Rational Person",
     "text": "AI is a Prediction Machine, not a Rational Person\nSuppose Claude has told you in the past that Method A beats Method B for some task. You ask it to do the task.\n\n\nDo not assume it will use what it knows. If “A beats B” is not in the context window, and B appeared more often in its training data, it will probably use B.\n\n\nThis is the value of “plan before you act.” Planning surfaces “A beats B,” leading Claude to select A for the task."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#beware-of-tunnel-vision",
-    "href": "slides/1_intro-to-claude.html#beware-of-tunnel-vision",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#beware-of-tunnel-vision",
+    "href": "slides/1_intro.html#beware-of-tunnel-vision",
+    "title": "AI/Claude Intro",
     "section": "Beware of Tunnel Vision",
     "text": "Beware of Tunnel Vision\nPrediction also means momentum. Once Claude has started down a path, continuing it is the likeliest next step.\n\n\nWhat you will see\n\nIt hits a roadblock and tries to get around it\nThen another way around, and another — exhaustively, tenaciously\nWhat it rarely does is return to the start and ask whether a different path was the better one all along\n\n\n\nWhat helps\n\nPeriodically ask: are there other approaches that might work better for reaching the end goal?\nRestate the goal, not just the obstacle — that gives it permission to abandon the path instead of defending it"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#steelmanning",
-    "href": "slides/1_intro-to-claude.html#steelmanning",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#steelmanning",
+    "href": "slides/1_intro.html#steelmanning",
+    "title": "AI/Claude Intro",
     "section": "Steelmanning",
     "text": "Steelmanning\nDon’t ask AI whether your idea is good. Ask it to make the strongest possible case that your idea is wrong.\n\nSycophancy: training on human feedback teaches that agreement gets high ratings. Ask “is my plan sound?” and Claude finds reasons it is.\nThe fix: “What is the strongest argument against this acquisition?”\nOne step further: have it play a skeptical board member, a regulator, a competitor."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#numbers-need-code",
-    "href": "slides/1_intro-to-claude.html#numbers-need-code",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#numbers-need-code",
+    "href": "slides/1_intro.html#numbers-need-code",
+    "title": "AI/Claude Intro",
     "section": "Numbers Need Code",
     "text": "Numbers Need Code\nNever trust AI arithmetic. Have it write and run code.\n\n\nThe Problem\n\n“47.3%” is as plausible as “52.1%” to a next-token predictor\nMental math, rankings, comparisons, aggregations — all unreliable\nWrong numbers stated with complete confidence\n\n\n\nThe Fix\n\nAsk for Python, and have it run\nArithmetic becomes computation, not prediction\nCode execution is built into every chatbot and Claude Code"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#what-not-to-do",
-    "href": "slides/1_intro-to-claude.html#what-not-to-do",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#what-not-to-do",
+    "href": "slides/1_intro.html#what-not-to-do",
+    "title": "AI/Claude Intro",
     "section": "What Not to Do",
     "text": "What Not to Do\n2022–2023 conventions are now useless or counterproductive.\n\n\nSkip These\n\n“Think step by step” — reasoning models already do, in hidden tokens\n“Take a deep breath” — measurably useless now\n“CRITICAL! NEVER EVER…” — overtriggers, and gets worse results\n\n\n\nUse With Care\n\n“You are an expert data analyst …”\nPersona stacking can improve tone and structure\nDirect task framing usually wins"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#code-and-documents",
-    "href": "slides/1_intro-to-claude.html#code-and-documents",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#code-and-documents",
+    "href": "slides/1_intro.html#code-and-documents",
+    "title": "AI/Claude Intro",
     "section": "Code and Documents",
     "text": "Code and Documents"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#example-prompt",
-    "href": "slides/1_intro-to-claude.html#example-prompt",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#example-prompt",
+    "href": "slides/1_intro.html#example-prompt",
+    "title": "AI/Claude Intro",
     "section": "Example Prompt",
     "text": "Example Prompt\n\nDownload three FRED (Federal Reserve Economic Data) series as CSV: mortgage rate (MORTGAGE30US), home price (MSPUS), household income (MEHOINUSA672N), 1990 through most recent.\n\nMORTGAGE30US is weekly — resample to quarterly by averaging. MSPUS is already quarterly. MEHOINUSA672N is annual — interpolate linearly between annual observations to produce quarterly values.\nAssume a 20% down payment and a 30-year loan. Compute the monthly mortgage payment on a median-priced home and express it as a percentage of monthly median household income.\nPlot the affordability ratio as a line chart. Annotate three points: the 2006 bubble peak, the 2012 trough (most affordable in decades, as low rates met depressed prices), and the 2023 spike."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#result",
-    "href": "slides/1_intro-to-claude.html#result",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#result",
+    "href": "slides/1_intro.html#result",
+    "title": "AI/Claude Intro",
     "section": "Result",
     "text": "Result"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#reading-editing-and-writing-documents",
-    "href": "slides/1_intro-to-claude.html#reading-editing-and-writing-documents",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#reading-editing-and-writing-documents",
+    "href": "slides/1_intro.html#reading-editing-and-writing-documents",
+    "title": "AI/Claude Intro",
     "section": "Reading, Editing, and Writing Documents",
     "text": "Reading, Editing, and Writing Documents\nClaude natively reads text and images, and natively writes text. Everything beyond text is handled by code.\n\nDocument reading is doc -&gt; text, then read\nDocument creation is text (code) -&gt; doc\nOffice document editing is ‘read and write XML (Extensible Markup Language)’"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#example",
-    "href": "slides/1_intro-to-claude.html#example",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#example",
+    "href": "slides/1_intro.html#example",
+    "title": "AI/Claude Intro",
     "section": "Example",
     "text": "Example\n\nGet Tesla’s EPS from SEC EDGAR by quarter for the past 5 years. Plot. Create a PowerPoint deck with the plot plus discussion.\n\n\n\nThe result\n\ntesla.pptx"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#creating-excel-workbooks",
-    "href": "slides/1_intro-to-claude.html#creating-excel-workbooks",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#creating-excel-workbooks",
+    "href": "slides/1_intro.html#creating-excel-workbooks",
+    "title": "AI/Claude Intro",
     "section": "Creating Excel Workbooks",
     "text": "Creating Excel Workbooks\nClaude uses Python to create Excel workbooks, inserting numbers (inputs) and formulas cell-by-cell\n\n\nExample Prompt\n\nBuild an Excel workbook containing a mortgage amortization table. Include a chart of the amount going to interest and the amount going to principal each month.\n\n\n\nResult\n\namortization.xlsx"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#claude-plugin-for-excel",
-    "href": "slides/1_intro-to-claude.html#claude-plugin-for-excel",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#claude-plugin-for-excel",
+    "href": "slides/1_intro.html#claude-plugin-for-excel",
+    "title": "AI/Claude Intro",
     "section": "Claude Plugin for Excel",
     "text": "Claude Plugin for Excel\nA chat panel inside Excel itself. Add it from Home → Add-ins. You will be prompted to connect to your Anthropic account (paid account).\n\n\nExample"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#verifying-things",
-    "href": "slides/1_intro-to-claude.html#verifying-things",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#verifying-things",
+    "href": "slides/1_intro.html#verifying-things",
+    "title": "AI/Claude Intro",
     "section": "Verifying Things",
     "text": "Verifying Things"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#verify-claims",
-    "href": "slides/1_intro-to-claude.html#verify-claims",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#verify-claims",
+    "href": "slides/1_intro.html#verify-claims",
+    "title": "AI/Claude Intro",
     "section": "Verify Claims",
     "text": "Verify Claims\n\n\nThe Problem\n\nFacts, regulations, dates, citations — stated the same way whether real or invented\nThe more obscure the fact, the likelier it is fabricated\n\n\n\nThe Fix\n\nHave it search before answering\nAsk for sources. Then check them."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#verify-code",
-    "href": "slides/1_intro-to-claude.html#verify-code",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#verify-code",
+    "href": "slides/1_intro.html#verify-code",
+    "title": "AI/Claude Intro",
     "section": "Verify Code",
     "text": "Verify Code\nConsider a human assistant. Ask where they could have gone wrong.\n\n\nThey may not have understood what you wanted.\nTo perform the task, they may have had to make decisions that were different from the decisions you would have made.\nTheir Excel, code, or whatever may have had subtle bugs so it did not do what they expected.\n\n\nClaude can go wrong in exactly the same ways. How do you check them?"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#three-checks",
-    "href": "slides/1_intro-to-claude.html#three-checks",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#three-checks",
+    "href": "slides/1_intro.html#three-checks",
+    "title": "AI/Claude Intro",
     "section": "Three Checks",
     "text": "Three Checks\nTake advantage of the fact that AI is perfectly patient. You can probe more deeply than you would with a human assistant, and it will not be offended.\n\n\n\nCheck its understanding\n\n\nExplain to me what you did and how you did it.\n\n\n\n\nCheck its decisions\n\n\nReport all ways in which my instructions were ambiguous and you made decisions we have not discussed.\n\n\n\n\nCheck its code\n\n\nShow me a sample case and work through the case as if by hand so I can verify your number."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#generator-critic",
-    "href": "slides/1_intro-to-claude.html#generator-critic",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#generator-critic",
+    "href": "slides/1_intro.html#generator-critic",
+    "title": "AI/Claude Intro",
     "section": "Generator-Critic",
     "text": "Generator-Critic\nSpawn a second Claude to attack the first one’s output, not validate it. Subagents work well — several of them.\n\n\nThe Pattern\n\nGenerator produces the work\nCritic gets: “Find every factual error, logical gap, and unsupported assumption. Do not summarize — find flaws.”\n\n\n\nWhy a Separate Instance?\n\nA model is anchored to its own output and defends it\nA fresh instance with an adversarial mandate is not"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#re-use-tested-code",
-    "href": "slides/1_intro-to-claude.html#re-use-tested-code",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#re-use-tested-code",
+    "href": "slides/1_intro.html#re-use-tested-code",
+    "title": "AI/Claude Intro",
     "section": "Re-Use Tested Code",
     "text": "Re-Use Tested Code\nOnce code runs correctly, save it. Re-use it rather than rewrite it.\n\n\nThe Problem with Rewriting\n\n\nDifferent choices each time\nScripts that should agree may not\nOld bugs reappear"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#example-data-wrangling-charts-documents",
-    "href": "slides/1_intro-to-claude.html#example-data-wrangling-charts-documents",
-    "title": "1. Intro to Claude",
-    "section": "Example: Data Wrangling, Charts, Documents",
-    "text": "Example: Data Wrangling, Charts, Documents"
+    "objectID": "slides/1_intro.html#examples-of-claude-use",
+    "href": "slides/1_intro.html#examples-of-claude-use",
+    "title": "AI/Claude Intro",
+    "section": "Examples of Claude Use",
+    "text": "Examples of Claude Use"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#some-local-data",
-    "href": "slides/1_intro-to-claude.html#some-local-data",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#some-local-data",
+    "href": "slides/1_intro.html#some-local-data",
+    "title": "AI/Claude Intro",
     "section": "Some Local Data",
     "text": "Some Local Data\nExtract the following from session1.zip into your project folder or just put session1.zip there and tell Claude to extract.\n\n\n\n\nFile\nRows\nKey Columns\n\n\n\n\nnorthwind_customers.xlsx\n93\nCustomerID, CompanyName, Country\n\n\nnorthwind_orders.xlsx\n500\nOrderID, CustomerID, OrderDate\n\n\nnorthwind_orderdetails.xlsx\n18,976\nOrderID, ProductID, UnitPrice, Quantity\n\n\nnorthwind_products.xlsx\n77\nProductID, ProductName, CategoryID\n\n\nnorthwind_categories.xlsx\n8\nCategoryID, CategoryName"
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#merge-filter-aggregate-chart-analyze-create",
-    "href": "slides/1_intro-to-claude.html#merge-filter-aggregate-chart-analyze-create",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#merge-filter-aggregate-chart-analyze-create",
+    "href": "slides/1_intro.html#merge-filter-aggregate-chart-analyze-create",
+    "title": "AI/Claude Intro",
     "section": "Merge, Filter, Aggregate, Chart, Analyze, Create",
     "text": "Merge, Filter, Aggregate, Chart, Analyze, Create\n\n\nCopy this prompt into Claude:\n\nI have five Northwind files in my project folder: customers, orders, order details, products, and categories. Which product categories generated the most revenue from customers in Germany and France? Show only categories above $10,000, sort highest to lowest, create a bar chart, and put it in a PowerPoint deck. Add some discussion."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#takeaways",
-    "href": "slides/1_intro-to-claude.html#takeaways",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#role-of-excel",
+    "href": "slides/1_intro.html#role-of-excel",
+    "title": "AI/Claude Intro",
+    "section": "Role of Excel",
+    "text": "Role of Excel\nThe first spreadsheet program, VisiCalc, was created by a Harvard MBA alum who was inspiried by watching his prof do pro-formas, valuation, and sensitivity analysis on a blackboard with chalk and eraser\n\n\nSpreadsheets later became the go-to in business for most things numeric\n\n\nSpreadsheets remain valuable for tabular add-subtract models\n\n\n\n\nEverything else should be done by code written by AI"
+  },
+  {
+    "objectID": "slides/1_intro.html#example-1",
+    "href": "slides/1_intro.html#example-1",
+    "title": "AI/Claude Intro",
+    "section": "Example",
+    "text": "Example\n\nExtract regression.html from session1.zip and double-click\nIt will open in your browser. Upload regression-example.xlsx into the browser.\n\n\nLessons\n\nThis was built by Claude from simple prompts.\nIt is even easier to just run one regression analysis.\n\nStudents learn as much about regression from prompting Claude as from running it in Excel.\n\nApps like this can be student assignments (more later)."
+  },
+  {
+    "objectID": "slides/1_intro.html#takeaways",
+    "href": "slides/1_intro.html#takeaways",
+    "title": "AI/Claude Intro",
     "section": "Takeaways",
     "text": "Takeaways\n\nThere is no secret to prompting. Just chat (a lot). Treat AI as an infinitely patient colleague with a poor memory. Code execution gives AI enormous power."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#homework",
-    "href": "slides/1_intro-to-claude.html#homework",
-    "title": "1. Intro to Claude",
+    "objectID": "slides/1_intro.html#homework",
+    "href": "slides/1_intro.html#homework",
+    "title": "AI/Claude Intro",
     "section": "Homework",
     "text": "Homework\n\nWatch the three-minute video academic_studio.mp4"
   },
@@ -1321,12 +1279,5 @@
     "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
-  },
-  {
-    "objectID": "slides/2_working.html#useful-features",
-    "href": "slides/2_working.html#useful-features",
-    "title": "2. Working with Claude",
-    "section": "Useful Features",
-    "text": "Useful Features\n\n\nClaude icon on top right\n\nOpen a new conversation\nCan run multiple conversations simultaneously\n\n\n\nExtensions in left toolbar\n\nMany VS Codium extensions to choose from\nSome are pre-installed\n\n\n\nRemote SSH in left toolbar\n\nConnect to jgsrc1 or a different remote server\nFiles and code execution on remote server. Academic Studio runs on your computer."
   }
 ]
