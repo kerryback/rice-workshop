@@ -854,11 +854,11 @@
     "text": "Merge, Filter, Aggregate, Chart, Analyze, Create\n\n\nCopy this prompt into Claude:\n\nI have five Northwind files in my project folder: customers, orders, order details, products, and categories. Which product categories generated the most revenue from customers in Germany and France? Show only categories above $10,000, sort highest to lowest, create a bar chart, and put it in a PowerPoint deck. Add some discussion."
   },
   {
-    "objectID": "slides/1_intro-to-claude.html#takeaway",
-    "href": "slides/1_intro-to-claude.html#takeaway",
+    "objectID": "slides/1_intro-to-claude.html#takeaways",
+    "href": "slides/1_intro-to-claude.html#takeaways",
     "title": "1. Intro to Claude",
-    "section": "Takeaway",
-    "text": "Takeaway\n\nThere is no secret to prompting. Just chat (a lot). Treat AI as an infinitely patient colleague with a poor memory. Code execution gives AI enormous power."
+    "section": "Takeaways",
+    "text": "Takeaways\n\nThere is no secret to prompting. Just chat (a lot). Treat AI as an infinitely patient colleague with a poor memory. Code execution gives AI enormous power."
   },
   {
     "objectID": "slides/1_intro-to-claude.html#homework",
