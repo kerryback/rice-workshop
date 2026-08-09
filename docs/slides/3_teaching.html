@@ -287,6 +287,32 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <p>Information considered sensitive or confidential by University Policy 808 (https://policy.rice.edu/808), including private information about individuals and protected research data, should not be used with consumer-focused or publicly available AI services.</p>
 </div>
 </section>
+<section id="anonymizing-student-assignments" class="slide level2 center">
+<h2>Anonymizing Student Assignments</h2>
+<div class="two-cards">
+<div class="card-blue">
+<div class="card-title">
+<p>Canvas submissions</p>
+</div>
+<ul>
+<li>Student name is in filename<br>
+</li>
+<li>Instruct students to put names nowhere else</li>
+<li>Run Python script to encrypt filenames and strip metadata</li>
+</ul>
+</div>
+<div class="card-amber">
+<div class="card-title">
+<p>Handwritten</p>
+</div>
+<ul>
+<li>Instruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)</li>
+<li>Python script to strip names, create a table of names and filenames</li>
+<li>Python OCR + Claude image viewing until text is coherent</li>
+</ul>
+</div>
+</div>
+</section>
 <section id="create-a-skill-for-grading" class="slide level2 center">
 <h2>Create a Skill for Grading</h2>
 <div class="step-flow-2">
@@ -298,7 +324,7 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <p>Create a recipe</p>
 </div>
 <div class="step-desc">
-<p>How many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades</p>
+<p>How to anonymize, how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades</p>
 </div>
 </div>
 <div class="step-card">

@@ -886,7 +886,7 @@
     "href": "slides/3_teaching.html#create-a-skill-for-grading",
     "title": "3. Teaching Tools",
     "section": "Create a Skill for Grading",
-    "text": "Create a Skill for Grading\n\n\n\n1\n\n\nCreate a recipe\n\n\nHow many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades\n\n\n\n\n2\n\n\nInvoke it\n\n\nYou provide the grading rubric (maybe a filename) and the name of the folder containing assignments"
+    "text": "Create a Skill for Grading\n\n\n\n1\n\n\nCreate a recipe\n\n\nHow to anonymize, how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades\n\n\n\n\n2\n\n\nInvoke it\n\n\nYou provide the grading rubric (maybe a filename) and the name of the folder containing assignments"
   },
   {
     "objectID": "slides/3_teaching.html#product-vs-process",
@@ -1279,5 +1279,12 @@
     "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
+  },
+  {
+    "objectID": "slides/3_teaching.html#anonymizing-student-assignments",
+    "href": "slides/3_teaching.html#anonymizing-student-assignments",
+    "title": "3. Teaching Tools",
+    "section": "Anonymizing Student Assignments",
+    "text": "Anonymizing Student Assignments\n\n\n\nCanvas submissions\n\n\nStudent name is in filename\n\nInstruct students to put names nowhere else\nRun Python script to encrypt filenames and strip metadata\n\n\n\n\nHandwritten\n\n\nInstruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)\nPython script to strip names, create a table of names and filenames\nPython OCR + Claude image viewing until text is coherent"
   }
 ]

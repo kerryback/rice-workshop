@@ -156,6 +156,27 @@ Rice Policy ([tss.rice.edu/ai-usage-guidelines](https://tss.rice.edu/ai-usage-gu
 Information considered sensitive or confidential by University Policy 808 (https://policy.rice.edu/808), including private information about individuals and protected research data, should not be used with consumer-focused or publicly available AI services.
 :::
 
+## Anonymizing Student Assignments 
+
+::: {.two-cards}
+::: {.card-blue}
+::: {.card-title}
+Canvas submissions
+:::
+
+- Student name is in filename  
+- Instruct students to put names nowhere else 
+- Run Python script to encrypt filenames and strip metadata
+:::
+::: {.card-amber}
+::: {.card-title}
+Handwritten
+:::
+- Instruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)
+- Python script to strip names, create a table of names and filenames
+- Python OCR + Claude image viewing until text is coherent 
+:::
+:::
 
 ## Create a Skill for Grading
 
@@ -168,7 +189,7 @@ Information considered sensitive or confidential by University Policy 808 (https
 Create a recipe
 :::
 ::: {.step-desc}
-How many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades
+How to anonymize, how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades
 :::
 :::
 ::: {.step-card}

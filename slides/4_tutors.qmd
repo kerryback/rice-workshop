@@ -6,6 +6,13 @@ author: "Kerry Back<br>Rice Business"
 
 NotebookLM - Derivatives, Weston et al.
 
+## Gemini Notebook (previously NotebookLM)
+
+- Free knowledge repository.  Upload as many as 50 sources into each notebook.  Chatbot that answers from sources.
+- Also, podcast-style audio, voiceover slide decks, ...
+- Example: [chapters from a textbook](https://notebook.google.com/notebook/701244f5-4833-4217-875d-96380578825b)
+- Example: [Kapadia-Ostdiek-Weston overview](https://notebook.google.com/notebook/58351fb6-7453-4bff-909f-281bb34e4c6a/artifact/c78bc42e-a9e7-4276-957c-d78049841951?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
+
 
 
 ## RAG Chatbots {.section-divider}
