@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-64ddf9ef13999a6fac4d7c2921cf35bc.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c73eb626636bb8002804d7461fc5cb1f.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -144,16 +144,35 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 </section>
 <section id="todays-session" class="slide level2 center">
 <h2>Today’s Session</h2>
-<ul>
-<li>Plugins</li>
-<li>Flipping the classroom</li>
-<li>Building teaching assistants
-<ul>
-<li>Slide narration</li>
-<li>Grading assistants</li>
-<li>Other tools</li>
-</ul></li>
-</ul>
+<div class="step-flow-3">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Plugins</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Thoughts on teaching</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Building teaching assistants</p>
+</div>
+<div class="step-desc">
+<p>Slide narration · Grading assistants · Other tools</p>
+</div>
+</div>
+</div>
 </section>
 <section id="plugins" class="slide level2 center">
 <h2>Plugins</h2>
@@ -162,289 +181,534 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <p>Visit the Anthropic plugin directory: Enter <span class="accent">/plugin</span> as a Claude prompt or visit <a href="https://github.com/anthropics/claude-plugins-official" target="_blank">https://github.com/anthropics/claude-plugins-official</a></p>
 </div>
 <div class="two-cards">
-<div class="card-amber">
+<div class="card card-amber">
 <p>Thousands of people (including me) have created their own plugin marketplaces. Everything is free.</p>
 </div>
-<div class="card-teal">
-<p>The most useful things will be the ones you create (with Claude’s assistance) — for example, a code script that you know works and a SKILL.md that tells Claude when to use it</p>
+<div class="card card-teal">
+<p>The most useful ones will be the ones you create (with Claude’s assistance) — for example, a code script that you know works and a SKILL.md that tells Claude when to use it</p>
 </div>
 </div>
+</section>
+<section id="thoughts-on-teaching" class="slide level2 section-divider center">
+<h2>Thoughts on Teaching</h2>
 </section>
 <section id="flipping-the-classroom" class="slide level2 center">
 <h2>Flipping the Classroom</h2>
-</section>
-<section id="building-assistants" class="slide level2 center">
-<h2>Building Assistants</h2>
-</section>
-<section id="section" class="slide level2 image-slide center">
-<h2></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/fishing.png" class="quarto-figure quarto-figure-center" style="width:72.0%"></p>
-</figure>
+<div class="highlight-box">
+<p>Do we have a choice?</p>
 </div>
-<div class="explainer">
-<p>Give a person a fish, and they eat for a day. Teach a person to fish, and they end up in the water with an alligator — but the fish is theirs.</p>
-</div>
-</section>
-<section id="todays-real-subject" class="slide level2 centered-statement center">
-<h2>Today’s Real Subject</h2>
-<div class="card card-dark">
-<p>I will show you some things I built. The <span class="accent">things</span> are not the point — you will want different ones. The point is <span class="accent">how they got built</span>: you want something, you ask Claude how, you get a rough version, and you keep going until it works.</p>
-</div>
-</section>
-<section id="three-ways-to-extend-claude" class="slide level2 center">
-<h2>Three Ways to Extend Claude</h2>
-<div class="three-cards">
+<div class="two-cards">
 <div class="card card-blue">
-<p><span class="card-title">Skills</span></p>
+<p><span class="card-title">Out-of-class assignments</span></p>
 <ul>
-<li>Teach Claude <em>your procedure</em> for a task</li>
-<li>It follows the same steps every time</li>
+<li>We can no longer grade out-of-class assignments</li>
+<li>If we want to do more assessment in class, then we need to do more teaching out of class</li>
 </ul>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">Connectors</span></p>
+<p><span class="card-title">In-class assessments</span></p>
+<p>participation, presentations, quizzes, “solutions” to problems that they can evaluate with basic calculators or paper and pencil</p>
+</div>
+</div>
+</section>
+<section id="teaching-cases" class="slide level2 center">
+<h2>Teaching Cases</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">Might change a little</span></p>
 <ul>
-<li>Give Claude <em>your data and systems</em></li>
-<li>Ask a database, your calendar, your files</li>
+<li>We should have higher standards for student preparedness</li>
+<li>We can do more live work in class. A student can lead while the instructor types prompts. Or allow time for students to work with AI and then screen share.</li>
+</ul>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">Using and writing cases</span></p>
+<ul>
+<li>HBS’s policy is “do not upload cases to chatbots,” so don’t do it live in class</li>
+<li>AI is good at writing cases. It knows the HBS style: “Grace was in her office on a Friday afternoon gazing at the autumn leaves …”</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="grading-with-ai" class="slide level2 section-divider center">
+<h2>Grading with AI</h2>
+</section>
+<section id="grading-team" class="slide level2 center">
+<h2>Grading Team</h2>
+<div class="step-flow-3">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Involve multiple AI graders for diversity of opinions</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Maybe a second round — share opinions from the first round</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>In Claude, main agent (one you talk to) is orchestrator, other graders are subagents</p>
+</div>
+</div>
+</div>
+<div class="highlight-box">
+<p>Obviously, you are responsible for grades. What the AI provides is advice.</p>
+</div>
+</section>
+<section id="ferpa" class="slide level2 shrink center">
+<h2>FERPA</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">With an enterprise agreement</span></p>
+<p>“do not train” is contractual and satisfies FERPA. It is OK to upload student assignments with names attached.</p>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">Without an enterprise agreement</span></p>
+<p>student assignments must be de-identified before uploading.</p>
+</div>
+</div>
+<div class="explainer">
+<p>If you de-identify, then you can bring in other models (ChatGPT, Gemini) for greater diversity of opinion (more later).</p>
+</div>
+<div class="info-box">
+<div class="box-title">
+<p>Rice Policy (<a href="https://tss.rice.edu/ai-usage-guidelines">tss.rice.edu/ai-usage-guidelines</a>)</p>
+</div>
+<p>Information considered sensitive or confidential by University Policy 808 (https://policy.rice.edu/808), including private information about individuals and protected research data, should not be used with consumer-focused or publicly available AI services.</p>
+</div>
+</section>
+<section id="create-a-skill-for-grading" class="slide level2 center">
+<h2>Create a Skill for Grading</h2>
+<div class="step-flow-2">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Create a recipe</p>
+</div>
+<div class="step-desc">
+<p>How many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Invoke it</p>
+</div>
+<div class="step-desc">
+<p>You provide the grading rubric (maybe a filename) and the name of the folder containing assignments</p>
+</div>
+</div>
+</div>
+</section>
+<section id="product-vs-process" class="slide level2 section-divider center">
+<h2>Product vs Process</h2>
+</section>
+<section id="upcoming-plugins" class="slide level2 center">
+<h2>Upcoming Plugins</h2>
+<ul>
+<li>I will ask you to install several plugins I’ve created</li>
+<li>Claude created all of them and can do the same for you</li>
+<li>My plugins may be a useful starting point but shouldn’t be your final version</li>
+<li>Ask Claude to revise to fit your preferences</li>
+</ul>
+<div class="highlight-box">
+<p>The process of creating things is more important than any particular products</p>
+<p>Give a person a fish and they eat for a day, teach them how to fish and …</p>
+</div>
+</section>
+<section id="maybe-they-end-up-in-the-water-with-an-alligator" class="slide level2 top-aligned center">
+<h2>Maybe They End Up in the Water with an Alligator?</h2>
+<p><img data-src="images/fishing.png"></p>
+</section>
+<section id="slide-voiceovers" class="slide level2 section-divider center">
+<h2>Slide Voiceovers</h2>
+</section>
+<section id="do-we-need-voiceovers" class="slide level2 center">
+<h2>Do We Need Voiceovers?</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p>Narrated slide decks are needed to flip the classroom</p>
+</div>
+<div class="card card-amber">
+<p>You can record yourself, or you can write narration text (with Claude’s assistance) and use AI text-to-speech</p>
+</div>
+</div>
+</section>
+<section id="text-to-speech" class="slide level2 center">
+<h2>Text to Speech</h2>
+<div class="three-cards">
+<div class="card card-blue">
+<ul>
+<li>There are many TTS providers</li>
+<li>ElevenLabs is a popular one (used by Claude for voice features)</li>
+</ul>
+</div>
+<div class="card card-amber">
+<ul>
+<li>It includes editable pronunciation guides and voice cloning</li>
+<li>It has a free plan (non-commercial use and small quota).</li>
 </ul>
 </div>
 <div class="card card-teal">
-<p><span class="card-title">Plugins</span></p>
-<ul>
-<li><em>Bundle</em> skills and connectors into one package</li>
-<li>Install once; share a whole setup with a team</li>
-</ul>
+<p>I’m on the Creator plan ($220 per year).</p>
 </div>
-</div>
-<div class="explainer">
-<p>The model is fixed. What you change is what it <em>knows how to do</em> (skills), what it <em>can reach</em> (connectors), and how you <em>package and share</em> both (plugins).</p>
 </div>
 </section>
-<section id="skills" class="slide level2 section-divider center">
-<h2>Skills</h2>
+<section id="a-pipeline-for-voiceovers" class="slide level2 center">
+<h2>A Pipeline for Voiceovers</h2>
+<div class="step-flow-5">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Narration text</p>
+</div>
+<div class="step-desc">
+<p>Use PowerPoint speaker notes for narration text. Claude drafts. You edit.</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Export to PDF</p>
+</div>
+<div class="step-desc">
+<p>Need pptx for speaker notes, PDF for images.</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>ElevenLabs</p>
+</div>
+<div class="step-desc">
+<p>Feed narration per slide to ElevenLabs and get MP3</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>4</p>
+</div>
+<div class="step-title">
+<p>PDF to png</p>
+</div>
+<div class="step-desc">
+<p>Convert PDF to png per slide</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>5</p>
+</div>
+<div class="step-title">
+<p>Stitch</p>
+</div>
+<div class="step-desc">
+<p>Stitch MP3’s together with pause between slide and add to pngs for video</p>
+</div>
+</div>
+</div>
 </section>
-<section id="codified-expertise-not-a-smarter-model" class="slide level2 center">
-<h2>Codified Expertise, Not a Smarter Model</h2>
+<section id="voiceover-plugin" class="slide level2 center">
+<h2>Voiceover Plugin</h2>
 <div class="two-cards">
 <div class="card card-blue">
-<p><span class="card-title">The problem with chatting</span></p>
+<p><span class="card-title">A Python script can</span></p>
 <ul>
-<li>A great prompt works once, then scrolls out of your history</li>
-<li>The next person — or the next you — starts over</li>
-<li>Quality depends on remembering how you did it last time</li>
+<li>feed narration per slide to ElevenLabs</li>
+<li>convert PDFs to pngs</li>
+<li>stitch MP3’s together, add pngs, and generate video</li>
 </ul>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">What a skill fixes</span></p>
+<p><span class="card-title">GUI</span></p>
 <ul>
-<li>Write down “how to do this well,” once</li>
-<li>Every future run follows it — same standard, no reminding</li>
-<li>A <span class="accent">one-time workflow</span> becomes a <span class="accent">reusable asset</span></li>
+<li>Convenient to set ElevenLabs inputs (voice, style, …)</li>
+<li>Claude can write a web app, save, and deploy locally</li>
 </ul>
 </div>
 </div>
-<div class="explainer">
-<p>A skill is not a model upgrade. It is your procedure, written down where Claude will follow it every time — across Claude.ai, Claude Code, and the add-ins.</p>
+<div class="highlight-box">
+<p>Ask Claude to add the plugin marketplace <span class="accent">github.com/kerryback/skills</span> (only need to do that once) and then to install <span class="accent">voiceover@kerryback-skills</span>.</p>
 </div>
 </section>
-<section id="what-a-skill-actually-is" class="slide level2 center">
-<h2>What a Skill Actually Is</h2>
+<section id="test-it" class="slide level2 center">
+<h2>Test It</h2>
+<div class="step-flow-3">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Start a new conversation</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Export a PowerPoint deck to pdf</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Tell Claude to generate a voiceover</p>
+</div>
+</div>
+</div>
+<div class="info-box">
+<ul>
+<li>Claude should first walk you through getting an ElevenLabs API key and setting it up</li>
+<li>Then it should draft narration as speaker notes in the pptx file</li>
+<li>Then it should open the GUI</li>
+</ul>
+</div>
+</section>
+<section id="make-it-yours" class="slide level2 centered-statement center">
+<h2>Make It Yours</h2>
+<div class="card card-dark">
+<p>Everything is in text files (.py, .md) that you now own. Any behavior you want to change — tell Claude.</p>
+</div>
+</section>
+<section id="participation-recorder" class="slide level2 section-divider center">
+<h2>Participation Recorder</h2>
+</section>
+<section id="grading-class-participation" class="slide level2 center">
+<h2>Grading Class Participation</h2>
+<div class="highlight-box">
+<p>Less emphasis on out-of-class assignments -&gt; more emphasis on class participation?</p>
+</div>
 <div class="two-cards">
 <div class="card card-blue">
-<p><span class="card-title">A folder and a file</span></p>
-<ul>
-<li>A <code>SKILL.md</code> file: a name, a description, and instructions in plain English</li>
-<li>Optional scripts and reference documents alongside</li>
-<li>That is the whole thing — readable, editable, versionable</li>
-</ul>
+<p>Personally, I need help in recording participation</p>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">How Claude uses it</span></p>
-<ul>
-<li>At startup it reads only each skill’s name and description</li>
-<li>When a task looks relevant, it pulls in the full instructions</li>
-<li>Scripts run only when needed — so your context stays lean</li>
-</ul>
+<p>Luckily, I have a friend named Claude!</p>
 </div>
-</div>
-<div class="explainer">
-<p>This “progressive disclosure” is why you can have dozens of skills installed and pay attention-cost only for the one in use.</p>
 </div>
 </section>
-<section id="three-ways-a-skill-fires" class="slide level2 center">
-<h2>Three Ways a Skill Fires</h2>
+<section id="what-do-i-want" class="slide level2 center">
+<h2>What Do I Want?</h2>
 <div class="three-cards">
-<div class="card card-dark">
-<p><span class="card-title">Slash command</span></p>
-<p>You type <span class="shell-cmd">/critique</span> or <span class="shell-cmd">/pptx</span> to invoke it directly</p>
-</div>
-<div class="card card-light">
-<p><span class="card-title">Natural language</span></p>
-<p>You ask in plain English and Claude runs the matching skill</p>
-</div>
-<div class="card card-dark">
-<p><span class="card-title">Automatic</span></p>
-<p>“Create an Excel file” triggers the Excel skill on its own — Claude reads each skill’s description and picks</p>
-</div>
-</div>
-<div class="explainer">
-<p>Because each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them — without you naming them.</p>
-</div>
-</section>
-<section id="build-your-own" class="slide level2 section-divider center">
-<h2>Build Your Own</h2>
-</section>
-<section id="from-workflow-to-skill" class="slide level2 center">
-<h2>From Workflow to Skill</h2>
-<div class="two-cards">
 <div class="card card-blue">
-<p><span class="card-title">The easy path</span></p>
-<ul>
-<li>Type <span class="shell-cmd">/skill-creator</span> and describe your workflow</li>
-<li>It writes the <code>SKILL.md</code> and saves it where Claude will find it</li>
-<li>Invoke it by name from then on</li>
-</ul>
+<p>A screen with names and faces, maybe 0 to 3 scoring on quality and quantity, maybe a notes field</p>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">Bake in the checks</span></p>
-<ul>
-<li>Put your verification steps <em>inside</em> the skill</li>
-<li>“After computing, show the row count and the min and max”</li>
-<li>The skill enforces your standard, every run — not just when you remember</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>The best skills encode not just what to do, but how to <em>check</em> it — your discipline, made automatic.</p>
-</div>
-</section>
-<section id="two-skills-you-might-write" class="slide level2 center">
-<h2>Two Skills You Might Write</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">Teaching</span></p>
-<p>Turn a problem set into a solution key, a grading rubric, and three fresh variants — formatted your way, every time</p>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">Research</span></p>
-<p>Audit a replication package: run the code, check each table against the paper, report what does not reproduce</p>
-</div>
-</div>
-<div class="explainer">
-<p>A hand-written skill — yours, transparent, under your control — is safer and more teachable than a multi-skill black box you did not read.</p>
-</div>
-</section>
-<section id="connectors" class="slide level2 section-divider center">
-<h2>Connectors</h2>
-</section>
-<section id="plugging-claude-into-your-systems" class="slide level2 center">
-<h2>Plugging Claude Into Your Systems</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">MCP: the universal plug</span></p>
-<ul>
-<li>A <span class="accent">connector</span> links Claude to an outside service — a database, your email, a document store</li>
-<li>The standard is MCP, the Model Context Protocol</li>
-<li>MCP is to AI what USB is to devices: one way to plug anything in</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">What it enables</span></p>
-<ul>
-<li>“Ask our enrollment database in plain English”</li>
-<li>“Check my calendar and draft the replies”</li>
-<li>Add from a directory of ready-made connectors, or point it at your own</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>Connectors are how Claude stops being a general assistant and starts knowing <em>your</em> data — safely and centrally, rather than through copy-paste.</p>
-</div>
-</section>
-<section id="adding-a-connector" class="slide level2 center">
-<h2>Adding a Connector</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/connectors-add-custom.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-<div class="explainer">
-<p>A connector needs a name and an address; sensitive ones authenticate the way any app does — an API key, or a corporate single sign-on. Once added, its tools are available in every chat.</p>
-</div>
-</section>
-<section id="plugins-1" class="slide level2 section-divider center">
-<h2>Plugins</h2>
-</section>
-<section id="bundling-it-all-to-share" class="slide level2 center">
-<h2>Bundling It All to Share</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">What a plugin is</span></p>
-<ul>
-<li>A single installable package that can bundle several pieces at once</li>
-<li>The way a team distributes a shared setup — everyone installs one thing</li>
-<li><span class="shell-cmd">/plugin install</span> and you have the whole kit</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">What it can contain</span></p>
-<ul>
-<li>Skills, custom agents, connectors (MCP servers)</li>
-<li>Hooks and output styles that shape behavior</li>
-<li>Skills are for <em>you</em>; plugins are for a <em>team</em></li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>For your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command.</p>
-</div>
-</section>
-<section id="vetting" class="slide level2 section-divider center">
-<h2>Vetting</h2>
-</section>
-<section id="installing-someone-elses-runs-their-code" class="slide level2 center">
-<h2>Installing Someone Else’s Runs Their Code</h2>
-<div class="two-cards">
-<div class="card card-red">
-<p><span class="card-title">The supply-chain risk</span></p>
-<ul>
-<li>A shared skill, connector, or plugin runs someone else’s instructions and scripts on your machine</li>
-<li>Many live in independent repos, outside Anthropic’s screened directory</li>
-<li>There is active security research on malicious third-party skills</li>
-</ul>
+<p>I want it to be easy to pop up, record, save, and close</p>
 </div>
 <div class="card card-teal">
-<p><span class="card-title">Due diligence</span></p>
-<ul>
-<li><span class="shell-cmd">claude plugin validate</span> checks <em>structure</em>, not safety</li>
-<li>Read the <code>SKILL.md</code> and any scripts yourself</li>
-<li>Fine for a class demo; think twice before pointing it at real data</li>
-</ul>
+<p>Photos are a must for me</p>
 </div>
+</div>
+</section>
+<section id="esther-ingester" class="slide level2 center">
+<h2>Esther Ingester</h2>
+<div class="step-flow-2">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Get the roster</p>
+</div>
+<div class="step-desc">
+<p>Esther/Class Roster/View with Photo and then right-click to print to PDF</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Hand it to Claude</p>
+</div>
+<div class="step-desc">
+<p>Give to Claude at beginning of term to create a participation recorder that lives in your class folder</p>
+</div>
+</div>
+</div>
+</section>
+<section id="use" class="slide level2 center">
+<h2>Use</h2>
+<div class="step-flow">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Open class folder</p>
+</div>
+<div class="step-desc">
+<p>Tell Claude to record participation</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Screen opens in browser</p>
+</div>
+<div class="step-desc">
+<p>(inside Academic Studio)</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Check scores, add notes, close</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>4</p>
+</div>
+<div class="step-title">
+<p>Claude adds a row</p>
+</div>
+<div class="step-desc">
+<p>to its ongoing record of all participation in the term for that course</p>
+</div>
+</div>
+</div>
+</section>
+<section id="install-test-and-make-it-your-own" class="slide level2 center">
+<h2>Install, Test, and Make it Your Own</h2>
+<div class="three-cards">
+<div class="card card-blue">
+<p>Tell Claude to install <span class="accent">participation@kerryback-skills</span></p>
+</div>
+<div class="card card-amber">
+<p>Create a test folder. Download Esther photos from an old class. Tell Claude to set up and launch the participation recorder.</p>
+</div>
+<div class="card card-teal">
+<p>Everything is in text files that Claude can edit. Just ask for changes.</p>
+</div>
+</div>
+</section>
+<section id="polls-and-screen-shares" class="slide level2 section-divider center">
+<h2>Polls and Screen Shares</h2>
+</section>
+<section id="live-polling" class="slide level2 center">
+<h2>Live Polling</h2>
+<div class="highlight-box">
+<p>Poll Everywhere, Mentimeter, … are great, but maybe they could be easier to use, and I don’t think I can quickly spin up a poll on the spot with them</p>
+</div>
+<p>If I have Claude open on the classroom computer, could I give Claude a question to ask and have it instantly show up on the screen?</p>
+<div class="card card-dark">
+<p>Ask Claude!</p>
+</div>
+</section>
+<section id="ways-to-display-a-poll" class="slide level2 center">
+<h2>Ways to Display a Poll</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">Reverse tunnel</span></p>
+<p>We need to run a web app. It may be possible to do this from the classroom computer, using a reverse tunnel. But Rice IT might block it or block connections (not sure yet)</p>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">Use a cloud host</span></p>
+<p>An alternative is to run a small app on a cloud host (easy to do, even on a free plan). Claude could control it via an API</p>
+</div>
+</div>
+</section>
+<section id="reverse-tunnel-demo" class="slide level2 center">
+<h2>Reverse Tunnel Demo</h2>
+<div class="step-flow-3">
+<div class="step-card">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Install</p>
+</div>
+<div class="step-desc">
+<p>Ask Claude to install <span class="accent">poll@kerryback-skills</span>.</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Need a volunteer</p>
+</div>
+<div class="step-desc">
+<p>Install, then open a new conversation. Enter /poll. Share the window that pops up. Everyone else uses their phone (don’t need Claude).</p>
+</div>
+</div>
+<div class="step-card">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Ask a question</p>
+</div>
+<div class="step-desc">
+<p>After we’ve signed on with our phones, instructor enters in Claude: /poll:word-cloud what is your favorite flavor of ice cream (for example)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="or-write-it-before-class" class="slide level2 center">
+<h2>Or Write It Before Class</h2>
+<div class="card-blue">
+<p>You can also tell Claude to prepare questions beforehand. Claude will save them in a file.</p>
+</div>
+<div class="card-amber">
+<p>Then enter <span class="accent">/poll &lt;filename&gt;</span> to run the poll</p>
+</div>
+</section>
+<section id="screen-shares" class="slide level2 shrink center">
+<h2>Screen Shares</h2>
+<div class="highlight-box">
+<p>If we flip the classroom, there will be more work in class, so it is very useful to have students share screens</p>
+</div>
+<div class="two-cards">
+<div class="card card-blue">
+<p>It can be done with Canvas, but that seems very clunky to me</p>
+</div>
+<div class="card card-amber">
+<p>Reverse tunnel is again the easy way, though might be blocked. Run a small app if it is.</p>
+</div>
+</div>
+<div class="card-dark">
+<p>Similar to polling: QR Code, instructor’s panel allows selection of student to share, then that student’s screen appears on the panel and is projected. Reverse tunnel is in <span class="accent">screenshare@kerryback-skills</span></p>
 </div>
 <div class="explainer">
-<p>“Validate” confirms a package is well-formed, not that it is trustworthy. The safest skill is often the small one you wrote and can read in full.</p>
+
 </div>
 </section>
-<section id="the-payoff" class="slide level2 centered-statement center">
-<h2>The Payoff</h2>
+<section id="takeaways" class="slide level2 centered-statement center">
+<h2>Takeaways</h2>
 <div class="card card-dark">
-<p><span class="accent">Skills</span> turn your best practice into something Claude does the same way every time. <span class="accent">Connectors</span> give it your data instead of a copy-paste. <span class="accent">Plugins</span> hand a colleague the whole setup in one command. You keep the judgment; they carry the discipline.</p>
+<p>Teaching tools you might wish to have are a conversation away. Install mine as a starting point, then tell Claude to make them yours. Tell Claude to build anything else you want. And share!</p>
 </div>
-</section>
-<section id="breakout" class="slide level2 section-divider center">
-<h2>Breakout</h2>
-</section>
-<section id="questions-to-discuss" class="slide level2 center">
-<h2>Questions to Discuss</h2>
-<ul>
-<li>What is one task — teaching or research — you do the same careful way each time, a good candidate for a skill?</li>
-<li>What system or dataset would you most want to <em>ask</em> in plain English — a good connector to build?</li>
-<li>Would you install a colleague’s skill or plugin? What would you read before trusting it with your data?</li>
-<li>If your department adopted one shared plugin, what should be in it?</li>
-</ul>
 
 
 </section>

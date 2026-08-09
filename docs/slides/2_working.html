@@ -633,9 +633,6 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 </div>
 </div>
 </div>
-<div class="card-dark">
-<p>Include instructions in the skill for Claude to automatically save changes and close before editing and then reopen.</p>
-</div>
 </section>
 <section id="isnt-this-just-a-powerpoint-template" class="slide level2 shrink center">
 <h2>Isn’t This Just a PowerPoint Template?</h2>
@@ -664,13 +661,38 @@ Kerry Back<br>Faculty Workshop<br>Rice Business 2026
 <p>In May, 2026, the Claude add-in for PowerPoint became generally available (for paid accounts). But I don’t think Rice has authorized it for our Microsoft 365 accounts.</p>
 <p>The advantages would be (1) just one window open, (2) no save/close/reopen.</p>
 </section>
-<section id="a-good-use-of-claude.md-routing" class="slide level2 center">
-<h2>A Good Use of CLAUDE.md: Routing</h2>
-<div class="highlight-box">
-<p>Skills announce when they apply, and sometimes two of them claim the same job. Anthropic’s <code>pptx</code> skill triggers on <span class="accent">any</span> PowerPoint file, so a skill of your own for your desired style will collide with it.</p>
+<section id="tips-for-your-skill" class="slide level2 center">
+<h2>Tips for Your Skill</h2>
+<div class="three-cards">
+<div class="card card-blue">
+<p><span class="card-title">Save and close first</span></p>
+<p>Include in your skill: Save and close any open PowerPoint deck before editing it. Re-open after editing.</p>
 </div>
-<div class="card-dark">
-<p>Ask Claude to assist in editing CLAUDE.md globally or in a project folder to settle the precedence.</p>
+<div class="card card-amber">
+<p><span class="card-title">Claude cannot see your slides</span></p>
+<p>Claude cannot natively view PowerPoint slides to examine whether things are properly located. It goes PPTX → PDF → PNG.</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">The route matters</span></p>
+<p>If left to its own devices, it may choose an inferior PPTX → PDF route (LibreOffice = open-source version of MS Office)</p>
+</div>
+</div>
+<div class="highlight-box">
+<p>When Claude creates your skill, ask it about using AppleScript (Mac) or COM automation (Windows)</p>
+</div>
+</section>
+<section id="one-more-tip" class="slide level2 center">
+<h2>One More Tip</h2>
+<p>Sometimes multiple skills compete for the same job.</p>
+<div class="two-cards">
+<div class="card card-red">
+<p><span class="card-title">The collision</span></p>
+<p>Anthropic’s <code>pptx</code> skill triggers on <span class="accent">any</span> PowerPoint file, so a skill of your own for your desired style will collide with it. Things compound if you create multiple skills for multiple styles.</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">The fix</span></p>
+<p>Ask Claude to edit your CLAUDE.md to settle the precedence.</p>
+</div>
 </div>
 </section>
 <section id="exercises" class="slide level2 section-divider center">

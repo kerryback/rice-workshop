@@ -281,6 +281,26 @@ This is the value of "plan before you act."  Planning surfaces "A beats B," lead
 :::
 :::
 
+## Beware of Tunnel Vision
+
+Prediction also means momentum. Once Claude has started down a path, continuing it is the likeliest next step.
+
+::: {.two-cards}
+::: {.card .card-blue}
+[What you will see]{.card-title}
+
+- It hits a roadblock and tries to get around it
+- Then another way around, and another --- exhaustively, tenaciously
+- What it rarely does is return to the start and ask whether a [different path]{.accent} was the better one all along
+:::
+::: {.card .card-amber}
+[What helps]{.card-title}
+
+- Periodically ask: are there other approaches that might work better for reaching the end goal?
+- Restate the goal, not just the obstacle --- that gives it permission to abandon the path instead of defending it
+:::
+:::
+
 ## Steelmanning
 
 Don't ask AI whether your idea is good. Ask it to make the strongest possible case that your idea is [wrong]{.accent}.

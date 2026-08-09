@@ -469,9 +469,6 @@ Claude will save images, layout guides, etc. from the doc you gave it along with
 :::
 :::
 
-::: {.card-dark}
-Include instructions in the skill for Claude to automatically save changes and close before editing and then reopen.
-:::
 
 ## Isn't This Just a PowerPoint Template? {.shrink}
 
@@ -504,16 +501,46 @@ In May, 2026, the Claude add-in for PowerPoint became generally available (for p
 
 The advantages would be (1) just one window open, (2) no save/close/reopen.
 
+## Tips for Your Skill
 
+::: {.three-cards}
+::: {.card .card-blue}
+[Save and close first]{.card-title}
 
-## A Good Use of CLAUDE.md: Routing
+Include in your skill: Save and close any open PowerPoint deck before editing it.  Re-open after editing.
+:::
+::: {.card .card-amber}
+[Claude cannot see your slides]{.card-title}
 
-::: {.highlight-box}
-Skills announce when they apply, and sometimes two of them claim the same job. Anthropic's `pptx` skill triggers on [any]{.accent} PowerPoint file, so a skill of your own for your desired style will collide with it. 
+Claude cannot natively view PowerPoint slides to examine whether things are properly located.  It goes PPTX → PDF → PNG.
+:::
+::: {.card .card-teal}
+[The route matters]{.card-title}
+
+If left to its own devices, it may choose an inferior PPTX → PDF route (LibreOffice = open-source version of MS Office)
+:::
 :::
 
-::: {.card-dark}
-Ask Claude to assist in editing CLAUDE.md globally or in a project folder to settle the precedence.
+::: {.highlight-box}
+When Claude creates your skill, ask it about using AppleScript (Mac) or COM automation (Windows)
+:::
+
+
+## One More Tip
+
+Sometimes multiple skills compete for the same job.
+
+::: {.two-cards}
+::: {.card .card-red}
+[The collision]{.card-title}
+
+Anthropic's `pptx` skill triggers on [any]{.accent} PowerPoint file, so a skill of your own for your desired style will collide with it.  Things compound if you create multiple skills for multiple styles.
+:::
+::: {.card .card-teal}
+[The fix]{.card-title}
+
+Ask Claude to edit your CLAUDE.md to settle the precedence.
+:::
 :::
 
 ## Exercises {.section-divider}

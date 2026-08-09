@@ -5,12 +5,35 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 
 ## Today's Session
 
-- Plugins
-- Thoughts on teaching
-- Building teaching assistants
-  - Slide narration
-  - Grading assistants
-  - Other tools
+::: {.step-flow-3}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Plugins
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Thoughts on teaching
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Building teaching assistants
+:::
+::: {.step-desc}
+Slide narration · Grading assistants · Other tools
+:::
+:::
+:::
 
 ## Plugins
 
@@ -22,49 +45,111 @@ Visit the Anthropic plugin directory: Enter [/plugin]{.accent} as a Claude promp
 :::
 
 ::: {.two-cards}
-::: {.card-amber}
+::: {.card .card-amber}
 
 Thousands of people (including me) have created their own plugin marketplaces. Everything is free.
 :::
-::: {.card-teal}
+::: {.card .card-teal}
 
 The most useful ones will be the ones you create (with Claude's assistance) --- for example, a code script that you know works and a SKILL.md that tells Claude when to use it
 :::
 :::
 
+## Thoughts on Teaching {.section-divider}
 
-## Flipping the Classroom 
+## Flipping the Classroom
 
-- Do we have a choice?
+::: {.highlight-box}
+Do we have a choice?
+:::
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Out-of-class assignments]{.card-title}
+
 - We can no longer grade out-of-class assignments
 - If we want to do more assessment in class, then we need to do more teaching out of class
-- In-class assessments: participation, presentations, quizzes, "solutions" to problems that they can evaluate with basic calculators or paper and pencil
+:::
+::: {.card .card-amber}
+[In-class assessments]{.card-title}
+
+participation, presentations, quizzes, "solutions" to problems that they can evaluate with basic calculators or paper and pencil
+:::
+:::
 
 
 ## Teaching Cases
 
-- I don't think that case teaching changes much
-  - We should have higher standards for student preparedness
-  - Serious calculations can be done on-the-spot in class without pre-made templates.  I've asked a student to come to the front and lead a case discussion while I do nothing but type prompts they give me.  
-- HBS's policy is "do not upload cases to chatbots," so don't do it live in class 
-- AI is good at writing cases.  It knows the HBS style: "Grace was in her office on a Friday afternoon gazing at the autumn leaves ..."
+::: {.two-cards}
+::: {.card .card-blue}
+[Might change a little]{.card-title}
 
-## Grading {.section-divider}
+- We should have higher standards for student preparedness
+- We can do more live work in class.  A student can lead while the instructor types prompts.  Or allow time for students to work with AI and then screen share.
+:::
+::: {.card .card-amber}
+[Using and writing cases]{.card-title}
+
+- HBS's policy is "do not upload cases to chatbots," so don't do it live in class
+- AI is good at writing cases.  It knows the HBS style: "Grace was in her office on a Friday afternoon gazing at the autumn leaves ..."
+:::
+:::
+
+## Grading with AI {.section-divider}
 
 ## Grading Team
 
-- Involve multiple AI graders for diversity of opinions
-- Maybe a second round --- share opinions from the first round
-- In Claude, main agent (one you talk to) is orchestrator, other graders are subagents
-- Obviously, you are responsible for grades.  What the AI provides is advice.
+::: {.step-flow-3}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Involve multiple AI graders for diversity of opinions
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Maybe a second round --- share opinions from the first round
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+In Claude, main agent (one you talk to) is orchestrator, other graders are subagents
+:::
+:::
+:::
 
-## FERPA
+::: {.highlight-box}
+Obviously, you are responsible for grades.  What the AI provides is advice.
+:::
 
-- With an enterprise agreement, "do not train" is contractual and satisfies FERPA.  It is OK to upload student assisgnments with names attached.
-- Without an enterprise agreement, student assignments must be de-identified before uploading.
-- If you de-identify, then you can bring in other models (ChatGPT, Gemini) for greater diversity of opinion (more later).
+## FERPA {.shrink}
 
-::: {info-box}
+::: {.two-cards}
+::: {.card .card-blue}
+[With an enterprise agreement]{.card-title}
+
+"do not train" is contractual and satisfies FERPA.  It is OK to upload student assignments with names attached.
+:::
+::: {.card .card-amber}
+[Without an enterprise agreement]{.card-title}
+
+student assignments must be de-identified before uploading.
+:::
+:::
+
+::: {.explainer}
+If you de-identify, then you can bring in other models (ChatGPT, Gemini) for greater diversity of opinion (more later).
+:::
+
+::: {.info-box}
 ::: {.box-title}
 Rice Policy ([tss.rice.edu/ai-usage-guidelines](https://tss.rice.edu/ai-usage-guidelines))
 :::
@@ -72,279 +157,445 @@ Information considered sensitive or confidential by University Policy 808 (https
 :::
 
 
-## Create a Skill
+## Create a Skill for Grading
 
-- Create a recipe for how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades and provide info about the grounds for grades, etc., and save it as a skill.
-- When you invoke it, you will provide the grading rubric (maybe a filename) and the name of the folder containing assignments.
+::: {.step-flow-2}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Create a recipe
+:::
+::: {.step-desc}
+How many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Invoke it
+:::
+::: {.step-desc}
+You provide the grading rubric (maybe a filename) and the name of the folder containing assignments
+:::
+:::
+:::
+
+## Product vs Process {.section-divider}
+
+## Upcoming Plugins
+
+- I will ask you to install several plugins I've created
+- Claude created all of them and can do the same for you
+- My plugins may be a useful starting point but shouldn't be your final version
+- Ask Claude to revise to fit your preferences
+
+::: {.highlight-box}
+The process of creating things is more important than any particular products
+
+Give a person a fish and they eat for a day, teach them how to fish and ...
+:::
+
+## Maybe They End Up in the Water with an Alligator? {.top-aligned}
+
+![](images/fishing.png)
+
 
 ## Slide Voiceovers {.section-divider}
 
 ## Do We Need Voiceovers?
 
-- Narrated slide decks are needed to flip the classroom
-- You can record yourself, or you can write narration text (with Claude's assistance) and use AI text-to-speech
-- Opinions?
+::: {.two-cards}
+::: {.card .card-blue}
+
+Narrated slide decks are needed to flip the classroom
+:::
+::: {.card .card-amber}
+
+You can record yourself, or you can write narration text (with Claude's assistance) and use AI text-to-speech
+:::
+:::
+
+
+## Text to Speech
+
+::: {.three-cards}
+::: {.card .card-blue}
+
+- There are many TTS providers
+- ElevenLabs is a popular one (used by Claude for voice features)
+:::
+::: {.card .card-amber}
+
+- It includes editable pronunciation guides and voice cloning
+- It has a free plan (non-commercial use and small quota).
+:::
+::: {.card .card-teal}
+
+I'm on the Creator plan ($220 per year).
+:::
+:::
 
 ## A Pipeline for Voiceovers
 
-- Use PowerPoint speaker notes for narration text.  Claude drafts.  You edit.
-- Use OpenAI TTS or ElevenLabs for audio generation 
-## AI Teaching Assistants {.section-divider}
-
-
-
-
-## {.image-slide}
-
-![](images/fishing.png){width=72% fig-align="center"}
-
-::: {.explainer}
-Give a person a fish, and they eat for a day. Teach a person to fish, and they end up in the water with an alligator --- but the fish is theirs.
+::: {.step-flow-5}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Narration text
+:::
+::: {.step-desc}
+Use PowerPoint speaker notes for narration text.  Claude drafts.  You edit.
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Export to PDF
+:::
+::: {.step-desc}
+Need pptx for speaker notes, PDF for images.
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+ElevenLabs
+:::
+::: {.step-desc}
+Feed narration per slide to ElevenLabs and get MP3
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+4
+:::
+::: {.step-title}
+PDF to png
+:::
+::: {.step-desc}
+Convert PDF to png per slide
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+5
+:::
+::: {.step-title}
+Stitch
+:::
+::: {.step-desc}
+Stitch MP3's together with pause between slide and add to pngs for video
+:::
+:::
 :::
 
-## Today's Real Subject {.centered-statement}
+## Voiceover Plugin
+
+::: {.two-cards}
+::: {.card .card-blue}
+[A Python script can]{.card-title} 
+
+- feed narration per slide to ElevenLabs 
+- convert PDFs to pngs
+- stitch MP3's together, add pngs, and generate video
+:::
+::: {.card .card-amber}
+[GUI]{.card-title}
+
+- Convenient to set ElevenLabs inputs (voice, style, ...)
+- Claude can write a web app, save, and deploy locally
+:::
+:::
+
+::: {.highlight-box}
+Ask Claude to add the plugin marketplace [github.com/kerryback/skills]{.accent} (only need to do that once) and then to install [voiceover@kerryback-skills]{.accent}.
+:::
+
+## Test It
+
+::: {.step-flow-3}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Start a new conversation
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Export a PowerPoint deck to pdf
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Tell Claude to generate a voiceover
+:::
+:::
+:::
+
+::: {.info-box}
+- Claude should first walk you through getting an ElevenLabs API key and setting it up
+- Then it should draft narration as speaker notes in the pptx file
+- Then it should open the GUI
+:::
+
+## Make It Yours {.centered-statement}
 
 ::: {.card .card-dark}
-I will show you some things I built. The [things]{.accent} are not the point --- you will want different ones. The point is [how they got built]{.accent}: you want something, you ask Claude how, you get a rough version, and you keep going until it works.
+Everything is in text files (.py, .md) that you now own.  Any behavior you want to change --- tell Claude.
 :::
 
-## Three Ways to Extend Claude
+## Participation Recorder {.section-divider}
+
+## Grading Class Participation
+
+::: {.highlight-box}
+Less emphasis on out-of-class assignments -> more emphasis on class participation?
+:::
+
+::: {.two-cards}
+::: {.card .card-blue}
+
+Personally, I need help in recording participation
+:::
+::: {.card .card-amber}
+
+Luckily, I have a friend named Claude!
+:::
+:::
+
+## What Do I Want?
 
 ::: {.three-cards}
 ::: {.card .card-blue}
-[Skills]{.card-title}
 
-- Teach Claude *your procedure* for a task
-- It follows the same steps every time
+A screen with names and faces, maybe 0 to 3 scoring on quality and quantity, maybe a notes field
 :::
 ::: {.card .card-amber}
-[Connectors]{.card-title}
 
-- Give Claude *your data and systems*
-- Ask a database, your calendar, your files
+I want it to be easy to pop up, record, save, and close
 :::
 ::: {.card .card-teal}
-[Plugins]{.card-title}
 
-- *Bundle* skills and connectors into one package
-- Install once; share a whole setup with a team
+Photos are a must for me
 :::
 :::
 
-::: {.explainer}
-The model is fixed. What you change is what it *knows how to do* (skills), what it *can reach* (connectors), and how you *package and share* both (plugins).
+## Esther Ingester
+
+::: {.step-flow-2}
+::: {.step-card}
+::: {.step-icon}
+1
 :::
-
-## Skills {.section-divider}
-
-## Codified Expertise, Not a Smarter Model
-
-::: {.two-cards}
-::: {.card .card-blue}
-[The problem with chatting]{.card-title}
-
-- A great prompt works once, then scrolls out of your history
-- The next person --- or the next you --- starts over
-- Quality depends on remembering how you did it last time
+::: {.step-title}
+Get the roster
 :::
-::: {.card .card-amber}
-[What a skill fixes]{.card-title}
-
-- Write down "how to do this well," once
-- Every future run follows it --- same standard, no reminding
-- A [one-time workflow]{.accent} becomes a [reusable asset]{.accent}
+::: {.step-desc}
+Esther/Class Roster/View with Photo and then right-click to print to PDF
 :::
 :::
-
-::: {.explainer}
-A skill is not a model upgrade. It is your procedure, written down where Claude will follow it every time --- across Claude.ai, Claude Code, and the add-ins.
+::: {.step-card}
+::: {.step-icon}
+2
 :::
-
-## What a Skill Actually Is
-
-::: {.two-cards}
-::: {.card .card-blue}
-[A folder and a file]{.card-title}
-
-- A `SKILL.md` file: a name, a description, and instructions in plain English
-- Optional scripts and reference documents alongside
-- That is the whole thing --- readable, editable, versionable
+::: {.step-title}
+Hand it to Claude
 :::
-::: {.card .card-amber}
-[How Claude uses it]{.card-title}
-
-- At startup it reads only each skill's name and description
-- When a task looks relevant, it pulls in the full instructions
-- Scripts run only when needed --- so your context stays lean
+::: {.step-desc}
+Give to Claude at beginning of term to create a participation recorder that lives in your class folder
+:::
 :::
 :::
 
-::: {.explainer}
-This "progressive disclosure" is why you can have dozens of skills installed and pay attention-cost only for the one in use.
+## Use
+
+::: {.step-flow}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Open class folder
+:::
+::: {.step-desc}
+Tell Claude to record participation
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Screen opens in browser
+:::
+::: {.step-desc}
+(inside Academic Studio)
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Check scores, add notes, close
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+4
+:::
+::: {.step-title}
+Claude adds a row
+:::
+::: {.step-desc}
+to its ongoing record of all participation in the term for that course
+:::
+:::
 :::
 
-## Three Ways a Skill Fires
+## Install, Test, and Make it Your Own
 
 ::: {.three-cards}
-::: {.card .card-dark}
-[Slash command]{.card-title}
-
-You type [/critique]{.shell-cmd} or [/pptx]{.shell-cmd} to invoke it directly
-:::
-::: {.card .card-light}
-[Natural language]{.card-title}
-
-You ask in plain English and Claude runs the matching skill
-:::
-::: {.card .card-dark}
-[Automatic]{.card-title}
-
-"Create an Excel file" triggers the Excel skill on its own --- Claude reads each skill's description and picks
-:::
-:::
-
-::: {.explainer}
-Because each skill carries a short description Claude always sees, it knows which ones exist and when to reach for them --- without you naming them.
-:::
-
-## Build Your Own {.section-divider}
-
-## From Workflow to Skill
-
-::: {.two-cards}
 ::: {.card .card-blue}
-[The easy path]{.card-title}
 
-- Type [/skill-creator]{.shell-cmd} and describe your workflow
-- It writes the `SKILL.md` and saves it where Claude will find it
-- Invoke it by name from then on
+Tell Claude to install [participation@kerryback-skills]{.accent}
 :::
 ::: {.card .card-amber}
-[Bake in the checks]{.card-title}
 
-- Put your verification steps *inside* the skill
-- "After computing, show the row count and the min and max"
-- The skill enforces your standard, every run --- not just when you remember
-:::
-:::
-
-::: {.explainer}
-The best skills encode not just what to do, but how to *check* it --- your discipline, made automatic.
-:::
-
-## Two Skills You Might Write
-
-::: {.two-cards}
-::: {.card .card-blue}
-[Teaching]{.card-title}
-
-Turn a problem set into a solution key, a grading rubric, and three fresh variants --- formatted your way, every time
-:::
-::: {.card .card-amber}
-[Research]{.card-title}
-
-Audit a replication package: run the code, check each table against the paper, report what does not reproduce
-:::
-:::
-
-::: {.explainer}
-A hand-written skill --- yours, transparent, under your control --- is safer and more teachable than a multi-skill black box you did not read.
-:::
-
-## Connectors {.section-divider}
-
-## Plugging Claude Into Your Systems
-
-::: {.two-cards}
-::: {.card .card-blue}
-[MCP: the universal plug]{.card-title}
-
-- A [connector]{.accent} links Claude to an outside service --- a database, your email, a document store
-- The standard is MCP, the Model Context Protocol
-- MCP is to AI what USB is to devices: one way to plug anything in
-:::
-::: {.card .card-amber}
-[What it enables]{.card-title}
-
-- "Ask our enrollment database in plain English"
-- "Check my calendar and draft the replies"
-- Add from a directory of ready-made connectors, or point it at your own
-:::
-:::
-
-::: {.explainer}
-Connectors are how Claude stops being a general assistant and starts knowing *your* data --- safely and centrally, rather than through copy-paste.
-:::
-
-## Adding a Connector
-
-![](images/connectors-add-custom.png){width=70% fig-align="center"}
-
-::: {.explainer}
-A connector needs a name and an address; sensitive ones authenticate the way any app does --- an API key, or a corporate single sign-on. Once added, its tools are available in every chat.
-:::
-
-## Plugins {.section-divider}
-
-## Bundling It All to Share
-
-::: {.two-cards}
-::: {.card .card-blue}
-[What a plugin is]{.card-title}
-
-- A single installable package that can bundle several pieces at once
-- The way a team distributes a shared setup --- everyone installs one thing
-- [/plugin install]{.shell-cmd} and you have the whole kit
-:::
-::: {.card .card-amber}
-[What it can contain]{.card-title}
-
-- Skills, custom agents, connectors (MCP servers)
-- Hooks and output styles that shape behavior
-- Skills are for *you*; plugins are for a *team*
-:::
-:::
-
-::: {.explainer}
-For your own work, a skill is enough. When a department wants everyone working the same way, a plugin ships the whole standard in one command.
-:::
-
-## Vetting {.section-divider}
-
-## Installing Someone Else's Runs Their Code
-
-::: {.two-cards}
-::: {.card .card-red}
-[The supply-chain risk]{.card-title}
-
-- A shared skill, connector, or plugin runs someone else's instructions and scripts on your machine
-- Many live in independent repos, outside Anthropic's screened directory
-- There is active security research on malicious third-party skills
+Create a test folder.  Download Esther photos from an old class.  Tell Claude to set up and launch the participation recorder.
 :::
 ::: {.card .card-teal}
-[Due diligence]{.card-title}
 
-- [claude plugin validate]{.shell-cmd} checks *structure*, not safety
-- Read the `SKILL.md` and any scripts yourself
-- Fine for a class demo; think twice before pointing it at real data
+Everything is in text files that Claude can edit.  Just ask for changes.
 :::
+:::
+
+## Polls and Screen Shares {.section-divider}
+
+## Live Polling
+
+::: {.highlight-box}
+Poll Everywhere, Mentimeter, ... are great, but maybe they could be easier to use, and I don't think I can quickly spin up a poll on the spot with them
+:::
+
+If I have Claude open on the classroom computer, could I give Claude a question to ask and have it instantly show up on the screen?
+
+::: {.card .card-dark}
+Ask Claude!
+:::
+
+
+## Ways to Display a Poll
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Reverse tunnel]{.card-title}
+
+We need to run a web app.  It may be possible to do this from the classroom computer, using a reverse tunnel.  But Rice IT might block it or block connections (not sure yet)
+:::
+::: {.card .card-amber}
+[Use a cloud host]{.card-title}
+
+An alternative is to run a small app on a cloud host (easy to do, even on a free plan).  Claude could control it via an API
+:::
+:::
+
+## Reverse Tunnel Demo
+
+::: {.step-flow-3}
+::: {.step-card}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Install
+:::
+::: {.step-desc}
+Ask Claude to install [poll@kerryback-skills]{.accent}.
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Need a volunteer
+:::
+::: {.step-desc}
+Install, then open a new conversation.  Enter /poll.  Share the window that pops up.  Everyone else uses their phone (don't need Claude).
+:::
+:::
+::: {.step-card}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Ask a question
+:::
+::: {.step-desc}
+After we've signed on with our phones, instructor enters in Claude: /poll:word-cloud what is your favorite flavor of ice cream (for example)
+:::
+:::
+:::
+
+
+## Or Write It Before Class
+
+::: {.card-blue}
+You can also tell Claude to prepare questions beforehand.  Claude will save them in a file.
+:::
+
+::: {.card-amber}
+Then enter [/poll &lt;filename&gt;]{.accent} to run the poll
+:::
+
+## Screen Shares {.shrink}
+
+::: {.highlight-box}
+If we flip the classroom, there will be more work in class, so it is very useful to have students share screens
+:::
+
+::: {.two-cards}
+::: {.card .card-blue}
+
+It can be done with Canvas, but that seems very clunky to me
+:::
+::: {.card .card-amber}
+
+Reverse tunnel is again the easy way, though might be blocked.  Run a small app if it is.
+:::
+:::
+
+::: {.card-dark}
+
+Similar to polling: QR Code, instructor's panel allows selection of student to share, then that student's screen appears on the panel and is projected.  Reverse tunnel is in [screenshare@kerryback-skills]{.accent}
+
 :::
 
 ::: {.explainer}
-"Validate" confirms a package is well-formed, not that it is trustworthy. The safest skill is often the small one you wrote and can read in full.
+
 :::
 
-## The Payoff {.centered-statement}
+## Takeaways {.centered-statement}
 
 ::: {.card .card-dark}
-[Skills]{.accent} turn your best practice into something Claude does the same way every time. [Connectors]{.accent} give it your data instead of a copy-paste. [Plugins]{.accent} hand a colleague the whole setup in one command. You keep the judgment; they carry the discipline.
+Teaching tools you might wish to have are a conversation away.  Install mine as a starting point, then tell Claude to make them yours.   Tell Claude to build anything else you want.  And share!
 :::
-
-## Breakout {.section-divider}
-
-## Questions to Discuss
-
-- What is one task --- teaching or research --- you do the same careful way each time, a good candidate for a skill?
-- What system or dataset would you most want to *ask* in plain English --- a good connector to build?
-- Would you install a colleague's skill or plugin? What would you read before trusting it with your data?
-- If your department adopted one shared plugin, what should be in it?
