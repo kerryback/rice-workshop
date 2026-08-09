@@ -42,7 +42,7 @@ Two shapes where agents pay off: a *panel* that pressure-tests ideas and data, a
 :::
 :::
 
-::: {.explainer}
+::: {.punchline .fragment}
 Same underlying idea --- an agent that decides and acts --- pointed two ways: something students make, versus something that makes your week lighter.
 :::
 
@@ -77,7 +77,7 @@ The `coauthor` skill orchestrates this: you are the coordinator; a debate panel 
 
 ## Why a Team Beats One Agent
 
-::: {.card .card-dark}
+::: {.punchline}
 A single agent that both proposes *and* checks its own work grades its own homework. Splitting the roles --- [propose, attack, verify, replicate]{.accent} --- is how you catch the beautiful-but-wrong result before it reaches a referee.
 :::
 
@@ -102,7 +102,7 @@ A single agent that both proposes *and* checks its own work grades its own homew
 :::
 :::
 
-::: {.explainer}
+::: {.punchline .fragment}
 The recurring, rule-ish tasks that eat an hour a week are the sweet spot --- worth automating, low cost if a run is imperfect.
 :::
 
@@ -125,13 +125,13 @@ The recurring, rule-ish tasks that eat an hour a week are the sweet spot --- wor
 :::
 :::
 
-::: {.explainer}
+::: {.punchline .fragment}
 The skill you are building is not prompting --- it is describing the goal well and judging the result. Delegation, not dictation.
 :::
 
 ## Why This Belongs at the End {.centered-statement}
 
-::: {.card .card-dark}
+::: {.punchline}
 Everything until now was you [directing a tool.]{.accent} An agent is you [delegating a task]{.accent} --- a research team that pressure-tests your work, or an assistant that clears the recurring load. The new skill is knowing what to hand off, and how to check what comes back.
 :::
 

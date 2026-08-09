@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c73eb626636bb8002804d7461fc5cb1f.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-ba96d590d1db7b4399a2eab59e09f44d.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -143,234 +143,220 @@ Kerry Back<br>Rice Business
 </div>
 
 </section>
-<section class="slide level2 center">
+<section id="workshop-overview" class="slide level2 center">
+<h2>Workshop Overview</h2>
+<style>
+/* Session schedule, copied from deck 1 and extended with a highlight for the
+   session this deck belongs to: that row keeps full contrast and an amber
+   block, the rest step back so the eye lands on today without having to read.
+   Scoped to .session-grid rather than to the slide's id, so renaming the
+   heading cannot detach the styling. */
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 4.5em;
+  margin-top: 0.7em;
+}
+.session-grid .sg-col { display: flex; flex-direction: column; gap: 0.75em; }
+.session-grid .sg-row { display: flex; align-items: center; gap: 1.1em; }
+.session-grid .sg-when {
+  flex: 0 0 7.6em;
+  background: #00205B;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.5em 0;
+  line-height: 1.1;
+}
+.session-grid .sg-day {
+  display: block; color: #fff;
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.07em;
+}
+.session-grid .sg-time {
+  display: block; color: #fff; opacity: 0.85;
+  font-size: 0.51em; font-weight: 600; letter-spacing: 0.035em; margin-top: 0.12em;
+}
+.session-grid .sg-title { font-size: 0.8em; font-weight: 700; color: #00205B; }
 
-<p>NotebookLM - Derivatives, Weston et al.</p>
+/* Today. Everything that is not this row recedes; the row itself gains an
+   amber block with navy type on it, which reads at the back of the room. */
+.session-grid .sg-row:not(.is-now) { opacity: 0.42; }
+.session-grid .sg-row.is-now .sg-when { background: #f59e0b; }
+.session-grid .sg-row.is-now .sg-day,
+.session-grid .sg-row.is-now .sg-time { color: #00205B; opacity: 1; }
+.session-grid .sg-row.is-now .sg-title { color: #b45309; }
+</style>
+
+<div class="session-grid">
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 10</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Intro to Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 11</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Working with Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 12</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Teaching Tools</span></div>
+    <div class="sg-row is-now"><span class="sg-when"><span class="sg-day">AUG 13</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">AI Tutors</span></div>
+  </div>
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 14</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Student Projects</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 17</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">AI for Research</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Personal Assistants</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">4:00–5:00</span></span><span class="sg-title">Overflow/Extra</span></div>
+  </div>
+</div>
+</section>
+<section id="todays-session" class="slide level2 center">
+<h2>Today’s Session</h2>
+<div class="step-flow-3">
+<div class="step-card fragment">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Gemini Notebook</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Build Your Own RAG Bot</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Skills as Tutors</p>
+</div>
+</div>
+</div>
+</section>
+<section id="gemini-notebook-previously-notebooklm" class="slide level2 center">
+<h2>Gemini Notebook (previously NotebookLM)</h2>
+<p>Free knowledge repository. Upload as many as 50 sources into each notebook. Get a chatbot that answers from sources, narrated slides, podcast-style audio, quizzes, …</p>
+<div class="highlight-box">
+<ul>
+<li>Chatbot example: <a href="https://notebook.google.com/notebook/701244f5-4833-4217-875d-96380578825b">Options textbook</a></li>
+<li>Narrated slides example: <a href="https://notebook.google.com/notebook/58351fb6-7453-4bff-909f-281bb34e4c6a/artifact/c78bc42e-a9e7-4276-957c-d78049841951?utm_source=nlm_web_share&amp;utm_medium=google_oo&amp;utm_campaign=art_share_1&amp;utm_content=&amp;utm_smc=nlm_web_share_google_oo_art_share_1_">Kapadia-Ostdiek-Weston paper</a></li>
+<li>Podcast example: <a href="https://notebook.google.com/notebook/91e987c5-e023-467f-918c-afa2264e55d4/artifact/949696bf-66a9-4ff6-beef-376aa6ca2dae?utm_source=nlm_web_share&amp;utm_medium=google_oo&amp;utm_campaign=art_share_1&amp;utm_content=&amp;utm_smc=nlm_web_share_google_oo_art_share_1_">Put-call parity from textbook</a></li>
+</ul>
+</div>
+<div class="punchline">
+<p>Chatbot is great. Videos are good for a short change of pace. We can specify <span class="accent">only use this part of the source</span> for video or podcast. Cannot revise directly but can regenerate with new instructions.</p>
+</div>
 </section>
 <section id="rag-chatbots" class="slide level2 section-divider center">
 <h2>RAG Chatbots</h2>
 </section>
-<section id="grounding-a-bot-in-your-material" class="slide level2 center">
-<h2>Grounding a Bot in Your Material</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">One deck: just show it</span></p>
-<ul>
-<li>A single session’s script is small enough to hand the model in full, every time</li>
-<li>No search, no database — the material is simply there</li>
-<li>This is how the tutorbot we will see works</li>
-</ul>
+<section id="retrieval-augmented-generation" class="slide level2 center">
+<h2>Retrieval Augmented Generation</h2>
+<div class="step-flow-3">
+<div class="step-card fragment">
+<div class="step-icon">
+<p>1</p>
 </div>
-<div class="card card-amber">
-<p><span class="card-title">A whole course: too big</span></p>
-<ul>
-<li>Every deck, reading, and case won’t fit in one prompt</li>
-<li>The bot must fetch only the relevant piece for each question</li>
-<li>This is what <span class="accent">RAG</span> does</li>
-</ul>
+<div class="step-title">
+<p>Prepare</p>
 </div>
-</div>
-<div class="explainer">
-<p>Retrieval-Augmented Generation: the model answers from <em>your</em> sources instead of its memory — so it stays current with your material and every answer can be checked.</p>
-</div>
-</section>
-<section id="rag-in-one-picture" class="slide level2 center">
-<h2>RAG in One Picture</h2>
-<div class="three-cards">
-<div class="card card-dark">
-<p><span class="card-title">Prepare</span></p>
+<div class="step-desc">
 <p>Split your documents into chunks, turn each into a numeric “embedding,” and store them in a database</p>
 </div>
-<div class="card card-light">
-<p><span class="card-title">Retrieve</span></p>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Retrieve</p>
+</div>
+<div class="step-desc">
 <p>For a question, find the chunks most similar to it and hand them to the model</p>
 </div>
-<div class="card card-dark">
-<p><span class="card-title">Answer</span></p>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Answer</p>
+</div>
+<div class="step-desc">
 <p>The model responds grounded in those chunks — and can cite which document each came from</p>
 </div>
 </div>
-<div class="explainer">
-<p>The Harvard course bots — ChatLTV on 200 documents, an accounting tutor on a whole course — are RAG bots for exactly this reason.</p>
+</div>
+<div class="punchline centered-statement fragment">
+<p>Gemini Notebook uses RAG</p>
 </div>
 </section>
-<section id="the-no-build-path" class="slide level2 center">
-<h2>The No-Build Path</h2>
+<section id="build-your-own" class="slide level2 center">
+<h2>Build Your Own</h2>
 <div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">Google NotebookLM</span></p>
+<div class="card card-teal fragment">
+<div class="card-title">
+<p>Chunk, embed, match</p>
+</div>
 <ul>
-<li>Upload up to 50 sources — PDFs, Google Docs, web links, YouTube</li>
-<li>Answers grounded in your sources, with citations</li>
-<li>Generates study guides and <span class="accent">audio overviews</span> — a narrated summary</li>
-<li>Free with a Google account</li>
+<li>Claude can embed your sources into a database</li>
+<li>Finding chunks that best match a prompt is a mechanical exercise that can be scripted</li>
 </ul>
 </div>
-<div class="card card-amber">
-<p><span class="card-title">Claude &amp; ChatGPT Projects</span></p>
+<div class="card card-amber fragment">
+<div class="card-title">
+<p>Read and interpret</p>
+</div>
 <ul>
-<li>Upload documents to a Project; the assistant searches them across every chat</li>
-<li>RAG without writing any code</li>
-<li>Requires a subscription</li>
+<li>Reading the chunks and responding is AI. Could create a custom chatbot that makes API calls (more later).</li>
+<li>Or could use Claude as the AI. Create a Claude skill and include the database</li>
 </ul>
 </div>
 </div>
-<div class="explainer">
-<p>For a manageable pile of documents, these are an instant grounded tutor. Build your own only when you need to search thousands of documents, embed it in an app, or control the pipeline.</p>
+<div class="info-box fragment">
+<p><span class="box-title">Why Build Your Own</span></p>
+<ul>
+<li>More than 50 sources (research database — more later)</li>
+<li>More control over answers (via system prompt — more later)</li>
+</ul>
 </div>
 </section>
-<section id="notebooklm" class="slide level2 section-divider center">
-<h2>NotebookLM</h2>
+<section id="skills-as-tutors" class="slide level2 section-divider center">
+<h2>Skills as Tutors</h2>
 </section>
-<section id="upload-your-sources-get-an-assistant" class="slide level2 center">
-<h2>Upload Your Sources, Get an Assistant</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">Grounded in what you upload</span></p>
-<ul>
-<li>Drop in your own sources — PDFs, slides, Google Docs, web links, even YouTube videos</li>
-<li>The assistant answers from <em>those</em> sources and <span class="accent">cites</span> them</li>
-<li>Stays on your content instead of the open web — far less prone to making things up</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">Study aids on demand</span></p>
-<ul>
-<li>Auto-generates a study guide, an FAQ, a briefing doc, a timeline</li>
-<li>All drawn from the material you gave it</li>
-<li>Free, with a Google account — no code, no setup</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>Google’s NotebookLM is the no-build way to hand students a course-grounded assistant: upload the readings and share. No pipeline to build, nothing to embed.</p>
-</div>
-</section>
-<section id="the-audio-overview" class="slide level2 center">
-<h2>The Audio Overview</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">A podcast of your material</span></p>
-<ul>
-<li>Its signature feature: a two-host <span class="accent">Audio Overview</span></li>
-<li>Two AI voices discuss your sources in a surprisingly natural conversation</li>
-<li>Students can listen to a lecture’s readings as a discussion</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">The no-build teaching assistant</span></p>
-<ul>
-<li>Upload and share — no engineering, no setup</li>
-<li>The zero-code option; a built RAG bot is the customizable one</li>
-<li>Great when you want course-grounded chat and audio, fast</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>Where a RAG bot you build gives you control of the pipeline, NotebookLM gives you a grounded tutor and a listenable audio overview in minutes — two ends of the same idea.</p>
-</div>
-</section>
-<section id="voiceovers-tutorbots" class="slide level2 section-divider center">
-<h2>Voiceovers &amp; Tutorbots</h2>
-</section>
-<section id="from-deck-to-narrated-video" class="slide level2 center">
-<h2>From Deck to Narrated Video</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">The idea</span></p>
-<ul>
-<li>Claude drafts a spoken narration script for each slide</li>
-<li>A text-to-speech voice reads it; the audio is synced to the slides</li>
-<li>Out comes an MP4 — a narrated video — plus the transcript</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">Why bother</span></p>
-<ul>
-<li>Students who missed class, or want a second pass, get the lecture on demand</li>
-<li>The transcript is searchable and accessible</li>
-<li>You record nothing — and re-generate in minutes when the slide changes</li>
-</ul>
-</div>
-</div>
-<div class="explainer">
-<p>The <code>voiceover</code> skill does exactly this: give it a PDF deck, pick a voice, and it returns the video and transcript.</p>
-</div>
-</section>
-<section id="the-tutorbot-a-video-that-answers-back" class="slide level2 center">
-<h2>The Tutorbot: A Video That Answers Back</h2>
+<section id="this-is-largely-unexplored-territory" class="slide level2 center">
+<h2>This is Largely Unexplored Territory</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/tutorbot-player.png" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+<p><img data-src="images/starship-enterprise.jpg" class="quarto-figure quarto-figure-center" style="width:54.0%"></p>
 </figure>
 </div>
-<div class="explainer">
-<p>The slides play with AI voiceover and advance on their own. The student can pause at any moment and ask a question — here, “if the agent only has read-only access, how can an injection steal our data?” — and the tutor answers in context, then class resumes.</p>
+<div class="card-starfleet">
+<p>Our mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before</p>
 </div>
 </section>
-<section id="how-the-tutorbot-is-built" class="slide level2 center">
-<h2>How the Tutorbot Is Built</h2>
-<div class="four-cards">
-<div class="card card-dark">
-<p><span class="card-title">Narrated deck</span></p>
-<p>Each slide carries a spoken script, pre-generated to one audio clip per slide</p>
-</div>
-<div class="card card-light">
-<p><span class="card-title">Player</span></p>
-<p>Slides plus synced audio; pause, ask, resume; auto-advances when a clip ends</p>
-</div>
-<div class="card card-dark">
-<p><span class="card-title">Tutor</span></p>
-<p>Claude answers with the full narration as context, and knows which slide you are on</p>
-</div>
-<div class="card card-light">
-<p><span class="card-title">Question log</span></p>
-<p>Every question saved with its slide number — next class’s cold-call material</p>
-</div>
-</div>
-<div class="explainer">
-<p>Anchored, not caged: the tutor is grounded in the deck’s script but free to draw on general knowledge — and it signposts when it goes beyond the session.</p>
-</div>
+<section id="ideas" class="slide level2 center">
+<h2>Ideas</h2>
+<ul>
+<li>Presentation feedback</li>
+<li>Writing feedback</li>
+<li>Practice cases/exercises with feedback</li>
+<li>Role-playing</li>
+<li>???</li>
+</ul>
 </section>
-<section id="made-repeatable-a-skill" class="slide level2 center">
-<h2>Made Repeatable: a Skill</h2>
-<div class="card card-blue">
-<p>The whole process is packaged as a Claude skill, <code>tutorbot-builder</code>. Point it at a deck and it produces the narrated tutorbot — deck, narration, audio, player, and tutor backend — no code required.</p>
-</div>
-<div class="three-cards">
-<div class="card card-dark">
-<p><span class="card-title">Any deck in</span></p>
-<p>PowerPoint, PDF, or reveal.js / Quarto</p>
-</div>
-<div class="card card-light">
-<p><span class="card-title">Convert if needed</span></p>
-<p>PowerPoint and PDF are turned into slides first; Claude reads each to draft narration</p>
-</div>
-<div class="card card-dark">
-<p><span class="card-title">Tutorbot out</span></p>
-<p>Narrated, interruptible, self-paced — ready to assign before class</p>
-</div>
-</div>
-<div class="explainer">
-<p>A skill is codified expertise you write once and reuse — the subject of our next-to-last session. It is shareable: any instructor can install it and convert their own decks.</p>
-</div>
-</section>
-<section id="the-payoff" class="slide level2 centered-statement center">
-<h2>The Payoff</h2>
-<div class="card card-dark">
-<p>Slides, cases, a grounded tutor, a narrated lecture — each was once days of work and is now a conversation. The scarce thing is no longer <em>making</em> the content. It is <span class="accent">deciding what to make and judging whether it is good.</span></p>
-</div>
+<section id="example" class="slide level2 center">
+<h2>Example</h2>
+<ul>
+<li>Tell Claude to add the plugin marketplace github.com/kerryback/tutors</li>
+<li>Then tell Claude to install binomial-tutor@kerryback-tutors</li>
+<li>Start a new conversation</li>
+<li>Enter <span class="accent">/binomial-tutor</span></li>
+</ul>
 </section>
 <section id="breakout" class="slide level2 section-divider center">
 <h2>Breakout</h2>
-</section>
-<section id="questions-to-discuss" class="slide level2 center">
-<h2>Questions to Discuss</h2>
 <ul>
-<li>Which of your existing decks would you turn into a narrated tutorbot first?</li>
-<li>What concept in your course would make the best case — and what artifact would carry its central hook?</li>
-<li>Do you have a document pile (readings, notes, past exams) that a grounded chatbot could answer from?</li>
-<li>Where would AI-drafted content still need your hand before it reached students?</li>
+<li>Would tutors add value in your teaching? What types of tutors?</li>
+<li>As a school or in groups, how should we coordinate development of tutors? What incentives should there be, if any?</li>
 </ul>
 
 

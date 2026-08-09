@@ -217,6 +217,13 @@
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
   },
   {
+    "objectID": "slides/4_tutors.html#gemini-notebook-previously-notebooklm",
+    "href": "slides/4_tutors.html#gemini-notebook-previously-notebooklm",
+    "title": "4. AI Tutors",
+    "section": "Gemini Notebook (previously NotebookLM)",
+    "text": "Gemini Notebook (previously NotebookLM)\nFree knowledge repository. Upload as many as 50 sources into each notebook. Get a chatbot that answers from sources, narrated slides, podcast-style audio, quizzes, …\n\n\nChatbot example: Options textbook\nNarrated slides example: Kapadia-Ostdiek-Weston paper\nPodcast example: Put-call parity from textbook\n\n\n\nChatbot is great. Videos are good for a short change of pace. We can specify only use this part of the source for video or podcast. Cannot revise directly but can regenerate with new instructions."
+  },
+  {
     "objectID": "slides/4_tutors.html#rag-chatbots",
     "href": "slides/4_tutors.html#rag-chatbots",
     "title": "4. AI Tutors",
@@ -224,102 +231,39 @@
     "text": "RAG Chatbots"
   },
   {
-    "objectID": "slides/4_tutors.html#grounding-a-bot-in-your-material",
-    "href": "slides/4_tutors.html#grounding-a-bot-in-your-material",
+    "objectID": "slides/4_tutors.html#retrieval-augmented-generation",
+    "href": "slides/4_tutors.html#retrieval-augmented-generation",
     "title": "4. AI Tutors",
-    "section": "Grounding a Bot in Your Material",
-    "text": "Grounding a Bot in Your Material\n\n\nOne deck: just show it\n\nA single session’s script is small enough to hand the model in full, every time\nNo search, no database — the material is simply there\nThis is how the tutorbot we will see works\n\n\n\nA whole course: too big\n\nEvery deck, reading, and case won’t fit in one prompt\nThe bot must fetch only the relevant piece for each question\nThis is what RAG does\n\n\n\n\nRetrieval-Augmented Generation: the model answers from your sources instead of its memory — so it stays current with your material and every answer can be checked."
+    "section": "Retrieval Augmented Generation",
+    "text": "Retrieval Augmented Generation\n\n\n\n1\n\n\nPrepare\n\n\nSplit your documents into chunks, turn each into a numeric “embedding,” and store them in a database\n\n\n\n\n2\n\n\nRetrieve\n\n\nFor a question, find the chunks most similar to it and hand them to the model\n\n\n\n\n3\n\n\nAnswer\n\n\nThe model responds grounded in those chunks — and can cite which document each came from\n\n\n\n\nGemini Notebook uses RAG"
   },
   {
-    "objectID": "slides/4_tutors.html#rag-in-one-picture",
-    "href": "slides/4_tutors.html#rag-in-one-picture",
+    "objectID": "slides/4_tutors.html#build-your-own",
+    "href": "slides/4_tutors.html#build-your-own",
     "title": "4. AI Tutors",
-    "section": "RAG in One Picture",
-    "text": "RAG in One Picture\n\n\nPrepare\nSplit your documents into chunks, turn each into a numeric “embedding,” and store them in a database\n\n\nRetrieve\nFor a question, find the chunks most similar to it and hand them to the model\n\n\nAnswer\nThe model responds grounded in those chunks — and can cite which document each came from\n\n\n\nThe Harvard course bots — ChatLTV on 200 documents, an accounting tutor on a whole course — are RAG bots for exactly this reason."
+    "section": "Build Your Own",
+    "text": "Build Your Own\n\n\n\nChunk, embed, match\n\n\nClaude can embed your sources into a database\nFinding chunks that best match a prompt is a mechanical exercise that can be scripted\n\n\n\n\nRead and interpret\n\n\nReading the chunks and responding is AI. Could create a custom chatbot that makes API calls (more later).\nOr could use Claude as the AI. Create a Claude skill and include the database\n\n\n\n\nWhy Build Your Own\n\nMore than 50 sources (research database — more later)\nMore control over answers (via system prompt — more later)"
   },
   {
-    "objectID": "slides/4_tutors.html#the-no-build-path",
-    "href": "slides/4_tutors.html#the-no-build-path",
+    "objectID": "slides/4_tutors.html#tutors",
+    "href": "slides/4_tutors.html#tutors",
     "title": "4. AI Tutors",
-    "section": "The No-Build Path",
-    "text": "The No-Build Path\n\n\nGoogle NotebookLM\n\nUpload up to 50 sources — PDFs, Google Docs, web links, YouTube\nAnswers grounded in your sources, with citations\nGenerates study guides and audio overviews — a narrated summary\nFree with a Google account\n\n\n\nClaude & ChatGPT Projects\n\nUpload documents to a Project; the assistant searches them across every chat\nRAG without writing any code\nRequires a subscription\n\n\n\n\nFor a manageable pile of documents, these are an instant grounded tutor. Build your own only when you need to search thousands of documents, embed it in an app, or control the pipeline."
+    "section": "Tutors",
+    "text": "Tutors"
   },
   {
-    "objectID": "slides/4_tutors.html#notebooklm",
-    "href": "slides/4_tutors.html#notebooklm",
+    "objectID": "slides/4_tutors.html#ai-tutors-are-unexplored-territory",
+    "href": "slides/4_tutors.html#ai-tutors-are-unexplored-territory",
     "title": "4. AI Tutors",
-    "section": "NotebookLM",
-    "text": "NotebookLM"
+    "section": "AI Tutors are Unexplored Territory",
+    "text": "AI Tutors are Unexplored Territory\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
   },
   {
-    "objectID": "slides/4_tutors.html#upload-your-sources-get-an-assistant",
-    "href": "slides/4_tutors.html#upload-your-sources-get-an-assistant",
+    "objectID": "slides/4_tutors.html#ideas",
+    "href": "slides/4_tutors.html#ideas",
     "title": "4. AI Tutors",
-    "section": "Upload Your Sources, Get an Assistant",
-    "text": "Upload Your Sources, Get an Assistant\n\n\nGrounded in what you upload\n\nDrop in your own sources — PDFs, slides, Google Docs, web links, even YouTube videos\nThe assistant answers from those sources and cites them\nStays on your content instead of the open web — far less prone to making things up\n\n\n\nStudy aids on demand\n\nAuto-generates a study guide, an FAQ, a briefing doc, a timeline\nAll drawn from the material you gave it\nFree, with a Google account — no code, no setup\n\n\n\n\nGoogle’s NotebookLM is the no-build way to hand students a course-grounded assistant: upload the readings and share. No pipeline to build, nothing to embed."
-  },
-  {
-    "objectID": "slides/4_tutors.html#the-audio-overview",
-    "href": "slides/4_tutors.html#the-audio-overview",
-    "title": "4. AI Tutors",
-    "section": "The Audio Overview",
-    "text": "The Audio Overview\n\n\nA podcast of your material\n\nIts signature feature: a two-host Audio Overview\nTwo AI voices discuss your sources in a surprisingly natural conversation\nStudents can listen to a lecture’s readings as a discussion\n\n\n\nThe no-build teaching assistant\n\nUpload and share — no engineering, no setup\nThe zero-code option; a built RAG bot is the customizable one\nGreat when you want course-grounded chat and audio, fast\n\n\n\n\nWhere a RAG bot you build gives you control of the pipeline, NotebookLM gives you a grounded tutor and a listenable audio overview in minutes — two ends of the same idea."
-  },
-  {
-    "objectID": "slides/4_tutors.html#voiceovers-tutorbots",
-    "href": "slides/4_tutors.html#voiceovers-tutorbots",
-    "title": "4. AI Tutors",
-    "section": "Voiceovers & Tutorbots",
-    "text": "Voiceovers & Tutorbots"
-  },
-  {
-    "objectID": "slides/4_tutors.html#from-deck-to-narrated-video",
-    "href": "slides/4_tutors.html#from-deck-to-narrated-video",
-    "title": "4. AI Tutors",
-    "section": "From Deck to Narrated Video",
-    "text": "From Deck to Narrated Video\n\n\nThe idea\n\nClaude drafts a spoken narration script for each slide\nA text-to-speech voice reads it; the audio is synced to the slides\nOut comes an MP4 — a narrated video — plus the transcript\n\n\n\nWhy bother\n\nStudents who missed class, or want a second pass, get the lecture on demand\nThe transcript is searchable and accessible\nYou record nothing — and re-generate in minutes when the slide changes\n\n\n\n\nThe voiceover skill does exactly this: give it a PDF deck, pick a voice, and it returns the video and transcript."
-  },
-  {
-    "objectID": "slides/4_tutors.html#the-tutorbot-a-video-that-answers-back",
-    "href": "slides/4_tutors.html#the-tutorbot-a-video-that-answers-back",
-    "title": "4. AI Tutors",
-    "section": "The Tutorbot: A Video That Answers Back",
-    "text": "The Tutorbot: A Video That Answers Back\n\n\n\n\n\n\nThe slides play with AI voiceover and advance on their own. The student can pause at any moment and ask a question — here, “if the agent only has read-only access, how can an injection steal our data?” — and the tutor answers in context, then class resumes."
-  },
-  {
-    "objectID": "slides/4_tutors.html#how-the-tutorbot-is-built",
-    "href": "slides/4_tutors.html#how-the-tutorbot-is-built",
-    "title": "4. AI Tutors",
-    "section": "How the Tutorbot Is Built",
-    "text": "How the Tutorbot Is Built\n\n\nNarrated deck\nEach slide carries a spoken script, pre-generated to one audio clip per slide\n\n\nPlayer\nSlides plus synced audio; pause, ask, resume; auto-advances when a clip ends\n\n\nTutor\nClaude answers with the full narration as context, and knows which slide you are on\n\n\nQuestion log\nEvery question saved with its slide number — next class’s cold-call material\n\n\n\nAnchored, not caged: the tutor is grounded in the deck’s script but free to draw on general knowledge — and it signposts when it goes beyond the session."
-  },
-  {
-    "objectID": "slides/4_tutors.html#made-repeatable-a-skill",
-    "href": "slides/4_tutors.html#made-repeatable-a-skill",
-    "title": "4. AI Tutors",
-    "section": "Made Repeatable: a Skill",
-    "text": "Made Repeatable: a Skill\n\nThe whole process is packaged as a Claude skill, tutorbot-builder. Point it at a deck and it produces the narrated tutorbot — deck, narration, audio, player, and tutor backend — no code required.\n\n\n\nAny deck in\nPowerPoint, PDF, or reveal.js / Quarto\n\n\nConvert if needed\nPowerPoint and PDF are turned into slides first; Claude reads each to draft narration\n\n\nTutorbot out\nNarrated, interruptible, self-paced — ready to assign before class\n\n\n\nA skill is codified expertise you write once and reuse — the subject of our next-to-last session. It is shareable: any instructor can install it and convert their own decks."
-  },
-  {
-    "objectID": "slides/4_tutors.html#the-payoff",
-    "href": "slides/4_tutors.html#the-payoff",
-    "title": "4. AI Tutors",
-    "section": "The Payoff",
-    "text": "The Payoff\n\nSlides, cases, a grounded tutor, a narrated lecture — each was once days of work and is now a conversation. The scarce thing is no longer making the content. It is deciding what to make and judging whether it is good."
-  },
-  {
-    "objectID": "slides/4_tutors.html#breakout",
-    "href": "slides/4_tutors.html#breakout",
-    "title": "4. AI Tutors",
-    "section": "Breakout",
-    "text": "Breakout"
-  },
-  {
-    "objectID": "slides/4_tutors.html#questions-to-discuss",
-    "href": "slides/4_tutors.html#questions-to-discuss",
-    "title": "4. AI Tutors",
-    "section": "Questions to Discuss",
-    "text": "Questions to Discuss\n\nWhich of your existing decks would you turn into a narrated tutorbot first?\nWhat concept in your course would make the best case — and what artifact would carry its central hook?\nDo you have a document pile (readings, notes, past exams) that a grounded chatbot could answer from?\nWhere would AI-drafted content still need your hand before it reached students?"
+    "section": "Ideas",
+    "text": "Ideas\n\nPresentation feedback\nWriting feedback\nPractice cases/exercises with feedback\nRole-playing\n???"
   },
   {
     "objectID": "slides/2_working.html#todays-session",
@@ -550,7 +494,7 @@
     "href": "index.html",
     "title": "Claude for Teaching & Research",
     "section": "",
-    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        AI/Claude Intro\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, artifacts, skills as tutors \n      \n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Student Projects\n        Artifacts, apps, agents\n      \n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
+    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        AI/Claude Intro\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, skills as tutors \n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Student Projects\n        Artifacts, apps, agents\n      \n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
   },
   {
     "objectID": "slides/1_intro.html#workshop-overview",
@@ -880,6 +824,13 @@
     "title": "3. Teaching Tools",
     "section": "FERPA",
     "text": "FERPA\n\n\nWith an enterprise agreement\n“do not train” is contractual and satisfies FERPA. It is OK to upload student assignments with names attached.\n\n\nWithout an enterprise agreement\nstudent assignments must be de-identified before uploading.\n\n\n\nIf you de-identify, then you can bring in other models (ChatGPT, Gemini) for greater diversity of opinion (more later).\n\n\n\nRice Policy (tss.rice.edu/ai-usage-guidelines)\n\nInformation considered sensitive or confidential by University Policy 808 (https://policy.rice.edu/808), including private information about individuals and protected research data, should not be used with consumer-focused or publicly available AI services."
+  },
+  {
+    "objectID": "slides/3_teaching.html#anonymizing-student-assignments",
+    "href": "slides/3_teaching.html#anonymizing-student-assignments",
+    "title": "3. Teaching Tools",
+    "section": "Anonymizing Student Assignments",
+    "text": "Anonymizing Student Assignments\n\n\n\nCanvas submissions\n\n\nStudent name is in filename\n\nInstruct students to put names nowhere else\nRun Python script to encrypt filenames and strip metadata\n\n\n\n\nHandwritten\n\n\nInstruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)\nPython script to strip names, create a table of names and filenames\nPython OCR + Claude image viewing until text is coherent"
   },
   {
     "objectID": "slides/3_teaching.html#create-a-skill-for-grading",
@@ -1281,10 +1232,73 @@
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
   },
   {
-    "objectID": "slides/3_teaching.html#anonymizing-student-assignments",
-    "href": "slides/3_teaching.html#anonymizing-student-assignments",
+    "objectID": "slides/4_tutors.html#ai-tutors-are-largely-unexplored-territory",
+    "href": "slides/4_tutors.html#ai-tutors-are-largely-unexplored-territory",
+    "title": "4. AI Tutors",
+    "section": "AI Tutors are Largely Unexplored Territory",
+    "text": "AI Tutors are Largely Unexplored Territory\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
+  },
+  {
+    "objectID": "slides/4_tutors.html#example",
+    "href": "slides/4_tutors.html#example",
+    "title": "4. AI Tutors",
+    "section": "Example",
+    "text": "Example\n\nTell Claude to add the plugin marketplace github.com/kerryback/tutors\nThen tell Claude to install binomial-tutor@kerryback-tutors\nStart a new conversation\nEnter /binomial-tutor"
+  },
+  {
+    "objectID": "slides/4_tutors.html#breakout",
+    "href": "slides/4_tutors.html#breakout",
+    "title": "4. AI Tutors",
+    "section": "Breakout",
+    "text": "Breakout\n\nWould tutors add value in your teaching? What types of tutors?\nAs a school or in groups, how should we coordinate development of tutors? What incentives should there be, if any?"
+  },
+  {
+    "objectID": "slides/2_working.html#workshop-overview",
+    "href": "slides/2_working.html#workshop-overview",
+    "title": "2. Working with Claude",
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
+  },
+  {
+    "objectID": "slides/3_teaching.html#workshop-overview",
+    "href": "slides/3_teaching.html#workshop-overview",
     "title": "3. Teaching Tools",
-    "section": "Anonymizing Student Assignments",
-    "text": "Anonymizing Student Assignments\n\n\n\nCanvas submissions\n\n\nStudent name is in filename\n\nInstruct students to put names nowhere else\nRun Python script to encrypt filenames and strip metadata\n\n\n\n\nHandwritten\n\n\nInstruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)\nPython script to strip names, create a table of names and filenames\nPython OCR + Claude image viewing until text is coherent"
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
+  },
+  {
+    "objectID": "slides/4_tutors.html#workshop-overview",
+    "href": "slides/4_tutors.html#workshop-overview",
+    "title": "4. AI Tutors",
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
+  },
+  {
+    "objectID": "slides/4_tutors.html#todays-session",
+    "href": "slides/4_tutors.html#todays-session",
+    "title": "4. AI Tutors",
+    "section": "Today’s Session",
+    "text": "Today’s Session\n\n\n\n1\n\n\nGemini Notebook\n\n\n\n\n2\n\n\nBuild Your Own RAG Bot\n\n\n\n\n3\n\n\nSkills as Tutors"
+  },
+  {
+    "objectID": "slides/4_tutors.html#skills-as-tutors",
+    "href": "slides/4_tutors.html#skills-as-tutors",
+    "title": "4. AI Tutors",
+    "section": "Skills as Tutors",
+    "text": "Skills as Tutors"
+  },
+  {
+    "objectID": "slides/4_tutors.html#this-is-largely-unexplored-territory",
+    "href": "slides/4_tutors.html#this-is-largely-unexplored-territory",
+    "title": "4. AI Tutors",
+    "section": "This is Largely Unexplored Territory",
+    "text": "This is Largely Unexplored Territory\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
+  },
+  {
+    "objectID": "slides/3_teaching.html#content",
+    "href": "slides/3_teaching.html#content",
+    "title": "3. Teaching Tools",
+    "section": "Content",
+    "text": "Content\n\n\nEveryone can now compute whatever\n\n\nChecking work becomes more important than doing work, and we can assess that\n\n\n\n\nInterpretation and correct application have become more important than ever\n\n\nMore cases, more emphasis on communication seem in order"
   }
 ]

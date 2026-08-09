@@ -1,23 +1,25 @@
 ---
-description: Export a rendered deck from docs/slides to PDF with Decktape
+description: Export a rendered deck to PDF with the global deck skill
 argument-hint: <filename>
-allowed-tools: Bash(bash .claude/scripts/deck.sh:*)
+allowed-tools: Bash(bash ~/.claude/skills/deck/assets/deck-to-pdf.sh:*)
 ---
 
-Export the deck `$1` to PDF by running, from the project root:
+Export the deck `$1` by running, from the project root:
 
 ```
-bash .claude/scripts/deck.sh $1
+bash ~/.claude/skills/deck/assets/deck-to-pdf.sh $1 --root docs --out pdf
 ```
 
-The script takes `docs/slides/<filename>.html` and writes `slides/pdf/<filename>.pdf`,
-mirroring it into `docs/slides/pdf/` so the new PDF is live on the served site
-without a full re-render. `slides/pdf/*.pdf` is in the `resources:` list in
-`_quarto.yml`, so a later `quarto render` refreshes that copy too.
+Those two folders are all this repo contributes. Everything else — the 1440x900pt
+page, loose name matching, re-rendering a stale deck, serving the site over HTTP —
+lives in the global `deck` skill at `~/.claude/skills/deck/`, so it stays the same
+across every repo. Do not reimplement any of it here, and if the export itself
+needs fixing, fix it there.
 
-The extension is optional and the name is matched loosely — `7`, `7_ai-for-research`
-and `ai-for-research` all find the same deck. If no argument was given, or the
-name matches nothing, the script lists the decks it found; relay that list.
+`--root docs` is the rendered site and `--out pdf` is the tracked copy; the script
+mirrors each PDF into `docs/pdf/` so it is live on the served site without a full
+re-render. `pdf/*.pdf` is in the `resources:` list in `_quarto.yml`, so a later
+`quarto render` keeps that copy rather than dropping it. Commit both.
 
-If the deck's HTML is missing or stale, run `quarto render slides/<filename>.qmd`
-first, then export. Report where the PDF landed and its page count.
+Omit `$1` to export every deck. If the name matches nothing the script lists what
+it found; relay that list. Report where the PDF landed and its page count.

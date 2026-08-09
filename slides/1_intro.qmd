@@ -60,7 +60,7 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 ## Today's Overview
 
 ::: {.step-flow-5}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -68,7 +68,7 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 Claude
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -76,7 +76,7 @@ Claude
 Effective Prompting
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -84,7 +84,7 @@ Effective Prompting
 Code and Documents
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 4
 :::
@@ -92,7 +92,7 @@ Code and Documents
 Verifying Things
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 5
 :::
@@ -655,8 +655,8 @@ Spreadsheets remain valuable for tabular add-subtract models
 
 ## Takeaways {.centered-statement}
 
-::: {.card .card-dark}
-There is no secret to prompting.  Just chat (a lot).  Treat AI as an infinitely patient colleague with a poor memory.  Code execution gives AI enormous power.  
+::: {.punchline}
+There is no secret to prompting.  Just chat (a lot).  Treat AI as an infinitely patient colleague with a poor memory.  Code execution gives AI enormous power.
 :::
 
 

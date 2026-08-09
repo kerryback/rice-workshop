@@ -4,239 +4,211 @@ subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---
 
-NotebookLM - Derivatives, Weston et al.
+## Workshop Overview
+
+```{=html}
+<style>
+/* Session schedule, copied from deck 1 and extended with a highlight for the
+   session this deck belongs to: that row keeps full contrast and an amber
+   block, the rest step back so the eye lands on today without having to read.
+   Scoped to .session-grid rather than to the slide's id, so renaming the
+   heading cannot detach the styling. */
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 4.5em;
+  margin-top: 0.7em;
+}
+.session-grid .sg-col { display: flex; flex-direction: column; gap: 0.75em; }
+.session-grid .sg-row { display: flex; align-items: center; gap: 1.1em; }
+.session-grid .sg-when {
+  flex: 0 0 7.6em;
+  background: #00205B;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.5em 0;
+  line-height: 1.1;
+}
+.session-grid .sg-day {
+  display: block; color: #fff;
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.07em;
+}
+.session-grid .sg-time {
+  display: block; color: #fff; opacity: 0.85;
+  font-size: 0.51em; font-weight: 600; letter-spacing: 0.035em; margin-top: 0.12em;
+}
+.session-grid .sg-title { font-size: 0.8em; font-weight: 700; color: #00205B; }
+
+/* Today. Everything that is not this row recedes; the row itself gains an
+   amber block with navy type on it, which reads at the back of the room. */
+.session-grid .sg-row:not(.is-now) { opacity: 0.42; }
+.session-grid .sg-row.is-now .sg-when { background: #f59e0b; }
+.session-grid .sg-row.is-now .sg-day,
+.session-grid .sg-row.is-now .sg-time { color: #00205B; opacity: 1; }
+.session-grid .sg-row.is-now .sg-title { color: #b45309; }
+</style>
+
+<div class="session-grid">
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 10</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Intro to Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 11</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Working with Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 12</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Teaching Tools</span></div>
+    <div class="sg-row is-now"><span class="sg-when"><span class="sg-day">AUG 13</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI Tutors</span></div>
+  </div>
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 14</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Student Projects</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 17</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI for Research</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Personal Assistants</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">4:00&ndash;5:00</span></span><span class="sg-title">Overflow/Extra</span></div>
+  </div>
+</div>
+```
+
+## Today's Session
+
+::: {.step-flow-3}
+::: {.step-card .fragment}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Gemini Notebook
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Build Your Own RAG Bot
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Skills as Tutors
+:::
+:::
+:::
+
 
 ## Gemini Notebook (previously NotebookLM)
 
-- Free knowledge repository.  Upload as many as 50 sources into each notebook.  Chatbot that answers from sources.
-- Also, podcast-style audio, voiceover slide decks, ...
-- Example: [chapters from a textbook](https://notebook.google.com/notebook/701244f5-4833-4217-875d-96380578825b)
-- Example: [Kapadia-Ostdiek-Weston overview](https://notebook.google.com/notebook/58351fb6-7453-4bff-909f-281bb34e4c6a/artifact/c78bc42e-a9e7-4276-957c-d78049841951?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
+Free knowledge repository.  Upload as many as 50 sources into each notebook.  Get a chatbot that answers from sources, narrated slides, podcast-style audio,  quizzes, ...
+
+::: {.highlight-box}
+- Chatbot example: [Options textbook](https://notebook.google.com/notebook/701244f5-4833-4217-875d-96380578825b)
+- Narrated slides example: [Kapadia-Ostdiek-Weston paper](https://notebook.google.com/notebook/58351fb6-7453-4bff-909f-281bb34e4c6a/artifact/c78bc42e-a9e7-4276-957c-d78049841951?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
+- Podcast example: [Put-call parity from textbook](https://notebook.google.com/notebook/91e987c5-e023-467f-918c-afa2264e55d4/artifact/949696bf-66a9-4ff6-beef-376aa6ca2dae?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
+:::
 
 
+
+::: {.punchline}
+Chatbot is great.  Videos are good for a short change of pace.  We can specify [only use this part of the source]{.accent} for video or podcast.  Cannot revise directly but can regenerate with new instructions.
+:::
 
 ## RAG Chatbots {.section-divider}
 
-## Grounding a Bot in Your Material
+## Retrieval Augmented Generation
 
-::: {.two-cards}
-::: {.card .card-blue}
-[One deck: just show it]{.card-title}
 
-- A single session's script is small enough to hand the model in full, every time
-- No search, no database --- the material is simply there
-- This is how the tutorbot we will see works
+::: {.step-flow-3}
+::: {.step-card .fragment}
+::: {.step-icon}
+1
 :::
-::: {.card .card-amber}
-[A whole course: too big]{.card-title}
-
-- Every deck, reading, and case won't fit in one prompt
-- The bot must fetch only the relevant piece for each question
-- This is what [RAG]{.accent} does
+::: {.step-title}
+Prepare
 :::
-:::
-
-::: {.explainer}
-Retrieval-Augmented Generation: the model answers from *your* sources instead of its memory --- so it stays current with your material and every answer can be checked.
-:::
-
-## RAG in One Picture
-
-::: {.three-cards}
-::: {.card .card-dark}
-[Prepare]{.card-title}
-
+::: {.step-desc}
 Split your documents into chunks, turn each into a numeric "embedding," and store them in a database
 :::
-::: {.card .card-light}
-[Retrieve]{.card-title}
-
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Retrieve
+:::
+::: {.step-desc}
 For a question, find the chunks most similar to it and hand them to the model
 :::
-::: {.card .card-dark}
-[Answer]{.card-title}
-
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Answer
+:::
+::: {.step-desc}
 The model responds grounded in those chunks --- and can cite which document each came from
 :::
 :::
-
-::: {.explainer}
-The Harvard course bots --- ChatLTV on 200 documents, an accounting tutor on a whole course --- are RAG bots for exactly this reason.
 :::
 
-## The No-Build Path
+::: {.punchline .centered-statement .fragment}
+Gemini Notebook uses RAG
+:::
+
+## Build Your Own
 
 ::: {.two-cards}
-::: {.card .card-blue}
-[Google NotebookLM]{.card-title}
-
-- Upload up to 50 sources --- PDFs, Google Docs, web links, YouTube
-- Answers grounded in your sources, with citations
-- Generates study guides and [audio overviews]{.accent} --- a narrated summary
-- Free with a Google account
+::: {.card .card-teal .fragment}
+::: {.card-title}
+Chunk, embed, match
 :::
-::: {.card .card-amber}
-[Claude & ChatGPT Projects]{.card-title}
-
-- Upload documents to a Project; the assistant searches them across every chat
-- RAG without writing any code
-- Requires a subscription
+- Claude can embed your sources into a database
+- Finding chunks that best match a prompt is a mechanical exercise that can be scripted 
 :::
+::: {.card .card-amber .fragment}
+::: {.card-title}
+Read and interpret 
 :::
-
-::: {.explainer}
-For a manageable pile of documents, these are an instant grounded tutor. Build your own only when you need to search thousands of documents, embed it in an app, or control the pipeline.
-:::
-
-## NotebookLM {.section-divider}
-
-## Upload Your Sources, Get an Assistant
-
-::: {.two-cards}
-::: {.card .card-blue}
-[Grounded in what you upload]{.card-title}
-
-- Drop in your own sources --- PDFs, slides, Google Docs, web links, even YouTube videos
-- The assistant answers from *those* sources and [cites]{.accent} them
-- Stays on your content instead of the open web --- far less prone to making things up
-:::
-::: {.card .card-amber}
-[Study aids on demand]{.card-title}
-
-- Auto-generates a study guide, an FAQ, a briefing doc, a timeline
-- All drawn from the material you gave it
-- Free, with a Google account --- no code, no setup
+- Reading the chunks and responding is AI.  Could create a custom chatbot that makes API calls (more later).
+- Or could use Claude as the AI.  Create a Claude skill and include the database
 :::
 :::
 
-::: {.explainer}
-Google's NotebookLM is the no-build way to hand students a course-grounded assistant: upload the readings and share. No pipeline to build, nothing to embed.
+::: {.info-box .fragment}
+[Why Build Your Own]{.box-title}
+
+- More than 50 sources (research database --- more later)
+- More control over answers (via system prompt --- more later)
 :::
 
-## The Audio Overview
 
-::: {.two-cards}
-::: {.card .card-blue}
-[A podcast of your material]{.card-title}
+## Skills as Tutors {.section-divider}
 
-- Its signature feature: a two-host [Audio Overview]{.accent}
-- Two AI voices discuss your sources in a surprisingly natural conversation
-- Students can listen to a lecture's readings as a discussion
-:::
-::: {.card .card-amber}
-[The no-build teaching assistant]{.card-title}
+## This is Largely Unexplored Territory
 
-- Upload and share --- no engineering, no setup
-- The zero-code option; a built RAG bot is the customizable one
-- Great when you want course-grounded chat and audio, fast
-:::
+![](images/starship-enterprise.jpg){width=54% fig-align="center"}
+
+::: {.card-starfleet}
+Our mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before
 :::
 
-::: {.explainer}
-Where a RAG bot you build gives you control of the pipeline, NotebookLM gives you a grounded tutor and a listenable audio overview in minutes --- two ends of the same idea.
-:::
+## Ideas
 
-## Voiceovers & Tutorbots {.section-divider}
+- Presentation feedback
+- Writing feedback
+- Practice cases/exercises with feedback 
+- Role-playing
+- ???
 
-## From Deck to Narrated Video
+## Example
 
-::: {.two-cards}
-::: {.card .card-blue}
-[The idea]{.card-title}
-
-- Claude drafts a spoken narration script for each slide
-- A text-to-speech voice reads it; the audio is synced to the slides
-- Out comes an MP4 --- a narrated video --- plus the transcript
-:::
-::: {.card .card-amber}
-[Why bother]{.card-title}
-
-- Students who missed class, or want a second pass, get the lecture on demand
-- The transcript is searchable and accessible
-- You record nothing --- and re-generate in minutes when the slide changes
-:::
-:::
-
-::: {.explainer}
-The `voiceover` skill does exactly this: give it a PDF deck, pick a voice, and it returns the video and transcript.
-:::
-
-## The Tutorbot: A Video That Answers Back
-
-![](images/tutorbot-player.png){width=88% fig-align="center"}
-
-::: {.explainer}
-The slides play with AI voiceover and advance on their own. The student can pause at any moment and ask a question --- here, "if the agent only has read-only access, how can an injection steal our data?" --- and the tutor answers in context, then class resumes.
-:::
-
-## How the Tutorbot Is Built
-
-::: {.four-cards}
-::: {.card .card-dark}
-[Narrated deck]{.card-title}
-
-Each slide carries a spoken script, pre-generated to one audio clip per slide
-:::
-::: {.card .card-light}
-[Player]{.card-title}
-
-Slides plus synced audio; pause, ask, resume; auto-advances when a clip ends
-:::
-::: {.card .card-dark}
-[Tutor]{.card-title}
-
-Claude answers with the full narration as context, and knows which slide you are on
-:::
-::: {.card .card-light}
-[Question log]{.card-title}
-
-Every question saved with its slide number --- next class's cold-call material
-:::
-:::
-
-::: {.explainer}
-Anchored, not caged: the tutor is grounded in the deck's script but free to draw on general knowledge --- and it signposts when it goes beyond the session.
-:::
-
-## Made Repeatable: a Skill
-
-::: {.card .card-blue}
-The whole process is packaged as a Claude skill, `tutorbot-builder`. Point it at a deck and it produces the narrated tutorbot --- deck, narration, audio, player, and tutor backend --- no code required.
-:::
-
-::: {.three-cards}
-::: {.card .card-dark}
-[Any deck in]{.card-title}
-
-PowerPoint, PDF, or reveal.js / Quarto
-:::
-::: {.card .card-light}
-[Convert if needed]{.card-title}
-
-PowerPoint and PDF are turned into slides first; Claude reads each to draft narration
-:::
-::: {.card .card-dark}
-[Tutorbot out]{.card-title}
-
-Narrated, interruptible, self-paced --- ready to assign before class
-:::
-:::
-
-::: {.explainer}
-A skill is codified expertise you write once and reuse --- the subject of our next-to-last session. It is shareable: any instructor can install it and convert their own decks.
-:::
-
-## The Payoff {.centered-statement}
-
-::: {.card .card-dark}
-Slides, cases, a grounded tutor, a narrated lecture --- each was once days of work and is now a conversation. The scarce thing is no longer *making* the content. It is [deciding what to make and judging whether it is good.]{.accent}
-:::
+- Tell Claude to add the plugin marketplace github.com/kerryback/tutors 
+- Then tell Claude to install binomial-tutor@kerryback-tutors 
+- Start a new conversation
+- Enter [/binomial-tutor]{.accent}
 
 ## Breakout {.section-divider}
 
-## Questions to Discuss
-
-- Which of your existing decks would you turn into a narrated tutorbot first?
-- What concept in your course would make the best case --- and what artifact would carry its central hook?
-- Do you have a document pile (readings, notes, past exams) that a grounded chatbot could answer from?
-- Where would AI-drafted content still need your hand before it reached students?
+- Would tutors add value in your teaching?  What types of tutors?
+- As a school or in groups, how should we coordinate development of tutors?  What incentives should there be, if any?

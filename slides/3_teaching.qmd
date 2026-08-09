@@ -3,10 +3,71 @@ title: "3. Teaching Tools"
 author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 ---
 
+## Workshop Overview
+
+```{=html}
+<style>
+/* Session schedule, copied from deck 1 and extended with a highlight for the
+   session this deck belongs to: that row keeps full contrast and an amber
+   block, the rest step back so the eye lands on today without having to read.
+   Scoped to .session-grid rather than to the slide's id, so renaming the
+   heading cannot detach the styling. */
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 4.5em;
+  margin-top: 0.7em;
+}
+.session-grid .sg-col { display: flex; flex-direction: column; gap: 0.75em; }
+.session-grid .sg-row { display: flex; align-items: center; gap: 1.1em; }
+.session-grid .sg-when {
+  flex: 0 0 7.6em;
+  background: #00205B;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.5em 0;
+  line-height: 1.1;
+}
+.session-grid .sg-day {
+  display: block; color: #fff;
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.07em;
+}
+.session-grid .sg-time {
+  display: block; color: #fff; opacity: 0.85;
+  font-size: 0.51em; font-weight: 600; letter-spacing: 0.035em; margin-top: 0.12em;
+}
+.session-grid .sg-title { font-size: 0.8em; font-weight: 700; color: #00205B; }
+
+/* Today. Everything that is not this row recedes; the row itself gains an
+   amber block with navy type on it, which reads at the back of the room. */
+.session-grid .sg-row:not(.is-now) { opacity: 0.42; }
+.session-grid .sg-row.is-now .sg-when { background: #f59e0b; }
+.session-grid .sg-row.is-now .sg-day,
+.session-grid .sg-row.is-now .sg-time { color: #00205B; opacity: 1; }
+.session-grid .sg-row.is-now .sg-title { color: #b45309; }
+</style>
+
+<div class="session-grid">
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 10</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Intro to Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 11</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Working with Claude</span></div>
+    <div class="sg-row is-now"><span class="sg-when"><span class="sg-day">AUG 12</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Teaching Tools</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 13</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI Tutors</span></div>
+  </div>
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 14</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Student Projects</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 17</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI for Research</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Personal Assistants</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">4:00&ndash;5:00</span></span><span class="sg-title">Overflow/Extra</span></div>
+  </div>
+</div>
+```
+
 ## Today's Session
 
 ::: {.step-flow-3}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -14,7 +75,7 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 Plugins
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -22,7 +83,7 @@ Plugins
 Thoughts on teaching
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -77,6 +138,24 @@ participation, presentations, quizzes, "solutions" to problems that they can eva
 :::
 :::
 
+## Content 
+
+::: {.two-cards}
+::: {.card-blue}
+Everyone [can now compute]{.accent} whatever
+:::
+::: {.card-amber}
+[Checking work]{.accent} becomes more important than doing work, and we can assess that
+:::
+:::
+::: {.two-cards}
+::: {.card-teal}
+[Interpretation and correct application]{.accent} have become more important than ever
+:::
+::: {.card-purple}
+[More cases]{.accent}, [more]{.accent} emphasis on [communication]{.accent} seem in order
+:::
+:::
 
 ## Teaching Cases
 
@@ -100,7 +179,7 @@ participation, presentations, quizzes, "solutions" to problems that they can eva
 ## Grading Team
 
 ::: {.step-flow-3}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -108,7 +187,7 @@ participation, presentations, quizzes, "solutions" to problems that they can eva
 Involve multiple AI graders for diversity of opinions
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -116,7 +195,7 @@ Involve multiple AI graders for diversity of opinions
 Maybe a second round --- share opinions from the first round
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -181,7 +260,7 @@ Handwritten
 ## Create a Skill for Grading
 
 ::: {.step-flow-2}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -192,7 +271,7 @@ Create a recipe
 How to anonymize, how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -263,7 +342,7 @@ I'm on the Creator plan ($220 per year).
 ## A Pipeline for Voiceovers
 
 ::: {.step-flow-5}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -274,7 +353,7 @@ Narration text
 Use PowerPoint speaker notes for narration text.  Claude drafts.  You edit.
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -285,7 +364,7 @@ Export to PDF
 Need pptx for speaker notes, PDF for images.
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -296,7 +375,7 @@ ElevenLabs
 Feed narration per slide to ElevenLabs and get MP3
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 4
 :::
@@ -307,7 +386,7 @@ PDF to png
 Convert PDF to png per slide
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 5
 :::
@@ -345,7 +424,7 @@ Ask Claude to add the plugin marketplace [github.com/kerryback/skills]{.accent} 
 ## Test It
 
 ::: {.step-flow-3}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -353,7 +432,7 @@ Ask Claude to add the plugin marketplace [github.com/kerryback/skills]{.accent} 
 Start a new conversation
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -361,7 +440,7 @@ Start a new conversation
 Export a PowerPoint deck to pdf
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -379,7 +458,7 @@ Tell Claude to generate a voiceover
 
 ## Make It Yours {.centered-statement}
 
-::: {.card .card-dark}
+::: {.punchline}
 Everything is in text files (.py, .md) that you now own.  Any behavior you want to change --- tell Claude.
 :::
 
@@ -422,7 +501,7 @@ Photos are a must for me
 ## Esther Ingester
 
 ::: {.step-flow-2}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -433,7 +512,7 @@ Get the roster
 Esther/Class Roster/View with Photo and then right-click to print to PDF
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -449,7 +528,7 @@ Give to Claude at beginning of term to create a participation recorder that live
 ## Use
 
 ::: {.step-flow}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -460,7 +539,7 @@ Open class folder
 Tell Claude to record participation
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -471,7 +550,7 @@ Screen opens in browser
 (inside Academic Studio)
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -479,7 +558,7 @@ Screen opens in browser
 Check scores, add notes, close
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 4
 :::
@@ -519,7 +598,7 @@ Poll Everywhere, Mentimeter, ... are great, but maybe they could be easier to us
 
 If I have Claude open on the classroom computer, could I give Claude a question to ask and have it instantly show up on the screen?
 
-::: {.card .card-dark}
+::: {.punchline}
 Ask Claude!
 :::
 
@@ -542,7 +621,7 @@ An alternative is to run a small app on a cloud host (easy to do, even on a free
 ## Reverse Tunnel Demo
 
 ::: {.step-flow-3}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -553,7 +632,7 @@ Install
 Ask Claude to install [poll@kerryback-skills]{.accent}.
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -564,7 +643,7 @@ Need a volunteer
 Install, then open a new conversation.  Enter /poll.  Share the window that pops up.  Everyone else uses their phone (don't need Claude).
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -611,12 +690,8 @@ Similar to polling: QR Code, instructor's panel allows selection of student to s
 
 :::
 
-::: {.explainer}
-
-:::
-
 ## Takeaways {.centered-statement}
 
-::: {.card .card-dark}
+::: {.punchline}
 Teaching tools you might wish to have are a conversation away.  Install mine as a starting point, then tell Claude to make them yours.   Tell Claude to build anything else you want.  And share!
 :::

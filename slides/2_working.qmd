@@ -4,10 +4,71 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 ---
 
 
+## Workshop Overview
+
+```{=html}
+<style>
+/* Session schedule, copied from deck 1 and extended with a highlight for the
+   session this deck belongs to: that row keeps full contrast and an amber
+   block, the rest step back so the eye lands on today without having to read.
+   Scoped to .session-grid rather than to the slide's id, so renaming the
+   heading cannot detach the styling. */
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 4.5em;
+  margin-top: 0.7em;
+}
+.session-grid .sg-col { display: flex; flex-direction: column; gap: 0.75em; }
+.session-grid .sg-row { display: flex; align-items: center; gap: 1.1em; }
+.session-grid .sg-when {
+  flex: 0 0 7.6em;
+  background: #00205B;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.5em 0;
+  line-height: 1.1;
+}
+.session-grid .sg-day {
+  display: block; color: #fff;
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.07em;
+}
+.session-grid .sg-time {
+  display: block; color: #fff; opacity: 0.85;
+  font-size: 0.51em; font-weight: 600; letter-spacing: 0.035em; margin-top: 0.12em;
+}
+.session-grid .sg-title { font-size: 0.8em; font-weight: 700; color: #00205B; }
+
+/* Today. Everything that is not this row recedes; the row itself gains an
+   amber block with navy type on it, which reads at the back of the room. */
+.session-grid .sg-row:not(.is-now) { opacity: 0.42; }
+.session-grid .sg-row.is-now .sg-when { background: #f59e0b; }
+.session-grid .sg-row.is-now .sg-day,
+.session-grid .sg-row.is-now .sg-time { color: #00205B; opacity: 1; }
+.session-grid .sg-row.is-now .sg-title { color: #b45309; }
+</style>
+
+<div class="session-grid">
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 10</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Intro to Claude</span></div>
+    <div class="sg-row is-now"><span class="sg-when"><span class="sg-day">AUG 11</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Working with Claude</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 12</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Teaching Tools</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 13</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI Tutors</span></div>
+  </div>
+  <div class="sg-col">
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 14</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Student Projects</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 17</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">AI for Research</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">3:00&ndash;4:00</span></span><span class="sg-title">Personal Assistants</span></div>
+    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">4:00&ndash;5:00</span></span><span class="sg-title">Overflow/Extra</span></div>
+  </div>
+</div>
+```
+
 ## Today's Session
 
 ::: {.step-flow}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -15,7 +76,7 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 Academic Studio
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -23,7 +84,7 @@ Academic Studio
 The Command Line
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -31,7 +92,7 @@ The Command Line
 CLAUDE.md and Skills
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 4
 :::
@@ -283,7 +344,7 @@ Give Claude the links and ask Claude to install them if you want to try them out
 ## Creating Skills
 
 ::: {.step-flow-3}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -294,7 +355,7 @@ Iterate
 Usual process is you work on something, iterating until you get what you want.
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -305,7 +366,7 @@ Recognize
 You realize you may want the same thing again, and you don't want to go through the iteration again.
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -347,7 +408,7 @@ Solution: tell Claude to save the satisfactory method (recipe) as a skill.  Can 
 ## Example: Create and Invoke
 
 ::: {.step-flow-3}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -358,7 +419,7 @@ Create
 Tell Claude to create a skill for your folder named "pirate" with this content: "Always answer like a pirate"
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -369,7 +430,7 @@ Invoke
 Start a new conversation.  Enter [/pirate What is the meaning of life?]{.accent}
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 3
 :::
@@ -417,7 +478,7 @@ Claude is generally able to create slide decks using whatever style you like.  H
 ## Creating a Skill
 
 ::: {.step-flow-2}
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 1
 :::
@@ -428,7 +489,7 @@ Save the Recipe
 Once Claude has been successful at creating decks in your preferred style, ask Claude to save the recipe as a skill.
 :::
 :::
-::: {.step-card}
+::: {.step-card .fragment}
 ::: {.step-icon}
 2
 :::
@@ -463,7 +524,7 @@ A good skill [uses]{.accent} it --- filling that template's own layouts instead 
 :::
 :::
 
-::: {.card-dark}
+::: {.punchline}
 A template guides [a person]{.accent}, who sees the result and adjusts.  A skill guides [Claude]{.accent}, which cannot.
 :::
 
@@ -525,6 +586,6 @@ Ask Claude to edit your CLAUDE.md to settle the precedence.
 
 ## Takeaways {.centered-statement}
 
-::: {.card .card-dark}
+::: {.punchline}
 Claude can work alongside you on whatever you're working on.  Get advice and suggestions.  Hand over the tedious part of the work.  Save good workflows as skills so they can be easily repeated.
 :::
