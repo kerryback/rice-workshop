@@ -35,7 +35,7 @@ Slide narration · Grading assistants · Other tools
 :::
 :::
 
-## Plugins
+## Plugins {.shrink}
 
 A shipping protocol for skills plus scripts, MCP connectors, and other files
 

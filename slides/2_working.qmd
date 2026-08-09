@@ -76,7 +76,7 @@ Reach the File Explorer tool from the left toolbar.
 - Double-click to open in Academic Studio viewer
 - Viewer provides different options for different file types (cannot edit Office docs)
 
-![](images/as-explorer.png){width=62% fig-align="center"}
+![](images/as-explorer.png){width=40% fig-align="center"}
 :::
 ::: {.card-amber}
 [Search]{.card-title}
@@ -85,45 +85,38 @@ Reach the File Explorer tool from the left toolbar.
 - Options for case, whole word, and regular expressions
 - Replace across all files from the same pane
 
-![](images/as-search.png){width=92% fig-align="center"}
+![](images/as-search.png){width=60% fig-align="center"}
 :::
 
 :::
 
 
 
-## Getting Around{.shrink}
+## Useful Features{.shrink}
 
 ::: {.three-cards}
 ::: {.card-blue}
-[Conversations]{.card-title}
+[Claude icon on top right]{.card-title}
 
-- Open a second Claude conversation for a separate task
-- Each keeps its own context; they do not see each other
+- Open a new conversation
+- Can run multiple conversations simultaneously
 :::
 ::: {.card-amber}
-[Terminal]{.card-title}
+[Extensions in left toolbar]{.card-title}
 
-- Open from the Terminal menu, X to close
-- Claude uses it too --- you will see commands run as it works
-
-![](images/as-terminal-menu.png){width=88% fig-align="center"}
+- Many VS Codium extensions to choose from
+- Some are pre-installed
 :::
 
 
 ::: {.card-purple}
-[Remote SSH]{.card-title}
+[Remote SSH in left toolbar]{.card-title}
 
 - Connect to jgsrc1 or a different remote server
 - Files and code execution on remote server.  Academic Studio runs on your computer.
 :::
 :::
 
-::: {.card-dark}
-[Extensions]{.card-title}
-
-VS Codium marketplace (all are free)
-:::
 
 
 ## Permissions
@@ -263,7 +256,7 @@ It looks in your home directory (C:\\users\\yourname on Windows) and it looks in
 ::: {.card .card-dark}
 [Loaded on Demand]{.card-title}
 
-Skills are text files saved on your hard drive.  Claude reads the top of each SKILL.md file (the skill description) on startup, and it reads the bulk of the file [only when needed]{.accent}
+Skills are text files saved on your hard drive.  Claude reads the top of each SKILL.md file on startup, and it reads the bulk of the file [only when needed]{.accent}
 :::
 :::
 
