@@ -177,6 +177,19 @@ Reach the File Explorer tool from the left toolbar.
 
 :::
 
+## File View and Edit
+
+- Extract and double-click files in session2.zip/sample_files
+- Need different extensions installed for different filetypes (use Run Setup)
+- Office docs are read only
+
+::: {.claude-bullets}
+- .py is a Python script, .ipynb is a Jupyter notebook
+- .tex builds with 'Play' button, .qmd builds with Preview button
+- .html toggles between editable text (HTML code) and browser-view with globe button
+- .md toggles between editable text (Markdown code) and rendered view with pencil button
+:::
+
 ## Fit with VS Code 
 
 - Independent apps, individual extensions and settings 

@@ -1,0 +1,133 @@
+---
+title: "Quarterly Results, 2024-2025"
+author: "Rice Business Faculty Workshop"
+date: today
+format:
+  html:
+    toc: true
+    code-fold: true
+    embed-resources: true
+execute:
+  warning: false
+---
+
+## What This File Is
+
+A Quarto document: ordinary text with pieces of code embedded in it. Press the
+Render button above and Quarto runs the code, drops the results into the text,
+and writes `report.html` next to this file.
+
+The point is that the numbers below are not typed in. They are computed from
+`quarterly_revenue.csv`, which sits in this same folder. Edit the CSV, render
+again, and every figure, table, and sentence updates itself.
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("quarterly_revenue.csv")
+df["margin"] = df["margin"] / 100
+df
+```
+
+## Revenue
+
+```{python}
+#| label: fig-revenue
+#| fig-cap: "Quarterly revenue and cost, in millions of dollars."
+
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.bar(df["quarter"], df["revenue"], color="#00205B", label="Revenue")
+ax.bar(df["quarter"], df["cost"], color="#f59e0b", width=0.5, label="Cost")
+ax.set_ylabel("$ millions")
+ax.legend(frameon=False)
+ax.spines[["top", "right"]].set_visible(False)
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+plt.show()
+```
+
+```{python}
+#| echo: false
+first, last = df.iloc[0], df.iloc[-1]
+growth = (last["revenue"] / first["revenue"] - 1) * 100
+```
+
+Revenue grew from `{python} f"${first['revenue']:.2f}M"` in
+`{python} first["quarter"]` to `{python} f"${last['revenue']:.2f}M"` in
+`{python} last["quarter"]`, an increase of
+`{python} f"{growth:.0f}%"` over `{python} len(df)` quarters.
+
+Those numbers are written as inline code, not as text. @fig-revenue is
+cross-referenced the same way --- renumber the figures and the reference
+follows.
+
+## Margin
+
+Margin has been steady, averaging
+`{python} f"{df['margin'].mean():.1%}"` and never leaving the range
+`{python} f"{df['margin'].min():.1%}"` to `{python} f"{df['margin'].max():.1%}"`.
+
+```{python}
+#| label: tbl-summary
+#| tbl-cap: "Summary by year."
+
+summary = (
+    df.assign(year=df["quarter"].str[:4])
+      .groupby("year")
+      .agg(revenue=("revenue", "sum"),
+           cost=("cost", "sum"),
+           margin=("margin", "mean"))
+      .round(3)
+)
+summary.style.format({"revenue": "${:.2f}M", "cost": "${:.2f}M", "margin": "{:.1%}"})
+```
+
+The fourth quarter is the strongest in both years, which is worth keeping in
+mind before reading much into any single quarter against the one before it.
+
+::: {.callout-note}
+## Callouts
+
+Quarto has callout blocks for asides like this one --- `note`, `tip`,
+`warning`, `important`, and `caution`.
+:::
+
+## Math
+
+Inline math like $\pi r^2$ works, and so do displayed equations:
+
+$$
+\text{margin}_t = \frac{\text{revenue}_t - \text{cost}_t}{\text{revenue}_t}
+$$
+
+## Other Output Formats
+
+The same source produces other formats without editing the text. Change the
+`format:` line at the top, or run one of these in a terminal:
+
+```bash
+quarto render report.qmd --to html    # a web page
+quarto render report.qmd --to pdf     # needs a LaTeX install
+quarto render report.qmd --to docx    # a Word document
+quarto render report.qmd --to revealjs   # slides
+```
+
+`memo.md`, `memo.docx`, `memo.pdf`, and `memo.tex` in this folder are the same
+content in each of those formats. This file is the one source they could all
+have come from.
+
+::: {.callout-tip}
+## If Rendering Fails
+
+Running Python chunks takes four packages: `jupyter` and `nbformat` for Quarto
+to talk to Python at all, plus `pandas` and `matplotlib` for the code here.
+`No module named 'nbformat'` is the usual first error.
+
+Ask Claude to install what is missing --- that is a fair test of everything in
+this session. Or delete the code chunks and render the prose alone, which needs
+nothing beyond Quarto.
+:::
+
+The figures in this file are invented for teaching purposes.

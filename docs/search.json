@@ -217,6 +217,20 @@
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
   },
   {
+    "objectID": "slides/4_tutors.html#workshop-overview",
+    "href": "slides/4_tutors.html#workshop-overview",
+    "title": "4. AI Tutors",
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
+  },
+  {
+    "objectID": "slides/4_tutors.html#todays-session",
+    "href": "slides/4_tutors.html#todays-session",
+    "title": "4. AI Tutors",
+    "section": "Today’s Session",
+    "text": "Today’s Session\n\n\n\n1\n\n\nGemini Notebook\n\n\n\n\n2\n\n\nBuild Your Own RAG Bot\n\n\n\n\n3\n\n\nSkills as Tutors"
+  },
+  {
     "objectID": "slides/4_tutors.html#gemini-notebook-previously-notebooklm",
     "href": "slides/4_tutors.html#gemini-notebook-previously-notebooklm",
     "title": "4. AI Tutors",
@@ -245,18 +259,18 @@
     "text": "Build Your Own\n\n\n\nChunk, embed, match\n\n\nClaude can embed your sources into a database\nFinding chunks that best match a prompt is a mechanical exercise that can be scripted\n\n\n\n\nRead and interpret\n\n\nReading the chunks and responding is AI. Could create a custom chatbot that makes API calls (more later).\nOr could use Claude as the AI. Create a Claude skill and include the database\n\n\n\n\nWhy Build Your Own\n\nMore than 50 sources (research database — more later)\nMore control over answers (via system prompt — more later)"
   },
   {
-    "objectID": "slides/4_tutors.html#tutors",
-    "href": "slides/4_tutors.html#tutors",
+    "objectID": "slides/4_tutors.html#skills-as-tutors",
+    "href": "slides/4_tutors.html#skills-as-tutors",
     "title": "4. AI Tutors",
-    "section": "Tutors",
-    "text": "Tutors"
+    "section": "Skills as Tutors",
+    "text": "Skills as Tutors"
   },
   {
-    "objectID": "slides/4_tutors.html#ai-tutors-are-unexplored-territory",
-    "href": "slides/4_tutors.html#ai-tutors-are-unexplored-territory",
+    "objectID": "slides/4_tutors.html#get-ai-to-do-the-teaching",
+    "href": "slides/4_tutors.html#get-ai-to-do-the-teaching",
     "title": "4. AI Tutors",
-    "section": "AI Tutors are Unexplored Territory",
-    "text": "AI Tutors are Unexplored Territory\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
+    "section": "Get AI to Do the Teaching?",
+    "text": "Get AI to Do the Teaching?\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
   },
   {
     "objectID": "slides/4_tutors.html#ideas",
@@ -264,6 +278,27 @@
     "title": "4. AI Tutors",
     "section": "Ideas",
     "text": "Ideas\n\nPresentation feedback\nWriting feedback\nPractice cases/exercises with feedback\nRole-playing\n???"
+  },
+  {
+    "objectID": "slides/4_tutors.html#example",
+    "href": "slides/4_tutors.html#example",
+    "title": "4. AI Tutors",
+    "section": "Example",
+    "text": "Example\n\nTell Claude to add the plugin marketplace github.com/kerryback/tutors\nThen tell Claude to install binomial-tutor@kerryback-tutors\nStart a new conversation\nEnter /binomial-tutor"
+  },
+  {
+    "objectID": "slides/4_tutors.html#breakout",
+    "href": "slides/4_tutors.html#breakout",
+    "title": "4. AI Tutors",
+    "section": "Breakout",
+    "text": "Breakout\n\nWould tutors add value in your teaching? What types of tutors?\nAs a school or in groups, how should we coordinate development of tutors? What incentives should there be, if any?"
+  },
+  {
+    "objectID": "slides/2_working.html#workshop-overview",
+    "href": "slides/2_working.html#workshop-overview",
+    "title": "2. Working with Claude",
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
   },
   {
     "objectID": "slides/2_working.html#todays-session",
@@ -306,6 +341,13 @@
     "title": "2. Working with Claude",
     "section": "Some Claude Commands",
     "text": "Some Claude Commands\n\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\n/resume\na version of Claude/Conversations\n\n\n/model\nselect from Fable, Opus (default), Sonnet, and Haiku\n\n\n/clear\nclear the context window (= new conversation)\n\n\n/compact\nsummarize the conversation in a text file, launch a new conversation that reads the text file\n\n\nEsc\nescape key interrupts Claude, which then waits for new instructions"
+  },
+  {
+    "objectID": "slides/2_working.html#file-view-and-edit",
+    "href": "slides/2_working.html#file-view-and-edit",
+    "title": "2. Working with Claude",
+    "section": "File View and Edit",
+    "text": "File View and Edit\n\nExtract and double-click files in session2.zip/sample_files\nNeed different extensions installed for different filetypes (use Run Setup)\nOffice docs are read only\n\n\n\n.py is a Python script, .ipynb is a Jupyter notebook\n.tex builds with ‘Play’ button, .qmd builds with Preview button\n.html toggles between editable text (HTML code) and browser-view with globe button\n.md toggles between editable text (Markdown code) and rendered view with pencil button"
   },
   {
     "objectID": "slides/2_working.html#fit-with-vs-code",
@@ -721,6 +763,13 @@
     "text": "Re-Use Tested Code\nOnce code runs correctly, save it. Re-use it rather than rewrite it.\n\n\nThe Problem with Rewriting\n\n\nDifferent choices each time\nScripts that should agree may not\nOld bugs reappear"
   },
   {
+    "objectID": "slides/1_intro.html#andrej-karpathy-openai-co-founder-former-tesla-ai-chief-now-at-anthropic",
+    "href": "slides/1_intro.html#andrej-karpathy-openai-co-founder-former-tesla-ai-chief-now-at-anthropic",
+    "title": "AI/Claude Intro",
+    "section": "Andrej Karpathy, OpenAI co-founder, former Tesla AI chief, now at Anthropic",
+    "text": "Andrej Karpathy, OpenAI co-founder, former Tesla AI chief, now at Anthropic\n\n\nOctober 2025\n“They just don’t work. They don’t have enough intelligence, they’re not multimodal enough, they can’t do computer use and all this stuff. They don’t have continual learning. You can’t just tell them something and they’ll remember it.”\n“I feel like the industry is making too big of a jump and is trying to pretend like this is amazing, and it’s not. It’s slop.”\n\n\nDecember 2025\n“I really am mostly programming in English now, a bit sheepishly telling the LLM what code to write… in words. Biggest change to my basic coding workflow in ~2 decades.”\n\n\nFebruary 2026\n“It is hard to communicate how much programming has changed due to AI in the last 2 months: not gradually and over time in the ‘progress as usual’ way, but specifically this last December. Coding agents basically didn’t work before December.”\n“I don’t think I’ve typed like a line of code probably since December.”"
+  },
+  {
     "objectID": "slides/1_intro.html#examples-of-claude-use",
     "href": "slides/1_intro.html#examples-of-claude-use",
     "title": "AI/Claude Intro",
@@ -770,6 +819,13 @@
     "text": "Homework\n\nWatch the three-minute video academic_studio.mp4"
   },
   {
+    "objectID": "slides/3_teaching.html#workshop-overview",
+    "href": "slides/3_teaching.html#workshop-overview",
+    "title": "3. Teaching Tools",
+    "section": "Workshop Overview",
+    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
+  },
+  {
     "objectID": "slides/3_teaching.html#todays-session",
     "href": "slides/3_teaching.html#todays-session",
     "title": "3. Teaching Tools",
@@ -796,6 +852,13 @@
     "title": "3. Teaching Tools",
     "section": "Flipping the Classroom",
     "text": "Flipping the Classroom\n\nDo we have a choice?\n\n\n\nOut-of-class assignments\n\nWe can no longer grade out-of-class assignments\nIf we want to do more assessment in class, then we need to do more teaching out of class\n\n\n\nIn-class assessments\nparticipation, presentations, quizzes, “solutions” to problems that they can evaluate with basic calculators or paper and pencil"
+  },
+  {
+    "objectID": "slides/3_teaching.html#content",
+    "href": "slides/3_teaching.html#content",
+    "title": "3. Teaching Tools",
+    "section": "Content",
+    "text": "Content\n\n\nEveryone can now compute whatever\n\n\nChecking work becomes more important than doing work, and we can assess that\n\n\n\n\nInterpretation and correct application have become more important than ever\n\n\nMore cases, more emphasis on communication seem in order"
   },
   {
     "objectID": "slides/3_teaching.html#teaching-cases",
@@ -861,11 +924,11 @@
     "text": "Maybe They End Up in the Water with an Alligator?"
   },
   {
-    "objectID": "slides/3_teaching.html#slide-voiceovers",
-    "href": "slides/3_teaching.html#slide-voiceovers",
+    "objectID": "slides/3_teaching.html#narrated-slide-decks",
+    "href": "slides/3_teaching.html#narrated-slide-decks",
     "title": "3. Teaching Tools",
-    "section": "Slide Voiceovers",
-    "text": "Slide Voiceovers"
+    "section": "Narrated Slide Decks",
+    "text": "Narrated Slide Decks"
   },
   {
     "objectID": "slides/3_teaching.html#do-we-need-voiceovers",
@@ -882,11 +945,11 @@
     "text": "Text to Speech\n\n\n\nThere are many TTS providers\nElevenLabs is a popular one (used by Claude for voice features)\n\n\n\n\nIt includes editable pronunciation guides and voice cloning\nIt has a free plan (non-commercial use and small quota).\n\n\n\nI’m on the Creator plan ($220 per year)."
   },
   {
-    "objectID": "slides/3_teaching.html#a-pipeline-for-voiceovers",
-    "href": "slides/3_teaching.html#a-pipeline-for-voiceovers",
+    "objectID": "slides/3_teaching.html#a-pipeline-for-narration",
+    "href": "slides/3_teaching.html#a-pipeline-for-narration",
     "title": "3. Teaching Tools",
-    "section": "A Pipeline for Voiceovers",
-    "text": "A Pipeline for Voiceovers\n\n\n\n1\n\n\nNarration text\n\n\nUse PowerPoint speaker notes for narration text. Claude drafts. You edit.\n\n\n\n\n2\n\n\nExport to PDF\n\n\nNeed pptx for speaker notes, PDF for images.\n\n\n\n\n3\n\n\nElevenLabs\n\n\nFeed narration per slide to ElevenLabs and get MP3\n\n\n\n\n4\n\n\nPDF to png\n\n\nConvert PDF to png per slide\n\n\n\n\n5\n\n\nStitch\n\n\nStitch MP3’s together with pause between slide and add to pngs for video"
+    "section": "A Pipeline for Narration",
+    "text": "A Pipeline for Narration\n\n\n\n1\n\n\nNarration text\n\n\nUse PowerPoint speaker notes for narration text. Claude drafts. You edit.\n\n\n\n\n2\n\n\nExport to PDF\n\n\nNeed pptx for speaker notes, PDF for images.\n\n\n\n\n3\n\n\nElevenLabs\n\n\nFeed narration per slide to ElevenLabs and get MP3\n\n\n\n\n4\n\n\nPDF to png\n\n\nConvert PDF to png per slide\n\n\n\n\n5\n\n\nStitch\n\n\nStitch MP3’s together with pause between slide and add to pngs for video"
   },
   {
     "objectID": "slides/3_teaching.html#voiceover-plugin",
@@ -1230,96 +1293,5 @@
     "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
-  },
-  {
-    "objectID": "slides/4_tutors.html#ai-tutors-are-largely-unexplored-territory",
-    "href": "slides/4_tutors.html#ai-tutors-are-largely-unexplored-territory",
-    "title": "4. AI Tutors",
-    "section": "AI Tutors are Largely Unexplored Territory",
-    "text": "AI Tutors are Largely Unexplored Territory\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
-  },
-  {
-    "objectID": "slides/4_tutors.html#example",
-    "href": "slides/4_tutors.html#example",
-    "title": "4. AI Tutors",
-    "section": "Example",
-    "text": "Example\n\nTell Claude to add the plugin marketplace github.com/kerryback/tutors\nThen tell Claude to install binomial-tutor@kerryback-tutors\nStart a new conversation\nEnter /binomial-tutor"
-  },
-  {
-    "objectID": "slides/4_tutors.html#breakout",
-    "href": "slides/4_tutors.html#breakout",
-    "title": "4. AI Tutors",
-    "section": "Breakout",
-    "text": "Breakout\n\nWould tutors add value in your teaching? What types of tutors?\nAs a school or in groups, how should we coordinate development of tutors? What incentives should there be, if any?"
-  },
-  {
-    "objectID": "slides/2_working.html#workshop-overview",
-    "href": "slides/2_working.html#workshop-overview",
-    "title": "2. Working with Claude",
-    "section": "Workshop Overview",
-    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
-  },
-  {
-    "objectID": "slides/3_teaching.html#workshop-overview",
-    "href": "slides/3_teaching.html#workshop-overview",
-    "title": "3. Teaching Tools",
-    "section": "Workshop Overview",
-    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
-  },
-  {
-    "objectID": "slides/4_tutors.html#workshop-overview",
-    "href": "slides/4_tutors.html#workshop-overview",
-    "title": "4. AI Tutors",
-    "section": "Workshop Overview",
-    "text": "Workshop Overview\n\n\n\n  \n    AUG 103:00–4:00Intro to Claude\n    AUG 113:00–4:00Working with Claude\n    AUG 123:00–4:00Teaching Tools\n    AUG 133:00–4:00AI Tutors\n  \n  \n    AUG 143:00–4:00Student Projects\n    AUG 173:00–4:00AI for Research\n    AUG 193:00–4:00Personal Assistants\n    AUG 194:00–5:00Overflow/Extra"
-  },
-  {
-    "objectID": "slides/4_tutors.html#todays-session",
-    "href": "slides/4_tutors.html#todays-session",
-    "title": "4. AI Tutors",
-    "section": "Today’s Session",
-    "text": "Today’s Session\n\n\n\n1\n\n\nGemini Notebook\n\n\n\n\n2\n\n\nBuild Your Own RAG Bot\n\n\n\n\n3\n\n\nSkills as Tutors"
-  },
-  {
-    "objectID": "slides/4_tutors.html#skills-as-tutors",
-    "href": "slides/4_tutors.html#skills-as-tutors",
-    "title": "4. AI Tutors",
-    "section": "Skills as Tutors",
-    "text": "Skills as Tutors"
-  },
-  {
-    "objectID": "slides/4_tutors.html#this-is-largely-unexplored-territory",
-    "href": "slides/4_tutors.html#this-is-largely-unexplored-territory",
-    "title": "4. AI Tutors",
-    "section": "This is Largely Unexplored Territory",
-    "text": "This is Largely Unexplored Territory\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
-  },
-  {
-    "objectID": "slides/3_teaching.html#content",
-    "href": "slides/3_teaching.html#content",
-    "title": "3. Teaching Tools",
-    "section": "Content",
-    "text": "Content\n\n\nEveryone can now compute whatever\n\n\nChecking work becomes more important than doing work, and we can assess that\n\n\n\n\nInterpretation and correct application have become more important than ever\n\n\nMore cases, more emphasis on communication seem in order"
-  },
-  {
-    "objectID": "slides/4_tutors.html#get-ai-to-do-the-teaching",
-    "href": "slides/4_tutors.html#get-ai-to-do-the-teaching",
-    "title": "4. AI Tutors",
-    "section": "Get AI to Do the Teaching?",
-    "text": "Get AI to Do the Teaching?\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
-  },
-  {
-    "objectID": "slides/3_teaching.html#narrated-slide-decks",
-    "href": "slides/3_teaching.html#narrated-slide-decks",
-    "title": "3. Teaching Tools",
-    "section": "Narrated Slide Decks",
-    "text": "Narrated Slide Decks"
-  },
-  {
-    "objectID": "slides/3_teaching.html#a-pipeline-for-narration",
-    "href": "slides/3_teaching.html#a-pipeline-for-narration",
-    "title": "3. Teaching Tools",
-    "section": "A Pipeline for Narration",
-    "text": "A Pipeline for Narration\n\n\n\n1\n\n\nNarration text\n\n\nUse PowerPoint speaker notes for narration text. Claude drafts. You edit.\n\n\n\n\n2\n\n\nExport to PDF\n\n\nNeed pptx for speaker notes, PDF for images.\n\n\n\n\n3\n\n\nElevenLabs\n\n\nFeed narration per slide to ElevenLabs and get MP3\n\n\n\n\n4\n\n\nPDF to png\n\n\nConvert PDF to png per slide\n\n\n\n\n5\n\n\nStitch\n\n\nStitch MP3’s together with pause between slide and add to pngs for video"
   }
 ]

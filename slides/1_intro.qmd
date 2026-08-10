@@ -592,6 +592,32 @@ The Problem with Rewriting
 - Old bugs reappear
 :::
 
+## Andrej Karpathy, OpenAI co-founder, former Tesla AI chief, now at Anthropic {.shrink .cards-compact}
+
+::: {.three-cards}
+::: {.card .card-blue}
+[October 2025]{.card-title}
+
+"They just don't work. They don't have enough intelligence, they're not multimodal enough, they can't do computer use and all this stuff. They don't have continual learning. You can't just tell them something and they'll remember it."
+
+"I feel like the industry is making too big of a jump and is trying to pretend like this is amazing, and it's not. It's slop."
+:::
+
+::: {.card .card-amber}
+[December 2025]{.card-title}
+
+"I really am mostly programming in English now, a bit sheepishly telling the LLM what code to write... in words. Biggest change to my basic coding workflow in ~2 decades."
+:::
+
+::: {.card .card-teal}
+[February 2026]{.card-title}
+
+"It is hard to communicate how much programming has changed due to AI in the last 2 months: not gradually and over time in the 'progress as usual' way, but specifically this last December. Coding agents basically didn't work before December."
+
+"I don't think I've typed like a line of code probably since December."
+:::
+:::
+
 ## Examples of Claude Use {.section-divider}
 
 ## Some Local Data

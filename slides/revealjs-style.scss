@@ -632,6 +632,34 @@ $card-purple-title: #7c3aed;
   }
 }
 
+// ── Claude-icon bullets ──
+// Swaps the disc marker for the Claude app icon.  Wrap a list in
+// ::: {.claude-bullets} to use it.  The icon is inlined as a data URI so it
+// travels with the compiled theme instead of depending on a relative path
+// that changes with the output directory.
+.reveal .claude-bullets {
+  ul, ol {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.65em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.26em;
+      width: 0.82em;
+      height: 0.82em;
+      background: url("data:image/png;base64,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") no-repeat center / contain;
+    }
+  }
+}
+
 // ── Image slide ──
 .image-slide {
   text-align: center;
@@ -994,6 +1022,29 @@ $card-purple-title: #7c3aed;
 
   ul, ol {
     font-size: 0.92em;
+  }
+}
+
+// ── Dense card slides ──
+// For a card grid carrying long prose rather than bullets -- block quotations,
+// say -- where .shrink alone still leaves the slide taller than the 1080
+// canvas. Tightens the padding, gap and line height so the content fits without
+// having to cut the words. Quarto's {.smaller} is no help here: it is defined as
+// `.smaller .slides section`, so it only works as a deck-wide option and does
+// nothing when put on a single slide.
+.cards-compact {
+  .two-cards, .three-cards, .four-cards {
+    gap: 0.9em;
+
+    > div {
+      padding: 0.8em 0.95em;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.42;
+      margin-bottom: 0.55em;
+    }
   }
 }
 
