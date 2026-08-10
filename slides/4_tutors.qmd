@@ -185,7 +185,7 @@ Read and interpret
 
 ## Skills as Tutors {.section-divider}
 
-## This is Largely Unexplored Territory
+## Get AI to Do the Teaching?
 
 ![](images/starship-enterprise.jpg){width=54% fig-align="center"}
 

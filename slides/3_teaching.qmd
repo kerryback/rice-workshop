@@ -170,7 +170,7 @@ Everyone [can now compute]{.accent} whatever
 [Using and writing cases]{.card-title}
 
 - HBS's policy is "do not upload cases to chatbots," so don't do it live in class
-- AI is good at writing cases.  It knows the HBS style: "Grace was in her office on a Friday afternoon gazing at the autumn leaves ..."
+- AI is good at writing cases.  It knows the HBS style: "Grace was in her office on a Friday afternoon gazing out at the autumn leaves ..."
 :::
 :::
 
@@ -279,7 +279,7 @@ How to anonymize, how many subagents (or other models), how many rounds, what to
 Invoke it
 :::
 ::: {.step-desc}
-You provide the grading rubric (maybe a filename) and the name of the folder containing assignments
+You provide the grading rubric (maybe a filename) at runtime and the name of the folder containing assignments
 :::
 :::
 :::
@@ -304,7 +304,7 @@ Give a person a fish and they eat for a day, teach them how to fish and ...
 ![](images/fishing.png)
 
 
-## Slide Voiceovers {.section-divider}
+## Narrated Slide Decks {.section-divider}
 
 ## Do We Need Voiceovers?
 
@@ -339,7 +339,7 @@ I'm on the Creator plan ($220 per year).
 :::
 :::
 
-## A Pipeline for Voiceovers
+## A Pipeline for Narration
 
 ::: {.step-flow-5}
 ::: {.step-card .fragment}

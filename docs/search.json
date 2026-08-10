@@ -802,7 +802,7 @@
     "href": "slides/3_teaching.html#teaching-cases",
     "title": "3. Teaching Tools",
     "section": "Teaching Cases",
-    "text": "Teaching Cases\n\n\nMight change a little\n\nWe should have higher standards for student preparedness\nWe can do more live work in class. A student can lead while the instructor types prompts. Or allow time for students to work with AI and then screen share.\n\n\n\nUsing and writing cases\n\nHBS’s policy is “do not upload cases to chatbots,” so don’t do it live in class\nAI is good at writing cases. It knows the HBS style: “Grace was in her office on a Friday afternoon gazing at the autumn leaves …”"
+    "text": "Teaching Cases\n\n\nMight change a little\n\nWe should have higher standards for student preparedness\nWe can do more live work in class. A student can lead while the instructor types prompts. Or allow time for students to work with AI and then screen share.\n\n\n\nUsing and writing cases\n\nHBS’s policy is “do not upload cases to chatbots,” so don’t do it live in class\nAI is good at writing cases. It knows the HBS style: “Grace was in her office on a Friday afternoon gazing out at the autumn leaves …”"
   },
   {
     "objectID": "slides/3_teaching.html#grading-with-ai",
@@ -837,7 +837,7 @@
     "href": "slides/3_teaching.html#create-a-skill-for-grading",
     "title": "3. Teaching Tools",
     "section": "Create a Skill for Grading",
-    "text": "Create a Skill for Grading\n\n\n\n1\n\n\nCreate a recipe\n\n\nHow to anonymize, how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades\n\n\n\n\n2\n\n\nInvoke it\n\n\nYou provide the grading rubric (maybe a filename) and the name of the folder containing assignments"
+    "text": "Create a Skill for Grading\n\n\n\n1\n\n\nCreate a recipe\n\n\nHow to anonymize, how many subagents (or other models), how many rounds, what to do if there is disagreement, how to record the grades, how to provide info about the grounds for grades\n\n\n\n\n2\n\n\nInvoke it\n\n\nYou provide the grading rubric (maybe a filename) at runtime and the name of the folder containing assignments"
   },
   {
     "objectID": "slides/3_teaching.html#product-vs-process",
@@ -1300,5 +1300,26 @@
     "title": "3. Teaching Tools",
     "section": "Content",
     "text": "Content\n\n\nEveryone can now compute whatever\n\n\nChecking work becomes more important than doing work, and we can assess that\n\n\n\n\nInterpretation and correct application have become more important than ever\n\n\nMore cases, more emphasis on communication seem in order"
+  },
+  {
+    "objectID": "slides/4_tutors.html#get-ai-to-do-the-teaching",
+    "href": "slides/4_tutors.html#get-ai-to-do-the-teaching",
+    "title": "4. AI Tutors",
+    "section": "Get AI to Do the Teaching?",
+    "text": "Get AI to Do the Teaching?\n\n\n\n\n\n\nOur mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before"
+  },
+  {
+    "objectID": "slides/3_teaching.html#narrated-slide-decks",
+    "href": "slides/3_teaching.html#narrated-slide-decks",
+    "title": "3. Teaching Tools",
+    "section": "Narrated Slide Decks",
+    "text": "Narrated Slide Decks"
+  },
+  {
+    "objectID": "slides/3_teaching.html#a-pipeline-for-narration",
+    "href": "slides/3_teaching.html#a-pipeline-for-narration",
+    "title": "3. Teaching Tools",
+    "section": "A Pipeline for Narration",
+    "text": "A Pipeline for Narration\n\n\n\n1\n\n\nNarration text\n\n\nUse PowerPoint speaker notes for narration text. Claude drafts. You edit.\n\n\n\n\n2\n\n\nExport to PDF\n\n\nNeed pptx for speaker notes, PDF for images.\n\n\n\n\n3\n\n\nElevenLabs\n\n\nFeed narration per slide to ElevenLabs and get MP3\n\n\n\n\n4\n\n\nPDF to png\n\n\nConvert PDF to png per slide\n\n\n\n\n5\n\n\nStitch\n\n\nStitch MP3’s together with pause between slide and add to pngs for video"
   }
 ]
