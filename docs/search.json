@@ -382,7 +382,7 @@
     "href": "slides/2_working.html#more-things-claude-can-do-at-the-command-line",
     "title": "2. Working with Claude",
     "section": "More Things Claude Can Do at the Command Line",
-    "text": "More Things Claude Can Do at the Command Line\n\n\npandoc — convert between Word, Markdown, HTML, PDF\nImageMagick — resize, crop, convert images in bulk\nffmpeg — trim video, transcode, pull the audio out\nripgrep — search thousands of files in seconds\ncron — run a command on a schedule"
+    "text": "More Things Claude Can Do at the Command Line\n\n\npandoc — convert between Word, Markdown, HTML, PDF\n\n\nImageMagick — resize, crop, convert images in bulk\n\n\nffmpeg — trim video, transcode, pull the audio out\n\n\nripgrep — search thousands of files in seconds\n\n\ncron — run a command on a schedule"
   },
   {
     "objectID": "slides/2_working.html#example-git-search-the-past",

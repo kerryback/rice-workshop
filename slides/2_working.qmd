@@ -228,14 +228,22 @@ Command Line Interfaces (CLIs): `gh` for GitHub,  `aws` for Amazon Web Services,
 
 ## More Things Claude Can Do at the Command Line
 
-::: {.highlight-box}
-
-
-- `pandoc` --- convert between Word, Markdown, HTML, PDF
-- `ImageMagick` --- resize, crop, convert images in bulk
-- `ffmpeg` --- trim video, transcode, pull the audio out
-- `ripgrep` --- search thousands of files in seconds
-- `cron` --- run a command on a schedule
+::: {.six-cards}
+::: {.card-blue}
+`pandoc` --- convert between Word, Markdown, HTML, PDF
+:::
+::: {.card-amber}
+`ImageMagick` --- resize, crop, convert images in bulk
+:::
+::: {.card-teal}
+`ffmpeg` --- trim video, transcode, pull the audio out
+:::
+::: {.card-purple}
+`ripgrep` --- search thousands of files in seconds
+:::
+::: {.card-red}
+`cron` --- run a command on a schedule
+:::
 :::
 
 
