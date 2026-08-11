@@ -291,7 +291,7 @@
     "href": "slides/4_tutors.html#breakout",
     "title": "4. AI Tutors",
     "section": "Breakout",
-    "text": "Breakout\n\nWould tutors add value in your teaching? What types of tutors?\nAs a school or in groups, how should we coordinate development of tutors? What incentives should there be, if any?"
+    "text": "Breakout\n\nWould tutors add value in your teaching? What types of tutors?\nAs a school or in groups, should we have mechanisms to coordinate or encourage development of AI-based teaching tools?"
   },
   {
     "objectID": "slides/2_working.html#workshop-overview",
@@ -1328,5 +1328,26 @@
     "title": "2. Working with Claude",
     "section": "Using a Deck as a Template",
     "text": "Using a Deck as a Template\nClaude can read a deck, save images and other assets, and use them to create new decks in the same style. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft sample\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx"
+  },
+  {
+    "objectID": "slides/4_tutors.html#what-the-binomial-tutor-does",
+    "href": "slides/4_tutors.html#what-the-binomial-tutor-does",
+    "title": "4. AI Tutors",
+    "section": "What the Binomial Tutor Does",
+    "text": "What the Binomial Tutor Does\n\n\n\nFour modules\n\n\nReplication and no-arbitrage in a one-period tree\nWhere the risk-neutral probability comes from\nTwo-period and n-period backward induction\nAmerican options and early exercise\n\n\n\n\nCoaching, not answers\n\n\nThe student produces the numbers; Claude asks and then waits\nA wrong answer is diagnosed from the number itself, and answered with a question\nThe whole arc runs 30–45 minutes, and the student can stop between modules"
+  },
+  {
+    "objectID": "slides/4_tutors.html#the-skill.md",
+    "href": "slides/4_tutors.html#the-skill.md",
+    "title": "4. AI Tutors",
+    "section": "The SKILL.md",
+    "text": "The SKILL.md"
+  },
+  {
+    "objectID": "slides/4_tutors.html#what-else-is-in-the-plugin",
+    "href": "slides/4_tutors.html#what-else-is-in-the-plugin",
+    "title": "4. AI Tutors",
+    "section": "What Else Is in the Plugin",
+    "text": "What Else Is in the Plugin\n\n\n\nReference files\n\n\nOne teaching script per module, plus a bank of problems with verified answers\nSKILL.md names them but does not contain them — Claude reads a module only when the student gets there\nKeeps the always-loaded instructions short and the material deep\n\n\n\n\nA Python script\n\n\nPrices European and American calls and puts on a tree, and reports the replicating portfolio at every node\nClaude runs it before asserting any number, so it never marks a correct answer wrong\nCan blank out a node to turn any tree into an exercise, and plot the trees\n\n\n\n\nWhy it is a plugin, not a prompt\nThe tutoring protocol, the course material, and the arithmetic live in one installable package that any student can add in two commands, and that you can revise once for everyone."
   }
 ]
