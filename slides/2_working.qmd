@@ -67,7 +67,7 @@ author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
 
 ## Today's Session
 
-::: {.step-flow}
+::: {.step-flow-5}
 ::: {.step-card .fragment}
 ::: {.step-icon}
 1
@@ -97,7 +97,15 @@ CLAUDE.md and Skills
 4
 :::
 ::: {.step-title}
-Claude as a Teaching Assistant
+Claude as an Assistant
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+5
+:::
+::: {.step-title}
+PowerPoint
 :::
 :::
 :::
@@ -349,7 +357,7 @@ The xlsx, docx, and pptx skills are created by Anthropic and come pre-installed 
 ```
 
 
-## Some Examples
+## Some Other Examples
 
 I've looked at several skill repos for business/economics research.  Most are not useful.  Here are a couple I've adopted --- by Lu Han, Bank of Canada.
 
@@ -464,7 +472,7 @@ Ask Claude to show you the pirate SKILL.md
 :::
 :::
 
-## Claude as a Teaching Assistant {.section-divider}
+## Claude as an Assistant {.section-divider}
 
 ## What can Claude Do?
 
@@ -472,31 +480,33 @@ Ask Claude to show you the pirate SKILL.md
 ::: {.card .card-blue .fragment}
 - Draft slides
 - Assist with editing slides
-- Generate images for slides
+- Generate images and tables for slides
+- Do web research for slides
 - Draft quizzes and assignments
-- Assist with grading
 :::
 ::: {.card .card-amber .fragment}
+- Assist with grading
 - Draft emails to students
 - Help create async materials
-- Build tutors
-- Build Excel workbooks
 - Write cases
+- Build tutors
 :::
 :::
 
-## Drafting and Editing Slides
+## PowerPoint Assistant {.section-divider}
 
-Claude is generally able to create slide decks using whatever style you like.  Here is an example.
+## Using a Deck as a Template
+
+Claude can read a deck, save images and other assets, and use them to create new decks in the same style. Here is an example.
 
 ::: {.highlight-box}
-- [SamplePresentation.pptx](../files/session2/SamplePresentation.pptx){target="_blank"} is a Microsoft template
-- I asked Claude to remake tesla.pptx in that style
+- [SamplePresentation.pptx](../files/session2/SamplePresentation.pptx){target="_blank"} is a Microsoft sample
+- I asked Claude to remake [tesla.pptx](../files/session1/tesla.pptx){target="_blank"} in that style
 - The first draft: [tesla1.pptx](../files/session2/tesla1.pptx){target="_blank"}
 - The second draft: [tesla2.pptx](../files/session2/tesla2.pptx){target="_blank"}
 :::
 
-## Creating a Skill
+## Create a Skill for PowerPoint
 
 ::: {.step-flow-2}
 ::: {.step-card .fragment}

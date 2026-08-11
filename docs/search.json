@@ -305,7 +305,7 @@
     "href": "slides/2_working.html#todays-session",
     "title": "2. Working with Claude",
     "section": "Today’s Session",
-    "text": "Today’s Session\n\n\n\n1\n\n\nAcademic Studio\n\n\n\n\n2\n\n\nThe Command Line\n\n\n\n\n3\n\n\nCLAUDE.md and Skills\n\n\n\n\n4\n\n\nClaude as a Teaching Assistant"
+    "text": "Today’s Session\n\n\n\n1\n\n\nAcademic Studio\n\n\n\n\n2\n\n\nThe Command Line\n\n\n\n\n3\n\n\nCLAUDE.md and Skills\n\n\n\n\n4\n\n\nClaude as an Assistant\n\n\n\n\n5\n\n\nPowerPoint"
   },
   {
     "objectID": "slides/2_working.html#academic-studio",
@@ -473,14 +473,14 @@
     "href": "slides/2_working.html#what-can-claude-do",
     "title": "2. Working with Claude",
     "section": "What can Claude Do?",
-    "text": "What can Claude Do?\n\n\n\nDraft slides\nAssist with editing slides\nGenerate images for slides\nDraft quizzes and assignments\nAssist with grading\n\n\n\n\nDraft emails to students\nHelp create async materials\nBuild tutors\nBuild Excel workbooks\nWrite cases"
+    "text": "What can Claude Do?\n\n\n\nDraft slides\nAssist with editing slides\nGenerate images and tables for slides\nDo web research for slides\nDraft quizzes and assignments\n\n\n\n\nAssist with grading\nDraft emails to students\nHelp create async materials\nWrite cases\nBuild tutors"
   },
   {
     "objectID": "slides/2_working.html#drafting-and-editing-slides",
     "href": "slides/2_working.html#drafting-and-editing-slides",
     "title": "2. Working with Claude",
     "section": "Drafting and Editing Slides",
-    "text": "Drafting and Editing Slides\nClaude is generally able to create slide decks using whatever style you like. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft template\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx"
+    "text": "Drafting and Editing Slides\nClaude can read a deck, save images and other assets, and use them to create new decks in the same style. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft template\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx"
   },
   {
     "objectID": "slides/2_working.html#creating-a-skill",
@@ -1293,5 +1293,40 @@
     "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
+  },
+  {
+    "objectID": "slides/2_working.html#some-other-examples",
+    "href": "slides/2_working.html#some-other-examples",
+    "title": "2. Working with Claude",
+    "section": "Some Other Examples",
+    "text": "Some Other Examples\nI’ve looked at several skill repos for business/economics research. Most are not useful. Here are a couple I’ve adopted — by Lu Han, Bank of Canada.\n\n\nEcon Writing: tells Claude to follow Cochrane’s Writing Tips for PhD Students and some other style guides\nEcon Paper Review: writes a referee report on your paper\n\n\nGive Claude the links and ask Claude to install them if you want to try them out."
+  },
+  {
+    "objectID": "slides/2_working.html#claude-as-an-assistant",
+    "href": "slides/2_working.html#claude-as-an-assistant",
+    "title": "2. Working with Claude",
+    "section": "Claude as an Assistant",
+    "text": "Claude as an Assistant"
+  },
+  {
+    "objectID": "slides/2_working.html#powerpoint-assistant",
+    "href": "slides/2_working.html#powerpoint-assistant",
+    "title": "2. Working with Claude",
+    "section": "PowerPoint Assistant",
+    "text": "PowerPoint Assistant"
+  },
+  {
+    "objectID": "slides/2_working.html#create-a-skill-for-powerpoint",
+    "href": "slides/2_working.html#create-a-skill-for-powerpoint",
+    "title": "2. Working with Claude",
+    "section": "Create a Skill for PowerPoint",
+    "text": "Create a Skill for PowerPoint\n\n\n\n1\n\n\nSave the Recipe\n\n\nOnce Claude has been successful at creating decks in your preferred style, ask Claude to save the recipe as a skill.\n\n\n\n\n2\n\n\nWhat Gets Saved\n\n\nClaude will save images, layout guides, etc. from the doc you gave it along with the fonts that best match the doc (maybe not exact match) for reuse."
+  },
+  {
+    "objectID": "slides/2_working.html#using-a-deck-as-a-template",
+    "href": "slides/2_working.html#using-a-deck-as-a-template",
+    "title": "2. Working with Claude",
+    "section": "Using a Deck as a Template",
+    "text": "Using a Deck as a Template\nClaude can read a deck, save images and other assets, and use them to create new decks in the same style. Here is an example.\n\n\nSamplePresentation.pptx is a Microsoft sample\nI asked Claude to remake tesla.pptx in that style\nThe first draft: tesla1.pptx\nThe second draft: tesla2.pptx"
   }
 ]
