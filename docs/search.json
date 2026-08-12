@@ -893,7 +893,7 @@
     "href": "slides/3_teaching.html#anonymizing-student-assignments",
     "title": "3. Teaching Tools",
     "section": "Anonymizing Student Assignments",
-    "text": "Anonymizing Student Assignments\n\n\n\nCanvas submissions\n\n\nStudent name is in filename\n\nInstruct students to put names nowhere else\nRun Python script to encrypt filenames and strip metadata\n\n\n\n\nHandwritten\n\n\nInstruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)\nPython script to strip names, create a table of names and filenames\nPython OCR + Claude image viewing until text is coherent"
+    "text": "Anonymizing Student Assignments\n\n\n\nCanvas submissions\n\n\nStudent name is in filename\n\nInstruct students to put names nowhere else\nRun Python script to encrypt filenames and strip metadata\n\n\n\n\nHandwritten\n\n\nInstruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)\nPython script to strip names, create a table of names and filenames\nPython OCR + Claude image viewing until text is coherent (weakest link)"
   },
   {
     "objectID": "slides/3_teaching.html#create-a-skill-for-grading",
@@ -914,7 +914,7 @@
     "href": "slides/3_teaching.html#upcoming-plugins",
     "title": "3. Teaching Tools",
     "section": "Upcoming Plugins",
-    "text": "Upcoming Plugins\n\nI will ask you to install several plugins I’ve created\nClaude created all of them and can do the same for you\nMy plugins may be a useful starting point but shouldn’t be your final version\nAsk Claude to revise to fit your preferences\n\n\nThe process of creating things is more important than any particular products\nGive a person a fish and they eat for a day, teach them how to fish and …"
+    "text": "Upcoming Plugins\n\nI’m going to suggest you install some plugins I’ve created\nClaude created all of them and can do the same for you\nMy plugins may be a useful starting point but shouldn’t be your final version\nAsk Claude to revise to fit your preferences\n\n\nThe process of creating things is more important than any particular products\nGive a person a fish and they eat for a day, teach them how to fish and …"
   },
   {
     "objectID": "slides/3_teaching.html#maybe-they-end-up-in-the-water-with-an-alligator",
@@ -935,7 +935,7 @@
     "href": "slides/3_teaching.html#do-we-need-voiceovers",
     "title": "3. Teaching Tools",
     "section": "Do We Need Voiceovers?",
-    "text": "Do We Need Voiceovers?\n\n\nNarrated slide decks are needed to flip the classroom\n\n\nYou can record yourself, or you can write narration text (with Claude’s assistance) and use AI text-to-speech"
+    "text": "Do We Need Voiceovers?\n\n\nPush instruction to pre-class\n\n\nYou can record yourself, or you can write narration text (with Claude’s assistance) and use AI text-to-speech"
   },
   {
     "objectID": "slides/3_teaching.html#text-to-speech",
@@ -949,21 +949,21 @@
     "href": "slides/3_teaching.html#a-pipeline-for-narration",
     "title": "3. Teaching Tools",
     "section": "A Pipeline for Narration",
-    "text": "A Pipeline for Narration\n\n\n\n1\n\n\nNarration text\n\n\nUse PowerPoint speaker notes for narration text. Claude drafts. You edit.\n\n\n\n\n2\n\n\nExport to PDF\n\n\nNeed pptx for speaker notes, PDF for images.\n\n\n\n\n3\n\n\nElevenLabs\n\n\nFeed narration per slide to ElevenLabs and get MP3\n\n\n\n\n4\n\n\nPDF to png\n\n\nConvert PDF to png per slide\n\n\n\n\n5\n\n\nStitch\n\n\nStitch MP3’s together with pause between slide and add to pngs for video"
+    "text": "A Pipeline for Narration\n\n\n\n1\n\n\nNarration text\n\n\nClaude drafts. You edit.\n\n\n\n\n2\n\n\nExport to PDF\n\n\nNeed PDF for images\n\n\n\n\n3\n\n\nText to Speech\n\n\nFeed narration per slide to TTS and get MP3\n\n\n\n\n4\n\n\nPDF to png\n\n\nConvert PDF to png per slide\n\n\n\n\n5\n\n\nStitch\n\n\nStitch MP3’s together with pause between slide and add to pngs for video"
   },
   {
     "objectID": "slides/3_teaching.html#voiceover-plugin",
     "href": "slides/3_teaching.html#voiceover-plugin",
     "title": "3. Teaching Tools",
     "section": "Voiceover Plugin",
-    "text": "Voiceover Plugin\n\n\nA Python script can\n\nfeed narration per slide to ElevenLabs\nconvert PDFs to pngs\nstitch MP3’s together, add pngs, and generate video\n\n\n\nGUI\n\nConvenient to set ElevenLabs inputs (voice, style, …)\nClaude can write a web app, save, and deploy locally\n\n\n\n\nAsk Claude to add the plugin marketplace github.com/kerryback/skills (only need to do that once) and then to install voiceover@kerryback-skills."
+    "text": "Voiceover Plugin\n\n\nA Python script can\n\nfeed narration per slide to ElevenLabs\nconvert PDFs to pngs\nstitch MP3’s together, add pngs, and generate video\n\n\n\nGUI\n\nConvenient to edit narration text\nConvenient to set TTS configuration (voice, style, …)\n\n\n\n\nAsk Claude to add the plugin marketplace github.com/kerryback/skills (only need to do that once) and then to install voiceover@kerryback-skills."
   },
   {
     "objectID": "slides/3_teaching.html#test-it",
     "href": "slides/3_teaching.html#test-it",
     "title": "3. Teaching Tools",
     "section": "Test It",
-    "text": "Test It\n\n\n\n1\n\n\nStart a new conversation\n\n\n\n\n2\n\n\nExport a PowerPoint deck to pdf\n\n\n\n\n3\n\n\nTell Claude to generate a voiceover\n\n\n\n\n\nClaude should first walk you through getting an ElevenLabs API key and setting it up\nThen it should draft narration as speaker notes in the pptx file\nThen it should open the GUI"
+    "text": "Test It\n\n\n\n1\n\n\nStart a new conversation\n\n\n\n\n2\n\n\nExport a PowerPoint deck to pdf\n\n\n\n\n3\n\n\nTell Claude to generate a voiceover\n\n\n\n\n\nClaude should first walk you through getting an ElevenLabs API key and setting it up\nThen it should draft narration\nThen it should open the GUI"
   },
   {
     "objectID": "slides/3_teaching.html#make-it-yours",
@@ -1349,5 +1349,12 @@
     "title": "4. AI Tutors",
     "section": "What Else Is in the Plugin",
     "text": "What Else Is in the Plugin\n\n\n\nReference files\n\n\nOne teaching script per module, plus a bank of problems with verified answers\nSKILL.md names them but does not contain them — Claude reads a module only when the student gets there\nKeeps the always-loaded instructions short and the material deep\n\n\n\n\nA Python script\n\n\nPrices European and American calls and puts on a tree, and reports the replicating portfolio at every node\nClaude runs it before asserting any number, so it never marks a correct answer wrong\nCan blank out a node to turn any tree into an exercise, and plot the trees\n\n\n\n\nWhy it is a plugin, not a prompt\nThe tutoring protocol, the course material, and the arithmetic live in one installable package that any student can add in two commands, and that you can revise once for everyone."
+  },
+  {
+    "objectID": "slides/3_teaching.html#how-to-assess",
+    "href": "slides/3_teaching.html#how-to-assess",
+    "title": "3. Teaching Tools",
+    "section": "How to Assess",
+    "text": "How to Assess\n\n\n\nOut-of-class assessments\n\n\nWe must expect AI to be used on every out-of-class assignment.\nWe cannot reasonably grade out-of-class assignments unless they are assignments to use AI to do something.\n\n\n\nIn-class assessments\n\nparticipation, presentations, quizzes,\n“solutions” to problems/cases that they can evaluate with basic calculators or paper and pencil"
   }
 ]

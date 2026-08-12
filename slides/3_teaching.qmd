@@ -118,23 +118,25 @@ The most useful ones will be the ones you create (with Claude's assistance) --- 
 
 ## Thoughts on Teaching {.section-divider}
 
-## Flipping the Classroom
+## How to Assess
 
-::: {.highlight-box}
-Do we have a choice?
-:::
 
 ::: {.two-cards}
 ::: {.card .card-blue}
-[Out-of-class assignments]{.card-title}
+::: {.card-title}
+Out-of-class assessments
+:::
 
-- We can no longer grade out-of-class assignments
-- If we want to do more assessment in class, then we need to do more teaching out of class
+- We must expect AI to be used on every out-of-class assignment.
+- We cannot reasonably grade out-of-class assignments unless they are assignments to use AI to do something.
+
+
 :::
 ::: {.card .card-amber}
 [In-class assessments]{.card-title}
 
-participation, presentations, quizzes, "solutions" to problems that they can evaluate with basic calculators or paper and pencil
+- participation, presentations, quizzes, 
+- "solutions" to problems/cases that they can evaluate with basic calculators or paper and pencil
 :::
 :::
 
@@ -253,7 +255,7 @@ Handwritten
 :::
 - Instruct students to put names in specific location (e.g., top left, 1 inch above answers, or on cover page)
 - Python script to strip names, create a table of names and filenames
-- Python OCR + Claude image viewing until text is coherent 
+- Python OCR + Claude image viewing until text is coherent (weakest link)
 :::
 :::
 
@@ -288,7 +290,7 @@ You provide the grading rubric (maybe a filename) at runtime and the name of the
 
 ## Upcoming Plugins
 
-- I will ask you to install several plugins I've created
+- I'm going to suggest you install some plugins I've created
 - Claude created all of them and can do the same for you
 - My plugins may be a useful starting point but shouldn't be your final version
 - Ask Claude to revise to fit your preferences
@@ -311,7 +313,7 @@ Give a person a fish and they eat for a day, teach them how to fish and ...
 ::: {.two-cards}
 ::: {.card .card-blue}
 
-Narrated slide decks are needed to flip the classroom
+Push instruction to pre-class
 :::
 ::: {.card .card-amber}
 
@@ -350,7 +352,7 @@ I'm on the Creator plan ($220 per year).
 Narration text
 :::
 ::: {.step-desc}
-Use PowerPoint speaker notes for narration text.  Claude drafts.  You edit.
+Claude drafts.  You edit.
 :::
 :::
 ::: {.step-card .fragment}
@@ -361,7 +363,7 @@ Use PowerPoint speaker notes for narration text.  Claude drafts.  You edit.
 Export to PDF
 :::
 ::: {.step-desc}
-Need pptx for speaker notes, PDF for images.
+Need PDF for images
 :::
 :::
 ::: {.step-card .fragment}
@@ -369,10 +371,10 @@ Need pptx for speaker notes, PDF for images.
 3
 :::
 ::: {.step-title}
-ElevenLabs
+Text to Speech
 :::
 ::: {.step-desc}
-Feed narration per slide to ElevenLabs and get MP3
+Feed narration per slide to TTS and get MP3
 :::
 :::
 ::: {.step-card .fragment}
@@ -412,8 +414,8 @@ Stitch MP3's together with pause between slide and add to pngs for video
 ::: {.card .card-amber}
 [GUI]{.card-title}
 
-- Convenient to set ElevenLabs inputs (voice, style, ...)
-- Claude can write a web app, save, and deploy locally
+- Convenient to edit narration text
+- Convenient to set TTS configuration (voice, style, ...)
 :::
 :::
 
@@ -452,7 +454,7 @@ Tell Claude to generate a voiceover
 
 ::: {.info-box}
 - Claude should first walk you through getting an ElevenLabs API key and setting it up
-- Then it should draft narration as speaker notes in the pptx file
+- Then it should draft narration 
 - Then it should open the GUI
 :::
 
