@@ -14,6 +14,9 @@ project:
     - pdf/*.pdf
     - slides/*.html
     - housing_affordability.pptx
+    # At the site root so the URL stays short and survives the session it was
+    # built in: /regression.html.
+    - regression.html
     - files/session1/*
     - files/session1.zip
     - files/session2/SamplePresentation.pptx
@@ -24,7 +27,6 @@ project:
     # roster with student names and photos -- it stays local and is handed out
     # in the Zoom chat, never copied into docs/. Do not widen this to a glob.
     - files/session4/slide_rule.pdf
-    - files/session4/regression.html
     - under-construction.html
 
 website:
