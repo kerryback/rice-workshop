@@ -20,6 +20,11 @@ project:
     - files/session2/tesla1.pptx
     - files/session2/tesla2.pptx
     - files/session2.zip
+    # Only the sample deck is published. course_roster.pdf is a real ESTHER
+    # roster with student names and photos -- it stays local and is handed out
+    # in the Zoom chat, never copied into docs/. Do not widen this to a glob.
+    - files/session4/slide_rule.pdf
+    - files/session4/regression.html
     - under-construction.html
 
 website:
