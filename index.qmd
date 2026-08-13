@@ -369,6 +369,7 @@ page-layout: full
         <div class="item-title">Student Projects</div>
         <div class="item-desc">Artifacts, apps, agents</div>
       </div>
+      <div class="item-links"><a href="files/session5.zip" target="_blank" rel="noopener">Files</a></div>
     </div>
 
     <div class="section-head">

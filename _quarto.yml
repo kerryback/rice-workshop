@@ -17,6 +17,9 @@ project:
     # At the site root so the URL stays short and survives the session it was
     # built in: /regression.html.
     - regression.html
+    # Research note behind the HBS slide in deck 4, published at /hbs.html so
+    # it can be linked from the deck and shared on its own.
+    - hbs.html
     - files/session1/*
     - files/session1.zip
     - files/session2/SamplePresentation.pptx
@@ -27,6 +30,7 @@ project:
     # roster with student names and photos -- it stays local and is handed out
     # in the Zoom chat, never copied into docs/. Do not widen this to a glob.
     - files/session4/slide_rule.pdf
+    - files/session5.zip
     - under-construction.html
 
 website:

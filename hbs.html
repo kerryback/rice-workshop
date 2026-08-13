@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico">
+<title>AI Tutors, Simulations, and Live Case Exercises at HBS</title>
+<style>
+  :root {
+    --paper:      #FAFAFB;
+    --surface:    #F1F1F4;
+    --surface-2:  #E9E9ED;
+    --rule:       #DEDDE3;
+    --rule-soft:  #EAEAEF;
+    --ink:        #17161B;
+    --ink-soft:   #45434E;
+    --muted:      #77747F;
+    --accent:     #9C2733;
+    --accent-dim: #C4737B;
+    --ok:         #2C6149;
+    --warn:       #85601A;
+    --off:        #6E6B76;
+
+    --serif: "Charter", "Iowan Old Style", "Source Serif Pro", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans:  "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono:  ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+    --measure: 34rem;
+    --wide: 50rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #121216;
+      --surface:    #1A1A1F;
+      --surface-2:  #222228;
+      --rule:       #2D2D35;
+      --rule-soft:  #26262D;
+      --ink:        #E9E8EC;
+      --ink-soft:   #B9B7C0;
+      --muted:      #918E9A;
+      --accent:     #E2818A;
+      --accent-dim: #8E4C53;
+      --ok:         #77BA9C;
+      --warn:       #CBA357;
+      --off:        #918E9A;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #121216;
+    --surface:    #1A1A1F;
+    --surface-2:  #222228;
+    --rule:       #2D2D35;
+    --rule-soft:  #26262D;
+    --ink:        #E9E8EC;
+    --ink-soft:   #B9B7C0;
+    --muted:      #918E9A;
+    --accent:     #E2818A;
+    --accent-dim: #8E4C53;
+    --ok:         #77BA9C;
+    --warn:       #CBA357;
+    --off:        #918E9A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: var(--wide);
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.25rem;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .kicker {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5.2vw, 2.9rem);
+    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .dek {
+    max-width: var(--measure);
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+  }
+
+  .byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- generic structure ---------- */
+
+  section { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h2 {
+    font-family: var(--sans);
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+
+  .section-head .count {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+
+  p { margin: 0; max-width: var(--measure); }
+  section > p, .entry > p, .note > p { max-width: var(--measure); }
+
+  a {
+    color: var(--ink);
+    text-decoration-color: var(--accent-dim);
+    text-underline-offset: 0.16em;
+    text-decoration-thickness: 1px;
+  }
+  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* ---------- entries ---------- */
+
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.5rem 0 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .entry:first-of-type { border-top: none; padding-top: 0.25rem; }
+
+  .entry-head { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  h3 {
+    font-family: var(--serif);
+    font-size: 1.32rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+
+  .attrib {
+    font-family: var(--sans);
+    font-size: 0.83rem;
+    color: var(--muted);
+  }
+
+  .chip {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    font-family: var(--sans);
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.55rem 0.22rem 0.45rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-soft);
+    background: var(--surface);
+  }
+  .chip::before {
+    content: "";
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .chip.solid  { color: var(--ok); }
+  .chip.partial { color: var(--warn); }
+  .chip.thin   { color: var(--off); }
+
+  ul { margin: 0; padding-left: 1.15rem; max-width: var(--measure); }
+  li { margin-bottom: 0.55rem; }
+  li::marker { color: var(--accent-dim); }
+
+  /* ---------- figures strip ---------- */
+
+  .figures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .fig {
+    background: var(--surface);
+    padding: 0.95rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .fig .n {
+    font-family: var(--mono);
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .fig .l {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: var(--muted);
+  }
+
+  /* ---------- pull quote ---------- */
+
+  blockquote {
+    margin: 0;
+    padding: 0 0 0 1.1rem;
+    border-left: 2px solid var(--accent);
+    max-width: var(--measure);
+    font-size: 1.08rem;
+    color: var(--ink);
+  }
+  blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-style: normal;
+    color: var(--muted);
+  }
+
+  /* ---------- note panel ---------- */
+
+  .note {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .note h4 {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  /* ---------- prompt / verbatim ---------- */
+
+  .verbatim {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    background: var(--surface-2);
+    border-left: 2px solid var(--rule);
+    padding: 0.85rem 1rem;
+    max-width: var(--measure);
+    overflow-x: auto;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- references ---------- */
+
+  .refs { display: flex; flex-direction: column; gap: 0.7rem; }
+  .refs ol {
+    margin: 0;
+    padding-left: 1.6rem;
+    font-size: 0.92rem;
+    max-width: var(--wide);
+  }
+  .refs li { margin-bottom: 0.5rem; color: var(--ink-soft); }
+  .refs .src { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); }
+
+  sup a {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    text-decoration: none;
+    color: var(--accent);
+    padding: 0 0.08em;
+  }
+  sup a:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--muted);
+    max-width: var(--measure);
+  }
+
+  @media (max-width: 40rem) {
+    .page { padding: 2.5rem 1.15rem 4rem; gap: 2.5rem; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <div class="kicker">Research note</div>
+    <h1>AI tutors, simulations, and live case exercises at Harvard Business School</h1>
+    <p class="dek">A summary of what has been publicly reported about AI tutorbots, AI simulations, and in-class AI exercises at HBS, with sources.</p>
+    <div class="byline">
+      <span>Compiled 13 August 2026</span>
+      <span>12 sources</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head"><h2>Scope and method</h2></div>
+    <p>Compiled from public sources in August 2026. Each entry is tagged by how much has been published about it. Usage figures for ChatLTV are the instructor's own, self-reported in his write-up; the PS2 Pal figures are peer reviewed.</p>
+    <p>Requests to hbs.edu and alumni.hbs.edu returned HTTP 403, so the Storrowed description comes from search indexes and the Harvard Business Publishing listing rather than the HBS product page. No one at HBS was contacted.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Tutorbots at HBS</h2><span class="count">2 systems</span></div>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip solid">Well documented</span>
+        <h3>ChatLTV</h3>
+        <div class="attrib">Jeff Bussgang, senior lecturer in Entrepreneurial Management · Launching Tech Ventures, second-year elective · 2023</div>
+      </div>
+      <p>A Slack-embedded retrieval-augmented assistant trained on the course's own materials, available to all 250 enrolled students. It is the only HBS tutorbot with published usage data.<sup><a href="#r2">2</a></sup></p>
+
+      <div class="figures">
+        <div class="fig"><span class="n">15M</span><span class="l">words in the corpus, across ~200 documents</span></div>
+        <div class="fig"><span class="n">170</span><span class="l">of 250 students used it</span></div>
+        <div class="fig"><span class="n">3,000+</span><span class="l">queries, about 130 per case</span></div>
+        <div class="fig"><span class="n">99%</span><span class="l">of queries sent privately, not to the public channel</span></div>
+      </div>
+
+      <p>Corpus: 50-plus HBS cases, teaching notes, two books, slide decks, Excel models, video transcripts with a glossary, nineteen years of the instructor's blog posts, and three years of prior course Slack Q&amp;A.</p>
+      <p>Stack: GPT-4 accessed through Azure OpenAI, chosen so Harvard's copyrighted case material would not be used for model retraining; Pinecone for vector storage; Langchain as middleware. Roughly 8,000 lines of backend code, of which 800 were the RAG layer and 900 content indexing, plus 9,000 lines for a content management system. Two to three person-months of development in late spring and summer 2023. Bussgang notes it would be substantially smaller if built today.</p>
+      <p>Testing: approximately 500 hand-written test questions evaluated manually, plus automated scoring against ground-truth answers, used to refine prompts and content indexing.</p>
+      <p>Retrieval prompt as published:</p>
+      <div class="verbatim">You are a world-class algorithm to answer questions in a specific format. You use the context provided to answer the question and list your sources in the format specified. Do not make up answers.</div>
+      <p>Testing revealed that students wanted course logistics as much as case content, so a separate "Course Admin" corpus covering grading rubrics, writing assignments, due dates and office hours was created and prioritized in retrieval.</p>
+      <p>Question types: clarifying and evaluative questions about cases, analysis, acronyms, and administrative matters — case summaries, acronym definitions, assignment deadlines, office-hour scheduling, and methodology checks. Usage peaked between 10pm and 2am. Nearly 40 percent of users rated quality a 4 or 5.</p>
+
+      <div class="note">
+        <h4>What the query logs showed</h4>
+        <p>Bussgang reviewed queries each morning through the content management system and reports three cases. A student who participated little in class had submitted numerous thoughtful queries; on that basis Bussgang cold-called him, and reports he "crushed the opening." A non-native English speaker repeatedly asked for acronym definitions; Bussgang had ChatLTV generate a list of the top fifteen course acronyms with definitions, after which her questions became more advanced. A student who was a new parent was preparing cases several days early; asked about it, she explained that an unpredictable sleep schedule meant she needed to refresh the key facts closer to class.</p>
+        <p>Bussgang states that his concern that students would use the bot as a crutch did not materialize, that the quality of in-class case conversation was excellent, and that prep-level questions moving to the bot let him push students on assumptions, methodology and strategic implications instead.</p>
+      </div>
+
+      <p>He also reports that the LLM required considerable prompt engineering, that a large existing corpus was essential to the result, and that he had to instruct a companion feedback tool to be more critical, writing: "LLMs are way softer than HBS professors."</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip solid">Well documented</span>
+        <h3>The DSAIL tutor bot</h3>
+        <div class="attrib">Karim Lakhani and Iavor Bojinov · Data Science and AI for Leaders · required first-year course, 935 MBA students</div>
+      </div>
+      <p>A retrieval-augmented tutor trained on the course's cases, coach notes, conceptual notes, Lakhani's <em>Competing in the Age of AI</em>, and data science and econometrics references. Described as a 24/7 tutor that lets students ask clarifying questions and explore advanced topics at any time.<sup><a href="#r3">3</a></sup></p>
+      <p>The course was made a graduation requirement for all MBA candidates in 2025.<sup><a href="#r4">4</a></sup> It runs eighteen sessions in four modules: AI Today (2 sessions), Data Exploration, Comparison and Inference (4), Machine Learning and AI Factories (6), and AI Strategy and Implementation (6). The last module ends in a capstone in which each student builds their own AI agent.</p>
+      <p>The same course has students run analysis conversationally in Julius.ai — for example "run a regression comparing X and Y" or "visualize these customer segments" — without writing Python or R. Instruction is grounded in case studies of real companies deploying AI.</p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Simulations and live case exercises</h2></div>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip solid">Well documented</span>
+        <h3>"Storrowed"</h3>
+        <div class="attrib">Mitchell Weiss · HBS exercise 824188, plus a separate teaching note and a simulation</div>
+      </div>
+      <p>A generative AI exercise, published and available for purchase through Harvard Business Publishing.<sup><a href="#r5">5</a></sup><sup><a href="#r6">6</a></sup> Its stated purpose is to raise participants' proficiency, capacity and curiosity with generative AI, focused on problem understanding and ideation.</p>
+      <p>The premise is that trucks repeatedly get wedged under the low overpasses on Boston's Storrow Drive, causing traffic backups. Students use generative AI tools to work out why drivers ignore the height warnings, where else this happens, what economic impact the incidents have, and what solutions could prevent them. They direct the chatbot to apply frameworks from their other courses, including five-whys and fault tree analysis.</p>
+      <p>A simulation game was built to accompany the exercise and adds a timing element. Three trucks will hit a bridge in thirty minutes, each truck representing a team, and the object is to avoid the collision. The format lets the instructor reward teams for strong prompts and penalize teams for believing AI hallucinations.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip partial">Partly documented</span>
+        <h3>Live AI case exercises across the curriculum</h3>
+        <div class="attrib">Reported April 2026 · marketing, entrepreneurship, and organizational behavior</div>
+      </div>
+      <p>HBS faculty are reported to be augmenting the case method with AI simulations, avatars and live exercises, with the integration spread across hallmark classes in marketing, entrepreneurship and organizational behavior, affecting both how students prepare for and how they participate in case discussions.<sup><a href="#r1">1</a></sup></p>
+      <p>Mitchell Weiss describes "a lot of live AI case exercises we've built and deployed in class," including "AI-based simulations, AI-based avatars, a sort of AI-based building." Beyond Storrowed, the individual exercises have not been published.</p>
+      <p>Faculty named in connection with this work: Mitchell Weiss, Iavor Bojinov, Todd Lensman, and Rembrand Koning.</p>
+      <p>Reported effects on class: Todd Lensman says students arrive with a higher baseline understanding of the case material. Rembrand Koning says preparation tools help students engage more deeply with the material rather than simply summarizing it, which "heightens our ability to have really rich discussions." Weiss says that while AI handles information transfer, live questioning remains important to teaching, and that this is where the case method is suited to the current era.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip partial">Partly documented</span>
+        <h3>Student tool access and classroom policy</h3>
+      </div>
+      <p>As of April 2026, MBA students have access to ChatGPT, the Harvard AI Sandbox, Claude, Claude Code, Lovable, Julius AI, Manus, and Gamma.<sup><a href="#r1">1</a></sup></p>
+      <p>Earlier reporting from 2024 records that HBS provided ChatGPT Plus with Advanced Data Analysis to every first-year student to support the data science curriculum, and ran student trainings on using the tools to advance learning, push thinking, and test their knowledge. The policy framework at that point centered on use outside class rather than during exams. Weiss noted then that a growing number of sessions invited tool use in the classroom as part of exercises and discussions about generative AI.<sup><a href="#r12">12</a></sup></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>AI feedback and evaluation</h2></div>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip partial">Partly documented</span>
+        <h3>Feedback on student work</h3>
+        <div class="attrib">Dean Srikant Datar · reported October 2025</div>
+      </div>
+      <p>Datar states that faculty use AI to give students rapid feedback: "When students prepare a spreadsheet or do some other work, we are able to give them very rapid feedback using AI tools."<sup><a href="#r10">10</a></sup></p>
+      <p>HBS also uses AI to process student evaluations submitted to the Christensen Center for Teaching and Learning, converting them into actionable recommendations for instructors.</p>
+      <p>Matthew Negri of the Digital Transformation department notes that AI supplements traditional instruction by remaining available when faculty are not, with notably high usage during late-night hours.</p>
+      <blockquote>
+        Everytime you think something can't be done, the next model shows that it can be done.
+        <cite>Srikant Datar, dean of Harvard Business School</cite>
+      </blockquote>
+      <p>The article names no specific courses, instructors, or enrollment figures for these initiatives.</p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Avatars</h2></div>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip thin">Not documented</span>
+        <h3>Avatars in case teaching</h3>
+      </div>
+      <p>Every reference to AI avatars in HBS case teaching traces to a single phrase in one Weiss interview: "AI-based simulations, AI-based avatars, a sort of AI-based building."<sup><a href="#r1">1</a></sup> No exercise, course, or description of an avatar-based case activity has been published.</p>
+      <p>The one documented avatar project at HBS is unrelated to the case method. Wendy Riseborough, senior creative producer, and Dustin Hilt, director of Live Online Classrooms, used AI-generated avatars to populate virtual classrooms when live participants were absent, so that asynchronous students would feel present remotely. Early results were mixed, with newer platforms such as HeyGen reported as improvements in realism.<sup><a href="#r11">11</a></sup></p>
+      <p>No named HBS AI role-play or negotiation simulation was found. Negotiation courses using AI simulations at Harvard are offered through the Extension School, not HBS.</p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Elsewhere at Harvard, outside HBS</h2><span class="count">2 systems</span></div>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip solid">Well documented</span>
+        <h3>StatGPT</h3>
+        <div class="attrib">Sharad Goel, professor of public policy · Harvard Kennedy School · statistics course</div>
+      </div>
+      <p>A Slackbot tutor designed, in the project's own words, "to encourage students to learn through interactions with the AI, rather than it providing direct answers." First tested in Goel's statistics course.<sup><a href="#r7">7</a></sup></p>
+      <p>After examining usage data and surveying participants, researchers found students viewed the tool as supportive, easy to access, and available any time. Goel is working to deploy it across multiple course types. The reported finding is that the approach shows particular promise in subjects that require active problem solving.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <span class="chip solid">Well documented</span>
+        <h3>PS2 Pal</h3>
+        <div class="attrib">Kestin, Miller, Klales, Milbourne and Ponti · Harvard Physical Sciences 2 · Fall 2023 · <em>Scientific Reports</em> 15, art. 17458 (2025)</div>
+      </div>
+      <p>A randomized controlled trial of 194 undergraduate physics students comparing identical content delivered either through in-class active learning sessions or at-home sessions with a custom-designed AI tutor.<sup><a href="#r8">8</a></sup></p>
+
+      <div class="figures">
+        <div class="fig"><span class="n">194</span><span class="l">students randomized</span></div>
+        <div class="fig"><span class="n">2×</span><span class="l">the learning gains of the active-learning classroom</span></div>
+        <div class="fig"><span class="n">2×</span><span class="l">engagement, and in less time</span></div>
+      </div>
+
+      <p>Students using the AI tutor achieved roughly twice the learning gains of those in the active-learning classroom, in less time. Engagement roughly doubled.<sup><a href="#r9">9</a></sup></p>
+      <p>The tutor was built on a large language model with expert-authored scaffolds, step-by-step reasoning, and guardrails against hallucination. It was instructed to give away only one step at a time, not to divulge the full solution in a single message, and to encourage students to attempt the problem themselves before revealing anything.</p>
+    </article>
+  </section>
+
+  <section class="refs">
+    <div class="section-head"><h2>Sources</h2><span class="count">12</span></div>
+    <ol>
+      <li id="r1"><a href="https://www.thecrimson.com/article/2026/4/11/hbs-ai-integration/">Harvard Business School Expands AI Integration Across MBA Curriculum</a> <span class="src">— The Harvard Crimson, April 2026</span></li>
+      <li id="r2"><a href="https://bussgang.medium.com/teaching-at-harvard-with-an-ai-faculty-co-pilot-c412d86de2e7">Teaching at Harvard with an AI Faculty Co-Pilot</a> <span class="src">— Jeff Bussgang</span></li>
+      <li id="r3"><a href="https://professorkl.substack.com/p/and-we-are-launcheddata-science-and">And we are launched… Data Science and AI for Leaders at HBS</a> <span class="src">— Karim Lakhani</span></li>
+      <li id="r4"><a href="https://www.thecrimson.com/article/2025/4/4/hbs-makes-ai-class-required/">MBA Students at HBS Must Take AI Course To Graduate</a> <span class="src">— The Harvard Crimson, April 2025</span></li>
+      <li id="r5"><a href="https://hbsp.harvard.edu/product/824188-PDF-ENG">"Storrowed": A Generative AI Exercise</a> <span class="src">— Harvard Business Publishing</span></li>
+      <li id="r6"><a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=65742">"Storrowed" — Simulation</a> <span class="src">— HBS Faculty &amp; Research</span></li>
+      <li id="r7"><a href="https://www.harvard.edu/ai/2024/02/06/building-an-ai-slackbot-to-tutor-students">Building an AI Slackbot to Tutor Students</a> <span class="src">— Generative AI @ Harvard</span></li>
+      <li id="r8"><a href="https://erctpapers.com/papers/47-kestin-et-al-2025-ai-tutoring-active-learning.html">AI tutoring outperforms in-class active learning: an RCT</a> <span class="src">— Kestin et al., Scientific Reports 15:17458, 2025</span></li>
+      <li id="r9"><a href="https://news.harvard.edu/gazette/story/2024/09/professor-tailored-ai-tutor-to-physics-course-engagement-doubled/">Professor tailored AI tutor to physics course. Engagement doubled.</a> <span class="src">— Harvard Gazette</span></li>
+      <li id="r10"><a href="https://www.thecrimson.com/article/2025/10/2/hbs-dean-ai-use/">Harvard Business School Uses AI To Evaluate Students' Work, Dean Says</a> <span class="src">— The Harvard Crimson, October 2025</span></li>
+      <li id="r11"><a href="https://www.harvardmagazine.com/teaching-learning/harvard-redesigning-assignments-ai">Harvard's New Playbook for Teaching with AI</a> <span class="src">— Harvard Magazine</span></li>
+      <li id="r12"><a href="https://poetsandquants.com/2024/03/13/how-harvard-business-school-uses-generative-ai-in-its-mba-classrooms/">How Harvard Business School Uses Generative AI In Its MBA Classrooms</a> <span class="src">— Poets&amp;Quants, March 2024</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    Compiled for the Rice Business faculty AI workshop, session 4.
+  </footer>
+
+</div>
+</body>
+</html>
