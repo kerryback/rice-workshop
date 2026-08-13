@@ -30,7 +30,9 @@ project:
     # roster with student names and photos -- it stays local and is handed out
     # in the Zoom chat, never copied into docs/. Do not widen this to a glob.
     - files/session4/slide_rule.pdf
-    - files/session5.zip
+    # Built by hand with course_roster.pdf and .voiceover/ excluded. Re-zip it
+    # the same way, or the roster ships to the class.
+    - files/session4.zip
     - under-construction.html
 
 website:
