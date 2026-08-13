@@ -455,9 +455,10 @@ The sample roster is a real one, so it goes out in the chat rather than on the c
 ::: {.card .card-blue}
 [What you do]{.card-title}
 
-- Enter the prompt below
-- Open the student link on your own phone and answer it
-- Watch the bars move on your screen
+- At start of class enter [/poll]{.accent} in Claude in the classroom computer.  Brings up a QR code in browser.
+- Students connect
+- During class, either [/poll <filename>]{.accent} for prepared poll or [/poll <question>] for on-the-spot
+- Needs `cloudflared` on classroom computer, and I have to check it is not blocked (workaround exists)
 :::
 :::
 
@@ -465,30 +466,20 @@ The sample roster is a real one, so it goes out in the chat rather than on the c
 /poll How confident are you using AI in your teaching? 1 to 5
 :::
 
-::: {.explainer}
-Students join over an https link from a Cloudflare tunnel, so phones work on any network. Needs `cloudflared`.
-:::
 
-## Demo 4 --- Student Screens on the Projector
+## Demo 4 --- Student Screen Shares
 
-::: {.two-cards}
-::: {.card .card-purple}
-[What it does]{.card-title}
 
-- Students open a link on their laptops, enter a name and a room code, and pick a screen, window, or tab
-- You decide whose screen goes up, from a panel on the classroom computer
-- Video travels [browser to browser]{.accent} --- the server only carries the handshake
-
-:::
 ::: {.card .card-teal}
-[What you do]{.card-title}
 
-- Enter [/screenshare]{.accent}
-- Put the display page on the projector --- join link and room code in type readable from the back row
-- Share your own screen from a phone or a second laptop
+
+- Enter [/screenshare]{.accent} on the classroom computer
+- Show the browser page that opens --- join link and room code on the page
+- Students connect on their laptops
+- Return to the page and select a student to share whenever you want
 :::
-:::
+
 
 ::: {.explainer}
-Needs `cloudflared`, like the poll. Browsers only allow screen capture from an https page, so the tunnel is what makes this work at all --- a LAN address will fail in the room.
+Also needs `cloudflared`, but workaround exists if blocked
 :::

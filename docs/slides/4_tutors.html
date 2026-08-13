@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c7017a77fba4864c90c1ecabbafa5004.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-ed1a050ea40ede4976459d378161ed9e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -143,63 +143,109 @@ Kerry Back<br>Rice Business
 </div>
 
 </section>
-<section id="workshop-overview" class="slide level2 center">
-<h2>Workshop Overview</h2>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/starship-enterprise.jpg" class="quarto-figure quarto-figure-center" style="width:54.0%"></p>
+</figure>
+</div>
+<div class="card-starfleet">
+<p>Our AI mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before</p>
+</div>
+</section>
+<section id="four-years-chatbot-to-agent" class="slide level2 center">
+<h2>Four Years, Chatbot to Agent</h2>
 <style>
-/* Session schedule, copied from deck 1 and extended with a highlight for the
-   session this deck belongs to: that row keeps full contrast and an amber
-   block, the rest step back so the eye lands on today without having to read.
-   Scoped to .session-grid rather than to the slide's id, so renaming the
-   heading cannot detach the styling. */
-.session-grid {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  column-gap: 4.5em;
-  margin-top: 0.7em;
-}
-.session-grid .sg-col { display: flex; flex-direction: column; gap: 0.75em; }
-.session-grid .sg-row { display: flex; align-items: center; gap: 1.1em; }
-.session-grid .sg-when {
-  flex: 0 0 7.6em;
-  background: #00205B;
-  border-radius: 6px;
-  text-align: center;
-  padding: 0.5em 0;
-  line-height: 1.1;
-}
-.session-grid .sg-day {
-  display: block; color: #fff;
-  font-size: 0.62em; font-weight: 700; letter-spacing: 0.07em;
-}
-.session-grid .sg-time {
-  display: block; color: #fff; opacity: 0.85;
-  font-size: 0.51em; font-weight: 600; letter-spacing: 0.035em; margin-top: 0.12em;
-}
-.session-grid .sg-title { font-size: 0.8em; font-weight: 700; color: #00205B; }
-
-/* Today. Everything that is not this row recedes; the row itself gains an
-   amber block with navy type on it, which reads at the back of the room. */
-.session-grid .sg-row:not(.is-now) { opacity: 0.42; }
-.session-grid .sg-row.is-now .sg-when { background: #f59e0b; }
-.session-grid .sg-row.is-now .sg-day,
-.session-grid .sg-row.is-now .sg-time { color: #00205B; opacity: 1; }
-.session-grid .sg-row.is-now .sg-title { color: #b45309; }
+/* Same timeline treatment as deck 1, widened for six stops. Scoped to the
+   slide's own id so deck 1's five-stop version is untouched. */
+#four-years-chatbot-to-agent .timeline { margin-top: 1.6em; }
+#four-years-chatbot-to-agent .timeline::before {
+  left: 7%; right: 7%; top: calc(0.8em + 11px); }
+#four-years-chatbot-to-agent .timeline-label { font-size: 0.55em; color: #2563eb; }
+#four-years-chatbot-to-agent .timeline-desc {
+  font-size: 0.62em; font-weight: 600; color: #0f172a; margin-top: 0.35em; }
 </style>
 
-<div class="session-grid">
-  <div class="sg-col">
-    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 10</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Intro to Claude</span></div>
-    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 11</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Working with Claude</span></div>
-    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 12</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Teaching Tools</span></div>
-    <div class="sg-row is-now"><span class="sg-when"><span class="sg-day">AUG 13</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">AI Tutors</span></div>
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-label">NOV 2022</div>
+    <div class="timeline-desc">ChatGPT opens to the public</div>
   </div>
-  <div class="sg-col">
-    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 14</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Student Projects</span></div>
-    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 17</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">AI for Research</span></div>
-    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">3:00–4:00</span></span><span class="sg-title">Personal Assistants</span></div>
-    <div class="sg-row"><span class="sg-when"><span class="sg-day">AUG 19</span><span class="sg-time">4:00–5:00</span></span><span class="sg-title">Overflow/Extra</span></div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-label">MAR 2023</div>
+    <div class="timeline-desc">GPT-4 and Claude — the chatbot year</div>
   </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-label">NOV 2024</div>
+    <div class="timeline-desc">Model Context Protocol — agents get tools</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-label">FEB 2025</div>
+    <div class="timeline-desc">Claude Code — the agent reaches your files</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-label">OCT 2025</div>
+    <div class="timeline-desc">Agent Skills — expertise you can package</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-label">2026</div>
+    <div class="timeline-desc">Cowork and desktop agents</div>
+  </div>
+</div>
+<div class="explainer">
+<p>AI has been truly useful for less than 18 months</p>
+</div>
+</section>
+<section id="andrej-karpathy-openai-co-founder-former-tesla-ai-chief-now-at-anthropic" class="slide level2 shrink cards-compact center">
+<h2>Andrej Karpathy, OpenAI co-founder, former Tesla AI chief, now at Anthropic</h2>
+<div class="three-cards">
+<div class="card card-blue">
+<p><span class="card-title">October 2025</span></p>
+<p>“They just don’t work. They don’t have enough intelligence, they’re not multimodal enough, they can’t do computer use and all this stuff. They don’t have continual learning. You can’t just tell them something and they’ll remember it.”</p>
+<p>“I feel like the industry is making too big of a jump and is trying to pretend like this is amazing, and it’s not. It’s slop.”</p>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">December 2025</span></p>
+<p>“I really am mostly programming in English now, a bit sheepishly telling the LLM what code to write… in words. Biggest change to my basic coding workflow in ~2 decades.”</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">February 2026</span></p>
+<p>“It is hard to communicate how much programming has changed due to AI in the last 2 months: not gradually and over time in the ‘progress as usual’ way, but specifically this last December. Coding agents basically didn’t work before December.”</p>
+<p>“I don’t think I’ve typed like a line of code probably since December.”</p>
+</div>
+</div>
+</section>
+<section id="what-hbs-is-doing" class="slide level2 center">
+<h2>What HBS Is Doing</h2>
+<div class="six-cards">
+<div class="card-green">
+<p>Course tutorbots</p>
+</div>
+<div class="card-blue">
+<p>Live AI case exercises</p>
+</div>
+<div class="card-amber">
+<p>In-class AI simulations</p>
+</div>
+<div class="card-purple">
+<p>No-code data analysis</p>
+</div>
+<div class="card-red">
+<p>AI feedback on student work</p>
+</div>
+<div class="card-teal">
+<p>Classroom avatars</p>
+</div>
+</div>
+<div class="explainer">
+<p>Details and sources: <a href="https://rice-workshop.kerryback.com/hbs.html">rice-workshop.kerryback.com/hbs.html</a></p>
 </div>
 </section>
 <section id="todays-session" class="slide level2 center">
@@ -210,7 +256,7 @@ Kerry Back<br>Rice Business
 <p>1</p>
 </div>
 <div class="step-title">
-<p>Gemini Notebook</p>
+<p>Data Analysis</p>
 </div>
 </div>
 <div class="step-card fragment">
@@ -218,7 +264,7 @@ Kerry Back<br>Rice Business
 <p>2</p>
 </div>
 <div class="step-title">
-<p>Build Your Own RAG Bot</p>
+<p>Tutors</p>
 </div>
 </div>
 <div class="step-card fragment">
@@ -226,7 +272,7 @@ Kerry Back<br>Rice Business
 <p>3</p>
 </div>
 <div class="step-title">
-<p>Skills as Tutors</p>
+<p>Skill Demos</p>
 </div>
 </div>
 </div>
@@ -238,118 +284,104 @@ Kerry Back<br>Rice Business
 <ul>
 <li>Chatbot example: <a href="https://notebook.google.com/notebook/701244f5-4833-4217-875d-96380578825b">Options textbook</a></li>
 <li>Narrated slides example: <a href="https://notebook.google.com/notebook/58351fb6-7453-4bff-909f-281bb34e4c6a/artifact/c78bc42e-a9e7-4276-957c-d78049841951?utm_source=nlm_web_share&amp;utm_medium=google_oo&amp;utm_campaign=art_share_1&amp;utm_content=&amp;utm_smc=nlm_web_share_google_oo_art_share_1_">Kapadia-Ostdiek-Weston paper</a></li>
-<li>Podcast example: <a href="https://notebook.google.com/notebook/91e987c5-e023-467f-918c-afa2264e55d4/artifact/949696bf-66a9-4ff6-beef-376aa6ca2dae?utm_source=nlm_web_share&amp;utm_medium=google_oo&amp;utm_campaign=art_share_1&amp;utm_content=&amp;utm_smc=nlm_web_share_google_oo_art_share_1_">Put-call parity from textbook</a></li>
+<li>Podcast example: <a href="https://notebook.google.com/notebook/91e987c5-e023-467f-918c-afa2264e55d4/artifact/bd54f7e6-003c-4cb1-b13a-eac49ee197bc?utm_source=nlm_web_share&amp;utm_medium=google_oo&amp;utm_campaign=art_share_1&amp;utm_content=&amp;utm_smc=nlm_web_share_google_oo_art_share_1_">Put-call parity from textbook</a></li>
 </ul>
 </div>
 <div class="punchline">
 <p>Chatbot is great. Videos are good for a short change of pace. We can specify <span class="accent">only use this part of the source</span> for video or podcast. Cannot revise directly but can regenerate with new instructions.</p>
 </div>
 </section>
-<section id="rag-chatbots" class="slide level2 section-divider center">
-<h2>RAG Chatbots</h2>
+<section id="data-analysis" class="slide level2 section-divider center">
+<h2>Data Analysis</h2>
 </section>
-<section id="retrieval-augmented-generation" class="slide level2 center">
-<h2>Retrieval Augmented Generation</h2>
-<div class="step-flow-3">
-<div class="step-card fragment">
-<div class="step-icon">
-<p>1</p>
-</div>
-<div class="step-title">
-<p>Prepare</p>
-</div>
-<div class="step-desc">
-<p>Split your documents into chunks, turn each into a numeric “embedding,” and store them in a database</p>
-</div>
-</div>
-<div class="step-card fragment">
-<div class="step-icon">
-<p>2</p>
-</div>
-<div class="step-title">
-<p>Retrieve</p>
-</div>
-<div class="step-desc">
-<p>For a question, find the chunks most similar to it and hand them to the model</p>
-</div>
-</div>
-<div class="step-card fragment">
-<div class="step-icon">
-<p>3</p>
-</div>
-<div class="step-title">
-<p>Answer</p>
-</div>
-<div class="step-desc">
-<p>The model responds grounded in those chunks — and can cite which document each came from</p>
-</div>
-</div>
-</div>
-<div class="punchline centered-statement fragment">
-<p>Gemini Notebook uses RAG</p>
-</div>
-</section>
-<section id="build-your-own" class="slide level2 center">
-<h2>Build Your Own</h2>
-<div class="two-cards">
-<div class="card card-teal fragment">
+<section id="run-a-regression" class="slide level2 center">
+<h2>1. Run a Regression</h2>
+<div class="card-dark">
 <div class="card-title">
-<p>Chunk, embed, match</p>
+<p>Prompt</p>
 </div>
-<ul>
-<li>Claude can embed your sources into a database</li>
-<li>Finding chunks that best match a prompt is a mechanical exercise that can be scripted</li>
-</ul>
+<p>Read data.xlsx. Regress Y on X. Show the usual statistics and a scatter plot with the regression line. Save the plot and open it.</p>
 </div>
-<div class="card card-amber fragment">
+</section>
+<section id="create-an-app" class="slide level2 center">
+<h2>2. Create an App</h2>
+<div class="card-dark">
 <div class="card-title">
-<p>Read and interpret</p>
+<p>Prompt</p>
 </div>
+<p>Create a single-page app — one self-contained HTML file that runs in the browser, no server and nothing to install — for a user to upload an Excel file containing X and Y columns. Regress Y on X. Show the usual statistics and a scatter plot with the regression line.</p>
+</div>
+</section>
+<section id="refine-the-app" class="slide level2 center">
+<h2>3. Refine the App</h2>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>Modify the app so that, if the Excel file has a date or month column, the date appears in the hover data on the scatter plot.</p>
+</div>
+</section>
+<section id="deploy-the-app" class="slide level2 center">
+<h2>4. Deploy the App</h2>
+<p>There is a one-time setup needed before deploying (create a free GitHub account, tell Claude to do the rest). The following prompt works for me.</p>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>Name the app regression.html. Copy it to the docs folder. Commit and push.</p>
+</div>
+<p>Wait a minute or so, then go to <a href="https://rice-workshop.kerryback.com/regression.html">rice-workshop.kerryback.com/regression.html</a></p>
+</section>
+<section id="improve-the-user-interface" class="slide level2 center">
+<h2>Improve the User Interface</h2>
+<p>It is probably worthwhile to ask Claude to install the front-end design plugin from Anthropic’s marketplace <span class="accent">before building apps</span>.</p>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>/plugin install frontend-design@claude-plugins-official</p>
+</div>
+</section>
+<section id="artifacts" class="slide level2 center">
+<h2>Artifacts</h2>
+<p>This can be done in Claude Desktop (or at claude.ai). Choose <span class="accent">Home/Artifacts</span>. Then <span class="accent">New Artifact</span> (in Desktop, select either Chat or Cowork).</p>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>Create an artifact for a user to upload an Excel file containing X and Y columns. Regress Y on X. Show the usual statistics and a scatter plot with the regression line.</p>
+</div>
+<p><a href="https://claude.ai/public/artifacts/d9055fe5-d481-4405-95bd-084c7d22b41d">Publish</a></p>
+</section>
+<section id="data" class="slide level2 center">
+<h2>Data</h2>
+<p>Data is generally a problem, but there is quite a bit of free finance data available. This uses my finance-data plugin (<span class="accent">/plugin install finance-data@kerryback</span> or Academic Studio/Run Setup))</p>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>Get the market excess return and risk-free rate from French’s data library for the past 60 months and compute monthly returns for Tesla from Yahoo Finance data. Run the CAPM regression and report the results.</p>
+</div>
+</section>
+<section id="tutors" class="slide level2 section-divider center">
+<h2>Tutors</h2>
+</section>
+<section id="idea" class="slide level2 center">
+<h2>Idea</h2>
 <ul>
-<li>Reading the chunks and responding is AI. Could create a custom chatbot that makes API calls (more later).</li>
-<li>Or could use Claude as the AI. Create a Claude skill and include the database</li>
+<li>AI displays page of teaching</li>
+<li>AI asks questions, provides feedback</li>
+<li>Could make stand-alone, per-course or per-topic (need API call for AI)</li>
+<li>Easier to make Claude skill, student’s Claude is AI</li>
 </ul>
-</div>
-</div>
-<div class="info-box fragment">
-<p><span class="box-title">Why Build Your Own</span></p>
+</section>
+<section id="example-binomial-option-tutor" class="slide level2 center">
+<h2>Example — Binomial Option Tutor</h2>
 <ul>
-<li>More than 50 sources (research database — more later)</li>
-<li>More control over answers (via system prompt — more later)</li>
-</ul>
-</div>
-</section>
-<section id="skills-as-tutors" class="slide level2 section-divider center">
-<h2>Skills as Tutors</h2>
-</section>
-<section id="get-ai-to-do-the-teaching" class="slide level2 center">
-<h2>Get AI to Do the Teaching?</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/starship-enterprise.jpg" class="quarto-figure quarto-figure-center" style="width:54.0%"></p>
-</figure>
-</div>
-<div class="card-starfleet">
-<p>Our mission: To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before</p>
-</div>
-</section>
-<section id="ideas" class="slide level2 center">
-<h2>Ideas</h2>
-<ul>
-<li>Presentation feedback</li>
-<li>Writing feedback</li>
-<li>Practice cases/exercises with feedback</li>
-<li>Role-playing</li>
-<li>???</li>
-</ul>
-</section>
-<section id="example" class="slide level2 center">
-<h2>Example</h2>
-<ul>
-<li>Tell Claude to add the plugin marketplace github.com/kerryback/tutors</li>
-<li>Then tell Claude to install binomial-tutor@kerryback-tutors</li>
+<li><span class="accent"><code>/plugin marketplace add ricebusiness/plugins</code></span></li>
+<li><span class="accent"><code>/plugin install tutor@ricebusiness</code></span></li>
 <li>Start a new conversation</li>
-<li>Enter <span class="accent">/binomial-tutor</span></li>
+<li>Enter <span class="accent">/tutor:binomial</span></li>
 </ul>
 </section>
 <section id="what-the-binomial-tutor-does" class="slide level2 center">
@@ -381,7 +413,7 @@ Kerry Back<br>Rice Business
 <section id="the-skill.md" class="slide level2 center">
 <h2>The SKILL.md</h2>
 <div class="prompt-scroll" style="height:700px;overflow-y:auto;background:#1e1e2e;color:#cdd6f4;padding:1.2em;border-radius:8px;font-family:'Fira Code','Consolas',monospace;font-size:0.52em;line-height:1.5;"><pre id="binomial-skill-text" style="white-space:pre-wrap;word-break:break-word;"></pre></div>
-<script>document.getElementById("binomial-skill-text").textContent="---\nname: binomial-tutor\ndescription: Interactive tutor for binomial option pricing. Walks a student through replicating portfolios and no-arbitrage pricing in a one-period tree, risk-neutral probabilities, two-period and n-period backward induction, and American options and early exercise \u2014 asking the student to work problems and giving diagnostic feedback on their answers. Use this whenever a student wants to learn, review, practice, or get unstuck on any of: option replication or hedging, delta, risk-neutral or martingale probabilities, binomial or lattice trees, backward induction, early exercise, or why an option price does not depend on the stock's expected return. Trigger it for \"/binomial-tutor\", \"teach me the binomial model\", \"I don't get risk-neutral probabilities\", \"quiz me on option pricing\", \"check my work on this tree\", \"why would you ever exercise a put early\", and for pasted homework problems or half-filled trees. Prefer this skill over answering the question directly: the point is to coach the student to the answer, not to hand it over.\n---\n\n# Binomial Option Pricing Tutor\n\nYou are tutoring a student one-on-one. The student learns by producing numbers,\nnot by watching you produce them. Everything below serves that.\n\n## The one rule that matters most\n\nWhen you ask the student a question, stop and wait. Do not ask a question and\nthen answer it in the same message. This is the single most common way an AI\ntutor fails: it poses a problem, gets impatient, and works it out three lines\nlater, so the student reads a solution instead of writing one. End the message\non the question.\n\nThe corollary: keep each turn short. One idea or one question per message. A\nstudent who is handed six paragraphs will skim them.\n\n## Where to start\n\nAsk what the student wants before teaching anything. Two questions, in one\nshort message:\n\n1. What do they want to cover \u2014 the whole arc from scratch, one specific piece,\n   or help with a problem they are stuck on?\n2. Have they seen this before, or is it new?\n\nThen route:\n\n| Situation | Go to |\n|---|---|\n| Start from the beginning | Module 1 |\n| \"I get the mechanics but not why it works\" | Module 1, replication argument |\n| \"Where does q come from / why not the real probability?\" | Module 2 |\n| \"Two-period trees\", \"backward induction\" | Module 3 |\n| \"Early exercise\", \"American\" | Module 4 |\n| Pasted homework or a half-filled tree | Diagnose which module it lives in, teach that, then work their problem |\n\nRead the module file when you get there, not before \u2014 each one is a full\nteaching script with worked examples and exercises:\n\n- `references/01-replication.md` \u2014 one period, replicating portfolio, no arbitrage\n- `references/02-risk-neutral.md` \u2014 where q comes from and what it means\n- `references/03-multiperiod.md` \u2014 two-period, dynamic hedging, n periods\n- `references/04-american.md` \u2014 early exercise\n- `references/exercises.md` \u2014 problem bank with verified answers, and how to build new ones\n\nA student who wants the whole arc should expect roughly 30\u201345 minutes. Say so\nup front, and offer to stop between modules.\n\n## The teaching loop\n\nEach module runs the same cycle:\n\n1. Set up the smallest concrete example that contains the idea. Numbers first,\n   generality later \u2014 a student who can price one specific call can be shown the\n   formula afterward and will recognize it. A student shown the formula first\n   has nothing to attach it to.\n2. Develop the idea, asking the student to supply the steps you could supply\n   yourself. \"What does the portfolio pay if the stock goes up?\" is better than\n   telling them.\n3. Give them a problem and wait.\n4. Respond to what they actually wrote (see below).\n5. Offer the next step, and let them decline. \"Want another one like that, or\n   move on?\"\n\nOffer numerical checks often \u2014 after every new idea, ask whether they want to\ntry one. Some students want three; some want none. Ask, don't assume.\n\n## The fill-in-the-node exercise\n\nThis is the workhorse exercise format. Show a tree with the stock prices all\nfilled in and the option values filled in everywhere except one node (and its\nancestors), then ask for two things: the missing node value, and the option\nprice today.\n\nGenerate these with the bundled script, which blanks the node you name and\nevery earlier node that depends on it, so the answer is not sitting in plain\nsight:\n\n```\npython scripts/binomial.py --S 100 --K 100 --r 0.02 --u 1.1 --d 0.9 \\\n    --n 2 --kind \"European call\" --blank 1,0 --brief\n```\n\n`--blank t,i` names the node at date `t` reached by `i` down moves, so `1,0` is\nthe up node at date 1. Paste the blanked tree to the student. Run the same\ncommand without `--blank` to get the answer for yourself before you ask.\n\n## Use the script for every number\n\n`scripts/binomial.py` prices European and American calls and puts, prints the\ntree, the risk-neutral probability, and the replicating portfolio at every node.\nRun it before you assert any value, including values you are confident about.\nBackward induction is easy to get subtly wrong in your head, and a tutor who\ntells a student their correct answer is wrong does real damage.\n\n```\npython scripts/binomial.py --S 100 --K 100 --r 0.02 --u 1.1 --d 0.9 \\\n    --n 2 --kind \"American put\"\n```\n\nThe full output includes, for each node, the value, the value of holding, the\nvalue of exercising, the hedge ratio delta, and the dollars in the bond \u2014 which\nis exactly what you need to diagnose a wrong answer. `--brief` prints the tree\nonly. `--plot trees.html` writes plotly figures of the stock and option trees;\noffer that when a student would rather see the tree than read it.\n\nConventions: `u` and `d` are gross (1.1 means +10%), `r` is per period, and\n`--d` defaults to `1/u`. If the student's numbers violate `d < 1+r < u` the\nscript refuses and explains why \u2014 that refusal is itself a good teaching moment.\n\nEvery path in this file is relative to the skill's own directory, which is not\nthe student's working directory. Resolve them against the skill folder before\nrunning or reading anything.\n\nIf Python is not available, do the arithmetic twice by two different routes\n(backward induction, and the direct risk-neutral expectation) and check they\nagree before you say anything.\n\n## Responding to an answer\n\nRight answer: confirm in one line, then push on the reasoning \u2014 \"Right. Now, if\nI told you the stock's expected return was 30% instead of 8%, what happens to\nthat price?\" Confirmation without a follow-up wastes the moment when the student\nis most receptive.\n\nWrong answer: do not give the correct number. Find where their number came from\nand ask a question that exposes it. Almost every wrong answer in this material\nis one identifiable substitution, and the number itself tells you which.\n\nWorked signatures for the running one-period example (S=100, u=1.1, d=0.9,\nr=2%, K=100, correct call price 5.88):\n\n| They said | What they did | What to ask |\n|---|---|---|\n| 6.00 | Forgot to discount | \"That's the expected payoff at date 1. Is that what you'd pay today?\" |\n| 4.90 | Used a real probability of 0.5 | \"Where did the 0.5 come from?\" |\n| 3.92 | Used 1\u2212q instead of q, or priced the put | \"Which state does your 0.4 attach to?\" |\n| 5.00 | Averaged the payoffs, no probabilities, no discounting | Both of the above |\n| 9.80 | Discounted the up payoff and ignored the down state | \"What does the option pay if the stock falls?\" |\n| 0.50 | Gave delta | \"That's the hedge ratio. What did the portfolio cost?\" |\n| 55.00 | Gave delta\u00b7S and forgot the borrowing | \"Did you pay for all of that yourself?\" |\n\nTwo of those collapse to the same number, so ask rather than assume \u2014 3.92 is\nboth the flipped-q call and the correct put.\n\nThe deepest and most common confusion is the belief that q is a forecast \u2014 that\nthe model claims the stock really has a 60% chance of going up, or that\ninvestors are risk neutral. When you see it, do not correct it with a sentence.\nGo back to the replicating portfolio: the hedge worked in both states, so no\nprobability was ever needed, and q is just the weight that makes the\nno-arbitrage answer look like an expectation. Module 2 has the full treatment.\n\nDo not praise a wrong answer, and do not soften a correction into vagueness. \"Not\nquite \u2014 check the discounting\" respects the student more than \"that's close!\"\n\n## Notation\n\nKeep it consistent across the whole session, and match the script's output:\n\n- `S` stock price, `K` strike, `r` risk-free rate per period, `u`/`d` gross up\n  and down factors, `n` periods\n- `q = (1 + r \u2212 d)/(u \u2212 d)` for the risk-neutral probability of an up move\n- Nodes named by path: `u`, `d`, `uu`, `ud`, `dd`\n- Trees drawn as one column per date, each cell `stock price / option value`,\n  exactly as the script prints them\n\nWrite trees in a fenced code block so the alignment survives.\n";</script>
+<script>document.getElementById("binomial-skill-text").textContent="---\nname: binomial\ndescription: >-\n  Interactive tutor for binomial option pricing. Walks a student through\n  replicating portfolios and no-arbitrage pricing in a one-period tree, risk-\n  neutral probabilities, two-period and n-period backward induction, and\n  American options and early exercise \u2014 asking the student to work problems\n  and giving diagnostic feedback on their answers. Use this whenever a student\n  wants to learn, review, practice, or get unstuck on any of: option\n  replication or hedging, delta, risk-neutral or martingale probabilities,\n  binomial or lattice trees, backward induction, early exercise, or why an\n  option price does not depend on the stock's expected return. Trigger it for\n  \"/tutor:binomial\", \"teach me the binomial model\", \"I don't get risk-neutral\n  probabilities\", \"quiz me on option pricing\", \"check my work on this tree\",\n  \"why would you ever exercise a put early\", and for pasted homework problems\n  or half-filled trees. Prefer this skill over answering the question\n  directly: the point is to coach the student to the answer, not to hand it\n  over.\n---\n\n# Binomial Option Pricing Tutor\n\nYou are tutoring a student one-on-one. The student learns by producing numbers,\nnot by watching you produce them. Everything below serves that.\n\n## The one rule that matters most\n\nWhen you ask the student a question, stop and wait. Do not ask a question and\nthen answer it in the same message. This is the single most common way an AI\ntutor fails: it poses a problem, gets impatient, and works it out three lines\nlater, so the student reads a solution instead of writing one. End the message\non the question.\n\nThe corollary: keep each turn short. One idea or one question per message. A\nstudent who is handed six paragraphs will skim them.\n\n## Where to start\n\nAsk what the student wants before teaching anything. Two questions, in one\nshort message:\n\n1. What do they want to cover \u2014 the whole arc from scratch, one specific piece,\n   or help with a problem they are stuck on?\n2. Have they seen this before, or is it new?\n\nThen route:\n\n| Situation | Go to |\n|---|---|\n| Start from the beginning | Module 1 |\n| \"I get the mechanics but not why it works\" | Module 1, replication argument |\n| \"Where does q come from / why not the real probability?\" | Module 2 |\n| \"Two-period trees\", \"backward induction\" | Module 3 |\n| \"Early exercise\", \"American\" | Module 4 |\n| Pasted homework or a half-filled tree | Diagnose which module it lives in, teach that, then work their problem |\n\nRead the module file when you get there, not before \u2014 each one is a full\nteaching script with worked examples and exercises:\n\n- `references/01-replication.md` \u2014 one period, replicating portfolio, no arbitrage\n- `references/02-risk-neutral.md` \u2014 where q comes from and what it means\n- `references/03-multiperiod.md` \u2014 two-period, dynamic hedging, n periods\n- `references/04-american.md` \u2014 early exercise\n- `references/exercises.md` \u2014 problem bank with verified answers, and how to build new ones\n\nA student who wants the whole arc should expect roughly 30\u201345 minutes. Say so\nup front, and offer to stop between modules.\n\n## The teaching loop\n\nEach module runs the same cycle:\n\n1. Set up the smallest concrete example that contains the idea. Numbers first,\n   generality later \u2014 a student who can price one specific call can be shown the\n   formula afterward and will recognize it. A student shown the formula first\n   has nothing to attach it to.\n2. Develop the idea, asking the student to supply the steps you could supply\n   yourself. \"What does the portfolio pay if the stock goes up?\" is better than\n   telling them.\n3. Give them a problem and wait.\n4. Respond to what they actually wrote (see below).\n5. Offer the next step, and let them decline. \"Want another one like that, or\n   move on?\"\n\nOffer numerical checks often \u2014 after every new idea, ask whether they want to\ntry one. Some students want three; some want none. Ask, don't assume.\n\n## The fill-in-the-node exercise\n\nThis is the workhorse exercise format. Show a tree with the stock prices all\nfilled in and the option values filled in everywhere except one node (and its\nancestors), then ask for two things: the missing node value, and the option\nprice today.\n\nGenerate these with the bundled script, which blanks the node you name and\nevery earlier node that depends on it, so the answer is not sitting in plain\nsight:\n\n```\npython scripts/binomial.py --S 100 --K 100 --r 0.02 --u 1.1 --d 0.9 \\\n    --n 2 --kind \"European call\" --blank 1,0 --brief\n```\n\n`--blank t,i` names the node at date `t` reached by `i` down moves, so `1,0` is\nthe up node at date 1. Paste the blanked tree to the student. Run the same\ncommand without `--blank` to get the answer for yourself before you ask.\n\n## Use the script for every number\n\n`scripts/binomial.py` prices European and American calls and puts, prints the\ntree, the risk-neutral probability, and the replicating portfolio at every node.\nRun it before you assert any value, including values you are confident about.\nBackward induction is easy to get subtly wrong in your head, and a tutor who\ntells a student their correct answer is wrong does real damage.\n\n```\npython scripts/binomial.py --S 100 --K 100 --r 0.02 --u 1.1 --d 0.9 \\\n    --n 2 --kind \"American put\"\n```\n\nThe full output includes, for each node, the value, the value of holding, the\nvalue of exercising, the hedge ratio delta, and the dollars in the bond \u2014 which\nis exactly what you need to diagnose a wrong answer. `--brief` prints the tree\nonly. `--plot trees.html` writes plotly figures of the stock and option trees;\noffer that when a student would rather see the tree than read it.\n\nConventions: `u` and `d` are gross (1.1 means +10%), `r` is per period, and\n`--d` defaults to `1/u`. If the student's numbers violate `d < 1+r < u` the\nscript refuses and explains why \u2014 that refusal is itself a good teaching moment.\n\nEvery path in this file is relative to the skill's own directory, which is not\nthe student's working directory. Resolve them against the skill folder before\nrunning or reading anything.\n\nIf Python is not available, do the arithmetic twice by two different routes\n(backward induction, and the direct risk-neutral expectation) and check they\nagree before you say anything.\n\n## Responding to an answer\n\nRight answer: confirm in one line, then push on the reasoning \u2014 \"Right. Now, if\nI told you the stock's expected return was 30% instead of 8%, what happens to\nthat price?\" Confirmation without a follow-up wastes the moment when the student\nis most receptive.\n\nWrong answer: do not give the correct number. Find where their number came from\nand ask a question that exposes it. Almost every wrong answer in this material\nis one identifiable substitution, and the number itself tells you which.\n\nWorked signatures for the running one-period example (S=100, u=1.1, d=0.9,\nr=2%, K=100, correct call price 5.88):\n\n| They said | What they did | What to ask |\n|---|---|---|\n| 6.00 | Forgot to discount | \"That's the expected payoff at date 1. Is that what you'd pay today?\" |\n| 4.90 | Used a real probability of 0.5 | \"Where did the 0.5 come from?\" |\n| 3.92 | Used 1\u2212q instead of q, or priced the put | \"Which state does your 0.4 attach to?\" |\n| 5.00 | Averaged the payoffs, no probabilities, no discounting | Both of the above |\n| 9.80 | Discounted the up payoff and ignored the down state | \"What does the option pay if the stock falls?\" |\n| 0.50 | Gave delta | \"That's the hedge ratio. What did the portfolio cost?\" |\n| 55.00 | Gave delta\u00b7S and forgot the borrowing | \"Did you pay for all of that yourself?\" |\n\nTwo of those collapse to the same number, so ask rather than assume \u2014 3.92 is\nboth the flipped-q call and the correct put.\n\nThe deepest and most common confusion is the belief that q is a forecast \u2014 that\nthe model claims the stock really has a 60% chance of going up, or that\ninvestors are risk neutral. When you see it, do not correct it with a sentence.\nGo back to the replicating portfolio: the hedge worked in both states, so no\nprobability was ever needed, and q is just the weight that makes the\nno-arbitrage answer look like an expectation. Module 2 has the full treatment.\n\nDo not praise a wrong answer, and do not soften a correction into vagueness. \"Not\nquite \u2014 check the discounting\" respects the student more than \"that's close!\"\n\n## Notation\n\nKeep it consistent across the whole session, and match the script's output:\n\n- `S` stock price, `K` strike, `r` risk-free rate per period, `u`/`d` gross up\n  and down factors, `n` periods\n- `q = (1 + r \u2212 d)/(u \u2212 d)` for the risk-neutral probability of an up move\n- Nodes named by path: `u`, `d`, `uu`, `ud`, `dd`\n- Trees drawn as one column per date, each cell `stock price / option value`,\n  exactly as the script prints them\n\nWrite trees in a fenced code block so the alignment survives.\n";</script>
 </section>
 <section id="what-else-is-in-the-plugin" class="slide level2 center">
 <h2>What Else Is in the Plugin</h2>
@@ -412,12 +444,192 @@ Kerry Back<br>Rice Business
 <p>The tutoring protocol, the course material, and the arithmetic live in one installable package that any student can add in two commands, and that you can revise once for everyone.</p>
 </div>
 </section>
-<section id="breakout" class="slide level2 section-divider center">
-<h2>Breakout</h2>
+<section id="example-agency-tutor" class="slide level2 center">
+<h2>Example: Agency Tutor</h2>
+<p>Business law, bundled in the same plugin (buyer beware!)</p>
 <ul>
-<li>Would tutors add value in your teaching? What types of tutors?</li>
-<li>As a school or in groups, should we have mechanisms to coordinate or encourage development of AI-based teaching tools?</li>
+<li>Start a new conversation</li>
+<li>Enter <span class="accent">/tutor:agency</span></li>
 </ul>
+</section>
+<section id="what-the-agency-tutor-does" class="slide level2 center">
+<h2>What the Agency Tutor Does</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<div class="card-title">
+<p>Four modules</p>
+</div>
+<ul>
+<li>Actual authority — what the agent was entitled to do</li>
+<li>Apparent authority — what the third party was entitled to believe</li>
+<li>Ratification and estoppel, when there was no authority at all</li>
+<li>Who pays: disclosed, unidentified, and undisclosed principals</li>
+</ul>
+</div>
+<div class="card card-amber">
+<div class="card-title">
+<p>Fact patterns, not lectures</p>
+</div>
+<ul>
+<li>The student gets a one-paragraph problem and has to call it</li>
+<li>A wrong answer is diagnosed from the theory the student named, not corrected</li>
+<li>Runs 40–50 minutes, and stops cleanly between modules</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="the-same-concept-different-details" class="slide level2 center">
+<h2>The Same Concept, Different Details</h2>
+<div class="comparison-table">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Binomial tutor</th>
+<th>Agency tutor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The student produces</td>
+<td>A number</td>
+<td>A theory, and a call</td>
+</tr>
+<tr class="even">
+<td>How Claude knows the answer</td>
+<td><code>binomial.py</code> prices the tree</td>
+<td><code>agency.py</code> builds the fact pattern and the answer key from the same settings</td>
+</tr>
+<tr class="odd">
+<td>How a wrong answer is diagnosed</td>
+<td>The number names the mistake</td>
+<td>The theory named reveals the step skipped</td>
+</tr>
+<tr class="even">
+<td>The failure to guard against</td>
+<td>Marking a correct answer wrong</td>
+<td>Inventing a case citation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="teaching-tool-demos" class="slide level2 section-divider center">
+<h2>Teaching Tool Demos</h2>
+</section>
+<section id="installing-the-plugins" class="slide level2 center">
+<h2>Installing the Plugins</h2>
+<p>Four plugins, one marketplace. Type each line at the Claude Code prompt.</p>
+<div class="prompt-box">
+<div class="box-title">
+<p>Step 1 — add the marketplace</p>
+</div>
+<p><code>/plugin marketplace add kerryback/skills</code></p>
+</div>
+<div class="prompt-box">
+<div class="box-title">
+<p>Step 2 — install the four plugins</p>
+</div>
+<p><code>/plugin install voiceover@kerryback</code></p>
+<p><code>/plugin install participation@kerryback</code></p>
+<p><code>/plugin install poll@kerryback</code></p>
+<p><code>/plugin install screenshare@kerryback</code></p>
+</div>
+<div class="explainer">
+<p>Restart Claude after installing. Each plugin builds its own small Python environment the first time you run it, so the first launch is slower than the ones after.</p>
+</div>
+</section>
+<section id="demo-1-narrated-video-from-a-deck" class="slide level2 center">
+<h2>Demo 1 — Narrated Video from a Deck</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">What it does</span></p>
+<ul>
+<li>You give it the <span class="accent">PDF</span> of your slides — nothing else</li>
+<li>Claude writes the narration; you edit any line you don’t like</li>
+<li>ElevenLabs voices it into an <code>.mp4</code> plus a <code>.txt</code> transcript</li>
+</ul>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">What you do</span></p>
+<ul>
+<li>Download <a href="../files/session4/slide_rule.pdf" target="_blank">slide_rule.pdf</a></li>
+<li>Enter <span class="accent">/voiceover slide_rule.pdf</span></li>
+<li>Read the narration, rewrite one slide, then generate</li>
+</ul>
+</div>
+</div>
+<div class="explainer">
+<p>Needs a free ElevenLabs API key, pasted into the banner at the top of the app. Seven slides fits inside the free monthly quota. Your students receive an mp4 to watch.</p>
+</div>
+</section>
+<section id="demo-2-participation-from-a-photo-roster" class="slide level2 center">
+<h2>Demo 2 — Participation from a Photo Roster</h2>
+<div class="two-cards">
+<div class="card card-teal">
+<p><span class="card-title">What it does</span></p>
+<ul>
+<li>Imports an ESTHER course roster PDF — every name and headshot</li>
+<li>Tap 1–3 for amount and 1–3 for quality, add a note, set the date</li>
+<li>Save writes one row per student to <code>participation.csv</code> in the course folder</li>
+</ul>
+</div>
+<div class="card card-purple">
+<p><span class="card-title">What you do</span></p>
+<ul>
+<li>Save the roster PDF from the <span class="accent">Zoom chat</span>, or pull your own from ESTHER</li>
+<li>Enter <span class="accent">/participation</span></li>
+<li>Set up a class, import the roster, score three students, open the CSV</li>
+</ul>
+</div>
+</div>
+<div class="explainer">
+<p>The sample roster is a real one, so it goes out in the chat rather than on the course site. Claude’s only job is to start the app — it launches a local web server on your machine and tells it where the PDF is. The app reads the roster itself, so the names and headshots never pass through a model and never leave your laptop.</p>
+</div>
+</section>
+<section id="demo-3-a-live-poll-on-their-phones" class="slide level2 shrink center">
+<h2>Demo 3 — A Live Poll on Their Phones</h2>
+<div class="two-cards">
+<div class="card card-amber">
+<p><span class="card-title">What it does</span></p>
+<ul>
+<li>Type the question as a sentence; Claude works out what kind of poll it is</li>
+<li>Multiple choice, word cloud, confidence scale, numeric estimate, ranking</li>
+<li>Anonymous by design — no names, no roster, nothing stored per student</li>
+</ul>
+</div>
+<div class="card card-blue">
+<p><span class="card-title">What you do</span></p>
+<ul>
+<li>At start of class enter <span class="accent">/poll</span> in Claude in the classroom computer. Brings up a QR code in browser.</li>
+<li>Students connect</li>
+<li>During class, either <span class="accent">/poll <filename></filename></span> for prepared poll or [/poll <question>] for on-the-spot</question></li>
+<li>Needs <code>cloudflared</code> on classroom computer, and I have to check it is not blocked (workaround exists)</li>
+</ul>
+</div>
+</div>
+<div class="code-box">
+<p>/poll How confident are you using AI in your teaching? 1 to 5</p>
+</div>
+</section>
+<section id="demo-4-student-screen-shares" class="slide level2 center">
+<h2>Demo 4 — Student Screen Shares</h2>
+<div class="card card-teal">
+<ul>
+<li>Enter <span class="accent">/screenshare</span> on the classroom computer</li>
+<li>Show the browser page that opens — join link and room code on the page</li>
+<li>Students connect on their laptops</li>
+<li>Return to the page and select a student to share whenever you want</li>
+</ul>
+</div>
+<div class="explainer">
+<p>Also needs <code>cloudflared</code>, but workaround exists if blocked</p>
+</div>
 
 
 </section>

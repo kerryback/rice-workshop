@@ -106,6 +106,78 @@ My actual numbers, from the `litdb` skill --- plus 64 notes linked to the papers
 No title contains a word from the query. Hybrid search matches the *idea*, and returns the page it came from.
 :::
 
+## RAG Chatbots {.section-divider}
+
+## Retrieval Augmented Generation
+
+
+::: {.step-flow-3}
+::: {.step-card .fragment}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Prepare
+:::
+::: {.step-desc}
+Split your documents into chunks, turn each into a numeric "embedding," and store them in a database
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Retrieve
+:::
+::: {.step-desc}
+For a question, find the chunks most similar to it and hand them to the model
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Answer
+:::
+::: {.step-desc}
+The model responds grounded in those chunks --- and can cite which document each came from
+:::
+:::
+:::
+
+::: {.punchline .centered-statement .fragment}
+Gemini Notebook uses RAG
+:::
+
+## Build Your Own
+
+::: {.two-cards}
+::: {.card .card-teal .fragment}
+::: {.card-title}
+Chunk, embed, match
+:::
+- Claude can embed your sources into a database
+- Finding chunks that best match a prompt is a mechanical exercise that can be scripted
+:::
+::: {.card .card-amber .fragment}
+::: {.card-title}
+Read and interpret
+:::
+- Reading the chunks and responding is AI.  Could create a custom chatbot that makes API calls (more later).
+- Or could use Claude as the AI.  Create a Claude skill and include the database
+:::
+:::
+
+::: {.info-box .fragment}
+[Why Build Your Own]{.box-title}
+
+- More than 50 sources (research database --- more later)
+- More control over answers (via system prompt --- more later)
+:::
+
+
 ## Writing {.section-divider}
 
 ## Drafting and Editing

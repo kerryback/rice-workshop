@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c7017a77fba4864c90c1ecabbafa5004.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-ed1a050ea40ede4976459d378161ed9e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -244,6 +244,80 @@ Kerry Back<br>Rice Business
 <p><img data-src="images/litdb-search.png"></p>
 <div class="explainer">
 <p>No title contains a word from the query. Hybrid search matches the <em>idea</em>, and returns the page it came from.</p>
+</div>
+</section>
+<section id="rag-chatbots" class="slide level2 section-divider center">
+<h2>RAG Chatbots</h2>
+</section>
+<section id="retrieval-augmented-generation" class="slide level2 center">
+<h2>Retrieval Augmented Generation</h2>
+<div class="step-flow-3">
+<div class="step-card fragment">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Prepare</p>
+</div>
+<div class="step-desc">
+<p>Split your documents into chunks, turn each into a numeric “embedding,” and store them in a database</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Retrieve</p>
+</div>
+<div class="step-desc">
+<p>For a question, find the chunks most similar to it and hand them to the model</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Answer</p>
+</div>
+<div class="step-desc">
+<p>The model responds grounded in those chunks — and can cite which document each came from</p>
+</div>
+</div>
+</div>
+<div class="punchline centered-statement fragment">
+<p>Gemini Notebook uses RAG</p>
+</div>
+</section>
+<section id="build-your-own" class="slide level2 center">
+<h2>Build Your Own</h2>
+<div class="two-cards">
+<div class="card card-teal fragment">
+<div class="card-title">
+<p>Chunk, embed, match</p>
+</div>
+<ul>
+<li>Claude can embed your sources into a database</li>
+<li>Finding chunks that best match a prompt is a mechanical exercise that can be scripted</li>
+</ul>
+</div>
+<div class="card card-amber fragment">
+<div class="card-title">
+<p>Read and interpret</p>
+</div>
+<ul>
+<li>Reading the chunks and responding is AI. Could create a custom chatbot that makes API calls (more later).</li>
+<li>Or could use Claude as the AI. Create a Claude skill and include the database</li>
+</ul>
+</div>
+</div>
+<div class="info-box fragment">
+<p><span class="box-title">Why Build Your Own</span></p>
+<ul>
+<li>More than 50 sources (research database — more later)</li>
+<li>More control over answers (via system prompt — more later)</li>
+</ul>
 </div>
 </section>
 <section id="writing" class="slide level2 section-divider center">

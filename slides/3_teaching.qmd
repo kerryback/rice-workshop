@@ -420,7 +420,7 @@ Stitch MP3's together with pause between slide and add to pngs for video
 :::
 
 ::: {.highlight-box}
-Ask Claude to add the plugin marketplace [github.com/kerryback/skills]{.accent} (only need to do that once) and then to install [voiceover@kerryback-skills]{.accent}.
+Ask Claude to add the plugin marketplace [github.com/kerryback/skills]{.accent} (only need to do that once) and then to install [voiceover@kerryback]{.accent}.
 :::
 
 ## Test It
@@ -578,7 +578,7 @@ to its ongoing record of all participation in the term for that course
 ::: {.three-cards}
 ::: {.card .card-blue}
 
-Tell Claude to install [participation@kerryback-skills]{.accent}
+Tell Claude to install [participation@kerryback]{.accent}
 :::
 ::: {.card .card-amber}
 
@@ -631,7 +631,7 @@ An alternative is to run a small app on a cloud host (easy to do, even on a free
 Install
 :::
 ::: {.step-desc}
-Ask Claude to install [poll@kerryback-skills]{.accent}.
+Ask Claude to install [poll@kerryback]{.accent}.
 :::
 :::
 ::: {.step-card .fragment}
@@ -688,7 +688,7 @@ Reverse tunnel is again the easy way, though might be blocked.  Run a small app 
 
 ::: {.card-dark}
 
-Similar to polling: QR Code, instructor's panel allows selection of student to share, then that student's screen appears on the panel and is projected.  Reverse tunnel is in [screenshare@kerryback-skills]{.accent}
+Similar to polling: QR Code, instructor's panel allows selection of student to share, then that student's screen appears on the panel and is projected.  Reverse tunnel is in [screenshare@kerryback]{.accent}
 
 :::
 

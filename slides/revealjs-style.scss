@@ -208,7 +208,7 @@ $body-bg: $off-white;
 // ── Color card variants (equal visual weight, no emphasis) ──
 // Each variant is a complete card on its own: use `::: {.card-blue}`, never
 // `::: {.card .card-blue}`. Inside a grid wrapper the wrapper restyles them.
-$card-variants: ".card-blue, .card-amber, .card-teal, .card-purple, .card-red, .card-dark, .card-light";
+$card-variants: ".card-blue, .card-amber, .card-teal, .card-purple, .card-red, .card-green, .card-dark, .card-light";
 
 $card-blue-bg: #dbeafe;
 $card-blue-title: #2563eb;
@@ -279,11 +279,28 @@ $card-purple-title: #7c3aed;
   .accent { color: #b91c1c; font-weight: 700; }
 }
 
+// ── Local variant: green ──
+// A sixth pastel, so a .six-cards grid can be filled without falling back to
+// .card-light (no background) or .card-dark (too heavy beside the pastels).
+// Not upstreamed: if cardstock is re-installed, re-add this block and put
+// .card-green back into $card-variants above.
+.card-green {
+  background: #dcfce7;
+  color: $slate;
+  border-radius: 22px;
+  padding: 1.2em 1.5em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  .card-title { color: #16a34a; }
+  .accent { color: #15803d; font-weight: 700; }
+}
+
 // ── Local variant: starfleet ──
 // Deck 4 only, and deliberately not upstreamed: the one bordered variant.
 // If cardstock is re-installed, re-add this block.
 .card-starfleet {
-  background: #f6c344;
+  // Softer than the original #f6c344: same hue, desaturated and lightened so
+  // the card reads as a tint behind the navy rather than competing with it.
+  background: #f0dba8;
   color: #143c6d;
   border: 2px solid #1c4e8a;
   border-radius: 22px;
