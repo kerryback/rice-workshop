@@ -690,7 +690,7 @@
     "href": "index.html",
     "title": "Claude for Teaching & Research",
     "section": "",
-    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        AI/Claude Intro\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, skills as tutors \n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Student Projects\n        Artifacts, apps, agents\n      \n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
+    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        AI/Claude Intro\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, skills as tutors \n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Corporate AI\n        Enterprise seats vs the API, connectors, a secure data agent, RAG\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
   },
   {
     "objectID": "slides/1_intro.html#workshop-overview",
@@ -1447,5 +1447,922 @@
     "title": "6. AI for Research",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhere in your own research does recall of the literature slow you down most?\nWhat would you keep in a private knowledge base that you would never put in a public tool?\nWhich is riskier to hand to AI — the drafting, or the reviewing? Why?\nGiven the 93/78 result, which parts of your empirical work would you let AI run, and which would you always check yourself?"
+  },
+  {
+    "objectID": "slides/8_feedback.html#the-thing-we-never-have-time-for",
+    "href": "slides/8_feedback.html#the-thing-we-never-have-time-for",
+    "title": "8. Feedback",
+    "section": "The Thing We Never Have Time For",
+    "text": "The Thing We Never Have Time For\n\n\nWriting\n\nReal comments take 20–40 minutes a paper\nThey arrive after the student has moved on\nSo we write fewer, shorter, later\n\n\n\nPresentations\n\nGraded live, from memory, while the next team sets up\nThe student gets a number and a sentence\nNobody re-watches a 12-minute talk\n\n\n\n\nFeedback is not a knowledge problem. It is a minutes problem — and minutes are exactly what these tools sell."
+  },
+  {
+    "objectID": "slides/8_feedback.html#three-different-things-called-ai-feedback",
+    "href": "slides/8_feedback.html#three-different-things-called-ai-feedback",
+    "title": "8. Feedback",
+    "section": "Three Different Things Called “AI Feedback”",
+    "text": "Three Different Things Called “AI Feedback”\n\n\nCoach the delivery\n\nFiller words, pace, eye contact, hedging\nKnows nothing about your subject\n\n\n\nScore against a rubric\n\nReads the artifact, applies criteria, writes comments\nOnly as good as the rubric it is given\n\n\n\nProbe the understanding\n\nAsks the student questions and grades the answers\nThe one that resists being outsourced to AI\n\n\n\n\nMost products do exactly one of these. Confusing them is how a department buys a filler-word counter and wonders why it never says anything about the argument."
+  },
+  {
+    "objectID": "slides/8_feedback.html#the-landscape",
+    "href": "slides/8_feedback.html#the-landscape",
+    "title": "8. Feedback",
+    "section": "The Landscape",
+    "text": "The Landscape"
+  },
+  {
+    "objectID": "slides/8_feedback.html#delivery-coaches",
+    "href": "slides/8_feedback.html#delivery-coaches",
+    "title": "8. Feedback",
+    "section": "Delivery Coaches",
+    "text": "Delivery Coaches\n\n\nThe tools\n\nYoodli — pacing, filler words, interview and pitch role-play\nOrai — mobile, gamified, cheapest of the group\nVirtualSpeech — VR audience, simulated room\nSpeaker Coach — already inside PowerPoint and Teams\n\n\n\nWhat you get\n\nPractice reps with no human in the room\nMetrics a student can move in a week\nNothing about whether the analysis is right\n\n\n\n\nAdoption is real: UW-Seattle funds Yoodli for every student out of the tech fee. Cheap, useful, and orthogonal to what we grade."
+  },
+  {
+    "objectID": "slides/8_feedback.html#rubric-graders-for-writing",
+    "href": "slides/8_feedback.html#rubric-graders-for-writing",
+    "title": "8. Feedback",
+    "section": "Rubric Graders for Writing",
+    "text": "Rubric Graders for Writing\n\n\n16,000\nTurnitin customers\n\n\n2,600+\nUniversities on Feedback Studio\n\n\nLTI 1.3\nGrades flow into Canvas\n\n\n\n\nThe incumbents\n\nTurnitin Feedback Studio, plus Gradescope for problem sets and handwriting\n\n\n\nThe challengers\n\nCoGrader, GradingPal, GradeWithAI — upload a class set, attach a rubric, get comments per student"
+  },
+  {
+    "objectID": "slides/8_feedback.html#turnitin-changed-what-it-grades",
+    "href": "slides/8_feedback.html#turnitin-changed-what-it-grades",
+    "title": "8. Feedback",
+    "section": "Turnitin Changed What It Grades",
+    "text": "Turnitin Changed What It Grades\n\nClarity does not score the essay. It records the writing of it — version-history playback, pasted-text flags, active writing time.\n\n\nWhen the product is cheap to fake, the process becomes the evidence. That is a different assessment design, not a better detector.\n\n\nTIME named Clarity one of its Best Inventions of 2025. Detection-first products are quietly repositioning as process-visibility products."
+  },
+  {
+    "objectID": "slides/8_feedback.html#aissa-rubric-feedback-on-slides",
+    "href": "slides/8_feedback.html#aissa-rubric-feedback-on-slides",
+    "title": "8. Feedback",
+    "section": "AISSA — Rubric Feedback on Slides",
+    "text": "AISSA — Rubric Feedback on Slides\n\n\n90\nPresentations graded\n\n\n$0.06\nPer evaluation\n\n\n1–3 min\nTurnaround per deck\n\n\n\n\nHow it works\n\nTeacher builds a 5-point rubric in a dashboard\nStudent uploads the deck before presenting\nScores per criterion plus written strengths and fixes\n\n\n\nThe pilot\n\n46 final-year engineering students, Universidad Autónoma de Madrid\nUsability 83 on the SUS scale\nNo comparison against human graders yet"
+  },
+  {
+    "objectID": "slides/8_feedback.html#nyu-stern-built-ours-before-we-did",
+    "href": "slides/8_feedback.html#nyu-stern-built-ours-before-we-did",
+    "title": "8. Feedback",
+    "section": "NYU Stern Built Ours Before We Did",
+    "text": "NYU Stern Built Ours Before We Did\n\n\n\nVoice exam\n\n\nIdentity check, then 8–10 minutes on the student’s own project and 8–10 on a case\n\n\n\n\nThree graders\n\n\nClaude, Gemini and GPT-5 score the transcript on five 0–4 dimensions, citing verbatim evidence\n\n\n\n\nChair decides\n\n\nThey read each other, revise, and Claude synthesizes the final 0–20 grade and feedback\n\n\n\n\nTwo cohorts of an AI/ML product management course: 36 students in Fall 2025, 37 in Spring 2026. Published as arXiv 2603.18221."
+  },
+  {
+    "objectID": "slides/8_feedback.html#making-them-argue-is-what-works",
+    "href": "slides/8_feedback.html#making-them-argue-is-what-works",
+    "title": "8. Feedback",
+    "section": "Making Them Argue Is What Works",
+    "text": "Making Them Argue Is What Works\n\n\nNYU Stern’s Viva: agreement among the three grading models, before and after they read each other’s assessments. Krippendorff’s alpha on the left, share of items with all three in exact agreement on the right."
+  },
+  {
+    "objectID": "slides/8_feedback.html#what-it-cost-them",
+    "href": "slides/8_feedback.html#what-it-cost-them",
+    "title": "8. Feedback",
+    "section": "What It Cost Them",
+    "text": "What It Cost Them\n\n\n\n\n\nAI oral exam\nHuman oral exam\n\n\n\n\nGrading\n$0.29–0.96 per exam\n—\n\n\nAll-in, 25–30 minutes\n~$3.40 per exam\n~$21 per exam\n\n\nScheduling\nStudent picks a slot at 11pm\nTwo graders in a room\n\n\nConsistency\nSame examiner for all 37\nDrifts across a long day\n\n\n\n\n\nThe interesting number is not the cost. It is that every student got a live oral exam at all."
+  },
+  {
+    "objectID": "slides/8_feedback.html#and-students-did-not-love-it",
+    "href": "slides/8_feedback.html#and-students-did-not-love-it",
+    "title": "8. Feedback",
+    "section": "And Students Did Not Love It",
+    "text": "And Students Did Not Love It\n\n\nWorked\n\n66–70% agreed it tested actual understanding\n\n\n\nHurt\n\n83% found it more stressful than a written exam — down to 63% after fixes\n\n\n\nPreferred\n\nGiven the choice: 53% written, 25% AI oral, 19% human oral\n\n\n\n\nTheir biggest fixable complaint was question stacking — the agent asking two things at once. It fell from 31% of turns to 11% once the prompt forbade it. We hit the same bug; the fix is in our prompts too."
+  },
+  {
+    "objectID": "slides/8_feedback.html#why-oral-exams-came-back",
+    "href": "slides/8_feedback.html#why-oral-exams-came-back",
+    "title": "8. Feedback",
+    "section": "Why Oral Exams Came Back",
+    "text": "Why Oral Exams Came Back\n\n\nThe pressure\n\nTake-home essays stopped being evidence of anything\nMelbourne and Toronto are phasing out unsupervised written work\nBerkeley lists follow-up interviews as an integrity measure\n\n\n\nThe shape\n\nNot a doctoral viva — 10–15 minute spot checks\nCornell, NYU Stern and Penn ran oral defenses in spring midterms\nVoice agents are what makes it survive class size"
+  },
+  {
+    "objectID": "slides/8_feedback.html#what-the-evidence-actually-supports",
+    "href": "slides/8_feedback.html#what-the-evidence-actually-supports",
+    "title": "8. Feedback",
+    "section": "What the Evidence Actually Supports",
+    "text": "What the Evidence Actually Supports\n\n\nThe bar is low\n\nTwo expert human graders on the same 1,000 answers: ICC 0.67\n“Inconsistent” is the human baseline, not the AI failure mode\n\n\n\nRubrics carry it\n\nQuestion-specific rubrics beat generic ones by a wide margin\nMost of the gain is in the rubric, not the model\n\n\n\nWatch the student\n\nMore comments, less revision: AI feedback is taken as a checklist\nSurface fixes get made; higher-order comments get skipped\n\n\n\n\nSources: GradeAgentOps (AI, 2026); “Rubric Is All You Need” (ICER 2025); “Generative AI offers more, but students revise less” (IJETHE, 2026)."
+  },
+  {
+    "objectID": "slides/8_feedback.html#the-gap-every-one-of-them-has",
+    "href": "slides/8_feedback.html#the-gap-every-one-of-them-has",
+    "title": "8. Feedback",
+    "section": "The Gap Every One of Them Has",
+    "text": "The Gap Every One of Them Has\n\nThey all know how to grade. Not one of them knows your course — your rubric, your solution key, the three mistakes you have watched students make every year since 2014.\n\n\nThat is the part no vendor ships, and the only part that makes the feedback yours."
+  },
+  {
+    "objectID": "slides/8_feedback.html#presentation-examiner",
+    "href": "slides/8_feedback.html#presentation-examiner",
+    "title": "8. Feedback",
+    "section": "Presentation Examiner",
+    "text": "Presentation Examiner"
+  },
+  {
+    "objectID": "slides/8_feedback.html#what-the-student-does",
+    "href": "slides/8_feedback.html#what-the-student-does",
+    "title": "8. Feedback",
+    "section": "What the Student Does",
+    "text": "What the Student Does\n\n\n\nUpload\n\n\nSlides as PDF, from a magic link — no account\n\n\n\n\nPresent\n\n\nTalks through the deck to a silent voice agent\n\n\n\n\nWait 30s\n\n\nQuestions are rewritten around what was actually said\n\n\n\n\nAnswer\n\n\nThree questions and one follow-up, out loud\n\n\n\n\nRead\n\n\nScores, justifications and written feedback\n\n\n\n\nFastAPI, Postgres, ElevenLabs for voice. kerryback-biai/presentation-examiner."
+  },
+  {
+    "objectID": "slides/8_feedback.html#four-pieces",
+    "href": "slides/8_feedback.html#four-pieces",
+    "title": "8. Feedback",
+    "section": "Four Pieces",
+    "text": "Four Pieces\n\n\nIntake\n\nPDF or PPTX to text\nStored with the session\n\n\n\nAnalyst\n\nClaude reads the deck\nWrites three questions\n\n\n\nExaminer\n\nTwo voice agents\nListens, then asks\n\n\n\nCouncil\n\nThree models grade\nA fourth decides\n\n\n\n\nEvery one of these four reads whatever you uploaded for the assignment. That is where your rubric gets its leverage."
+  },
+  {
+    "objectID": "slides/8_feedback.html#piece-2-writing-the-questions",
+    "href": "slides/8_feedback.html#piece-2-writing-the-questions",
+    "title": "8. Feedback",
+    "section": "Piece 2 — Writing the Questions",
+    "text": "Piece 2 — Writing the Questions\n\n\nFrom the analyst’s system prompt\n\nTest understanding, not just recall. Probe areas where the slides are vague or superficial.\nBe PITHY: one sentence each, direct and to the point.\nSINGLE-PART ONLY: each question must ask exactly ONE thing. NEVER use “and” or “also” to combine two questions.\nNEVER claim there are errors in the student’s numbers. You may ask how a number was derived, but NEVER assert it is wrong.\n\n\nEvery rule there is scar tissue. The last one exists because a model told a student their terminal value was inconsistent when it was 3% growth applied correctly."
+  },
+  {
+    "objectID": "slides/8_feedback.html#piece-3-two-voices-not-one",
+    "href": "slides/8_feedback.html#piece-3-two-voices-not-one",
+    "title": "8. Feedback",
+    "section": "Piece 3 — Two Voices, Not One",
+    "text": "Piece 3 — Two Voices, Not One\n\n\nThe listener\n\nCompletely silent for the whole presentation\nNo “mm-hmm”, no “please continue”\nLong pauses are normal — the student is thinking\n\n\n\nThe examiner\n\nReads the three questions exactly as written\nAccepts the answer and moves on — never coaches, never argues\nOne genuinely new follow-up, then a fixed closing line\n\n\n\n\nTwo separate ElevenLabs sessions, because one agent cannot be both silent and inquisitive. Hanging up the first call is the event that triggers everything downstream."
+  },
+  {
+    "objectID": "slides/8_feedback.html#the-move-that-makes-it-personal",
+    "href": "slides/8_feedback.html#the-move-that-makes-it-personal",
+    "title": "8. Feedback",
+    "section": "The Move That Makes It Personal",
+    "text": "The Move That Makes It Personal\n\nBetween the two calls, Claude rewrites the three questions using the slides and the transcript of what the student just said.\n\n\n\nQuestion bank\n\nSame questions for everyone\nAnswers circulate by lunchtime\n\n\n\nRewritten live\n\nAimed at the gap this student left open\nCannot be prepared for, only understood"
+  },
+  {
+    "objectID": "slides/8_feedback.html#piece-4-the-grading-council",
+    "href": "slides/8_feedback.html#piece-4-the-grading-council",
+    "title": "8. Feedback",
+    "section": "Piece 4 — The Grading Council",
+    "text": "Piece 4 — The Grading Council\n\n\n\nRound 1\n\n\nGPT-5.4, Claude Sonnet 4.6 and Gemini 3.0 grade the same content against the same rubric, in parallel, independently\n\n\n\n\nRound 2\n\n\nEach sees the others’ scores and justifications, and may move — “consensus while maintaining rigorous standards”\n\n\n\n\nChair\n\n\nOpus 4.6 accepts agreement, resolves disagreement, and explains why\n\n\n\n\nThree parts get this treatment separately: the slides, the delivery, and the Q&A. Ten model calls per part."
+  },
+  {
+    "objectID": "slides/8_feedback.html#nothing-is-thrown-away",
+    "href": "slides/8_feedback.html#nothing-is-thrown-away",
+    "title": "8. Feedback",
+    "section": "Nothing Is Thrown Away",
+    "text": "Nothing Is Thrown Away\n\n\npe.grades — one row per model, per round, per part\n\nsession_id | part | model_name | grading_round | overall_score | category_scores | assessment\n\n\nA student who challenges a grade can be shown three independent reads, what changed in deliberation, and why. Try producing that from a rubric printout."
+  },
+  {
+    "objectID": "slides/8_feedback.html#your-rubric-not-ours",
+    "href": "slides/8_feedback.html#your-rubric-not-ours",
+    "title": "8. Feedback",
+    "section": "Your Rubric, Not Ours",
+    "text": "Your Rubric, Not Ours"
+  },
+  {
+    "objectID": "slides/8_feedback.html#four-places-your-judgment-enters",
+    "href": "slides/8_feedback.html#four-places-your-judgment-enters",
+    "title": "8. Feedback",
+    "section": "Four Places Your Judgment Enters",
+    "text": "Four Places Your Judgment Enters\n\n\nAssignment prompt\n\nWhat the task was\nFramed for every stage\n\n\n\nGrading instructions\n\nFree text, prepended to grading\nWhere “be tough on X” lives\n\n\n\nMaterials\n\nRubric, solution key\nKey issues, examiner notes\n\n\n\nExamples\n\nFive synthetic students\nCalibration before deployment"
+  },
+  {
+    "objectID": "slides/8_feedback.html#uploaded-by-type-not-by-filename",
+    "href": "slides/8_feedback.html#uploaded-by-type-not-by-filename",
+    "title": "8. Feedback",
+    "section": "Uploaded by Type, Not by Filename",
+    "text": "Uploaded by Type, Not by Filename\n\n\nThe type is not cosmetic. rubric is fetched by the grader; the others are pooled into context that the question writer and the graders both see."
+  },
+  {
+    "objectID": "slides/8_feedback.html#the-rubric-you-get-if-you-upload-nothing",
+    "href": "slides/8_feedback.html#the-rubric-you-get-if-you-upload-nothing",
+    "title": "8. Feedback",
+    "section": "The Rubric You Get If You Upload Nothing",
+    "text": "The Rubric You Get If You Upload Nothing\n\n\nDEFAULT_RUBRIC_SLIDES\n\nEvaluate slide quality on a 0-4 scale:\n\nOrganization & Structure (0-4): logical flow, clear progression, opening/closing\nVisual Quality & Design (0-4): professional design, visuals, readability\nContent Coverage (0-4): key topics, depth, evidence\n\nOverall: average of three categories.\nReturn JSON: {“scores”: {…}, “overall_score”: X.X, “overall_assessment”: “…”}\n\n\nGeneric on purpose, and generic in effect. It is the floor, not a recommendation."
+  },
+  {
+    "objectID": "slides/8_feedback.html#where-your-rubric-lands",
+    "href": "slides/8_feedback.html#where-your-rubric-lands",
+    "title": "8. Feedback",
+    "section": "Where Your Rubric Lands",
+    "text": "Where Your Rubric Lands\n\n\nThe grading prompt, assembled per part\n\nYou are an expert grader evaluating student work.\nGRADING RUBRIC: → your uploaded rubric, verbatim\nCONTENT TO EVALUATE: → the assignment prompt → your grading instructions → your solution key and key issues → the student’s slides and transcripts\nScore each category, justify each score in 2–3 sentences, then write the overall assessment.\n\n\nNo parsing, no schema, no rubric builder. Your document is dropped in as text — which is exactly why its wording does all the work."
+  },
+  {
+    "objectID": "slides/8_feedback.html#write-it-for-a-grader-who-has-never-met-the-class",
+    "href": "slides/8_feedback.html#write-it-for-a-grader-who-has-never-met-the-class",
+    "title": "8. Feedback",
+    "section": "Write It for a Grader Who Has Never Met the Class",
+    "text": "Write It for a Grader Who Has Never Met the Class\n\n\n\n\n\n\n\n\nVague\nMachine-readable\n\n\n\n\nDemonstrates strong analysis\n4: states the WACC build-up and defends each input; 2: reports a WACC with no derivation\n\n\nGood use of evidence\nCites a number from the case for every claim about margins\n\n\nProfessional slides\nNo slide carries more than two exhibits or more than 40 words\n\n\nUnderstands the material\nCan say what breaks if terminal growth exceeds WACC\n\n\n\n\n\nThe rule of thumb: if two of your TAs would score it differently, so will three models. Specificity is the whole game."
+  },
+  {
+    "objectID": "slides/8_feedback.html#one-slot-three-parts",
+    "href": "slides/8_feedback.html#one-slot-three-parts",
+    "title": "8. Feedback",
+    "section": "One Slot, Three Parts",
+    "text": "One Slot, Three Parts\n\n\nHow it works today\n\nThe grader looks up one material of type rubric\nIt is used for slides, delivery, and Q&A alike\nUpload one rubric and it silently replaces all three defaults\n\n\n\nWhat to do about it\n\nWrite one document with three labelled sections\nOr leave the rubric slot for the artifact and put delivery standards in grading instructions\nThe fix in code is small — three material types instead of one\n\n\n\n\nWorth knowing before you upload a slide rubric and wonder why the Q&A is being scored on visual design."
+  },
+  {
+    "objectID": "slides/8_feedback.html#calibrate-before-anyone-real-uses-it",
+    "href": "slides/8_feedback.html#calibrate-before-anyone-real-uses-it",
+    "title": "8. Feedback",
+    "section": "Calibrate Before Anyone Real Uses It",
+    "text": "Calibrate Before Anyone Real Uses It\n\n\n\nGenerate\n\n\nThe Examples tab writes five synthetic submissions — excellent, good, average, below average, poor — with transcripts and Q&A\n\n\n\n\nGrade them\n\n\nThe full council runs on all five, against your rubric\n\n\n\n\nCheck the spread\n\n\nScores should fall in order, and the gaps should look like your gaps\n\n\n\n\nThe same five levels the batch runner uses on the command line, wired into the instructor dashboard as an Examples tab."
+  },
+  {
+    "objectID": "slides/8_feedback.html#keep-the-human-where-it-counts",
+    "href": "slides/8_feedback.html#keep-the-human-where-it-counts",
+    "title": "8. Feedback",
+    "section": "Keep the Human Where It Counts",
+    "text": "Keep the Human Where It Counts\n\n\nAudit a sample\n\nNYU Stern re-read 3%, triggered by grader disagreement\nDisagreement is a free flag — you already store it\n\n\n\nPublish the rubric\n\nStudents should see what the council sees\nIt doubles as the assignment spec\n\n\n\nOwn the grade\n\nFeedback can be automatic; the grade of record is yours\nSay which it is, in the syllabus, up front"
+  },
+  {
+    "objectID": "slides/8_feedback.html#you-do-not-need-the-app",
+    "href": "slides/8_feedback.html#you-do-not-need-the-app",
+    "title": "8. Feedback",
+    "section": "You Do Not Need the App",
+    "text": "You Do Not Need the App\n\n\nThe 20-minute version\n\nA Claude project, your rubric and solution key as knowledge\nPaste a paper, get rubric-anchored comments\nRun the same five calibration cases by hand\n\n\n\nWhat the app buys\n\nVoice, so the student has to explain it live\nThree graders instead of one\nA record per student that survives an appeal\n\n\n\n\nStart with the rubric. It is the asset — everything else here is plumbing around it."
+  },
+  {
+    "objectID": "slides/8_feedback.html#where-this-leaves-us",
+    "href": "slides/8_feedback.html#where-this-leaves-us",
+    "title": "8. Feedback",
+    "section": "Where This Leaves Us",
+    "text": "Where This Leaves Us\n\n\nBuy\n\nDelivery coaching is a solved, cheap commodity\nLet students use it before they present to you\n\n\n\nBorrow\n\nThe council pattern is published and replicable\nDeliberation is what makes it defensible\n\n\n\nBuild\n\nOnly the rubric, the key, and the standards\nNobody else can write those\n\n\n\n\nEvery student gets a live oral exam and two pages of specific feedback — or none of them do. That is the actual choice on the table."
+  },
+  {
+    "objectID": "slides/8_feedback.html#what-you-are-looking-for",
+    "href": "slides/8_feedback.html#what-you-are-looking-for",
+    "title": "8. Feedback",
+    "section": "What You Are Looking For",
+    "text": "What You Are Looking For\n\n\nAverage score by intended quality level\n\nexcellent → 3.61 / 4.0 (n=8)\ngood → 3.02 / 4.0 (n=9)\nmediocre → 2.14 / 4.0 (n=7)\npoor → 1.38 / 4.0 (n=6)\n\n\nIllustrative shape, not our numbers — this is what the batch runner prints after grading a cohort of synthetic students against your rubric.\n\n\nA rubric that scores the excellent deck and the mediocre deck within 0.3 of each other is not a rubric yet — it is a vocabulary."
+  },
+  {
+    "objectID": "slides/5_corporate.html#todays-session",
+    "href": "slides/5_corporate.html#todays-session",
+    "title": "5. Corporate AI",
+    "section": "Today’s Session",
+    "text": "Today’s Session\n\n\n\n1\n\n\nAPI Calls\n\n\nKeys and billing, and what the raw API does not come with\n\n\n\n\n2\n\n\nBuild a Chatbot\n\n\nTwo prompts to build, two to deploy — then the RAG version\n\n\n\n\n3\n\n\nAI Agents\n\n\nA chatbot with tools, and the three kinds the SDK offers\n\n\n\n\n4\n\n\nConnectors\n\n\nMCP, and adding one to Claude Desktop yourself\n\n\n\n\n5\n\n\nBuild an Agent\n\n\nAn energy data agent, in a container with no way out\n\n\n\n\n6\n\n\nAn AI Business\n\n\nSell it per seat, and defend the margin on cheaper models\n\n\n\n\nThe same two questions run through every step: which tools does it have, and what can it reach?"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-api-key",
+    "href": "slides/5_corporate.html#the-api-key",
+    "title": "5. Corporate AI",
+    "section": "The API Key",
+    "text": "The API Key"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-console",
+    "href": "slides/5_corporate.html#the-console",
+    "title": "5. Corporate AI",
+    "section": "The Console",
+    "text": "The Console\nThe account lives at console.anthropic.com — separate from the claude.ai login employees use for the apps.\n\n\nOrganization\n\nOne account for the institution, billed in one place\nUsage and cost broken out by workspace, by model, and by key\n\n\n\nWorkspaces\n\nPartitions inside the organization — one per course, per lab, per department\nEach has its own keys and its own spend limit\n\n\n\nLimits\n\nA monthly spend cap per workspace, enforced by Anthropic\nRate limits per minute, so one job cannot starve the others\nAlerts when a threshold is crossed\n\n\n\n\nNothing here knows about individual employees — Anthropic sees workspaces and keys, not people. Per-person spend limits are a feature of the seat side; here the unit of control is the key, so issue one per app and cap its workspace."
+  },
+  {
+    "objectID": "slides/5_corporate.html#a-key-is-just-a-secret",
+    "href": "slides/5_corporate.html#a-key-is-just-a-secret",
+    "title": "5. Corporate AI",
+    "section": "A Key Is Just a Secret",
+    "text": "A Key Is Just a Secret\n\n\nWhat it is\n\nA long string, sk-ant-..., created in a workspace\nIssue as many as you like — one per app, per course, per person\nAnyone holding one can spend that workspace’s budget\nShown once at creation; you cannot read it back, only revoke it\n\n\n\nWhere it goes\n\nIn a file named .env, one line: ANTHROPIC_API_KEY=sk-ant-...\n.env goes in .gitignore — never in the code, never in a repo\nThe program reads it from the environment at startup\n\n\n\n\nKeys leak the same way passwords leak: pasted into a chat, committed to GitHub, left in a notebook shared with a class. Revoke and reissue is cheap. Do it whenever you are unsure."
+  },
+  {
+    "objectID": "slides/5_corporate.html#what-does-not-come-with-it",
+    "href": "slides/5_corporate.html#what-does-not-come-with-it",
+    "title": "5. Corporate AI",
+    "section": "What Does Not Come With It",
+    "text": "What Does Not Come With It\n\n\nNo system prompt\nNothing tells the model who it is, what it may refuse, or what house style to use. The field is empty until you fill it.\n\n\nNo conversation\nEach call is answered in isolation. The model has no idea you spoke to it thirty seconds ago.\n\n\nNo tools\nNo web search, no file reading, no code execution. It reads text and writes text.\n\n\nNo memory\nNothing is stored between calls. No history, no preferences, no notes about you.\n\n\n\nClaude Desktop and Claude Code are applications built on this API. The system prompt, the running conversation, the tools, the memory are things Anthropic wrote on top."
+  },
+  {
+    "objectID": "slides/5_corporate.html#one-prompt-at-a-time",
+    "href": "slides/5_corporate.html#one-prompt-at-a-time",
+    "title": "5. Corporate AI",
+    "section": "One Prompt at a Time",
+    "text": "One Prompt at a Time\nimport anthropic\n\nclient = anthropic.Anthropic()          # reads ANTHROPIC_API_KEY from .env\n\nresponse = client.messages.create(\n    model=\"claude-opus-4-5\",\n    max_tokens=1024,\n    system=\"You are a research assistant for a finance department.\",\n    messages=[{\"role\": \"user\", \"content\": \"Summarize the Fama-French factors.\"}],\n)\n\nprint(response.content[0].text)\n\nThat is the whole API. You supply the model, the system prompt, and the messages; you get text back. The system line is there only because we put it there — omit it and the model is given no instructions at all."
+  },
+  {
+    "objectID": "slides/5_corporate.html#you-write-the-loop",
+    "href": "slides/5_corporate.html#you-write-the-loop",
+    "title": "5. Corporate AI",
+    "section": "You Write the Loop",
+    "text": "You Write the Loop\nmessages = []\n\nwhile True:\n    messages.append({\"role\": \"user\", \"content\": input(\"You: \")})\n\n    response = client.messages.create(\n        model=\"claude-opus-4-5\", max_tokens=1024,\n        system=SYSTEM_PROMPT,\n        messages=messages,          # &lt;-- the entire history, every time\n    )\n\n    answer = response.content[0].text\n    messages.append({\"role\": \"assistant\", \"content\": answer})\n    print(\"Claude:\", answer)\n\nA conversation is nothing but a list you keep appending to and resend in full on every turn — which is why long conversations cost more. Prompt caching blunts it: mark the stable part of the prompt, pay a small premium to cache it once, and every later turn re-reads it at about a tenth of the usual price."
+  },
+  {
+    "objectID": "slides/5_corporate.html#a-company-chatbot",
+    "href": "slides/5_corporate.html#a-company-chatbot",
+    "title": "5. Corporate AI",
+    "section": "A Company Chatbot",
+    "text": "A Company Chatbot"
+  },
+  {
+    "objectID": "slides/5_corporate.html#nobody-should-write-that-loop",
+    "href": "slides/5_corporate.html#nobody-should-write-that-loop",
+    "title": "5. Corporate AI",
+    "section": "Nobody Should Write That Loop",
+    "text": "Nobody Should Write That Loop\nEvery company reaches the same conclusion: employees need a chat page, not a Python script. So you deploy one that already exists.\n\n\nOpen WebUI\n\nThe common choice — open source, self-hosted, looks like the chat page people expect\nPoint it at your API key and it works\nAlternatives: LibreChat, Chatbot UI, or a vendor’s enterprise seat\n\n\n\nWhat it supplies\n\nThe conversation loop, stored per user\nAccounts and login, wired to the company’s existing SSO\nA central system prompt, set once and applied to everyone\nFile upload, model choice, shared prompt library\n\n\n\n\nOne deployment, one URL, everyone inside the firewall. No one is pasting company data into a personal ChatGPT account any more, which is usually the real reason this gets funded."
+  },
+  {
+    "objectID": "slides/5_corporate.html#what-central-logging-buys-you",
+    "href": "slides/5_corporate.html#what-central-logging-buys-you",
+    "title": "5. Corporate AI",
+    "section": "What Central Logging Buys You",
+    "text": "What Central Logging Buys You\n\n\nCost\nTokens and dollars per person, per team, per model. Chargeback becomes possible, and so does noticing the one script that ran all weekend.\n\n\nUsage\nWho is actually using it and for what. Which departments adopted it, which never logged in, where training would help.\n\n\nRecord\nWhat was asked and what was answered. Necessary for an audit, a records request, or an investigation of a bad output.\n\n\n\nDecide the retention period before you turn logging on, and tell employees what is kept. A complete transcript of every question your faculty and staff ask an AI is a sensitive record, and it is discoverable."
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-gateway",
+    "href": "slides/5_corporate.html#the-gateway",
+    "title": "5. Corporate AI",
+    "section": "The Gateway",
+    "text": "The Gateway"
+  },
+  {
+    "objectID": "slides/5_corporate.html#one-key-one-log",
+    "href": "slides/5_corporate.html#one-key-one-log",
+    "title": "5. Corporate AI",
+    "section": "One Key, One Log",
+    "text": "One Key, One Log\nThe company buys one API account. Every call from every employee runs on that one key, so all usage and cost land in one place — but nobody can be handed the key, so a gateway holds it.\n\n\n\nEmployee\n\n\nLogs into the internal chat page or agent with their corporate ID — the same SSO as email. They never see a key.\n\n\n\n\nGateway\n\n\nAttaches the API key, forwards the call, and writes a log line: who asked, which model, how many tokens.\n\n\n\n\nModel\n\n\nAnthropic sees the company’s key, not the employee. The gateway is what connects the two."
+  },
+  {
+    "objectID": "slides/5_corporate.html#what-the-gateway-controls",
+    "href": "slides/5_corporate.html#what-the-gateway-controls",
+    "title": "5. Corporate AI",
+    "section": "What the Gateway Controls",
+    "text": "What the Gateway Controls\n\n\nCredentials\n\nEach employee has their own login, not their own key\nAccess granted and revoked with the corporate ID — someone leaves, access stops\nEvery log line carries a name\n\n\n\nBudget\n\nSpend caps per person and per team\nRate limits, so one runaway job cannot exhaust the account\nCheap model for routine work, expensive model where it earns its keep\n\n\n\nRouting\n\nOne endpoint, many providers behind it — Claude, an open model, whatever comes next\nSwap the model without touching any application\nFail over when a provider is down\n\n\n\n\nLiteLLM, Portkey, and Cloudflare AI Gateway are the usual choices; some companies write their own, and Amazon Bedrock and Google Vertex bundle the same idea into the cloud contract they already have."
+  },
+  {
+    "objectID": "slides/5_corporate.html#mcp-connectors",
+    "href": "slides/5_corporate.html#mcp-connectors",
+    "title": "5. Corporate AI",
+    "section": "MCP Connectors",
+    "text": "MCP Connectors"
+  },
+  {
+    "objectID": "slides/5_corporate.html#what-a-connector-is",
+    "href": "slides/5_corporate.html#what-a-connector-is",
+    "title": "5. Corporate AI",
+    "section": "What a Connector Is",
+    "text": "What a Connector Is\n\n\nThe idea\n\nMCP — Model Context Protocol — is a standard way to hand tools to a model\nA server publishes a list of tools with descriptions of what each one does\nAny MCP-speaking client can use them: Claude Desktop, Claude Code, your own agent\n\n\n\nIn practice\n\nWrite the connector to your data once; every AI client in the company can use it\nCompany examples: the data warehouse, the ERP, the student information system, the ticketing queue\nThe model calls the tool by name; the server does the work and returns the result\n\n\n\n\nBefore MCP, every application needed custom wiring to every data source. A connector is that wiring, written once, in a form everything else already understands."
+  },
+  {
+    "objectID": "slides/5_corporate.html#connectors-carry-their-own-credentials",
+    "href": "slides/5_corporate.html#connectors-carry-their-own-credentials",
+    "title": "5. Corporate AI",
+    "section": "Connectors Carry Their Own Credentials",
+    "text": "Connectors Carry Their Own Credentials\n\nA tool runs with the credentials the tool was given — not the credentials of the person who typed the question.\n\n\n\nWhat that means\n\nIf the connector reaches the salary table, every user of that agent reaches the salary table\nThe model has no idea who is asking and cannot enforce a rule it was merely told\n“Only answer HR questions for HR staff” in a system prompt is a suggestion, not a control\n\n\n\nWhat to do instead\n\nOne agent per group — finance, legal, admissions — each with its own connectors\nGive the connector a read-only account, scoped to exactly the tables it needs\nWhere per-user access truly matters, pass the user’s identity through and let the database decide"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-claude-agent-sdk",
+    "href": "slides/5_corporate.html#the-claude-agent-sdk",
+    "title": "5. Corporate AI",
+    "section": "The Claude Agent SDK",
+    "text": "The Claude Agent SDK"
+  },
+  {
+    "objectID": "slides/5_corporate.html#what-makes-it-an-agent",
+    "href": "slides/5_corporate.html#what-makes-it-an-agent",
+    "title": "5. Corporate AI",
+    "section": "What Makes It an Agent",
+    "text": "What Makes It an Agent\n\n\nThe chatbot is not an agent — it reads text and writes text\nAn app with a menu is not an agent either. Given the same menu choice, it does the same thing every time\n\n\n\nAn agent is an app that takes actions at the discretion of an LLM\n\n\nThe Claude Agent SDK is a Python package that supplies the loop, the tool plumbing, and the permission system, so what you write is the part that is yours: the system prompt and the tools."
+  },
+  {
+    "objectID": "slides/5_corporate.html#three-varieties-of-tools",
+    "href": "slides/5_corporate.html#three-varieties-of-tools",
+    "title": "5. Corporate AI",
+    "section": "Three Varieties of Tools",
+    "text": "Three Varieties of Tools\n\n\nBuilt-ins\nThe tools Claude Code has — Read, Write, Edit, Bash, WebSearch, WebFetch. Inherited for free, and the first thing you turn off.\n\n\nInternal MCP tools\nPython functions you wrote, exposed to the model as tools. run_python, send_invoice, check_enrollment — whatever the job needs.\n\n\nExternal MCP tools\nConnectors — someone else’s server, reached over HTTP. Your databases, your inbox, a public data source.\n\n\n\nThe LLM never runs anything. It sits at Anthropic emitting requests; your app, on your machine, decides whether to execute them."
+  },
+  {
+    "objectID": "slides/5_corporate.html#where-they-run",
+    "href": "slides/5_corporate.html#where-they-run",
+    "title": "5. Corporate AI",
+    "section": "Where They Run",
+    "text": "Where They Run\n\n\nBuilt-ins\nIn the agent’s own process, on the machine that started it.\nIts filesystem, its shell, its network — the agent’s reach is the machine’s reach.\n\n\nInternal MCP tools\nAlso in the agent’s own process.\nrun_python is a function inside the agent — whatever it can import, it can run.\n\n\nExternal MCP tools\nOn someone else’s server.\nArguments go out over HTTP, the work happens there, and only the result comes back.\n\n\n\nThis is the slide that matters for security. Two of these three columns execute code on your hardware, which is why the container comes later in this session."
+  },
+  {
+    "objectID": "slides/5_corporate.html#tool-lists",
+    "href": "slides/5_corporate.html#tool-lists",
+    "title": "5. Corporate AI",
+    "section": "Tool Lists",
+    "text": "Tool Lists\nThree lists you set in ClaudeAgentOptions:\n\n\ntools\nThe base set of built-ins.\ntools=[] — none of them. tools=[\"Read\", \"Grep\"] — only those two.\n\n\ndisallowed_tools\nRemoves named tools — built-in or MCP — so they can never be used, whatever else is configured.\n\n\nallowed_tools\nThe tools that run without stopping to ask permission.\n\n\n\nThe first and best guardrail is a tool the agent simply does not have. If it cannot fetch a web page, no clever prompt can make it."
+  },
+  {
+    "objectID": "slides/5_corporate.html#permission-modes",
+    "href": "slides/5_corporate.html#permission-modes",
+    "title": "5. Corporate AI",
+    "section": "Permission Modes",
+    "text": "Permission Modes\nOne setting, permission_mode, decides what happens when the model asks to use a tool:\n\n\ndefault — reads run freely; prompts before file edits, shell commands, and network requests\nacceptEdits — auto-approves file edits and common filesystem commands; other actions still prompt\nplan — read-only; Claude proposes changes but makes none\ndontAsk — only tools in allowed_tools run; anything else is denied, not prompted\nbypassPermissions — everything runs, no checks. Sandboxed containers only\n\n\n\nAn unattended agent serving a web page has nobody to prompt, so dontAsk is the setting: decide the whole tool list in advance and let the agent run inside it."
+  },
+  {
+    "objectID": "slides/5_corporate.html#custom-tools",
+    "href": "slides/5_corporate.html#custom-tools",
+    "title": "5. Corporate AI",
+    "section": "Custom Tools",
+    "text": "Custom Tools\nA tool is an ordinary Python function with a decorator. The decorator gives it a name, a description the model reads to decide when to call it, and its arguments.\n@tool(\n    \"run_python\",\n    \"Execute Python for calculations and charts. Returns stdout and any figures.\",\n    {\"code\": Annotated[str, \"The Python code to execute\"]},\n)\nasync def run_python(args):\n    result = execute(args[\"code\"])\n    return {\"content\": [{\"type\": \"text\", \"text\": result}]}\n\nlocal_server = create_sdk_mcp_server(name=\"local\", tools=[run_python])\n\nThe description is the whole interface — it is how the model knows what the tool is for. You do not need to remember this syntax; Claude writes it. You need to decide which tools exist."
+  },
+  {
+    "objectID": "slides/5_corporate.html#build-an-energy-data-agent",
+    "href": "slides/5_corporate.html#build-an-energy-data-agent",
+    "title": "5. Corporate AI",
+    "section": "Build: An Energy Data Agent",
+    "text": "Build: An Energy Data Agent"
+  },
+  {
+    "objectID": "slides/5_corporate.html#what-you-are-building",
+    "href": "slides/5_corporate.html#what-you-are-building",
+    "title": "5. Corporate AI",
+    "section": "What You Are Building",
+    "text": "What You Are Building\nAn analyst that answers questions about U.S. energy data — and can do nothing else.\n\n\nOne connector\nThe EIA MCP server, which reaches the Energy Information Administration’s public data — production, prices, consumption, by state and by month.\n\n\nOne custom tool\nrun_python, so it can compute growth rates and draw charts instead of reciting numbers.\n\n\nNothing else\ntools=[] removes every built-in. No WebSearch, no WebFetch, no Bash, no file access. It reaches EIA or it reaches nothing.\n\n\n\nNotice which legs of the trifecta are missing: the only text entering this agent comes from EIA and from the user, and there is no web tool to carry anything out."
+  },
+  {
+    "objectID": "slides/5_corporate.html#tell-claude",
+    "href": "slides/5_corporate.html#tell-claude",
+    "title": "5. Corporate Claude",
+    "section": "Tell Claude",
+    "text": "Tell Claude\n\n\nTell Claude\n\nUsing the claude_agent_sdk, create a FastAPI agent app called eia_agent.py that connects to the EIA MCP server at https://eia.rice-business.org/mcp and allows all six of its eia_* tools. Also create an internal MCP server exposing one tool, run_python, that executes Python for calculations and charts, restricting imports to the data analysis stack and returning charts inline in the chat. The system prompt should say the agent is an energy data analyst and should politely decline questions unrelated to energy data. Set tools=[], permission_mode to dontAsk, and max_turns to 15.\n\n\nRun it with python -m uvicorn eia_agent:app and open 127.0.0.1:8000. Then ask it something real: “how has U.S. natural gas production changed since 2015?”"
+  },
+  {
+    "objectID": "slides/5_corporate.html#containers-and-egress",
+    "href": "slides/5_corporate.html#containers-and-egress",
+    "title": "5. Corporate AI",
+    "section": "Containers and Egress",
+    "text": "Containers and Egress"
+  },
+  {
+    "objectID": "slides/5_corporate.html#run_python-is-still-a-risk",
+    "href": "slides/5_corporate.html#run_python-is-still-a-risk",
+    "title": "5. Corporate AI",
+    "section": "run_python Is Still a Risk",
+    "text": "run_python Is Still a Risk\n\n\nThe hole\n\ntools=[] took away Bash and WebFetch. It was not enough\nrun_python runs Python with exec(), and exec() runs anything\nAn import whitelist does not close it: pd.read_csv(\"https://attacker...\") walks straight through\nPython reaches the network with no imports at all — the outbound leg is back\n\n\n\nThe fix\n\nStop trying to police the code and remove the road instead\nPut the agent in a container with no route to the internet\nGive it exactly two ways out: the Anthropic API and the data sources it needs\nEverything else fails at the network layer, not at a rule the model could be talked past"
+  },
+  {
+    "objectID": "slides/5_corporate.html#three-legs-for-data-exfiltration",
+    "href": "slides/5_corporate.html#three-legs-for-data-exfiltration",
+    "title": "5. Corporate AI",
+    "section": "Three Legs for Data Exfiltration",
+    "text": "Three Legs for Data Exfiltration\n\n\n\n\n\n\nAll three must be present for a prompt injection to steal anything: private data worth taking, attacker-controllable text the model reads, and a channel to send data out. Remove any one leg and the attack has nowhere to go."
+  },
+  {
+    "objectID": "slides/5_corporate.html#three-containers-three-networks",
+    "href": "slides/5_corporate.html#three-containers-three-networks",
+    "title": "5. Corporate AI",
+    "section": "Three Containers, Three Networks",
+    "text": "Three Containers, Three Networks\nThe agent sits on a network with no route out. Two neighbors give it the only exits it has.\n\n\nnginx\n\nInternal network — talks to the agent\nCorporate network — serves the chat page to employees\nThe only way in\n\n\n\nThe agent\n\nInternal network only\nNo route to the public internet at all\nTalks to nginx and to squid, and to nothing else\n\n\n\nsquid\n\nInternal network — talks to the agent\nPublic network — but allowlisted to Anthropic and the data sources\nThe only way out\n\n\n\n\nDocker describes this in one docker-compose.yml file. The allowlist is a handful of lines in squid.conf. Claude writes both; what you decide is which hosts go on the list."
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-stack",
+    "href": "slides/5_corporate.html#the-stack",
+    "title": "5. Corporate AI",
+    "section": "The Stack",
+    "text": "The Stack\n\n\n\n\n\n\nThe same shape holds whatever the agent is for — swap the two connectors for the ones your department needs. Change the allowlist and you have changed what the agent can reach; nothing in the agent’s code has to know."
+  },
+  {
+    "objectID": "slides/5_corporate.html#a-secure-data-agent",
+    "href": "slides/5_corporate.html#a-secure-data-agent",
+    "title": "5. Corporate AI",
+    "section": "A Secure Data Agent",
+    "text": "A Secure Data Agent\n\nCompany data in, Python execution, charts and answers out — and no path to the open internet. If a poisoned spreadsheet talks the model into exfiltrating the payroll table, the request dies at squid. The guardrail is not a rule the model agreed to follow; it is a road that was never built."
+  },
+  {
+    "objectID": "slides/5_corporate.html#rag",
+    "href": "slides/5_corporate.html#rag",
+    "title": "5. Corporate AI",
+    "section": "RAG",
+    "text": "RAG"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-problem-rag-solves",
+    "href": "slides/5_corporate.html#the-problem-rag-solves",
+    "title": "5. Corporate AI",
+    "section": "The Problem RAG Solves",
+    "text": "The Problem RAG Solves\n\n\nThe limit\n\nThe model knows nothing about your documents — your policies, your contracts, your course materials\nContext windows are large but finite, and you pay for every token you paste in\nAsked about something it does not know, a model will often make something up\n\n\n\nThe fix\n\nRetrieve only the passages relevant to the question and send those with the prompt\nThe answer is grounded in your sources rather than in the model’s recollection\nIt can cite which document each claim came from, so you can check\n\n\n\n\nRAG — retrieval-augmented generation — is a search engine bolted to the front of the prompt. The interesting part is the search, not the generation."
+  },
+  {
+    "objectID": "slides/5_corporate.html#setting-up-rag",
+    "href": "slides/5_corporate.html#setting-up-rag",
+    "title": "5. Corporate AI",
+    "section": "Setting Up RAG",
+    "text": "Setting Up RAG\n\n\nBuild\nSplit the documents into chunks, embed each chunk as a vector, store them in a vector database. A few hundred pages takes minutes.\n\n\nServe\nAdd one tool, search_documents. It embeds the question, finds the closest chunks, and hands them back for the model to answer from.\n\n\nMaintain\nRe-embed when documents change. A stale index answers confidently from last year’s policy, which is worse than not answering.\n\n\n\nsearch_documents is just another tool — the pirate chatbot with a search tool and a serious system prompt is a RAG chatbot. With confidential documents behind it, the perimeter on the next slide is not optional."
+  },
+  {
+    "objectID": "slides/5_corporate.html#easy-rag",
+    "href": "slides/5_corporate.html#easy-rag",
+    "title": "5. Corporate AI",
+    "section": "Easy RAG",
+    "text": "Easy RAG\n\n\nGemini Notebook\n\nUp to 50 sources per notebook — PDFs, Docs, links, videos\nAnswers with citations, plus summaries and audio overviews\nFree with a Google account\n\n\n\nClaude Projects\n\nUpload documents to a Project, add custom instructions\nClaude searches those files automatically in every chat in that project\nIncluded with a Claude subscription\n\n\n\nBuild your own\n\nWhen it is thousands of documents, not fifty\nWhen it has to live inside your own app or agent\nWhen the documents cannot leave the building\n\n\n\n\nFor one person and a manageable pile of PDFs, the hosted options win — there is no reason to build. Build when the scale, the integration, or the confidentiality forces your hand."
+  },
+  {
+    "objectID": "slides/5_corporate.html#breakout",
+    "href": "slides/5_corporate.html#breakout",
+    "title": "5. Corporate AI",
+    "section": "Breakout",
+    "text": "Breakout"
+  },
+  {
+    "objectID": "slides/5_corporate.html#questions-to-discuss",
+    "href": "slides/5_corporate.html#questions-to-discuss",
+    "title": "5. Corporate AI",
+    "section": "Questions to Discuss",
+    "text": "Questions to Discuss\n\nWhat would your school build first on a per-token API account?\nWhat data source at Rice would be most valuable behind a connector in a data agent? Who would have to approve it?\nIf you built a data agent for your department, which tools would you deliberately withhold from it?\nWhich actions would you let an agent take without a human click — and which never?"
+  },
+  {
+    "objectID": "slides/5_corporate.html#build-it",
+    "href": "slides/5_corporate.html#build-it",
+    "title": "5. Corporate AI",
+    "section": "Build It",
+    "text": "Build It\n\n\nTell Claude\n\nUsing the claude_agent_sdk, create a FastAPI agent app called eia_agent.py that connects to the EIA MCP server at https://eia.rice-business.org/mcp and allows all six of its eia_* tools. Also create an internal MCP server exposing one tool, run_python, that executes Python for calculations and charts, restricting imports to the data analysis stack and returning charts inline in the chat. The system prompt should say the agent is an energy data analyst and should politely decline questions unrelated to energy data. Set tools=[], permission_mode to dontAsk, and max_turns to 15.\n\n\nRun it with python -m uvicorn eia_agent:app and open 127.0.0.1:8000. Then ask it something real: “how has U.S. natural gas production changed since 2015?”"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-api-account",
+    "href": "slides/5_corporate.html#the-api-account",
+    "title": "5. Corporate AI",
+    "section": "The API Account",
+    "text": "The API Account"
+  },
+  {
+    "objectID": "slides/5_corporate.html#buy-seats-or-self-host",
+    "href": "slides/5_corporate.html#buy-seats-or-self-host",
+    "title": "5. Corporate AI",
+    "section": "Buy Seats or Self-Host",
+    "text": "Buy Seats or Self-Host\n\n\nBuy seats\n\nClaude for Enterprise, ChatGPT Enterprise, Microsoft 365 Copilot\nPer employee per month — the vendor runs the chat page, the login, and the logging\nNo key, no server, no code: you sign a contract\nYou also take the vendor’s system prompt, connectors, and retention policy\n\n\n\nSelf-host on your key\n\nOpen WebUI or LibreChat, deployed on your own infrastructure\nPer token, billed to the one account from the last section\nSupplies the conversation loop per user, SSO login, a central system prompt, file upload and model choice\nYour prompt, your logs, your retention policy\n\n\n\n\nSeats sidestep everything else in this session — no key, no loop, no gateway, no agent. That is their appeal, and for most employees it is the right answer. The rest of this deck is the other path: what you build when you need your own tools, your own data, and your own rules. Most institutions end up doing both."
+  },
+  {
+    "objectID": "slides/5_corporate.html#seats-or-a-key",
+    "href": "slides/5_corporate.html#seats-or-a-key",
+    "title": "5. Corporate AI",
+    "section": "Seats or a Key",
+    "text": "Seats or a Key"
+  },
+  {
+    "objectID": "slides/5_corporate.html#claude-for-enterprise",
+    "href": "slides/5_corporate.html#claude-for-enterprise",
+    "title": "5. Corporate AI",
+    "section": "Claude for Enterprise",
+    "text": "Claude for Enterprise\n\n\nThe seat\n\nEach person gets Claude on web, desktop, and mobile, plus Cowork and Claude Code\nThe applications from our first two sessions, run by Anthropic\nLogin with the company ID, same as email\n\n\n\nThe governance\n\nSSO and automatic provisioning\nAudit logs and a custom data retention policy\nRole-based access: which groups get which features and connectors\n\n\n\nThe bill\n\nA seat fee per person for access, billed annually\nUsage on top: every token in Chat, Cowork, or Code is billed at standard API rates\nAdmins cap spend per person and for the organization\n\n\n\n\nThis is how a company gives everyone Claude: sign one contract, and every employee logs in. Note the billing shape — the seat buys access and governance, and the tokens are metered anyway."
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-other-way-an-api-account",
+    "href": "slides/5_corporate.html#the-other-way-an-api-account",
+    "title": "5. Corporate AI",
+    "section": "The Other Way: An API Account",
+    "text": "The Other Way: An API Account\n\n\nWhat it is\n\nNo applications at all — just the model, behind an endpoint on the internet\nA key authenticates; every token is billed to the account\nThe same per-token rates the seats pay for usage\n\n\n\nWhat it is for\n\nSoftware you build: a course tool, a departmental agent, Claude inside an app you already have\nYou choose the model, the system prompt, and the tools\nIncluding — this is the point — which tools do not exist\n\n\n\n\nEither way, usage is per token. The seat buys Anthropic’s applications and the governance around them; the key buys nothing but the model. The rest of this session is the key path — and by the end, the reason a company that owns seats still needs it."
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-data-problem",
+    "href": "slides/5_corporate.html#the-data-problem",
+    "title": "5. Corporate AI",
+    "section": "The Data Problem",
+    "text": "The Data Problem"
+  },
+  {
+    "objectID": "slides/5_corporate.html#one-person-two-tools",
+    "href": "slides/5_corporate.html#one-person-two-tools",
+    "title": "5. Corporate AI",
+    "section": "One Person, Two Tools",
+    "text": "One Person, Two Tools\nPermissions attach to people, but the web/data split has to attach to tasks — and one person’s tasks change hour to hour. No admin can chase that with toggles. So the separation lives in the tools:\n\n\nThe Enterprise seat\n\nWeb search, web fetch, Cowork, Claude Code — everything on\nNo corporate data connectors, so there is nothing behind it to steal\nSafe to browse with, permanently, by construction\n\n\n\nThe corporate data agent\n\nCorporate data connectors and Python execution\nNo web tools — and, by the end of this session, no route out of its container\nSafe to analyze with, permanently, by construction\n\n\n\n\nWhen a task needs both, the person does the research in the seat and carries what they learned into the data agent. That is a feature, not a workaround: an automated exfiltration needs no human, but a person moving text between two windows is a deliberate, auditable act. The rest of this session builds the right-hand tool."
+  },
+  {
+    "objectID": "slides/5_corporate.html#section",
+    "href": "slides/5_corporate.html#section",
+    "title": "5. Corporate AI",
+    "section": "",
+    "text": "With some (easy) initial setup, it is also very easy to deploy it. Free Koyeb account is available. In practice, hand to IT.\n\n\nPrompt\n\nCreate a git repo for the app and push to github as kerryback/billandted. Then create a Koyeb app in the kerrybackapps organization and link the repo. Create a billandted.kerryback.com CNAME record on DN Simple and set it as the custom domain.\n\nbillandted.kerryback.com"
+  },
+  {
+    "objectID": "slides/5_corporate.html#section-1",
+    "href": "slides/5_corporate.html#section-1",
+    "title": "5. Corporate AI",
+    "section": "",
+    "text": "With some (easy) initial setup, it is also very easy to deploy it. Free Koyeb account is available. In practice, hand to IT.\n\n\nPrompt\n\nPush it to github as kerryback/billandted. Then create a Koyeb app in the kerrybackapps organization and link the repo. Create a billandted.kerryback.com CNAME record on DN Simple and set it as the custom domain.\n\nbillandted.kerryback.com"
+  },
+  {
+    "objectID": "slides/5_corporate.html#corporate-applications",
+    "href": "slides/5_corporate.html#corporate-applications",
+    "title": "5. Corporate AI",
+    "section": "Corporate Applications",
+    "text": "Corporate Applications\n\n\nTalk to Company Data\nAgent writes SQL and Python to generate tables, figures, and docs in response to user prompts\n\n\nTalk to Company Documents\nEmbed doc chunks in a vector database; find similar chunks and add to the prompt for LLM analysis\n\n\nTake Actions\nGive the agent tools to update an ERP, file a ticket, send an invoice"
+  },
+  {
+    "objectID": "slides/5_corporate.html#taking-actions",
+    "href": "slides/5_corporate.html#taking-actions",
+    "title": "5. Corporate AI",
+    "section": "Taking Actions",
+    "text": "Taking Actions"
+  },
+  {
+    "objectID": "slides/5_corporate.html#actions-are-different",
+    "href": "slides/5_corporate.html#actions-are-different",
+    "title": "5. Corporate AI",
+    "section": "Actions Are Different",
+    "text": "Actions Are Different\n\n\nThe channel is the product\n\nThe data agent was safe because we removed its way out\nAn action agent’s whole job is the way out — send the email, update the record, pay the invoice\nYou cannot delete that leg of the trifecta; you can only narrow it\n\n\n\nNarrow it three ways\n\nDedicated tools with typed arguments — send_invoice(customer, amount), never a shell\nThe same egress allowlist: squid reaches the ERP and nothing else\nScoped credentials: the tool’s account can file a ticket, not drop a table"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-human-holds-the-trigger",
+    "href": "slides/5_corporate.html#the-human-holds-the-trigger",
+    "title": "5. Corporate AI",
+    "section": "The Human Holds the Trigger",
+    "text": "The Human Holds the Trigger\n\n\nAgent prepares, human approves\n\nThe agent drafts the email, fills in the invoice, stages the record change\nEverything lands in an outbox; a person reviews and clicks send\nAnything irreversible — payments, messages to clients, grade changes — waits for that click\n\n\n\nWhat can run free\n\nReversible, low-stakes actions: saving a draft, opening a ticket, writing to a staging table\nThe test is blast radius: what is the worst thing a poisoned input could make this tool do?\nStart with everything behind the click; promote actions to automatic only as trust accumulates\n\n\n\n\nOur personal-assistants session builds one of these: an agent that reads your mail and drafts every reply, while the send button stays human."
+  },
+  {
+    "objectID": "slides/5_corporate.html#prompt-injection-risk",
+    "href": "slides/5_corporate.html#prompt-injection-risk",
+    "title": "5. Corporate AI",
+    "section": "Prompt Injection Risk",
+    "text": "Prompt Injection Risk\n\nAn injection is an instruction hidden in text the model reads — a web page, an email, an uploaded file. All three applications can be hijacked by one: data exfiltrated, analysis corrupted, improper actions taken."
+  },
+  {
+    "objectID": "slides/5_corporate.html#solution",
+    "href": "slides/5_corporate.html#solution",
+    "title": "5. Corporate AI",
+    "section": "Solution",
+    "text": "Solution\nIsolation from untrusted sources, by two complementary paths:\n\n\nRestrict the tools\n\nThe agent gets only the tools its job needs\nNo web tools: no page an attacker controls enters the context, and nothing carries data out\nA tool the agent does not have cannot be talked into use\n\n\n\nRestrict egress\n\nRun the agent in a container whose network reaches an allowlist of hosts and nothing else\nGuards even code the model writes and the agent executes"
+  },
+  {
+    "objectID": "slides/5_corporate.html#api-calls",
+    "href": "slides/5_corporate.html#api-calls",
+    "title": "5. Corporate AI",
+    "section": "API Calls",
+    "text": "API Calls"
+  },
+  {
+    "objectID": "slides/5_corporate.html#seats-or-calls",
+    "href": "slides/5_corporate.html#seats-or-calls",
+    "title": "5. Corporate AI",
+    "section": "Seats or Calls",
+    "text": "Seats or Calls"
+  },
+  {
+    "objectID": "slides/5_corporate.html#buying-seats-claude-for-enterprise",
+    "href": "slides/5_corporate.html#buying-seats-claude-for-enterprise",
+    "title": "5. Corporate AI",
+    "section": "Buying Seats: Claude for Enterprise",
+    "text": "Buying Seats: Claude for Enterprise\n\n\nThe seat\n\nEach person gets Claude on web, desktop, and mobile, plus Cowork and Claude Code\nThe applications from our first two sessions, run by Anthropic\nLogin with the company ID, same as email\n\n\n\nThe governance\n\nSSO and automatic provisioning\nAudit logs and a custom data retention policy\nRole-based access: which groups get which features and connectors\n\n\n\nThe bill\n\nA seat fee per person for access, billed annually\nUsage on top: every token in Chat, Cowork, or Code is billed at standard API rates\nAdmins cap spend per person and for the organization\n\n\n\n\nThis is how a company gives everyone Claude: sign one contract, and every employee logs in. Note the billing shape — the seat buys access and governance, and the tokens are metered anyway."
+  },
+  {
+    "objectID": "slides/5_corporate.html#buying-calls-an-api-account",
+    "href": "slides/5_corporate.html#buying-calls-an-api-account",
+    "title": "5. Corporate AI",
+    "section": "Buying Calls: An API Account",
+    "text": "Buying Calls: An API Account\n\n\nWhat it is\n\nNo applications at all — just the model, behind an endpoint on the internet\nA key authenticates; every token is billed to the account\nThe same per-token rates the seats pay for usage\n\n\n\nWhat it is for\n\nSoftware you build: a course tool, a departmental agent, Claude inside an app you already have\nYou choose the model, the system prompt, and the tools\nIncluding — this is the point — which tools do not exist\n\n\n\n\nEither way, usage is per token. The seat buys Anthropic’s applications and the governance around them; the key buys nothing but the model. The rest of this session is the key path — and by the end, the reason a company that owns seats still needs it."
+  },
+  {
+    "objectID": "slides/5_corporate.html#build-a-chatbot",
+    "href": "slides/5_corporate.html#build-a-chatbot",
+    "title": "5. Corporate AI",
+    "section": "Build a Chatbot",
+    "text": "Build a Chatbot"
+  },
+  {
+    "objectID": "slides/5_corporate.html#build-an-agent",
+    "href": "slides/5_corporate.html#build-an-agent",
+    "title": "5. Corporate AI",
+    "section": "Build an Agent",
+    "text": "Build an Agent"
+  },
+  {
+    "objectID": "slides/5_corporate.html#build-an-ai-wrapper-business",
+    "href": "slides/5_corporate.html#build-an-ai-wrapper-business",
+    "title": "5. Corporate AI",
+    "section": "Build an AI Wrapper Business",
+    "text": "Build an AI Wrapper Business"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-wrapper",
+    "href": "slides/5_corporate.html#the-wrapper",
+    "title": "5. Corporate AI",
+    "section": "The Wrapper",
+    "text": "The Wrapper\n\n\nThe product\n\nA custom agent behind a web page, sold to a niche you know — leasing agents, estate lawyers, clinic managers\nYour system prompt, your tools, your document corpus: the session’s whole toolkit, aimed at one trade\nCustomers log in and pay you a monthly subscription\n\n\n\nThe economics\n\nCustomers pay you per seat per month; you pay Anthropic per token\nThe margin is the spread, and it moves with usage — a heavy user can cost more than they pay\nPrompt caching, spending caps, and cheaper models are how you defend it\n\n\n\n\n“Wrapper” is the dismissive name — the model does the intelligence, you “just” wrap it. What is defensible is everything this session built: the domain knowledge encoded in the prompt and tools, the data connections, and the trust that you run it safely."
+  },
+  {
+    "objectID": "slides/5_corporate.html#cheaper-models-one-key-many",
+    "href": "slides/5_corporate.html#cheaper-models-one-key-many",
+    "title": "5. Corporate AI",
+    "section": "Cheaper Models: One Key, Many",
+    "text": "Cheaper Models: One Key, Many\nNothing in the mechanism is Claude-specific. OpenRouter puts one endpoint and one account in front of models from every provider.\n\n\nThe catalog\nAnthropic, OpenAI, Google, DeepSeek, Qwen, Meta, Mistral, and the open-weight models — 400+ text models\n\n\nSwitching is one string\nanthropic/claude-opus-5 → google/gemini-3.6-flash. Same key, same code, same protocol\n\n\nPrice is visible\nInput and output cost per million tokens, context length, latency, and throughput, side by side\n\n\n\nFor an AI business this is the margin lever: prototype on a frontier model, then step down to the cheapest model that still passes your quality checks. The spread between frontier and cheapest-usable is roughly 50x."
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-model-catalog",
+    "href": "slides/5_corporate.html#the-model-catalog",
+    "title": "5. Corporate AI",
+    "section": "The Model Catalog",
+    "text": "The Model Catalog\n\n\n\n\n\n\nSorted by usage; prices are per million tokens — and for many narrow, well-prompted tasks, the models near the bottom of the price list are good enough. Live at openrouter.ai/models."
+  },
+  {
+    "objectID": "slides/5_corporate.html#run-models-locally",
+    "href": "slides/5_corporate.html#run-models-locally",
+    "title": "5. Corporate AI",
+    "section": "Run Models Locally",
+    "text": "Run Models Locally\n\nFor maximum data security\nTo reduce costs — though hardware + IT costs maybe &gt; subscription costs\nTo fine tune — small model trained on your task may be cheap, fast, and accurate\nHardware to run largest models = $ millions, to run smallest = laptop\n\n\n\nPrompt\n\nInstall ollama. Run gemma4:4b."
+  },
+  {
+    "objectID": "slides/5_corporate.html#enterprise-adoption",
+    "href": "slides/5_corporate.html#enterprise-adoption",
+    "title": "5. Corporate AI",
+    "section": "Enterprise Adoption",
+    "text": "Enterprise Adoption\n\n\n\n\n\n\n\n\n\n\n\n\nAnthropic\nOpenAI\nGoogle\nOpen Source\n\n\n\n\nEnterprise LLM spend (Menlo)\n40%\n27%\n21%\n12%\n\n\nCompany usage (Datadog)\n~46% (+23 pts YoY)\n63% of companies\n~37% (+20 pts YoY)\n13% of workloads\n\n\nCode generation (Menlo)\n54%\n21%\n?\n?\n\n\n\n\n\nAnthropic is #1 by enterprise spend; OpenAI is #1 by breadth of adoption. The default enterprise strategy is multi-model — 69% of companies use 3+ models, routing different tasks to different providers. Closed-source models power 85–90% of enterprise workloads."
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-account",
+    "href": "slides/5_corporate.html#the-account",
+    "title": "5. Corporate AI",
+    "section": "The Account",
+    "text": "The Account"
+  },
+  {
+    "objectID": "slides/5_corporate.html#paying-per-token",
+    "href": "slides/5_corporate.html#paying-per-token",
+    "title": "5. Corporate AI",
+    "section": "Paying Per Token",
+    "text": "Paying Per Token\nTokens are the meter for everything: published rates per million tokens in and per million out, billed to the company account.\n\n\nThe software you build\n\nA key authenticates each call; the tokens land on the company bill\nYou choose the model, the system prompt, and the tools — including which tools do not exist\nEverything this session builds pays this way\n\n\n\nAn aside: Anthropic’s apps\n\nCompanies also buy per-seat access to Claude Chat, Cowork, and Code for employees, with company login and admin controls\nThe seat fee covers access; the tokens those apps use are billed at the same per-token rates\n\n\n\n\nOne meter, two line items. The seat side is worth knowing exists; the rest of this session lives on the other side — the software you build."
+  },
+  {
+    "objectID": "slides/5_corporate.html#api-keys",
+    "href": "slides/5_corporate.html#api-keys",
+    "title": "5. Corporate AI",
+    "section": "API Keys",
+    "text": "API Keys\n\n\nGet one\nAt console.anthropic.com — a separate account from claude.ai\n\n\nPer-token billing\nBilled per token used, separate from your subscription\n\n\nNo subscription needed\nYou don’t need a Claude subscription to get an API key, just a credit card\n\n\nIt is a credential\nEquivalent to a username and password — you are billed for anyone who uses it"
+  },
+  {
+    "objectID": "slides/5_corporate.html#claude-enterprise-agreements",
+    "href": "slides/5_corporate.html#claude-enterprise-agreements",
+    "title": "5. Corporate AI",
+    "section": "Claude Enterprise Agreements",
+    "text": "Claude Enterprise Agreements\n\nBilling is per token, like API key accounts\nData processing agreement (and BAA for HIPAA): contractual agreement to protect data, including “do not train” and zero retention\n\n\nHarness rental\n\nAdditional charge per seat to use Claude Chat, Cowork, and Code\nA company could build its own Chat/Cowork/Code version or use open-source versions (OpenCode) to avoid the seat charges"
+  },
+  {
+    "objectID": "slides/5_corporate.html#python-code-for-an-api-call",
+    "href": "slides/5_corporate.html#python-code-for-an-api-call",
+    "title": "5. Corporate AI",
+    "section": "Python Code for an API Call",
+    "text": "Python Code for an API Call\nimport anthropic\n\nclient = anthropic.Anthropic()          # reads ANTHROPIC_API_KEY from .env\n\nresponse = client.messages.create(\n    model=\"claude-opus-4-5\",\n    max_tokens=1024,\n    system=\"You are a research assistant for a finance department.\",\n    messages=[{\"role\": \"user\", \"content\": \"Summarize the Fama-French factors.\"}],\n)\n\nprint(response.content[0].text)\n\nThat is the whole API. You supply the model, the system prompt, and the messages; you get text back. The system line is there only because we put it there — omit it and the model is given no instructions at all."
+  },
+  {
+    "objectID": "slides/5_corporate.html#an-agent-is-a-chatbot-with-tools",
+    "href": "slides/5_corporate.html#an-agent-is-a-chatbot-with-tools",
+    "title": "5. Corporate AI",
+    "section": "An Agent is a Chatbot with Tools",
+    "text": "An Agent is a Chatbot with Tools\n\n\nCode Execution\n\n\n↕\n\n\nUser\n\n\n↔︎\n\n\nAgent\n\n\n↔︎\n\n\nLLM\n\n\n↕\n\n\nOther Tools\n\n\n\nAn agent is a chatbot with tools. You talk to the agent, and the agent talks to the language model. The model itself does nothing but produce text — it cannot open a file or run a calculation. What makes the arrangement powerful is everything hanging off the agent: code execution above, other tools below, whatever has been wired in. The model decides which tool to call, the agent actually calls it, and the result comes back. That separation is the single most useful thing to understand about all of this."
+  },
+  {
+    "objectID": "slides/5_corporate.html#agent-in-more-detail",
+    "href": "slides/5_corporate.html#agent-in-more-detail",
+    "title": "5. Corporate AI",
+    "section": "Agent in More Detail",
+    "text": "Agent in More Detail\n\n\n\n\n\n\nThe loop has five steps. You type a prompt. The agent sends the model the system prompt, the tool definitions, and the whole conversation history. The model returns either text or a request to call a tool. If it is a tool call, the agent executes it — running SQL, listing tables, running Python — and sends the result back, looping to step two. Only when the model returns a final answer does anything reach you. The messages array in the middle grows every turn and carries every tool call and result, which is why long sessions get expensive."
+  },
+  {
+    "objectID": "slides/5_corporate.html#rag-chatbots",
+    "href": "slides/5_corporate.html#rag-chatbots",
+    "title": "5. Corporate AI",
+    "section": "RAG Chatbots",
+    "text": "RAG Chatbots"
+  },
+  {
+    "objectID": "slides/5_corporate.html#employees-in-nothing-out",
+    "href": "slides/5_corporate.html#employees-in-nothing-out",
+    "title": "5. Corporate AI",
+    "section": "Employees In, Nothing Out",
+    "text": "Employees In, Nothing Out\nYour documents are now behind a chat page. Two boundaries make it corporate-grade:\n\n\nOnly your people get in\n\nThe pirate bot is public — anyone with the URL chats on your bill\nAdd a login to the app: employees sign in with company credentials\nOr stronger: deploy it on the company network, unreachable from outside; remote workers arrive by VPN\n\n\n\nAnd nothing gets out\n\nThe chatbot needs to reach exactly two hosts: the Anthropic API and its vector database\nGive it no web tools, and run it in a container whose only exits are those two — built later this session\nA poisoned document can then corrupt an answer, but has no channel to carry your documents away\n\n\n\n\nIngress decides who can read your documents and spend your tokens; egress decides where they could leak. The login is ordinary web-app plumbing; the egress wall is the container section coming up."
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-agent-sdk-is-claude-code-as-a-library",
+    "href": "slides/5_corporate.html#the-agent-sdk-is-claude-code-as-a-library",
+    "title": "5. Corporate AI",
+    "section": "The Agent SDK Is Claude Code as a Library",
+    "text": "The Agent SDK Is Claude Code as a Library\n\n\nThe same engine, free to use\n\nThe SDK is Claude Code’s engine packaged as a library: the same loop, built-in tools, permission system, and MCP support\nNo seat fee — you pay only the per-token API bill\nThe right tool for every purpose-built agent in this deck\n\n\n\nWhat the seat pays for\n\nThe finished apps around that engine: terminal, desktop, IDE extensions\nAuto-updates, continuously tuned system prompts, vendor support\nCompany login, per-user spend caps, audit logs — administration at employee scale\n\n\n\n\nSo the seat charge really is harness rental. Build on the SDK when the agent has one job; rent the harness when four hundred employees need a general assistant on day one and nobody wants to maintain an in-house clone."
+  },
+  {
+    "objectID": "slides/5_corporate.html#an-agent-harness",
+    "href": "slides/5_corporate.html#an-agent-harness",
+    "title": "5. Corporate AI",
+    "section": "An Agent Harness",
+    "text": "An Agent Harness"
+  },
+  {
+    "objectID": "slides/5_corporate.html#rag-retrieval-augmented-generation-chatbot",
+    "href": "slides/5_corporate.html#rag-retrieval-augmented-generation-chatbot",
+    "title": "5. Corporate AI",
+    "section": "RAG (Retrieval Augmented Generation) Chatbot",
+    "text": "RAG (Retrieval Augmented Generation) Chatbot\nImportant category of corporate chatbots. NotebookLM uses this technology.\n\n\nChunk and Embed\nSplit documents into chunks, assign each chunk a vector, store vectors in a database.\n\n\nSimilarity Matching\nWhen a prompt is entered, program (not AI) maps it to a vector and finds the closest chunks in the database.\n\n\nPrompt Augmentation\nChatbot hands chunks and prompt to the LLM."
+  },
+  {
+    "objectID": "slides/5_corporate.html#secure-rag-chatbot",
+    "href": "slides/5_corporate.html#secure-rag-chatbot",
+    "title": "5. Corporate AI",
+    "section": "Secure RAG Chatbot",
+    "text": "Secure RAG Chatbot\nTwo boundaries make a RAG chatbot secure:\n\n\nLimited ingress\n\nAdd a login to the app: employees sign in with company credentials\nOr stronger: deploy on company network, unreachable from outside; remote workers arrive by VPN\n\n\n\nLimited egress\n\nThe chatbot needs to reach exactly two hosts: the Anthropic API and its vector database\nGive it no web tools, and run it in a container whose only exits are those two"
+  },
+  {
+    "objectID": "slides/5_corporate.html#ai-agents",
+    "href": "slides/5_corporate.html#ai-agents",
+    "title": "5. Corporate AI",
+    "section": "AI Agents",
+    "text": "AI Agents"
+  },
+  {
+    "objectID": "slides/5_corporate.html#what-is-an-agent",
+    "href": "slides/5_corporate.html#what-is-an-agent",
+    "title": "5. Corporate AI",
+    "section": "What Is an Agent?",
+    "text": "What Is an Agent?\n\n\nThe chatbot is not an agent — it reads text and writes text\nAn app with a menu is not an agent either. Given the same menu choice, it does the same thing every time\n\n\n\nAn agent is an app that takes actions at the discretion of an LLM. The action could be: search the web, run Python, draft an email, …"
+  },
+  {
+    "objectID": "slides/5_corporate.html#claude-agent-sdk",
+    "href": "slides/5_corporate.html#claude-agent-sdk",
+    "title": "5. Corporate AI",
+    "section": "Claude Agent SDK",
+    "text": "Claude Agent SDK\nEasy way to create agent. Python (or TypeScript) library that defines three types of tools:\n\n\nBuilt-ins\nThe tools Claude Code has — Read, Write, Edit, Bash, WebSearch, WebFetch\n\n\nInternal MCP tools\nPython functions you write, exposed to the model as tools\n\n\nExternal MCP tools\nConnectors — MCP servers to connect to your databases, your inbox, a public data source"
+  },
+  {
+    "objectID": "slides/5_corporate.html#adding-a-connector-in-claude-desktop",
+    "href": "slides/5_corporate.html#adding-a-connector-in-claude-desktop",
+    "title": "5. Corporate AI",
+    "section": "Adding a Connector in Claude Desktop",
+    "text": "Adding a Connector in Claude Desktop\n\n\nStep 1\n\nHome/Customize\nView defaults to Skills page\nScroll down left sidebar to Connectors\n\n\n\nStep 2\n\nChoose Add/Browse Connectors\nLook around\nClose window (X at top right)\n\n\n\nStep 3\n\nChoose Add/Add Custom Connector\nName → EIA\nURL → https://eia.rice-business.org/mcp\nClick Connect"
+  },
+  {
+    "objectID": "slides/5_corporate.html#should-get-here",
+    "href": "slides/5_corporate.html#should-get-here",
+    "title": "5. Corporate AI",
+    "section": "Should Get Here",
+    "text": "Should Get Here"
+  },
+  {
+    "objectID": "slides/5_corporate.html#connectors",
+    "href": "slides/5_corporate.html#connectors",
+    "title": "5. Corporate AI",
+    "section": "Connectors",
+    "text": "Connectors"
+  },
+  {
+    "objectID": "slides/5_corporate.html#mcp-model-context-protocol",
+    "href": "slides/5_corporate.html#mcp-model-context-protocol",
+    "title": "5. Corporate AI",
+    "section": "MCP (Model Context Protocol)",
+    "text": "MCP (Model Context Protocol)\nIntroduced by Anthropic in November 2024. Adopted by OpenAI and Google in spring 2025.\n\n\nThe problem it solves\nSimplifies connecting an AI to external services — data, email, calendars, ticketing\n\n\nServer is a middleman\nDetails of how to connect to a service are coded into an MCP server, which is always on\n\n\nExposes tools, uses them\nServer exposes tools (text descriptions) to the AI, then translates each tool call programmatically into service usage"
+  },
+  {
+    "objectID": "slides/5_corporate.html#claude-prompt",
+    "href": "slides/5_corporate.html#claude-prompt",
+    "title": "5. Corporate AI",
+    "section": "Claude Prompt",
+    "text": "Claude Prompt\n\n\nPrompt\n\nUsing the claude_agent_sdk, create a FastAPI agent app called eia_agent.py that connects to the EIA MCP server at https://eia.rice-business.org/mcp. Create an internal MCP server exposing one tool, run_python, that executes Python for calculations and charts, restricting imports to the data analysis stack and returning charts inline in the chat. The system prompt should say the agent is an energy data analyst and should politely decline questions unrelated to energy data. Set tools=[], permission_mode to dontAsk, and max_turns to 15, and include all of the EIA MCP server’s tools and run_python in allowed_tools.\n\n\ntools=[] means keep none of the built-in Claude agent tools. eia.kerryback.com"
+  },
+  {
+    "objectID": "slides/5_corporate.html#containerize",
+    "href": "slides/5_corporate.html#containerize",
+    "title": "5. Corporate AI",
+    "section": "Containerize",
+    "text": "Containerize\nEven without webFetch and webSearch, this agent could reach the web via Python, which can execute arbitrary terminal commands. So, it needs to live in a container with limited egress."
+  },
+  {
+    "objectID": "slides/5_corporate.html#example-stack",
+    "href": "slides/5_corporate.html#example-stack",
+    "title": "5. Corporate AI",
+    "section": "Example Stack",
+    "text": "Example Stack"
+  },
+  {
+    "objectID": "slides/5_corporate.html#build-an-ai-business",
+    "href": "slides/5_corporate.html#build-an-ai-business",
+    "title": "5. Corporate AI",
+    "section": "Build an AI Business",
+    "text": "Build an AI Business"
+  },
+  {
+    "objectID": "slides/5_corporate.html#the-business",
+    "href": "slides/5_corporate.html#the-business",
+    "title": "5. Corporate AI",
+    "section": "The Business",
+    "text": "The Business\n\n\nThe product\n\nA custom agent behind a web page, sold to a niche you know — leasing agents, estate lawyers, clinic managers\nYour system prompt, your tools, your document corpus: the session’s whole toolkit, aimed at one trade\nCustomers log in and pay you a monthly subscription\n\n\n\nThe economics\n\nCustomers pay you per seat per month; you pay Anthropic per token\nThe margin is the spread, and it moves with usage — a heavy user can cost more than they pay\nPrompt caching, spending caps, and cheaper models are how you defend it"
+  },
+  {
+    "objectID": "slides/5_corporate.html#back-to-building-agents",
+    "href": "slides/5_corporate.html#back-to-building-agents",
+    "title": "5. Corporate AI",
+    "section": "Back to Building Agents",
+    "text": "Back to Building Agents"
+  },
+  {
+    "objectID": "slides/5_corporate.html#cheaper-models-one-key-many-llms",
+    "href": "slides/5_corporate.html#cheaper-models-one-key-many-llms",
+    "title": "5. Corporate AI",
+    "section": "Cheaper Models: One Key, Many LLMs",
+    "text": "Cheaper Models: One Key, Many LLMs\nOpenRouter puts one endpoint and one account in front of models from every provider.\n\n\nThe catalog\nAnthropic, OpenAI, Google, DeepSeek, Qwen, Meta, Mistral, and the open-weight models — 400+ text models\n\n\nSwitching is one string\nanthropic/claude-opus-5 → google/gemini-3.6-flash. Same key, same code, same protocol\n\n\nPrice is visible\nInput and output cost per million tokens, context length, latency, and throughput, side by side\n\n\n\nFor an AI business this is the margin lever: prototype on a frontier model, then step down to the cheapest model that still passes your quality checks."
+  },
+  {
+    "objectID": "slides/5_corporate.html#openrouter-provides-500-models",
+    "href": "slides/5_corporate.html#openrouter-provides-500-models",
+    "title": "5. Corporate AI",
+    "section": "OpenRouter Provides > 500 Models",
+    "text": "OpenRouter Provides &gt; 500 Models\nGet an OpenRouter API key at openrouter.ai.\nProviders bill OpenRouter. You pay OpenRouter (one key, many models).\nConnect your agent or use their chatbot.\nModel list and pricing: openrouter.ai/models"
+  },
+  {
+    "objectID": "slides/5_corporate.html#run-a-model-locally",
+    "href": "slides/5_corporate.html#run-a-model-locally",
+    "title": "5. Corporate AI",
+    "section": "Run a Model Locally",
+    "text": "Run a Model Locally\n\nFor maximum data security, to reduce costs, or to fine tune — small model trained for your task may be cheap, fast, and accurate\nHardware to run largest models = $ millions, to run smallest = laptop\nDownload a model from Hugging Face. Millions of models. huggingface.co/\nDownload and run a model with Ollama.\n\n\n\nPrompt\n\nInstall ollama. Run gemma4:e4b."
+  },
+  {
+    "objectID": "slides/5_corporate.html#build-bill-and-ted",
+    "href": "slides/5_corporate.html#build-bill-and-ted",
+    "title": "5. Corporate AI",
+    "section": "Build Bill and Ted",
+    "text": "Build Bill and Ted\nLet’s start with chatbots, since an agent is just a chatbot with tools.\n\n\nPrompt\n\nBuild a FastAPI chatbot. I want the chatbot to always answer like Bill and Ted. Use the billandted.png image. Use my OpenRouter key in .env and use the Deepseek chat model."
+  },
+  {
+    "objectID": "slides/5_corporate.html#deploy-bill-and-ted",
+    "href": "slides/5_corporate.html#deploy-bill-and-ted",
+    "title": "5. Corporate AI",
+    "section": "Deploy Bill and Ted",
+    "text": "Deploy Bill and Ted\nWith some (easy) initial setup, it is also very easy to deploy it. Free Koyeb account is available. In corporate practice, hand to IT.\n\n\nPrompt\n\nCreate a git repo for the app and push to github as kerryback/billandted. Then create a Koyeb app in the kerrybackapps organization and link the repo. Create a billandted.kerryback.com CNAME record on DN Simple and set it as the custom domain.\n\nbillandted.kerryback.com"
   }
 ]

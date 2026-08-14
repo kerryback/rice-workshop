@@ -366,9 +366,10 @@ page-layout: full
     <div class="item">
       <div class="chip">AUG 14<span class="chip-time">3:00&ndash;4:00 PM</span></div>
       <div class="item-body">
-        <div class="item-title">Student Projects</div>
-        <div class="item-desc">Artifacts, apps, agents</div>
+        <div class="item-title">Corporate AI</div>
+        <div class="item-desc">Enterprise seats vs the API, connectors, a secure data agent, RAG</div>
       </div>
+      <div class="item-links"><span class="has-menu"><a href="slides/5_corporate.html" target="_blank" rel="noopener">Slides</a><span class="submenu"><a href="slides/5_corporate.html" target="_blank" rel="noopener">HTML</a><a href="pdf/5_corporate.pdf" target="_blank" rel="noopener">PDF</a></span></span><span class="sep phantom">&middot;</span><span class="phantom">Files</span></div>
     </div>
 
     <div class="section-head">

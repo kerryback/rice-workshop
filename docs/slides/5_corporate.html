@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Kerry Back Rice Business">
-  <title>5. Student Projects</title>
+  <title>5. Corporate AI</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -131,7 +131,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">5. Student Projects</h1>
+  <h1 class="title">5. Corporate AI</h1>
   <p class="subtitle">Rice Business 2026</p>
 
 <div class="quarto-title-authors">
@@ -143,270 +143,487 @@ Kerry Back<br>Rice Business
 </div>
 
 </section>
-<section id="from-a-prompt-to-a-product" class="slide level2 center">
-<h2>From a Prompt to a Product</h2>
+<section id="enterprise-adoption" class="slide level2 center">
+<h2>Enterprise Adoption</h2>
+<div class="comparison-table">
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Anthropic</th>
+<th>OpenAI</th>
+<th>Google</th>
+<th>Open Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Enterprise LLM spend</strong> (Menlo)</td>
+<td><span class="amber"><strong>40%</strong></span></td>
+<td>27%</td>
+<td>21%</td>
+<td>12%</td>
+</tr>
+<tr class="even">
+<td><strong>Company usage</strong> (Datadog)</td>
+<td>~46% (+23 pts YoY)</td>
+<td><span class="accent"><strong>63%</strong></span> of companies</td>
+<td>~37% (+20 pts YoY)</td>
+<td>13% of workloads</td>
+</tr>
+<tr class="odd">
+<td><strong>Code generation</strong> (Menlo)</td>
+<td><span class="amber"><strong>54%</strong></span></td>
+<td>21%</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="explainer">
+<p>Anthropic is #1 by enterprise spend; OpenAI is #1 by breadth of adoption. The default enterprise strategy is <span class="accent">multi-model</span> — 69% of companies use 3+ models, routing different tasks to different providers. Closed-source models power 85–90% of enterprise workloads.</p>
+</div>
+</section>
+<section id="corporate-applications" class="slide level2 center">
+<h2>Corporate Applications</h2>
 <div class="three-cards">
 <div class="card card-blue">
-<p><span class="card-title">An artifact</span></p>
-<p>A self-contained interactive page Claude builds inside the conversation — a dashboard or calculator you use immediately</p>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">An app</span></p>
-<p>A web page with a form and a backend that does real work — upload data, get a schedule, a chart, a report</p>
+<p><span class="card-title">Talk to Company Data</span></p>
+<p>Agent writes SQL and Python to generate tables, figures, and docs in response to user prompts</p>
 </div>
 <div class="card card-teal">
-<p><span class="card-title">An agent</span></p>
-<p>An app whose menus are replaced by plain language and a model that decides which tools to use</p>
-</div>
-</div>
-<div class="explainer">
-<p>Students describe what they want; Claude writes the code, runs it, and can put it online. To assign or grade any of this, it helps to know what a piece of software actually is.</p>
-</div>
-</section>
-<section id="how-software-works" class="slide level2 section-divider center">
-<h2>How Software Works</h2>
-</section>
-<section id="frontends-and-backends" class="slide level2 center">
-<h2>Frontends and Backends</h2>
-<div class="three-cards">
-<div class="card card-blue">
-<p><span class="card-title">Runs in a browser</span></p>
-<ul>
-<li>You open a URL</li>
-<li>The browser runs the <span class="accent">frontend</span> — HTML, CSS, JavaScript</li>
-<li>Clicks send a request to the <span class="accent">backend</span>, which does the work and replies</li>
-</ul>
+<p><span class="card-title">Talk to Company Documents</span></p>
+<p>Embed doc chunks in a vector database; find similar chunks and add to the prompt for LLM analysis</p>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">Looks native, but isn’t</span></p>
+<p><span class="card-title">Take Actions</span></p>
+<p>Give the agent tools to update an ERP, file a ticket, send an invoice</p>
+</div>
+</div>
+</section>
+<section id="prompt-injection-risk" class="slide level2 center">
+<h2>Prompt Injection Risk</h2>
+<div class="highlight-box">
+<p>An injection is an instruction hidden in text the model reads — a web page, an email, an uploaded file. All three applications can be hijacked by one: data exfiltrated, analysis corrupted, improper actions taken.</p>
+</div>
+</section>
+<section id="solution" class="slide level2 center">
+<h2>Solution</h2>
+<p>Isolation from untrusted sources, by two complementary paths:</p>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">Restrict the tools</span></p>
 <ul>
-<li>Slack, Spotify, Discord</li>
-<li>Each ships a stripped-down browser inside the app</li>
-<li>Same frontend/backend split underneath</li>
+<li>The agent gets only the tools its job needs</li>
+<li>No web tools: no page an attacker controls enters the context, and nothing carries data out</li>
+<li>A tool the agent does not have cannot be talked into use</li>
 </ul>
 </div>
 <div class="card card-teal">
-<p><span class="card-title">See it yourself</span></p>
+<p><span class="card-title">Restrict egress</span></p>
 <ul>
-<li>Right-click any page → “View Page Source”</li>
-<li>That HTML, CSS, and JavaScript is the frontend</li>
-<li>Served by the backend the browser connected to</li>
+<li>Run the agent in a container whose network reaches an allowlist of hosts and nothing else</li>
+<li>Guards even code the model writes and the agent executes</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="running-it-locally" class="slide level2 center">
-<h2>Running It Locally</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">127.0.0.1 — “localhost”</span></p>
-<ul>
-<li>The loopback address: traffic never leaves your machine</li>
-<li>Browser and server both on your own computer</li>
-<li>Where every app starts life before it goes online</li>
-</ul>
+<section id="todays-session" class="slide level2 center">
+<h2>Today’s Session</h2>
+<div class="step-flow-6">
+<div class="step-card fragment">
+<div class="step-icon">
+<p>1</p>
 </div>
-<div class="card card-amber">
-<p><span class="card-title">Ports</span></p>
-<ul>
-<li>A number saying which program should receive a request</li>
-<li>A local server often listens on 8000 → visit 127.0.0.1:8000</li>
-<li>Several servers can run at once, each on its own port</li>
-</ul>
+<div class="step-title">
+<p>API Calls</p>
+</div>
+<div class="step-desc">
+<p>Keys and billing, and what the raw API does not come with</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Build a Chatbot</p>
+</div>
+<div class="step-desc">
+<p>Two prompts to build, two to deploy — then the RAG version</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>AI Agents</p>
+</div>
+<div class="step-desc">
+<p>A chatbot with tools, and the three kinds the SDK offers</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>4</p>
+</div>
+<div class="step-title">
+<p>Connectors</p>
+</div>
+<div class="step-desc">
+<p>MCP, and adding one to Claude Desktop yourself</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>5</p>
+</div>
+<div class="step-title">
+<p>Build an Agent</p>
+</div>
+<div class="step-desc">
+<p>An energy data agent, in a container with no way out</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>6</p>
+</div>
+<div class="step-title">
+<p>An AI Business</p>
+</div>
+<div class="step-desc">
+<p>Sell it per seat, and defend the margin on cheaper models</p>
+</div>
 </div>
 </div>
 <div class="explainer">
-<p>When you deploy to the cloud, 127.0.0.1 becomes a real domain name — the app code stays the same.</p>
+<p>The same two questions run through every step: which tools does it have, and what can it reach?</p>
 </div>
 </section>
-<section id="a-very-small-app" class="slide level2 center">
-<h2>A Very Small App</h2>
-<pre><code>from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+<section id="api-calls" class="slide level2 section-divider center">
+<h2>API Calls</h2>
+</section>
+<section id="python-code-for-an-api-call" class="slide level2 center">
+<h2>Python Code for an API Call</h2>
+<pre><code>import anthropic
 
-app = FastAPI()
+client = anthropic.Anthropic()          # reads ANTHROPIC_API_KEY from .env
 
-@app.get("/")
-def home():
-    return HTMLResponse("&lt;h1&gt;Hello, world!&lt;/h1&gt;")</code></pre>
+response = client.messages.create(
+    model="claude-opus-4-5",
+    max_tokens=1024,
+    system="You are a research assistant for a finance department.",
+    messages=[{"role": "user", "content": "Summarize the Fama-French factors."}],
+)
+
+print(response.content[0].text)</code></pre>
 <div class="explainer">
-<p>Serve it (Claude can do this for you), open 127.0.0.1:8000, and the browser sends “GET /”, the server returns the HTML, and you see “Hello, world!” That is the whole shape of a web app — everything else is more of the same.</p>
+<p>That is the whole API. You supply the model, the system prompt, and the messages; you get text back. The <code>system</code> line is there only because we put it there — omit it and the model is given no instructions at all.</p>
 </div>
 </section>
-<section id="artifacts" class="slide level2 section-divider center">
-<h2>Artifacts</h2>
+<section id="what-does-not-come-with-it" class="slide level2 center">
+<h2>What Does Not Come With It</h2>
+<div class="four-cards">
+<div class="card card-red">
+<p><span class="card-title">No system prompt</span></p>
+<p>Nothing tells the model who it is, what it may refuse, or what house style to use. The field is empty until you fill it.</p>
+</div>
+<div class="card card-red">
+<p><span class="card-title">No conversation</span></p>
+<p>Each call is answered in isolation. The model has no idea you spoke to it thirty seconds ago.</p>
+</div>
+<div class="card card-red">
+<p><span class="card-title">No tools</span></p>
+<p>No web search, no file reading, no code execution. It reads text and writes text.</p>
+</div>
+<div class="card card-red">
+<p><span class="card-title">No memory</span></p>
+<p>Nothing is stored between calls. No history, no preferences, no notes about you.</p>
+</div>
+</div>
+<div class="card-dark">
+<p>Claude Desktop and Claude Code are <em>applications</em> built on this API. The system prompt, the running conversation, the tools, the memory are things Anthropic wrote on top.</p>
+</div>
 </section>
-<section id="the-fastest-path-to-a-working-thing" class="slide level2 center">
-<h2>The Fastest Path to a Working Thing</h2>
-<div class="two-cards">
+<section id="api-keys" class="slide level2 center">
+<h2>API Keys</h2>
+<div class="four-cards">
 <div class="card card-blue">
-<p><span class="card-title">What you get</span></p>
-<ul>
-<li>An interactive page — dashboard, calculator, visualization — built right in the chat</li>
-<li>Use it instantly; ask for changes in the same conversation</li>
-<li>Publish a link, or download it as a single HTML file</li>
-</ul>
+<p><span class="card-title">Get one</span></p>
+<p>At <a href="https://console.anthropic.com">console.anthropic.com</a> — a separate account from claude.ai</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">Per-token billing</span></p>
+<p>Billed per token used, separate from your subscription</p>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">When to use it</span></p>
+<p><span class="card-title">No subscription needed</span></p>
+<p>You don’t need a Claude subscription to get an API key, just a credit card</p>
+</div>
+<div class="card card-red">
+<p><span class="card-title">It is a credential</span></p>
+<p>Equivalent to a username and password — you are billed for anyone who uses it</p>
+</div>
+</div>
+</section>
+<section id="claude-enterprise-agreements" class="slide level2 center">
+<h2>Claude Enterprise Agreements</h2>
 <ul>
-<li>The shortest distance from idea to a shareable tool</li>
-<li>No terminal, no server to run</li>
-<li>Great for a one-off tool, a demo, or a student’s first build</li>
+<li>Billing is per token, like API key accounts</li>
+<li>Data processing agreement (and BAA for HIPAA): contractual agreement to protect data, including “do not train” and zero retention</li>
 </ul>
-</div>
-</div>
-<div class="explainer">
-<p>No backend, no deployment — everything runs in the browser. Perfect for a self-contained computation that doesn’t need a database.</p>
-</div>
-</section>
-<section id="standalone-apps-in-the-browser" class="slide level2 center">
-<h2>Standalone Apps in the Browser</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/workover-pyodide-result.png" class="quarto-figure quarto-figure-center" style="width:58.0%"></p>
-</figure>
-</div>
-<div class="explainer">
-<p>Python runs inside the browser through WebAssembly (Pyodide). The entire app — form, logic, and charts — lives in one HTML file. No server, no install, nothing for the user to set up.</p>
-</div>
-</section>
-<section id="a-real-one-students-build" class="slide level2 center">
-<h2>A Real One Students Build</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/workover_app.png" class="quarto-figure quarto-figure-center" style="width:54.0%"></p>
-</figure>
-</div>
-<div class="explainer">
-<p>Upload data, click a button, get back a schedule, a route map, and a chart. The backend runs verified Python; the frontend is a simple upload form and a results page. This is a graded deliverable that either works or it doesn’t.</p>
-</div>
-</section>
-<section id="agents" class="slide level2 section-divider center">
-<h2>Agents</h2>
-</section>
-<section id="a-chatbot-that-can-act" class="slide level2 center">
-<h2>A Chatbot That Can Act</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">Chatbot</span></p>
-<ul>
-<li>User ↔︎ chatbot ↔︎ model</li>
-<li>Each turn sends the user’s prompt, a system prompt, and the history</li>
-<li>It produces text — nothing more</li>
-</ul>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">Agent</span></p>
-<ul>
-<li>The same loop, plus <span class="accent">tools</span></li>
-<li>The model can run code, query a database, call an API</li>
-<li>It decides which tool to use, reads the result, and continues</li>
-</ul>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/agent_anatomy.png" class="quarto-figure quarto-figure-center" style="width:62.0%"></p>
-</figure>
-</div>
-</section>
-<section id="what-makes-it-an-agent" class="slide level2 center">
-<h2>What Makes It an Agent</h2>
 <div class="info-box">
-<div class="box-title">
-<p>The designer holds every dial</p>
-</div>
-<ol type="1">
-<li>The <span class="accent">system prompt</span> — the agent’s role, rules, and refusals</li>
-<li>The <span class="accent">tools</span> it is given — and, just as important, the ones it is <em>not</em></li>
-<li>The <span class="accent">permission mode</span> — what it may do without asking</li>
-<li>Limits — how many steps, which actions need a human’s yes</li>
-</ol>
-</div>
-<div class="explainer">
-<p>An agent is not a different technology. It is a model, a system prompt, and a carefully chosen set of tools — the anatomy from session one, assembled into something that works on its own.</p>
+<p><span class="box-title">Harness rental</span></p>
+<ul>
+<li>Additional charge per seat to use Claude Chat, Cowork, and Code</li>
+<li>A company could build its own Chat/Cowork/Code version or use open-source versions (OpenCode) to avoid the seat charges</li>
+</ul>
 </div>
 </section>
-<section id="example-a-database-agent" class="slide level2 center">
-<h2>Example: A Database Agent</h2>
+<section id="an-agent-harness" class="slide level2 center">
+<h2>An Agent Harness</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/northwind_agent_chat.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="images/agent_anatomy.png" class="quarto-figure quarto-figure-center" style="width:75.0%"></p>
 </figure>
 </div>
-<div class="explainer">
-<p>Ask a business question in plain English; the agent writes SQL, runs it against the database, and answers. The guardrail is built in — it is allowed to <em>read</em> the database but never to change it. Students build this against real data.</p>
+</section>
+<section id="build-a-chatbot" class="slide level2 section-divider center">
+<h2>Build a Chatbot</h2>
+</section>
+<section id="build-bill-and-ted" class="slide level2 center">
+<h2>Build Bill and Ted</h2>
+<p>Let’s start with chatbots, since an agent is just a chatbot with tools.</p>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>Build a FastAPI chatbot. I want the chatbot to always answer like Bill and Ted. Use the billandted.png image. Use my OpenRouter key in .env and use the Deepseek chat model.</p>
 </div>
 </section>
-<section id="building-it-the-agent-sdk" class="slide level2 center">
-<h2>Building It: The Agent SDK</h2>
+<section id="deploy-bill-and-ted" class="slide level2 center">
+<h2>Deploy Bill and Ted</h2>
+<p>With some (easy) initial setup, it is also very easy to deploy it. Free Koyeb account is available. In corporate practice, hand to IT.</p>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>Create a git repo for the app and push to github as kerryback/billandted. Then create a Koyeb app in the kerrybackapps organization and link the repo. Create a billandted.kerryback.com CNAME record on DN Simple and set it as the custom domain.</p>
+</div>
+<p><a href="https://billandted.kerryback.com">billandted.kerryback.com</a></p>
+</section>
+<section id="rag-retrieval-augmented-generation-chatbot" class="slide level2 center">
+<h2>RAG (Retrieval Augmented Generation) Chatbot</h2>
+<p>Important category of corporate chatbots. NotebookLM uses this technology.</p>
+<div class="three-cards">
+<div class="card card-blue">
+<p><span class="card-title">Chunk and Embed</span></p>
+<p>Split documents into chunks, assign each chunk a vector, store vectors in a database.</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">Similarity Matching</span></p>
+<p>When a prompt is entered, program (not AI) maps it to a vector and finds the closest chunks in the database.</p>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">Prompt Augmentation</span></p>
+<p>Chatbot hands chunks and prompt to the LLM.</p>
+</div>
+</div>
+</section>
+<section id="secure-rag-chatbot" class="slide level2 center">
+<h2>Secure RAG Chatbot</h2>
+<p>Two boundaries make a RAG chatbot secure:</p>
 <div class="two-cards">
 <div class="card card-blue">
-<p><span class="card-title">The pieces</span></p>
+<p><span class="card-title">Limited ingress</span></p>
 <ul>
-<li>An API key from the Anthropic console, kept in a <code>.env</code> file</li>
-<li>The Agent SDK: a few lines to give the model tools and run the loop</li>
-<li>Your tools are just Python functions the model may call</li>
+<li>Add a login to the app: employees sign in with company credentials</li>
+<li>Or stronger: deploy on company network, unreachable from outside; remote workers arrive by VPN</li>
+</ul>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">Limited egress</span></p>
+<ul>
+<li>The chatbot needs to reach exactly two hosts: the Anthropic API and its vector database</li>
+<li>Give it no web tools, and run it in a container whose only exits are those two</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ai-agents" class="slide level2 section-divider center">
+<h2>AI Agents</h2>
+</section>
+<section id="what-is-an-agent" class="slide level2 center">
+<h2>What Is an Agent?</h2>
+<div class="highlight-box">
+<ul>
+<li>The chatbot is not an agent — it reads text and writes text</li>
+<li>An app with a menu is not an agent either. Given the same menu choice, it does the same thing every time</li>
+</ul>
+</div>
+<div class="card-dark fragment">
+<p>An agent is an app that takes actions at the discretion of an LLM. The action could be: search the web, run Python, draft an email, …</p>
+</div>
+</section>
+<section id="claude-agent-sdk" class="slide level2 center">
+<h2>Claude Agent SDK</h2>
+<p>Easy way to create agent. Python (or TypeScript) library that defines three types of tools:</p>
+<div class="three-cards">
+<div class="card card-blue">
+<p><span class="card-title">Built-ins</span></p>
+<p>The tools Claude Code has — Read, Write, Edit, Bash, WebSearch, WebFetch</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">Internal MCP tools</span></p>
+<p>Python functions you write, exposed to the model as tools</p>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">External MCP tools</span></p>
+<p>Connectors — MCP servers to connect to your databases, your inbox, a public data source</p>
+</div>
+</div>
+</section>
+<section id="connectors" class="slide level2 section-divider center">
+<h2>Connectors</h2>
+</section>
+<section id="mcp-model-context-protocol" class="slide level2 center">
+<h2>MCP (Model Context Protocol)</h2>
+<p>Introduced by Anthropic in November 2024. Adopted by OpenAI and Google in spring 2025.</p>
+<div class="three-cards">
+<div class="card card-blue">
+<p><span class="card-title">The problem it solves</span></p>
+<p>Simplifies connecting an AI to external services — data, email, calendars, ticketing</p>
+</div>
+<div class="card card-teal">
+<p><span class="card-title">Server is a middleman</span></p>
+<p>Details of how to connect to a service are coded into an MCP server, which is always on</p>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">Exposes tools, uses them</span></p>
+<p>Server exposes tools (text descriptions) to the AI, then translates each tool call programmatically into service usage</p>
+</div>
+</div>
+</section>
+<section id="adding-a-connector-in-claude-desktop" class="slide level2 center">
+<h2>Adding a Connector in Claude Desktop</h2>
+<div class="three-cards">
+<div class="card-blue">
+<p><span class="card-title">Step 1</span></p>
+<ul>
+<li>Home/Customize</li>
+<li>View defaults to Skills page</li>
+<li>Scroll down left sidebar to Connectors</li>
+</ul>
+</div>
+<div class="card-amber">
+<p><span class="card-title">Step 2</span></p>
+<ul>
+<li>Choose Add/Browse Connectors</li>
+<li>Look around</li>
+<li>Close window (X at top right)</li>
+</ul>
+</div>
+<div class="card-teal">
+<p><span class="card-title">Step 3</span></p>
+<ul>
+<li>Choose Add/Add Custom Connector</li>
+<li>Name → EIA</li>
+<li>URL → https://eia.rice-business.org/mcp</li>
+<li>Click Connect</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="should-get-here" class="slide level2 center">
+<h2>Should Get Here</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/eia-connector-added.png" class="quarto-figure quarto-figure-center" style="width:62.0%"></p>
+</figure>
+</div>
+</section>
+<section id="back-to-building-agents" class="slide level2 section-divider center">
+<h2>Back to Building Agents</h2>
+</section>
+<section id="claude-prompt" class="slide level2 center">
+<h2>Claude Prompt</h2>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
+</div>
+<p>Using the claude_agent_sdk, create a FastAPI agent app called eia_agent.py that connects to the EIA MCP server at https://eia.rice-business.org/mcp. Create an internal MCP server exposing one tool, run_python, that executes Python for calculations and charts, restricting imports to the data analysis stack and returning charts inline in the chat. The system prompt should say the agent is an energy data analyst and should politely decline questions unrelated to energy data. Set tools=[], permission_mode to dontAsk, and max_turns to 15, and include all of the EIA MCP server’s tools and run_python in allowed_tools.</p>
+</div>
+<div class="explainer">
+<p><code>tools=[]</code> means keep none of the built-in Claude agent tools. <a href="https://eia.kerryback.com">eia.kerryback.com</a></p>
+</div>
+</section>
+<section id="containerize" class="slide level2 center">
+<h2>Containerize</h2>
+<p>Even without <code>webFetch</code> and <code>webSearch</code>, this agent could reach the web via Python, which can execute arbitrary terminal commands. So, it needs to live in a container with limited egress.</p>
+</section>
+<section id="example-stack" class="slide level2 center">
+<h2>Example Stack</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/databot_arch.png" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+</figure>
+</div>
+</section>
+<section id="build-an-ai-business" class="slide level2 section-divider center">
+<h2>Build an AI Business</h2>
+</section>
+<section id="the-business" class="slide level2 center">
+<h2>The Business</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">The product</span></p>
+<ul>
+<li>A custom agent behind a web page, sold to a niche you know — leasing agents, estate lawyers, clinic managers</li>
+<li>Your system prompt, your tools, your document corpus: the session’s whole toolkit, aimed at one trade</li>
+<li>Customers log in and pay you a monthly subscription</li>
 </ul>
 </div>
 <div class="card card-amber">
-<p><span class="card-title">The safety dials</span></p>
+<p><span class="card-title">The economics</span></p>
 <ul>
-<li>Allowed tools and disallowed tools — an explicit list</li>
-<li>Permission modes — from “ask me every time” to “run freely”</li>
-<li>Start restrictive; loosen only what you trust</li>
+<li>Customers pay you per seat per month; you pay Anthropic per token</li>
+<li>The margin is the spread, and it moves with usage — a heavy user can cost more than they pay</li>
+<li>Prompt caching, spending caps, and cheaper models are how you defend it</li>
 </ul>
 </div>
 </div>
-<div class="explainer">
-<p>The first and best guardrail is a tool the agent simply does not have. If it cannot send email or delete files, no clever prompt can make it.</p>
-</div>
 </section>
-<section id="going-live" class="slide level2 section-divider center">
-<h2>Going Live</h2>
+<section id="openrouter-provides-500-models" class="slide level2 center">
+<h2>OpenRouter Provides &gt; 500 Models</h2>
+<p>Get an OpenRouter API key at <a href="https://openrouter.ai">openrouter.ai</a>.</p>
+<p>Providers bill OpenRouter. You pay OpenRouter (one key, many models).</p>
+<p>Connect your agent or use their chatbot.</p>
+<p>Model list and pricing: <a href="https://openrouter.ai/models">openrouter.ai/models</a></p>
 </section>
-<section id="two-paths-to-a-public-url" class="slide level2 center">
-<h2>Two Paths to a Public URL</h2>
-<div class="two-cards">
-<div class="card card-blue">
-<p><span class="card-title">GitHub Pages — static &amp; Pyodide</span></p>
+<section id="run-a-model-locally" class="slide level2 center">
+<h2>Run a Model Locally</h2>
 <ul>
-<li>Name the page <code>index.html</code>, push, turn on Pages</li>
-<li>Live at a <code>github.io</code> address, free, no server</li>
-<li>Good for artifacts and browser-only apps</li>
+<li>For maximum data security, to reduce costs, or to fine tune — small model trained for your task may be cheap, fast, and accurate</li>
+<li>Hardware to run largest models = $ millions, to run smallest = laptop</li>
+<li>Download a model from Hugging Face. Millions of models. <a href="https://huggingface.co/">huggingface.co/</a></li>
+<li>Download and run a model with Ollama.</li>
 </ul>
+<div class="card-dark">
+<div class="card-title">
+<p>Prompt</p>
 </div>
-<div class="card card-amber">
-<p><span class="card-title">A PaaS — apps &amp; agents</span></p>
-<ul>
-<li>Koyeb, Railway, Render go from a GitHub repo to a running service</li>
-<li>They handle the packaging; you skip the server plumbing</li>
-<li>The path for anything with a backend</li>
-</ul>
+<p>Install ollama. Run gemma4:e4b.</p>
 </div>
-</div>
-<div class="explainer">
-<p>After you create the account, Claude Code can do the rest — build, configure, and deploy. From a laptop to a public link is a short trip.</p>
-</div>
-</section>
-<section id="why-this-belongs-in-your-course" class="slide level2 centered-statement center">
-<h2>Why This Belongs in Your Course</h2>
-<div class="card card-dark">
-<p>A student who builds an artifact, an app, or an agent has to <span class="accent">decide what it should do</span> and <span class="accent">judge whether it works.</span> The building is now easy; the design and the verification are the learning — and the deliverable either runs or it doesn’t.</p>
-</div>
-</section>
-<section id="breakout" class="slide level2 section-divider center">
-<h2>Breakout</h2>
-</section>
-<section id="questions-to-discuss" class="slide level2 center">
-<h2>Questions to Discuss</h2>
-<ul>
-<li>What tool do you wish existed for your field that a student could build in a week?</li>
-<li>Would it be an artifact, an app, or an agent — and why?</li>
-<li>If students built an agent on real data, what tools would you <em>withhold</em> from it?</li>
-<li>What would you look at to grade it — the finished tool, the code, or how they defend its design?</li>
-</ul>
 
 
 </section>
