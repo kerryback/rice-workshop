@@ -627,7 +627,7 @@
     "href": "slides/5_corporate.html#run-a-model-locally",
     "title": "5. Corporate AI",
     "section": "Run a Model Locally",
-    "text": "Run a Model Locally\n\nFmallesor maximum data security, to reduce costs, or to fine tune — small model trained for your task may be cheap, fast, and accurate\nHardware to run largest models = $ millions, to run st = laptop\nDownload a model from Hugging Face. Millions of models. huggingface.co/\nDownload and run a model with Ollama.\n\n\n\nPrompt\n\nInstall ollama. Run gemma4:e4b."
+    "text": "Run a Model Locally\n\nFor maximum data security, to reduce costs, or to fine tune — small model trained for your task may be cheap, fast, and accurate\nHardware to run largest models = $ millions, to run smallest = laptop\nDownload a model from Hugging Face. Millions of models. huggingface.co/\nDownload and run a model with Ollama.\n\n\n\nPrompt\n\nInstall ollama. Run gemma4:e4b."
   },
   {
     "objectID": "slides/3_teaching.html#workshop-overview",
