@@ -1,0 +1,549 @@
+<title>multiples — protocols</title>
+<style>
+  :root {
+    --ground: #FBFBFC;
+    --raised: #FFFFFF;
+    --ink:    #16191F;
+    --muted:  #5B6573;
+    --rule:   #E3E6EB;
+    --accent: #1C5E59;
+    --accent-soft: #E8F1F0;
+    --caution: #8C5620;
+    --caution-soft: #FAF1E7;
+    --code-bg: #F3F5F7;
+    --measure: 70ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #12141A; --raised: #181B22; --ink: #E7E9ED; --muted: #98A2B1;
+      --rule: #2A2F39; --accent: #6FBFB4; --accent-soft: #16302E;
+      --caution: #D9A46B; --caution-soft: #2A2117; --code-bg: #1E222A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #12141A; --raised: #181B22; --ink: #E7E9ED; --muted: #98A2B1;
+    --rule: #2A2F39; --accent: #6FBFB4; --accent-soft: #16302E;
+    --caution: #D9A46B; --caution-soft: #2A2117; --code-bg: #1E222A;
+  }
+  :root[data-theme="light"] {
+    --ground: #FBFBFC; --raised: #FFFFFF; --ink: #16191F; --muted: #5B6573;
+    --rule: #E3E6EB; --accent: #1C5E59; --accent-soft: #E8F1F0;
+    --caution: #8C5620; --caution-soft: #FAF1E7; --code-bg: #F3F5F7;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { display: grid; grid-template-columns: 1fr; gap: 0; }
+  @media (min-width: 1080px) {
+    .page { grid-template-columns: 15rem minmax(0,1fr); max-width: 78rem; margin-inline: auto; }
+  }
+
+  nav.toc { display: none; }
+  @media (min-width: 1080px) {
+    nav.toc {
+      display: block; position: sticky; top: 0; align-self: start;
+      max-height: 100vh; overflow-y: auto; padding: 3.5rem 1rem 3rem 1.5rem;
+      border-right: 1px solid var(--rule); font-size: .82rem;
+    }
+    nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
+    nav.toc a { color: var(--muted); text-decoration: none; }
+    nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+    nav.toc .eyebrow { color: var(--ink); font-weight: 600; letter-spacing: .07em;
+                       text-transform: uppercase; font-size: .68rem; margin-bottom: .9rem; }
+  }
+
+  main { padding: 3.5rem 1.5rem 6rem; min-width: 0; }
+  .wrap { max-width: var(--measure); }
+
+  h1 { font-family: "Iowan Old Style", Georgia, "Times New Roman", serif;
+       font-size: clamp(2rem, 4vw, 2.7rem); line-height: 1.12; margin: 0 0 .4rem;
+       letter-spacing: -.015em; text-wrap: balance; font-weight: 600; }
+  h2 { font-family: "Iowan Old Style", Georgia, serif; font-size: 1.45rem; font-weight: 600;
+       margin: 3.2rem 0 .3rem; letter-spacing: -.01em; text-wrap: balance;
+       padding-top: 1.6rem; border-top: 1px solid var(--rule); }
+  h3 { font-size: 1rem; font-weight: 650; margin: 1.9rem 0 .3rem; letter-spacing: -.005em; }
+  h2 + p.lede { color: var(--muted); margin-top: .35rem; }
+  p, ul, ol { margin: .8rem 0; }
+  li { margin: .3rem 0; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  strong { font-weight: 650; }
+
+  .standfirst { font-size: 1.06rem; color: var(--muted); max-width: 62ch; }
+  .kicker { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+            color: var(--accent); font-weight: 650; margin-bottom: .7rem; }
+
+  code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+         font-size: .875em; background: var(--code-bg); padding: .12em .35em;
+         border-radius: 3px; }
+  pre { background: var(--code-bg); border: 1px solid var(--rule); border-radius: 6px;
+        padding: .85rem 1rem; overflow-x: auto; margin: .9rem 0; }
+  pre code { background: none; padding: 0; font-size: .82rem; line-height: 1.55; }
+
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .9rem;
+          font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: .5rem .7rem; border-bottom: 1px solid var(--rule);
+           vertical-align: top; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 650; }
+  td code { white-space: nowrap; }
+  .scroll { overflow-x: auto; }
+
+  .note, .warn {
+    border-left: 3px solid var(--accent); background: var(--accent-soft);
+    padding: .85rem 1.1rem; margin: 1.2rem 0; border-radius: 0 5px 5px 0; font-size: .94rem;
+  }
+  .warn { border-left-color: var(--caution); background: var(--caution-soft); }
+  .note p:first-child, .warn p:first-child { margin-top: 0; }
+  .note p:last-child, .warn p:last-child { margin-bottom: 0; }
+  .warn .label, .note .label { display: block; font-size: .68rem; letter-spacing: .09em;
+        text-transform: uppercase; font-weight: 700; margin-bottom: .3rem; }
+  .warn .label { color: var(--caution); }
+  .note .label { color: var(--accent); }
+
+  ol.steps { list-style: none; counter-reset: step; padding: 0; }
+  ol.steps > li { counter-increment: step; position: relative; padding-left: 2.6rem;
+                  margin: 1.6rem 0; }
+  ol.steps > li::before {
+    content: counter(step); position: absolute; left: 0; top: -.1rem;
+    width: 1.75rem; height: 1.75rem; border-radius: 50%;
+    background: var(--accent); color: var(--ground);
+    display: grid; place-items: center; font-size: .82rem; font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  ol.steps > li > h3 { margin-top: 0; }
+
+  .tree { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .8rem;
+          line-height: 1.7; }
+  .tree .c { color: var(--muted); }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .85rem; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+</style>
+
+<div class="page">
+<nav class="toc">
+  <div class="eyebrow">Contents</div>
+  <ol>
+    <li><a href="#layout">Where things live</a></li>
+    <li><a href="#roles">Analyst &amp; Replicator</a></li>
+    <li><a href="#data">Data &amp; the canonical panel</a></li>
+    <li><a href="#state">The state file</a></li>
+    <li><a href="#lock">One round at a time</a></li>
+    <li><a href="#debate">The debate team</a></li>
+    <li><a href="#logging">Logging</a></li>
+    <li><a href="#dag">The DAG</a></li>
+    <li><a href="#hooks">Hooks</a></li>
+    <li><a href="#commands">Three commands</a></li>
+    <li><a href="#overleaf">Overleaf</a></li>
+    <li><a href="#day">A working day</a></li>
+    <li><a href="#traps">Traps</a></li>
+  </ol>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="kicker">multiples · working protocols</div>
+  <h1>Protocols</h1>
+  <p class="standfirst">How we work in this repository: where things live, how the two
+  builds stay independent, what gets logged, and the rules that are not negotiable.
+  Nothing here is about the paper itself — for that read
+  <code>project/global/state.md</code>.</p>
+
+  <div class="note">
+    <span class="label">The name behind everything</span>
+    <p>Your <code>git config user.name</code>, lower-cased and hyphenated, is the name of
+    every folder you own — code, data, notes, logs: <code>kerry-back</code>,
+    <code>kevin-crotty</code>, <code>bob-dittmar</code>. It is set once and then never
+    thought about again, but if it is ever wrong, work lands in a folder nobody reads and
+    nothing errors.</p>
+  </div>
+
+  <h2 id="layout">Where things live</h2>
+  <p class="lede">Three roots, and one rule: <strong>shared things are in
+  <code>global</code>; everything else is named after its owner.</strong></p>
+
+  <div class="scroll">
+  <pre class="tree"><code>multiples/                        <span class="c">the git repo — code, drafts, memory</span>
+├── CLAUDE.md                     <span class="c">the operating manual (Claude reads this)</span>
+├── protocols.html                <span class="c">this page</span>
+├── writing-guide.md              <span class="c">the prose standard for anything in draft/</span>
+├── draft/                        <span class="c">SHARED — the paper</span>
+│   ├── main.tex  ia.tex
+│   ├── references.bib            <span class="c">every entry has a verified DOI</span>
+│   ├── figures/   tables/
+├── project/                      <span class="c">memory</span>
+│   ├── global/                   <span class="c">SHARED — what we all agree on</span>
+│   │   ├── state.md              <span class="c">thesis, settled facts, killed ideas</span>
+│   │   ├── method_spec.md        <span class="c">the frozen spec for the current round</span>
+│   │   ├── verifier.md           <span class="c">settled facts about the literature</span>
+│   │   ├── data_manifest.md      <span class="c">what is canonical, and why</span>
+│   │   └── config.toml           <span class="c">the debate roster</span>
+│   ├── kerry-back/               <span class="c">ONE PER PERSON — nobody else writes here</span>
+│   ├── kevin-crotty/
+│   └── bob-dittmar/
+│       ├── session.md            <span class="c">your handoff between sessions</span>
+│       ├── analyst.md  replicator.md
+│       └── logs/                 <span class="c">run records, briefs, event log</span>
+├── workspaces/
+│   ├── global/params.py          <span class="c">SHARED — the frozen spec, as code</span>
+│   ├── kerry-back/  bob-dittmar/ <span class="c">ONE PER PERSON</span>
+│   └── kevin-crotty/
+│       ├── analyst/              <span class="c">your primary build</span>
+│       ├── replicator/           <span class="c">your independent re-build</span>
+│       ├── archive/              <span class="c">superseded work, kept for the record</span>
+│       └── dag/                  <span class="c">provenance diagrams (generated)</span>
+├── tools/                        <span class="c">the machinery, vendored — nothing to install</span>
+└── .claude/
+    ├── commands/                 <span class="c">/refresh, /round, /report</span>
+    └── skills/                   <span class="c">econ-write, econ-review (Lu Han)</span>
+
+~/Dropbox/multiples/              <span class="c">NOT in git</span>
+├── data/
+│   ├── global/                   <span class="c">SHARED, read-only — the canonical panels</span>
+│   ├── kerry-back/  bob-dittmar/ <span class="c">ONE PER PERSON — working extracts</span>
+│   └── kevin-crotty/
+└── literature/                   <span class="c">SHARED — every paper, named by citekey</span></code></pre>
+  </div>
+
+  <p>If you have the <code>litdb</code> plugin installed, that literature folder is
+  also indexed and searchable by meaning, so &ldquo;what does anything we hold say about
+  peer selection&rdquo; is a query rather than a recollection. Search it before any web
+  source. Two things do not change: <code>references.bib</code> is still maintained by
+  hand, because the citekeys are load-bearing in <code>main.tex</code> and
+  <code>ia.tex</code>, and the PDFs still live in Dropbox — litdb indexes them rather
+  than replacing them, and it is each person&rsquo;s own local database.</p>
+
+  <p>Code is in git; data is in Dropbox. The repo carries what rebuilds a number, not
+  the pull. Scripts never write an absolute path — they use three names set at the top
+  of each file:</p>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Name</th><th>Points at</th><th>How it is found</th></tr></thead>
+    <tbody>
+      <tr><td><code>DATA_ROOT</code></td><td>your working data</td><td><code>$MULTIPLES_DATA</code></td></tr>
+      <tr><td><code>GLOBAL_DATA</code></td><td>the canonical panels</td><td>derived: <code>DATA_ROOT</code>'s sibling</td></tr>
+      <tr><td><code>WORK_ROOT</code></td><td>your code and results</td><td>derived from the script's own location</td></tr>
+      <tr><td><code>REPO_ROOT</code></td><td>the repo</td><td>derived by walking up to <code>CLAUDE.md</code></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 id="roles">Analyst &amp; Replicator</h2>
+  <p class="lede">The paper's central methodological claim is that two independent builds
+  of the same frozen spec converge. That only means something if they really are
+  independent.</p>
+
+  <p>You run both. Your <code>analyst/</code> tree builds the sample and runs the
+  estimation. Your <code>replicator/</code> tree re-implements the same spec
+  <em>in its own code</em> and runs the robustness probes. They are separate directories
+  precisely so the boundary is hard to cross by accident.</p>
+
+  <p>The protocol, in short: two independent builds → reconcile counts and summary
+  statistics → confirm they agree (a hard gate, before any estimation) → collapse to one
+  panel → both estimators run on it. <strong>Never average two disagreeing builds.</strong>
+  A gap is a bug or a spec hole; disagreement that survives a correct, identical spec is
+  itself the finding.</p>
+
+  <p>The repo can check the boundary for you:</p>
+<pre><code>python3 -m tools.provenance --independence</code></pre>
+  <p>It lists every edge where a replicator script reads an analyst artifact or the
+  reverse. Reads of the canonical panel are excluded — sharing that is the design. A
+  crossing is either a deliberate cross-test or an accidental coupling, and the tool
+  cannot tell which: <strong>say which, in the script's docstring.</strong></p>
+
+  <h2 id="data">Data &amp; the canonical panel</h2>
+  <p class="lede">You will not rebuild the panel. You will start from the confirmed one.</p>
+
+  <p><code>~/Dropbox/multiples/data/global/</code> holds the core panels, read-only, and
+  every author estimates on them. <code>project/global/data_manifest.md</code> records for
+  each file its hash, its shape, who promoted it, and the reconciliation that justifies
+  trusting it.</p>
+
+  <p>Build in your own tree; promote deliberately, and only after the two-build gate:</p>
+<pre><code>python3 tools/promote.py &lt;your-built-file&gt; --note "how it was reconciled"</code></pre>
+
+  <div class="warn">
+    <span class="label">The gate does not carry over</span>
+    <p>Starting from the confirmed panel means you inherit assurance from the
+    <em>original</em> reconciliation and add none of your own. That is a fair trade while
+    the panel is unchanged. If it is rebuilt, extended, or has a column redefined, it is a
+    new artifact and needs the two-build gate again.</p>
+  </div>
+
+  <p>The spec's numeric parameters — sample years, peer rule, feature list, tuning grids,
+  learner hyperparameters, seeds — live in <code>workspaces/global/params.py</code>. Import
+  them rather than retyping them. Changing that file is a change to the method spec and
+  goes through the same gate.</p>
+
+  <h2 id="state">The state file</h2>
+  <p class="lede"><code>project/global/state.md</code> is the single source of truth for
+  the paper's direction: thesis, open questions, settled facts, killed ideas with the
+  reason they were killed.</p>
+
+  <p>It is shared, and it is long prose that gets rewritten at every gate — which git
+  cannot merge. So it has a <strong>changelog at the top</strong>: one line per
+  substantive change, newest first, with your slug and the date. Append; never rewrite or
+  tidy someone else's entry. That is how the other two see what moved without reading 750
+  lines.</p>
+
+  <h2 id="lock">One round at a time</h2>
+  <p class="lede">Because <code>state.md</code> cannot be merged, exactly one round runs
+  across the whole project at a time. Git enforces it — a push is atomic, so exactly one
+  claim can win.</p>
+
+<pre><code>python3 -m tools.debate.lock claim "peer rule for microcaps"   # before you start
+python3 -m tools.debate.lock status                            # who holds it
+python3 -m tools.debate.lock release                           # after the gate</code></pre>
+
+  <p>If your claim is refused you are told who holds the round and what they are working
+  on. Release even if the round was killed — an unreleased lock blocks everyone. If a lock
+  looks abandoned, ask before clearing it; releasing a live one discards their gate.</p>
+
+  <p><code>/round start</code> and <code>/round</code> wrap these, and are what you should
+  normally use — the command also writes the changelog entry, which the raw lock commands
+  do not.</p>
+
+  <h2 id="debate">The debate team</h2>
+  <p class="lede">A proposer and two adversaries, each a different model family, called
+  through OpenRouter. They are stateless: one call each, charter plus brief in, JSON out.
+  The brief you write <em>is</em> their context.</p>
+
+  <p><strong>You need your own OpenRouter key</strong> — <a href="https://openrouter.ai">openrouter.ai</a>,
+  then <code>export OPENROUTER_API_KEY=...</code>. Calls are billed to whoever runs them.
+  The roster is <code>project/global/config.toml</code>, shared and committed so all three of us —
+  Kerry, Kevin and Bob — debate against the same panel; the charters are in
+  <code>tools/debate/charters/</code>.</p>
+
+<pre><code>python3 -m tools.debate.debate --seats proposer \
+    --brief-file &lt;path&gt; --project . --round &lt;n&gt;
+
+python3 -m tools.debate.debate --seats adversary,adversary_2 \
+    --brief-file &lt;path&gt; --project . --round &lt;n&gt;      # concurrent</code></pre>
+
+  <p>A seat that errors returns <code>{"error": ...}</code> — note it and carry on. One
+  bad voice never sinks a round.</p>
+
+  <h2 id="logging">Logging</h2>
+  <p class="lede">Everything a run produces is stamped
+  <code>&lt;author&gt;-&lt;date&gt;-&lt;time&gt;</code> and written into your own folder. No
+  configuration; the author comes from your git name.</p>
+
+  <p><strong>Run analysis scripts through the logger, not bare python:</strong></p>
+<pre><code>python3 tools/runlog.py workspaces/kevin-crotty/analyst/logmult/code/04_eval.py 2001 2025 mytag</code></pre>
+
+  <p>It runs the script normally and records what it <em>actually</em> opened — an audit
+  hook below pandas and pyarrow, so paths built at runtime are caught. One JSON line per
+  run is appended to <code>project/&lt;you&gt;/logs/runs.jsonl</code>, committed: script,
+  arguments, git commit, duration, status, inputs, outputs. Failed runs are recorded too,
+  which is exactly what you want when a file is half-written.</p>
+
+<pre><code>python3 -m tools.provenance --runs        # read them back</code></pre>
+
+  <p>Two other things get logged automatically. Every tool call Claude makes lands in
+  <code>project/&lt;you&gt;/logs/log-&lt;stamp&gt;.jsonl</code> via a PostToolUse hook,
+  secrets redacted. And every brief you send a debate seat should be written to
+  <code>project/&lt;you&gt;/logs/</code> rather than a temp file — briefs are the actual prompts the
+  debate answered, and the only part of a round the event log does not already hold.</p>
+
+  <p>Logs are gitignored; <code>runs.jsonl</code> is not. The event log grows without
+  bound — one project's is already 53 MB.</p>
+
+  <h2 id="dag">The DAG</h2>
+  <p class="lede">Which script produced each file, what it depended on, and what breaks if
+  you change it. Read out of the code — nothing to declare.</p>
+
+<pre><code>python3 -m tools.provenance --file logmult/data/preds.parquet   # where did this come from
+python3 -m tools.provenance --script extend2000/code/01_extract.py  # what must be re-run
+python3 -m tools.provenance --mermaid analyst/logmult           # draw it
+python3 -m tools.provenance --orphans                           # inputs nothing produces</code></pre>
+
+  <p><strong>Run <code>--script</code> before changing anything upstream</strong>, and
+  report the blast radius with the change. That list is what had to be worked out by hand
+  after a market-cap bug invalidated every downstream number — which is how a stale figure
+  survives into a draft.</p>
+
+  <p>The pictures are Mermaid, in <code>workspaces/&lt;you&gt;/dag/*.md</code>. GitHub
+  renders them inline, so you can just click the file — nothing to install. They are
+  regenerated by the pre-commit hook, so a diagram cannot lag the code it describes.</p>
+
+  <div class="note">
+    <span class="label">What it cannot see</span>
+    <p>A path assembled at runtime resolves to a wildcard, and a genuinely dynamic one may
+    not appear at all — <code>--orphans</code> lists the residue. The static graph is a
+    strong first draft of provenance; <code>runs.jsonl</code> is the record of what
+    actually happened.</p>
+  </div>
+
+  <h2 id="hooks">Hooks</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Hook</th><th>Fires</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>tools/githooks/pre-commit</code></td>
+        <td>every commit touching <code>workspaces/**/*.py</code></td>
+        <td>regenerates your DAG diagrams and stages them into the same commit</td>
+      </tr>
+      <tr>
+        <td><code>tools/debate/log_event.py</code></td>
+        <td>after every Claude tool call</td>
+        <td>appends it to your run log, secrets redacted</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Both are turned on during setup — the first needs
+  <code>core.hooksPath</code> pointed at <code>tools/githooks</code> once per clone, the
+  second is wired in <code>.claude/settings.json</code> and works as soon as you clone.
+  Skip the pre-commit hook for a single commit with
+  <code>git commit --no-verify</code>.</p>
+
+  <h2 id="commands">The commands</h2>
+  <p class="lede">All of them come with the clone. Nothing to install, and the same
+  behaviour on all three machines.</p>
+
+  <h3><code>/round</code> — finish a round properly</h3>
+  <p>Writes the round's changelog entry, promotes whatever settled, and releases the
+  lock. It starts by checking whether the changelog has fallen behind, and it insists
+  on an entry <em>even when the round settled nothing</em> — a round that took something
+  up and dropped it leaves no diff and no artifact, so if the entry is not written the
+  exploration is gone. That entry is what answers <em>did we ever try X</em> a year
+  later.</p>
+  <p><code>/round start "what this is"</code> claims the lock first. Worth doing here:
+  with three of us, claiming up front surfaces a collision in the first minute instead
+  of after two people have spent an afternoon on the same question.
+  <code>/round status</code> says who holds it and whether the changelog is behind.</p>
+
+  <h3><code>/report</code> — the project on one page</h3>
+  <p>Writes an HTML report to the repo root: executive summary, what is settled, open
+  issues, and a chronology. It reads only committed records, so there is no accumulation
+  step to remember. This replaces the hand-built <code>project-to-date.html</code>.</p>
+  <p>Underneath it, <code>tools/chronology.py</code> merges the <code>state.md</code>
+  changelog, <code>git log</code>, and the run records into one timeline. It is also the
+  quickest answer to a question asked in passing:</p>
+<pre><code>python3 -m tools.chronology --author kevin-crotty --since "last week" --human
+python3 -m tools.chronology --kinds changelog --human   <span class="c">decisions only</span>
+python3 -m tools.chronology --gap --human               <span class="c">commits with no reason recorded</span></code></pre>
+
+  <h3><code>/refresh</code> — before the context runs out</h3>
+  <p>When a session gets long, this checkpoints memory to disk. It promotes what has
+  settled into <code>state.md</code> with your changelog line, rewrites your
+  <code>session.md</code> so a cold session could resume from it alone, freshens the
+  subagent notes, and releases the round lock if you are done with it. Then it stops and
+  tells you to run <code>/clear</code> — it cannot clear its own context. Start a new
+  session and say <code>resume</code>.</p>
+  <p>Refreshing between rounds costs nothing; mid-round it costs a re-read. Claude will
+  suggest it when a round has run long.</p>
+
+  <h3><code>econ-write</code> — automatic, whenever the draft is touched</h3>
+  <p>You do not invoke this one. Claude reads it <em>before</em> writing or revising any
+  prose in <code>draft/</code> — the paper, the internet appendix, an abstract, a referee
+  response. That is a rule in <code>CLAUDE.md</code>, not a suggestion, because the point
+  of having it is that Claude's default register is not what a finance journal wants.</p>
+  <p>It is Lu Han's synthesis of writing guidance from Cochrane, McCloskey, Shapiro, Head,
+  Bellemare, Goldin, Glaeser and others. It does not apply to <code>state.md</code>,
+  commit messages, or notes between us — only to what an editor will read.</p>
+
+  <h3><code>/econ-review</code> — a referee pass, on demand</h3>
+  <p>A full review of the draft: identification, claim consistency, exhibits, literature,
+  and writing, fanned out across reviewers and adjudicated. Use it when a draft is close
+  to circulating, not on every edit — it is slow and thorough by design.</p>
+  <p>It needs its own Python dependencies for reading PDFs, deliberately kept out of the
+  project's <code>requirements.txt</code> so a large dependency tree is not in everyone's
+  venv for a tool most sessions never touch. Claude installs them the first time you run
+  a review; see <code>.claude/skills/ATTRIBUTION.md</code>.</p>
+
+  <div class="note">
+    <span class="label">Where these came from</span>
+    <p>Both skills are by <a href="https://github.com/hanlulong">Lu Han</a>, vendored into
+    <code>.claude/skills/</code> so we all get the same version from a clone.
+    <code>econ-review</code> is licensed PolyForm Noncommercial — academic use is
+    permitted and the licence travels with it. <code>econ-write</code> ships without a
+    licence file, so use it here but do not redistribute it further, including in a
+    replication package, without asking the author.</p>
+  </div>
+
+  <h2 id="overleaf">Overleaf</h2>
+  <p class="lede">For whoever prefers writing in Overleaf. If that is not you, nothing
+  here changes anything.</p>
+
+  <p>There is an Overleaf project that mirrors <code>draft/</code> — the paper
+  (<code>main.tex</code>), the internet appendix (<code>ia.tex</code>), the bibliography,
+  and the figures. Nothing else from the repo is there: no <code>tools/</code>, no
+  <code>workspaces/</code>, no <code>project/</code>. Ask Kerry for an invitation.</p>
+
+  <p>Edit there as you normally would. The two sides are kept in step by Claude, and the
+  procedure is written down in <code>CLAUDE.md</code> — so you do not need to know the git
+  commands, and neither does anyone else. Ask it to sync the draft and it will pull the
+  Overleaf edits down, push ours up, and tell you if the two collided. GitHub stays the
+  source of truth; Overleaf is a window onto one folder of it.</p>
+
+  <div class="warn">
+    <span class="label">Turn track changes off</span>
+    <p>This is the one that costs you work. Overleaf documents that mixing tracked changes
+    with git pushes loses data — not a merge conflict you can see and resolve, but edits
+    that quietly disappear. Leave track changes off on <code>main.tex</code> and
+    <code>ia.tex</code>. If you have already turned it on, accept or reject everything
+    before asking for a sync.</p>
+  </div>
+
+  <p>Two smaller things that follow from how the bridge works:</p>
+  <ul>
+    <li>Comments do not survive a rename. The bridge sends a renamed file as a delete plus
+      a create, so anything anchored to it is lost. Rename before the comments accumulate,
+      not after.</li>
+    <li>Figures and tables travel one way only, repo to Overleaf. They are built by code
+      here and stamped with what produced them, so an edit made to one on the Overleaf side
+      is a number nobody can trace. If a figure is wrong, fix the script.</li>
+    <li>Old drafts live in <code>draft/archive/</code> — dated PDFs
+      (<code>draft_YYYYMMDD.pdf</code>, the date the version was last current), snapshotted
+      before each major edit so any prior milestone opens without git. They ride along to
+      Overleaf.</li>
+  </ul>
+
+  <h2 id="day">A working day</h2>
+  <ol>
+    <li>Open Claude Code. It checks your setup before anything else; if something has
+        drifted — a new machine, a shell without the export — it fixes what it can and
+        tells you what it cannot.</li>
+    <li><code>git pull</code>, then claim the round.</li>
+    <li>Read <code>project/global/state.md</code> and your <code>session.md</code>.</li>
+    <li>Work. Run scripts through <code>tools/runlog.py</code>. Check
+        <code>--script</code> before touching anything upstream.</li>
+    <li>Present the result to your coauthors — <em>with the full empirical design</em>,
+        not just the headline number. Every filter, definition, lag, and standard-error
+        treatment. A number whose construction cannot be seen cannot be judged.</li>
+    <li>On agreement: update <code>state.md</code> and its changelog, refresh
+        <code>session.md</code>, commit, push, release the lock.</li>
+  </ol>
+
+  <h2 id="traps">Traps</h2>
+  <ul>
+    <li><strong><code>MULTIPLES_DATA</code> unset in a new shell.</strong> Scripts raise
+      immediately — that is deliberate, and the fix is a new terminal, not a hardcoded
+      path. The alternative to a crash is silently reading the wrong panel.</li>
+    <li><strong>Editing the canonical panel.</strong> It is read-only. If you need it
+      changed, that is a two-build gate, not a <code>chmod</code>.</li>
+    <li><strong>Reading the other role's working notes.</strong> A replicator that has
+      seen the analyst's <code>analyst.md</code> is no longer independent — that file
+      contains the answers.</li>
+    <li><strong>Installing <code>openassetpricing</code>.</strong> It downgrades pandas
+      3.0 to 2.2 and breaks the pipeline.</li>
+    <li><strong>Running two rounds at once.</strong> The lock exists because
+      <code>state.md</code> conflicts are resolved by hand, on the one file that defines
+      what the paper is.</li>
+  </ul>
+
+  <footer>
+    <p>Questions this page does not answer are probably in <code>CLAUDE.md</code>, which is
+    the full operating manual. If they are in neither, they are worth adding to one of
+    them.</p>
+  </footer>
+</div>
+</main>
+</div>

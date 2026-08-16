@@ -1,0 +1,731 @@
+<title>multiples — status, 15 August 2026</title>
+<style>
+  :root {
+    --ground: #FBFBFC;
+    --raised: #FFFFFF;
+    --ink:    #16191F;
+    --muted:  #5B6573;
+    --rule:   #E3E6EB;
+    --accent: #1C5E59;
+    --accent-soft: #E8F1F0;
+    --caution: #8C5620;
+    --caution-soft: #FAF1E7;
+    --code-bg: #F3F5F7;
+    --measure: 70ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #12141A; --raised: #181B22; --ink: #E7E9ED; --muted: #98A2B1;
+      --rule: #2A2F39; --accent: #6FBFB4; --accent-soft: #16302E;
+      --caution: #D9A46B; --caution-soft: #2A2117; --code-bg: #1E222A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #12141A; --raised: #181B22; --ink: #E7E9ED; --muted: #98A2B1;
+    --rule: #2A2F39; --accent: #6FBFB4; --accent-soft: #16302E;
+    --caution: #D9A46B; --caution-soft: #2A2117; --code-bg: #1E222A;
+  }
+  :root[data-theme="light"] {
+    --ground: #FBFBFC; --raised: #FFFFFF; --ink: #16191F; --muted: #5B6573;
+    --rule: #E3E6EB; --accent: #1C5E59; --accent-soft: #E8F1F0;
+    --caution: #8C5620; --caution-soft: #FAF1E7; --code-bg: #F3F5F7;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { display: grid; grid-template-columns: 1fr; gap: 0; }
+  @media (min-width: 1080px) {
+    .page { grid-template-columns: 15rem minmax(0,1fr); max-width: 78rem; margin-inline: auto; }
+  }
+
+  nav.toc { display: none; }
+  @media (min-width: 1080px) {
+    nav.toc {
+      display: block; position: sticky; top: 0; align-self: start;
+      max-height: 100vh; overflow-y: auto; padding: 3.5rem 1rem 3rem 1.5rem;
+      border-right: 1px solid var(--rule); font-size: .82rem;
+    }
+    nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
+    nav.toc a { color: var(--muted); text-decoration: none; }
+    nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+    nav.toc .eyebrow { color: var(--ink); font-weight: 600; letter-spacing: .07em;
+                       text-transform: uppercase; font-size: .68rem; margin-bottom: .9rem; }
+  }
+
+  main { padding: 3.5rem 1.5rem 6rem; min-width: 0; }
+  .wrap { max-width: var(--measure); }
+
+  h1 { font-family: "Iowan Old Style", Georgia, "Times New Roman", serif;
+       font-size: clamp(2rem, 4vw, 2.7rem); line-height: 1.12; margin: 0 0 .4rem;
+       letter-spacing: -.015em; text-wrap: balance; font-weight: 600; }
+  h2 { font-family: "Iowan Old Style", Georgia, serif; font-size: 1.45rem; font-weight: 600;
+       margin: 3.2rem 0 .3rem; letter-spacing: -.01em; text-wrap: balance;
+       padding-top: 1.6rem; border-top: 1px solid var(--rule); }
+  h3 { font-size: 1rem; font-weight: 650; margin: 1.9rem 0 .3rem; letter-spacing: -.005em; }
+  h2 + p.lede { color: var(--muted); margin-top: .35rem; }
+  p, ul, ol { margin: .8rem 0; }
+  li { margin: .35rem 0; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  strong { font-weight: 650; }
+
+  .standfirst { font-size: 1.06rem; color: var(--muted); max-width: 62ch; }
+  .kicker { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+            color: var(--accent); font-weight: 650; margin-bottom: .7rem; }
+
+  code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+         font-size: .875em; background: var(--code-bg); padding: .12em .35em;
+         border-radius: 3px; }
+  pre { background: var(--code-bg); border: 1px solid var(--rule); border-radius: 6px;
+        padding: .85rem 1rem; overflow-x: auto; margin: .9rem 0; }
+  pre code { background: none; padding: 0; font-size: .82rem; line-height: 1.55; }
+
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .9rem;
+          font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: .5rem .7rem; border-bottom: 1px solid var(--rule);
+           vertical-align: top; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 650; }
+  td.num { text-align: right; }
+  .scroll { overflow-x: auto; }
+
+  .note, .warn {
+    border-left: 3px solid var(--accent); background: var(--accent-soft);
+    padding: .85rem 1.1rem; margin: 1.2rem 0; border-radius: 0 5px 5px 0; font-size: .94rem;
+  }
+  .warn { border-left-color: var(--caution); background: var(--caution-soft); }
+  .note p:first-child, .warn p:first-child { margin-top: 0; }
+  .note p:last-child, .warn p:last-child { margin-bottom: 0; }
+  .warn .label, .note .label { display: block; font-size: .68rem; letter-spacing: .09em;
+        text-transform: uppercase; font-weight: 700; margin-bottom: .3rem; }
+  .warn .label { color: var(--caution); }
+  .note .label { color: var(--accent); }
+
+  .tag { display: inline-block; font-size: .64rem; letter-spacing: .08em;
+         text-transform: uppercase; font-weight: 700; padding: .12rem .45rem;
+         border-radius: 3px; border: 1px solid var(--rule); color: var(--muted);
+         vertical-align: .12em; margin-right: .4rem; white-space: nowrap; }
+  .tag.who { color: var(--accent); border-color: var(--accent); }
+  .tag.hot { color: var(--caution); border-color: var(--caution); background: var(--caution-soft); }
+
+  .settled { list-style: none; padding: 0; }
+  .settled > li { border-top: 1px solid var(--rule); padding: .85rem 0; margin: 0; }
+  .settled .when { color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
+
+  .issue { border: 1px solid var(--rule); background: var(--raised);
+           border-radius: 6px; padding: .9rem 1.1rem; margin: .9rem 0; }
+  .issue h3 { margin: 0 0 .3rem; }
+  .issue p { margin: .45rem 0; }
+  .issue .route { color: var(--muted); font-size: .9rem; }
+
+  .day { border-top: 1px solid var(--rule); padding-top: 1.4rem; margin-top: 2.2rem; }
+  .day > h3 { margin-top: 0; font-family: "Iowan Old Style", Georgia, serif;
+              font-size: 1.12rem; font-weight: 600; }
+  .day .decision { margin: .7rem 0; }
+  details { margin: .7rem 0; font-size: .9rem; }
+  summary { cursor: pointer; color: var(--muted); font-size: .82rem;
+            letter-spacing: .02em; }
+  summary:hover { color: var(--accent); }
+  details > ul { margin-top: .5rem; }
+  details li { color: var(--muted); }
+
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .85rem; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+</style>
+
+<div class="page">
+<nav class="toc">
+  <div class="eyebrow">Contents</div>
+  <ol>
+    <li><a href="#summary">Executive summary</a></li>
+    <li><a href="#numbers">The headline numbers</a></li>
+    <li><a href="#settled">What is settled</a></li>
+    <li><a href="#open">Open issues</a></li>
+    <li><a href="#chronology">Chronology</a></li>
+    <li><a href="#who">Who is doing what</a></li>
+  </ol>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="kicker">multiples · status report · 15 August 2026</div>
+  <h1>Where the paper stands</h1>
+  <p class="standfirst">Written for a coauthor who has been away. Everything here comes
+  from the committed record — <code>state.md</code> and its changelog, the frozen spec,
+  the data manifest, each person's session file, the draft, and the run log. No round
+  is open at the moment this was written.</p>
+
+  <h2 id="summary">Executive summary</h2>
+
+  <p>The paper is <em>Valuation by Adjusted Multiples</em>: value a firm by the median of
+  its peers' EV/EBITDA multiples after adjusting each peer separately for how it differs
+  from the subject firm on each characteristic, the way a house appraiser does. The
+  adjustments are cubic splines and read straight off as feature-to-multiple curves. The
+  claim is not that this beats machine learning — that bar was deliberately dropped last
+  month — but that it matches a tuned gradient-boosting frontier while beating every
+  classical comparables method by a wide margin, and does so with a procedure an analyst
+  can show a client.</p>
+
+  <p>The empirics are in good shape and have been through the two-build gate. Under the
+  frozen least-squares spec, pooled median absolute error on the non-microcap panel is
+  0.226 for the adjusted multiple against 0.232 for the raced frontier; on the mean and
+  root-mean-squared criteria the adjusted multiple wins by statistically significant
+  margins in both independent builds on both panels (0.311 against 0.328, and 0.444
+  against 0.481). Against classical comparables the gaps run 15 to 37 percent, in 25 of
+  25 years, on all three criteria, on both panels. The one soft cell is the non-microcap
+  median gap against the frontier, which came out significant in one build and not the
+  other and is pinned to be reported as marginal.</p>
+
+  <p>What changed most recently is a shift in the kind of work being done. Since 11 August
+  the project has stopped adding results and started attacking the ones it has. Kevin ran
+  a draft reading pass that restructured the paper and rebuilt the exhibits; Kerry ran two
+  adversarial critique passes over the empirics and the prose. That produced one settled
+  decision (keep the smoothing-parameter selection on the direct fit, adopt Kevin's
+  prior-year convention), one objection killed with a reason (the missing temporal
+  holdout), an exploratory branch on the peer rule, and a prose-only revision of the whole
+  draft that has not been merged.</p>
+
+  <p>The single thing most needing attention is a pair of findings raised by an adversarial
+  reviewer on 15 August that nobody has yet checked. Each is a single file read. One says
+  the frontier is denied the lagged market-cap variable that the peer band is built on,
+  which would make the paper's "identical information set" sentences false as written and,
+  on the reviewer's own indicative refit, would put the frontier ahead of the adjusted
+  multiple on all three criteria. The other says IPO peers are banded on the very price
+  they are scored against, and the abstract's 17 percent IPO flip depends on it. These
+  outrank everything else open, because they could change what the paper claims rather
+  than how it defends itself.</p>
+
+  <h2 id="numbers">The headline numbers</h2>
+  <p class="lede">Frozen L2 spec, pooled over 2001–2025, common evaluation frames of
+  37,526 non-microcap and 25,410 microcap firm-years. Lower is better.</p>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Non-microcap panel</th><th class="num">Median |e|</th><th class="num">Mean |e|</th><th class="num">RMSE</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Adjusted multiple (the paper's method)</td><td class="num">0.226</td><td class="num">0.311</td><td class="num">0.444</td></tr>
+      <tr><td>Raced machine-learning frontier (tuned L2 gradient boosting)</td><td class="num">0.232</td><td class="num">0.328</td><td class="num">0.481</td></tr>
+      <tr><td>Frontier's best-median configuration (tuned L1), disclosed</td><td class="num">0.229</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td>Alford (industry-median comparables)</td><td class="num">0.311</td><td class="num">—</td><td class="num">—</td></tr>
+      <tr><td>Bhojraj–Lee (warranted-multiple comparables)</td><td class="num">0.359</td><td class="num">—</td><td class="num">—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>The median gap against the raced frontier is 0.006 — small, and the marginal cell.
+  The gaps against the classical comparables are 0.085 and 0.133, roughly 27 and 37
+  percent, and they hold in every year of the sample. That asymmetry is the paper: parity
+  with the black box, dominance over what practitioners actually use.</p>
+
+  <h2 id="settled">What is settled</h2>
+  <p class="lede">Through the gate. Do not reopen these without a reason and a round.</p>
+
+  <ul class="settled">
+    <li>
+      <span class="when">30 July, promoted 4 August</span>
+      <p>The two canonical panels. <code>panel_nonmicro.parquet</code> (44,273 × 48) and
+      <code>panel_micro.parquet</code> (45,588 × 48) were built twice independently from
+      the raw sources and reconciled — observation counts within 0.24 percent, ROA, sales
+      growth and age medians agreeing to the digit, Alphabet's market cap to the dollar.
+      They are read-only in <code>~/Dropbox/multiples/data/global/</code> and everyone
+      estimates on them. Nothing else has been promoted since.</p>
+    </li>
+    <li>
+      <span class="when">12 August</span>
+      <p>The lead specification is least-squares appraisal curves, frozen in full in
+      <code>method_spec.md</code>: sum-form objective, cubic B-spline basis with L1 total
+      variation on second differences, fitting target winsorized 1 and 99 percent within
+      year with fold-pure bounds, smoothing grid [0.03 … 300] with every optimum interior,
+      five-fold cross-validation stratified by sub-industry, paired year-block bootstrap.
+      Pinball (median-fit) survives as the disclosed robustness variant.</p>
+    </li>
+    <li>
+      <span class="when">12 August</span>
+      <p>That spec was implemented twice, independently. Kevin's Replicator worked
+      clean-room from a results-redacted brief with its own solver and its own optimality
+      certificates. Every spline cell agreed within 0.001 pooled median error on both
+      panels, the non-microcap evaluation frame was exact at 37,526 rows, the target was
+      bit-identical, and the selected smoothing parameter matched in 49 of 50 panel-years.
+      The gradient-boosting cells differ by 0.0017 to 0.0028 — fold-partition sensitivity,
+      now measured twice: our estimator is fold-robust and the boosted trees are not.</p>
+    </li>
+    <li>
+      <span class="when">12–13 August</span>
+      <p>Dominance over classical comparables, both builds: 15 to 37 percent better, 25 of
+      25 years, all three criteria, both panels. The construction question raised in round
+      nine was closed in favour of the canonical comparables code.</p>
+    </li>
+    <li>
+      <span class="when">12 August</span>
+      <p>Standing against the frontier at equal tuning budget: significant on mean and RMSE
+      in both builds on both panels; significant on median error on the microcap panel in
+      both builds; marginal on median error on the non-microcap panel, and pinned to be
+      reported that way. Against the frontier's best-median configuration the median is
+      parity, with mean and RMSE still ours.</p>
+    </li>
+    <li>
+      <span class="when">12 August</span>
+      <p>The peer step earns its place. Removing it and fitting the curves directly is
+      significantly worse everywhere.</p>
+    </li>
+    <li>
+      <span class="when">13 August</span>
+      <p>Interpretability is free even inside our own family. A fully tuned non-additive
+      version of the adjustment beats the raced frontier on all three criteria but only
+      ties the additive lead at the median and loses both tails. The same conservative
+      configuration was chosen in all 25 years.</p>
+    </li>
+    <li>
+      <span class="when">Round 10, user ruling</span>
+      <p>The success bar is parity with the frontier plus interpretability plus dominance
+      over classical comparables — not beating a black box. This replaced the earlier
+      "must beat Geertsema–Lu" standard and should not be relitigated.</p>
+    </li>
+    <li>
+      <span class="when">27 July</span>
+      <p>The peer rule is locked: firm-specific size-and-industry comparables, leave-one-out,
+      factor-of-two band on lagged market cap, GICS backoff from sub-industry outward, pruned
+      to the ten closest by size. It has never been tuned on accuracy, which is a defensible
+      posture and is documented as such.</p>
+    </li>
+    <li>
+      <span class="when">Round 6, and permanent</span>
+      <p>The adjustment function never sees price. A feature manifest carrying log market cap
+      alongside log assets, leverage, cash-to-assets, EBITDA margin and log sales lets the
+      model rebuild its own target algebraically; that bug once voided an entire round's
+      residual-stage conclusions. Every external feature set is screened for the same
+      leakage before use.</p>
+    </li>
+    <li>
+      <span class="when">15 August</span>
+      <p>Smoothing-parameter selection stays on the direct fit, with Kevin's prior-year
+      convention adopted. Tuning end-to-end against the peer-step objective is the
+      theoretically right object but puts the backfit inside the cross-validation loop for
+      about five times the cost, and the larger correction is already known to be immaterial
+      (0.0009 to 0.0017 in pooled median error, never significant). The cost accepted is that
+      the internet appendix's non-additive variant is tuned end-to-end while the flagship is
+      not; that gets one sentence of disclosure and a flatness statistic, not a re-run.</p>
+    </li>
+    <li>
+      <span class="when">15 August</span>
+      <p>The "no temporal holdout" objection is dead, with a reason worth keeping: the
+      analyst's information set at the valuation date includes the whole contemporaneous
+      cross-section, so contemporaneous leave-one-out is the frame that matches the use. A
+      temporal holdout would measure parameter stability, which is a different question. The
+      clause was struck from the draft.</p>
+    </li>
+  </ul>
+
+  <h2 id="open">Open issues</h2>
+
+  <h3>Blocking</h3>
+
+  <div class="issue">
+    <span class="tag hot">blocking</span><span class="tag who">kerry-back</span>
+    <h3>Is the frontier denied a variable our estimator uses?</h3>
+    <p>The paper says in two places that the two methods see an identical information set.
+    The peer band is built on lagged log market cap, and the spline feature list withholds
+    that variable from the frontier. An adversarial reviewer reading the estimation code
+    reported that adding it moved the frontier from 0.2389 to 0.1861 at the median — ahead
+    of us on all three criteria. The reviewer's own harness reproduced the untuned base cell
+    at 0.2389 against the appendix's stated 0.2424, so the magnitude is indicative rather
+    than certified.</p>
+    <p class="route">Resolved by: one file read, then a decision. If it holds, either give
+    the frontier the variable or take it out of the peer band, which is what Peer Rule B
+    would do. Either way the "identical information set" sentences are wrong as written and
+    have to change.</p>
+  </div>
+
+  <div class="issue">
+    <span class="tag hot">blocking</span><span class="tag who">kerry-back</span>
+    <h3>Are IPO peers banded on the price they are scored against?</h3>
+    <p>Section 9 says IPO peers are drawn under the unchanged rule. The reviewer reports that
+    <code>ipo/code/09_score_ipos.py</code> bands on the IPO's own first-month market cap,
+    which is also the quantity the actual enterprise value is built from. No comparator gets
+    an analogous channel. The 17 percent IPO flip in the abstract depends on this.</p>
+    <p class="route">Resolved by: one file read. If it holds, the IPO section needs
+    rebuilding and the abstract needs rewriting.</p>
+  </div>
+
+  <div class="issue">
+    <span class="tag hot">blocking</span><span class="tag who">all three</span>
+    <h3>Three decisions queued for the Monday coauthor discussion</h3>
+    <p>Kevin's session file parks these on the humans. First, whether the tuned scored peer
+    rule is promoted to the main body or stays in the internet appendix — it is now
+    significantly better than the locked rule on all three criteria on three of the four
+    samples, and ties the median on the flagship. Second, whether to adopt the prior-year
+    smoothing convention in a spec round on principle, which would unify the three tuning
+    conventions but requires the frontier's 27-configuration race to move symmetrically and
+    the headline to be re-gated with two builds. Third, whether a peer-rule redesign round
+    opens; the natural design is the scored rule with a size cap, since the scored rule is
+    tighter on size at the median but has an unbounded tail — 1.3 percent of pairs exceed a
+    factor of three, with extremes around 200 times.</p>
+    <p class="route">Resolved by: the humans deciding. Nothing further can be run on the peer
+    rule or the smoothing convention until they do.</p>
+  </div>
+
+  <h3>In flight</h3>
+
+  <div class="issue">
+    <span class="tag">in flight</span><span class="tag who">kerry-back</span>
+    <h3>A second independent implementation of the lead spec</h3>
+    <p><code>project/kerry-back/eta-retune-spec.md</code> is drafted, not promoted to the
+    frozen spec, and no implementer has been spawned. Two purposes: every existing
+    least-squares build lives in Kevin's tree, so the headline has no second-author check;
+    and the frontier, direct-method and gradient-boosting arms still need running under the
+    prior-year smoothing convention. Waiting on a claimed round.</p>
+  </div>
+
+  <div class="issue">
+    <span class="tag">in flight</span><span class="tag who">kerry-back</span>
+    <h3>Only one side of the headline comparison has moved to the new convention</h3>
+    <p>Kevin scoped his prior-year run to the locked-rule cell and the scored peer-rule arms.
+    The adjusted multiple's own error rises about 0.001. Whether the margin against the
+    frontier widens or narrows is unmeasured — and it ought to widen, since the frontier
+    selects over 27 configurations directly on its scored criterion while the smoothing
+    parameter selects over nine values through a proxy.</p>
+  </div>
+
+  <div class="issue">
+    <span class="tag">in flight</span><span class="tag who">kerry-back</span>
+    <h3>A prose revision of the whole draft, unmerged</h3>
+    <p><code>draft/econ-human-revised.tex</code> is a complete prose-only alternative to
+    <code>main.tex</code> — no number changed, every exhibit byte-identical. It has not been
+    merged and the decision is open: merge it, cherry-pick from it, or drop it. It carries
+    four query markers flagging suspected inconsistencies in the current draft (three sample
+    counts, 0.56 against 0.669, four-times against three-times, and yield-versus-multiple
+    vocabulary in section 10). Separately,
+    <code>draft/prose-edits-pending.md</code> holds three reviewers' writing findings,
+    deduplicated and adjudicated but deliberately unapplied.</p>
+  </div>
+
+  <div class="issue">
+    <span class="tag">in flight</span><span class="tag who">kevin-crotty</span>
+    <h3>The draft reading pass</h3>
+    <p>Queue is in <code>project/kevin-crotty/draft_punchlist.md</code>. Kerry's prose
+    revision postdates Kevin's reading baseline, so the next reads have to be against the
+    current file. When the pass ends: drop the endfloat preamble line, recompile, and
+    snapshot the PDF into <code>draft/archive/</code> if it is a milestone. Also carried:
+    GICS display names in the Geertsema–Lu table.</p>
+  </div>
+
+  <div class="issue">
+    <span class="tag">in flight</span><span class="tag who">kerry-back</span>
+    <h3>Peer Rule B, specified but not started</h3>
+    <p>An exploratory branch opened 15 August; nothing has been run and the locked rule is
+    untouched. Rule B takes all other firms at the finest GICS level yielding at least five,
+    never leaving the sector, with no size band, no size pruning and no cap — so market
+    capitalisation plays no part in peer selection at all. The motivation is auditability,
+    not accuracy: under the locked rule, Lowe's and Home Depot share a sub-industry but are
+    not peers, because Home Depot is 2.54 times larger, so Lowe's peers come out as TJX,
+    Booking, Nike, Starbucks, Chipotle, McDonald's, MercadoLibre, Airbnb, Ferrari and
+    Marriott. No analyst defends that in a fairness opinion. Rule B would also make the
+    estimator genuinely price-free, which dissolves the first blocking question above.</p>
+    <p class="route">Resolved by: three decisions before any run — peer pool drawn from the
+    panel or the universe, cap or no cap, and which targets. The gate is deliberately not
+    "does it beat Rule A" but whether the accuracy cost is worth a defensible peer set, with
+    the threshold argued before the numbers land. Prior evidence points the other way on
+    accuracy and is recorded so it is not rediscovered.</p>
+  </div>
+
+  <h3>Open questions</h3>
+
+  <div class="issue">
+    <span class="tag">open</span><span class="tag who">kevin-crotty</span>
+    <h3>Six exhibit families are still single-build</h3>
+    <p>The EV/Sales section, the IPO section, the analyst comparison, the firm-age result,
+    the non-additive tuning race and the returns results were all built once, are disclosed
+    as such in print, and need two-build gates if any of them is promoted to the settled
+    tier. The returns results in particular have never been replicated.</p>
+  </div>
+
+  <div class="issue">
+    <span class="tag">open</span><span class="tag who">unassigned</span>
+    <h3>Bob Dittmar has not started</h3>
+    <p>The protocol expects three coauthors each running their own Analyst and Replicator.
+    There is no <code>project/bob-dittmar/</code> folder and no commits under that name, so
+    the third independent build does not exist. Worth knowing whether that is deliberate.</p>
+  </div>
+
+  <h3>Deferred</h3>
+
+  <div class="issue">
+    <span class="tag">deferred</span>
+    <h3>Decided not to do yet, with reasons</h3>
+    <p>The fold-seed sweep was skipped at Kevin's ruling on 12 August, once fold-partition
+    sensitivity had been measured twice and found to sit in the boosted trees rather than in
+    our estimator. The frontier's sector-by-size heatmap was built and then dropped at the
+    gate on 14 August, purely on placement — it would have arrived before the machine-learning
+    method is introduced — and the exploration is kept in the workspace; it could re-enter
+    later in the paper. The prose edits are unapplied by explicit instruction. And the
+    peer-rule redesign is deferred to a round of its own rather than being folded into
+    ongoing work.</p>
+  </div>
+
+  <h2 id="chronology">Chronology</h2>
+  <p class="lede">Newest first. Decisions lead each day; the runs and commits behind them are
+  folded away.</p>
+
+  <div class="day">
+    <h3>15 August — two threads, both adversarial</h3>
+    <p class="decision">Kerry ran two critique passes over the draft and the estimation code.
+    Four things came out: the smoothing-selection decision settled; the temporal-holdout
+    objection killed; two code facts verified by reading the source and closed or scoped; and
+    two further findings raised that nobody has yet checked — the two blocking items above.
+    Deliverables were all documents: a critique memo with equations and per-finding
+    verification status, the adjudicated prose-edit list, the prose-only draft revision, and
+    two exploratory specs. Nothing was estimated and no subagent was spawned.</p>
+    <p class="decision">Kevin, on the same day, landed three items. The direct fit was shown
+    to estimate a genuinely different function from the peer-step adjustment — same program,
+    different object — so the draft now writes it separately, with a new appendix section and
+    a diagnostic behind it: firm-level correlation averaging 0.81 across 25 years, sub-industry
+    effects correlating only 0.38, and the 2025 log-assets curves close to mirror images with
+    the peer-step amplitude twice as large. The scored peer rule was then tuned under the frozen
+    spec on all four samples, which is the evidence behind Monday's promotion question. And
+    Kerry's cross-validation selection leak was quantified and found immaterial.</p>
+    <details>
+      <summary>16 commits, 7 recorded runs (plus 6 stamped 16 August in the run log)</summary>
+      <ul>
+        <li>Kerry: prose revision of <code>main.tex</code> with the empirical-critique memo; spec
+        for a second least-squares implementation and the pending prose-edit list; Peer Rule B
+        spec; the smoothing decision written into the spec; the no-holdout clause struck.</li>
+        <li>Kevin: <code>16_gdirect_gpeer.py</code> for the direct-versus-peer diagnostic;
+        <code>08_peer_tuned_frozen.py</code> five times plus its readout for the four-sample
+        scored rule; <code>10_eta_prioryear.py</code> and <code>11_eta_prioryear_readout.py</code>
+        for the selection-leak quantification.</li>
+        <li>Housekeeping: <code>/round</code>, <code>/report</code>, the chronology tool and the
+        writing guide brought into the repo.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="day">
+    <h3>14 August — the draft reading pass</h3>
+    <p class="decision">Kevin restructured the paper. Section 2 became a full estimator
+    exposition, multiple-agnostic; section 3 covers implementation; section 4 states the exact
+    construction of every alternative model, which had never been in print before; results now
+    come before the worked example; the old appendix A was absorbed and deleted. Bastianello,
+    Décaire and Guenzel's 2025 field evidence was worked in — a multiple is the reference point
+    in only 13 to 15 percent of analyst reports, which is the practice licence for an
+    anchor-and-adjust procedure. Loss-makers became negative-EBITDA firms throughout. Exhibits
+    were renumbered by discussion order and moved to the end for reading.</p>
+    <p class="decision">The frontier's sector-by-size heatmap was built and dropped at the gate,
+    on placement. The exploration was kept: same geography as ours, frontier better on the
+    largest information-technology firms (0.25 against 0.36) and worse across communication
+    services.</p>
+    <details>
+      <summary>6 commits, 7 recorded runs</summary>
+      <ul>
+        <li>Draft restructure; explicit alternative-model constructions; the field-evidence cites.</li>
+        <li>Exhibit pass: tables 1, 3, 8 and 9 rebuilt, returns tables merged, figure touches.</li>
+        <li>Runs: <code>01_summstats_meansd.py</code>, <code>14_frozen_metrics.py</code>,
+        <code>02_fig_composition.py</code>, <code>15_heatmap_frontier.py</code>.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="day">
+    <h3>13 August — the draft switched, and four claims died honestly</h3>
+    <p class="decision">Round 11 closed and was approved. The paper now reads as the
+    least-squares paper throughout, with the canonical comparables everywhere, which closed
+    a construction flag left open since round nine. Four new sections went in — EV/Sales,
+    IPOs, analysts, firm age — all single-build and flagged as such. The non-additive tuning
+    race was run and reported. The worked example became GE Aerospace: raw 15.3 times,
+    adjusted 24.8, actual 28.7, so the miss falls from +0.63 to +0.15, and the out-of-sample
+    version lands within 3 percent.</p>
+    <p class="decision">Four claims died in the re-runs and were dropped rather than defended:
+    the previous worked example's error-halving punchline, the direct method's age gradient,
+    the frontier's significant edge on old firms, and the untuned non-additive reversal, which
+    the tuning race superseded. A real exactness bug in the frontier decomposition was found
+    and fixed en route, and the other exhibits verified against it.</p>
+    <p class="decision">Also that day, a convention fix: the run record had been silently
+    excluded from git for everyone by an ignore rule that could never have worked, since git
+    cannot un-ignore a file inside an ignored directory. It is now committed.</p>
+    <details>
+      <summary>16 commits, 63 recorded runs</summary>
+      <ul>
+        <li>Internet appendix re-run end to end under the frozen spec; the no-beta arm shows
+        beta is worth a significant 0.004 to the frontier and next to nothing to us.</li>
+        <li>The rings figure redesigned twice at Kevin's direction; the full-sample re-run
+        strengthens the other-sector share from 52 to 59 percent.</li>
+        <li>Runs dominated by <code>10_gstore_lam.py</code>, <code>06_gl_figure.py</code>
+        (twelve times), the frozen-cell and example-candidate scripts, and the non-additive
+        tuning race.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="day">
+    <h3>12 August — the specification switched to least squares, then converged</h3>
+    <p class="decision">Kevin decided in the morning to switch the lead specification from
+    median-fit to least-squares curves, ran an adversary pass and a set of decisive runs, and
+    froze the spec at the afternoon gate. Three rulings came with it: the three error criteria
+    are co-equal, with the text quoting the median; the raced frontier is the tuned least-squares
+    boosting model, because it is the frontier's own objective and its smoother gives the exact
+    implicit-peer-weight decomposition we use as a differentiator; and the tuned median-fit
+    configuration is disclosed as the frontier's best-median arm.</p>
+    <p class="decision">By the evening the frozen spec had been implemented twice, independently,
+    and reconciled the same day. That is when the marginality of the non-microcap median gap
+    surfaced — significant in one build, not in the other — and Kevin pinned it to be reported
+    as marginal rather than argued away.</p>
+    <p class="decision">Two things explored on the side that still matter. Full-sample analysis of
+    the frontier's implicit peer weights showed the average firm's valuation nets 52 percent of
+    its weight from other sectors, where ours is structurally zero. And De Franco, Hope and
+    Larocque's evidence on actual analyst peer sets — 92 percent same sector, about half same
+    industry — showed real analysts are less concentrated than our rule, which softened the
+    preference for keeping concentration.</p>
+    <details>
+      <summary>16 commits, 47 recorded runs</summary>
+      <ul>
+        <li>Decisive runs: fold-pure winsorization immaterial; equal-budget tuning race, under
+        which the same-loss headline stands; smoothing-grid extension with zero pick changes in
+        50 panel-years.</li>
+        <li>The one claim weakened by the switch: microcap EV/Sales against the median-fit
+        frontier went from significant to not, and a wide-grid re-run proved it genuine rather
+        than a grid artifact.</li>
+        <li>Runs: the analyst race, EV/Sales and IPO satellites, the returns rebuild with its own
+        monthly pull, the loss 2×2, the frontier tuning sweeps.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="day">
+    <h3>11 August — the loss-function program that caused the switch</h3>
+    <p class="decision">Least-squares curves beat the production median-fit spec on the full
+    panel, replicated across two builds, with the clean-room replicator using its own solver and
+    exact-optimum certificates. The penalty family turned out to be presentation rather than
+    substance: ridge and elastic net tie the total-variation penalty, but total variation sets
+    55 to 57 percent of the curvature and class terms exactly to zero, so the piecewise-straight
+    interpretability is free. The asymmetry that made the decision easy: the same objective hurts
+    the boosted-tree frontier, so the adjusted multiple wins under either objective.</p>
+    <p class="decision">Kevin also directed that draft-edit incorporation proceed without a
+    claimed round, drafting both a robustness treatment and a full least-squares version and
+    deciding later — which is the path that led to the 12 August switch.</p>
+    <details>
+      <summary>17 commits, 50 recorded runs</summary>
+      <ul>
+        <li>The exposition note, nine pages, with a worked example and the exact frontier peer
+        weights — realizing an example the draft had been promising since July.</li>
+        <li>A flag for Kerry: the public website's frontier tab runs on a local panel with its
+        own folds rather than the canonical one, which is why its numbers differ from the paper's.
+        The difference was reproduced exactly.</li>
+        <li><code>draft/archive/</code> established, with dated PDFs of superseded drafts.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="day">
+    <h3>5–10 August — Kevin's exploratory program</h3>
+    <p class="decision">Kevin brought up his own workspace, ten exploratory stubs and three
+    replications, along with an IPO probe, a pre-2001 sample extension probe and the EV/Sales
+    work. Onboarding was made Windows-aware in the process. The heavy run days here — 180
+    recorded runs on 6 August alone — are the horse-race and network-industry-classification
+    sweeps behind that program.</p>
+    <details>
+      <summary>3 commits, 399 recorded runs across four days</summary>
+      <ul>
+        <li>Dominated by <code>run_race.py</code> (79), <code>run_tnic_race.py</code> (51),
+        <code>05_adjusted97.py</code> (30), <code>run_year.py</code> and <code>01_uni97.py</code>
+        (25 each).</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="day">
+    <h3>3–4 August — the repository as it now works</h3>
+    <p class="decision">Kerry restructured a single-person project into one three coauthors can
+    work in without colliding: per-author folders keyed on the git name, portable paths, a single
+    canonical data folder with a promotion gate, static provenance extraction, a round lock, and
+    the working-protocols page. The paper files were renamed to <code>main.tex</code> and
+    <code>ia.tex</code>, the Overleaf bridge was wired and documented, and the changelog in
+    <code>state.md</code> was started. Everything before this date lives in the dated section
+    headings of <code>state.md</code> and in the narrative file, not in git.</p>
+    <details>
+      <summary>25 commits</summary>
+      <ul>
+        <li>Per-author trees; <code>project/common</code> renamed to <code>project/global</code>;
+        the canonical data folder; provenance tooling and a pre-commit hook keeping the diagrams
+        current; the econ-write and econ-review skills vendored; LaTeX build noise untracked.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="day">
+    <h3>Before 3 August — what the repository does not hold</h3>
+    <p class="decision">The project's first two weeks predate the git history and are recorded
+    only in the dated blocks of <code>state.md</code> and in
+    <code>project/global/narrative-kerry-back-20260803.md</code>. The arc there is worth knowing,
+    because most of it is abandoned directions. The original thesis — that an anchored additive
+    model beats pooled machine learning on IPO-like outliers — was killed by its own round-two
+    empirics, which found boosted trees already robust in sparse regions. Text-based peers died
+    as a novelty claim, return prediction as a headline was dropped as crowded and near-tautological,
+    the merger-and-acquisition wedge died on data coverage, and rules-of-thumb from model
+    explanations died as descriptive and fragile. A leakage bug in round six voided every
+    residual-stage conclusion of that round and produced the price-free rule that still governs the
+    estimator. A market-cap bug on 30 July — market cap taken per share class rather than per company
+    — invalidated the panel, every estimator, every figure and the published artifact, and forced the
+    rebuild that produced the canonical panels. The peer rule was locked on 27 July after a
+    nearest-neighbour design was tried and superseded. And in round ten the success bar itself moved:
+    beating the machine-learning frontier was replaced by matching it with an interpretable
+    procedure.</p>
+  </div>
+
+  <h2 id="who">Who is doing what</h2>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Person</th><th>Last worked on</th><th>Holds now</th><th>Waiting on them</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Kerry Back</td>
+        <td>Adversarial review of the empirics and the prose, 15 August. Settled the smoothing
+        decision, killed the temporal-holdout objection, opened Peer Rule B, wrote a prose-only
+        revision of the draft.</td>
+        <td>No lock. Three written specs and one revised draft, none acted on.</td>
+        <td>The two unverified findings — the single most urgent thing on the project. Also the
+        merge-or-drop decision on the revised draft, and the Peer Rule B spec questions.</td>
+      </tr>
+      <tr>
+        <td>Kevin Crotty</td>
+        <td>The draft reading pass, 14–15 August, plus the scored peer rule tuned on all four
+        samples and the selection-leak quantification.</td>
+        <td>No lock. The reading-pass punchlist.</td>
+        <td>Three items queued for the Monday discussion: promoting the scored peer rule,
+        the smoothing-convention round, and whether a peer-rule redesign round opens.</td>
+      </tr>
+      <tr>
+        <td>Bob Dittmar</td>
+        <td>Nothing recorded. No author folder, no commits, no runs.</td>
+        <td>—</td>
+        <td>Whether a third independent build is expected.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    <span class="label">Record quality</span>
+    <p>The changelog is current — no commit on this project landed without a dated entry after it,
+    so nothing in the chronology above is reconstructed guesswork. The one gap is structural rather
+    than procedural: the project's first two weeks predate the repository, and their record is prose
+    in <code>state.md</code> rather than commits and runs.</p>
+  </div>
+
+  <footer>
+    <p>Built 15 August 2026 from <code>project/global/state.md</code> and its changelog,
+    <code>method_spec.md</code>, <code>data_manifest.md</code>, both session files, the draft, and
+    <code>tools/chronology</code>. For how the project is run rather than where it stands, read
+    <code>protocols.html</code>.</p>
+  </footer>
+
+</div>
+</main>
+</div>

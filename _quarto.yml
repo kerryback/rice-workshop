@@ -20,6 +20,12 @@ project:
     # Research note behind the HBS slide in deck 4, published at /hbs.html so
     # it can be linked from the deck and shared on its own.
     - hbs.html
+    # Two artifacts from the "multiples" research project, copied from that
+    # repo as course examples of how a multi-author AI-assisted project is run
+    # and reported on. Published at /protocols.html and /status-2026-08-15.html.
+    # They are snapshots -- re-copy from ~/repos/multiples to refresh.
+    - protocols.html
+    - status-2026-08-15.html
     - files/session1/*
     - files/session1.zip
     - files/session2/SamplePresentation.pptx
