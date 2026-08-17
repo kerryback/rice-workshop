@@ -371,6 +371,52 @@ I don't know how well this will work. It is brand new.  But if it doesn't work, 
 [Example report](https://rice-workshop.kerryback.com/status-2026-08-15.html)
 :::
 
+## Logging {.shrink}
+
+I asked Claude this morning:
+
+::: {.info-box}
+Kevin said he was working on optimizing over industry group and market cap for peer selection.  Explain what he is doing and what the status is.
+:::
+
+::: {.fragment}
+It explained the method, then told me the work was [finished]{.accent} --- and waiting on a decision at Monday's meeting about whether it goes in the main text or the internet appendix.
+:::
+
+::: {.explainer .fragment}
+I had not been in any of those sessions.  Kevin never wrote me a summary.
+:::
+
+## Where That Answer Came From {.shrink}
+
+::: {.three-cards}
+::: {.card .card-blue}
+[The changelog]{.card-title}
+
+Kevin's `/round` entries: what he took up, what came of it, and the decision still open
+
+This is the only part that says [why]{.accent}
+:::
+::: {.card .card-amber .fragment}
+[The run records]{.card-title}
+
+Which scripts he ran, at which commit, and the files they read and wrote
+
+Written by the wrapper, not by Kevin
+:::
+::: {.card .card-teal .fragment}
+[git log]{.card-title}
+
+What landed and when
+
+`chronology` merges all three into one timeline
+:::
+:::
+
+::: {.explainer .fragment}
+No session log, no transcript, nothing scraped from his conversations.  Three committed files, two of which write themselves.  The one that took discipline was a sentence at the end of each round.
+:::
+
 ## Get Started {.shrink}
 
 - Tell Claude to install the plugin research@kerryback (install the marketplace github.com/kerryback/skills first if you haven't).
@@ -410,32 +456,33 @@ Ask Claude to install wrds@kerryback
 ::: {.card .card-blue}
 [1.  Update]{.card-title}
 
-Academic Studio to 1.3
+- Help → Check for updates
+- Academic Studio to 1.3
 
-Help → Check for updates
+
 :::
 ::: {.card .card-amber .fragment}
 [2.  Open Remote SSH]{.card-title}
 
-Settings (bottom left) → Command Palette → Remote SSH: Connect to Host
+- Settings (bottom left) → Command Palette → Remote SSH: Connect to Host
 
-Same in VS Code
+- You must be on Rice Owls or the VPN
 :::
 :::
 ::: {.two-cards}
 ::: {.card .card-teal .fragment}
 [3.  Log in]{.card-title}
 
-`<netid>@jgsrc1@rice.edu`
+- `<netid>@jgsrc1@rice.edu`
 
-Can create a profile 
+- Can create a profile 
 :::
 ::: {.card .card-purple .fragment}
 [4.  Connect]{.card-title}
 
-Prompted for your password.
+- Prompted for your password.
 
-Open a folder --- prompted [again]{.accent}.
+- Open a folder --- prompted [again]{.accent}.
 :::
 :::
 

@@ -383,6 +383,7 @@ page-layout: full
         <div class="item-title">AI for Research</div>
         <div class="item-desc">Knowledge database, analyst/replicator, generator/critic</div>
       </div>
+      <div class="item-links"><span class="has-menu"><a href="slides/6_research.html" target="_blank" rel="noopener">Slides</a><span class="submenu"><a href="slides/6_research.html" target="_blank" rel="noopener">HTML</a><a href="pdf/6_research.pdf" target="_blank" rel="noopener">PDF</a></span></span><span class="sep phantom">&middot;</span><span class="phantom">Files</span></div>
     </div>
 
     <div class="item">

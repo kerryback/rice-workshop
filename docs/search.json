@@ -245,11 +245,11 @@
     "text": "Today’s Session\n\n\n\n1\n\n\nKnowledge Database\n\n\nPapers, abstracts, and notes — linked and searchable\n\n\n\n\n2\n\n\nTeam of Agents\n\n\nGuidance, data analysis, writing, review\n\n\n\n\n3\n\n\nLogs\n\n\n“What did my coauthors do last week?” “Why did we change that?”\n\n\n\n\n4\n\n\nWRDS and jgsrc1\n\n\nUse Claude with WRDS, use Claude on jgsrc1"
   },
   {
-    "objectID": "slides/6_research.html#knowledge-databases",
-    "href": "slides/6_research.html#knowledge-databases",
+    "objectID": "slides/6_research.html#knowledge-database",
+    "href": "slides/6_research.html#knowledge-database",
     "title": "6. AI for Research",
-    "section": "Knowledge Databases",
-    "text": "Knowledge Databases"
+    "section": "Knowledge Database",
+    "text": "Knowledge Database"
   },
   {
     "objectID": "slides/6_research.html#what-do-we-want",
@@ -343,11 +343,18 @@
     "text": "How to Get Independent Views\n\n\nSubagents\nAsk Claude to generate them. A subagent starts fresh with instructions from the main agent.\nIt does not see the conversation history — which is the whole point.\n\n\nDifferent models\nSonnet, Opus, Fable for different seats.\nDifferent capability, but still correlated priors — they were trained by the same people.\n\n\nDifferent families\nClaude can call ChatGPT, Gemini, DeepSeek, …\nGenuinely different blind spots. Uses your API keys (and your credit card)."
   },
   {
-    "objectID": "slides/6_research.html#the-research-plugin",
-    "href": "slides/6_research.html#the-research-plugin",
+    "objectID": "slides/6_research.html#research-plugin",
+    "href": "slides/6_research.html#research-plugin",
     "title": "6. AI for Research",
-    "section": "The research Plugin",
-    "text": "The research Plugin\nIt starts with a quiz. Empirical or theory? Who are the coauthors? Where does the data live? A debate panel? Does anyone write in Overleaf?\nThen it sets up only what you said yes to:\n\n\nFolder structure — a place of your own, and a shared place that is the project\nData location — outside the repo, wherever you already keep it\nHow to run Guidance, Data analysis, Writing, and Review\nMemory — what gets written down, and when\n\n\n\nAll of it codified in two documents. CLAUDE.md is the operating manual. protocols.html is the same project explained to a person — what a coauthor reads on their first day. Example protocols.html"
+    "section": "Research Plugin",
+    "text": "Research Plugin\nAsk Claude to install research@kerryback\n\n\n\n/research-setup generates a quiz.\n\nEmpirical or theory? Who are the coauthors? Where does the data live? Does anyone use Overleaf?\nThen it sets up a folder structure and wires other pieces.\n\n\n\n\nCLAUDE.md is the operating manual\n\nprotocols.html is the same project explained to a person — what a coauthor reads on their first day.\nExample protocols.html"
+  },
+  {
+    "objectID": "slides/6_research.html#writing-guide",
+    "href": "slides/6_research.html#writing-guide",
+    "title": "6. AI for Research",
+    "section": "Writing Guide",
+    "text": "Writing Guide\n\n\nThe plugin has a style guide\n\nMostly Lu Han’s econ-write that contains Cochrane’s Writing Tips for PhD Students plus other style guides\nAlso some “avoid AI speak” instructions\n\n\n\nIt should be a living document\n\nClaude is instructed to learn from your edits and add what it learns to the style guide\nFor your next project, tell Claude to start with the style guide from your last project\n\n\n\n\nI don’t know how well this will work. It is brand new. But if it doesn’t work, tell Claude to fix it!"
   },
   {
     "objectID": "slides/6_research.html#overleaf-and-the-git-bridge",
@@ -364,11 +371,18 @@
     "text": "Slash Commands\n\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\n/research:setup\nThe interview, then builds or restructures the repo\n\n\n/round\nFinishes a round — writes what you took up and what came of it, and promotes whatever settled\n\n\n/round start\nOptional. Claims the round when a coauthor might be working right now\n\n\n/refresh\nContext is getting long: writes your handoff and stops, so you can /clear. Keeps the round open\n\n\n/report\nAn HTML report: executive summary, what is settled, open issues, chronology\n\n\n/critique\nThe reviewer panel and the paths forward\n\n\n/econ-review\nReferee-grade report, if installed\n\n\nlitdb\nNo command — just ask, in plain language\n\n\n\n\n\nExample report"
   },
   {
-    "objectID": "slides/6_research.html#examples",
-    "href": "slides/6_research.html#examples",
+    "objectID": "slides/6_research.html#logging",
+    "href": "slides/6_research.html#logging",
     "title": "6. AI for Research",
-    "section": "Examples",
-    "text": "Examples\n\nrice-workshop.kerryback.com/protocols.html — the guide a coauthor reads on day one\nrice-workshop.kerryback.com/status-2026-08-15.html — what /report produces"
+    "section": "Logging",
+    "text": "Logging\nI asked Claude this morning:\n\nKevin said he was working on optimizing over industry group and market cap for peer selection. Explain what he is doing and what the status is.\n\n\nIt explained the method, then told me the work was finished — and waiting on a decision at Monday’s meeting about whether it goes in the main text or the internet appendix.\n\n\nI had not been in any of those sessions. Kevin never wrote me a summary."
+  },
+  {
+    "objectID": "slides/6_research.html#where-that-answer-came-from",
+    "href": "slides/6_research.html#where-that-answer-came-from",
+    "title": "6. AI for Research",
+    "section": "Where That Answer Came From",
+    "text": "Where That Answer Came From\n\n\nThe changelog\nKevin’s /round entries: what he took up, what came of it, and the decision still open\nThis is the only part that says why\n\n\nThe run records\nWhich scripts he ran, at which commit, and the files they read and wrote\nWritten by the wrapper, not by Kevin\n\n\ngit log\nWhat landed and when\nchronology merges all three into one timeline\n\n\n\nNo session log, no transcript, nothing scraped from his conversations. Three committed files, two of which write themselves. The one that took discipline was a sentence at the end of each round."
   },
   {
     "objectID": "slides/6_research.html#get-started-1",
@@ -403,7 +417,7 @@
     "href": "slides/6_research.html#remote-ssh",
     "title": "6. AI for Research",
     "section": "Remote SSH",
-    "text": "Remote SSH\n\n\n1. Update\nAcademic Studio to 1.3\nHelp → Check for updates\n\n\n2. Open Remote SSH\nSettings (bottom left) → Command Palette → Remote SSH: Connect to Host\nSame in VS Code\n\n\n\n\n3. Log in\n&lt;netid&gt;@jgsrc1@rice.edu\nCan create a profile\n\n\n4. Connect\nPrompted for your password.\nOpen a folder — prompted again."
+    "text": "Remote SSH\n\n\n1. Update\n\nHelp → Check for updates\nAcademic Studio to 1.3\n\n\n\n2. Open Remote SSH\n\nSettings (bottom left) → Command Palette → Remote SSH: Connect to Host\nYou must be on Rice Owls or the VPN\n\n\n\n\n\n3. Log in\n\n&lt;netid&gt;@jgsrc1@rice.edu\nCan create a profile\n\n\n\n4. Connect\n\nPrompted for your password.\nOpen a folder — prompted again."
   },
   {
     "objectID": "slides/6_research.html#what-you-should-get",
@@ -1173,7 +1187,7 @@
     "href": "index.html",
     "title": "Claude for Teaching & Research",
     "section": "",
-    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        AI/Claude Intro\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, skills as tutors \n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Corporate AI\n        Enterprise seats vs the API, connectors, a secure data agent, RAG\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
+    "text": "Faculty Workshop  ·  August 2026\n    Claude for Teaching & Research\n    \n      Eight 1-hour sessions•\n      Zoom\n    \n    led by Kerry Back\n    \n\n    \n      Week 1\n      August 10–14\n    \n\n    \n      AUG 103:00–4:00 PM\n      \n        AI/Claude Intro\n        Claude Desktop, Claude plugin for Excel, prompting, code execution and documents\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 113:00–4:00 PM\n      \n        Working with Claude\n        Claude Code, command line tools, CLAUDE.md and skills, PowerPoint assistant\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 123:00–4:00 PM\n      \n        Teaching Tools\n        Create whatever you want: graders, voiceovers, participation notes, polls\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 133:00–4:00 PM\n      \n        AI Tutors\n        NotebookLM, RAG, skills as tutors \n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 143:00–4:00 PM\n      \n        Corporate AI\n        Enterprise seats vs the API, connectors, a secure data agent, RAG\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      Week 2\n      August 17–19\n    \n\n    \n      AUG 173:00–4:00 PM\n      \n        AI for Research\n        Knowledge database, analyst/replicator, generator/critic\n      \n      SlidesHTMLPDF·Files\n    \n\n    \n      AUG 18 \n      \n        No Session\n      \n    \n\n    \n      AUG 193:00–4:00 PM\n      \n        Personal Assistants\n        MCP connectors, mail, calendar, tasks\n      \n    \n\n    \n      AUG 194:00–5:00 PM\n      \n        Overflow/Extra\n        To be determined\n      \n    \n\n    \n      rice-workshop.kerryback.com\n      Join on Zoom →"
   },
   {
     "objectID": "slides/2_working.html#workshop-overview",
@@ -1860,26 +1874,5 @@
     "title": "7. Personal Assistants",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhat recurring task would you hand to a standing assistant first?\nFor a question in your field, what roles would your ideal agent team have?\nWhat tools would you withhold from an agent working on real data?\nWhere is the line between useful delegation and losing track of what was done?"
-  },
-  {
-    "objectID": "slides/6_research.html#knowledge-database",
-    "href": "slides/6_research.html#knowledge-database",
-    "title": "6. AI for Research",
-    "section": "Knowledge Database",
-    "text": "Knowledge Database"
-  },
-  {
-    "objectID": "slides/6_research.html#writing-guide",
-    "href": "slides/6_research.html#writing-guide",
-    "title": "6. AI for Research",
-    "section": "Writing Guide",
-    "text": "Writing Guide\n\n\nThe plugin has a style guide\n\nMostly Lu Han’s econ-write that contains Cochrane’s Writing Tips for PhD Students plus other style guides\nAlso some “avoid AI speak” instructions\n\n\n\nIt should be a living document\n\nClaude is instructed to learn from your edits and add what it learns to the style guide\nFor your next project, tell Claude to start with the style guide from your last project\n\n\n\n\nI don’t know how well this will work. It is brand new. But if it doesn’t work, tell Claude to fix it!"
-  },
-  {
-    "objectID": "slides/6_research.html#research-plugin",
-    "href": "slides/6_research.html#research-plugin",
-    "title": "6. AI for Research",
-    "section": "Research Plugin",
-    "text": "Research Plugin\nAsk Claude to install research@kerryback\n\n\n\n/research-setup generates a quiz.\n\nEmpirical or theory? Who are the coauthors? Where does the data live? Does anyone use Overleaf?\nThen it sets up a folder structure and wires other pieces.\n\n\n\n\nCLAUDE.md is the operating manual\n\nprotocols.html is the same project explained to a person — what a coauthor reads on their first day.\nExample protocols.html"
   }
 ]
