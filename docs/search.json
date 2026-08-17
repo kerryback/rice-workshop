@@ -375,7 +375,7 @@
     "href": "slides/6_research.html#logging",
     "title": "6. AI for Research",
     "section": "Logging",
-    "text": "Logging\nI asked Claude this morning:\n\nKevin said he was working on optimizing over industry group and market cap for peer selection. Explain what he is doing and what the status is.\n\n\nIt explained the method, then told me the work was finished — and waiting on a decision at Monday’s meeting about whether it goes in the main text or the internet appendix.\n\n\nI had not been in any of those sessions. Kevin never wrote me a summary."
+    "text": "Logging\nI said to Claude this morning:\n\nKevin said he was working on optimizing over industry group and market cap for peer selection. Explain what he is doing and what the status is.\n\n\nIt explained the method in detail, then told me the work was finished and explained the results — and waiting on a decision about whether it goes in the main text or the internet appendix."
   },
   {
     "objectID": "slides/6_research.html#where-that-answer-came-from",
@@ -1874,5 +1874,12 @@
     "title": "7. Personal Assistants",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhat recurring task would you hand to a standing assistant first?\nFor a question in your field, what roles would your ideal agent team have?\nWhat tools would you withhold from an agent working on real data?\nWhere is the line between useful delegation and losing track of what was done?"
+  },
+  {
+    "objectID": "slides/6_research.html#where-the-answer-came-from",
+    "href": "slides/6_research.html#where-the-answer-came-from",
+    "title": "6. AI for Research",
+    "section": "Where The Answer Came From",
+    "text": "Where The Answer Came From\n\n\nstate.md\nCurrent state of the project and coauthor/date/time stamped record of all changes in state. Claude updates periodically. Can force update with ‘/round’\n\n\nruns.jsonl\nEvery script: date/commit/round and the files they read and wrote\nWritten automatically by a hook\n\n\ngit commit log\nWhat landed and when\nchronology merges all three into one timeline. /report produces a human-readable version"
   }
 ]

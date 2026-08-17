@@ -373,49 +373,42 @@ I don't know how well this will work. It is brand new.  But if it doesn't work, 
 
 ## Logging {.shrink}
 
-I asked Claude this morning:
+I said to Claude this morning:
 
 ::: {.info-box}
 Kevin said he was working on optimizing over industry group and market cap for peer selection.  Explain what he is doing and what the status is.
 :::
 
 ::: {.fragment}
-It explained the method, then told me the work was [finished]{.accent} --- and waiting on a decision at Monday's meeting about whether it goes in the main text or the internet appendix.
+It explained the method in detail, then told me the work was finished and explained the results --- and waiting on a decision about whether it goes in the main text or the internet appendix.
 :::
 
-::: {.explainer .fragment}
-I had not been in any of those sessions.  Kevin never wrote me a summary.
-:::
 
-## Where That Answer Came From {.shrink}
+## Where The Answer Came From 
 
 ::: {.three-cards}
 ::: {.card .card-blue}
-[The changelog]{.card-title}
+[state.md]{.card-title}
 
-Kevin's `/round` entries: what he took up, what came of it, and the decision still open
+Current state of the project and coauthor/date/time stamped record of all changes in state.  Claude updates periodically.  Can force update with '/round'
 
-This is the only part that says [why]{.accent}
 :::
 ::: {.card .card-amber .fragment}
-[The run records]{.card-title}
+[runs.jsonl]{.card-title}
 
-Which scripts he ran, at which commit, and the files they read and wrote
+Every script: date/commit/round and the files they read and wrote
 
-Written by the wrapper, not by Kevin
+Written automatically by a hook
 :::
 ::: {.card .card-teal .fragment}
-[git log]{.card-title}
+[git commit log]{.card-title}
 
 What landed and when
 
-`chronology` merges all three into one timeline
+`chronology` merges all three into one timeline. `/report` produces a human-readable version
 :::
 :::
 
-::: {.explainer .fragment}
-No session log, no transcript, nothing scraped from his conversations.  Three committed files, two of which write themselves.  The one that took discipline was a sentence at the end of each round.
-:::
 
 ## Get Started {.shrink}
 

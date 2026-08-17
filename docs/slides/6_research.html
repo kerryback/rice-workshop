@@ -578,38 +578,31 @@ Kerry Back<br>Rice Business
 </section>
 <section id="logging" class="slide level2 shrink center">
 <h2>Logging</h2>
-<p>I asked Claude this morning:</p>
+<p>I said to Claude this morning:</p>
 <div class="info-box">
 <p>Kevin said he was working on optimizing over industry group and market cap for peer selection. Explain what he is doing and what the status is.</p>
 </div>
 <div class="fragment">
-<p>It explained the method, then told me the work was <span class="accent">finished</span> — and waiting on a decision at Monday’s meeting about whether it goes in the main text or the internet appendix.</p>
-</div>
-<div class="explainer fragment">
-<p>I had not been in any of those sessions. Kevin never wrote me a summary.</p>
+<p>It explained the method in detail, then told me the work was finished and explained the results — and waiting on a decision about whether it goes in the main text or the internet appendix.</p>
 </div>
 </section>
-<section id="where-that-answer-came-from" class="slide level2 shrink center">
-<h2>Where That Answer Came From</h2>
+<section id="where-the-answer-came-from" class="slide level2 center">
+<h2>Where The Answer Came From</h2>
 <div class="three-cards">
 <div class="card card-blue">
-<p><span class="card-title">The changelog</span></p>
-<p>Kevin’s <code>/round</code> entries: what he took up, what came of it, and the decision still open</p>
-<p>This is the only part that says <span class="accent">why</span></p>
+<p><span class="card-title">state.md</span></p>
+<p>Current state of the project and coauthor/date/time stamped record of all changes in state. Claude updates periodically. Can force update with ‘/round’</p>
 </div>
 <div class="card card-amber fragment">
-<p><span class="card-title">The run records</span></p>
-<p>Which scripts he ran, at which commit, and the files they read and wrote</p>
-<p>Written by the wrapper, not by Kevin</p>
+<p><span class="card-title">runs.jsonl</span></p>
+<p>Every script: date/commit/round and the files they read and wrote</p>
+<p>Written automatically by a hook</p>
 </div>
 <div class="card card-teal fragment">
-<p><span class="card-title">git log</span></p>
+<p><span class="card-title">git commit log</span></p>
 <p>What landed and when</p>
-<p><code>chronology</code> merges all three into one timeline</p>
+<p><code>chronology</code> merges all three into one timeline. <code>/report</code> produces a human-readable version</p>
 </div>
-</div>
-<div class="explainer fragment">
-<p>No session log, no transcript, nothing scraped from his conversations. Three committed files, two of which write themselves. The one that took discipline was a sentence at the end of each round.</p>
 </div>
 </section>
 <section id="get-started-1" class="slide level2 shrink center">
