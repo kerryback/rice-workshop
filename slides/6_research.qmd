@@ -4,13 +4,56 @@ subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
 ---
 
-## Things I Think We Want
+## Today's Session
 
-- Knowledge database: papers, abstracts, notes, linked and semantically searchable, bibliographic data (bibfile or other)
-- Team of agents per project: project direction, literature search, data analysis, project redirection, writing, referee report (actor-critic for each task)
-- Logs: "What did my coauthors do last week?",  "Why did we change that?"
+::: {.step-flow-4}
+::: {.step-card .fragment}
+::: {.step-icon}
+1
+:::
+::: {.step-title}
+Knowledge Database
+:::
+::: {.step-desc}
+Papers, abstracts, and notes --- linked and searchable
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+2
+:::
+::: {.step-title}
+Team of Agents
+:::
+::: {.step-desc}
+Guidance, data analysis, writing, review
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+3
+:::
+::: {.step-title}
+Logs
+:::
+::: {.step-desc}
+"What did my coauthors do last week?"  "Why did we change that?"
+:::
+:::
+::: {.step-card .fragment}
+::: {.step-icon}
+4
+:::
+::: {.step-title}
+WRDS and jgsrc1
+:::
+::: {.step-desc}
+Use Claude with WRDS, use Claude on jgsrc1
+:::
+:::
+:::
 
-## Knowledge Databases {.section-divider}
+## Knowledge Database {.section-divider}
 
 ## What Do We Want?
 
@@ -25,21 +68,21 @@ author: "Kerry Back<br>Rice Business"
 ## Three Storage Types
 
 ::: {.three-cards}
-::: {.card .card-blue}
+::: {.card .card-blue .fragment}
 [Relational (SQL)]{.card-title}
 
 - The facts: title, authors, year, DOI, citekey, reading status, project tag
 - Exact filters and joins --- "unread, 2020 or later, this project"
-- Keyword search lives here too --- [BM25]{.accent} over the full text
+- Keyword search lives here too ---  over the full text
 :::
-::: {.card .card-amber}
+::: {.card .card-amber .fragment}
 [Vector]{.card-title}
 
 - Meaning, not wording --- finds the paper when you don't recall the author's vocabulary
 - Passages get embedded, so a hit returns the paper [and the page]{.accent}
 - Your own notes embed here, alongside the papers
 :::
-::: {.card .card-teal}
+::: {.card .card-teal .fragment}
 [Graph]{.card-title}
 
 - Who cites whom --- edges, not rows
@@ -53,7 +96,7 @@ author: "Kerry Back<br>Rice Business"
 ## LitDB: All in One SQlite Database
 
 
-::: {.card .card-green}
+::: {.info-box}
 
 
 - Ordinary tables for papers, notes, passages, projects
@@ -69,10 +112,10 @@ Perfectly fine (according to Claude) for a research corpus of a few thousand pap
 
 ## Notes {.shrink}
 
-Whatever format you like.  Plain text is fine. Tell Claude: "add <filename> to litdb"
+Whatever format you like.  Plain text is fine. Tell Claude: "add `<filename>` to litdb"
 Claude will read and try to classify.
 
-::: {.card-amber}
+::: {.info-box}
 - Kind --- idea, summary, critique, question, todo, or quote
 - Which paper in your library it is about, by searching for it
 - How it relates to that paper --- about, supports, contradicts, extends, uses-method, uses-data
@@ -109,13 +152,16 @@ It says what it filed, so you can correct a guess you never had to make
 
 ## When the Paper Is Behind a Paywall {.shrink}
 
-::: {.card .card-blue}
-[Claude can drive your own browser]{.card-title}
+Claude can drive your browser
 
-- `claude --chrome` --- the Claude in Chrome extension, sharing the login state you already have
-- You sign in to the library proxy; Claude pauses at login pages and CAPTCHAs and hands the keyboard back
-- Then it carries on: find the PDF, download it, ingest it into the record that already exists
-- Alternatives: [Playwright]{.accent} (an MCP server --- works, but its own browser profile, so you sign in again there), or [Cowork]{.accent}, which is this in a Chrome side panel and no terminal
+::: {.card .card-blue}
+[]{.card-title}
+
+- Uses the Claude in Chrome extension
+- You sign in to the library proxy
+- Claude pauses at login pages and CAPTCHAs and hands the keyboard back
+- Then it carries on: find the PDF and download it
+- My Claude frequently chooses the Playwright MCP server instead; not sure why
 :::
 
 ::: {.explainer}
@@ -185,7 +231,7 @@ From "check that the numbers in the text match the tables" to "give me a full re
 - Charged with being generative and specific, not with being right
 - Optimized to make something exist
 :::
-::: {.card .card-amber}
+::: {.card .card-amber .fragment}
 [Critic]{.card-title}
 
 - Charged with finding what is wrong with it
@@ -194,7 +240,7 @@ From "check that the numbers in the text match the tables" to "give me a full re
 :::
 :::
 
-::: {.explainer}
+::: {.explainer .fragment}
 Ask one agent to draft and then review, and it reviews the thing it just decided was good. The two jobs have to be separate calls with separate instructions --- and the more independent the critic, the more it catches.
 :::
 
@@ -227,21 +273,21 @@ Multiple independent reports
 ## How to Get Independent Views
 
 ::: {.three-cards}
-::: {.card .card-blue}
+::: {.card .card-blue .fragment}
 [Subagents]{.card-title}
 
 Ask Claude to generate them.  A subagent starts fresh with instructions from the main agent.
 
 It does not see the conversation history --- which is the whole point.
 :::
-::: {.card .card-amber}
+::: {.card .card-amber .fragment}
 [Different models]{.card-title}
 
 Sonnet, Opus, Fable for different seats.
 
 Different capability, but still correlated priors --- they were trained by the same people.
 :::
-::: {.card .card-teal}
+::: {.card .card-teal .fragment}
 [Different families]{.card-title}
 
 Claude can call ChatGPT, Gemini, DeepSeek, ...
@@ -251,38 +297,58 @@ Genuinely different blind spots.  Uses your API keys (and your credit card).
 :::
 
 
-## The research Plugin {.shrink}
+## Research Plugin {.shrink}
 
-It starts with a quiz.  Empirical or theory?  Who are the coauthors?  Where does the data live?  A debate panel?  Does anyone write in Overleaf?
+Ask Claude to install research@kerryback 
 
-Then it sets up only what you said yes to:
+::: {.two-cards}
+::: {.card-blue}
 
-::: {.card .card-blue}
-- [Folder structure]{.accent} --- a place of your own, and a shared place that is the project
-- [Data location]{.accent} --- outside the repo, wherever you already keep it
-- How to run [Guidance, Data analysis, Writing, and Review]{.accent}
-- [Memory]{.accent} --- what gets written down, and when
+- /research-setup generates a quiz.  
+- Empirical or theory?  Who are the coauthors?  Where does the data live?  Does anyone use Overleaf?
+- Then it sets up a folder structure and wires other pieces. 
+:::
+::: {.card-amber}
+
+- `CLAUDE.md` is the operating manual  
+- `protocols.html` is the same project explained to a person --- what a coauthor reads on their first day. 
+- [Example protocols.html](https://rice-workshop.kerryback.com/protocols.html)
+:::
+:::
+
+## Writing Guide
+
+::: {.two-cards}
+::: {.card-blue}
+[The plugin has a style guide]{.card-title}
+
+- Mostly Lu Han's econ-write that contains Cochrane's Writing Tips for PhD Students plus other style guides
+- Also some "avoid AI speak" instructions 
+:::
+::: {.card-amber}
+[It should be a living document]{.card-title}
+
+- Claude is instructed to learn from your edits and add what it learns to the style guide
+- For your next project, tell Claude to start with the style guide from your last project
+:::
 :::
 
 ::: {.explainer}
-All of it codified in two documents.  `CLAUDE.md` is the operating manual, and Claude reads it at the start of every session.  `protocols.html` is the same project explained to a person --- what a coauthor reads on their first day.
+I don't know how well this will work. It is brand new.  But if it doesn't work, tell Claude to fix it!
 :::
+
 
 
 ## Overleaf and the Git Bridge {.shrink}
 
-::: {.card .card-blue}
-[For teams where only some coauthors use Overleaf]{.card-title}
+::: {.info-box}
 
-- `draft/` alone is mirrored to an Overleaf project --- `tools/`, `workspaces/`, `project/` never go there
-- Coauthors who do not use Overleaf change [nothing]{.accent}; the repo stays the source of truth
-- One person runs the bridge: `git subtree pull`, then `git subtree push`
-- Always pull before pushing --- Overleaf rejects non-fast-forward pushes and forbids `--force` outright
+- On setup, you can set up Overleaf integration
+- The `draft` folder (with `figures` and `tables` subfolders) is set up as a Git sub-tree and linked to an Overleaf project
+- Pull the sub-tree when you start to work locally and pull again (for any changes since you started) and push (to share your changes) when you finish editing to stay in sync with coauthors on Overleaf (who work as usual)
+
 :::
 
-::: {.explainer}
-Wire it before anyone starts commenting. Renaming a file destroys Overleaf's comment anchors, so the file hygiene --- naming the paper `main.tex`, untracking build noise --- is cheaper now than it will ever be again.
-:::
 
 ## Slash Commands
 
@@ -301,10 +367,9 @@ Wire it before anyone starts commenting. Renaming a file destroys Overleaf's com
 
 :::
 
-## Examples
-
-- [rice-workshop.kerryback.com/protocols.html](https://rice-workshop.kerryback.com/protocols.html) --- the guide a coauthor reads on day one
-- [rice-workshop.kerryback.com/status-2026-08-15.html](https://rice-workshop.kerryback.com/status-2026-08-15.html) --- what `/report` produces
+::: {.explainer}
+[Example report](https://rice-workshop.kerryback.com/status-2026-08-15.html)
+:::
 
 ## Get Started {.shrink}
 
@@ -312,73 +377,94 @@ Wire it before anyone starts commenting. Renaming a file destroys Overleaf's com
 - Start a new conversation in the folder you want the project in.  Ask Claude how to use the research skill.
 - Then `/research:setup`.
 
-::: {.three-cards}
-::: {.card .card-blue}
-[Empty folder]{.card-title}
-
-Answers the eight questions, then builds only what you said yes to
-:::
-::: {.card .card-amber}
-[A repo that already has work]{.card-title}
-
-Asks what is live and what is superseded, then restructures in order --- paths, then data out, then per-author folders, then archive.  Commits between steps
-:::
-::: {.card .card-teal}
-[A repo it already set up]{.card-title}
-
-Nothing to invoke.  `CLAUDE.md` is in the folder, so a new conversation reads it and picks up where the last one stopped
-:::
-:::
-
-::: {.explainer}
-The third case is the normal one.  You run setup once; after that you just start talking, and the rules travel with the repo rather than with you.
-:::
 
 ## WRDS {.section-divider}
 
 ## Getting Data from WRDS
 
-::: {.three-cards}
-::: {.card-blue}
-Claude can write and run Python scripts to pull data from WRDS
-:::
-::: {.card-amber}
-Needs your username and password (password in .pgpass file, username in scripts)
-::: 
-::: {.card-teal}
-Uses `wrds` Python library.  Install it with no-deps option, because otherwise it will downgrade pandas and break things.
-:::
-:::
+Ask Claude to install wrds@kerryback 
 
-Ask Claude to install wrds@kerryback.  
 
 ::: {.two-cards}
-::: {.card-purple}
-Contains Python scripts from WRDS, scripts from OpenAssetPricing (Chen & Zimmerman), and variable definitions from French's data library
+::: {.card-purple .fragment}
+[Contains]{.card-title}
+
+- Python scripts from WRDS, 
+- Python scripts from OpenAssetPricing (Chen & Zimmerman)
+- variable definitions from French's data library
 :::
-::: {.card-red}
-Contains SKILL.md: install wrds with no-deps option; warn user if a variable is requested and WRDS, Chen-Zimmerman, and Fama-French define it differently
+::: {.card-red .fragment}
+[SKILL.md]{.card-title}
+
+- Install wrds with no-deps option
+- Aware of annual June 30 FF convention and monthly 4-month lag convention
+- Warns user if WRDS, Chen-Zimmerman, and/or Fama-French define a requested variable differently
 :::
 :::
 
 ## Use Claude on jgsrc1 {.section-divider}
 
-## Remote SSH
+## Remote SSH {.shrink}
 
-- Upgrade Academic Studio to 1.2 (Help -> Check for updates)
-- Academic Studio (or VS Code): Settings (bottom left) -> Command Palette -> Remote SSH Connect to Host 
-- Create host profile: Host = jgsrc1@rice.edu, User = <netid>
-- Connect.  Prompted for password.  Open a folder.  Prompted for password again
+::: {.two-cards}
+::: {.card .card-blue}
+[1.  Update]{.card-title}
 
-## One-Time Install
+Academic Studio to 1.3
 
-- You need to install the Claude Code extension and other extensions that need to live on the remote machine.
+Help → Check for updates
+:::
+::: {.card .card-amber .fragment}
+[2.  Open Remote SSH]{.card-title}
 
-- You need a Python environment.  There are options.  I recommend the following
+Settings (bottom left) → Command Palette → Remote SSH: Connect to Host
+
+Same in VS Code
+:::
+:::
+::: {.two-cards}
+::: {.card .card-teal .fragment}
+[3.  Log in]{.card-title}
+
+`<netid>@jgsrc1@rice.edu`
+
+Can create a profile 
+:::
+::: {.card .card-purple .fragment}
+[4.  Connect]{.card-title}
+
+Prompted for your password.
+
+Open a folder --- prompted [again]{.accent}.
+:::
+:::
+
+## What You Should Get
+
+::: {.two-cards}
+::: {.card .card-blue}
+[Claude Code]{.card-title}
+
+On this first connection, the Claude Code extension for VS Codium should install itself into your home folder [on jgsrc1]{.accent} --- not on your laptop
+:::
+::: {.card .card-amber}
+[Everything else]{.card-title}
+
+The other extensions bundled with Academic Studio that need to live on the remote machine should install as well
+:::
+:::
+
+## Install Python
+
+If you don't have a Python environment installed, I recommend you create one (one time setup).
 
 ::: {.card-dark}
 [Prompt]{.card-title}
-Install uv.  Use uv to create a Python 3.14 venv.  Install the data analysis stack.  Install wrds with the no-deps option.  Write a CLAUDE.md to always use the venv.
+Install uv.  Use it to create a Python 3.14 venv.  Install the data analysis stack.  Install wrds with the no-deps option.  Add to CLAUDE.md to use the venv.
 :::
 
+
+## Try It
+
+Ask Claude anything.  Check that it works.
 

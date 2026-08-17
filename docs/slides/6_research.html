@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-ed1a050ea40ede4976459d378161ed9e.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-ede2ce14e8bf807a44a538ec1c45d241.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -143,16 +143,57 @@ Kerry Back<br>Rice Business
 </div>
 
 </section>
-<section id="things-i-think-we-want" class="slide level2 center">
-<h2>Things I Think We Want</h2>
-<ul>
-<li>Knowledge database: papers, abstracts, notes, linked and semantically searchable, bibliographic data (bibfile or other)</li>
-<li>Team of agents per project: project direction, literature search, data analysis, project redirection, writing, referee report (actor-critic for each task)</li>
-<li>Logs: “What did my coauthors do last week?”, “Why did we change that?”</li>
-</ul>
+<section id="todays-session" class="slide level2 center">
+<h2>Today’s Session</h2>
+<div class="step-flow-4">
+<div class="step-card fragment">
+<div class="step-icon">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Knowledge Database</p>
+</div>
+<div class="step-desc">
+<p>Papers, abstracts, and notes — linked and searchable</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Team of Agents</p>
+</div>
+<div class="step-desc">
+<p>Guidance, data analysis, writing, review</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Logs</p>
+</div>
+<div class="step-desc">
+<p>“What did my coauthors do last week?” “Why did we change that?”</p>
+</div>
+</div>
+<div class="step-card fragment">
+<div class="step-icon">
+<p>4</p>
+</div>
+<div class="step-title">
+<p>WRDS and jgsrc1</p>
+</div>
+<div class="step-desc">
+<p>Use Claude with WRDS, use Claude on jgsrc1</p>
+</div>
+</div>
+</div>
 </section>
-<section id="knowledge-databases" class="slide level2 section-divider center">
-<h2>Knowledge Databases</h2>
+<section id="knowledge-database" class="slide level2 section-divider center">
+<h2>Knowledge Database</h2>
 </section>
 <section id="what-do-we-want" class="slide level2 center">
 <h2>What Do We Want?</h2>
@@ -169,15 +210,15 @@ Kerry Back<br>Rice Business
 <section id="three-storage-types" class="slide level2 center">
 <h2>Three Storage Types</h2>
 <div class="three-cards">
-<div class="card card-blue">
+<div class="card card-blue fragment">
 <p><span class="card-title">Relational (SQL)</span></p>
 <ul>
 <li>The facts: title, authors, year, DOI, citekey, reading status, project tag</li>
 <li>Exact filters and joins — “unread, 2020 or later, this project”</li>
-<li>Keyword search lives here too — <span class="accent">BM25</span> over the full text</li>
+<li>Keyword search lives here too — over the full text</li>
 </ul>
 </div>
-<div class="card card-amber">
+<div class="card card-amber fragment">
 <p><span class="card-title">Vector</span></p>
 <ul>
 <li>Meaning, not wording — finds the paper when you don’t recall the author’s vocabulary</li>
@@ -185,7 +226,7 @@ Kerry Back<br>Rice Business
 <li>Your own notes embed here, alongside the papers</li>
 </ul>
 </div>
-<div class="card card-teal">
+<div class="card card-teal fragment">
 <p><span class="card-title">Graph</span></p>
 <ul>
 <li>Who cites whom — edges, not rows</li>
@@ -197,7 +238,7 @@ Kerry Back<br>Rice Business
 </section>
 <section id="litdb-all-in-one-sqlite-database" class="slide level2 center">
 <h2>LitDB: All in One SQlite Database</h2>
-<div class="card card-green">
+<div class="info-box">
 <ul>
 <li>Ordinary tables for papers, notes, passages, projects</li>
 <li>SQLite’s own full-text index for keyword search</li>
@@ -210,8 +251,8 @@ Kerry Back<br>Rice Business
 </section>
 <section id="notes" class="slide level2 shrink center">
 <h2>Notes</h2>
-<p>Whatever format you like. Plain text is fine. Tell Claude: “add <filename> to litdb” Claude will read and try to classify.</filename></p>
-<div class="card-amber">
+<p>Whatever format you like. Plain text is fine. Tell Claude: “add <code>&lt;filename&gt;</code> to litdb” Claude will read and try to classify.</p>
+<div class="info-box">
 <ul>
 <li>Kind — idea, summary, critique, question, todo, or quote</li>
 <li>Which paper in your library it is about, by searching for it</li>
@@ -250,13 +291,15 @@ Kerry Back<br>Rice Business
 </section>
 <section id="when-the-paper-is-behind-a-paywall" class="slide level2 shrink center">
 <h2>When the Paper Is Behind a Paywall</h2>
+<p>Claude can drive your browser</p>
 <div class="card card-blue">
-<p><span class="card-title">Claude can drive your own browser</span></p>
+<p><span class="card-title"></span></p>
 <ul>
-<li><code>claude --chrome</code> — the Claude in Chrome extension, sharing the login state you already have</li>
-<li>You sign in to the library proxy; Claude pauses at login pages and CAPTCHAs and hands the keyboard back</li>
-<li>Then it carries on: find the PDF, download it, ingest it into the record that already exists</li>
-<li>Alternatives: <span class="accent">Playwright</span> (an MCP server — works, but its own browser profile, so you sign in again there), or <span class="accent">Cowork</span>, which is this in a Chrome side panel and no terminal</li>
+<li>Uses the Claude in Chrome extension</li>
+<li>You sign in to the library proxy</li>
+<li>Claude pauses at login pages and CAPTCHAs and hands the keyboard back</li>
+<li>Then it carries on: find the PDF and download it</li>
+<li>My Claude frequently chooses the Playwright MCP server instead; not sure why</li>
 </ul>
 </div>
 <div class="explainer">
@@ -371,7 +414,7 @@ Kerry Back<br>Rice Business
 <li>Optimized to make something exist</li>
 </ul>
 </div>
-<div class="card card-amber">
+<div class="card card-amber fragment">
 <p><span class="card-title">Critic</span></p>
 <ul>
 <li>Charged with finding what is wrong with it</li>
@@ -380,7 +423,7 @@ Kerry Back<br>Rice Business
 </ul>
 </div>
 </div>
-<div class="explainer">
+<div class="explainer fragment">
 <p>Ask one agent to draft and then review, and it reviews the thing it just decided was good. The two jobs have to be separate calls with separate instructions — and the more independent the critic, the more it catches.</p>
 </div>
 </section>
@@ -408,52 +451,75 @@ Kerry Back<br>Rice Business
 <section id="how-to-get-independent-views" class="slide level2 center">
 <h2>How to Get Independent Views</h2>
 <div class="three-cards">
-<div class="card card-blue">
+<div class="card card-blue fragment">
 <p><span class="card-title">Subagents</span></p>
 <p>Ask Claude to generate them. A subagent starts fresh with instructions from the main agent.</p>
 <p>It does not see the conversation history — which is the whole point.</p>
 </div>
-<div class="card card-amber">
+<div class="card card-amber fragment">
 <p><span class="card-title">Different models</span></p>
 <p>Sonnet, Opus, Fable for different seats.</p>
 <p>Different capability, but still correlated priors — they were trained by the same people.</p>
 </div>
-<div class="card card-teal">
+<div class="card card-teal fragment">
 <p><span class="card-title">Different families</span></p>
 <p>Claude can call ChatGPT, Gemini, DeepSeek, …</p>
 <p>Genuinely different blind spots. Uses your API keys (and your credit card).</p>
 </div>
 </div>
 </section>
-<section id="the-research-plugin" class="slide level2 shrink center">
-<h2>The research Plugin</h2>
-<p>It starts with a quiz. Empirical or theory? Who are the coauthors? Where does the data live? A debate panel? Does anyone write in Overleaf?</p>
-<p>Then it sets up only what you said yes to:</p>
-<div class="card card-blue">
+<section id="research-plugin" class="slide level2 shrink center">
+<h2>Research Plugin</h2>
+<p>Ask Claude to install research@kerryback</p>
+<div class="two-cards">
+<div class="card-blue">
 <ul>
-<li><span class="accent">Folder structure</span> — a place of your own, and a shared place that is the project</li>
-<li><span class="accent">Data location</span> — outside the repo, wherever you already keep it</li>
-<li>How to run <span class="accent">Guidance, Data analysis, Writing, and Review</span></li>
-<li><span class="accent">Memory</span> — what gets written down, and when</li>
+<li>/research-setup generates a quiz.<br>
+</li>
+<li>Empirical or theory? Who are the coauthors? Where does the data live? Does anyone use Overleaf?</li>
+<li>Then it sets up a folder structure and wires other pieces.</li>
 </ul>
 </div>
+<div class="card-amber">
+<ul>
+<li><code>CLAUDE.md</code> is the operating manual<br>
+</li>
+<li><code>protocols.html</code> is the same project explained to a person — what a coauthor reads on their first day.</li>
+<li><a href="https://rice-workshop.kerryback.com/protocols.html">Example protocols.html</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="writing-guide" class="slide level2 center">
+<h2>Writing Guide</h2>
+<div class="two-cards">
+<div class="card-blue">
+<p><span class="card-title">The plugin has a style guide</span></p>
+<ul>
+<li>Mostly Lu Han’s econ-write that contains Cochrane’s Writing Tips for PhD Students plus other style guides</li>
+<li>Also some “avoid AI speak” instructions</li>
+</ul>
+</div>
+<div class="card-amber">
+<p><span class="card-title">It should be a living document</span></p>
+<ul>
+<li>Claude is instructed to learn from your edits and add what it learns to the style guide</li>
+<li>For your next project, tell Claude to start with the style guide from your last project</li>
+</ul>
+</div>
+</div>
 <div class="explainer">
-<p>All of it codified in two documents. <code>CLAUDE.md</code> is the operating manual, and Claude reads it at the start of every session. <code>protocols.html</code> is the same project explained to a person — what a coauthor reads on their first day.</p>
+<p>I don’t know how well this will work. It is brand new. But if it doesn’t work, tell Claude to fix it!</p>
 </div>
 </section>
 <section id="overleaf-and-the-git-bridge" class="slide level2 shrink center">
 <h2>Overleaf and the Git Bridge</h2>
-<div class="card card-blue">
-<p><span class="card-title">For teams where only some coauthors use Overleaf</span></p>
+<div class="info-box">
 <ul>
-<li><code>draft/</code> alone is mirrored to an Overleaf project — <code>tools/</code>, <code>workspaces/</code>, <code>project/</code> never go there</li>
-<li>Coauthors who do not use Overleaf change <span class="accent">nothing</span>; the repo stays the source of truth</li>
-<li>One person runs the bridge: <code>git subtree pull</code>, then <code>git subtree push</code></li>
-<li>Always pull before pushing — Overleaf rejects non-fast-forward pushes and forbids <code>--force</code> outright</li>
+<li>On setup, you can set up Overleaf integration</li>
+<li>The <code>draft</code> folder (with <code>figures</code> and <code>tables</code> subfolders) is set up as a Git sub-tree and linked to an Overleaf project</li>
+<li>Pull the sub-tree when you start to work locally and pull again (for any changes since you started) and push (to share your changes) when you finish editing to stay in sync with coauthors on Overleaf (who work as usual)</li>
 </ul>
-</div>
-<div class="explainer">
-<p>Wire it before anyone starts commenting. Renaming a file destroys Overleaf’s comment anchors, so the file hygiene — naming the paper <code>main.tex</code>, untracking build noise — is cheaper now than it will ever be again.</p>
 </div>
 </section>
 <section id="slash-commands" class="slide level2 center">
@@ -506,13 +572,9 @@ Kerry Back<br>Rice Business
 </tbody>
 </table>
 </div>
-</section>
-<section id="examples" class="slide level2 center">
-<h2>Examples</h2>
-<ul>
-<li><a href="https://rice-workshop.kerryback.com/protocols.html">rice-workshop.kerryback.com/protocols.html</a> — the guide a coauthor reads on day one</li>
-<li><a href="https://rice-workshop.kerryback.com/status-2026-08-15.html">rice-workshop.kerryback.com/status-2026-08-15.html</a> — what <code>/report</code> produces</li>
-</ul>
+<div class="explainer">
+<p><a href="https://rice-workshop.kerryback.com/status-2026-08-15.html">Example report</a></p>
+</div>
 </section>
 <section id="get-started-1" class="slide level2 shrink center">
 <h2>Get Started</h2>
@@ -521,71 +583,85 @@ Kerry Back<br>Rice Business
 <li>Start a new conversation in the folder you want the project in. Ask Claude how to use the research skill.</li>
 <li>Then <code>/research:setup</code>.</li>
 </ul>
-<div class="three-cards">
-<div class="card card-blue">
-<p><span class="card-title">Empty folder</span></p>
-<p>Answers the eight questions, then builds only what you said yes to</p>
-</div>
-<div class="card card-amber">
-<p><span class="card-title">A repo that already has work</span></p>
-<p>Asks what is live and what is superseded, then restructures in order — paths, then data out, then per-author folders, then archive. Commits between steps</p>
-</div>
-<div class="card card-teal">
-<p><span class="card-title">A repo it already set up</span></p>
-<p>Nothing to invoke. <code>CLAUDE.md</code> is in the folder, so a new conversation reads it and picks up where the last one stopped</p>
-</div>
-</div>
-<div class="explainer">
-<p>The third case is the normal one. You run setup once; after that you just start talking, and the rules travel with the repo rather than with you.</p>
-</div>
 </section>
 <section id="wrds" class="slide level2 section-divider center">
 <h2>WRDS</h2>
 </section>
 <section id="getting-data-from-wrds" class="slide level2 center">
 <h2>Getting Data from WRDS</h2>
-<div class="three-cards">
-<div class="card-blue">
-<p>Claude can write and run Python scripts to pull data from WRDS</p>
-</div>
-<div class="card-amber">
-<p>Needs your username and password (password in .pgpass file, username in scripts)</p>
-</div>
-<div class="card-teal">
-<p>Uses <code>wrds</code> Python library. Install it with no-deps option, because otherwise it will downgrade pandas and break things.</p>
-</div>
-</div>
-<p>Ask Claude to install wrds@kerryback.</p>
+<p>Ask Claude to install wrds@kerryback</p>
 <div class="two-cards">
-<div class="card-purple">
-<p>Contains Python scripts from WRDS, scripts from OpenAssetPricing (Chen &amp; Zimmerman), and variable definitions from French’s data library</p>
+<div class="card-purple fragment">
+<p><span class="card-title">Contains</span></p>
+<ul>
+<li>Python scripts from WRDS,</li>
+<li>Python scripts from OpenAssetPricing (Chen &amp; Zimmerman)</li>
+<li>variable definitions from French’s data library</li>
+</ul>
 </div>
-<div class="card-red">
-<p>Contains SKILL.md: install wrds with no-deps option; warn user if a variable is requested and WRDS, Chen-Zimmerman, and Fama-French define it differently</p>
+<div class="card-red fragment">
+<p><span class="card-title">SKILL.md</span></p>
+<ul>
+<li>Install wrds with no-deps option</li>
+<li>Aware of annual June 30 FF convention and monthly 4-month lag convention</li>
+<li>Warns user if WRDS, Chen-Zimmerman, and/or Fama-French define a requested variable differently</li>
+</ul>
 </div>
 </div>
 </section>
 <section id="use-claude-on-jgsrc1" class="slide level2 section-divider center">
 <h2>Use Claude on jgsrc1</h2>
 </section>
-<section id="remote-ssh" class="slide level2 center">
+<section id="remote-ssh" class="slide level2 shrink center">
 <h2>Remote SSH</h2>
-<ul>
-<li>Upgrade Academic Studio to 1.2 (Help -&gt; Check for updates)</li>
-<li>Academic Studio (or VS Code): Settings (bottom left) -&gt; Command Palette -&gt; Remote SSH Connect to Host</li>
-<li>Create host profile: Host = jgsrc1@rice.edu, User = <netid></netid></li>
-<li>Connect. Prompted for password. Open a folder. Prompted for password again</li>
-</ul>
-</section>
-<section id="one-time-install" class="slide level2 center">
-<h2>One-Time Install</h2>
-<ul>
-<li><p>You need to install the Claude Code extension and other extensions that need to live on the remote machine.</p></li>
-<li><p>You need a Python environment. There are options. I recommend the following</p></li>
-</ul>
-<div class="card-dark">
-<p><span class="card-title">Prompt</span> Install uv. Use uv to create a Python 3.14 venv. Install the data analysis stack. Install wrds with the no-deps option. Write a CLAUDE.md to always use the venv.</p>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">1. Update</span></p>
+<p>Academic Studio to 1.3</p>
+<p>Help → Check for updates</p>
 </div>
+<div class="card card-amber fragment">
+<p><span class="card-title">2. Open Remote SSH</span></p>
+<p>Settings (bottom left) → Command Palette → Remote SSH: Connect to Host</p>
+<p>Same in VS Code</p>
+</div>
+</div>
+<div class="two-cards">
+<div class="card card-teal fragment">
+<p><span class="card-title">3. Log in</span></p>
+<p><code>&lt;netid&gt;@jgsrc1@rice.edu</code></p>
+<p>Can create a profile</p>
+</div>
+<div class="card card-purple fragment">
+<p><span class="card-title">4. Connect</span></p>
+<p>Prompted for your password.</p>
+<p>Open a folder — prompted <span class="accent">again</span>.</p>
+</div>
+</div>
+</section>
+<section id="what-you-should-get" class="slide level2 center">
+<h2>What You Should Get</h2>
+<div class="two-cards">
+<div class="card card-blue">
+<p><span class="card-title">Claude Code</span></p>
+<p>On this first connection, the Claude Code extension for VS Codium should install itself into your home folder <span class="accent">on jgsrc1</span> — not on your laptop</p>
+</div>
+<div class="card card-amber">
+<p><span class="card-title">Everything else</span></p>
+<p>The other extensions bundled with Academic Studio that need to live on the remote machine should install as well</p>
+</div>
+</div>
+</section>
+<section id="install-python" class="slide level2 center">
+<h2>Install Python</h2>
+<p>If you don’t have a Python environment installed, I recommend you create one (one time setup).</p>
+<div class="card-dark">
+<p><span class="card-title">Prompt</span> Install uv. Use it to create a Python 3.14 venv. Install the data analysis stack. Install wrds with the no-deps option. Add to CLAUDE.md to use the venv.</p>
+</div>
+</section>
+<section id="try-it" class="slide level2 center">
+<h2>Try It</h2>
+<p>Ask Claude anything. Check that it works.</p>
 
 
 </section>

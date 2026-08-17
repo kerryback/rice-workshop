@@ -1256,6 +1256,19 @@ $card-purple-title: #7c3aed;
   }
 }
 
+.step-flow-4 {
+  @extend .step-flow;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6em;
+
+  .step-card {
+    padding: 1.2em 1em;
+
+    .step-title { font-size: 0.95em; margin-bottom: 0.45em; }
+    .step-desc { font-size: 0.78em; line-height: 1.5; }
+  }
+}
+
 .step-flow-2 {
   @extend .step-flow;
   grid-template-columns: repeat(2, 1fr);

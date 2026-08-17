@@ -238,11 +238,11 @@
     "text": "Where This Leaves Us\n\n\nBuy\n\nDelivery coaching is a solved, cheap commodity\nLet students use it before they present to you\n\n\n\nBorrow\n\nThe council pattern is published and replicable\nDeliberation is what makes it defensible\n\n\n\nBuild\n\nOnly the rubric, the key, and the standards\nNobody else can write those\n\n\n\n\nEvery student gets a live oral exam and two pages of specific feedback — or none of them do. That is the actual choice on the table."
   },
   {
-    "objectID": "slides/6_research.html#things-i-think-we-want",
-    "href": "slides/6_research.html#things-i-think-we-want",
+    "objectID": "slides/6_research.html#todays-session",
+    "href": "slides/6_research.html#todays-session",
     "title": "6. AI for Research",
-    "section": "Things I Think We Want",
-    "text": "Things I Think We Want\n\nKnowledge database: papers, abstracts, notes, linked and semantically searchable, bibliographic data (bibfile or other)\nTeam of agents per project: project direction, literature search, data analysis, project redirection, writing, referee report (actor-critic for each task)\nLogs: “What did my coauthors do last week?”, “Why did we change that?”"
+    "section": "Today’s Session",
+    "text": "Today’s Session\n\n\n\n1\n\n\nKnowledge Database\n\n\nPapers, abstracts, and notes — linked and searchable\n\n\n\n\n2\n\n\nTeam of Agents\n\n\nGuidance, data analysis, writing, review\n\n\n\n\n3\n\n\nLogs\n\n\n“What did my coauthors do last week?” “Why did we change that?”\n\n\n\n\n4\n\n\nWRDS and jgsrc1\n\n\nUse Claude with WRDS, use Claude on jgsrc1"
   },
   {
     "objectID": "slides/6_research.html#knowledge-databases",
@@ -263,7 +263,7 @@
     "href": "slides/6_research.html#three-storage-types",
     "title": "6. AI for Research",
     "section": "Three Storage Types",
-    "text": "Three Storage Types\n\n\nRelational (SQL)\n\nThe facts: title, authors, year, DOI, citekey, reading status, project tag\nExact filters and joins — “unread, 2020 or later, this project”\nKeyword search lives here too — BM25 over the full text\n\n\n\nVector\n\nMeaning, not wording — finds the paper when you don’t recall the author’s vocabulary\nPassages get embedded, so a hit returns the paper and the page\nYour own notes embed here, alongside the papers\n\n\n\nGraph\n\nWho cites whom — edges, not rows\nTrace a result forward to its critics and back to its roots\nThe query it unlocks: what my library leans on that I don’t own yet"
+    "text": "Three Storage Types\n\n\nRelational (SQL)\n\nThe facts: title, authors, year, DOI, citekey, reading status, project tag\nExact filters and joins — “unread, 2020 or later, this project”\nKeyword search lives here too — over the full text\n\n\n\nVector\n\nMeaning, not wording — finds the paper when you don’t recall the author’s vocabulary\nPassages get embedded, so a hit returns the paper and the page\nYour own notes embed here, alongside the papers\n\n\n\nGraph\n\nWho cites whom — edges, not rows\nTrace a result forward to its critics and back to its roots\nThe query it unlocks: what my library leans on that I don’t own yet"
   },
   {
     "objectID": "slides/6_research.html#litdb-all-in-one-sqlite-database",
@@ -277,7 +277,7 @@
     "href": "slides/6_research.html#notes",
     "title": "6. AI for Research",
     "section": "Notes",
-    "text": "Notes\nWhatever format you like. Plain text is fine. Tell Claude: “add  to litdb” Claude will read and try to classify.\n\n\nKind — idea, summary, critique, question, todo, or quote\nWhich paper in your library it is about, by searching for it\nHow it relates to that paper — about, supports, contradicts, extends, uses-method, uses-data\nThe page or the verbatim quote it points at\nProject tag — defaults to the folder you are working in\nWhether it is confidential — unpublished ideas and referee material are embedded locally, never sent to an API\n\n\n\nIt says what it filed, so you can correct a guess you never had to make"
+    "text": "Notes\nWhatever format you like. Plain text is fine. Tell Claude: “add &lt;filename&gt; to litdb” Claude will read and try to classify.\n\n\nKind — idea, summary, critique, question, todo, or quote\nWhich paper in your library it is about, by searching for it\nHow it relates to that paper — about, supports, contradicts, extends, uses-method, uses-data\nThe page or the verbatim quote it points at\nProject tag — defaults to the folder you are working in\nWhether it is confidential — unpublished ideas and referee material are embedded locally, never sent to an API\n\n\n\nIt says what it filed, so you can correct a guess you never had to make"
   },
   {
     "objectID": "slides/6_research.html#finding-papers-you-dont-have",
@@ -291,7 +291,7 @@
     "href": "slides/6_research.html#when-the-paper-is-behind-a-paywall",
     "title": "6. AI for Research",
     "section": "When the Paper Is Behind a Paywall",
-    "text": "When the Paper Is Behind a Paywall\n\nClaude can drive your own browser\n\nclaude --chrome — the Claude in Chrome extension, sharing the login state you already have\nYou sign in to the library proxy; Claude pauses at login pages and CAPTCHAs and hands the keyboard back\nThen it carries on: find the PDF, download it, ingest it into the record that already exists\nAlternatives: Playwright (an MCP server — works, but its own browser profile, so you sign in again there), or Cowork, which is this in a Chrome side panel and no terminal\n\n\n\nOne paper you are entitled to, fetched through your own subscription, is ordinary use. Scripted bulk downloading is not — it violates publisher terms and gets the campus IP range cut off. Claude is instructed never to touch Sci-Hub."
+    "text": "When the Paper Is Behind a Paywall\nClaude can drive your browser\n\n\n\nUses the Claude in Chrome extension\nYou sign in to the library proxy\nClaude pauses at login pages and CAPTCHAs and hands the keyboard back\nThen it carries on: find the PDF and download it\nMy Claude frequently chooses the Playwright MCP server instead; not sure why\n\n\n\nOne paper you are entitled to, fetched through your own subscription, is ordinary use. Scripted bulk downloading is not — it violates publisher terms and gets the campus IP range cut off. Claude is instructed never to touch Sci-Hub."
   },
   {
     "objectID": "slides/6_research.html#comparisons",
@@ -347,21 +347,21 @@
     "href": "slides/6_research.html#the-research-plugin",
     "title": "6. AI for Research",
     "section": "The research Plugin",
-    "text": "The research Plugin\nIt starts with a quiz. Empirical or theory? Who are the coauthors? Where does the data live? A debate panel? Does anyone write in Overleaf?\nThen it sets up only what you said yes to:\n\n\nFolder structure — a place of your own, and a shared place that is the project\nData location — outside the repo, wherever you already keep it\nHow to run Guidance, Data analysis, Writing, and Review\nMemory — what gets written down, and when\n\n\n\nAll of it codified in two documents. CLAUDE.md is the operating manual, and Claude reads it at the start of every session. protocols.html is the same project explained to a person — what a coauthor reads on their first day."
+    "text": "The research Plugin\nIt starts with a quiz. Empirical or theory? Who are the coauthors? Where does the data live? A debate panel? Does anyone write in Overleaf?\nThen it sets up only what you said yes to:\n\n\nFolder structure — a place of your own, and a shared place that is the project\nData location — outside the repo, wherever you already keep it\nHow to run Guidance, Data analysis, Writing, and Review\nMemory — what gets written down, and when\n\n\n\nAll of it codified in two documents. CLAUDE.md is the operating manual. protocols.html is the same project explained to a person — what a coauthor reads on their first day. Example protocols.html"
   },
   {
     "objectID": "slides/6_research.html#overleaf-and-the-git-bridge",
     "href": "slides/6_research.html#overleaf-and-the-git-bridge",
     "title": "6. AI for Research",
     "section": "Overleaf and the Git Bridge",
-    "text": "Overleaf and the Git Bridge\n\nFor teams where only some coauthors use Overleaf\n\ndraft/ alone is mirrored to an Overleaf project — tools/, workspaces/, project/ never go there\nCoauthors who do not use Overleaf change nothing; the repo stays the source of truth\nOne person runs the bridge: git subtree pull, then git subtree push\nAlways pull before pushing — Overleaf rejects non-fast-forward pushes and forbids --force outright\n\n\n\nWire it before anyone starts commenting. Renaming a file destroys Overleaf’s comment anchors, so the file hygiene — naming the paper main.tex, untracking build noise — is cheaper now than it will ever be again."
+    "text": "Overleaf and the Git Bridge\n\n\nOn setup, you can set up Overleaf integration\nThe draft folder (with figures and tables subfolders) is set up as a Git sub-tree and linked to an Overleaf project\nPull the sub-tree when you start to work locally and pull again (for any changes since you started) and push (to share your changes) when you finish editing to stay in sync with coauthors on Overleaf (who work as usual)"
   },
   {
     "objectID": "slides/6_research.html#slash-commands",
     "href": "slides/6_research.html#slash-commands",
     "title": "6. AI for Research",
     "section": "Slash Commands",
-    "text": "Slash Commands\n\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\n/research:setup\nThe interview, then builds or restructures the repo\n\n\n/round\nFinishes a round — writes what you took up and what came of it, and promotes whatever settled\n\n\n/round start\nOptional. Claims the round when a coauthor might be working right now\n\n\n/refresh\nContext is getting long: writes your handoff and stops, so you can /clear. Keeps the round open\n\n\n/report\nAn HTML report: executive summary, what is settled, open issues, chronology\n\n\n/critique\nThe reviewer panel and the paths forward\n\n\n/econ-review\nReferee-grade report, if installed\n\n\nlitdb\nNo command — just ask, in plain language"
+    "text": "Slash Commands\n\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\n/research:setup\nThe interview, then builds or restructures the repo\n\n\n/round\nFinishes a round — writes what you took up and what came of it, and promotes whatever settled\n\n\n/round start\nOptional. Claims the round when a coauthor might be working right now\n\n\n/refresh\nContext is getting long: writes your handoff and stops, so you can /clear. Keeps the round open\n\n\n/report\nAn HTML report: executive summary, what is settled, open issues, chronology\n\n\n/critique\nThe reviewer panel and the paths forward\n\n\n/econ-review\nReferee-grade report, if installed\n\n\nlitdb\nNo command — just ask, in plain language\n\n\n\n\n\nExample report"
   },
   {
     "objectID": "slides/6_research.html#examples",
@@ -375,7 +375,7 @@
     "href": "slides/6_research.html#get-started-1",
     "title": "6. AI for Research",
     "section": "Get Started",
-    "text": "Get Started\n\nTell Claude to install the plugin research@kerryback (install the marketplace github.com/kerryback/skills first if you haven’t).\nStart a new conversation in the folder you want the project in. Ask Claude how to use the research skill.\nThen /research:setup.\n\n\n\nEmpty folder\nAnswers the eight questions, then builds only what you said yes to\n\n\nA repo that already has work\nAsks what is live and what is superseded, then restructures in order — paths, then data out, then per-author folders, then archive. Commits between steps\n\n\nA repo it already set up\nNothing to invoke. CLAUDE.md is in the folder, so a new conversation reads it and picks up where the last one stopped\n\n\n\nThe third case is the normal one. You run setup once; after that you just start talking, and the rules travel with the repo rather than with you."
+    "text": "Get Started\n\nTell Claude to install the plugin research@kerryback (install the marketplace github.com/kerryback/skills first if you haven’t).\nStart a new conversation in the folder you want the project in. Ask Claude how to use the research skill.\nThen /research:setup."
   },
   {
     "objectID": "slides/6_research.html#wrds",
@@ -389,7 +389,7 @@
     "href": "slides/6_research.html#getting-data-from-wrds",
     "title": "6. AI for Research",
     "section": "Getting Data from WRDS",
-    "text": "Getting Data from WRDS\n\n\nClaude can write and run Python scripts to pull data from WRDS\n\n\nNeeds your username and password (password in .pgpass file, username in scripts)\n\n\nUses wrds Python library. Install it with no-deps option, because otherwise it will downgrade pandas and break things.\n\n\nAsk Claude to install wrds@kerryback.\n\n\nContains Python scripts from WRDS, scripts from OpenAssetPricing (Chen & Zimmerman), and variable definitions from French’s data library\n\n\nContains SKILL.md: install wrds with no-deps option; warn user if a variable is requested and WRDS, Chen-Zimmerman, and Fama-French define it differently"
+    "text": "Getting Data from WRDS\nAsk Claude to install wrds@kerryback\n\n\nContains\n\nPython scripts from WRDS,\nPython scripts from OpenAssetPricing (Chen & Zimmerman)\nvariable definitions from French’s data library\n\n\n\nSKILL.md\n\nInstall wrds with no-deps option\nAware of annual June 30 FF convention and monthly 4-month lag convention\nWarns user if WRDS, Chen-Zimmerman, and/or Fama-French define a requested variable differently"
   },
   {
     "objectID": "slides/6_research.html#use-claude-on-jgsrc1",
@@ -403,14 +403,28 @@
     "href": "slides/6_research.html#remote-ssh",
     "title": "6. AI for Research",
     "section": "Remote SSH",
-    "text": "Remote SSH\n\nUpgrade Academic Studio to 1.2 (Help -&gt; Check for updates)\nAcademic Studio (or VS Code): Settings (bottom left) -&gt; Command Palette -&gt; Remote SSH Connect to Host\nCreate host profile: Host = jgsrc1@rice.edu, User = \nConnect. Prompted for password. Open a folder. Prompted for password again"
+    "text": "Remote SSH\n\n\n1. Update\nAcademic Studio to 1.3\nHelp → Check for updates\n\n\n2. Open Remote SSH\nSettings (bottom left) → Command Palette → Remote SSH: Connect to Host\nSame in VS Code\n\n\n\n\n3. Log in\n&lt;netid&gt;@jgsrc1@rice.edu\nCan create a profile\n\n\n4. Connect\nPrompted for your password.\nOpen a folder — prompted again."
   },
   {
-    "objectID": "slides/6_research.html#one-time-install",
-    "href": "slides/6_research.html#one-time-install",
+    "objectID": "slides/6_research.html#what-you-should-get",
+    "href": "slides/6_research.html#what-you-should-get",
     "title": "6. AI for Research",
-    "section": "One-Time Install",
-    "text": "One-Time Install\n\nYou need to install the Claude Code extension and other extensions that need to live on the remote machine.\nYou need a Python environment. There are options. I recommend the following\n\n\nPrompt Install uv. Use uv to create a Python 3.14 venv. Install the data analysis stack. Install wrds with the no-deps option. Write a CLAUDE.md to always use the venv."
+    "section": "What You Should Get",
+    "text": "What You Should Get\n\n\nClaude Code\nOn this first connection, the Claude Code extension for VS Codium should install itself into your home folder on jgsrc1 — not on your laptop\n\n\nEverything else\nThe other extensions bundled with Academic Studio that need to live on the remote machine should install as well"
+  },
+  {
+    "objectID": "slides/6_research.html#install-python",
+    "href": "slides/6_research.html#install-python",
+    "title": "6. AI for Research",
+    "section": "Install Python",
+    "text": "Install Python\nIf you don’t have a Python environment installed, I recommend you create one (one time setup).\n\nPrompt Install uv. Use it to create a Python 3.14 venv. Install the data analysis stack. Install wrds with the no-deps option. Add to CLAUDE.md to use the venv."
+  },
+  {
+    "objectID": "slides/6_research.html#try-it",
+    "href": "slides/6_research.html#try-it",
+    "title": "6. AI for Research",
+    "section": "Try It",
+    "text": "Try It\nAsk Claude anything. Check that it works."
   },
   {
     "objectID": "slides/5_corporate.html#enterprise-adoption",
@@ -1600,7 +1614,7 @@
     "href": "slides/4_tutors.html#demo-3-a-live-poll-on-their-phones",
     "title": "4. AI Tutors",
     "section": "Demo 3 — A Live Poll on Their Phones",
-    "text": "Demo 3 — A Live Poll on Their Phones\n\n\nWhat it does\n\nType the question as a sentence; Claude works out what kind of poll it is\nMultiple choice, word cloud, confidence scale, numeric estimate, ranking\nAnonymous by design — no names, no roster, nothing stored per student\n\n\n\nWhat you do\n\nAt start of class enter /poll in Claude in the classroom computer. Brings up a QR code in browser.\nStudents connect\nDuring class, either /poll  for prepared poll or [/poll ] for on-the-spot\nNeeds cloudflared on classroom computer, and I have to check it is not blocked (workaround exists)\n\n\n\n\n/poll How confident are you using AI in your teaching? 1 to 5"
+    "text": "Demo 3 — A Live Poll on Their Phones\n\n\nWhat it does\n\nType the question as a sentence; Claude works out what kind of poll it is\nMultiple choice, word cloud, confidence scale, numeric estimate, ranking\nAnonymous by design — no names, no roster, nothing stored per student\n\n\n\nWhat you do\n\nAt start of class enter /poll in Claude in the classroom computer. Brings up a QR code in browser.\nStudents connect\nDuring class, either /poll &lt;filename&gt; for prepared poll or /poll &lt;question&gt; for on-the-spot\nNeeds cloudflared on classroom computer, and I have to check it is not blocked (workaround exists)\n\n\n\n\n/poll How confident are you using AI in your teaching? 1 to 5"
   },
   {
     "objectID": "slides/4_tutors.html#demo-4-student-screen-shares",
@@ -1846,5 +1860,26 @@
     "title": "7. Personal Assistants",
     "section": "Questions to Discuss",
     "text": "Questions to Discuss\n\nWhat recurring task would you hand to a standing assistant first?\nFor a question in your field, what roles would your ideal agent team have?\nWhat tools would you withhold from an agent working on real data?\nWhere is the line between useful delegation and losing track of what was done?"
+  },
+  {
+    "objectID": "slides/6_research.html#knowledge-database",
+    "href": "slides/6_research.html#knowledge-database",
+    "title": "6. AI for Research",
+    "section": "Knowledge Database",
+    "text": "Knowledge Database"
+  },
+  {
+    "objectID": "slides/6_research.html#writing-guide",
+    "href": "slides/6_research.html#writing-guide",
+    "title": "6. AI for Research",
+    "section": "Writing Guide",
+    "text": "Writing Guide\n\n\nThe plugin has a style guide\n\nMostly Lu Han’s econ-write that contains Cochrane’s Writing Tips for PhD Students plus other style guides\nAlso some “avoid AI speak” instructions\n\n\n\nIt should be a living document\n\nClaude is instructed to learn from your edits and add what it learns to the style guide\nFor your next project, tell Claude to start with the style guide from your last project\n\n\n\n\nI don’t know how well this will work. It is brand new. But if it doesn’t work, tell Claude to fix it!"
+  },
+  {
+    "objectID": "slides/6_research.html#research-plugin",
+    "href": "slides/6_research.html#research-plugin",
+    "title": "6. AI for Research",
+    "section": "Research Plugin",
+    "text": "Research Plugin\nAsk Claude to install research@kerryback\n\n\n\n/research-setup generates a quiz.\n\nEmpirical or theory? Who are the coauthors? Where does the data live? Does anyone use Overleaf?\nThen it sets up a folder structure and wires other pieces.\n\n\n\n\nCLAUDE.md is the operating manual\n\nprotocols.html is the same project explained to a person — what a coauthor reads on their first day.\nExample protocols.html"
   }
 ]

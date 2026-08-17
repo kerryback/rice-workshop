@@ -457,7 +457,7 @@ The sample roster is a real one, so it goes out in the chat rather than on the c
 
 - At start of class enter [/poll]{.accent} in Claude in the classroom computer.  Brings up a QR code in browser.
 - Students connect
-- During class, either [/poll <filename>]{.accent} for prepared poll or [/poll <question>] for on-the-spot
+- During class, either [/poll `<filename>`]{.accent} for prepared poll or [/poll `<question>`]{.accent} for on-the-spot
 - Needs `cloudflared` on classroom computer, and I have to check it is not blocked (workaround exists)
 :::
 :::
