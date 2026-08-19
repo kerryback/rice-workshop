@@ -30,7 +30,6 @@ format:
 :::
 
 ::: {.card .card-blue}
-- Personal assistant
 - Quarto slides
 - Presentation feedback
 - Run models locally
