@@ -316,7 +316,7 @@ page-layout: full
     <div class="eyebrow">Faculty Workshop &nbsp;&middot;&nbsp; August 2026</div>
     <h1 class="display">Claude for Teaching &amp; Research</h1>
     <div class="meta-inline">
-      <span>Eight 1-hour sessions</span><span class="dot">&bull;</span>
+      <span>Seven 1-hour sessions</span><span class="dot">&bull;</span>
       <span>Zoom</span>
     </div>
     <div class="subline">led by <b>Kerry Back</b></div>
@@ -394,19 +394,12 @@ page-layout: full
     </div>
 
     <div class="item">
-      <div class="chip">AUG 19<span class="chip-time">3:00&ndash;4:00 PM</span></div>
+      <div class="chip">AUG 19<span class="chip-time">3:00&ndash;5:00 PM</span></div>
       <div class="item-body">
-        <div class="item-title">Personal Assistants</div>
-        <div class="item-desc">MCP connectors, mail, calendar, tasks</div>
+        <div class="item-title">Odds and Ends</div>
+        <div class="item-desc">AI Lab, the survey and screen share apps, participation, narrated decks, presentation feedback, running models locally</div>
       </div>
-    </div>
-
-    <div class="item">
-      <div class="chip">AUG 19<span class="chip-time">4:00&ndash;5:00 PM</span></div>
-      <div class="item-body">
-        <div class="item-title">Overflow/Extra</div>
-        <div class="item-desc">To be determined</div>
-      </div>
+      <div class="item-links"><span class="has-menu"><a href="slides/7_assistants.html" target="_blank" rel="noopener">Slides</a><span class="submenu"><a href="slides/7_assistants.html" target="_blank" rel="noopener">HTML</a><a href="pdf/7_assistants.pdf" target="_blank" rel="noopener">PDF</a></span></span><span class="sep phantom">&middot;</span><span class="phantom">Files</span></div>
     </div>
 
     <div class="sheet-foot">

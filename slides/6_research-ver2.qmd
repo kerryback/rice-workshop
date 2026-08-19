@@ -2,6 +2,9 @@
 title: "6. AI for Research"
 subtitle: "Rice Business 2026"
 author: "Kerry Back<br>Rice Business"
+format:
+  revealjs:
+    theme: [default, revealjs-style.scss]
 ---
 
 ## The Research Loop, Assisted

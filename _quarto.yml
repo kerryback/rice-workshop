@@ -36,6 +36,9 @@ project:
     # roster with student names and photos -- it stays local and is handed out
     # in the Zoom chat, never copied into docs/. Do not widen this to a glob.
     - files/session4/slide_rule.pdf
+    # Played from deck 7. 7.5 MB, so it is listed explicitly rather than
+    # globbed -- the roster PDF beside it must never be published.
+    - files/session4/slide_rule.mp4
     # Built by hand with course_roster.pdf and .voiceover/ excluded. Re-zip it
     # the same way, or the roster ships to the class.
     - files/session4.zip

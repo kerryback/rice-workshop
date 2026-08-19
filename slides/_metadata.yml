@@ -2,9 +2,14 @@
 # website build (root _quarto.yml renders slides/*.qmd into docs/slides/).
 # index.qmd stays at the project root: a file in this folder cannot opt out of
 # the revealjs format below.
+#
+# theme is deliberately NOT set here. Quarto appends a document's theme list to
+# this one rather than replacing it, so a deck with its own theme would get both
+# and the first file's scss:defaults would win. Each deck names its own theme in
+# its front matter instead: decks 1-6 use [default, revealjs-style.scss]; deck 7
+# uses shoji.scss and overrides width/height/margin to match.
 format:
   revealjs:
-    theme: [default, revealjs-style.scss]
     highlight-style: monokai
     slide-number: 'c/t'
     transition: fade

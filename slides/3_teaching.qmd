@@ -1,6 +1,9 @@
 ---
 title: "3. Teaching Tools"
 author: "Kerry Back<br>Faculty Workshop<br>Rice Business 2026"
+format:
+  revealjs:
+    theme: [default, revealjs-style.scss]
 ---
 
 ## Workshop Overview
