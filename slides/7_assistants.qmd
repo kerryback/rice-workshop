@@ -47,7 +47,7 @@ format:
 | Speaker Coach | Already inside PowerPoint and Teams |
 
 ::: {.note .note-plum}
-All four coach delivery and know nothing about your subject. Cheap, off the shelf, and orthogonal to anything we grade.
+Coach delivery based on the creators' rubrics.  
 :::
 
 ## Running Models Locally 
