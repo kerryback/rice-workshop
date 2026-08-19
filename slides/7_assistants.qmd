@@ -64,14 +64,14 @@ All four coach delivery and know nothing about your subject. Cheap, off the shel
 Hugging Face hosts millions of open-weight models at [huggingface.co](https://huggingface.co/). Ollama is the thing that downloads one and runs it.
 :::
 
-## Examples {.plain-title}
+## Examples {.plain-title .no-head}
 
 ::: {.steps}
 1. Install Ollama from [ollama.com](https://ollama.com)
 2. `ollama run gemma4:e4b`
 :::
 
-| | Download | |
+| | | |
 |---|---|---|
 | `gemma4:e2b` | 7.2 GB | 2.3B effective |
 | `gemma4:e4b` | 9.6 GB | 4.5B effective |

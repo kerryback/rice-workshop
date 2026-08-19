@@ -726,6 +726,13 @@ $col-gap: 20px;
   }
 }
 
+// A table whose header cells are empty: the plum band is pure decoration, and
+// on a full slide it is what pushes the last row past the panel. Hiding it
+// keeps the body rows and gives the slide back that height.
+.reveal .no-head table thead {
+  display: none;
+}
+
 // ── Code ────────────────────────────────────────────────────────────────
 
 .reveal div.sourceCode,
